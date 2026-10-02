@@ -1,0 +1,10 @@
+{
+  "retainedPassed": 23,
+  "aborted": true,
+  "initialPassed": 22,
+  "reason": "Stopped after five attempts. Complete-file fallback fixed user text rendering, but repeated previous failure code contaminated subsequent prompts. Restored the recorded accepted snapshot after stopping. This is a development pilot, not a completed fresh-generation trial.",
+  "temperature": 0.2,
+  "total": 25,
+  "operatorIntervention": true,
+  "model": "qwen-local-dev"
+}

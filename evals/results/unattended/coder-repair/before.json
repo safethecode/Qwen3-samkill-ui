@@ -1,0 +1,119 @@
+{
+  "fixture": "resume",
+  "checksVersion": 6,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage must show 3 active example documents in 전체 with an example label; observed 3 edit buttons and example label=false. All three initial examples must be non-archived."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "PASS"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "FAIL",
+      "detail": "After canceling edit and starting new, no document was added. Introduction is optional. Browser form state: {\"dataset\":{},\"invalidFields\":[\"resume-intro\"]}. Check HTML required attributes and submit/edit logic."
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"INPUT\",\"id\":\"resume-search\",\"class\":\"\",\"pseudo\":null,\"text\":\"\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"INPUT\",\"id\":\"resume-search\",\"class\":\"\",\"pseudo\":\"::placeholder\",\"text\":\"\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"role\",\"pseudo\":null,\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"intro\",\"pseudo\":null,\"text\":\"5년차 프론트엔드 개발자로 웹 애플리케이션 개발에 전문\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"modified\",\"pseudo\":null,\"text\":\"수정일: 2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"UX/UI 디자이너\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"INPUT\",\"id\":\"resume-search\",\"class\":\"\",\"pseudo\":null,\"text\":\"\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"INPUT\",\"id\":\"resume-search\",\"class\":\"\",\"pseudo\":\"::placeholder\",\"text\":\"\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"role\",\"pseudo\":null,\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"intro\",\"pseudo\":null,\"text\":\"5년차 프론트엔드 개발자로 웹 애플리케이션 개발에 전문\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"modified\",\"pseudo\":null,\"text\":\"수정일: 2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"UX/UI 디자이너\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "PASS"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "FAIL",
+      "detail": "Render user-entered strings as text, not executable HTML"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "PASS"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "PASS"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Each card needs a padded white paper preview containing name and introduction INSIDE a contrasting pale stage, not beside it. Paper background must be white, padding >=12px, height >=160px, width >=150px. Actual candidate elements: [{\"tag\":\"DIV\",\"class\":\"document-paper\",\"background\":\"rgba(0, 0, 0, 0)\",\"padding\":\"24px\",\"width\":330,\"height\":280,\"parent\":\"document-card\",\"parentBackground\":\"rgb(255, 255, 255)\"}]"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "PASS"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "PASS"
+    }
+  ],
+  "passed": 19,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

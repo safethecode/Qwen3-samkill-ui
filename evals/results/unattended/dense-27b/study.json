@@ -1,0 +1,9 @@
+{
+  "total": 25,
+  "aborted": true,
+  "operatorIntervention": true,
+  "reason": "Stopped after the first 749-token response took 238 seconds and failed exact matching by changing spaces inside Korean source strings. This is a latency pilot, not a completed accuracy trial.",
+  "thinking": false,
+  "initialPassed": 22,
+  "model": "qwen3.5:27b"
+}
