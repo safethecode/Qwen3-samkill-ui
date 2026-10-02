@@ -12,3 +12,12 @@ test('noninteractive children receive EOF and their output is retained', async (
   assert.equal(code, 0);
   assert.equal(await readFile(log, 'utf8'), 'EOF received');
 });
+
+test('failed child diagnostics are retained separately from structured stdout', async () => {
+  const target = await mkdtemp(resolve(tmpdir(), 'qwen-process-'));
+  const log = resolve(target, 'output.log');
+  const code = await run(process.execPath, ['-e', 'process.stdout.write(JSON.stringify({ok:false})); process.stderr.write("fixture failure"); process.exitCode = 7'], log, target, 5000);
+  assert.equal(code, 7);
+  assert.equal(await readFile(`${log}.stderr`, 'utf8'), 'fixture failure');
+  assert.equal(JSON.parse(await readFile(log, 'utf8')).ok, false);
+});
