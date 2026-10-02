@@ -1,0 +1,96 @@
+{
+  "fixture": "resume",
+  "checksVersion": 3,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage must show 3 active example documents in 전체 with an example label; observed 0 edit buttons and example label=true. All three initial examples must be non-archived."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "FAIL",
+      "detail": "Search needs a visible label"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "FAIL",
+      "detail": "Archived item remains in active list"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Typography outside contract: BUTTON:전체, BUTTON:보관함, BUTTON:수정, BUTTON:복제, BUTTON:보관"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Typography outside contract: BUTTON:전체, BUTTON:보관함, BUTTON:수정, BUTTON:복제, BUTTON:보관"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "FAIL",
+      "detail": "Remove code comments without altering strings or behavior: {\"html\":1,\"css\":9,\"js\":36}"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "PASS"
+    }
+  ],
+  "passed": 11,
+  "total": 19,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

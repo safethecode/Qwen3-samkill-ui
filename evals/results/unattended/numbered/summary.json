@@ -1,0 +1,64 @@
+{
+  "startedAt": "2026-10-02T15:59:56.845Z",
+  "operatorIntervention": false,
+  "checksVersion": 5,
+  "generationModel": "qwen-local-dev",
+  "generationThinking": false,
+  "repairModel": "qwen-local-dev",
+  "repairThinking": false,
+  "rounds": 10,
+  "sourceHashes": {
+    "scripts/benchmark.mjs": "d2105a3eb7c842ef6c83c5c117409eef6556df7c605b3c84e51e4aa0fe53f649",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "775054f56414bf4d8959d186bebee4959a18e9945a833008c272c9596fc7b081",
+    "scripts/design-checks.mjs": "d22ab58854eaada6aad2e2f752ce195af53a99e8c169b44bbb893d62849a5691",
+    "scripts/evaluate.mjs": "9d4ce71dbc20e7e32ea0fc6fde0ee48f63fa1fc281217c234f57e2386de0670b",
+    "scripts/feedback.mjs": "6c92c3264d39ad40d625881e3e3033ca95317d0d1e1e4c1f07565060bad0418f",
+    "scripts/generate.mjs": "6c1ab0d2af969ab19a34072e362c415e69b715fedf2f2040eff85ffdd98a6080",
+    "scripts/iterate.mjs": "a14f900468f36a02035168e35bf930c72b939daa734cc495c9669741a28d4830",
+    "scripts/line-patches.mjs": "34430b830ed28b863aa52b4d4cd659e290d9e1fa3161db8c39754886f0bc0790",
+    "scripts/patches.mjs": "bdb40f9e1f30965fdec3589fd646ac6f3721b12d30db45a8a6c61ec978e2bc1d",
+    "scripts/process.mjs": "fc7142a952b97c3b26f7877dc239f71a18e60fce6a870ceb9fc4b7eef8756984",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/refine.mjs": "3bef5b49091d5a9ab6d0ee35c082d4e5bb89d37943c04616a4d91d415d7bff88",
+    "scripts/repair.mjs": "c2aa874692ab06b858ad872556257f1f2ce7cda7304d1475878b1e2c6ab0e347",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/setup.mjs": "e09b09a263796b00b88d39abc98b14a1890ca2869fd9f5e2b7a86293b0a748b2",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "skills/qwen-samkill-ui/SKILL.md": "c1c93184a9e0ccbd391a8cc4d97a4758734407a7189b8f6e4029d4b88ecdb198",
+    "skills/qwen-samkill-ui/references/document-collections.md": "eae15d32136d3bbc0a3dbdfa8f55dde8a80543423e86eff715ee9c824bb9e397",
+    "evals/resume-contract.md": "5de366d73df5537ee01ffe276e6d95dae5064aff1c63e06ac30a0c9b2b59f3cd",
+    "evals/reference-observations.md": "31aab604bab83a9568f559db6171809f348fbd0a8ee14fcd53ed2d2a62a9c613"
+  },
+  "trials": [
+    {
+      "name": "repeat-1",
+      "exitCode": 1,
+      "durationSeconds": 274,
+      "passed": 21,
+      "total": 25,
+      "complete": false,
+      "error": null
+    },
+    {
+      "name": "repeat-2",
+      "exitCode": 1,
+      "durationSeconds": 788,
+      "passed": 20,
+      "total": 25,
+      "complete": false,
+      "error": null
+    },
+    {
+      "name": "variant",
+      "exitCode": 1,
+      "durationSeconds": 749,
+      "passed": 17,
+      "total": 28,
+      "complete": false,
+      "error": null
+    }
+  ],
+  "completed": 0,
+  "finishedAt": "2026-10-02T16:30:08.031Z"
+}

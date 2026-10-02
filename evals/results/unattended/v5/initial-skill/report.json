@@ -1,0 +1,129 @@
+{
+  "fixture": "resume",
+  "checksVersion": 5,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage must show 3 active example documents in 전체 with an example label; observed 3 edit buttons and example label=false. All three initial examples must be non-archived."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "FAIL",
+      "detail": "Search needs a visible label"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "FAIL",
+      "detail": "Clicking 새 이력서 did not reveal the editor field 제목; inspect its click handler and hidden state"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "FAIL",
+      "detail": "Saved document lost after reload"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "FAIL",
+      "detail": "Archived item remains in active list"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "FAIL",
+      "detail": "locator.fill: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/^제목\\s*\\*?$/)\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" required=\"\" id=\"resume-title\" class=\"form-input\"/>\u001b[22m\n\u001b[2m    - fill(\"편집 후 신규\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    5 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"subtitle\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-position\",\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-date\",\"text\":\"2026년 10월 2일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn edit-btn\",\"text\":\"편집\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn clone-btn\",\"text\":\"복제\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn unsaved-btn\",\"text\":\"보관 해제\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-position\",\"text\":\"백엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-date\",\"text\":\"2026년 10월 1일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"subtitle\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-position\",\"text\":\"프론트엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-date\",\"text\":\"2026년 10월 2일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn edit-btn\",\"text\":\"편집\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn clone-btn\",\"text\":\"복제\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"action-btn unsaved-btn\",\"text\":\"보관 해제\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-position\",\"text\":\"백엔드 개발자\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"resume-date\",\"text\":\"2026년 10월 1일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "FAIL",
+      "detail": "Remove code comments without altering strings or behavior: {\"html\":1,\"css\":2,\"js\":28}"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "FAIL",
+      "detail": "locator.fill: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/^제목\\s*\\*?$/)\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" required=\"\" id=\"resume-title\" class=\"form-input\"/>\u001b[22m\n\u001b[2m    - fill(\"\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    5 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "FAIL",
+      "detail": "locator.fill: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/^제목\\s*\\*?$/)\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" required=\"\" id=\"resume-title\" class=\"form-input\"/>\u001b[22m\n\u001b[2m    - fill(\"검증 <img src=x onerror=\"window.__injected=1\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    5 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "FAIL",
+      "detail": "Document 1 preview omits 이름; render the document content in the list, not only metadata"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "FAIL",
+      "detail": "Place the subtitle under the left-aligned heading and the creation action on the right"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Each card needs a padded white paper preview containing name and introduction inside a contrasting pale stage; metadata-only white cards do not qualify"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "FAIL",
+      "detail": "At 390px, stack full-width document cards with approximately 20px page padding"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "FAIL",
+      "detail": "Reduced-motion mode must disable or shorten transitions/animations to at most 10ms"
+    }
+  ],
+  "passed": 9,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

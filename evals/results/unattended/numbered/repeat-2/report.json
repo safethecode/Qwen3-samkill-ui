@@ -1,0 +1,118 @@
+{
+  "fixture": "resume",
+  "checksVersion": 5,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage must show 3 active example documents in 전체 with an example label; observed 3 edit buttons and example label=false. All three initial examples must be non-archived."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "FAIL",
+      "detail": "Archived item remains in active list"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "FAIL",
+      "detail": "After canceling edit and starting new, no document was added. Introduction is optional. Browser form state: {\"dataset\":{},\"invalidFields\":[]}. Check HTML required attributes and submit/edit logic."
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "PASS"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "FAIL",
+      "detail": "Render user-entered strings as text, not executable HTML"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "PASS"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "PASS"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Each card needs a padded white paper preview containing name and introduction inside a contrasting pale stage; metadata-only white cards do not qualify"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "PASS"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "PASS"
+    }
+  ],
+  "passed": 20,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "fixture": "resume",
+  "checksVersion": 5,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage must show 3 active example documents in 전체 with an example label; observed 0 edit buttons and example label=false. All three initial examples must be non-archived."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "FAIL",
+      "detail": "Search needs a visible label"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "FAIL",
+      "detail": "Clicking 새 이력서 did not reveal the editor field 제목; inspect its click handler and hidden state"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "FAIL",
+      "detail": "Saved document lost after reload"
+    },
+    {
+      "name": "duplicate",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '편집', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '보관', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '편집', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"new-resume-btn\",\"class\":\"btn btn-primary\",\"text\":\"새 이력서\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"filter-btn active\",\"text\":\"전체\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"filter-btn\",\"text\":\"보관함\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"검색 결과가 없습니다.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"new-resume-btn\",\"class\":\"btn btn-primary\",\"text\":\"새 이력서\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"filter-btn active\",\"text\":\"전체\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"BUTTON\",\"id\":\"\",\"class\":\"filter-btn\",\"text\":\"보관함\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"500\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"검색 결과가 없습니다.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "FAIL",
+      "detail": "Remove code comments without altering strings or behavior: {\"html\":1,\"css\":8,\"js\":17}"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "FAIL",
+      "detail": "locator.fill: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/^제목\\s*\\*?$/)\u001b[22m\n"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "FAIL",
+      "detail": "locator.fill: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/^제목\\s*\\*?$/)\u001b[22m\n"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "FAIL",
+      "detail": "Design review requires the three initial documents"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "FAIL",
+      "detail": "At 1440px, place the three document cards in one spaced row"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "FAIL",
+      "detail": "Place the subtitle under the left-aligned heading and the creation action on the right"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Cannot inspect preview surfaces without example fields"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "FAIL",
+      "detail": "At 390px, stack full-width document cards with approximately 20px page padding"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "FAIL",
+      "detail": "Reduced-motion mode must disable or shorten transitions/animations to at most 10ms"
+    }
+  ],
+  "passed": 7,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

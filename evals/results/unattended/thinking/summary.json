@@ -1,0 +1,56 @@
+{
+  "startedAt": "2026-10-02T15:26:25.260Z",
+  "operatorIntervention": false,
+  "generationModel": "qwen3.5:9b",
+  "generationThinking": true,
+  "repairModel": "qwen3.5:9b",
+  "repairThinking": true,
+  "rounds": 10,
+  "sourceHashes": {
+    "scripts/benchmark.mjs": "519eef612f691c0c3df5734725f6f551a459840bfd221293539fdc0144f07e38",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/evaluate.mjs": "1766625a053d2c288b9981d0dd97e46c77569eb3637f64cb3179b3d6b597b0f8",
+    "scripts/generate.mjs": "0bdd71c30964b5df774bf70fa5db0a711d11f8efc0489211dd47bb44c6aaf763",
+    "scripts/iterate.mjs": "8f7c4fd94bfce57659c87caa5db92af49db54a97202ec84f9cec0ac1d1a18ef0",
+    "scripts/patches.mjs": "bdb40f9e1f30965fdec3589fd646ac6f3721b12d30db45a8a6c61ec978e2bc1d",
+    "scripts/process.mjs": "fc7142a952b97c3b26f7877dc239f71a18e60fce6a870ceb9fc4b7eef8756984",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/refine.mjs": "3bef5b49091d5a9ab6d0ee35c082d4e5bb89d37943c04616a4d91d415d7bff88",
+    "scripts/repair.mjs": "53fca1c4dd51f5687529bf3fd3f8081793433b08c852f63907ad2d02d23c78b7",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/setup.mjs": "e09b09a263796b00b88d39abc98b14a1890ca2869fd9f5e2b7a86293b0a748b2",
+    "skills/qwen-samkill-ui/SKILL.md": "8a78459ac404ac5833f5c4faa79d5b6f60c3d84b6953964b9223bf50c808c538",
+    "evals/resume-contract.md": "5de366d73df5537ee01ffe276e6d95dae5064aff1c63e06ac30a0c9b2b59f3cd"
+  },
+  "trials": [
+    {
+      "name": "repeat-1",
+      "exitCode": 0,
+      "durationSeconds": 204,
+      "passed": 19,
+      "total": 19,
+      "complete": true,
+      "error": null
+    },
+    {
+      "name": "repeat-2",
+      "exitCode": 1,
+      "durationSeconds": 307,
+      "passed": 8,
+      "total": 19,
+      "complete": false,
+      "error": null
+    },
+    {
+      "name": "variant",
+      "exitCode": 1,
+      "durationSeconds": 260,
+      "passed": 10,
+      "total": 19,
+      "complete": false,
+      "error": null
+    }
+  ],
+  "completed": 1,
+  "finishedAt": "2026-10-02T15:39:16.639Z"
+}

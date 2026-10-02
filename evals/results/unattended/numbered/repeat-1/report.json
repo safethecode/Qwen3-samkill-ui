@@ -1,0 +1,117 @@
+{
+  "fixture": "resume",
+  "checksVersion": 5,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "PASS"
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "PASS"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"collection-description\",\"class\":\"\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"new-resume-btn\",\"class\":\"\",\"text\":\"새 이력서\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"프론트엔드 개발자\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"웹 개발에 관심이 많습니다.\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"text\":\"2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"백엔드 개발자\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"서버 개발에 전문성을 가지고 있습니다.\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"text\":\"2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"collection-description\",\"class\":\"\",\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"BUTTON\",\"id\":\"new-resume-btn\",\"class\":\"\",\"text\":\"새 이력서\",\"fontSize\":\"13.3333px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"프론트엔드 개발자\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"웹 개발에 관심이 많습니다.\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"text\":\"2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"백엔드 개발자\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"text\":\"서버 개발에 전문성을 가지고 있습니다.\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"text\":\"2026. 10. 3.\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "PASS"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "PASS"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "FAIL",
+      "detail": "Document 1 preview omits 이름; render the document content in the list, not only metadata"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "PASS"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Each card needs a padded white paper preview containing name and introduction inside a contrasting pale stage; metadata-only white cards do not qualify"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "PASS"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "PASS"
+    }
+  ],
+  "passed": 21,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}
