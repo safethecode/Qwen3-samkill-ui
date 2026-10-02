@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이력서 관리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="collection-heading">
+      <div>
+        <h1>내 이력서</h1>
+        <p>이 브라우저에 저장됩니다</p>
+      </div>
+      <button id="new-resume-btn" class="btn-primary">새 이력서</button>
+    </header>
+
+    <div class="filter-section">
+      <div class="filter-buttons">
+        <button id="filter-all" class="filter-btn active" data-filter="all">전체</button>
+        <button id="filter-archive" class="filter-btn" data-filter="archive">보관함</button>
+      </div>
+      <div class="search-container">
+        <label for="resume-search" class="sr-only">이력서 검색</label>
+        <input type="text" id="resume-search" placeholder="이력서 검색">
+      </div>
+    </div>
+
+    <section id="resume-list" class="document-grid">
+      
+    </section>
+
+    <section id="editor-section" class="editor-section hidden">
+      <h2>이력서 작성</h2>
+      <form id="resume-form">
+        <div class="form-group">
+          <label for="form-title">제목</label>
+          <input type="text" id="form-title" required>
+        </div>
+        <div class="form-group">
+          <label for="form-name">이름</label>
+          <input type="text" id="form-name" required>
+        </div>
+        <div class="form-group">
+          <label for="form-role">직무</label>
+          <input type="text" id="form-role" required>
+        </div>
+        <div class="form-group">
+          <label for="form-email">이메일</label>
+          <input type="email" id="form-email">
+        </div>
+        <div class="form-group">
+          <label for="form-intro">소개</label>
+          <textarea id="form-intro"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">저장</button>
+          <button type="button" id="cancel-btn" class="btn-secondary">취소</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

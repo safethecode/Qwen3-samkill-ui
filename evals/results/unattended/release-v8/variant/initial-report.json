@@ -1,0 +1,128 @@
+{
+  "fixture": "resume",
+  "checksVersion": 8,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "PASS"
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "PASS"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"LABEL\",\"id\":\"\",\"class\":\"sr-only\",\"pseudo\":null,\"text\":\"이력서 검색\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"데이터를 통해 비즈니스 인사이트를 도출하는 데에 전문성\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2026년 10월 3일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"다양한 플랫폼에서의 개발 경험을 바탕으로, 사용자 중심\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2023년 2월 20일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"사용자 경험을 중심으로 한 제품 디자인에 열정을 가지고\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2023년 3월 10일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "FAIL",
+      "detail": "Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: [{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"이 브라우저에 저장됩니다\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"LABEL\",\"id\":\"\",\"class\":\"sr-only\",\"pseudo\":null,\"text\":\"이력서 검색\",\"fontSize\":\"16px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"데이터를 통해 비즈니스 인사이트를 도출하는 데에 전문성\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2026년 10월 3일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"다양한 플랫폼에서의 개발 경험을 바탕으로, 사용자 중심\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2023년 2월 20일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"\",\"pseudo\":null,\"text\":\"사용자 경험을 중심으로 한 제품 디자인에 열정을 가지고\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"},{\"element\":\"P\",\"id\":\"\",\"class\":\"meta-date\",\"pseudo\":null,\"text\":\"수정일: 2023년 3월 10일\",\"fontSize\":\"14px\",\"fontWeight\":\"400\"}]"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "PASS"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "FAIL",
+      "detail": "Render user-entered strings as text, not executable HTML"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "PASS"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "PASS"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "PASS"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "PASS"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "PASS"
+    },
+    {
+      "name": "variant-action-color",
+      "status": "PASS"
+    },
+    {
+      "name": "variant-content",
+      "status": "PASS"
+    },
+    {
+      "name": "variant-width",
+      "status": "PASS"
+    }
+  ],
+  "passed": 25,
+  "total": 28,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

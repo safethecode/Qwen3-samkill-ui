@@ -1,0 +1,76 @@
+{
+  "startedAt": "2026-10-02T18:37:33.442Z",
+  "operatorIntervention": false,
+  "checksVersion": 8,
+  "generationModel": "qwen-local-dev",
+  "generationThinking": false,
+  "repairModel": "qwen3.5:9b",
+  "repairThinking": false,
+  "rounds": 10,
+  "sourceHashes": {
+    "scripts/benchmark.mjs": "68b58ce03c792406d75f728af890f338191867e0ed1329edeb24f56c9e266809",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/evaluate.mjs": "8f0eb9e8cff55157599df00249e9d26847ced22036142d5890e9afb7c0240525",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/generate.mjs": "d4e8d009e817dc8d859d1684f41012ad16fc966baeda15f96abf77ed8bfdc654",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/refine.mjs": "3bef5b49091d5a9ab6d0ee35c082d4e5bb89d37943c04616a4d91d415d7bff88",
+    "scripts/repair.mjs": "b60592b7986d680c1c92a4b0a81f8e0a02ce02dea29dbcf8cc53449049911ba8",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/setup.mjs": "e09b09a263796b00b88d39abc98b14a1890ca2869fd9f5e2b7a86293b0a748b2",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "a86a9cd93173edc5ea04f16ac9331101ceb59db1a73c677348fd804ea5c577b1",
+    "skills/qwen-samkill-ui/SKILL.md": "0379c268e36f4d87290c01c50e5ef535df10ed79b2e21edc4862068e3730a089",
+    "skills/qwen-samkill-ui/references/document-collections.md": "5468b0b3c9cdcfe14bdddf4c04b23fcd85a5d514b3747f7aaa386d78cc8b47a8",
+    "evals/resume-contract.md": "0339ca5291195354bc3d0dbcec50be219817d8b6e81a0d9370d8b4062d3112e7",
+    "evals/reference-observations.md": "31aab604bab83a9568f559db6171809f348fbd0a8ee14fcd53ed2d2a62a9c613"
+  },
+  "trials": [
+    {
+      "name": "repeat-1",
+      "exitCode": 0,
+      "durationSeconds": 228,
+      "initialPassed": 23,
+      "passed": 25,
+      "total": 25,
+      "complete": true,
+      "error": null
+    },
+    {
+      "name": "repeat-2",
+      "exitCode": 0,
+      "durationSeconds": 282,
+      "initialPassed": 23,
+      "passed": 25,
+      "total": 25,
+      "complete": true,
+      "error": null
+    },
+    {
+      "name": "variant",
+      "exitCode": 0,
+      "durationSeconds": 302,
+      "initialPassed": 25,
+      "passed": 28,
+      "total": 28,
+      "complete": true,
+      "error": null
+    }
+  ],
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1.05
+  },
+  "completed": 3,
+  "finishedAt": "2026-10-02T18:51:05.404Z"
+}
