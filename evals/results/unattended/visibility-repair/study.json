@@ -1,0 +1,17 @@
+{
+  "total": 25,
+  "operatorSourceEdits": false,
+  "model": "qwen3.5:9b",
+  "note": "Initial v9 desktop overlap diagnostic; retained source independently rechecked with final v9 desktop/mobile and painted-overlay checks. Visual review still found oversized actions and an initially visible editor.",
+  "rejectedRepairs": 4,
+  "checksVersion": 9,
+  "initialPassed": 24,
+  "input": "release-v8/repeat-1",
+  "type": "repair-only",
+  "finalPassed": 25,
+  "rounds": 5,
+  "operatorIntermediateFeedback": false,
+  "acceptedRepairs": 1,
+  "temperature": 0.7,
+  "thinking": false
+}
