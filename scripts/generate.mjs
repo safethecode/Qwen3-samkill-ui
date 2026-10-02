@@ -3,6 +3,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'acorn';
 import postcss from 'postcss';
+import { samplingOptions } from './sampling.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const phases = {
@@ -42,7 +43,7 @@ export async function generate(target, evidence) {
             { role: 'user', content: `SKILL\n${skill}\n\nDESIGN CONTRACT\n${contract}\n\nREFERENCE OBSERVATIONS\n${reference}\n\nGENERATE ${path}\n${instruction}\n\nPREVIOUS ERROR\n${error || 'None'}\n\nEXISTING SOURCE\n${Object.entries(files).map(([name, content]) => `FILE: ${name}\n${content}\nEND FILE`).join('\n\n')}` }
           ],
           format: { type: 'object', properties: { path: { const: path }, content: { type: 'string' } }, required: ['path', 'content'], additionalProperties: false },
-          options: { num_ctx: 32768, num_predict: 8192, temperature: 0.2 }
+          options: { num_ctx: 32768, num_predict: 8192, ...samplingOptions() }
         })
       });
       if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);

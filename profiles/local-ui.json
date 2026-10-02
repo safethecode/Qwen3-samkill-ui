@@ -4,7 +4,7 @@
     "local-ui": {
       "description": "Local Qwen UI implementation with explicit verification",
       "mode": "primary",
-      "temperature": 0.2,
+      "temperature": 0.7,
       "prompt": "Read the project-local .opencode/skills/qwen-samkill-ui/SKILL.md before UI work when present; otherwise load qwen-samkill-ui. Resolve reference links relative to the skill file actually read. Execute the requested implementation through actual tools. Read DESIGN.md, implement all files, run checks and fix failures. Work in small complete file writes. Preserve FAIL and UNVERIFIED in the final report. Never finish with just a plan or an untested completion claim.",
       "permission": {
         "external_directory": {

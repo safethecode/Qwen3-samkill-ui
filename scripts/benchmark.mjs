@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { run } from './process.mjs';
 import { readEvaluation } from './run-state.mjs';
+import { samplingOptions } from './sampling.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const destination = resolve(process.argv[2] || 'runs/autonomous-benchmark');
@@ -16,6 +17,7 @@ process.env.QWEN_DESIGN_CHECKS = '1';
 const sources = [...(await readdir(resolve(repo, 'scripts'))).filter(name => name.endsWith('.mjs')).map(name => `scripts/${name}`), 'skills/qwen-samkill-ui/SKILL.md', 'skills/qwen-samkill-ui/references/document-collections.md', 'evals/resume-contract.md', 'evals/reference-observations.md'];
 const hashes = Object.fromEntries(await Promise.all(sources.map(async path => [path, createHash('sha256').update(await readFile(resolve(repo, path))).digest('hex')])));
 const summary = { startedAt: new Date().toISOString(), operatorIntervention: false, checksVersion: 6, generationModel: process.env.QWEN_GENERATE_MODEL, generationThinking: process.env.QWEN_GENERATE_THINK !== 'false', repairModel: process.env.QWEN_REPAIR_MODEL, repairThinking: process.env.QWEN_REPAIR_THINK !== 'false', rounds: 10, sourceHashes: hashes, trials: [] };
+summary.sampling = samplingOptions();
 await writeFile(resolve(destination, 'summary.json'), JSON.stringify(summary, null, 2));
 for (const name of ['repeat-1', 'repeat-2', 'variant']) {
   const target = resolve(destination, name);
