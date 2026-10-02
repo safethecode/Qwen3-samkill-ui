@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이력서 관리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="collection-heading">
+      <div>
+        <h1>내 이력서</h1>
+        <p>이 브라우저에 저장됩니다</p>
+      </div>
+      <button id="new-resume-btn" type="button">새 이력서</button>
+    </section>
+
+    <section class="filters">
+      <form id="search-form">
+        <label for="resume-search">이력서 검색</label>
+        <input type="text" id="resume-search" name="search" placeholder="이력서 검색">
+      </form>
+      <div>
+        <button id="filter-all" type="button" class="active">전체</button>
+        <button id="filter-archive" type="button">보관함</button>
+      </div>
+    </section>
+
+    <section id="resume-list" class="document-grid">
+      
+    </section>
+
+    <section id="editor-section" class="editor-hidden">
+      <form id="resume-form">
+        <h2>이력서 작성</h2>
+        <div>
+          <label for="form-title">제목</label>
+          <input type="text" id="form-title" name="title" required>
+        </div>
+        <div>
+          <label for="form-name">이름</label>
+          <input type="text" id="form-name" name="name" required>
+        </div>
+        <div>
+          <label for="form-role">직무</label>
+          <input type="text" id="form-role" name="role" required>
+        </div>
+        <div>
+          <label for="form-email">이메일</label>
+          <input type="email" id="form-email" name="email">
+        </div>
+        <div>
+          <label for="form-introduction">소개</label>
+          <textarea id="form-introduction" name="introduction"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit">저장</button>
+          <button type="button" id="cancel-btn">취소</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

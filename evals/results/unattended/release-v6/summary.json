@@ -1,0 +1,76 @@
+{
+  "startedAt": "2026-10-02T17:29:54.682Z",
+  "operatorIntervention": false,
+  "checksVersion": 6,
+  "generationModel": "qwen-local-dev",
+  "generationThinking": false,
+  "repairModel": "qwen-local-dev",
+  "repairThinking": false,
+  "rounds": 10,
+  "sourceHashes": {
+    "scripts/benchmark.mjs": "03d28bb39bb00c2081b24cf34269ac9c13d781fdc811c836464d500465d5b1a0",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "775054f56414bf4d8959d186bebee4959a18e9945a833008c272c9596fc7b081",
+    "scripts/design-checks.mjs": "54a7314b2ad6474ecd74bdcd429b1a10689f0f615974beff27f013cf5d60d114",
+    "scripts/evaluate.mjs": "ad266f9b3653bb61a9a72a4111dc1459f032945f93aad1cf29395ac540a7c9c2",
+    "scripts/feedback.mjs": "6c92c3264d39ad40d625881e3e3033ca95317d0d1e1e4c1f07565060bad0418f",
+    "scripts/generate.mjs": "d4e8d009e817dc8d859d1684f41012ad16fc966baeda15f96abf77ed8bfdc654",
+    "scripts/iterate.mjs": "2cff1eff6084db97518ed67a0c81c7d497b0c13d84345b8ad7d80b925bd1b784",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/refine.mjs": "3bef5b49091d5a9ab6d0ee35c082d4e5bb89d37943c04616a4d91d415d7bff88",
+    "scripts/repair.mjs": "e71ec082c848363f6e5a102f954b39e688f390359d80954a50c07afc1e37aba1",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/setup.mjs": "e09b09a263796b00b88d39abc98b14a1890ca2869fd9f5e2b7a86293b0a748b2",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "a86a9cd93173edc5ea04f16ac9331101ceb59db1a73c677348fd804ea5c577b1",
+    "skills/qwen-samkill-ui/SKILL.md": "65683a05c5035b026470ca4fb428590562c0f6f223f1fdf017b838f35be9e698",
+    "skills/qwen-samkill-ui/references/document-collections.md": "548873a94736759cc093364732ba71506545b5592370080205037cd9e860b68e",
+    "evals/resume-contract.md": "0339ca5291195354bc3d0dbcec50be219817d8b6e81a0d9370d8b4062d3112e7",
+    "evals/reference-observations.md": "31aab604bab83a9568f559db6171809f348fbd0a8ee14fcd53ed2d2a62a9c613"
+  },
+  "trials": [
+    {
+      "name": "repeat-1",
+      "exitCode": 0,
+      "durationSeconds": 196,
+      "initialPassed": 23,
+      "passed": 25,
+      "total": 25,
+      "complete": true,
+      "error": null
+    },
+    {
+      "name": "repeat-2",
+      "exitCode": 1,
+      "durationSeconds": 959,
+      "initialPassed": 19,
+      "passed": 21,
+      "total": 25,
+      "complete": false,
+      "error": "Runner did not complete; inspect runner.log and runner.log.stderr"
+    },
+    {
+      "name": "variant",
+      "exitCode": 1,
+      "durationSeconds": 1345,
+      "initialPassed": 22,
+      "passed": 24,
+      "total": 28,
+      "complete": false,
+      "error": "Runner did not complete; inspect runner.log and runner.log.stderr"
+    }
+  ],
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1.05
+  },
+  "completed": 1,
+  "finishedAt": "2026-10-02T18:11:34.624Z"
+}

@@ -1,0 +1,318 @@
+button, input, select, textarea{
+  font: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #f5f6f8;
+  --text-primary: #20252d;
+  --text-secondary: #606873;
+  --paper-bg: #ffffff;
+  --primary-action: #1765e8;
+  --secondary-action: #606873;
+  --border-color: #e0e0e0;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --font-size-base: 14px;
+  --font-size-title: 24px;
+  --font-size-body: 16px;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  padding: var(--spacing-xl);
+  margin: 0;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.collection-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.collection-heading h1 {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 0;
+}
+
+.collection-heading p {
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+#search-form {
+  flex: 1;
+  min-width: 200px;
+}
+
+#resume-search {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--paper-bg);
+  color: var(--text-primary);
+}
+
+#resume-search:focus {
+  outline: none;
+  border-color: var(--primary-action);
+  box-shadow: 0 0 0 2px rgba(23, 101, 232, 0.2);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filter-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: var(--primary-action);
+  color: white;
+}
+
+.filter-btn:hover:not(.active) {
+  background-color: #e0e7ff;
+}
+
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.document-card {
+  background-color: var(--paper-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.document-stage {
+  height: 228px;
+  padding: 20px 20px 0;
+  overflow: hidden;
+  background-color: #f0f2f5;
+}
+
+.document-paper {
+  min-height: 280px;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--paper-bg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.document-paper h3 {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.document-paper p {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+.document-metadata {
+  padding: var(--spacing-md) var(--spacing-md) 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.document-metadata p {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.document-actions {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+}
+
+.primary-action,
+.secondary-action {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-action {
+  background-color: var(--primary-action);
+  color: white;
+}
+
+.primary-action:hover {
+  background-color: #0d54c0;
+}
+
+.secondary-action {
+  background-color: transparent;
+  color: var(--secondary-action);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-action:hover {
+  background-color: #f0f2f5;
+}
+
+.editor-hidden {
+  display: none !important;
+}
+
+#editor-section {
+  background-color: var(--paper-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow);
+}
+
+#editor-section h2 {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+}
+
+#resume-form div {
+  margin-bottom: var(--spacing-md);
+}
+
+#resume-form label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+#resume-form input,
+#resume-form textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--paper-bg);
+  color: var(--text-primary);
+}
+
+#resume-form input:focus,
+#resume-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-action);
+  box-shadow: 0 0 0 2px rgba(23, 101, 232, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: var(--spacing-md);
+  }
+  
+  .collection-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .document-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  
+  .document-actions {
+    flex-direction: column;
+  }
+  
+  .primary-action,
+  .secondary-action {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
