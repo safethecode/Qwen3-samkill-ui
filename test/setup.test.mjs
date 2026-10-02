@@ -17,6 +17,8 @@ test('installation preserves model, MCP and other agents and refuses duplicate r
   assert.deepEqual(installed.agent.reviewer, original.agent.reviewer);
   assert.equal(installed.agent['local-ui'].tools['*'], false);
   assert.equal(installed.agent['local-ui'].tools.skill, true);
+  assert.equal(installed.agent['local-ui'].permission.external_directory['~/.config/opencode/skills/qwen-samkill-ui/*'], 'allow');
+  assert.equal(installed.agent['local-ui'].permission.edit['~/.config/opencode/skills/qwen-samkill-ui/*'], 'deny');
   assert.match(await readFile(resolve(target, '.opencode/skills/qwen-samkill-ui/SKILL.md'), 'utf8'), /name: qwen-samkill-ui/);
   assert.equal((await readdir(target)).filter(f => f.endsWith('.bak')).length, 1);
   assert.notEqual(spawnSync(process.execPath, [setup, target]).status, 0);
