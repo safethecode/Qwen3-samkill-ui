@@ -1,0 +1,21 @@
+import { cp, mkdir, readFile, writeFile, access } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const source = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const target = resolve(process.argv[2] || '.');
+const configPath = resolve(target, 'opencode.json');
+const exists = async path => { try { await access(path); return true; } catch { return false; } };
+if (await exists(resolve(target, 'opencode.jsonc'))) throw new Error('Merge profiles/local-ui.json into the existing JSONC config manually; setup does not rewrite JSONC.');
+const original = await exists(configPath) ? await readFile(configPath, 'utf8') : null;
+const config = original ? JSON.parse(original.replace(/^\uFEFF/, '')) : {};
+const profile = JSON.parse(await readFile(resolve(source, 'profiles/local-ui.json'), 'utf8'));
+if (config.agent?.['local-ui']) throw new Error('local-ui already exists; review it before replacing.');
+const skillTarget = resolve(target, '.opencode/skills/qwen-samkill-ui');
+if (await exists(skillTarget)) throw new Error('qwen-samkill-ui already exists in this project; refusing to overwrite.');
+await mkdir(target, { recursive: true });
+if (original) await writeFile(`${configPath}.${Date.now()}.bak`, original);
+await cp(resolve(source, 'skills/qwen-samkill-ui'), skillTarget, { recursive: true });
+config.agent = { ...config.agent, ...profile.agent };
+await writeFile(configPath, JSON.stringify(config, null, 2) + '\n');
+console.log('Installed project skill and local-ui agent. Existing model and MCP settings preserved.');
