@@ -9,3 +9,8 @@ export function selectFailure(report, attempts = {}) {
   };
   return report.results.filter(check => check.status === 'FAIL').sort((a, b) => Math.floor((attempts[a.name] || 0) / 2) - Math.floor((attempts[b.name] || 0) / 2) || rank(a.name) - rank(b.name))[0];
 }
+
+export function selectRepair(report, attempts, previousFailure, previousError) {
+  const failure = selectFailure(report, attempts);
+  return { failure, previousError: failure?.name === previousFailure?.name ? previousError : '' };
+}

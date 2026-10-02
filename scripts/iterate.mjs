@@ -8,7 +8,7 @@ import { PatchError } from './patches.mjs';
 import { removeComments } from './comments.mjs';
 import { generate } from './generate.mjs';
 import { assessProgress } from './progress.mjs';
-import { selectFailure } from './feedback.mjs';
+import { selectFailure, selectRepair } from './feedback.mjs';
 import { withRollback } from './transaction.mjs';
 import { normalizeTypography } from './typography.mjs';
 
@@ -45,7 +45,7 @@ for (let round = 1; round <= rounds; round++) {
   await mkdir(evidence, { recursive: true });
   const before = acceptedReport ? await snapshot() : null;
   if (acceptedReport) {
-    failure = selectFailure(acceptedReport, attempts);
+    ({ failure, previousError } = selectRepair(acceptedReport, attempts, failure, previousError));
     attempts[failure.name] = (attempts[failure.name] || 0) + 1;
     prompt = `Fix this failing check: ${JSON.stringify(failure)}. ${feedback(acceptedReport, failure)}\n${previousError}`;
   }
