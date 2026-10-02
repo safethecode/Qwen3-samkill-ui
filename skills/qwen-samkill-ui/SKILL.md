@@ -1,0 +1,48 @@
+---
+name: qwen-samkill-ui
+description: Use when a local Qwen model implements or reviews web UI, including samkill-ui tasks, reference-based designs, incomplete generated files, or unsupported completion claims.
+---
+
+# Qwen samkill-ui
+
+Deliver working files, not a description of files. Follow the user's requirements and the project's AGENTS.md and DESIGN.md. Keep replies in the user's language.
+
+## Execution
+
+1. Read DESIGN.md and inspect existing files. If no design contract exists, write a short one covering layout, type, colors, interactions, responsive behavior and evidence. Use supplied references. Record unknowns instead of inventing observations.
+   Before coding, identify five observable anchors: heading/action alignment, content column structure, dominant content component, spacing hierarchy and mobile stacking. Preserve these anchors during repairs. A reference's document preview, table or content panel is part of the product, not optional decoration. Words such as “clean” or “modern” are not a sufficient layout contract.
+2. Implement one complete file or bounded edit per tool call. Write HTML, then CSS, then behavior. For repairs, replace only the affected section instead of repeating the entire old and new file; aim for fewer than 100 changed lines per edit. Use real tool calls; never print XML tool calls. Inspect an errored or interrupted write before retrying. Do not stop after a plan, scaffolding, or the first file.
+3. Run syntax/build checks. Run browser interaction tests and capture desktop/mobile screenshots. Fix failures and repeat the failed checks. A screenshot alone does not test interactions.
+4. Review screenshots against the contract: hierarchy, document/content density, spacing, typography, reference fidelity and mobile layout. Record visual review as UNVERIFIED if images were not inspected. Automated tests cannot establish design quality.
+5. Report actual files and executed checks. Never say all requirements are met when any gate is FAIL or UNVERIFIED. Persist remaining work in UI-STATUS.md before context exhaustion.
+
+## Non-negotiable UI rules
+
+- Use semantic controls and persistent visible labels. Placeholder text is not a label.
+- Default text is at least 14px and font weight at least 500; use the project's stricter rules. Set form controls to inherit typography.
+- Define and reuse CSS design tokens. Respect the contract's spacing and colors.
+- Do not invent logos, icons, reference URLs, analytics or screenshot observations. Use existing official assets or omit icons.
+- No decorative separators, tab underlines, fake KPIs or unnecessary hero sections. Focus indication must remain visible; prefer an inset field ring. Honor reduced motion.
+- Implement every requested state: empty, validation, saved, editing, errors and recovery. Keep create and edit identities separate; clear edit state when starting a new item. Render user content as text, not HTML.
+- Respect explicit no-comments requirements in all generated code.
+- Do not call MAU, analytics or unrelated task tools for a UI implementation request. A tool's availability does not make it relevant. If references are supplied, do not search again.
+
+## Load references only when needed
+
+Do not read all guides at once. Load the guide matching the current unresolved decision, then its relevant reference only.
+These guides are reference documents, not additional installed skill names. Follow their file links with the read tool; do not assume the upstream names are registered as callable skills.
+
+| Need | Guide |
+| --- | --- |
+| Reference selection | [UIBowl research](references/upstream/uibowl-research/guide.md) |
+| Reference observations | [Decomposition](references/upstream/reference-decompose/guide.md) |
+| Design contract | [Design specification](references/upstream/design-md/guide.md) |
+| Implementation | [Reference to UI](references/upstream/reference-to-ui/guide.md) |
+| Document collection previews | [Document collection hierarchy](references/document-collections.md) |
+| Final comparison | [Review](references/upstream/reference-review/guide.md) |
+| Interface copy | [UX copy](references/upstream/ux-copy/guide.md) |
+| Onboarding | [Onboarding](references/upstream/onboarding-flow/guide.md) |
+
+## Completion record
+
+UI-STATUS.md must distinguish implemented features, executed checks with results, visual evidence and remaining failures. Do not rewrite FAIL as PASS because a retry was attempted. If a tool or browser is unavailable, state the exact blocked check and leave it UNVERIFIED.
