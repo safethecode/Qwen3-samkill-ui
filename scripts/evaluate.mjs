@@ -5,7 +5,7 @@ import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { countComments } from './comments.mjs';
 import { checkDesign } from './design-checks.mjs';
-import { chooseFilter } from './controls.mjs';
+import { chooseFilter, readDocumentCards } from './controls.mjs';
 import { inspectTypography } from './typography-check.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
@@ -48,8 +48,8 @@ try {
   const button = name => page.getByRole('button', { name, exact: true });
   await check('three-example-documents', async () => {
     const count = await button('편집').count();
-    const labeled = (await page.locator('body').innerText()).includes('예시');
-    assert(count === 3 && labeled, `Fresh storage must show 3 active example documents in 전체 with an example label; observed ${count} edit buttons and example label=${labeled}. All three initial examples must be non-archived.`);
+    const badges = (await readDocumentCards(page)).map(card => card.text.includes('예시'));
+    assert(count === 3 && badges.length === 3 && badges.every(Boolean), `Fresh storage needs 3 active sample document cards in 전체. Each card must visibly display a sample-status badge reading 예시. Observed ${count} edit buttons; badges per card: ${JSON.stringify(badges)}. In the card-rendering function, create and append badge text for seeded sample documents. This is a card badge, not a form input <label>; adding a data flag alone does not render it.`);
   });
   await check('search-label-and-empty-state', async () => {
     const searchPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, locale: 'ko-KR' });
@@ -187,7 +187,7 @@ try {
   await browser?.close();
   await new Promise(r => server.close(r));
 }
-const report = { fixture: 'resume', checksVersion: 7, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
+const report = { fixture: 'resume', checksVersion: 8, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
 await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
 process.exitCode = report.passed === report.total ? 0 : 1;

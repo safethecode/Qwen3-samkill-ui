@@ -1,12 +1,9 @@
+import { readDocumentCards } from './controls.mjs';
+
 export async function checkDesign(page, check, variant = false) {
   const assert = (ok, message) => { if (!ok) throw new Error(message); };
   const button = name => page.getByRole('button', { name, exact: true });
-  const cards = () => page.evaluate(() => [...document.querySelectorAll('button')].filter(e => e.textContent.trim() === '편집').slice(0, 3).map(button => {
-    let card = button;
-    while (card.parentElement && !['BODY', 'HTML'].includes(card.parentElement.tagName) && [...card.parentElement.querySelectorAll('button')].filter(e => e.textContent.trim() === '편집').length === 1) card = card.parentElement;
-    const rect = card.getBoundingClientRect();
-    return { text: card.innerText, x: rect.x, y: rect.y, width: rect.width, bottom: rect.bottom };
-  }));
+  const cards = () => readDocumentCards(page);
   await page.setViewportSize({ width: 1440, height: 1000 });
   const values = [];
   await check('design-document-previews', async () => {
@@ -54,7 +51,7 @@ export async function checkDesign(page, check, variant = false) {
       const bounds = element.getBoundingClientRect();
       return { tag: element.tagName, class: element.className, background: style.backgroundColor, padding: style.paddingTop, width: bounds.width, height: bounds.height, parent: parent?.className, parentBackground: parent && getComputedStyle(parent).backgroundColor };
     }), values[0]);
-    assert(surfaces.every(Boolean), `Each card needs a padded white paper preview containing name and introduction INSIDE a contrasting pale stage, not beside it. Paper background must be white, padding >=12px, height >=160px, width >=150px. Actual candidate elements: ${JSON.stringify(observed)}`);
+    assert(surfaces.every(Boolean), `Each card needs a padded white paper preview containing the person's name (이름 field) and introduction (소개 field) INSIDE a contrasting pale stage. A document title (제목) is not the person's name. Expected names inside the paper: ${JSON.stringify(values.map(entry => entry['이름']))}. Render each person's name inside the paper element, not only in metadata outside it. Paper background must be white, padding >=12px, height >=160px, width >=150px. Actual candidate elements: ${JSON.stringify(observed)}`);
   });
   await page.setViewportSize({ width: 390, height: 900 });
   await check('design-mobile-stack', async () => {
