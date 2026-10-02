@@ -68,8 +68,7 @@ for (let round = 1; round <= rounds; round++) {
       previousError = '';
     } catch (error) {
       if (!(error instanceof PatchError || error instanceof SyntaxError)) throw error;
-      const rejected = await readFile(resolve(evidence, 'repair-response.json'), 'utf8').then(text => JSON.parse(text).content, () => '').catch(() => '');
-      previousError = `${error.message}. Rejected response: ${rejected.slice(0, 2500)}. Use a different, shorter unique statement from the unchanged source.`;
+      previousError = `${error.message}. The supplied current source is unchanged. Fix the actual failing behavior, not just a data flag.`;
       await writeFile(resolve(evidence, 'rejected.json'), JSON.stringify({ reason: previousError }));
       console.error(`Rejected model patch: ${previousError}`);
       continue;
@@ -110,8 +109,7 @@ for (let round = 1; round <= rounds; round++) {
     if (!progress.accept) {
       await writeFile(resolve(evidence, 'rejected-candidate.json'), JSON.stringify(await snapshot()));
       await restore(before);
-      const lastPatch = await readFile(resolve(evidence, 'repair-response.json'), 'utf8').then(text => JSON.parse(text).content, () => '').catch(() => '');
-      previousError = `Previous patch did not fix this check without regressions. Reverted to the supplied source. Candidate failures: ${JSON.stringify(report.results.filter(r => r.status === 'FAIL'))}. Rejected patch: ${lastPatch.slice(0, 6000)}. Inspect the actual cause; do not repeat this patch.`;
+      previousError = `Previous patch did not fix this check without regressions. Reverted to the supplied source. Candidate failures: ${JSON.stringify(report.results.filter(r => r.status === 'FAIL'))}. Inspect the actual cause.`;
       prompt = feedback(acceptedReport) + '\n' + previousError;
       console.log('Rejected non-improving or regressing candidate; restored previously accepted files.');
       continue;
