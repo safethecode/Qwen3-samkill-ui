@@ -14,6 +14,12 @@ A metadata-only tile is not equivalent to a document preview. The preview needs 
 
 Make the paper an actual child of the pale stage, with its own explicit white background. A stage and paper placed as siblings produce an empty block above the document. Keep metadata and action controls outside the paper. Render sample-status badge text such as 예시 in the card-rendering function; a boolean stored in the data is insufficient. These badges are unrelated to form input labels. Preserve every user-entered string in both the preview and metadata without interpreting it as markup.
 
+Clip a fixed-height preview at the stage so tall paper cannot cover the metadata or sample badge below it. Keep the badge outside that clipping region when it belongs to metadata. Check actual visible text, not just whether text exists in the DOM.
+
+Keep three short card actions in one row when they fit at 390px, with at least 44px height and a small gap. Give editing the primary emphasis shown by the reference; keep duplicate/archive quieter. Do not automatically turn every mobile action into a full-width row. Inspect where the renderer appends the action container before choosing a CSS selector. Remove conflicting later media rules when changing direction or width.
+
+An initially closed editor needs matching HTML, JavaScript and CSS state. A class named `hidden` needs `.hidden`; the attribute selector `[hidden]` does not match that class. Confirm initial load, opening, saving and cancelling in the browser.
+
 Use existing project tokens for all colors, type and spacing. The geometry below is a starting point to adapt to the observed reference, not a new theme:
 
 ```css
