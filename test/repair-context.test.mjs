@@ -25,3 +25,16 @@ test('a JavaScript repair sees the existing DOM and CSS while retaining its writ
   assert.equal(await readFile(resolve(target, 'app.js'), 'utf8'), 'const state = "after";');
   assert.equal(await readFile(resolve(target, 'index.html'), 'utf8'), '<button id="actual-button" class="actual-action">Open</button>');
 });
+
+test('syntactically broken patches are rejected before changing application files', async () => {
+  await mkdir('runs', { recursive: true });
+  const target = await mkdtemp(resolve('runs/repair-syntax-'));
+  const evidence = resolve(target, 'evidence');
+  await mkdir(evidence);
+  for (const [name, content] of Object.entries({ 'index.html': '<html></html>', 'styles.css': 'body { color: black; }', 'app.js': 'const state = "before";', 'DESIGN.md': 'Show an example badge.' })) await writeFile(resolve(target, name), content);
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => ({ ok: true, json: async () => ({ model: 'mock', done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'app.js', oldString: '"before"', newString: '(' }] }) } }) });
+  try { await assert.rejects(repair(target, evidence, { name: 'three-example-documents', detail: 'Missing sample badge.' }), /Invalid complete file app.js/); }
+  finally { globalThis.fetch = originalFetch; }
+  assert.equal(await readFile(resolve(target, 'app.js'), 'utf8'), 'const state = "before";');
+});
