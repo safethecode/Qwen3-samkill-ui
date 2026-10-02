@@ -1,0 +1,4 @@
+interface:
+  display_name: "UIbowl 레퍼런스 리서치"
+  short_description: "UIbowl 실제 화면을 관찰하고 채택·배제 근거를 정리해요"
+  default_prompt: "$uibowl-research로 이 화면의 레퍼런스를 찾아 실제 이미지에서 채택할 점과 배제할 점을 분석해줘."

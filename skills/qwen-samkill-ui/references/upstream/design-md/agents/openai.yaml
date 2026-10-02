@@ -1,0 +1,4 @@
+interface:
+  display_name: "디자인 문서 분석·작성"
+  short_description: "기존 UI와 레퍼런스를 분석해 레포 루트의 DESIGN.md를 만들고 갱신해요"
+  default_prompt: "$design-md로 이 레포의 기존 UI와 토큰, 레퍼런스를 분석해서 루트 DESIGN.md를 만들거나 갱신해줘."

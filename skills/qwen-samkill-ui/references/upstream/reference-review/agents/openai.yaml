@@ -1,0 +1,4 @@
+interface:
+  display_name: "레퍼런스 UI 리뷰"
+  short_description: "구현 화면의 차이를 근거와 사용자 영향에 따라 검토해요"
+  default_prompt: "$reference-review로 구현 화면과 레퍼런스를 비교하고 중요한 차이와 미검증 항목을 정리해줘."

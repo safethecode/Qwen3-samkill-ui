@@ -1,0 +1,4 @@
+interface:
+  display_name: "레퍼런스 기반 UI 구현"
+  short_description: "레퍼런스 근거와 제품 요구를 연결해 개성 있는 UI를 구현해요"
+  default_prompt: "$reference-to-ui로 이 레퍼런스를 분석하고 채택·배제 규칙을 정한 뒤 화면을 구현해줘."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "제품 UX 문구"
+  short_description: "실제 상태와 가능한 행동에 맞춰 자연스러운 제품 문구를 작성해요"
+  default_prompt: "$ux-copy로 이 화면의 문구와 노출 조건, 다음 행동을 정리해줘."
