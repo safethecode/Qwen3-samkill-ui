@@ -52,12 +52,25 @@ try {
     assert(count === 3 && labeled, `Fresh storage must show 3 active example documents in 전체 with an example label; observed ${count} edit buttons and example label=${labeled}. All three initial examples must be non-archived.`);
   });
   await check('search-label-and-empty-state', async () => {
-    const search = page.getByRole('textbox', { name: '이력서 검색', exact: true });
-    assert(await search.evaluate(e => [...(e.labels || [])].some(label => label.getBoundingClientRect().width > 0)), 'Search needs a visible label');
-    await search.fill('no-match-fixture-932');
-    assert(await button('편집').count() === 0, 'Search did not filter documents');
-    assert(/없|찾|결과/.test(await page.locator('body').innerText()), 'No empty-state message');
-    await search.fill('');
+    const searchPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, locale: 'ko-KR' });
+    searchPage.setDefaultTimeout(2500);
+    searchPage.on('pageerror', error => errors.push(error.message));
+    searchPage.on('dialog', dialog => dialog.dismiss());
+    try {
+      await searchPage.goto(`http://127.0.0.1:${server.address().port}`);
+      const search = searchPage.getByRole('textbox', { name: '이력서 검색', exact: true });
+      const edit = searchPage.getByRole('button', { name: '편집', exact: true });
+      assert(await search.evaluate(e => [...(e.labels || [])].some(label => label.getBoundingClientRect().width > 0)), 'Search needs a visible label');
+      await search.fill('no-match-fixture-932');
+      const filtered = await edit.first().waitFor({ state: 'detached' }).then(() => true, () => false);
+      if (!filtered) {
+        const submit = searchPage.getByRole('button', { name: /^(검색|Search)$/i });
+        if (await submit.count() === 1) await submit.click();
+        else if (await search.evaluate(input => !input.form || [...input.form.elements].filter(element => element.matches('input:not([type=hidden]):not([type=submit]):not([type=button]), textarea, select')).length === 1)) await search.press('Enter');
+      }
+      assert(await edit.first().waitFor({ state: 'detached' }).then(() => true, () => false), 'Search did not filter documents after input or search submission');
+      assert(/없|찾|결과/.test(await searchPage.locator('body').innerText()), 'No empty-state message');
+    } finally { await searchPage.close(); }
   });
   await check('visible-labels-and-create', async () => {
     await button('새 이력서').click();
@@ -174,7 +187,7 @@ try {
   await browser?.close();
   await new Promise(r => server.close(r));
 }
-const report = { fixture: 'resume', checksVersion: 6, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
+const report = { fixture: 'resume', checksVersion: 7, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
 await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
 process.exitCode = report.passed === report.total ? 0 : 1;
