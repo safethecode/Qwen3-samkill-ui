@@ -20,6 +20,7 @@ test('a coherent repair can update markup and behavior atomically', () => {
   ]);
   assert.deepEqual(applyPatches(files, patches), { 'index.html': '<textarea></textarea>', 'app.js': 'intro ||= "";' });
   assert.throws(() => validateRepairPatches([{ oldString: 'a', newString: 'a' }]));
-  assert.throws(() => validateRepairPatches([{ oldString: 'a'.repeat(501), newString: 'b' }]));
+  assert.equal(validateRepairPatches([{ oldString: 'a'.repeat(828), newString: 'b' }]).length, 1);
+  assert.throws(() => validateRepairPatches([{ oldString: 'a'.repeat(4001), newString: 'b' }]));
   assert.throws(() => validateRepairPatches(null));
 });
