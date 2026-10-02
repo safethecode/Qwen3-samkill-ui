@@ -1,0 +1,8 @@
+{
+  "name": "visual-review",
+  "status": "FAIL",
+  "files": [
+    "styles.css"
+  ],
+  "detail": "Fix only the card action row. In supplied app.js, actions is appended INSIDE metadata, so the selector .document-card > .document-stage + .document-metadata + .document-actions matches nothing. Current screenshot still shows 3 full-width rows. Style actual .document-actions as display:flex, flex-direction:row, gap:8px on BOTH desktop and 390px; override/remove conflicting later mobile column and width:100% button declarations. Each button min-height:44px. The first button is Edit: neutral dark filled background and white text. The other buttons remain quiet. Keep existing editor hidden-class fix and all functionality. Make only this bounded CSS change."
+}

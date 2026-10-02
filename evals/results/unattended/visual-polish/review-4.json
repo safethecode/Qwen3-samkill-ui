@@ -1,0 +1,8 @@
+{
+  "detail": "Only one CSS refinement: every button in .document-actions currently looks equally secondary. Its first child button is Edit. Give .document-actions > button:first-child a neutral dark background #20252d and white text, preserving min-height:44px. Keep the other two buttons unchanged. Also body needs padding-top:32px. Do not change any media queries, action flex direction, paper sizing, fields or hidden state. Return a small exact patch. No code comments.",
+  "name": "visual-review",
+  "status": "FAIL",
+  "files": [
+    "styles.css"
+  ]
+}

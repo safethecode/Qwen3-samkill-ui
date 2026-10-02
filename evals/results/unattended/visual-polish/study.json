@@ -1,0 +1,31 @@
+{
+  "observedImprovements": [
+    "Editor hidden initially and still opens through existing controls",
+    "Mobile card actions in one horizontal row",
+    "Edit action has neutral filled emphasis",
+    "32px top page spacing"
+  ],
+  "remaining": [
+    "No full upstream Round 09 parity",
+    "Metadata hierarchy and filter order differ",
+    "Visibility checks are geometric heuristics"
+  ],
+  "operatorSourceEdits": false,
+  "finalPassed": 25,
+  "total": 25,
+  "modelCalls": 4,
+  "attempts": [
+    "Targeted patch: hidden class fixed; mobile actions still wrong",
+    "Targeted patch: actions still stacked",
+    "Full CSS replacement: mobile row fixed; 2 unwanted comments caused 24/25, then host removal restored 25/25",
+    "Targeted patch: edit emphasis and top spacing fixed; 25/25"
+  ],
+  "input": "visibility-repair",
+  "type": "operator-assisted-visual-refinement",
+  "hostAssistance": [
+    "Parsed CSS comment removal after attempt 3"
+  ],
+  "model": "qwen3.5:9b",
+  "thinking": false,
+  "operatorVisualFeedback": true
+}

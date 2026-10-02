@@ -1,0 +1,8 @@
+{
+  "name": "visual-review",
+  "detail": "Observed desktop/mobile screenshots: the editor is visible on initial load because HTML/JS use class hidden but CSS only defines attribute [hidden]. Define .hidden correctly without hiding the editor after New/Edit removes this class. Mobile document actions occupy three full-width rows: use a single horizontal row at 390px, each action at least 44px tall, keep labels and min 14px/500. Give Edit the primary neutral filled style; Duplicate and Archive secondary quiet styles. Keep the existing paper and visible badges/date unchanged. Add 32px top page breathing room. Limit edits to these observed issues, preserve all existing functionality and typography.",
+  "files": [
+    "styles.css"
+  ],
+  "status": "FAIL"
+}
