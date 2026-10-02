@@ -26,6 +26,7 @@ Deliver working files, not a description of files. Follow the user's requirement
 - No decorative separators, tab underlines, fake KPIs or unnecessary hero sections. Focus indication must remain visible; prefer an inset field ring. Honor reduced motion.
 - Implement every requested state: empty, validation, saved, editing, errors and recovery. Keep create and edit identities separate; clear edit state when starting a new item. Render user content as text, not HTML.
 - Seed examples only when saved storage is absent, mark them explicitly, and keep them active initially. Archive moves a record out of the active list; restore reverses it. A duplicate gets its own ID and copies every field. A required visible label does not make its value mandatory. Check these state transitions before adding presentation polish.
+- Persist timestamps as strings or numbers and convert them back before date formatting after reload. An example flag in data is not a visible example label: render the label. Every preview and metadata interpolation must preserve user text without executing it; prefer textContent over assembling HTML strings.
 - Respect explicit no-comments requirements in all generated code.
 - Do not call MAU, analytics or unrelated task tools for a UI implementation request. A tool's availability does not make it relevant. If references are supplied, do not search again.
 
