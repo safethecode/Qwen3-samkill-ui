@@ -1,0 +1,7 @@
+node_modules/
+runs/
+.opencode/
+*.log
+.env
+__pycache__/
+*.bak
