@@ -10,9 +10,9 @@ Preserve the hierarchy in this order:
 4. Document title, role/status and modification date below the preview.
 5. Editing as the primary card action; duplication and archival as secondary actions.
 
-A metadata-only tile is not equivalent to a document preview. The preview needs actual name, role, introduction and a relevant section heading. Mark sample documents as examples. Render user values with `textContent` or the application's verified escaping function.
+A metadata-only tile is not equivalent to a document preview. The preview needs the person's actual name (이름), role, introduction and a relevant section heading. A document title (제목) does not substitute for the person's name. Mark sample documents with a visible sample-status badge on each card. Render user values with `textContent` or the application's verified escaping function.
 
-Make the paper an actual child of the pale stage, with its own explicit white background. A stage and paper placed as siblings produce an empty block above the document. Keep metadata and action controls outside the paper. Render example labels visibly; a boolean stored in the data is insufficient. Preserve every user-entered string in both the preview and metadata without interpreting it as markup.
+Make the paper an actual child of the pale stage, with its own explicit white background. A stage and paper placed as siblings produce an empty block above the document. Keep metadata and action controls outside the paper. Render sample-status badge text such as 예시 in the card-rendering function; a boolean stored in the data is insufficient. These badges are unrelated to form input labels. Preserve every user-entered string in both the preview and metadata without interpreting it as markup.
 
 Use existing project tokens for all colors, type and spacing. The geometry below is a starting point to adapt to the observed reference, not a new theme:
 
