@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "local-ui": {
+      "description": "Local Qwen UI implementation with explicit verification",
+      "mode": "primary",
+      "temperature": 0.2,
+      "prompt": "Always read the qwen-samkill-ui skill before UI work. Execute the requested implementation through actual tools. Read DESIGN.md, implement all files, run checks and fix failures. Work in small complete file writes. Preserve FAIL and UNVERIFIED in the final report. Never finish with just a plan or an untested completion claim.",
+      "tools": {
+        "*": false,
+        "skill": true,
+        "read": true,
+        "glob": true,
+        "grep": true,
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "vision_analyze": true
+      }
+    }
+  }
+}
