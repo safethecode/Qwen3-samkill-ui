@@ -7,6 +7,7 @@ import { countComments } from './comments.mjs';
 import { checkDesign } from './design-checks.mjs';
 import { chooseFilter, readDocumentCards } from './controls.mjs';
 import { inspectTypography } from './typography-check.mjs';
+import { inspectCardText } from './visibility.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
 const output = resolve(process.argv[3] || 'runs/evidence');
@@ -48,8 +49,14 @@ try {
   const button = name => page.getByRole('button', { name, exact: true });
   await check('three-example-documents', async () => {
     const count = await button('편집').count();
-    const badges = (await readDocumentCards(page)).map(card => card.text.includes('예시'));
-    assert(count === 3 && badges.length === 3 && badges.every(Boolean), `Fresh storage needs 3 active sample document cards in 전체. Each card must visibly display a sample-status badge reading 예시. Observed ${count} edit buttons; badges per card: ${JSON.stringify(badges)}. In the card-rendering function, create and append badge text for seeded sample documents. This is a card badge, not a form input <label>; adding a data flag alone does not render it.`);
+    const viewports = [];
+    try {
+      for (const width of [1440, 390]) {
+        await page.setViewportSize({ width, height: 1000 });
+        viewports.push({ width, badges: await inspectCardText(page, '예시') });
+      }
+    } finally { await page.setViewportSize({ width: 1440, height: 1000 }); }
+    assert(count === 3 && viewports.every(({ badges }) => badges.length === 3 && badges.every(badge => badge.visible)), `Fresh storage needs 3 active sample document cards in 전체. Each card must visibly display a sample-status badge reading 예시. Observed ${count} edit buttons; badges per viewport: ${JSON.stringify(viewports)}. If occluded or clipped, constrain the paper to its preview stage using stage overflow or sizing; keep metadata and badges outside that clipping region. If missing, append the sample-status badge in the card-rendering function. This is not a form input <label>.`);
   });
   await check('search-label-and-empty-state', async () => {
     const searchPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, locale: 'ko-KR' });
@@ -187,7 +194,7 @@ try {
   await browser?.close();
   await new Promise(r => server.close(r));
 }
-const report = { fixture: 'resume', checksVersion: 8, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
+const report = { fixture: 'resume', checksVersion: 9, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
 await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
 process.exitCode = report.passed === report.total ? 0 : 1;
