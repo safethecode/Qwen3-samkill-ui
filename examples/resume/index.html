@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서 관리</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-copy">
+                <h1 class="title">내 이력서</h1>
+                <p class="subtitle">이 브라우저에 저장됩니다</p>
+            </div>
+            <div class="header-actions">
+                <button id="new-resume-btn" class="btn btn-primary">새 이력서</button>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-container">
+                <label for="search-input" class="search-label">이력서 검색</label>
+                <input type="text" id="search-input" class="search-input" placeholder="이력서 검색">
+            </div>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="saved">보관함</button>
+            </div>
+        </div>
+
+        <div id="resume-list" class="resume-list">
+            
+        </div>
+
+        <div id="resume-form" class="resume-form hidden">
+            <h2 class="form-title">이력서 작성</h2>
+            <form id="resume-form-content">
+                <div class="form-group">
+                    <label for="resume-title">제목 *</label>
+                    <input type="text" id="resume-title" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume-name">이름 *</label>
+                    <input type="text" id="resume-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume-position">직무 *</label>
+                    <input type="text" id="resume-position" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume-email">이메일</label>
+                    <input type="email" id="resume-email" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="resume-intro">소개</label>
+                    <textarea id="resume-intro" class="form-textarea" rows="4"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">취소</button>
+                    <button type="submit" class="btn btn-primary">저장</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="empty-state" class="empty-state hidden">
+            <p>이력서가 없습니다. 새 이력서를 만들어보세요.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
