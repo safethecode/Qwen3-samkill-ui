@@ -2,6 +2,8 @@
 
 Measured on 2026-10-02 using the version 3 resume fixture checks in this repository.
 
+These are historical, operator-assisted results. **7/19 and 8/19 failed most checks, and 19/19 did not establish autonomous reliability.** The follow-up [unattended study](UNATTENDED-RESULTS.md) records fresh-generation failures separately.
+
 | Candidate | Passed | Evidence |
 | --- | ---: | --- |
 | Original local workflow | 7/19 | [Report](results/baseline/report.json) |
