@@ -6,6 +6,8 @@ import { applyPatches } from '../scripts/patches.mjs';
 test('form and search repairs include both markup and behavior; stalled repairs broaden scope', () => {
   for (const name of ['search-label-and-empty-state', 'create-after-edit']) assert.deepEqual(sourceNamesFor({ name }), ['index.html', 'app.js']);
   assert.deepEqual(sourceNamesFor({ name: 'typography-390' }), ['styles.css']);
+  assert.deepEqual(sourceNamesFor({ name: 'three-example-documents', detail: '"reason":"occluded"' }), ['styles.css']);
+  assert.deepEqual(sourceNamesFor({ name: 'three-example-documents', detail: '"reason":"missing"' }), ['app.js']);
   assert.deepEqual(sourceNamesFor({ name: 'typography-390' }, 'Previous patch did not fix this check.'), ['index.html', 'styles.css', 'app.js']);
   assert.deepEqual(sourceNamesFor({ name: 'visual-review', files: ['styles.css'] }), ['styles.css']);
   assert.throws(() => sourceNamesFor({ name: 'visual-review', files: ['../private'] }));

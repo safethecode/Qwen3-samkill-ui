@@ -25,6 +25,7 @@ export function sourceNamesFor(failure, previousError = '') {
     return [...new Set(failure.files)];
   }
   if (previousError.startsWith('Previous patch did not fix')) return ['index.html', 'styles.css', 'app.js'];
+  if (failure.name === 'three-example-documents' && /"reason":"(?:occluded|clipped|hidden)"/.test(failure.detail || '') && !/"reason":"missing"/.test(failure.detail || '')) return ['styles.css'];
   if (failure.name.startsWith('typography')) return ['styles.css'];
   if (['design-desktop-columns', 'design-mobile-stack', 'design-reduced-motion', 'variant-action-color', 'variant-width'].includes(failure.name)) return ['styles.css'];
   if (['design-document-previews', 'variant-content'].includes(failure.name)) return ['app.js'];
