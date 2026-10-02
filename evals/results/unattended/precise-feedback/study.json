@@ -1,0 +1,27 @@
+{
+  "kind": "repair-only diagnostic pilot",
+  "source": "frozen v6 release repeat-2",
+  "beforePassed": 23,
+  "afterPassed": 25,
+  "total": 25,
+  "evaluatorVersion": 8,
+  "harnessRevision": "v8 precise badge and person-name feedback, before pre-write patch syntax validation",
+  "generationModel": "qwen-local-dev",
+  "repairModel": "qwen3.5:9b",
+  "thinking": false,
+  "operatorApplicationEdits": false,
+  "operatorIntermediateFeedback": false,
+  "freshGeneration": false,
+  "roundLimit": 6,
+  "roundsUsed": 5,
+  "exitCode": 0,
+  "acceptedRepairs": 2,
+  "rejectedCandidates": 3,
+  "sampling": {
+    "top_k": 20,
+    "repeat_penalty": 1.05,
+    "temperature": 0.7,
+    "top_p": 0.8
+  },
+  "visualReview": "Inspected; oversized mobile action area and weak action hierarchy remain"
+}

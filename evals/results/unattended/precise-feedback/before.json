@@ -1,0 +1,115 @@
+{
+  "fixture": "resume",
+  "checksVersion": 8,
+  "designChecks": true,
+  "results": [
+    {
+      "name": "file:index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "file:styles.css",
+      "status": "PASS"
+    },
+    {
+      "name": "file:app.js",
+      "status": "PASS"
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "three-example-documents",
+      "status": "FAIL",
+      "detail": "Fresh storage needs 3 active sample document cards in 전체. Each card must visibly display a sample-status badge reading 예시. Observed 3 edit buttons; badges per card: [false,false,false]. In the card-rendering function, create and append badge text for seeded sample documents. This is a card badge, not a form input <label>; adding a data flag alone does not render it."
+    },
+    {
+      "name": "search-label-and-empty-state",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-labels-and-create",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "archive-and-restore",
+      "status": "PASS"
+    },
+    {
+      "name": "create-after-edit",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "typography-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-errors",
+      "status": "PASS"
+    },
+    {
+      "name": "no-code-comments",
+      "status": "PASS"
+    },
+    {
+      "name": "required-title-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "user-content-is-text",
+      "status": "PASS"
+    },
+    {
+      "name": "design-document-previews",
+      "status": "PASS"
+    },
+    {
+      "name": "design-desktop-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "design-heading-hierarchy",
+      "status": "PASS"
+    },
+    {
+      "name": "design-paper-surfaces",
+      "status": "FAIL",
+      "detail": "Each card needs a padded white paper preview containing the person's name (이름 field) and introduction (소개 field) INSIDE a contrasting pale stage. A document title (제목) is not the person's name. Expected names inside the paper: [\"김개발\",\"이디자인\",\"박기획\"]. Render each person's name inside the paper element, not only in metadata outside it. Paper background must be white, padding >=12px, height >=160px, width >=150px. Actual candidate elements: []"
+    },
+    {
+      "name": "design-mobile-stack",
+      "status": "PASS"
+    },
+    {
+      "name": "design-reduced-motion",
+      "status": "PASS"
+    }
+  ],
+  "passed": 23,
+  "total": 25,
+  "visualReview": "UNVERIFIED",
+  "limitations": [
+    "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+  ]
+}

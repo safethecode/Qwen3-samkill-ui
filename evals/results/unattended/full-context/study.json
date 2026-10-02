@@ -1,0 +1,23 @@
+{
+  "kind": "repair-only comparison",
+  "source": "frozen v6 release repeat-2",
+  "beforePassed": 23,
+  "afterPassed": 23,
+  "total": 25,
+  "evaluatorVersion": 7,
+  "sourceCommit": "dbac822",
+  "repairModel": "qwen3.5:9b",
+  "thinking": false,
+  "operatorApplicationEdits": false,
+  "operatorIntermediateFeedback": false,
+  "freshGeneration": false,
+  "rounds": 6,
+  "exitCode": 1,
+  "acceptedRepairs": 0,
+  "sampling": {
+    "top_k": 20,
+    "repeat_penalty": 1.05,
+    "temperature": 0.7,
+    "top_p": 0.8
+  }
+}

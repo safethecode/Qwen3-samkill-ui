@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이력서 관리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="collection-heading">
+      <div>
+        <h1>내 이력서</h1>
+        <p>이 브라우저에 저장됩니다</p>
+      </div>
+      <button id="new-resume-btn" class="primary-action">새 이력서</button>
+    </section>
+
+    <section class="filters">
+      <form id="search-form">
+        <label for="resume-search">이력서 검색</label>
+        <input type="text" id="resume-search" name="search" placeholder="이력서 검색">
+      </form>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">전체</button>
+        <button class="filter-btn" data-filter="archived">보관함</button>
+      </div>
+    </section>
+
+    <section id="resume-list" class="document-grid">
+      
+    </section>
+
+    <section id="editor-section" class="editor-hidden">
+      <form id="resume-form">
+        <h2>이력서 작성</h2>
+        <div>
+          <label for="resume-title">제목</label>
+          <input type="text" id="resume-title" name="title" required>
+        </div>
+        <div>
+          <label for="resume-name">이름</label>
+          <input type="text" id="resume-name" name="name" required>
+        </div>
+        <div>
+          <label for="resume-role">직무</label>
+          <input type="text" id="resume-role" name="role" required>
+        </div>
+        <div>
+          <label for="resume-email">이메일</label>
+          <input type="email" id="resume-email" name="email">
+        </div>
+        <div>
+          <label for="resume-intro">소개</label>
+          <textarea id="resume-intro" name="intro"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="primary-action">저장</button>
+          <button type="button" id="cancel-edit-btn">취소</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
