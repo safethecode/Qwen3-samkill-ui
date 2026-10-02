@@ -9,7 +9,9 @@
   "scripts": {
     "setup": "node scripts/setup.mjs",
     "evaluate": "node scripts/evaluate.mjs",
-    "test": "node --test"
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "node --test checks/*.test.mjs",
+    "benchmark": "node scripts/benchmark.mjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",

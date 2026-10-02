@@ -4,6 +4,9 @@ import { resolve, extname, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { countComments } from './comments.mjs';
+import { checkDesign } from './design-checks.mjs';
+import { chooseFilter } from './controls.mjs';
+import { inspectTypography } from './typography-check.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
 const output = resolve(process.argv[3] || 'runs/evidence');
@@ -12,7 +15,7 @@ await mkdir(output, { recursive: true });
 const results = [];
 const check = async (name, fn) => {
   try { await fn(); results.push({ name, status: 'PASS' }); }
-  catch (error) { results.push({ name, status: 'FAIL', detail: error.message.split('\n')[0] }); }
+  catch (error) { results.push({ name, status: 'FAIL', detail: error.message.slice(0, 1400) }); }
 };
 const assert = (ok, message) => { if (!ok) throw new Error(message); };
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript' };
@@ -106,13 +109,13 @@ try {
     const count = await button('편집').count();
     await button('보관').first().click();
     assert(await button('편집').count() === count - 1, 'Archived item remains in active list');
-    await button('보관함').click();
+    await chooseFilter(page, '보관함');
     await page.getByRole('button', { name: /^(복원|보관 해제|보관해제)$/ }).first().click();
-    await button('전체').click();
+    await chooseFilter(page, '전체');
     assert(await button('편집').count() === count, 'Restore lost a document');
   });
   await check('create-after-edit', async () => {
-    await button('전체').click();
+    await chooseFilter(page, '전체');
     const count = await button('편집').count();
     await button('편집').first().click();
     await button('취소').click();
@@ -127,8 +130,11 @@ try {
     await page.setViewportSize({ width, height: 900 });
     await check(`overflow-${width}`, async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Horizontal overflow'));
     await check(`typography-${width}`, async () => {
-      const bad = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(e => e.getBoundingClientRect().width && [...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())).filter(e => { const s = getComputedStyle(e); return parseFloat(s.fontSize) < 14 || parseFloat(s.fontWeight) < 500; }).map(e => e.tagName + ':' + e.textContent.trim().slice(0, 30)));
-      assert(!bad.length, `Typography outside contract: ${bad.slice(0, 5).join(', ')}`);
+      const bad = await inspectTypography(page);
+      await button('새 이력서').click();
+      bad.push(...await inspectTypography(page));
+      await page.reload();
+      assert(!bad.length, `Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: ${JSON.stringify(bad.slice(0, 8))}`);
     });
     await page.screenshot({ path: resolve(output, `result-${width}.png`), fullPage: true });
   }
@@ -157,11 +163,18 @@ try {
     await button('저장').click();
     assert(await page.locator('img[src="x"]').count() === 0 && (await page.locator('body').innerText()).includes(payload), 'Render user-entered strings as text, not executable HTML');
   });
+  if (process.env.QWEN_DESIGN_CHECKS === '1') {
+    const designPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, locale: 'ko-KR' });
+    designPage.setDefaultTimeout(2500);
+    designPage.on('dialog', dialog => dialog.dismiss());
+    await designPage.goto(`http://127.0.0.1:${server.address().port}`);
+    await checkDesign(designPage, check, process.env.QWEN_EVAL_VARIANT === '1');
+  }
 } finally {
   await browser?.close();
   await new Promise(r => server.close(r));
 }
-const report = { fixture: 'resume', checksVersion: 3, results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
+const report = { fixture: 'resume', checksVersion: 6, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
 await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
 process.exitCode = report.passed === report.total ? 0 : 1;
