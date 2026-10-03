@@ -13,9 +13,12 @@ const profile = JSON.parse(await readFile(resolve(source, 'profiles/local-ui.jso
 if (config.agent?.['local-ui']) throw new Error('local-ui already exists; review it before replacing.');
 const skillTarget = resolve(target, '.opencode/skills/qwen-samkill-ui');
 if (await exists(skillTarget)) throw new Error('qwen-samkill-ui already exists in this project; refusing to overwrite.');
+const runnerTarget = resolve(target, '.opencode/quality-runner.json');
+if (await exists(runnerTarget)) throw new Error('A quality runner is already registered; refusing to overwrite.');
 await mkdir(target, { recursive: true });
 if (original) await writeFile(`${configPath}.${Date.now()}.bak`, original);
 await cp(resolve(source, 'skills/qwen-samkill-ui'), skillTarget, { recursive: true });
+await writeFile(runnerTarget, JSON.stringify({ node: process.execPath, script: resolve(source, 'scripts/quality.mjs') }, null, 2) + '\n');
 config.agent = { ...config.agent, ...profile.agent };
 await writeFile(configPath, JSON.stringify(config, null, 2) + '\n');
 console.log('Installed project skill and local-ui agent. Existing model and MCP settings preserved.');

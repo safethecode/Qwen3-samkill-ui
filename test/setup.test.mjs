@@ -20,6 +20,9 @@ test('installation preserves model, MCP and other agents and refuses duplicate r
   assert.equal(installed.agent['local-ui'].permission.external_directory['~/.config/opencode/skills/qwen-samkill-ui/*'], 'allow');
   assert.equal(installed.agent['local-ui'].permission.edit['~/.config/opencode/skills/qwen-samkill-ui/*'], 'deny');
   assert.match(await readFile(resolve(target, '.opencode/skills/qwen-samkill-ui/SKILL.md'), 'utf8'), /name: qwen-samkill-ui/);
+  const runner = JSON.parse(await readFile(resolve(target, '.opencode/quality-runner.json'), 'utf8'));
+  assert.equal(runner.script, resolve('scripts/quality.mjs'));
+  assert.equal(runner.node, process.execPath);
   assert.equal((await readdir(target)).filter(f => f.endsWith('.bak')).length, 1);
   assert.notEqual(spawnSync(process.execPath, [setup, target]).status, 0);
   assert.deepEqual(JSON.parse(await readFile(resolve(target, 'opencode.json'))), installed);
