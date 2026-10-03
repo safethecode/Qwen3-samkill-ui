@@ -49,7 +49,7 @@ export async function validateAssetReferences(target, stage, code) {
     const suggestions = missing.flatMap(source => {
       if (!/^\.?\/?assets\//.test(source) || source.includes('..')) return [];
       const filename = posix.basename(source.split(/[?#]/)[0]);
-      const matches = supplied.filter(path => posix.basename(path) === filename);
+      const matches = supplied.filter(path => posix.basename(path).toLowerCase() === filename.toLowerCase());
       return matches.length === 1 ? [`${source} -> ${matches[0]}`] : [];
     });
     throw new Error(`Unprovided image/font assets: ${missing.join(', ')}. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration.${suggestions.length ? ` Unambiguous supplied filename matches (use these exact local paths): ${suggestions.join('; ')}` : ''}`);

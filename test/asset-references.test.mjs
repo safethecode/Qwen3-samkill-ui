@@ -25,3 +25,13 @@ test('missing asset errors identify only unambiguous supplied filename matches',
   await assert.rejects(validateAssetReferences(root, { file: 'index.html' }, '<img src="assets/icons/bell.svg">'), error => !error.message.includes(' -> '));
   await assert.rejects(validateAssetReferences(root, { file: 'index.html' }, '<img src="https://example.test/bell.svg">'), error => !error.message.includes(' -> '));
 });
+
+test('asset suggestions retain actual filename case and reject ambiguous case variants', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'qwen-asset-case-'));
+  await mkdir(join(root, 'assets/icons'), { recursive: true });
+  await writeFile(join(root, 'assets/icons/Clock.svg'), '<svg/>');
+  await assert.rejects(validateAssetReferences(root, { file: 'index.html' }, '<img src="assets/reference/clock.svg">'), /assets\/reference\/clock\.svg -> assets\/icons\/Clock\.svg/);
+  await mkdir(join(root, 'assets/other'));
+  await writeFile(join(root, 'assets/other/clock.svg'), '<svg/>');
+  await assert.rejects(validateAssetReferences(root, { file: 'index.html' }, '<img src="assets/reference/clock.svg">'), error => !error.message.includes(' -> '));
+});
