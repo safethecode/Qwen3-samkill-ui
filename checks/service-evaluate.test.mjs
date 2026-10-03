@@ -50,6 +50,8 @@ test('a global completed label cannot pass a no-op ticket completion handler', a
   const failure = report.checks.find(c => c.name === 'ticket-create-complete-persist');
   assert.equal(failure.status, 'FAIL');
   assert.match(failure.detail, /must not remain actionable|no persisted completion/);
+  assert.ok(failure.observed.controls.some(control => control.text === '처리 완료'));
+  assert.ok(failure.observed.headings.includes('Test'));
 });
 
 test('a static search-results heading cannot hide a nonfunctional search', async () => {

@@ -10,6 +10,7 @@ import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
 import { inspectFieldLabels } from './label-check.mjs';
+import { inspectWorkflowState } from './workflow-state.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -38,7 +39,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
   try { iconAssets = await verifiedIconAssets(target); } catch (error) { iconAssetError = error.message; }
   const check = async (name, fn) => {
     try { await fn(); checks.push({ name, status: 'PASS' }); }
-    catch (error) { checks.push({ name, status: 'FAIL', detail: error.message.slice(0, 1600) }); }
+    catch (error) { checks.push({ name, status: 'FAIL', detail: error.message.slice(0, 1600), ...(error.observed ? { observed: error.observed } : {}) }); }
   };
   try {
     browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
@@ -129,7 +130,12 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           reviewRequired.push(...reviewFindings(fonts.issues, `${name}-presentation.json`, 'fonts'), ...reviewFindings(icons.issues, `${name}-presentation.json`, 'icons'));
           assert.deepEqual({ typography, fonts: fonts.issues.filter(issue => issue.status === 'FAIL'), icons: icons.issues.filter(issue => issue.status === 'FAIL') }, { typography: [], fonts: [], icons: [] }, 'Workflow end state fails typography, font contrast or icon checks');
         }
-        catch (error) { await page.screenshot({ path: resolve(evidence, `${name}-failed.png`), fullPage: true }).catch(() => {}); throw error; }
+        catch (error) {
+          error.observed = await inspectWorkflowState(page).catch(() => undefined);
+          if (error.observed) await writeFile(resolve(evidence, `${name}-failure-state.json`), JSON.stringify(error.observed, null, 2));
+          await page.screenshot({ path: resolve(evidence, `${name}-failed.png`), fullPage: true }).catch(() => {});
+          throw error;
+        }
         finally { await page.close(); }
       });
       const button = (page, name) => page.getByRole('button', { name, exact: true });

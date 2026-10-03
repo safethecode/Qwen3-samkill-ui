@@ -7,6 +7,7 @@ import { removeComments } from './comments.mjs';
 import { rollbackOwned, assertOwned } from './owned-rollback.mjs';
 import { createHash } from 'node:crypto';
 import { serviceProgress } from './service-progress.mjs';
+import { serviceFailureContext } from './workflow-state.mjs';
 
 const [directory, caseId, budget = '4'] = process.argv.slice(2);
 const fixture = serviceCases.find(c => c.id === caseId);
@@ -42,7 +43,7 @@ try {
     let owned = null;
     try {
       const files = /^(overflow|readable|font-rendering)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
-      const applied = await repair(target, step, { name: 'visual-review', files, detail: `${failure.name}: ${failure.detail}` }, '', { bounded: true, unitAttempt: unitAttempt++ });
+      const applied = await repair(target, step, { name: 'visual-review', files, detail: serviceFailureContext(failure) }, '', { bounded: true, unitAttempt: unitAttempt++ });
       owned = names.map(name => applied.files[name]);
       const raw = await snapshot();
       if (raw.some((source, index) => source !== owned[index])) { const error = new Error('Source changed before normalization'); error.code = 'STALE_SOURCE'; throw error; }
