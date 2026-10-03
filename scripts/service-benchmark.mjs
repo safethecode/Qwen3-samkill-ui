@@ -6,6 +6,7 @@ import { generateService } from './generate-service.mjs';
 import { evaluateService } from './service-evaluate.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { removeComments } from './comments.mjs';
+import { validateStudyResume, caseResumeMode } from './service-resume.mjs';
 
 const output = resolve(process.argv[2] || 'runs/services');
 const selected = process.argv.slice(3);
@@ -20,7 +21,7 @@ const resume = process.env.QWEN_RESUME === '1';
 if (await access(resolve(output, 'study.json')).then(() => true, () => false)) {
   if (!resume) throw new Error('Study already exists; choose a fresh output or explicitly resume');
   const previous = JSON.parse(await readFile(resolve(output, 'study.json'), 'utf8'));
-  if (previous.model !== study.model || JSON.stringify(previous.inferenceOptions) !== JSON.stringify(study.inferenceOptions)) throw new Error('Resume requires the original model and resource settings');
+  validateStudyResume(previous, study);
   study.results = previous.results;
   study.started = previous.started;
 }
@@ -31,14 +32,16 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
   await mkdir(evidence, { recursive: true });
   const started = Date.now();
   const previous = study.results.find(result => result.case === fixture.id);
+  const mode = resume ? caseResumeMode(previous, digest(fixture.contract)) : 'generate';
   if (resume && previous?.sourceHashes) {
     for (const [file, expected] of Object.entries(previous.sourceHashes)) if (digest(await readFile(resolve(target, file))) !== expected) throw new Error(`Cannot resume over modified source: ${fixture.id}/${file}`);
-    console.log(`SKIP already generated ${fixture.id}`);
-    continue;
+    if (mode === 'skip') { console.log(`SKIP already evaluated ${fixture.id}`); continue; }
   }
   if (previous) study.results = study.results.filter(result => result.case !== fixture.id);
   console.log(`START ${fixture.id}`);
+  let generated = mode === 'evaluate' ? { sourceHashes: previous.sourceHashes, contractHash: previous.contractHash, hostNormalization: previous.hostNormalization } : null;
   try {
+    if (!generated) {
     if (await access(resolve(target, 'index.html')).then(() => true, () => false)) throw new Error('Existing source: choose a fresh output directory');
     await writeFile(resolve(target, 'DESIGN.md'), fixture.contract);
     await writeFile(resolve(target, 'REFERENCE.md'), fixture.reference);
@@ -49,10 +52,16 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     const normalized = [cleaned.html, cleaned.css, cleaned.js];
     for (let index = 0; index < names.length; index++) await writeFile(resolve(target, names[index]), normalized[index]);
     const sourceHashes = Object.fromEntries(await Promise.all(['index.html', 'app.js', 'styles.css'].map(async name => [name, createHash('sha256').update(await readFile(resolve(target, name))).digest('hex')])));
+    generated = { contractHash: digest(fixture.contract), sourceHashes, hostNormalization: 'Parser-based comment removal only' };
+    study.results.push({ case: fixture.id, scope: fixture.scope, phase: 'GENERATED', ...generated });
+    await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
+    }
     const report = await evaluateService(target, evidence, fixture);
-    study.results.push({ ...report, contractHash: digest(fixture.contract), sourceHashes, hostNormalization: 'Parser-based comment removal only', elapsedMs: Date.now() - started });
+    study.results = study.results.filter(result => result.case !== fixture.id);
+    study.results.push({ ...report, ...generated, phase: 'EVALUATED', elapsedMs: Date.now() - started });
   } catch (error) {
-    study.results.push({ case: fixture.id, scope: fixture.scope, status: 'INCOMPLETE', error: error.name === 'TimeoutError' ? 'Local generation timed out' : error.message.replaceAll(target, '<target>').replaceAll(output, '<output>'), elapsedMs: Date.now() - started });
+    study.results = study.results.filter(result => result.case !== fixture.id);
+    study.results.push({ case: fixture.id, scope: fixture.scope, ...generated, phase: generated ? 'EVALUATION_FAILED' : 'GENERATION_FAILED', status: 'INCOMPLETE', error: error.name === 'TimeoutError' ? 'Local generation timed out' : error.message.replaceAll(target, '<target>').replaceAll(output, '<output>'), elapsedMs: Date.now() - started });
   }
   if (previous) study.results.at(-1).previousAttempts = [...(previous.previousAttempts || []), { ...previous, previousAttempts: undefined }];
   await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
