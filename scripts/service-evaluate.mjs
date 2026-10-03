@@ -3,6 +3,10 @@ import { readFile, writeFile, mkdir, realpath } from 'node:fs/promises';
 import { resolve, sep, extname } from 'node:path';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
+import { inspectTypography } from './typography-check.mjs';
+import { inspectIcons } from './icon-check.mjs';
+import { inspectFontRendering } from './font-rendering.mjs';
+import { verifiedIconAssets } from './icon-assets.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -18,6 +22,13 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
   await new Promise(r => server.listen(0, '127.0.0.1', r));
   let browser;
   const checks = [];
+  const measurements = {};
+  const contentInventory = {};
+  const reviewRequired = [];
+  let iconAssets = {};
+  const typographyContract = await readFile(resolve(target, 'design/typography.json'), 'utf8').then(JSON.parse).catch(error => { if (error.code === 'ENOENT') return { roles: [] }; throw error; });
+  let iconAssetError;
+  try { iconAssets = await verifiedIconAssets(target); } catch (error) { iconAssetError = error.message; }
   const check = async (name, fn) => {
     try { await fn(); checks.push({ name, status: 'PASS' }); }
     catch (error) { checks.push({ name, status: 'FAIL', detail: error.message.slice(0, 1600) }); }
@@ -39,6 +50,18 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
       if (options.captureStates) await options.captureStates(page, width, evidence, url);
       if (!options.reference) {
+        contentInventory[width] = await page.evaluate(() => {
+          const inventory = {};
+          for (const element of document.querySelectorAll('body *')) {
+            if (!element.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) continue;
+            for (const node of element.childNodes) {
+              if (node.nodeType !== 3) continue;
+              const text = node.textContent.replace(/\s+/g, ' ').trim();
+              if (text) inventory[text] = (inventory[text] || 0) + 1;
+            }
+          }
+          return inventory;
+        });
         await check(`content-${width}`, async () => {
           for (const text of fixture.anchors) {
             const candidates = await page.getByText(text, { exact: false }).all();
@@ -47,16 +70,34 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         });
         await check(`overflow-${width}`, async () => assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Horizontal page overflow'));
         await check(`readable-${width}`, async () => {
-          const small = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(el => [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()) && el.getBoundingClientRect().width && el.getBoundingClientRect().height && getComputedStyle(el).visibility !== 'hidden' && parseFloat(getComputedStyle(el).fontSize) < 14).map(el => el.textContent.slice(0, 70)));
-          assert.deepEqual(small, [], 'Text smaller than 14px');
+          const issues = await inspectTypography(page);
+          measurements[`readable-${width}`] = issues.length;
+          assert.deepEqual(issues, [], 'Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500');
+        });
+        await check(`font-rendering-${width}`, async () => {
+          const report = await inspectFontRendering(page, { roles: typographyContract.roles, requiredFamilies: fixture.requiredFamilies || [] });
+          await writeFile(resolve(evidence, `font-rendering-${width}.json`), JSON.stringify(report, null, 2));
+          measurements[`font-rendering-${width}`] = report.issues.filter(issue => issue.status === 'FAIL').length;
+          reviewRequired.push(...report.issues.filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `font-rendering-${width}.json`, rules: ['ORC-G11', 'RUI-09'] })));
+          assert.deepEqual(report.issues.filter(issue => issue.status === 'FAIL'), [], 'Actual fonts or solid-background text contrast require correction');
         });
         await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
         await check(`assets-${width}`, async () => {
           const broken = await page.locator('img').evaluateAll(images => images.filter(image => image.getBoundingClientRect().width && image.getBoundingClientRect().height && (!image.complete || !image.naturalWidth)).map(image => image.getAttribute('src')));
+          measurements[`assets-${width}`] = broken.length;
           assert.deepEqual(broken, [], 'Visible images failed to load');
+        });
+        await check(`icons-${width}`, async () => {
+          assert.equal(iconAssetError, undefined, iconAssetError);
+          const icons = await inspectIcons(page, { verifiedImages: iconAssets });
+          await writeFile(resolve(evidence, `icons-${width}.json`), JSON.stringify(icons, null, 2));
+          measurements[`icons-${width}`] = icons.issues.filter(issue => issue.status === 'FAIL').length;
+          reviewRequired.push(...icons.issues.filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `icons-${width}.json`, rules: ['RUI-12'] })));
+          assert.deepEqual(icons.issues.filter(issue => issue.status === 'FAIL'), [], 'Icon geometry or control semantics failed');
         });
         await check(`labels-${width}`, async () => {
           const unlabeled = await page.evaluate(() => [...document.querySelectorAll('input:not([type=hidden]),textarea,select')].filter(el => el.getBoundingClientRect().width && el.getBoundingClientRect().height && !el.disabled && ![...el.labels || []].some(label => label.getBoundingClientRect().width && label.getBoundingClientRect().height && label.textContent.trim())).map(el => el.id || el.name || el.tagName));
+          measurements[`labels-${width}`] = unlabeled.length;
           assert.deepEqual(unlabeled, [], 'Visible fields require visible labels; aria-label and placeholders alone are insufficient');
         });
       }
@@ -69,7 +110,18 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         const errors = [];
         page.on('pageerror', e => errors.push(e.message));
         page.on('dialog', d => d.dismiss());
-        try { await page.goto(url); await fn(page); assert.deepEqual(errors, []); await page.screenshot({ path: resolve(evidence, `${name}.png`), fullPage: true }); }
+        try {
+          await page.goto(url);
+          await fn(page);
+          assert.deepEqual(errors, []);
+          await page.screenshot({ path: resolve(evidence, `${name}.png`), fullPage: true });
+          const typography = await inspectTypography(page);
+          const fonts = await inspectFontRendering(page, { roles: typographyContract.roles, requiredFamilies: fixture.requiredFamilies || [] });
+          const icons = await inspectIcons(page, { verifiedImages: iconAssets });
+          await writeFile(resolve(evidence, `${name}-presentation.json`), JSON.stringify({ typography, fonts, icons }, null, 2));
+          reviewRequired.push(...[...fonts.issues, ...icons.issues].filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `${name}-presentation.json`, rules: ['ORC-G11', 'RUI-09', 'RUI-12'] })));
+          assert.deepEqual({ typography, fonts: fonts.issues.filter(issue => issue.status === 'FAIL'), icons: icons.issues.filter(issue => issue.status === 'FAIL') }, { typography: [], fonts: [], icons: [] }, 'Workflow end state fails typography, font contrast or icon checks');
+        }
         catch (error) { await page.screenshot({ path: resolve(evidence, `${name}-failed.png`), fullPage: true }).catch(() => {}); throw error; }
         finally { await page.close(); }
       });
@@ -201,7 +253,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
     await browser?.close();
     await new Promise(r => server.close(r));
   }
-  const report = { case: fixture.id, scope: fixture.scope, visual: 'UNVERIFIED', checks, passed: checks.filter(c => c.status === 'PASS').length, total: checks.length };
+  const report = { case: fixture.id, scope: fixture.scope, visual: 'UNVERIFIED', reviewRequired, measurements, contentInventory, checks, passed: checks.filter(c => c.status === 'PASS').length, total: checks.length };
   await writeFile(resolve(evidence, 'report.json'), JSON.stringify(report, null, 2));
   return report;
 }
