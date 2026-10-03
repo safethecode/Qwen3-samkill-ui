@@ -152,7 +152,13 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         assert.equal(await resultAction.count(), initialCount, 'Clearing search did not restore results');
       });
       if (fixture.flow === 'booking') {
-        const open = async page => { await button(page, '상세').first().click(); await button(page, '예약하기').first().click(); };
+        const open = async page => {
+          assert.equal(await page.locator('#booking-form').isVisible(), false, 'Initial catalogue must not display the booking form');
+          await button(page, '상세').first().click();
+          assert.equal(await page.locator('#booking-form').isVisible(), false, 'Detail must precede the booking form; implement the actual detail view and its 예약하기 action');
+          await button(page, '예약하기').first().click();
+          assert.equal(await page.locator('#booking-form').isVisible(), true, 'The 예약하기 action must open the booking form');
+        };
         await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false, `Empty booking must not display #confirmation (class=${await page.locator('#confirmation').getAttribute('class')}); verify form validation and hidden state styling`); });
         await exercise('booking-persist-cancel', async page => {
           await open(page);

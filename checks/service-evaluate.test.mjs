@@ -69,3 +69,12 @@ test('learning workflow selects a lesson before saving or completing it', async 
   const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'learning-selection', scope: 'test fixture', anchors: ['Test'], flow: 'learning' });
   assert.equal(report.checks.find(check => check.name === 'lesson-progress-and-independent-notes').status, 'PASS');
 });
+
+test('a no-op booking action cannot hide a skipped detail-to-form transition', async () => {
+  const target = await mkdtemp(resolve('runs/service-skipped-booking-step-'));
+  await writeFile(resolve(target, 'index.html'), '<html><head><style>body{font:500 16px sans-serif}button,input,select{font:inherit}[hidden]{display:none!important}</style></head><body><h1>Test</h1><label for="search">검색</label><input id="search"><button id="detail">상세</button><button id="book" hidden>예약하기</button><form id="booking-form" hidden><label for="guest">예약자 이름</label><input id="guest" required><label for="date">방문일</label><input id="date" type="date" required><label for="slot">예약 시간</label><select id="slot"><option>10:00</option><option>14:00</option></select><button>예약 확정</button></form><section id="confirmation" hidden></section><script>document.querySelector("#detail").onclick=()=>{document.querySelector("#booking-form").hidden=false;document.querySelector("#book").hidden=false};document.querySelector("form").onsubmit=e=>e.preventDefault();</script></body></html>');
+  const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'skipped-booking-step', scope: 'test fixture', anchors: ['Test'], flow: 'booking' });
+  const failure = report.checks.find(check => check.name === 'booking-validation');
+  assert.equal(failure.status, 'FAIL');
+  assert.match(failure.detail, /detail.*booking form/i);
+});
