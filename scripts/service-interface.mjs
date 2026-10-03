@@ -9,9 +9,11 @@ export function validateInterface(html, required = {}) {
     if (node.content) visit(node.content);
   };
   visit(parse(html));
+  const errors = [];
   for (const [id, tag] of Object.entries(required)) {
     const found = ids.get(id) || [];
-    if (found.length !== 1) throw new Error(`Contract interface #${id} must occur exactly once as <${tag}>`);
-    if (tag !== '*' && found[0] !== tag) throw new Error(`Contract interface #${id} must be <${tag}>, received <${found[0]}>`);
+    if (found.length !== 1) errors.push(`Contract interface #${id} must occur exactly once as <${tag}>`);
+    else if (tag !== '*' && found[0] !== tag) errors.push(`Contract interface #${id} must be <${tag}>, received <${found[0]}>`);
   }
+  if (errors.length) throw new Error(errors.join('\n'));
 }
