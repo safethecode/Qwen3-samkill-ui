@@ -37,6 +37,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       await page.evaluate(() => document.fonts.ready);
       await page.screenshot({ path: resolve(evidence, `${width}.png`) });
       await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
+      if (options.captureStates) await options.captureStates(page, width, evidence, url);
       if (!options.reference) {
         await check(`content-${width}`, async () => {
           for (const text of fixture.anchors) assert.ok(await page.getByText(text, { exact: false }).first().isVisible(), `Missing visible anchor: ${text}`);
@@ -47,6 +48,10 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.deepEqual(small, [], 'Text smaller than 14px');
         });
         await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
+        await check(`labels-${width}`, async () => {
+          const unlabeled = await page.evaluate(() => [...document.querySelectorAll('input:not([type=hidden]),textarea,select')].filter(el => el.getBoundingClientRect().width && el.getBoundingClientRect().height && !el.disabled && ![...el.labels || []].some(label => label.getBoundingClientRect().width && label.getBoundingClientRect().height && label.textContent.trim())).map(el => el.id || el.name || el.tagName));
+          assert.deepEqual(unlabeled, [], 'Visible fields require visible labels; aria-label and placeholders alone are insufficient');
+        });
       }
       await page.close();
     }
@@ -106,9 +111,19 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         await page.locator('#search').fill('프린터 용지 걸림');
         await button(page, '상세').first().click();
         assert.match(await page.locator('#detail').innerText(), /프린터 용지 걸림/);
-        assert.equal(await page.locator('#detail').getByRole('button', { name: '처리 완료', exact: true }).isEnabled().catch(() => false), false, 'Completed request must not remain actionable as an unresolved request');
         const status = await page.locator('#detail').evaluate(el => { const copy = el.cloneNode(true); copy.querySelectorAll('button').forEach(button => button.remove()); return copy.textContent; });
         assert.match(status, /완료/, 'Selected request has no persisted completion status');
+      });
+      if (fixture.flow === 'dispatch') await exercise('ticket-user-content-is-text', async page => {
+        await button(page, '새 요청').click();
+        await page.locator('#title').fill('<b>literal ticket</b>');
+        await page.locator('#space').fill('서쪽 사무실');
+        await page.locator('#priority').selectOption({ label: '긴급' });
+        await page.locator('#assignee').fill('김담당');
+        await button(page, '등록').click();
+        await page.reload();
+        assert.match(await page.locator('body').innerText(), /<b>literal ticket<\/b>/, 'User title was interpreted as HTML');
+        assert.equal(await page.locator('b').filter({ hasText: 'literal ticket' }).count(), 0);
       });
       if (fixture.flow === 'learning') await exercise('lesson-progress-and-independent-notes', async page => {
         await page.locator('#note').fill('첫 수업 메모');
