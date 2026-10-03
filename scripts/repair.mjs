@@ -34,13 +34,13 @@ export function sourceNamesFor(failure, previousError = '') {
   return ['index.html', 'styles.css', 'app.js'];
 }
 
-export async function repair(target, evidence, failure, previousError = '') {
+export async function repair(target, evidence, failure, previousError = '', options = {}) {
   const files = Object.fromEntries(await Promise.all(['index.html', 'styles.css', 'app.js'].map(async path => [path, await readFile(resolve(target, path), 'utf8')])));
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
   const focus = sourceNamesFor(failure, previousError);
   const focusedFiles = Object.fromEntries(focus.map(path => [path, files[path]]));
-  const replaceFiles = process.env.QWEN_REPAIR_MODE === 'files' || Boolean(previousError);
+  const replaceFiles = options.mode ? options.mode === 'files' : process.env.QWEN_REPAIR_MODE === 'files' || Boolean(previousError);
   const fileFormat = { type: 'object', properties: { files: { type: 'array', minItems: 1, maxItems: 3, items: { type: 'object', properties: { path: { type: 'string', enum: focus }, content: { type: 'string' } }, required: ['path', 'content'], additionalProperties: false } } }, required: ['files'], additionalProperties: false };
   const imagePaths = failure.imagePaths || [];
   if (!Array.isArray(imagePaths) || imagePaths.length > 2) throw new Error('At most two local review images are supported');

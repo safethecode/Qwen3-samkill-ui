@@ -38,3 +38,21 @@ test('syntactically broken patches are rejected before changing application file
   finally { globalThis.fetch = originalFetch; }
   assert.equal(await readFile(resolve(target, 'app.js'), 'utf8'), 'const state = "before";');
 });
+
+test('quality escalation explicitly requests validated complete affected files', async () => {
+  const target = await mkdtemp(resolve('runs/repair-mode-'));
+  const evidence = resolve(target, 'evidence');
+  await mkdir(evidence);
+  for (const [name, content] of Object.entries({ 'index.html': '<html></html>', 'styles.css': 'body { color: black; }', 'app.js': 'const state = 1;', 'DESIGN.md': 'Preserve the document layout.' })) await writeFile(resolve(target, name), content);
+  const originalFetch = globalThis.fetch;
+  let request;
+  globalThis.fetch = async (_url, options) => {
+    request = JSON.parse(options.body);
+    return { ok: true, json: async () => ({ model: 'mock', done_reason: 'stop', message: { content: JSON.stringify({ files: [{ path: 'styles.css', content: 'body { color: navy; }' }] }) } }) };
+  };
+  try { await repair(target, evidence, { name: 'visual-review', files: ['styles.css'], detail: 'Correct the action emphasis.' }, '', { mode: 'files' }); }
+  finally { globalThis.fetch = originalFetch; }
+  assert.deepEqual(request.format.properties.files.items.properties.path.enum, ['styles.css']);
+  assert.equal(await readFile(resolve(target, 'styles.css'), 'utf8'), 'body { color: navy; }');
+  assert.equal(await readFile(resolve(target, 'app.js'), 'utf8'), 'const state = 1;');
+});
