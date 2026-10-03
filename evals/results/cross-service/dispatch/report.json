@@ -1,0 +1,289 @@
+{
+  "case": "dispatch",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "ticket-user-content-is-text-presentation.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09",
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 2,
+    "font-rendering-1440": 5,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 1,
+    "readable-390": 2,
+    "font-rendering-390": 5,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 1,
+    "readable-320": 37,
+    "font-rendering-320": 5,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 1
+  },
+  "contentInventory": {
+    "320": {
+      "온담 시설 운영실": 1,
+      "로컬 데이터만 표시됨": 1,
+      "대기열": 1,
+      "진행중": 3,
+      "완료": 2,
+      "요청": 1,
+      "공간": 1,
+      "우선순위": 1,
+      "담당": 1,
+      "상태": 1,
+      "회의실 냉방 점검": 1,
+      "회의실 A": 1,
+      "긴급": 3,
+      "김철수": 1,
+      "대기중": 3,
+      "라운지 조명 교체": 1,
+      "라운지": 1,
+      "보통": 3,
+      "이영희": 1,
+      "출입문 센서 확인": 1,
+      "출입구": 1,
+      "박민수": 1,
+      "공용화장실 수리": 1,
+      "공용화장실": 1,
+      "정우진": 1,
+      "에어컨 필터 교체": 1,
+      "회의실 B": 1,
+      "최지영": 1,
+      "사무실 전등 점검": 1,
+      "사무실 A": 1,
+      "윤상현": 1,
+      "새 요청": 1
+    },
+    "390": {
+      "온담 시설 운영실": 1,
+      "로컬 데이터만 표시됨": 1,
+      "대기열": 1,
+      "진행중": 3,
+      "완료": 2,
+      "요청": 1,
+      "공간": 1,
+      "우선순위": 1,
+      "담당": 1,
+      "상태": 1,
+      "회의실 냉방 점검": 1,
+      "회의실 A": 1,
+      "긴급": 3,
+      "김철수": 1,
+      "대기중": 3,
+      "라운지 조명 교체": 1,
+      "라운지": 1,
+      "보통": 3,
+      "이영희": 1,
+      "출입문 센서 확인": 1,
+      "출입구": 1,
+      "박민수": 1,
+      "공용화장실 수리": 1,
+      "공용화장실": 1,
+      "정우진": 1,
+      "에어컨 필터 교체": 1,
+      "회의실 B": 1,
+      "최지영": 1,
+      "사무실 전등 점검": 1,
+      "사무실 A": 1,
+      "윤상현": 1,
+      "새 요청": 1
+    },
+    "1440": {
+      "온담 시설 운영실": 1,
+      "로컬 데이터만 표시됨": 1,
+      "대기열": 1,
+      "진행중": 3,
+      "완료": 2,
+      "요청": 1,
+      "공간": 1,
+      "우선순위": 1,
+      "담당": 1,
+      "상태": 1,
+      "회의실 냉방 점검": 1,
+      "회의실 A": 1,
+      "긴급": 3,
+      "김철수": 1,
+      "대기중": 3,
+      "라운지 조명 교체": 1,
+      "라운지": 1,
+      "보통": 3,
+      "이영희": 1,
+      "출입문 센서 확인": 1,
+      "출입구": 1,
+      "박민수": 1,
+      "공용화장실 수리": 1,
+      "공용화장실": 1,
+      "정우진": 1,
+      "에어컨 필터 교체": 1,
+      "회의실 B": 1,
+      "최지영": 1,
+      "사무실 전등 점검": 1,
+      "사무실 A": 1,
+      "윤상현": 1,
+      "새 요청": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '요청'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '공간'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '우선순위'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '담당'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '상태'\n+   },\n+   {\n+     class: '',\n+     element: 'TD',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '회의실 냉방 점검'\n+   },\n+   {\n+     class: '',\n+     element: 'TD',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '회의실 A'\n+   },\n+   {\n+     class: 'priority-긴급',\n+     element: 'TD',\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "No initial searchable results"
+    },
+    {
+      "name": "ticket-create-complete-persist",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '상세', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "ticket-user-content-is-text",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.816851472750525,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.816851472750525,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 3.8305766212524084,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '완료',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.8201578831097265,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+   "
+    }
+  ],
+  "passed": 15,
+  "total": 27
+}

@@ -1,0 +1,276 @@
+{
+  "case": "round-02",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 16,
+    "font-rendering-1440": 0,
+    "assets-1440": 2,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 16,
+    "font-rendering-390": 0,
+    "assets-390": 2,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 16,
+    "font-rendering-320": 0,
+    "assets-320": 2,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "멘토 찾기": 1,
+      "검색": 2,
+      "모든 분야": 1,
+      "프로덕트 디자인": 1,
+      "프론트엔드 개발": 1,
+      "백엔드 개발": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Professional": 1,
+      "스타트업 A": 1,
+      "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+      "50,000원/시간": 1,
+      "🤍": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Professional Certificate": 1,
+      "Tech Corp": 1,
+      "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+      "60,000원/시간": 1
+    },
+    "390": {
+      "멘토 찾기": 1,
+      "검색": 2,
+      "모든 분야": 1,
+      "프로덕트 디자인": 1,
+      "프론트엔드 개발": 1,
+      "백엔드 개발": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Professional": 1,
+      "스타트업 A": 1,
+      "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+      "50,000원/시간": 1,
+      "🤍": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Professional Certificate": 1,
+      "Tech Corp": 1,
+      "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+      "60,000원/시간": 1
+    },
+    "1440": {
+      "멘토 찾기": 1,
+      "검색": 2,
+      "모든 분야": 1,
+      "프로덕트 디자인": 1,
+      "프론트엔드 개발": 1,
+      "백엔드 개발": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Professional": 1,
+      "스타트업 A": 1,
+      "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+      "50,000원/시간": 1,
+      "🤍": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Professional Certificate": 1,
+      "Tech Corp": 1,
+      "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+      "60,000원/시간": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "FAIL",
+      "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "FAIL",
+      "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "FAIL",
+      "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    }
+  ],
+  "passed": 18,
+  "total": 24
+}

@@ -1,0 +1,954 @@
+{
+  "fonts": [
+    {
+      "nodeId": 6,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 9,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 11,
+      "fonts": [
+        {
+          "familyName": "Arial",
+          "postScriptName": "ArialMT",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 12,
+      "fonts": [
+        {
+          "familyName": "Arial",
+          "postScriptName": "ArialMT",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 14,
+      "fonts": [
+        {
+          "familyName": "Arial",
+          "postScriptName": "ArialMT",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 5
+        }
+      ]
+    },
+    {
+      "nodeId": 19,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 9
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 10
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 22,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 24,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 27,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 25,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 5
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 30,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 26,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 33,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 35,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 37,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 20,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 9
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 10
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 39,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 41,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 44,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 42,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 5
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 47,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 43,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 50,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 52,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 54,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 21,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 9
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 10
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 56,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    },
+    {
+      "nodeId": 58,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 61,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 59,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 5
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 64,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI-Bold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ]
+    },
+    {
+      "nodeId": 60,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 67,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 69,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 71,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    }
+  ],
+  "roles": [],
+  "webFonts": [],
+  "surfaces": [
+    {
+      "tag": "H1",
+      "id": "",
+      "pseudo": null,
+      "text": "이력서 작업실",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 3,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "new-resume",
+      "pseudo": null,
+      "text": "새 이력서",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "search",
+      "pseudo": null,
+      "text": "이력서 검색",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "search",
+      "pseudo": "::placeholder",
+      "text": "이력서 검색",
+      "declaredFamily": "Arial",
+      "ratio": 4.607518093747377,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "pseudo": null,
+      "text": "예시 이력서 제목 1",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "이름: 예시 이름 1",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "이름:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "소개: 예시 소개 내용 1",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "소개:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "편집",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "복사",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "보관",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "pseudo": null,
+      "text": "예시 이력서 제목 2",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "이름: 예시 이름 2",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "이름:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "소개: 예시 소개 내용 2",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "소개:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "편집",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "복사",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "보관",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "pseudo": null,
+      "text": "예시 이력서 제목 3",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "이름: 예시 이름 3",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "이름:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "소개: 예시 소개 내용 3",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "STRONG",
+      "id": "",
+      "pseudo": null,
+      "text": "소개:",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "편집",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "복사",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "보관",
+      "declaredFamily": "Arial",
+      "ratio": 10.983368598577295,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    }
+  ],
+  "issues": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity"
+    }
+  ],
+  "scope": "Actual Chromium platform fonts and solid-background text contrast. Complex surfaces require separate rendered evidence; font-family declarations alone do not establish fidelity."
+}

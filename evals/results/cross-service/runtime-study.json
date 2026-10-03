@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-03",
+  "hardware": "RTX 3080 Ti 12GB, Core i5-12600K, 32GB RAM",
+  "resourceContext": {
+    "idleBeforeOurRequest": false,
+    "sampledGpuUtilizationBeforeLoadingPercent": 98,
+    "sampledGpuMemoryBeforeLoadingMiB": 5310,
+    "laterBaselineSample": {
+      "gpuUtilizationPercent": 46,
+      "totalGpuMemoryUsedMiB": 6696,
+      "ollamaReportedVramBytes": 5708028313
+    },
+    "note": "Other applications remained running and observed contention varied. Timings are not an isolated or constant-load hardware benchmark."
+  },
+  "initial9b": {
+    "status": "INTERRUPTED",
+    "stage": "model warmup",
+    "num_ctx": 32768,
+    "note": "No completed UI generation. No aesthetic score inferred from warmup stall."
+  },
+  "partial9b": {
+    "status": "STOPPED_AFTER_INVALID_OUTPUT",
+    "options": {
+      "num_gpu": 16,
+      "num_ctx": 16384,
+      "num_batch": 128
+    },
+    "stages": [
+      {
+        "file": "index.html",
+        "model": "qwen3.5:9b",
+        "done_reason": "stop",
+        "loadSeconds": 7.0477058,
+        "promptSeconds": 8.86224,
+        "outputTokens": 887,
+        "outputSeconds": 94.305375,
+        "totalSeconds": 110.2280188,
+        "validation": "Contract interface #search must be <input>, received <form>"
+      },
+      {
+        "file": "app.js",
+        "model": "qwen3.5:9b",
+        "done_reason": "stop",
+        "loadSeconds": 0.0050204,
+        "promptSeconds": 4.833232,
+        "outputTokens": 1974,
+        "outputSeconds": 222.861737,
+        "totalSeconds": 227.7199117,
+        "validation": "Unterminated regular expression (161:68)"
+      }
+    ],
+    "note": "Stopped during a second JavaScript attempt to continue development-model trials. Not a completed functional or visual trial."
+  },
+  "probes": [
+    {
+      "model": "qwen3.5:9b",
+      "done_reason": "stop",
+      "loadSeconds": 5.9630159,
+      "promptSeconds": 0.512735,
+      "outputTokens": 2,
+      "outputSeconds": 0.114349,
+      "totalSeconds": 6.5925746
+    },
+    {
+      "model": "qwen3-coder:30b",
+      "done_reason": "stop",
+      "loadSeconds": 73.6524219,
+      "promptSeconds": 0.431424,
+      "outputTokens": 2,
+      "outputSeconds": 0.095242,
+      "totalSeconds": 74.1817541
+    }
+  ],
+  "coderFullFiles": {
+    "model": "qwen3-coder:30b",
+    "inferenceOptions": {
+      "num_gpu": 12,
+      "num_ctx": 16384,
+      "num_batch": 128
+    },
+    "harnessHashes": {
+      "scripts/generate.mjs": "2d49ebc56706e83e65f3cae674b8e194ee486b9a8cd7484b5ae326212487d081",
+      "scripts/service-evaluate.mjs": "8dc31fde28f396b68576087d15b856f4f9f2f8824febbdcf237477f0f8599c6c",
+      "evals/service-cases.mjs": "daa7ece8ff174476122f3f70e88f0f435c491c78a811de9e4fb538eb24b9f8cc",
+      "skills/qwen-samkill-ui/SKILL.md": "3422c8fce1740de3402f07b2a716f14a1887945e0077f795a27f3dc1b44a7436"
+    },
+    "started": "2026-10-03T02:05:54.418Z",
+    "missingUpstreamRounds": [
+      5,
+      6,
+      7
+    ],
+    "results": [
+      {
+        "case": "dispatch",
+        "scope": "held-out original service",
+        "status": "INCOMPLETE",
+        "error": "Local generation timed out",
+        "elapsedMs": 608868
+      }
+    ],
+    "note": "Dispatch HTML and JavaScript completed; the single CSS request exceeded its 300-second deadline. Stopped after this failed case to test smaller generation units."
+  },
+  "coderFiveUnits": {
+    "model": "qwen3-coder:30b",
+    "options": {
+      "num_gpu": 14,
+      "num_ctx": 8192,
+      "num_batch": 128
+    },
+    "dispatchElapsedMs": 619869,
+    "result": "All five source units completed. Functional and visual defects remained.",
+    "interpretation": "Compared with 608868 ms ending in timeout, this is improved completion, not lower end-to-end latency. Resource settings and prompts changed together; no causal speedup claim."
+  },
+  "interpretation": "Several resource options changed together. The short probes establish liveness only; their two-token responses do not establish sustained throughput. Reduced offload completed text generation, but this does not prove a single cause for previous stalls or visual parity."
+}

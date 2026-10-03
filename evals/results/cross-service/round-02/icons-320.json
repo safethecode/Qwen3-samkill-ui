@@ -1,0 +1,16 @@
+{
+  "icons": [],
+  "issues": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🤍"
+    }
+  ],
+  "scope": "Official inline geometry and basic control semantics; optical alignment, actual edge clicks and state transitions require separate evidence."
+}

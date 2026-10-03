@@ -1,0 +1,417 @@
+{
+  "fonts": [
+    {
+      "nodeId": 8,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 3
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 13
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 11,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 2
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 13,
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 9
+        },
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 18,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 3
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 20,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 21,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 3
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 23,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 24,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 3
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 26,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 27,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 3
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 29,
+      "fonts": [
+        {
+          "familyName": "Segoe UI",
+          "postScriptName": "SegoeUI",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 2
+        }
+      ]
+    },
+    {
+      "nodeId": 16,
+      "fonts": [
+        {
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
+          "isCustomFont": false,
+          "glyphCount": 1
+        },
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothic",
+          "isCustomFont": false,
+          "glyphCount": 4
+        }
+      ]
+    }
+  ],
+  "roles": [],
+  "webFonts": [],
+  "surfaces": [
+    {
+      "tag": "H1",
+      "id": "",
+      "pseudo": null,
+      "text": "냉장고로 한 끼",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "재료를 선택해 주세요",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "LABEL",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "LABEL",
+      "id": "",
+      "pseudo": null,
+      "text": "두부",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "두부",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "LABEL",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "LABEL",
+      "id": "",
+      "pseudo": null,
+      "text": "양파",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 18.733663902900595,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "양파",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "find-recipe-btn",
+      "pseudo": null,
+      "text": "요리 찾기",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 2.7750668044433198,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    }
+  ],
+  "issues": [
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false,
+      "status": "FAIL",
+      "problem": "Text contrast is below the applicable threshold"
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "두부",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false,
+      "status": "FAIL",
+      "problem": "Text contrast is below the applicable threshold"
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "계란",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false,
+      "status": "FAIL",
+      "problem": "Text contrast is below the applicable threshold"
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "pseudo": null,
+      "text": "양파",
+      "declaredFamily": "Arial",
+      "ratio": 1.120976660457141,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false,
+      "status": "FAIL",
+      "problem": "Text contrast is below the applicable threshold"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "find-recipe-btn",
+      "pseudo": null,
+      "text": "요리 찾기",
+      "declaredFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 2.7750668044433198,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false,
+      "status": "FAIL",
+      "problem": "Text contrast is below the applicable threshold"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity"
+    }
+  ],
+  "scope": "Actual Chromium platform fonts and solid-background text contrast. Complex surfaces require separate rendered evidence; font-family declarations alone do not establish fidelity."
+}

@@ -1,0 +1,451 @@
+{
+  "case": "round-03",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🩸 혈당",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🍽️ 식사",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏃 운동",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "😴 수면",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "➕",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏠",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "📝",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "⚙️",
+      "evidence": "icons-1440.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🩸 혈당",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🍽️ 식사",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏃 운동",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "😴 수면",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "➕",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏠",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "📝",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "⚙️",
+      "evidence": "icons-390.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🩸 혈당",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🍽️ 식사",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏃 운동",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "😴 수면",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "➕",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "🏠",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "📝",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+      "text": "⚙️",
+      "evidence": "icons-320.json",
+      "rules": [
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 9,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 9,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 7,
+    "font-rendering-320": 9,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "오늘의 건강": 1,
+      "예시 프로모션 내용": 1,
+      "혈당": 1,
+      "100 mg/dL": 2,
+      "식사": 1,
+      "아침 식사": 2,
+      "활동": 1,
+      "30분 산책": 2,
+      "🩸 혈당": 1,
+      "🍽️ 식사": 1,
+      "🏃 운동": 1,
+      "😴 수면": 1,
+      "예시 챌린지: 하루 8잔의 물 마시기": 1,
+      "18:00": 1,
+      "🏃": 1,
+      "09:30": 1,
+      "🍽️": 1,
+      "08:00": 1,
+      "🩸": 1,
+      "➕": 1,
+      "🏠": 1,
+      "📝": 1,
+      "⚙️": 1
+    },
+    "390": {
+      "오늘의 건강": 1,
+      "예시 프로모션 내용": 1,
+      "혈당": 1,
+      "100 mg/dL": 2,
+      "식사": 1,
+      "아침 식사": 2,
+      "활동": 1,
+      "30분 산책": 2,
+      "🩸 혈당": 1,
+      "🍽️ 식사": 1,
+      "🏃 운동": 1,
+      "😴 수면": 1,
+      "예시 챌린지: 하루 8잔의 물 마시기": 1,
+      "18:00": 1,
+      "🏃": 1,
+      "09:30": 1,
+      "🍽️": 1,
+      "08:00": 1,
+      "🩸": 1,
+      "➕": 1,
+      "🏠": 1,
+      "📝": 1,
+      "⚙️": 1
+    },
+    "1440": {
+      "오늘의 건강": 1,
+      "예시 프로모션 내용": 1,
+      "혈당": 1,
+      "100 mg/dL": 2,
+      "식사": 1,
+      "아침 식사": 2,
+      "활동": 1,
+      "30분 산책": 2,
+      "🩸 혈당": 1,
+      "🍽️ 식사": 1,
+      "🏃 운동": 1,
+      "😴 수면": 1,
+      "예시 챌린지: 하루 8잔의 물 마시기": 1,
+      "18:00": 1,
+      "🏃": 1,
+      "09:30": 1,
+      "🍽️": 1,
+      "08:00": 1,
+      "🩸": 1,
+      "➕": 1,
+      "🏠": 1,
+      "📝": 1,
+      "⚙️": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 기록"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 기록"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 기록"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🩸 혈당'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🍽️ 식사'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🏃 운동'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '😴 수면'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '18:00'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '09:30'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '08:00'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    }
+  ],
+  "passed": 17,
+  "total": 24
+}

@@ -1,5 +1,32 @@
 # Quality gate verification
 
+## Current status — 2026-10-04
+
+**INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
+
+The current harness passes 92 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
+
+An independent inspection of the actual generated workshop sample found **19 failed, 30 unknown, 9 scoped passes and 17 inapplicable catalog rules**. Its eight guide assessments are **5 failed, 2 unknown and 1 inapplicable**. The saved browser evaluation is **18/27** under the recorded pre-final harness. These counts must not be compared directly with later expanded check sets. [Full scoped audit](results/rule-coverage/workshop/audit.json), [browser report](results/rule-coverage/workshop/evidence/report.json), [generated source](results/rule-coverage/workshop/source).
+
+The broader baseline includes all seven available upstream rounds (01, 02, 03, 04, 08, 09, 10) and three independently specified services (dispatch, workshop and learning). Rounds 05–07 were absent from the available upstream material. Two generation attempts did not complete; none demonstrated visual parity. [Version-bound revalidation](results/cross-service/revalidation.json), [direct visual observations](results/cross-service/visual-observations.md), [runtime context](results/cross-service/runtime-study.json).
+
+| Baseline case | Recorded browser checks |
+| --- | --- |
+| Round 01 | 12/24 |
+| Round 02 | 18/24 |
+| Round 03 | 17/24 |
+| Round 04 | 7/27 |
+| Round 08 | 18/25 |
+| Round 09 | 22/26 |
+| Dispatch | 15/27 |
+| Learning | 13/26 |
+| Workshop | Generation incomplete |
+| Round 10 | Generation incomplete in baseline |
+
+These are historical measurements from the harness hashes in the linked record, not results from the final additional dependency check. Broken assets, missing content, inaccessible workflows and visual hierarchy failures remain visible in the evidence. New generation supplies official icon assets and optional upstream local media, rejects invented asset paths, and splits navigation from forms/startup. This improves input and failure detection; it does not establish that the model now follows every rule.
+
+## Earlier development trials
+
 Measured on 2026-10-03. This adds an unattended inspection/repair mechanism; it does not establish that the current local model always reproduces samkill-ui quality.
 
 ## Automated verification

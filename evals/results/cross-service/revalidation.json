@@ -1,0 +1,2357 @@
+{
+  "model": "qwen3-coder:30b",
+  "inferenceOptions": {
+    "num_gpu": 14,
+    "num_ctx": 8192,
+    "num_batch": 128
+  },
+  "harnessHashes": {
+    "scripts/generate-service.mjs": "32e320f3e2d456ca87143e681b1677f3cc3896ffe648891a3b9e57dfbfe831e2",
+    "scripts/service-stages.mjs": "4c0ebfb8d8a005072ec0a1f59d07cd918a9c56bcdbdd9d486c2fb04227ada9ab",
+    "scripts/service-evaluate.mjs": "8d5c5d2b69c14232d856a29c4e676c47aad24b8f1e82b7bfdd14e2bb1d5a78f6",
+    "evals/service-cases.mjs": "daa7ece8ff174476122f3f70e88f0f435c491c78a811de9e4fb538eb24b9f8cc",
+    "skills/qwen-samkill-ui/SKILL.md": "c0cdeb9fec4133417545cc6c9f207d8af13d0b576311a6a5ae355b5313da7c6b"
+  },
+  "started": "2026-10-03T02:18:29.104Z",
+  "missingUpstreamRounds": [
+    5,
+    6,
+    7
+  ],
+  "results": [
+    {
+      "case": "dispatch",
+      "scope": "held-out original service",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '요청'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '공간'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '우선순위'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '담당'\n+   },\n+   {\n+     class: '',\n+     element: 'TH',\n+     fontSize: '12px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '상태'\n+   },\n+   {\n+     class: '',\n+     element: 'TD',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '회의실 냉방 점검'\n+   },\n+   {\n+     class: '',\n+     element: 'TD',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '회의실 A'\n+   },\n+   {\n+     class: 'priority-긴급',\n+     element: 'TD',\n"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.8305766212524084,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '완료',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.816851472750525,\n+     status: 'FAIL',\n+     tag: 'TD',\n+     text: '긴급',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+   "
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "search-empty-recovery",
+          "status": "FAIL",
+          "detail": "No initial searchable results"
+        },
+        {
+          "name": "ticket-create-complete-persist",
+          "status": "FAIL",
+          "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '상세', exact: true }).first()\u001b[22m\n"
+        },
+        {
+          "name": "ticket-user-content-is-text",
+          "status": "FAIL",
+          "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.816851472750525,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.816851472750525,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 3.8305766212524084,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '완료',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 1.8201578831097265,\n+       status: 'FAIL',\n+       tag: 'TD',\n+       text: '긴급',\n+   "
+        }
+      ],
+      "passed": 15,
+      "total": 27,
+      "contractHash": "80615e42ad33bf50d019a66747660d8f696a8fd33325d09de0421d1d66a1b45b",
+      "sourceHashes": {
+        "index.html": "2cc1a99a0da5a9d8caf493d066a01fe98f5e7ba155512f3c1580e946aa0622a8",
+        "app.js": "40a73daab92391784577c42412e66cd416368b27db5ed65deddee03f54c0cab2",
+        "styles.css": "23e578e39423dccf0e46286dc83523a302bebd05345d567d98c625cf07c4cc04"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 619869,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "ticket-user-content-is-text-presentation.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09",
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 2,
+        "font-rendering-1440": 5,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 1,
+        "readable-390": 2,
+        "font-rendering-390": 5,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 1,
+        "readable-320": 37,
+        "font-rendering-320": 5,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 1
+      },
+      "contentInventory": {
+        "320": {
+          "온담 시설 운영실": 1,
+          "로컬 데이터만 표시됨": 1,
+          "대기열": 1,
+          "진행중": 3,
+          "완료": 2,
+          "요청": 1,
+          "공간": 1,
+          "우선순위": 1,
+          "담당": 1,
+          "상태": 1,
+          "회의실 냉방 점검": 1,
+          "회의실 A": 1,
+          "긴급": 3,
+          "김철수": 1,
+          "대기중": 3,
+          "라운지 조명 교체": 1,
+          "라운지": 1,
+          "보통": 3,
+          "이영희": 1,
+          "출입문 센서 확인": 1,
+          "출입구": 1,
+          "박민수": 1,
+          "공용화장실 수리": 1,
+          "공용화장실": 1,
+          "정우진": 1,
+          "에어컨 필터 교체": 1,
+          "회의실 B": 1,
+          "최지영": 1,
+          "사무실 전등 점검": 1,
+          "사무실 A": 1,
+          "윤상현": 1,
+          "새 요청": 1
+        },
+        "390": {
+          "온담 시설 운영실": 1,
+          "로컬 데이터만 표시됨": 1,
+          "대기열": 1,
+          "진행중": 3,
+          "완료": 2,
+          "요청": 1,
+          "공간": 1,
+          "우선순위": 1,
+          "담당": 1,
+          "상태": 1,
+          "회의실 냉방 점검": 1,
+          "회의실 A": 1,
+          "긴급": 3,
+          "김철수": 1,
+          "대기중": 3,
+          "라운지 조명 교체": 1,
+          "라운지": 1,
+          "보통": 3,
+          "이영희": 1,
+          "출입문 센서 확인": 1,
+          "출입구": 1,
+          "박민수": 1,
+          "공용화장실 수리": 1,
+          "공용화장실": 1,
+          "정우진": 1,
+          "에어컨 필터 교체": 1,
+          "회의실 B": 1,
+          "최지영": 1,
+          "사무실 전등 점검": 1,
+          "사무실 A": 1,
+          "윤상현": 1,
+          "새 요청": 1
+        },
+        "1440": {
+          "온담 시설 운영실": 1,
+          "로컬 데이터만 표시됨": 1,
+          "대기열": 1,
+          "진행중": 3,
+          "완료": 2,
+          "요청": 1,
+          "공간": 1,
+          "우선순위": 1,
+          "담당": 1,
+          "상태": 1,
+          "회의실 냉방 점검": 1,
+          "회의실 A": 1,
+          "긴급": 3,
+          "김철수": 1,
+          "대기중": 3,
+          "라운지 조명 교체": 1,
+          "라운지": 1,
+          "보통": 3,
+          "이영희": 1,
+          "출입문 센서 확인": 1,
+          "출입구": 1,
+          "박민수": 1,
+          "공용화장실 수리": 1,
+          "공용화장실": 1,
+          "정우진": 1,
+          "에어컨 필터 교체": 1,
+          "회의실 B": 1,
+          "최지영": 1,
+          "사무실 전등 점검": 1,
+          "사무실 A": 1,
+          "윤상현": 1,
+          "새 요청": 1
+        }
+      }
+    },
+    {
+      "case": "workshop",
+      "scope": "held-out original service",
+      "status": "INCOMPLETE",
+      "error": "Contract interface #search must be <input>, received <section>",
+      "elapsedMs": 90995
+    },
+    {
+      "case": "learning",
+      "scope": "held-out original service",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 갈피 학습실"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 갈피 학습실"
+        },
+        {
+          "name": "overflow-390",
+          "status": "FAIL",
+          "detail": "Horizontal page overflow"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 갈피 학습실"
+        },
+        {
+          "name": "overflow-320",
+          "status": "FAIL",
+          "detail": "Horizontal page overflow"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        },
+        {
+          "name": "search-empty-recovery",
+          "status": "FAIL",
+          "detail": "Search did not remove unmatched results\n\n1 !== 0\n"
+        },
+        {
+          "name": "lesson-progress-and-independent-notes",
+          "status": "FAIL",
+          "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: 'save-note',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 2.8353525675311277,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '메모 저장',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: 'visually-hidden',\n+       element: 'LABEL',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n+       text: '강의 검색'\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'P',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: 'progress',\n+       pseudo: null,\n+       text: '진행 상황: 1/8'\n+     },\n+     {\n+       class: '',\n+       element: 'DIV',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: 'lesson-text',\n+       pseudo: null,\n+       text: 'HTML 요소는 의미를 가지고 있어야 합니다. 예를 들'\n+     },\n+     {\n+       class: 'visually-hidden',\n+       element: 'LABEL',\n+       fontSi"
+        }
+      ],
+      "passed": 13,
+      "total": 26,
+      "contractHash": "d27de956ed9d3679c25bd8434dd632090b55965e41d3d6d6bae6e714d73d060d",
+      "sourceHashes": {
+        "index.html": "6716866b8eb828e996df947d0e08a0b63d8ab6c8486a08e97d3a8347465bd084",
+        "app.js": "afcafaa409d100d47568540e5a5b5d5827bd5fcff28b8ad074d9af46f11b2bdc",
+        "styles.css": "92ecb2606c972a1f5acc536f6bbd3228fdd55199b6fc553bb9d4401f67ee609b"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 531727,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "lesson-progress-and-independent-notes-presentation.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09",
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 7,
+        "font-rendering-1440": 1,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "readable-390": 7,
+        "font-rendering-390": 1,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 0,
+        "readable-320": 7,
+        "font-rendering-320": 1,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "주차 탐색": 1,
+          "강의 검색": 1,
+          "주차 1": 1,
+          "의미 있는 HTML": 1,
+          "키보드 탐색": 1,
+          "주차 2": 1,
+          "대비와 색상": 1,
+          "주차 3": 1,
+          "초점 관리": 1,
+          "주차 4": 1,
+          "읽기 순서": 1,
+          "진행 상황: 0/8": 1,
+          "선택된 강의가 없습니다": 1,
+          "학습 완료": 1,
+          "학습 메모": 1,
+          "메모 저장": 1
+        },
+        "390": {
+          "주차 탐색": 1,
+          "강의 검색": 1,
+          "주차 1": 1,
+          "의미 있는 HTML": 1,
+          "키보드 탐색": 1,
+          "주차 2": 1,
+          "대비와 색상": 1,
+          "주차 3": 1,
+          "초점 관리": 1,
+          "주차 4": 1,
+          "읽기 순서": 1,
+          "진행 상황: 0/8": 1,
+          "선택된 강의가 없습니다": 1,
+          "학습 완료": 1,
+          "학습 메모": 1,
+          "메모 저장": 1
+        },
+        "1440": {
+          "주차 탐색": 1,
+          "강의 검색": 1,
+          "주차 1": 1,
+          "의미 있는 HTML": 1,
+          "키보드 탐색": 1,
+          "주차 2": 1,
+          "대비와 색상": 1,
+          "주차 3": 1,
+          "초점 관리": 1,
+          "주차 4": 1,
+          "읽기 순서": 1,
+          "진행 상황: 0/8": 1,
+          "선택된 강의가 없습니다": 1,
+          "학습 완료": 1,
+          "학습 메모": 1,
+          "메모 저장": 1
+        }
+      }
+    },
+    {
+      "case": "round-01",
+      "scope": "static translation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-1-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '서울'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '해변'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-2-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '부산'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-3-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '제주'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500'"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '서울',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '해변',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '부산',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '카페',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSyste"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'beach.jpg',\n+   'cafe.jpg',\n+   'lookout.jpg',\n+   'market.jpg'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'd1-1-check',\n+   'd1-2-check',\n+   'd1-3-check',\n+   'd2-1-check'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-1-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'name',\n+     element: 'DIV',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '해변 산책'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '서울'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '해변'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-2-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'name',\n+     element: 'DIV',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '오래된 골목 카페'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '부산'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+ "
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '서울',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '해변',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '부산',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '카페',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSyste"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'beach.jpg',\n+   'cafe.jpg',\n+   'lookout.jpg',\n+   'market.jpg'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'd1-1-check',\n+   'd1-2-check',\n+   'd1-3-check',\n+   'd2-1-check'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-1-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'name',\n+     element: 'DIV',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '해변 산책'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '10.5px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '서울'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '10.5px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '해변'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'd1-2-check',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'name',\n+     element: 'DIV',\n+     fontSize: '12.25px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '오래된 골목 카페'\n+   },\n+   {\n+     class: 'region',\n+     element: 'SPAN',\n+     fontSize: '10.5px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '부산'\n+   },\n+   {\n+     class: 'type',\n+     element: 'SPAN',\n+     fontSize: '10.5px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'outside-checkbox',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     "
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '서울',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '해변',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '부산',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.473016795962564,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '카페',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSyste"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'beach.jpg',\n+   'cafe.jpg',\n+   'lookout.jpg',\n+   'market.jpg'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'd1-1-check',\n+   'd1-2-check',\n+   'd1-3-check',\n+   'd2-1-check'\n+ ]\n- []\n"
+        }
+      ],
+      "passed": 12,
+      "total": 24,
+      "contractHash": "672d7910a8e5a2852e7a831d5dd370694b0e2309f0f34c241fd7fc34bf255129",
+      "sourceHashes": {
+        "index.html": "83e76eb514d9d0fb6a8a83404b53f79e328f78416e055df5f6e9eddf4e4c4ceb",
+        "app.js": "a112fda2d8c03405d2c0df1a63e0bd4f7e36740f76ba256faeb2a96a0faa857e",
+        "styles.css": "86dab3407b99ee5d6ae38be36a45dc05484f94164293e91ce2d1d02917473fc1"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 335254,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 13,
+        "font-rendering-1440": 8,
+        "assets-1440": 4,
+        "icons-1440": 0,
+        "labels-1440": 4,
+        "readable-390": 17,
+        "font-rendering-390": 8,
+        "assets-390": 4,
+        "icons-390": 0,
+        "labels-390": 4,
+        "readable-320": 17,
+        "font-rendering-320": 8,
+        "assets-320": 4,
+        "icons-320": 0,
+        "labels-320": 4
+      },
+      "contentInventory": {
+        "320": {
+          "일정 편집": 1,
+          "서울": 3,
+          "부산": 2,
+          "제주": 2,
+          "Day 1": 1,
+          "해변 산책": 1,
+          "해변": 1,
+          "오래된 골목 카페": 1,
+          "카페": 1,
+          "Day 2": 1,
+          "오름 전망대": 1,
+          "전망대": 1,
+          "저녁 시장": 1,
+          "시장": 1,
+          "완료": 1
+        },
+        "390": {
+          "일정 편집": 1,
+          "서울": 3,
+          "부산": 2,
+          "제주": 2,
+          "Day 1": 1,
+          "해변 산책": 1,
+          "해변": 1,
+          "오래된 골목 카페": 1,
+          "카페": 1,
+          "Day 2": 1,
+          "오름 전망대": 1,
+          "전망대": 1,
+          "저녁 시장": 1,
+          "시장": 1,
+          "완료": 1
+        },
+        "1440": {
+          "일정 편집": 1,
+          "서울": 3,
+          "부산": 2,
+          "제주": 2,
+          "Day 1": 1,
+          "해변 산책": 1,
+          "해변": 1,
+          "오래된 골목 카페": 1,
+          "카페": 1,
+          "Day 2": 1,
+          "오름 전망대": 1,
+          "전망대": 1,
+          "저녁 시장": 1,
+          "시장": 1,
+          "완료": 1
+        }
+      }
+    },
+    {
+      "case": "round-02",
+      "scope": "static translation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search-input',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'category-chip active',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '모든 분야'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자인'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프론트엔드 개발'\n+   },\n+   {\n+     class: 'category-chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '백엔드 개발'\n+   },\n+   {\n+     class: 'role',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '프로덕트 디자이너'\n+   },\n+   {\n+     class: 'certification',\n+     element: 'SPAN',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: 'Adobe Certified Professional'\n+   },\n+   {\n+     class: 'company',\n+     element: 'SPAN',\n+     fontSize: '1"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/60',\n+   'https://via.placeholder.com/60'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        }
+      ],
+      "passed": 18,
+      "total": 24,
+      "contractHash": "6149beecfe103045cb5c19abe47dcf2ca5c620767b4572ffade6f10db489545a",
+      "sourceHashes": {
+        "index.html": "6a6d2076a8b6be48ad8906afd0ce14542b5d22d0fd1830e54342a044fea56969",
+        "app.js": "c73f022419d0768089729274d8178da01ff32a36f86efe6e8b098796e06d903b",
+        "styles.css": "e8095e8127af711783f32604b6e3641abedc7349556f8e19024368e5bcc4fcd4"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 348469,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🤍",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 16,
+        "font-rendering-1440": 0,
+        "assets-1440": 2,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "readable-390": 16,
+        "font-rendering-390": 0,
+        "assets-390": 2,
+        "icons-390": 0,
+        "labels-390": 0,
+        "readable-320": 16,
+        "font-rendering-320": 0,
+        "assets-320": 2,
+        "icons-320": 0,
+        "labels-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "멘토 찾기": 1,
+          "검색": 2,
+          "모든 분야": 1,
+          "프로덕트 디자인": 1,
+          "프론트엔드 개발": 1,
+          "백엔드 개발": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "Adobe Certified Professional": 1,
+          "스타트업 A": 1,
+          "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+          "50,000원/시간": 1,
+          "🤍": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "Google UX Design Professional Certificate": 1,
+          "Tech Corp": 1,
+          "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+          "60,000원/시간": 1
+        },
+        "390": {
+          "멘토 찾기": 1,
+          "검색": 2,
+          "모든 분야": 1,
+          "프로덕트 디자인": 1,
+          "프론트엔드 개발": 1,
+          "백엔드 개발": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "Adobe Certified Professional": 1,
+          "스타트업 A": 1,
+          "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+          "50,000원/시간": 1,
+          "🤍": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "Google UX Design Professional Certificate": 1,
+          "Tech Corp": 1,
+          "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+          "60,000원/시간": 1
+        },
+        "1440": {
+          "멘토 찾기": 1,
+          "검색": 2,
+          "모든 분야": 1,
+          "프로덕트 디자인": 1,
+          "프론트엔드 개발": 1,
+          "백엔드 개발": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "Adobe Certified Professional": 1,
+          "스타트업 A": 1,
+          "디자인 시스템 구축과 사용자 경험 향상을 전문으로 합니다. 5년 이상의 디자인 경험을 바탕으로 다양한 프로젝트를 이끌어왔습니다.": 1,
+          "50,000원/시간": 1,
+          "🤍": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "Google UX Design Professional Certificate": 1,
+          "Tech Corp": 1,
+          "웹 접근성과 사용자 인터페이스 개선에 집중하는 프론트엔드 개발자입니다. 최신 웹 기술을 활용한 효율적인 솔루션을 제공합니다.": 1,
+          "60,000원/시간": 1
+        }
+      }
+    },
+    {
+      "case": "round-03",
+      "scope": "static translation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 기록"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 기록"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 기록"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🩸 혈당'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🍽️ 식사'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '🏃 운동'\n+   },\n+   {\n+     class: 'shortcut-btn',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '😴 수면'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '18:00'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '09:30'\n+   },\n+   {\n+     class: 'record-time',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '08:00'\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '100 mg/dL',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '아침 식사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.5388412065932826,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '30분 산책',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.297142148062653,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '18:00',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-s"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        }
+      ],
+      "passed": 17,
+      "total": 24,
+      "contractHash": "42e949241aa211a925929c89f7ab9c8ac398576c4dad68e75210dfd066c1a7d3",
+      "sourceHashes": {
+        "index.html": "cff5bd685b6e4181502b2dc668439906b50310758b62fe97604ee6ae604ed5c4",
+        "app.js": "b85d6833b8e74be1d93e20c6c40ba76ea2dc63b45cb40e2d90e885b22f1302e4",
+        "styles.css": "0ef368e5530e4b59871fca799bb88f3c7e50533c65e661804224194e3c5d5643"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 424901,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🩸 혈당",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🍽️ 식사",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏃 운동",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "😴 수면",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "➕",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏠",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "📝",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "⚙️",
+          "evidence": "icons-1440.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🩸 혈당",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🍽️ 식사",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏃 운동",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "😴 수면",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "➕",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏠",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "📝",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "⚙️",
+          "evidence": "icons-390.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🩸 혈당",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🍽️ 식사",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏃 운동",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "😴 수면",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "➕",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "🏠",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "📝",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Emoji in a control requires explicit reference justification; do not substitute it for an official icon",
+          "text": "⚙️",
+          "evidence": "icons-320.json",
+          "rules": [
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 0,
+        "font-rendering-1440": 9,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "readable-390": 0,
+        "font-rendering-390": 9,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 0,
+        "readable-320": 7,
+        "font-rendering-320": 9,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "오늘의 건강": 1,
+          "예시 프로모션 내용": 1,
+          "혈당": 1,
+          "100 mg/dL": 2,
+          "식사": 1,
+          "아침 식사": 2,
+          "활동": 1,
+          "30분 산책": 2,
+          "🩸 혈당": 1,
+          "🍽️ 식사": 1,
+          "🏃 운동": 1,
+          "😴 수면": 1,
+          "예시 챌린지: 하루 8잔의 물 마시기": 1,
+          "18:00": 1,
+          "🏃": 1,
+          "09:30": 1,
+          "🍽️": 1,
+          "08:00": 1,
+          "🩸": 1,
+          "➕": 1,
+          "🏠": 1,
+          "📝": 1,
+          "⚙️": 1
+        },
+        "390": {
+          "오늘의 건강": 1,
+          "예시 프로모션 내용": 1,
+          "혈당": 1,
+          "100 mg/dL": 2,
+          "식사": 1,
+          "아침 식사": 2,
+          "활동": 1,
+          "30분 산책": 2,
+          "🩸 혈당": 1,
+          "🍽️ 식사": 1,
+          "🏃 운동": 1,
+          "😴 수면": 1,
+          "예시 챌린지: 하루 8잔의 물 마시기": 1,
+          "18:00": 1,
+          "🏃": 1,
+          "09:30": 1,
+          "🍽️": 1,
+          "08:00": 1,
+          "🩸": 1,
+          "➕": 1,
+          "🏠": 1,
+          "📝": 1,
+          "⚙️": 1
+        },
+        "1440": {
+          "오늘의 건강": 1,
+          "예시 프로모션 내용": 1,
+          "혈당": 1,
+          "100 mg/dL": 2,
+          "식사": 1,
+          "아침 식사": 2,
+          "활동": 1,
+          "30분 산책": 2,
+          "🩸 혈당": 1,
+          "🍽️ 식사": 1,
+          "🏃 운동": 1,
+          "😴 수면": 1,
+          "예시 챌린지: 하루 8잔의 물 마시기": 1,
+          "18:00": 1,
+          "🏃": 1,
+          "09:30": 1,
+          "🍽️": 1,
+          "08:00": 1,
+          "🩸": 1,
+          "➕": 1,
+          "🏠": 1,
+          "📝": 1,
+          "⚙️": 1
+        }
+      }
+    },
+    {
+      "case": "round-04",
+      "scope": "scoped product recreation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 같이 가는 카페"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '반려동물'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '실내'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '주차'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: '',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.979395412917911,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '예약 확정',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-390",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 같이 가는 카페"
+        },
+        {
+          "name": "overflow-390",
+          "status": "FAIL",
+          "detail": "Horizontal page overflow"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '반려동물'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '실내'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '주차'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: '',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.979395412917911,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '예약 확정',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-320",
+          "status": "FAIL",
+          "detail": "Missing visible anchor: 같이 가는 카페"
+        },
+        {
+          "name": "overflow-320",
+          "status": "FAIL",
+          "detail": "Horizontal page overflow"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '반려동물'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '실내'\n+   },\n+   {\n+     class: 'condition-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '주차'\n+   },\n+   {\n+     class: 'tag',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '소형'\n+   },\n+   {\n+     class: 'tag',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '중형'\n+   },\n+   {\n+     class: 'tag',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '실내'\n+   },\n+   {\n+     class: 'detail-btn',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pse"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.979395412917911,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '예약 확정',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "FAIL",
+          "detail": "Visible images failed to load\n+ actual - expected\n\n+ [\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150',\n+   'https://via.placeholder.com/150'\n+ ]\n- []\n"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "search-empty-recovery",
+          "status": "FAIL",
+          "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: 'Arial',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 3.979395412917911,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '예약 확정',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     },\n+     {\n+       class: 'condition-btn',\n+       element: 'BUTTON',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n+       text: '반려동물'\n+     },\n+     {\n+       class: 'condition-btn',\n+       element: 'BUTTON',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n+       text: '실내'\n+     },\n+     {\n+       class: 'condition-btn',\n+       element: 'BUTTON',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n+       text: '주차'\n+     },\n+     {\n+       class: 'detail-btn',\n+       element: 'BUTTON',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n"
+        },
+        {
+          "name": "booking-validation",
+          "status": "FAIL",
+          "detail": "Empty booking must not display #confirmation (class=hidden); verify form validation and hidden state styling\n\ntrue !== false\n"
+        },
+        {
+          "name": "booking-persist-cancel",
+          "status": "FAIL",
+          "detail": "Cancelled booking must not display #confirmation after reload (class=hidden); verify saved state and hidden state styling\n\ntrue !== false\n"
+        }
+      ],
+      "passed": 7,
+      "total": 27,
+      "contractHash": "939114c23347ae74982c9aa1d6a0bdea29b1f8ec4c88ec11fc6eec46881a80ce",
+      "sourceHashes": {
+        "index.html": "4ff038c5b3b801b8a7935e87a2391794e3dae37d19acf8ffd4100b5dc8e783dc",
+        "app.js": "3e9c628b483d3d5d4979d066a0ced99936857aeb06abaa4c3bffa2d68a60ad02",
+        "styles.css": "951a501758f3d46df1bf6f7855c5d6d5b25811ee7d277550249569604144fc2e"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 412965,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "search-empty-recovery-presentation.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09",
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 10,
+        "font-rendering-1440": 1,
+        "assets-1440": 3,
+        "icons-1440": 0,
+        "labels-1440": 1,
+        "readable-390": 10,
+        "font-rendering-390": 1,
+        "assets-390": 3,
+        "icons-390": 0,
+        "labels-390": 1,
+        "readable-320": 24,
+        "font-rendering-320": 1,
+        "assets-320": 3,
+        "icons-320": 0,
+        "labels-320": 1
+      },
+      "contentInventory": {
+        "320": {
+          "함께 가는 카페": 1,
+          "반려동물": 1,
+          "실내": 3,
+          "주차": 3,
+          "반려동물 친화": 1,
+          "편안한 실내": 1,
+          "모퉁이 커피": 1,
+          "소형": 3,
+          "중형": 2,
+          "상세": 3,
+          "숲속 테이블": 1,
+          "파란 마당": 1,
+          "대형": 1,
+          "예약하기": 1,
+          "예약 정보": 1,
+          "예약자 이름": 1,
+          "방문일": 1,
+          "예약 시간": 1,
+          "예약 확정": 1,
+          "예약이 완료되었습니다.": 1,
+          "예약 취소": 1
+        },
+        "390": {
+          "함께 가는 카페": 1,
+          "반려동물": 1,
+          "실내": 3,
+          "주차": 3,
+          "반려동물 친화": 1,
+          "편안한 실내": 1,
+          "모퉁이 커피": 1,
+          "소형": 3,
+          "중형": 2,
+          "상세": 3,
+          "숲속 테이블": 1,
+          "파란 마당": 1,
+          "대형": 1,
+          "예약하기": 1,
+          "예약 정보": 1,
+          "예약자 이름": 1,
+          "방문일": 1,
+          "예약 시간": 1,
+          "예약 확정": 1,
+          "예약이 완료되었습니다.": 1,
+          "예약 취소": 1
+        },
+        "1440": {
+          "함께 가는 카페": 1,
+          "반려동물": 1,
+          "실내": 3,
+          "주차": 3,
+          "반려동물 친화": 1,
+          "편안한 실내": 1,
+          "모퉁이 커피": 1,
+          "소형": 3,
+          "중형": 2,
+          "상세": 3,
+          "숲속 테이블": 1,
+          "파란 마당": 1,
+          "대형": 1,
+          "예약하기": 1,
+          "예약 정보": 1,
+          "예약자 이름": 1,
+          "방문일": 1,
+          "예약 시간": 1,
+          "예약 확정": 1,
+          "예약이 완료되었습니다.": 1,
+          "예약 취소": 1
+        }
+      }
+    },
+    {
+      "case": "round-08",
+      "scope": "scoped product recreation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '재료를 선택해 주세요'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '두부',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '양파',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'find-recipe-btn',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.7750668044433198,\n+     status: 'FAIL',\n+  "
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '재료를 선택해 주세요'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '두부',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '양파',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'find-recipe-btn',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.7750668044433198,\n+     status: 'FAIL',\n+  "
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '재료를 선택해 주세요'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '두부'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '계란'\n+   },\n+   {\n+     class: '',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '양파'\n+   }\n+ ]\n- []\n"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '두부',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '계란',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 1.120976660457141,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '양파',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'find-recipe-btn',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.7750668044433198,\n+     status: 'FAIL',\n+  "
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        },
+        {
+          "name": "ingredients-and-cooking-step-persist",
+          "status": "FAIL",
+          "detail": "locator.check: Error: strict mode violation: getByLabel('계란', { exact: true }) resolved to 2 elements:\n    1) <input value=\"계란\" type=\"checkbox\"/> aka getByRole('checkbox', { name: '계란' }).first()\n    2) <input value=\"계란\" type=\"checkbox\"/> aka getByRole('checkbox', { name: '계란' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByLabel('계란', { exact: true })\u001b[22m\n"
+        }
+      ],
+      "passed": 18,
+      "total": 25,
+      "contractHash": "36c43bc26065eb6f6c4865ad6e1332e1e5c5e69415f664f9275bd554383d2a60",
+      "sourceHashes": {
+        "index.html": "f716483014ed08e2cb7184e26c0f4b8ff32f6908dbc42fb2a712b20c1d89cbc7",
+        "app.js": "e109da4132bc6e79c181401b153f2d978c972200f3c1aee5d8bf0d01a7ad2e71",
+        "styles.css": "16916a4a1c85acf6f712233cf383cc2a28e71e4924c4eb48995999eb1fb08a1c"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 416108,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 9,
+        "font-rendering-1440": 5,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "readable-390": 9,
+        "font-rendering-390": 5,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 0,
+        "readable-320": 9,
+        "font-rendering-320": 5,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "냉장고로 한 끼": 1,
+          "재료를 선택해 주세요": 1,
+          "계란": 2,
+          "두부": 1,
+          "양파": 1,
+          "요리 찾기": 1
+        },
+        "390": {
+          "냉장고로 한 끼": 1,
+          "재료를 선택해 주세요": 1,
+          "계란": 2,
+          "두부": 1,
+          "양파": 1,
+          "요리 찾기": 1
+        },
+        "1440": {
+          "냉장고로 한 끼": 1,
+          "재료를 선택해 주세요": 1,
+          "계란": 2,
+          "두부": 1,
+          "양파": 1,
+          "요리 찾기": 1
+        }
+      }
+    },
+    {
+      "case": "round-09",
+      "scope": "scoped product recreation",
+      "visual": "UNVERIFIED",
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 1'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '이름:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '소개: 예시 소개 내용 1'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '소개:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 2'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '이름:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '소개: 예시 소개 내용 2'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '소개:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 3'\n+   },\n+   {\n+     class:"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "FAIL",
+          "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+        },
+        {
+          "name": "search-empty-recovery",
+          "status": "PASS"
+        },
+        {
+          "name": "document-create-edit-persist",
+          "status": "PASS"
+        }
+      ],
+      "passed": 22,
+      "total": 26,
+      "contractHash": "b5034693b51c7f1d35c1be9bbbee817ed6df52e7265c9c18ca3238a2dd13ece1",
+      "sourceHashes": {
+        "index.html": "ed6c44520120af737da846d258ca0a81746e772601ea80b4cb0e89e2a1a8313f",
+        "app.js": "6a503ffcbb48d15f8ad9e741b438f3fea6eb699704153beea1c07e8cd8906292",
+        "styles.css": "da521e811b02763950d5efe7ecdfdd757149a7ff57e66bfe86dd8cf6681a5429"
+      },
+      "hostNormalization": "Parser-based comment removal only",
+      "elapsedMs": 536265,
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "search-empty-recovery-presentation.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09",
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "document-create-edit-persist-presentation.json",
+          "rules": [
+            "ORC-G11",
+            "RUI-09",
+            "RUI-12"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 0,
+        "font-rendering-1440": 0,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 1,
+        "readable-390": 0,
+        "font-rendering-390": 0,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 1,
+        "readable-320": 12,
+        "font-rendering-320": 0,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 1
+      },
+      "contentInventory": {
+        "320": {
+          "이력서 작업실": 1,
+          "새 이력서": 1,
+          "예시 이력서 제목 1": 1,
+          "예시 이름 1": 1,
+          "이름:": 3,
+          "예시 소개 내용 1": 1,
+          "소개:": 3,
+          "편집": 3,
+          "복사": 3,
+          "보관": 3,
+          "예시 이력서 제목 2": 1,
+          "예시 이름 2": 1,
+          "예시 소개 내용 2": 1,
+          "예시 이력서 제목 3": 1,
+          "예시 이름 3": 1,
+          "예시 소개 내용 3": 1
+        },
+        "390": {
+          "이력서 작업실": 1,
+          "새 이력서": 1,
+          "예시 이력서 제목 1": 1,
+          "예시 이름 1": 1,
+          "이름:": 3,
+          "예시 소개 내용 1": 1,
+          "소개:": 3,
+          "편집": 3,
+          "복사": 3,
+          "보관": 3,
+          "예시 이력서 제목 2": 1,
+          "예시 이름 2": 1,
+          "예시 소개 내용 2": 1,
+          "예시 이력서 제목 3": 1,
+          "예시 이름 3": 1,
+          "예시 소개 내용 3": 1
+        },
+        "1440": {
+          "이력서 작업실": 1,
+          "새 이력서": 1,
+          "예시 이력서 제목 1": 1,
+          "예시 이름 1": 1,
+          "이름:": 3,
+          "예시 소개 내용 1": 1,
+          "소개:": 3,
+          "편집": 3,
+          "복사": 3,
+          "보관": 3,
+          "예시 이력서 제목 2": 1,
+          "예시 이름 2": 1,
+          "예시 소개 내용 2": 1,
+          "예시 이력서 제목 3": 1,
+          "예시 이름 3": 1,
+          "예시 소개 내용 3": 1
+        }
+      }
+    },
+    {
+      "case": "round-10",
+      "scope": "scoped product recreation",
+      "status": "INCOMPLETE",
+      "error": "Ollama HTTP 500",
+      "elapsedMs": 270744
+    }
+  ],
+  "revalidated": "2026-10-03T17:29:43.430Z",
+  "evaluatorHash": "0314f9a77ec5acb6baea3fcc49e8053917b6395f4144663cb7cd20763fd24ffb",
+  "revalidationHarnessHashes": {
+    "evals/service-cases.mjs": "33b7ecff8fd794a3a431259a78d423d9cf2e6c71154497deb129f7e2a94ec412",
+    "package-lock.json": "97f0b672e3c84a57a0c8a3a291170929b80ef3025a88318aa99b7b4ad9cbdee6",
+    "scripts/asset-references.mjs": "26baeb2b827fd072166ef899c8d6b32066a59ccdac790628de2a5e735510b75b",
+    "scripts/benchmark.mjs": "a97bfa6c6021884cfdb45ac631f853d115fc4245ae218dd6edcb3f68bab7f861",
+    "scripts/catalog-gate.mjs": "d826f1b6c10e3186650d06b0e6d103b3b46f16d1c7efa7db2842bee3fe9dec71",
+    "scripts/catalog-plan.mjs": "f1cf03229d42e1f56887d3ecced5df8c1ff9da70bdffb7ff1b747e0c3178a2d8",
+    "scripts/catalog.mjs": "bdd1e96da8c9d42ab7e89b4de5f3bde67ba338d9ac25f2eef7607c2e997e8bc6",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/dom-references.mjs": "f98202274d55fa641fdb94349fabbd7557ddee2c1a379a90a595eed22e41baf0",
+    "scripts/evaluate.mjs": "f6ae423562d9d166aefa739478dadb4ec42e973d62b45f180639f5a98fd60e8c",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/font-rendering.mjs": "c7ffb51539edaaff991e41946c6f60ca85c48e81905be5c6b2497bfe49b9b961",
+    "scripts/generate-service.mjs": "14fbe6d952b8b3bdb75e8a0f96cbdc7d2cfee25857711889432fc4da0458afbe",
+    "scripts/generate.mjs": "2d49ebc56706e83e65f3cae674b8e194ee486b9a8cd7484b5ae326212487d081",
+    "scripts/harness-binding.mjs": "6b71529cbc7778c4a5a071b2de25cd4662f04f0383cab95941eebe0f1b8df1ff",
+    "scripts/icon-assets.mjs": "de29824f013bc2bb71fe5b10063986cffa26a79fae41925e17cd56d54cc79a62",
+    "scripts/icon-check.mjs": "dc7c96dcf3e2e7198d04ac9380d73017f12363e9bea792070a864e24a5ab4b80",
+    "scripts/icons.mjs": "105ad7cf37f100e0e922bbe086bbd5eb40e8e0389860fa75edbceefeaf58a679",
+    "scripts/inference-options.mjs": "5554438d5a454be997f1b24cadf666a0a4c6fb6990fc095c04cefc03bcd664f3",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/owned-rollback.mjs": "e7ae6ea4ba450f14a621dfe5e4c958e7ff619e33dd7f16332e6a776e937e879e",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/quality-loop.mjs": "4d8168ba213788ab413be20d3574c5cf5eaa8516031b57267a4d95ff30ec001b",
+    "scripts/quality-policy.mjs": "29fe2de8114a08a610ec2c7061f8a69a7e712ecf796d5c5a163cc37602fb9b35",
+    "scripts/quality.mjs": "ed6be5b97283fd503ef6fa705f5a4e96944d1821ec6fd55fad2755142dd5d4d0",
+    "scripts/reference-assets.mjs": "647cf0c06f2715817b181eefb907a0815ef62cc39a8b77ce23938c221da5831e",
+    "scripts/reference-capture.mjs": "e9f80432bc4865a4775a1deefd5b7b4c9165c143aa6a68f2adbd189dfc423157",
+    "scripts/refine.mjs": "3f233369b6ac5c353ed4e971672a2066aaba8e564397f79f7256373e3df9b52c",
+    "scripts/repair-units.mjs": "55bbf77d1961a24583971cf7ac58c9a26435c40f3ac47807eae85fd288a2dbde",
+    "scripts/repair.mjs": "9e7f66ec9477b72df91307153af626b0c436ccfdcb03547fe1df6c369d0cf864",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/service-benchmark.mjs": "6dfdcfbdb094d3d9a3884aa48341ba98a7d8cf5c86bdbfc62cdf7f4572602f55",
+    "scripts/service-evaluate.mjs": "0314f9a77ec5acb6baea3fcc49e8053917b6395f4144663cb7cd20763fd24ffb",
+    "scripts/service-gallery.mjs": "78621a605a0b9869a12fb4e34f243a5c5ad3407db0d1f8a298e823f59cabcf74",
+    "scripts/service-interface.mjs": "8b3e82beb451c990b89288268446363c53269bb719af2c06eedd4ec6cc1ef030",
+    "scripts/service-progress.mjs": "acf88e42579c1e49a357a754de554e0bc141cdcabc83293e8135c351309ac72f",
+    "scripts/service-repair.mjs": "af356d3d86b1e60dd5b457d98a3d2f184883d38ed58efc4dd658fbd5d900848c",
+    "scripts/service-resume.mjs": "1956218819ba5d2cc0263cc11c71d911a19c5f871e2194bebf8a7f45ded498d2",
+    "scripts/service-revalidate.mjs": "ba364e7a7839d5372b8a93cedf112a1651a00f738ca1f114f157032014db6a7d",
+    "scripts/service-stages.mjs": "4c0ebfb8d8a005072ec0a1f59d07cd918a9c56bcdbdd9d486c2fb04227ada9ab",
+    "scripts/setup.mjs": "8a9e96c393a64bf7bfb28462945b537b277725bc0b0d951b3dfed4c370a4e363",
+    "scripts/skill-context.mjs": "95e438276917771247946552974dd522b7c5c22713d96aba5cc8288880ebbbc7",
+    "scripts/source-binding.mjs": "7a2e93af35c369f2d56c1b308cd9c5425ef9bddeda66c524bf3ebf72363434c5",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "a86a9cd93173edc5ea04f16ac9331101ceb59db1a73c677348fd804ea5c577b1",
+    "scripts/visibility.mjs": "fa748f7755f974823270b34f3e9a94e8d9913a4a8e22a631d561a0ac76f4f9d5",
+    "scripts/vision-review.mjs": "44d988922e8468b8086f62d6900747f0a1d27315f0ae07658848ceb4df239ae8",
+    "skills/qwen-samkill-ui/SKILL.md": "559793ed8a25e694f93b87ed89ec99eaac184b02b75b5590efdfb9e78d5da0b0",
+    "skills/qwen-samkill-ui/references/service-contracts.md": "9eef6278c163695455a6b37acf3c5513ca6e1850251e37c2bff024f8a9b521e3",
+    "skills/qwen-samkill-ui/references/upstream/design-md/guide.md": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76",
+    "skills/qwen-samkill-ui/references/upstream/design-md/references/document-contract.md": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/guide.md": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/references/flow-contract.md": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/guide.md": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/references/element-contract.md": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/guide.md": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/change-review.md": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/design-gate.md": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/deslop-triage.md": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/failure-catalog.json": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/feedback-regression.md": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/review-criteria.md": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/state-stress.md": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/guide.md": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/anti-slop-code.md": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/application-format.md": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/dashboard.md": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-guardrails.md": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-tokens.md": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/icon-controls.md": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/mobile.md": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/product-reasoning.md": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/reference-synthesis.md": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/typography.md": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/ui-composition.md": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d",
+    "skills/qwen-samkill-ui/references/upstream/samkill-ui/guide.md": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/guide.md": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/component-anatomy.md": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/observation-format.md": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/research-plan.md": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/search-examples.md": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/guide.md": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/copy-contract.md": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/korean-writing.md": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+  }
+}

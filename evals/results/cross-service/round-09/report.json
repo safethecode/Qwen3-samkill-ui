@@ -1,0 +1,239 @@
+{
+  "case": "round-09",
+  "scope": "scoped product recreation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "search-empty-recovery-presentation.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09",
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "document-create-edit-persist-presentation.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09",
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 1,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 1,
+    "readable-320": 12,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 1
+  },
+  "contentInventory": {
+    "320": {
+      "이력서 작업실": 1,
+      "새 이력서": 1,
+      "예시 이력서 제목 1": 1,
+      "예시 이름 1": 1,
+      "이름:": 3,
+      "예시 소개 내용 1": 1,
+      "소개:": 3,
+      "편집": 3,
+      "복사": 3,
+      "보관": 3,
+      "예시 이력서 제목 2": 1,
+      "예시 이름 2": 1,
+      "예시 소개 내용 2": 1,
+      "예시 이력서 제목 3": 1,
+      "예시 이름 3": 1,
+      "예시 소개 내용 3": 1
+    },
+    "390": {
+      "이력서 작업실": 1,
+      "새 이력서": 1,
+      "예시 이력서 제목 1": 1,
+      "예시 이름 1": 1,
+      "이름:": 3,
+      "예시 소개 내용 1": 1,
+      "소개:": 3,
+      "편집": 3,
+      "복사": 3,
+      "보관": 3,
+      "예시 이력서 제목 2": 1,
+      "예시 이름 2": 1,
+      "예시 소개 내용 2": 1,
+      "예시 이력서 제목 3": 1,
+      "예시 이름 3": 1,
+      "예시 소개 내용 3": 1
+    },
+    "1440": {
+      "이력서 작업실": 1,
+      "새 이력서": 1,
+      "예시 이력서 제목 1": 1,
+      "예시 이름 1": 1,
+      "이름:": 3,
+      "예시 소개 내용 1": 1,
+      "소개:": 3,
+      "편집": 3,
+      "복사": 3,
+      "보관": 3,
+      "예시 이력서 제목 2": 1,
+      "예시 이름 2": 1,
+      "예시 소개 내용 2": 1,
+      "예시 이력서 제목 3": 1,
+      "예시 이름 3": 1,
+      "예시 소개 내용 3": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 1'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '이름:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '소개: 예시 소개 내용 1'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '소개:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 2'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '이름:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '소개: 예시 소개 내용 2'\n+   },\n+   {\n+     class: '',\n+     element: 'STRONG',\n+     fontSize: '12.8px',\n+     fontWeight: '700',\n+     id: '',\n+     pseudo: null,\n+     text: '소개:'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '12.8px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '이름: 예시 이름 3'\n+   },\n+   {\n+     class:"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "FAIL",
+      "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "document-create-edit-persist",
+      "status": "PASS"
+    }
+  ],
+  "passed": 22,
+  "total": 26
+}

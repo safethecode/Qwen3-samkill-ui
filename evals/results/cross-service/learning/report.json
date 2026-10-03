@@ -1,0 +1,238 @@
+{
+  "case": "learning",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "lesson-progress-and-independent-notes-presentation.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09",
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 7,
+    "font-rendering-1440": 1,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 7,
+    "font-rendering-390": 1,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 7,
+    "font-rendering-320": 1,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "주차 탐색": 1,
+      "강의 검색": 1,
+      "주차 1": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "주차 2": 1,
+      "대비와 색상": 1,
+      "주차 3": 1,
+      "초점 관리": 1,
+      "주차 4": 1,
+      "읽기 순서": 1,
+      "진행 상황: 0/8": 1,
+      "선택된 강의가 없습니다": 1,
+      "학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    },
+    "390": {
+      "주차 탐색": 1,
+      "강의 검색": 1,
+      "주차 1": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "주차 2": 1,
+      "대비와 색상": 1,
+      "주차 3": 1,
+      "초점 관리": 1,
+      "주차 4": 1,
+      "읽기 순서": 1,
+      "진행 상황: 0/8": 1,
+      "선택된 강의가 없습니다": 1,
+      "학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    },
+    "1440": {
+      "주차 탐색": 1,
+      "강의 검색": 1,
+      "주차 1": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "주차 2": 1,
+      "대비와 색상": 1,
+      "주차 3": 1,
+      "초점 관리": 1,
+      "주차 4": 1,
+      "읽기 순서": 1,
+      "진행 상황: 0/8": 1,
+      "선택된 강의가 없습니다": 1,
+      "학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 갈피 학습실"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 갈피 학습실"
+    },
+    {
+      "name": "overflow-390",
+      "status": "FAIL",
+      "detail": "Horizontal page overflow"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 갈피 학습실"
+    },
+    {
+      "name": "overflow-320",
+      "status": "FAIL",
+      "detail": "Horizontal page overflow"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '강의 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'progress',\n+     pseudo: null,\n+     text: '진행 상황: 0/8'\n+   },\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '학습 메모'\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'TEXTAREA',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'note',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+     disabled: false,\n+     id: 'save-note',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 2.8353525675311277,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '메모 저장',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "Search did not remove unmatched results\n\n1 !== 0\n"
+    },
+    {
+      "name": "lesson-progress-and-independent-notes",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif',\n+       disabled: false,\n+       id: 'save-note',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 2.8353525675311277,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '메모 저장',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: 'visually-hidden',\n+       element: 'LABEL',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: '',\n+       pseudo: null,\n+       text: '강의 검색'\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'P',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: 'progress',\n+       pseudo: null,\n+       text: '진행 상황: 1/8'\n+     },\n+     {\n+       class: '',\n+       element: 'DIV',\n+       fontSize: '14px',\n+       fontWeight: '400',\n+       id: 'lesson-text',\n+       pseudo: null,\n+       text: 'HTML 요소는 의미를 가지고 있어야 합니다. 예를 들'\n+     },\n+     {\n+       class: 'visually-hidden',\n+       element: 'LABEL',\n+       fontSi"
+    }
+  ],
+  "passed": 13,
+  "total": 26
+}
