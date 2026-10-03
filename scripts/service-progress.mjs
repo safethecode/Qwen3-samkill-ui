@@ -6,6 +6,6 @@ export function serviceProgress(current, candidate) {
   const worsened = measured.some(([name, value]) => candidate.measurements?.[name] > value);
   const improved = measured.some(([name, value]) => candidate.measurements?.[name] < value);
   const contentLost = Object.entries(current.contentInventory || {}).some(([width, texts]) => Object.entries(texts).some(([text, count]) => (candidate.contentInventory?.[width]?.[text] || 0) < count));
-  const decision = !sameChecks || regressions.length || invalidMeasurements ? 'reject' : candidate.passed > current.passed ? 'accept' : worsened || contentLost ? 'reject' : improved ? 'accept' : 'stage';
+  const decision = !sameChecks || regressions.length || invalidMeasurements || worsened || contentLost ? 'reject' : candidate.passed > current.passed || improved ? 'accept' : 'stage';
   return { decision, regressions };
 }

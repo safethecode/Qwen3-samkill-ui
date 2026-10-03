@@ -21,3 +21,11 @@ test('small repairs can remain staged until the whole failing check improves', (
   assert.equal(serviceProgress(initial, report(['FAIL', 'PASS'])).decision, 'reject');
   assert.equal(serviceProgress(initial, report(['PASS'])).decision, 'reject');
 });
+
+test('a new passing check cannot hide worse typography or lost required content', () => {
+  const initial = { ...report(['FAIL', 'FAIL']), measurements: { readable: 3 }, contentInventory: { 390: { 'Required copy': 1 } } };
+  const improved = { ...initial, ...report(['PASS', 'FAIL']) };
+  assert.equal(serviceProgress(initial, { ...improved, measurements: { readable: 4 } }).decision, 'reject');
+  assert.equal(serviceProgress(initial, { ...improved, contentInventory: { 390: {} } }).decision, 'reject');
+  assert.equal(serviceProgress(initial, improved).decision, 'accept');
+});
