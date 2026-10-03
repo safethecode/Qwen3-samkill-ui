@@ -26,7 +26,7 @@ test('startup publication failure releases the target lock', async () => {
   await assert.rejects(access(resolve(target, '.quality-lock')));
 });
 
-test('quality CLI runs real browser checks and requires all twelve review chunks before completion', async () => {
+test('twelve passing visual chunks cannot bypass missing upstream catalog evidence', async () => {
   const target = await mkdtemp(resolve(repo, 'runs/quality-cli-'));
   const source = resolve(repo, 'evals/results/unattended/visual-polish');
   for (const file of ['index.html', 'styles.css', 'app.js', 'DESIGN.md', 'REFERENCE.md']) await copyFile(resolve(source, 'source', file), resolve(target, file));
@@ -45,11 +45,39 @@ test('quality CLI runs real browser checks and requires all twelve review chunks
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   try {
-    await execute(process.execPath, ['scripts/quality.mjs', target, '0'], { cwd: repo, env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}`, QWEN_DESIGN_CHECKS: '1', QWEN_REVIEW_MODEL: 'mock-vision' }, timeout: 90000, maxBuffer: 1024 * 1024 });
+    await assert.rejects(execute(process.execPath, ['scripts/quality.mjs', target, '0'], { cwd: repo, env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}`, QWEN_DESIGN_CHECKS: '1', QWEN_REVIEW_MODEL: 'mock-vision' }, timeout: 90000, maxBuffer: 1024 * 1024 }), error => error.code === 1);
     const result = JSON.parse(await readFile(resolve(target, 'QUALITY-RESULT.json'), 'utf8'));
-    assert.equal(result.status, 'COMPLETE');
+    assert.equal(result.status, 'INCOMPLETE');
+    assert.equal(result.catalog.status, 'UNVERIFIED');
     assert.equal(result.inspection.functional.passed, 25);
     assert.equal(result.confirmation.binding, result.inspection.binding);
     assert.equal(reviews, 12);
+  } finally { await new Promise(resolve => server.close(resolve)); }
+});
+
+test('service quality uses the declared service checks rather than the resume fixture', async () => {
+  const target = await mkdtemp(resolve(repo, 'runs/quality-service-cli-'));
+  await writeFile(resolve(target, 'index.html'), '<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"></head><body><h1>오늘의 건강</h1><p>기록 예시</p></body></html>');
+  await writeFile(resolve(target, 'styles.css'), 'body{font:500 16px sans-serif;color:#111;background:#fff}');
+  await writeFile(resolve(target, 'app.js'), '');
+  await writeFile(resolve(target, 'DESIGN.md'), 'Service adapter integration fixture, not a real visual-quality benchmark.');
+  await writeFile(resolve(target, 'REFERENCE.md'), 'Mock judge checks orchestration only.');
+  for (const view of ['desktop', 'mobile']) await copyFile(resolve(repo, `evals/results/unattended/visual-polish/${view}.png`), resolve(target, `${view}.png`));
+  await writeFile(resolve(target, 'QUALITY.json'), JSON.stringify({ version: 1, serviceCase: 'round-03', observations: 'Mock service-routing test, not reference equivalence.', references: { desktop: 'desktop.png', mobile: 'mobile.png' } }));
+  const server = createServer(async (request, response) => {
+    let body = ''; for await (const part of request) body += part;
+    const data = JSON.parse(body);
+    response.setHeader('content-type', 'application/json');
+    if (request.url === '/api/show') return response.end(JSON.stringify({ capabilities: ['vision'] }));
+    assert.equal(data.messages[1].images.length, 2);
+    response.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ criteria: data.format.properties.criteria.items.properties.id.enum.map(id => ({ id, score: 4, confidence: .95, observation: 'Mock comparison only; these images are not a matching reference.' })), issues: [] }) } }));
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    await assert.rejects(execute(process.execPath, ['scripts/quality.mjs', target, '0'], { cwd: repo, env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}`, QWEN_FUNCTIONAL_ROUNDS: '1' }, timeout: 90000 }), error => error.code === 1);
+    const result = JSON.parse(await readFile(resolve(target, 'QUALITY-RESULT.json'), 'utf8'));
+    assert.equal(result.inspection.functional.case, 'round-03');
+    assert.equal(result.status, 'INCOMPLETE');
+    assert.equal(result.catalog.status, 'UNVERIFIED');
   } finally { await new Promise(resolve => server.close(resolve)); }
 });

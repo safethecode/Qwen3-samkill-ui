@@ -23,7 +23,8 @@ export async function loadQualityConfig(path) {
     references[view] = resolve(dirname(path), config.references[view]);
     referenceHashes[view] = hash(await readImage(references[view]));
   }
-  return { references, referenceHashes, observations: config.observations, configHash: hash(raw) };
+  if (config.serviceCase !== undefined && (typeof config.serviceCase !== 'string' || !config.serviceCase)) throw new Error('Invalid serviceCase');
+  return { references, referenceHashes, observations: config.observations, serviceCase: config.serviceCase, configHash: hash(raw) };
 }
 
 export async function ensureVision(model, endpoint, fetcher = fetch) {

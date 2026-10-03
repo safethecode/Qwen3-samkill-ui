@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile, open, unlink } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, open, unlink, copyFile } from 'node:fs/promises';
 import { resolve, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadQualityConfig, reviewViewport, ensureVision, hash } from './vision-review.mjs';
@@ -8,6 +8,11 @@ import { run } from './process.mjs';
 import { readEvaluation } from './run-state.mjs';
 import { repair } from './repair.mjs';
 import { removeComments } from './comments.mjs';
+import { checkCatalogGate } from './catalog-gate.mjs';
+import { serviceCases } from '../evals/service-cases.mjs';
+import { evaluateService } from './service-evaluate.mjs';
+import { prepareCatalogPlan } from './catalog-plan.mjs';
+import { sourceBinding } from './source-binding.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const target = resolve(process.argv[2] || 'runs/resume');
@@ -33,7 +38,7 @@ const snapshot = async () => Object.fromEntries(await Promise.all(names.map(asyn
 const restore = async source => { for (const name of names) await writeFile(resolve(target, name), source[name]); };
 const save = async (path, value) => writeFile(path, JSON.stringify(value, null, 2));
 const publish = async result => {
-  const summary = { ...result, startedAt, updatedAt: new Date().toISOString(), reviewer: model, evidence: relative(target, evidence), completionScope: 'Local model quality judgment for the declared resume fixture; not guaranteed reference equivalence.' };
+  const summary = { ...result, startedAt, updatedAt: new Date().toISOString(), reviewer: model, evidence: relative(target, evidence), completionScope: 'Declared workflows, local visual review and the complete applicable upstream catalog. Automated judgment does not guarantee reference equivalence.' };
   await save(resolve(target, 'QUALITY-RESULT.json'), summary);
   await save(resolve(evidence, 'summary.json'), summary);
   await writeFile(resolve(target, 'UI-STATUS.md'), `# UI quality status\n\n${summary.status}\n\n${summary.reason || 'Functional checks and two independent visual passes succeeded.'}\n\nEvidence: ${summary.evidence}/summary.json\n\nThis is automated local-model judgment, not human design approval.\n`);
@@ -45,17 +50,21 @@ try {
   await publish({ status: 'RUNNING', reason: 'Quality gates have not completed.' });
   if (!Number.isInteger(rounds) || rounds < 0 || rounds > 10 || !Number.isInteger(functionalRounds) || functionalRounds < 1 || functionalRounds > 10) throw new Error('Invalid functional/visual round budget');
   const config = await loadQualityConfig(configPath);
+  const fixture = config.serviceCase ? serviceCases.find(item => item.id === config.serviceCase) : null;
+  if (config.serviceCase && !fixture) throw new Error(`Unknown serviceCase: ${config.serviceCase}`);
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
+  await prepareCatalogPlan(target);
   await ensureVision(model, endpoint);
   const bindings = async () => {
     const currentConfig = await loadQualityConfig(configPath);
     if (currentConfig.configHash !== config.configHash || JSON.stringify(currentConfig.referenceHashes) !== JSON.stringify(config.referenceHashes)) throw new Error('Reference configuration changed during quality run');
     const currentContract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
     if (currentContract !== contract) throw new Error('Design contract changed during quality run');
-    return hash(JSON.stringify({ source: await snapshot(), config: config.configHash, references: config.referenceHashes, contract }));
+    return hash(JSON.stringify({ source: await sourceBinding(target), config: config.configHash, references: config.referenceHashes, contract }));
   };
   const stale = () => Object.assign(new Error('Source changed during quality inspection; completion refused'), { code: 'STALE_SOURCE' });
-  const code = await run(process.execPath, [resolve(repo, 'scripts/iterate.mjs'), target, String(functionalRounds)], resolve(evidence, 'functional.log'), target);
+  const functionalArgs = fixture ? [resolve(repo, 'scripts/service-repair.mjs'), target, fixture.id, String(functionalRounds)] : [resolve(repo, 'scripts/iterate.mjs'), target, String(functionalRounds)];
+  const code = await run(process.execPath, functionalArgs, resolve(evidence, 'functional.log'), target);
   if (code !== 0) throw new Error(`Functional runner failed (${code}); visual completion refused`);
   const inspect = async (audit, previous) => {
     const directory = audit ? resolve(target, previous.evidence) : resolve(evidence, `inspection-${++step}`);
@@ -64,8 +73,14 @@ try {
     if (audit && previous.binding !== binding) throw stale();
     let functional = previous?.functional;
     if (!audit) {
-      const exit = await run(process.execPath, [resolve(repo, 'scripts/evaluate.mjs'), target, directory], resolve(directory, 'evaluation.log'), target);
-      functional = await readEvaluation(directory, exit);
+      if (fixture) {
+        const report = await evaluateService(target, directory, fixture);
+        functional = { ...report, results: report.checks };
+        for (const [width, name] of [[1440, 'desktop'], [390, 'mobile']]) await copyFile(resolve(directory, `${width}.png`), resolve(directory, `${name}.png`));
+      } else {
+        const exit = await run(process.execPath, [resolve(repo, 'scripts/evaluate.mjs'), target, directory], resolve(directory, 'evaluation.log'), target);
+        functional = await readEvaluation(directory, exit);
+      }
     }
     const visual = {};
     if (functional.passed === functional.total) {
@@ -108,7 +123,10 @@ try {
     }
   });
   if (result.status === 'COMPLETE' && await bindings() !== result.confirmation.binding) throw stale();
-  await publish({ ...result, referenceHashes: config.referenceHashes, configHash: config.configHash, events: events.map(({ source, ...event }) => event) });
+  const catalog = await checkCatalogGate(target, { reviewRequired: result.inspection?.functional?.reviewRequired, evidenceRoot: result.inspection?.evidence ? resolve(target, result.inspection.evidence) : evidence });
+  if (result.status === 'COMPLETE' && await bindings() !== result.confirmation.binding) throw stale();
+  if (result.status === 'COMPLETE' && catalog.status !== 'PASS') { result.status = 'INCOMPLETE'; result.reason = `Mandatory upstream catalog gate: ${catalog.status}`; }
+  await publish({ ...result, catalog, referenceHashes: config.referenceHashes, configHash: config.configHash, events: events.map(({ source, ...event }) => event) });
   process.exitCode = result.status === 'COMPLETE' ? 0 : 1;
   console.log(`${result.status}: ${result.reason || 'All required gates passed'}`);
 } catch (error) {
