@@ -41,7 +41,11 @@ The UI agent allows local file tools, shell checks, skills and optional `vision_
 
 ## Reproduce the evaluation
 
+For broader evaluation, use the [cross-service benchmark](docs/SERVICE-BENCHMARK.md). It includes every available upstream round (01, 02, 03, 04, 08, 09, 10) and three separately planned services: maintenance dispatch, workshop booking and a learning room. It generates real source, exercises service-specific browser flows and captures 1440/390/320px screenshots. Static translation, functional completion and visual comparison remain separate results. Rounds 05–07 are unavailable in the inspected upstream checkout.
+
 For unattended functional **and visual** gating, use [the quality workflow](docs/QUALITY.md): `npm run quality -- TARGET 4`. It requires desktop/mobile reference images and a `QUALITY.json` manifest, rejects regressions, escalates stalled repairs and requires a separate final visual audit. The functional-only commands below do not certify design completion.
+
+The quality runner now repairs one bounded source excerpt per request, rotates stalled work instead of requesting larger files, and splits each visual review into three two-criterion requests. Optional `QWEN_NUM_GPU`, `QWEN_NUM_CTX` and `QWEN_NUM_BATCH` settings help fit local resource budgets. Splitting output does not fix model loading or GPU contention by itself; timing evidence distinguishes these stages.
 
 For unattended generation without OpenCode tool calling, the staged Ollama backend writes HTML, JavaScript and CSS separately, passing earlier files to later stages. It starts from the design contract, not the saved example. The measured configuration generates with Coder 30B and uses Qwen3.5 9B for bounded repairs:
 

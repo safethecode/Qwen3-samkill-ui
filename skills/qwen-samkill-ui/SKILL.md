@@ -43,6 +43,7 @@ These guides are reference documents, not additional installed skill names. Foll
 | Reference observations | [Decomposition](references/upstream/reference-decompose/guide.md) |
 | Design contract | [Design specification](references/upstream/design-md/guide.md) |
 | Implementation | [Reference to UI](references/upstream/reference-to-ui/guide.md) |
+| New service scope and bounded work | [Service-specific contracts](references/service-contracts.md) |
 | Document collection previews | [Document collection hierarchy](references/document-collections.md) |
 | Final comparison | [Review](references/upstream/reference-review/guide.md) |
 | Interface copy | [UX copy](references/upstream/ux-copy/guide.md) |
