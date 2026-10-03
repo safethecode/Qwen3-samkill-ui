@@ -1,7 +1,7 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
-import { serviceStages, validateStage, assembleStages } from './service-stages.mjs';
+import { serviceStages, validateStage, assembleStages, stageSource } from './service-stages.mjs';
 import { validateInterface } from './service-interface.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { samplingOptions } from './sampling.mjs';
@@ -37,7 +37,7 @@ export async function generateService(target, evidence, options = {}) {
       validateStage(stage, saved.completed[stage.id], completed);
       await validateAssetReferences(target, stage, saved.completed[stage.id]);
       if (stage.id === 'shell') validateInterface(saved.completed.shell, options.interface);
-      if (stage.file === 'app.js') validateDomReferences(saved.completed.shell, stage.id === 'behavior' ? `${saved.completed.state}\n${saved.completed.behavior}` : saved.completed.state);
+      if (stage.file === 'app.js') validateDomReferences(saved.completed.shell, stageSource(stage, saved.completed[stage.id], completed));
       completed[stage.id] = saved.completed[stage.id];
     }
   }
@@ -69,7 +69,7 @@ export async function generateService(target, evidence, options = {}) {
         validateStage(stage, code, completed);
         await validateAssetReferences(target, stage, code);
         if (stage.id === 'shell') validateInterface(code, options.interface);
-        if (stage.file === 'app.js') validateDomReferences(completed.shell, stage.id === 'behavior' ? `${completed.state}\n${code}` : code);
+        if (stage.file === 'app.js') validateDomReferences(completed.shell, stageSource(stage, code, completed));
         completed[stage.id] = code;
         await writeFile(checkpointPath, JSON.stringify({ binding, settings, completed }, null, 2));
         break;

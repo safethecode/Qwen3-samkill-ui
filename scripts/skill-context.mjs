@@ -6,6 +6,7 @@ const routes = {
   shell: ['reference-to-ui/references/application-format.md', 'reference-to-ui/references/icon-controls.md'],
   state: ['onboarding-flow/references/flow-contract.md'],
   behavior: ['reference-review/references/state-stress.md'],
+  forms: ['onboarding-flow/references/flow-contract.md', 'reference-review/references/state-stress.md'],
   layout: ['reference-to-ui/references/typography.md', 'reference-to-ui/references/design-guardrails.md'],
   responsive: ['reference-to-ui/references/mobile.md', 'reference-to-ui/references/icon-controls.md']
 };

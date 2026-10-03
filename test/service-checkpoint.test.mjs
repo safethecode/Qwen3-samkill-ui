@@ -11,7 +11,7 @@ test('interrupted service generation resumes only unchanged, validated completed
   await mkdir(target); await mkdir(evidence);
   await writeFile(join(target, 'DESIGN.md'), 'A small test service.');
   await writeFile(join(target, 'REFERENCE.md'), 'A simple visible heading.');
-  const parts = { shell: '<html><body><h1>Test</h1></body></html>', state: 'let count = 0;', behavior: 'count += 1;', layout: 'body {margin:0}', responsive: '@media(max-width:400px){body{padding:16px}}' };
+  const parts = { shell: '<html><body><h1>Test</h1></body></html>', state: 'let count = 0;', behavior: 'count += 1;', forms: 'count += 2;', layout: 'body {margin:0}', responsive: '@media(max-width:400px){body{padding:16px}}' };
   const calls = [];
   let fail = true;
   const fetcher = async (_url, options) => {
@@ -28,7 +28,7 @@ test('interrupted service generation resumes only unchanged, validated completed
   fail = false;
   await generateService(target, evidence, { fetcher, resume: true });
   assert.equal(calls.filter(id => id === 'shell').length, 1);
-  assert.equal(await readFile(join(target, 'app.js'), 'utf8'), 'let count = 0;\ncount += 1;');
+  assert.equal(await readFile(join(target, 'app.js'), 'utf8'), 'let count = 0;\ncount += 1;\ncount += 2;');
 });
 
 test('changed contracts invalidate resumable generation checkpoints', async () => {
