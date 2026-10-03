@@ -2,6 +2,8 @@
 
 This benchmark separates three questions: can the local model complete a requested workflow, can it render a usable interface at multiple widths, and does its visual result approach a supplied reference? Functional counts answer only the first two questions within the tested scope. They never certify visual parity.
 
+The runner calls Ollama directly with the skill, frozen contract and reference observations. It does not exercise OpenCode tool selection, MCP discovery or the automatic image-routing plugin. Direct screenshot observations by Codex are labeled separately from local vision-model judgments. Results apply to this measured generation/repair path, not every possible agent configuration.
+
 ## Cases
 
 The frozen briefs are in `evals/service-cases.mjs`. Available upstream rounds are 01 (travel itinerary), 02 (mentor discovery), 03 (health home), 04 (pet-friendly cafe booking), 08 (cooking), 09 (resume workspace) and 10 (wedding invitation). Rounds 05–07 are absent from the inspected checkout. The first three are static translation exercises. Later rounds are scoped workflow recreations, not copies of every feature in the original products.
