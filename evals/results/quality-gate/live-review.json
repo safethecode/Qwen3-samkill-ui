@@ -1,0 +1,321 @@
+{
+  "binding": "72c6c89614dc67b56759c906c95f95bc21cb7f1babc8d191cb2ffe280b3a9ee7",
+  "functional": {
+    "fixture": "resume",
+    "checksVersion": 9,
+    "designChecks": true,
+    "results": [
+      {
+        "name": "file:index.html",
+        "status": "PASS"
+      },
+      {
+        "name": "file:styles.css",
+        "status": "PASS"
+      },
+      {
+        "name": "file:app.js",
+        "status": "PASS"
+      },
+      {
+        "name": "javascript-syntax",
+        "status": "PASS"
+      },
+      {
+        "name": "three-example-documents",
+        "status": "PASS"
+      },
+      {
+        "name": "search-label-and-empty-state",
+        "status": "PASS"
+      },
+      {
+        "name": "visible-labels-and-create",
+        "status": "PASS"
+      },
+      {
+        "name": "reload-persistence",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate",
+        "status": "PASS"
+      },
+      {
+        "name": "archive-and-restore",
+        "status": "PASS"
+      },
+      {
+        "name": "create-after-edit",
+        "status": "PASS"
+      },
+      {
+        "name": "overflow-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "typography-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "overflow-390",
+        "status": "PASS"
+      },
+      {
+        "name": "typography-390",
+        "status": "PASS"
+      },
+      {
+        "name": "runtime-errors",
+        "status": "PASS"
+      },
+      {
+        "name": "no-code-comments",
+        "status": "PASS"
+      },
+      {
+        "name": "required-title-validation",
+        "status": "PASS"
+      },
+      {
+        "name": "user-content-is-text",
+        "status": "PASS"
+      },
+      {
+        "name": "design-document-previews",
+        "status": "PASS"
+      },
+      {
+        "name": "design-desktop-columns",
+        "status": "PASS"
+      },
+      {
+        "name": "design-heading-hierarchy",
+        "status": "PASS"
+      },
+      {
+        "name": "design-paper-surfaces",
+        "status": "PASS"
+      },
+      {
+        "name": "design-mobile-stack",
+        "status": "PASS"
+      },
+      {
+        "name": "design-reduced-motion",
+        "status": "PASS"
+      }
+    ],
+    "passed": 25,
+    "total": 25,
+    "visualReview": "UNVERIFIED",
+    "limitations": [
+      "This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity."
+    ]
+  },
+  "visual": {
+    "desktop": {
+      "criteria": [
+        {
+          "id": "composition",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 replaces the descriptive subtitle '지원할 곳에 맞춰 경험을 정리해 보세요' with a generic '이 브라우저에 저장됩니다'. It also adds an unnecessary '이력서 검색' label above the search input, deviating from the reference's cleaner layout and specific text requirements. The filter tabs are positioned differently (right-aligned in Image 2 vs left-aligned in Image 1). This constitutes a major mismatch in composition and text."
+        },
+        {
+          "id": "hierarchy",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 fails to display the required metadata (dates, status) outside the document previews as seen in Image 1. Instead, it places this information inside the card or omits it entirely for some fields. The visual hierarchy is disrupted by the lack of external metadata and the different placement of filter controls."
+        },
+        {
+          "id": "spacing",
+          "score": 4,
+          "confidence": 0.9,
+          "observation": "Image 2 maintains a clean layout with consistent padding and gaps similar to Image 1. The document cards are well-aligned within their stages. While the filter positioning differs, the internal spacing of the content areas is restrained and readable."
+        },
+        {
+          "id": "typography",
+          "score": 4,
+          "confidence": 0.95,
+          "observation": "Image 2 uses appropriate font sizes and weights for headings and body text, matching the reference's readability standards. The contrast between primary and secondary text is clear. No obvious typography defects are visible."
+        },
+        {
+          "id": "document-content",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 displays generic placeholder content ('프론트엔드 개발자 이력서', '백엔드 개발자 이력서') instead of the specific resume data shown in Image 1. The document previews lack the detailed section structure (e.g., '경력' headers) visible in the reference, showing only basic info."
+        },
+        {
+          "id": "actions",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 uses a different visual style for action buttons (dark background for 'Edit' vs light in Image 1). The filter tabs are right-aligned in Image 2 instead of left-aligned as in the reference. This creates a mismatch in interaction design and control placement."
+        }
+      ],
+      "issues": [
+        {
+          "criterion": "composition",
+          "location": "Header area",
+          "problem": "Subtitle text is incorrect ('이 브라우저에 저장됩니다' vs '지원할 곳에 맞춰 경험을 정리해 보세요').",
+          "correction": "Replace subtitle with the exact reference text.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "composition",
+          "location": "Search area",
+          "problem": "Unnecessary label '이력서 검색' is added above the search input.",
+          "correction": "Remove the extra label to match reference layout.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "composition",
+          "location": "Filter area",
+          "problem": "Filter tabs ('전체', '보관함') are right-aligned instead of left-aligned.",
+          "correction": "Align filter tabs to the left side of the search bar.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "hierarchy",
+          "location": "Card metadata",
+          "problem": "Metadata (dates, status) is missing or placed inside cards instead of outside previews.",
+          "correction": "Move metadata outside the document preview area as shown in Image 1.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "document-content",
+          "location": "Document previews",
+          "problem": "Previews show generic placeholder text instead of specific resume data and section headers.",
+          "correction": "Populate previews with realistic resume content including '경력' sections.",
+          "files": [
+            "app.js"
+          ]
+        },
+        {
+          "criterion": "actions",
+          "location": "Action buttons",
+          "problem": "'Edit' button has a dark background in Image 2, unlike the light background in Image 1.",
+          "correction": "Change 'Edit' button background to match reference style (light gray).",
+          "files": [
+            "styles.css"
+          ]
+        }
+      ],
+      "referenceHash": "59199328bcf9f11ee2df36557a001bd7caa4ca8c32cdb127330081a2f7713682",
+      "currentHash": "62e01aa420470421218cbe1f8d6d6bd8f99e7fb93cd4ebeeab3bba6e8b63b7e5",
+      "model": "qwen3.5:9b",
+      "viewport": "desktop",
+      "audit": false
+    },
+    "mobile": {
+      "criteria": [
+        {
+          "id": "composition",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 lacks the required subtitle '이 브라우저에 저장됩니다' and uses a different filter layout ('전체/보관함') compared to Image 1's tabs. The search input label is missing in Image 2, violating the contract requirement for '이력서 검색'. The overall composition is less structured than the reference, with a prominent top button that isn't present in the reference design. The content hierarchy is inverted, placing '"
+        },
+        {
+          "id": "hierarchy",
+          "score": 2,
+          "confidence": 0.95,
+          "observation": "Image 2 fails to establish a clear visual hierarchy. It lacks the primary action button '새 이력서 +' seen in Image 1, instead using a full-width button that disrupts the flow. The document cards in Image 2 do not clearly distinguish between metadata (e.g., '수정일') and content, unlike Image 1 which separates them effectively. The emphasis on 'Edit' is present but the overall structure is less intuitive"
+        },
+        {
+          "id": "spacing",
+          "score": 3,
+          "confidence": 0.9,
+          "observation": "Image 2 exhibits inconsistent spacing and padding compared to Image 1. The gaps between cards are uniform but lack the subtle density variations seen in the reference. The top section of Image 2 is overly crowded with a large button and subtitle, whereas Image 1 maintains a cleaner, more balanced layout. The overall density feels higher in Image 2 due to the lack of negative space around the main"
+        },
+        {
+          "id": "typography",
+          "score": 4,
+          "confidence": 0.95,
+          "observation": "Image 2 meets most typography requirements with readable sizes and weights, but lacks the consistent scale seen in Image 1. The font sizes for headings and body text are appropriate, but the overall typographic rhythm is less refined. The use of bolding for emphasis is present but not as strategically applied as in the reference. The text alignment is generally good, but the lack of a clear visual"
+        },
+        {
+          "id": "document-content",
+          "score": 3,
+          "confidence": 0.95,
+          "observation": "Image 2 displays document content within white paper previews, similar to Image 1, but the layout is less effective. The text inside the cards in Image 2 is readable but lacks the structured sectioning seen in Image 1. The metadata (e.g., '수정일') is present but not as clearly separated from the main content. The overall presentation of document content is functional but"
+        },
+        {
+          "id": "actions",
+          "score": 2,
+          "confidence": 0.95,
+          "observation": "Image 2's action buttons are less clear and efficient compared to Image 1. The 'Edit' button is emphasized but the overall action row is cluttered with a large top button that isn't present in the reference. The secondary actions ('복제', '보관') are present but not as clearly distinguished. The mobile rows in Image 2 are less compact and efficient than those in Image 1, which"
+        }
+      ],
+      "issues": [
+        {
+          "criterion": "composition",
+          "location": "Top section of Image 2",
+          "problem": "Missing subtitle '이 브라우저에 저장됩니다' and incorrect filter layout.",
+          "correction": "Add the required subtitle and adjust the filter layout to match Image 1's tabs.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "hierarchy",
+          "location": "Top section of Image 2",
+          "problem": "Lack of primary action button '새 이력서 +' and inverted content hierarchy.",
+          "correction": "Add the primary action button and adjust the layout to prioritize document cards over the top button.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "spacing",
+          "location": "Overall layout of Image 2",
+          "problem": "Inconsistent spacing and padding compared to Image 1.",
+          "correction": "Adjust the gaps between cards and add negative space around the main content to match Image 1's balanced layout.",
+          "files": [
+            "styles.css"
+          ]
+        },
+        {
+          "criterion": "typography",
+          "location": "Document cards in Image 2",
+          "problem": "Lack of consistent typographic scale and strategic emphasis.",
+          "correction": "Refine the font sizes and bolding to match the typographic rhythm seen in Image 1.",
+          "files": [
+            "styles.css"
+          ]
+        },
+        {
+          "criterion": "document-content",
+          "location": "Document cards in Image 2",
+          "problem": "Less effective layout for document content and metadata separation.",
+          "correction": "Improve the layout of document content within the cards to better separate metadata from main content as seen in Image 1.",
+          "files": [
+            "index.html"
+          ]
+        },
+        {
+          "criterion": "actions",
+          "location": "Action rows in Image 2",
+          "problem": "Cluttered action row with a large top button and less efficient mobile rows.",
+          "correction": "Remove the large top button and adjust the action row to be more compact and efficient as seen in Image 1.",
+          "files": [
+            "index.html"
+          ]
+        }
+      ],
+      "referenceHash": "ae8f9c8b1974cce10b6807248e7d896460195bfaccf6071f85d62b2fb01d2ff1",
+      "currentHash": "e6eec5b07e19bf43f04807653870413c34ee3c495c6f78245f58769768aa2389",
+      "model": "qwen3.5:9b",
+      "viewport": "mobile",
+      "audit": false
+    }
+  },
+  "evidence": "quality-1790991039132\\inspection-1"
+}

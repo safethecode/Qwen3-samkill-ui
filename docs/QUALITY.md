@@ -20,7 +20,7 @@ From this repository:
 npm run quality -- runs/my-ui 4
 ```
 
-The number is the maximum visual repair attempts, from 0 to 10. Zero performs inspection and confirmation only. An optional fourth CLI argument selects a manifest outside the target: `node scripts/quality.mjs TARGET 4 PATH_TO_QUALITY_JSON`.
+The number is the maximum visual repair attempts, from 0 to 10. Zero disables visual repairs; the separate functional stage may still generate or repair within QWEN_FUNCTIONAL_ROUNDS before visual inspection and confirmation. An optional fourth CLI argument selects a manifest outside the target: `node scripts/quality.mjs TARGET 4 PATH_TO_QUALITY_JSON`.
 
 Default models are Coder 30B for generation and Qwen3.5 9B for repairs and vision review. They run sequentially against local Ollama. The reviewer starts a fresh request for each viewport, sees only reference/current images, the contract and observations, and receives no generation conversation or previous scores. Sharing model weights still creates correlated judgment errors; separate requests are not independent human reviewers.
 
@@ -48,3 +48,5 @@ npm run quality -- runs/my-ui 4
 Each `quality-*` directory retains functional logs, screenshots, review responses without private reasoning, reference/source bindings, repair requests and decisions. Raw source snapshots may contain project data; review them before sharing. A target lock prevents simultaneous quality runs. An interrupted process can leave `.quality-lock`; verify no process still uses that target before removing it.
 
 Visual judgments can be wrong or inconsistent. Strict rollback can reject a useful edit when the judge's scores fluctuate. Reference selection and representative positive/negative calibration remain necessary; adding gates improves rejection discipline without guaranteeing every task converges.
+
+See the [measured gate verification](../evals/QUALITY-GATE-RESULTS.md) for test coverage, actual local failures and calibration limits. A real end-to-end COMPLETE result has not yet been established.

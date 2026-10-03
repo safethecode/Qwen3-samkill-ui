@@ -1,0 +1,8 @@
+[
+  {
+    "type": "repair-rejected",
+    "attempt": 1,
+    "strategy": "patches",
+    "reason": "The operation was aborted due to timeout"
+  }
+]

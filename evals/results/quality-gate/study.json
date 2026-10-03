@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-03",
+  "type": "development-calibration-not-fresh-generation",
+  "reviewModel": "qwen3.5:9b",
+  "repairModel": "qwen3.5:9b",
+  "input": "../unattended/visual-polish/source",
+  "functionalScore": "25/25",
+  "trials": [
+    {
+      "run": "quality-1790990840775",
+      "status": "INCOMPLETE",
+      "reason": "Truncated visual review: length",
+      "attempts": 0,
+      "sourceUnchanged": true
+    },
+    {
+      "run": "quality-1790991039132",
+      "status": "INCOMPLETE",
+      "reason": "The operation was aborted due to timeout",
+      "attempts": 1,
+      "sourceUnchanged": true
+    }
+  ],
+  "limitations": [
+    "Initial unbounded review reached 4096-token output limit.",
+    "Bounded structured reviews completed but incorrectly criticized required subtitle wording.",
+    "The repair request timed out; source remained unchanged and completion was refused.",
+    "Final prompt adds an explicit copy-fidelity exclusion; these earlier reviews do not measure that final prompt.",
+    "GPU utilization was 100% with other applications active; this was not an isolated latency benchmark.",
+    "No live end-to-end COMPLETE outcome has been established."
+  ],
+  "positiveControl": {
+    "type": "identical-image-positive-control",
+    "status": "INCOMPLETE",
+    "reason": "The operation was aborted due to timeout",
+    "interpretation": "Timeout prevents assessing positive-control accuracy; this is not a false-negative classification."
+  },
+  "verification": {
+    "nodeAndBrowserTests": 49,
+    "pythonTests": 2,
+    "failedTests": 0
+  }
+}

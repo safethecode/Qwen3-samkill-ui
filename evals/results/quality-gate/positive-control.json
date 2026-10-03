@@ -1,0 +1,5 @@
+{
+  "type": "identical-image-positive-control",
+  "pass": false,
+  "error": "The operation was aborted due to timeout"
+}
