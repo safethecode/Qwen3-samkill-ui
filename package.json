@@ -11,7 +11,8 @@
     "evaluate": "node scripts/evaluate.mjs",
     "test": "node --test test/*.test.mjs",
     "test:browser": "node --test checks/*.test.mjs",
-    "benchmark": "node scripts/benchmark.mjs"
+    "benchmark": "node scripts/benchmark.mjs",
+    "quality": "node scripts/quality.mjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",
