@@ -1,10 +1,11 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { resolve, relative, sep } from 'node:path';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
 import { sourceBinding } from './source-binding.mjs';
 import { guideChecks } from './catalog-plan.mjs';
+import { unresolvedFindings } from './review-findings.mjs';
 
 export async function checkCatalogGate(target, options = {}) {
   try {
@@ -32,10 +33,7 @@ export async function checkCatalogGate(target, options = {}) {
     if (!['PASS', 'FAIL', 'UNVERIFIED'].includes(result.status)) throw new Error('Invalid catalog status');
     if (result.status === 'PASS' && options.reviewRequired?.length) {
       const report = JSON.parse(await readFile(resolve(target, 'design/gate-report.json'), 'utf8'));
-      const unresolved = options.reviewRequired.filter(finding => {
-        const evidence = relative(target, resolve(options.evidenceRoot, finding.evidence)).split(sep).join('/');
-        return !finding.rules?.some(id => report.results?.some(entry => entry.id === id && ['pass', 'exception'].includes(entry.status) && entry.evidence?.some(item => item.path.replaceAll('\\', '/') === evidence)));
-      });
+      const unresolved = unresolvedFindings(options.reviewRequired, report, target, options.evidenceRoot);
       if (unresolved.length) return { ...result, status: 'UNVERIFIED', errors: [...(result.errors || []), 'Current automated review findings are not resolved by scoped catalog evidence'], unresolved };
     }
     return result;
