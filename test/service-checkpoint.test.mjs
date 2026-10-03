@@ -101,11 +101,35 @@ test('static translation stages do not request product behavior and cannot resum
     const [, id, instruction] = /CURRENT UNIT: (\w+)\n([\s\S]*?)\nPREVIOUS ERROR:/.exec(content);
     instructions[id] = instruction;
     if (id === 'layout') throw new Error('Stop before layout');
-    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ code: id === 'shell' ? '<html><body><h1>Static</h1></body></html>' : 'void 0;' }) } }) };
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ code: id === 'shell' ? '<html><body><h1>Static</h1></body></html>' : 'function renderStaticView() {}' }) } }) };
   };
   await assert.rejects(generateService(target, evidence, { fetcher, flow: 'static' }), /Stop before layout/);
   assert.doesNotMatch(instructions.state, /safe localStorage loading\/saving/);
-  assert.doesNotMatch(instructions.behavior, /wire search, filters/);
-  for (const id of ['shell', 'state', 'behavior', 'forms']) assert.match(instructions[id], /STATIC TRANSLATION/);
+  assert.equal(instructions.behavior, undefined);
+  assert.equal(instructions.forms, undefined);
+  for (const id of ['shell', 'state']) assert.match(instructions[id], /STATIC TRANSLATION/);
   await assert.rejects(generateService(target, evidence, { flow: 'booking', resume: true, fetcher: async () => { throw new Error('Unexpected model request'); } }), /does not match/);
+});
+
+test('static lifecycle calls the renderer and disables sample actions without asking the model for forms', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const root = await mkdtemp(join(tmpdir(), 'qwen-static-lifecycle-'));
+  const target = join(root, 'source'); const evidence = join(root, 'evidence');
+  await mkdir(target); await mkdir(evidence);
+  await writeFile(join(target, 'DESIGN.md'), 'Static cards and disabled buttons.');
+  await writeFile(join(target, 'REFERENCE.md'), 'Two cards.');
+  const calls = [];
+  const parts = { shell: '<html><body><main id="cards"></main></body></html>', state: 'function renderStaticView() { globalThis.rendered = true; }', behavior: 'void 0;', forms: 'void 0;', layout: 'body{margin:0}', responsive: '[hidden]{display:none!important}' };
+  const fetcher = async (_url, options) => {
+    const id = /CURRENT UNIT: (\w+)/.exec(JSON.parse(options.body).messages[1].content)[1];
+    calls.push(id);
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ code: parts[id] }) } }) };
+  };
+  await generateService(target, evidence, { flow: 'static', fetcher });
+  const button = { disabled: false };
+  const context = { document: { querySelectorAll: () => [button] } };
+  runInNewContext(await readFile(join(target, 'app.js'), 'utf8'), context);
+  assert.equal(context.rendered, true);
+  assert.equal(button.disabled, true);
+  assert.deepEqual(calls, ['shell', 'state', 'layout', 'responsive']);
 });

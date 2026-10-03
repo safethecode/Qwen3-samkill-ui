@@ -58,7 +58,7 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     const normalized = [cleaned.html, cleaned.css, cleaned.js];
     for (let index = 0; index < names.length; index++) await writeFile(resolve(target, names[index]), normalized[index]);
     const sourceHashes = Object.fromEntries(await Promise.all(['index.html', 'app.js', 'styles.css'].map(async name => [name, createHash('sha256').update(await readFile(resolve(target, name))).digest('hex')])));
-    generated = { contractHash: digest(fixture.contract), sourceHashes, hostNormalization: 'Parser-based comment removal only' };
+    generated = { contractHash: digest(fixture.contract), sourceHashes, hostNormalization: fixture.flow === 'static' ? 'Static lifecycle bootstrap and parser-based comment removal' : 'Parser-based comment removal only' };
     study.results.push({ case: fixture.id, scope: fixture.scope, phase: 'GENERATED', ...generated });
     await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
     }

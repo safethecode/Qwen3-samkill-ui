@@ -14,17 +14,26 @@ export function stagesForFlow(flow) {
   if (flow !== 'static') return serviceStages;
   const instructions = {
     shell: `${serviceStages[0].instruction} STATIC TRANSLATION: show example controls disabled with a visible example disclosure. Preserve native text entry only where the contract requests it. Do not create forms, booking panels or product workflows absent from the contract.`,
-    state: 'STATIC TRANSLATION: write ONLY static example data and named render functions for the existing HTML. Preserve reference assets and full content. Use textContent or escape strings. Do not initialize yet. Do not add storage, user accounts, editable data, forms or product state. Under 90 compact lines.',
+    state: 'STATIC TRANSLATION: write ONLY static example data and function renderStaticView() which renders all required content into the existing HTML. Define this exact synchronous zero-argument function at top level. The runner calls it once after loading; do not call it yourself. Preserve reference assets and full content. Use textContent or escape strings. Do not add storage, user accounts, editable data, forms or product state. Under 90 compact lines.',
     behavior: 'STATIC TRANSLATION: write ONLY JavaScript needed to keep example controls explicitly disabled. Native text entry may remain when required, but do not wire filtering, navigation, favorite toggles, alerts, submission or persistence. Do not initialize or repeat render functions. Return void 0; when no JavaScript is needed.',
     forms: 'STATIC TRANSLATION: write ONLY startup calling the existing render functions once. There are no form workflows to implement. Keep example actions disabled after rendering. Do not invent form elements, validation, saving, cancellation, storage, alerts or listeners for nonexistent elements. Reuse the exact functions already defined. Return void 0; if no startup is needed.'
   };
-  return serviceStages.map(stage => ({ ...stage, instruction: instructions[stage.id] || stage.instruction }));
+  return serviceStages.map(stage => ({ ...stage, instruction: instructions[stage.id] || stage.instruction,
+    ...(stage.id === 'state' ? { requiredFunction: 'renderStaticView' } : {}),
+    ...(stage.id === 'behavior' ? { hostCode: 'void 0;' } : {}),
+    ...(stage.id === 'forms' ? { hostCode: "renderStaticView();\ndocument.querySelectorAll('button').forEach(button => { button.disabled = true; });" } : {})
+  }));
 }
 
 export const stageSource = (stage, code, completed) => [...serviceStages.slice(0, serviceStages.findIndex(item => item.id === stage.id)).filter(item => item.file === stage.file).map(item => completed[item.id]), code].join('\n');
 
 export function validateStage(stage, code, completed) {
   if (typeof code !== 'string' || !code.trim()) throw new Error('Empty stage output');
+  if (stage.hostCode !== undefined && code !== stage.hostCode) throw new Error('Static lifecycle checkpoint does not match the runner bootstrap');
+  if (stage.requiredFunction) {
+    const tree = parse(code, { ecmaVersion: 'latest', sourceType: 'script' });
+    if (!tree.body.some(node => node.type === 'FunctionDeclaration' && node.id?.name === stage.requiredFunction && !node.async && !node.generator && node.params.length === 0)) throw new Error(`Define synchronous top-level function ${stage.requiredFunction}() so the runner can initialize the static view`);
+  }
   if (stage.file === 'app.js') parse(stageSource(stage, code, completed), { ecmaVersion: 'latest', sourceType: 'script' });
   if (stage.file === 'styles.css') postcss.parse(code);
   if (stage.file === 'index.html' && !/<\/html>\s*$/i.test(code)) throw new Error('Incomplete HTML document');

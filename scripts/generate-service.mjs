@@ -44,6 +44,13 @@ export async function generateService(target, evidence, options = {}) {
   }
   for (const stage of serviceStages) {
     if (completed[stage.id] !== undefined) continue;
+    if (stage.hostCode !== undefined) {
+      validateStage(stage, stage.hostCode, completed);
+      completed[stage.id] = stage.hostCode;
+      await writeFile(resolve(evidence, `${stage.id}-${requestRun}-host.json`), JSON.stringify({ binding, stage: stage.id, producer: 'host-static-lifecycle', code: stage.hostCode }, null, 2));
+      await writeFile(checkpointPath, JSON.stringify({ binding, settings, completed }, null, 2));
+      continue;
+    }
     const assetContext = `\nVERIFIED LOCAL ICON ASSETS\n${Object.keys(assets).join('\n') || 'None supplied. Do not invent asset paths.'}\nUse these only for required actions, preserving semantic labels and their official shape. Example for an available Search asset: <img src="assets/icons/Search.svg" alt="" width="20" height="20">. File names are case-sensitive. Do not replace reference icons with emoji or hand-drawn SVG.\nEXISTING REFERENCE ASSETS\n${referenceAssets || 'No original media supplied. Do not invent image URLs or claim media fidelity.'}`;
     let previousError = '';
     let rejectedCode = '';
