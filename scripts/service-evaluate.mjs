@@ -31,7 +31,9 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       page.on('dialog', dialog => dialog.dismiss());
-      await page.goto(url);
+      const response = await page.goto(url);
+      if (!response?.ok()) throw new Error(`Page did not load successfully: HTTP ${response?.status()}`);
+      if (!await page.locator('body').innerText().then(text => text.trim().length > 0)) throw new Error('Page body is empty');
       await page.evaluate(() => document.fonts.ready);
       await page.screenshot({ path: resolve(evidence, `${width}.png`) });
       await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
@@ -56,14 +58,21 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         page.on('pageerror', e => errors.push(e.message));
         page.on('dialog', d => d.dismiss());
         try { await page.goto(url); await fn(page); assert.deepEqual(errors, []); await page.screenshot({ path: resolve(evidence, `${name}.png`), fullPage: true }); }
+        catch (error) { await page.screenshot({ path: resolve(evidence, `${name}-failed.png`), fullPage: true }).catch(() => {}); throw error; }
         finally { await page.close(); }
       });
       const button = (page, name) => page.getByRole('button', { name, exact: true });
       if (['booking', 'dispatch', 'document', 'learning'].includes(fixture.flow)) await exercise('search-empty-recovery', async page => {
+        const resultAction = fixture.flow === 'document' ? button(page, '편집') : fixture.flow === 'learning' ? page.getByRole('button', { name: /의미 있는 HTML/ }) : button(page, '상세');
+        const initialCount = await resultAction.count();
+        assert.ok(initialCount > 0, 'No initial searchable results');
+        const before = new Set((await page.locator('body').innerText()).split('\n').map(text => text.trim()));
         await page.locator('#search').fill('찾을수없는항목xyz');
-        assert.match(await page.locator('body').innerText(), /없|찾지|결과/);
+        assert.equal(await resultAction.count(), 0, 'Search did not remove unmatched results');
+        const added = (await page.locator('body').innerText()).split('\n').map(text => text.trim()).filter(text => !before.has(text)).join('\n');
+        assert.match(added, /없|찾지|일치.*않/, 'No new visible no-results message');
         await page.locator('#search').fill('');
-        assert.ok(await page.getByText(fixture.anchors[1], { exact: false }).first().isVisible());
+        assert.equal(await resultAction.count(), initialCount, 'Clearing search did not restore results');
       });
       if (fixture.flow === 'booking') {
         const open = async page => { await button(page, '상세').first().click(); await button(page, '예약하기').first().click(); };
@@ -95,7 +104,11 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         await button(page, '처리 완료').click();
         await page.reload();
         await page.locator('#search').fill('프린터 용지 걸림');
-        assert.match(await page.locator('body').innerText(), /완료/);
+        await button(page, '상세').first().click();
+        assert.match(await page.locator('#detail').innerText(), /프린터 용지 걸림/);
+        assert.equal(await page.locator('#detail').getByRole('button', { name: '처리 완료', exact: true }).isEnabled().catch(() => false), false, 'Completed request must not remain actionable as an unresolved request');
+        const status = await page.locator('#detail').evaluate(el => { const copy = el.cloneNode(true); copy.querySelectorAll('button').forEach(button => button.remove()); return copy.textContent; });
+        assert.match(status, /완료/, 'Selected request has no persisted completion status');
       });
       if (fixture.flow === 'learning') await exercise('lesson-progress-and-independent-notes', async page => {
         await page.locator('#note').fill('첫 수업 메모');

@@ -94,7 +94,7 @@ try {
       const before = await bindings();
       try { await repair(target, directory, failure, '', { bounded: true, unitAttempt: unitAttempt++ }); }
       catch (error) {
-        if (await bindings() !== before && /Source changed during generation/.test(error.message)) throw stale();
+        if (await bindings() !== before) throw stale();
         throw error;
       }
       const source = await snapshot();
