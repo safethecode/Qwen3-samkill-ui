@@ -78,3 +78,19 @@ test('a no-op booking action cannot hide a skipped detail-to-form transition', a
   assert.equal(failure.status, 'FAIL');
   assert.match(failure.detail, /detail.*booking form/i);
 });
+
+test('an initially visible booking button cannot substitute for a working detail action', async () => {
+  const target = await mkdtemp(resolve('runs/service-noop-detail-'));
+  await writeFile(resolve(target, 'index.html'), '<html><head><style>body{font:500 16px sans-serif}button,input{font:inherit}</style></head><body><h1>Test</h1><input id="search"><button>상세</button><button onclick="document.querySelector(\'#booking-form\').hidden=false">예약하기</button><form id="booking-form" hidden><label>이름<input required></label><button>예약 확정</button></form><section id="confirmation" hidden></section></body></html>');
+  const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'noop-detail', scope: 'test fixture', anchors: ['Test'], flow: 'booking' });
+  const failure = report.checks.find(check => check.name === 'booking-validation');
+  assert.equal(failure.status, 'FAIL');
+  assert.match(failure.detail, /detail action.*reveal/i);
+});
+
+test('a real selected-item detail view can lead to a validated booking form', async () => {
+  const target = await mkdtemp(resolve('runs/service-real-detail-'));
+  await writeFile(resolve(target, 'index.html'), '<html><head><style>body{font:500 16px sans-serif}button,input,select{font:inherit}[hidden]{display:none!important}</style></head><body><h1>Test</h1><input id="search"><article><h3>Pottery</h3><button onclick="document.querySelector(\'#detail\').hidden=false">상세</button></article><section id="detail" hidden><h2>Pottery</h2><p>Clay workshop with instruction and materials.</p><button onclick="document.querySelector(\'#detail\').hidden=true;document.querySelector(\'#booking-form\').hidden=false">예약하기</button></section><form id="booking-form" hidden onsubmit="event.preventDefault()"><label for="guest">이름</label><input id="guest" required><label for="date">날짜</label><input id="date" type="date" required><label for="slot">시간</label><select id="slot"><option>10:00</option><option>14:00</option></select><button>예약 확정</button></form><section id="confirmation" hidden></section></body></html>');
+  const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'real-detail', scope: 'test fixture', anchors: ['Test'], flow: 'booking' });
+  assert.equal(report.checks.find(check => check.name === 'booking-validation').status, 'PASS');
+});

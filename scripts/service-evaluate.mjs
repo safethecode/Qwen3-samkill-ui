@@ -154,9 +154,25 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       if (fixture.flow === 'booking') {
         const open = async page => {
           assert.equal(await page.locator('#booking-form').isVisible(), false, 'Initial catalogue must not display the booking form');
+          for (const action of await button(page, '예약하기').all()) assert.equal(await action.isVisible(), false, 'The detail action must reveal its booking action; an initially visible button cannot prove a detail transition');
+          const before = (await page.locator('body').innerText()).split('\n').map(text => text.trim()).filter(Boolean);
+          const title = await button(page, '상세').first().evaluate(action => {
+            for (let parent = action.parentElement; parent && parent.tagName !== 'BODY'; parent = parent.parentElement) {
+              const headings = [...parent.querySelectorAll('h2,h3,h4')];
+              if (headings.length === 1) return headings[0].textContent.trim();
+            }
+            return '';
+          });
           await button(page, '상세').first().click();
           assert.equal(await page.locator('#booking-form').isVisible(), false, 'Detail must precede the booking form; implement the actual detail view and its 예약하기 action');
-          await button(page, '예약하기').first().click();
+          const action = button(page, '예약하기').first();
+          await action.waitFor({ state: 'visible' });
+          const detailText = await action.evaluate(element => element.closest('section,article,dialog,[role=dialog]')?.innerText || '');
+          assert.ok(title && detailText.includes(title), 'The booking action must belong to a detail region identifying the selected item');
+          const after = (await page.locator('body').innerText()).split('\n').map(text => text.trim()).filter(Boolean);
+          for (const line of before) { const index = after.indexOf(line); if (index >= 0) after.splice(index, 1); }
+          assert.ok(after.some(text => text !== '예약하기' && detailText.includes(text)), 'The detail action must reveal item information, not only another button');
+          await action.click();
           assert.equal(await page.locator('#booking-form').isVisible(), true, 'The 예약하기 action must open the booking form');
         };
         await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false, `Empty booking must not display #confirmation (class=${await page.locator('#confirmation').getAttribute('class')}); verify form validation and hidden state styling`); });
