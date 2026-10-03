@@ -133,3 +133,26 @@ test('static lifecycle calls the renderer and disables sample actions without as
   assert.equal(button.disabled, true);
   assert.deepEqual(calls, ['shell', 'state', 'layout', 'responsive']);
 });
+
+test('JavaScript retries name the required language and do not repeat the HTML construction checklist', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'qwen-stage-language-'));
+  const target = join(root, 'source'); const evidence = join(root, 'evidence');
+  await mkdir(target); await mkdir(evidence);
+  await writeFile(join(target, 'DESIGN.md'), 'Static cards.');
+  await writeFile(join(target, 'REFERENCE.md'), 'A card list.');
+  let retries = 0;
+  const fetcher = async (_url, options) => {
+    const request = JSON.parse(options.body);
+    const content = request.messages[1].content;
+    const id = /CURRENT UNIT: (\w+)/.exec(content)[1];
+    if (id === 'shell') return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({code:'<html><body><h1>Cards</h1></body></html>'}) } }) };
+    if (id !== 'state') throw new Error('Stop after corrected JavaScript');
+    retries++;
+    assert.match(content.split('FINAL OUTPUT CONTRACT').at(-1), /JavaScript.*app\.js/);
+    assert.ok(!content.includes('FINAL REQUIRED ELEMENT CHECKLIST'));
+    if (retries === 2) assert.match(content, /state requires JavaScript for app\.js; received HTML/);
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({code:retries === 1 ? '<html></html>' : 'function renderStaticView() {}'}) } }) };
+  };
+  await assert.rejects(generateService(target,evidence,{flow:'static',fetcher}),/Stop after corrected JavaScript/);
+  assert.equal(retries,2);
+});

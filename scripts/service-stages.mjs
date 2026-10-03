@@ -29,6 +29,7 @@ export const stageSource = (stage, code, completed) => [...serviceStages.slice(0
 
 export function validateStage(stage, code, completed) {
   if (typeof code !== 'string' || !code.trim()) throw new Error('Empty stage output');
+  if (stage.file !== 'index.html' && /^\s*<(?:!doctype\b|[a-z][\w-]*(?:\s|>))/i.test(code)) throw new Error(`${stage.id} requires ${stage.file === 'app.js' ? 'JavaScript' : 'CSS'} for ${stage.file}; received HTML. The completed HTML shell is read-only. Return only this unit in the required language.`);
   if (stage.hostCode !== undefined && code !== stage.hostCode) throw new Error('Static lifecycle checkpoint does not match the runner bootstrap');
   if (stage.requiredFunction) {
     const tree = parse(code, { ecmaVersion: 'latest', sourceType: 'script' });
