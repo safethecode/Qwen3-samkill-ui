@@ -49,7 +49,10 @@ test('twelve passing visual chunks cannot bypass missing upstream catalog eviden
     const result = JSON.parse(await readFile(resolve(target, 'QUALITY-RESULT.json'), 'utf8'));
     assert.equal(result.status, 'INCOMPLETE');
     assert.equal(result.catalog.status, 'UNVERIFIED');
-    assert.equal(result.inspection.functional.passed, 25);
+    assert.equal(result.inspection.functional.passed, result.inspection.functional.total);
+    assert.ok(result.inspection.functional.results.some(check => check.name === 'font-rendering-initial-320'));
+    assert.ok(result.inspection.functional.results.some(check => check.name === 'icons-editor-390'));
+    assert.ok(result.inspection.functional.reviewRequired.some(finding => finding.rules.includes('ORC-G06')));
     assert.equal(result.confirmation.binding, result.inspection.binding);
     assert.equal(reviews, 12);
   } finally { await new Promise(resolve => server.close(resolve)); }

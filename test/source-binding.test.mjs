@@ -16,3 +16,13 @@ test('font and icon asset edits invalidate the quality source binding', async ()
   await writeFile(join(target, 'assets/font.woff2'), 'changed');
   assert.notDeepEqual(await sourceBinding(target), before);
 });
+
+test('extra local styles scripts and fonts are bound outside assets', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'qwen-dependencies-'));
+  await mkdir(join(target, 'fonts'));
+  for (const name of ['theme.css', 'extra.js', 'fonts/local.woff2']) await writeFile(join(target, name), 'first');
+  const before = await sourceBinding(target);
+  assert.deepEqual(Object.keys(before).sort(), ['extra.js', 'fonts/local.woff2', 'theme.css']);
+  await writeFile(join(target, 'theme.css'), 'changed');
+  assert.notDeepEqual(await sourceBinding(target), before);
+});

@@ -1,20 +1,26 @@
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir, realpath } from 'node:fs/promises';
-import { resolve, sep, extname } from 'node:path';
+import { resolve, sep, extname, relative } from 'node:path';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { inspectTypography } from './typography-check.mjs';
 import { inspectIcons } from './icon-check.mjs';
 import { inspectFontRendering } from './font-rendering.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
+import { reviewFindings } from './review-findings.mjs';
+import { sourceBinding } from './source-binding.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
   const root = await realpath(target);
+  const servedFiles = await sourceBinding(root);
+  const unboundRequests = new Set();
   const server = createServer(async (req, res) => {
     try {
       const path = await realpath(resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname.replace(/\/$/, '/index.html'))));
       if (!path.startsWith(root + sep)) throw new Error('Outside root');
+      const name = relative(root, path).split(sep).join('/');
+      if (!servedFiles[name]) { unboundRequests.add(name); throw new Error('Unbound review dependency'); }
       res.setHeader('content-type', ({ '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.webp': 'image/webp' })[extname(path)] || 'application/octet-stream');
       res.end(await readFile(path));
     } catch { res.writeHead(404); res.end(); }
@@ -78,7 +84,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           const report = await inspectFontRendering(page, { roles: typographyContract.roles, requiredFamilies: fixture.requiredFamilies || [] });
           await writeFile(resolve(evidence, `font-rendering-${width}.json`), JSON.stringify(report, null, 2));
           measurements[`font-rendering-${width}`] = report.issues.filter(issue => issue.status === 'FAIL').length;
-          reviewRequired.push(...report.issues.filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `font-rendering-${width}.json`, rules: ['ORC-G11', 'RUI-09'] })));
+          reviewRequired.push(...reviewFindings(report.issues, `font-rendering-${width}.json`, 'fonts'));
           assert.deepEqual(report.issues.filter(issue => issue.status === 'FAIL'), [], 'Actual fonts or solid-background text contrast require correction');
         });
         await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
@@ -92,7 +98,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           const icons = await inspectIcons(page, { verifiedImages: iconAssets });
           await writeFile(resolve(evidence, `icons-${width}.json`), JSON.stringify(icons, null, 2));
           measurements[`icons-${width}`] = icons.issues.filter(issue => issue.status === 'FAIL').length;
-          reviewRequired.push(...icons.issues.filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `icons-${width}.json`, rules: ['RUI-12'] })));
+          reviewRequired.push(...reviewFindings(icons.issues, `icons-${width}.json`, 'icons'));
           assert.deepEqual(icons.issues.filter(issue => issue.status === 'FAIL'), [], 'Icon geometry or control semantics failed');
         });
         await check(`labels-${width}`, async () => {
@@ -119,7 +125,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           const fonts = await inspectFontRendering(page, { roles: typographyContract.roles, requiredFamilies: fixture.requiredFamilies || [] });
           const icons = await inspectIcons(page, { verifiedImages: iconAssets });
           await writeFile(resolve(evidence, `${name}-presentation.json`), JSON.stringify({ typography, fonts, icons }, null, 2));
-          reviewRequired.push(...[...fonts.issues, ...icons.issues].filter(issue => issue.status === 'UNVERIFIED').map(issue => ({ ...issue, evidence: `${name}-presentation.json`, rules: ['ORC-G11', 'RUI-09', 'RUI-12'] })));
+          reviewRequired.push(...reviewFindings(fonts.issues, `${name}-presentation.json`, 'fonts'), ...reviewFindings(icons.issues, `${name}-presentation.json`, 'icons'));
           assert.deepEqual({ typography, fonts: fonts.issues.filter(issue => issue.status === 'FAIL'), icons: icons.issues.filter(issue => issue.status === 'FAIL') }, { typography: [], fonts: [], icons: [] }, 'Workflow end state fails typography, font contrast or icon checks');
         }
         catch (error) { await page.screenshot({ path: resolve(evidence, `${name}-failed.png`), fullPage: true }).catch(() => {}); throw error; }
@@ -253,6 +259,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
     await browser?.close();
     await new Promise(r => server.close(r));
   }
+  await check('bound-dependencies', async () => assert.deepEqual([...unboundRequests], [], 'Page requests dependencies outside the reviewed source binding'));
   const report = { case: fixture.id, scope: fixture.scope, visual: 'UNVERIFIED', reviewRequired, measurements, contentInventory, checks, passed: checks.filter(c => c.status === 'PASS').length, total: checks.length };
   await writeFile(resolve(evidence, 'report.json'), JSON.stringify(report, null, 2));
   return report;

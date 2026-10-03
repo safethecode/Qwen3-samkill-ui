@@ -1,6 +1,6 @@
 import { createServer } from 'node:http';
 import { readFile, mkdir, writeFile, realpath } from 'node:fs/promises';
-import { resolve, extname, sep } from 'node:path';
+import { resolve, extname, sep, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { countComments } from './comments.mjs';
@@ -8,22 +8,53 @@ import { checkDesign } from './design-checks.mjs';
 import { chooseFilter, readDocumentCards } from './controls.mjs';
 import { inspectTypography } from './typography-check.mjs';
 import { inspectCardText } from './visibility.mjs';
+import { inspectFontRendering } from './font-rendering.mjs';
+import { inspectIcons } from './icon-check.mjs';
+import { verifiedIconAssets } from './icon-assets.mjs';
+import { reviewFindings } from './review-findings.mjs';
+import { sourceBinding } from './source-binding.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
 const output = resolve(process.argv[3] || 'runs/evidence');
+const servedFiles = await sourceBinding(root);
+const unboundRequests = new Set();
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE ? pathToFileURL(process.env.PLAYWRIGHT_MODULE).href : 'playwright');
 await mkdir(output, { recursive: true });
 const results = [];
+const reviewRequired = [];
+const typographyContract = await readFile(resolve(root, 'design/typography.json'), 'utf8').then(JSON.parse).catch(error => { if (error.code === 'ENOENT') return { roles: [] }; throw error; });
+let iconAssets = {};
+let iconAssetError;
+try { iconAssets = await verifiedIconAssets(root); } catch (error) { iconAssetError = error.message; }
 const check = async (name, fn) => {
   try { await fn(); results.push({ name, status: 'PASS' }); }
   catch (error) { results.push({ name, status: 'FAIL', detail: error.message.slice(0, 1400) }); }
 };
 const assert = (ok, message) => { if (!ok) throw new Error(message); };
+const presentation = async (page, name) => {
+  await check(`font-rendering-${name}`, async () => {
+    const fonts = await inspectFontRendering(page, { roles: typographyContract.roles });
+    const evidence = `font-rendering-${name}.json`;
+    await writeFile(resolve(output, evidence), JSON.stringify(fonts, null, 2));
+    reviewRequired.push(...reviewFindings(fonts.issues, evidence, 'fonts'));
+    assert(!fonts.issues.some(issue => issue.status === 'FAIL'), JSON.stringify(fonts.issues.filter(issue => issue.status === 'FAIL')));
+  });
+  await check(`icons-${name}`, async () => {
+    assert(!iconAssetError, iconAssetError);
+    const icons = await inspectIcons(page, { verifiedImages: iconAssets });
+    const evidence = `icons-${name}.json`;
+    await writeFile(resolve(output, evidence), JSON.stringify(icons, null, 2));
+    reviewRequired.push(...reviewFindings(icons.issues, evidence, 'icons'));
+    assert(!icons.issues.some(issue => issue.status === 'FAIL'), JSON.stringify(icons.issues.filter(issue => issue.status === 'FAIL')));
+  });
+};
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript' };
 const server = createServer(async (req, res) => {
   try {
     const file = await realpath(resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname.replace(/\/$/, '/index.html'))));
     if (!file.startsWith(root + sep)) throw new Error('Outside fixture');
+    const name = relative(root, file).split(sep).join('/');
+    if (!servedFiles[name]) { unboundRequests.add(name); throw new Error('Unbound review dependency'); }
     res.setHeader('Content-Type', types[extname(file)] || 'application/octet-stream');
     res.end(await readFile(file));
   } catch { res.writeHead(404); res.end(); }
@@ -42,6 +73,11 @@ try {
   page.on('pageerror', e => errors.push(e.message));
   page.on('dialog', d => d.dismiss());
   await page.goto(`http://127.0.0.1:${server.address().port}`);
+  for (const width of [1440, 390, 320]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await presentation(page, `initial-${width}`);
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await page.screenshot({ path: resolve(output, 'desktop.png'), fullPage: true });
   await page.setViewportSize({ width: 390, height: 900 });
   await page.screenshot({ path: resolve(output, 'mobile.png'), fullPage: true });
@@ -146,13 +182,14 @@ try {
     assert(await button('편집').count() === count + 1, `After canceling edit and starting new, no document was added. Introduction is optional. Browser form state: ${JSON.stringify(formState)}. Check HTML required attributes and submit/edit logic.`);
   });
   await page.reload();
-  for (const width of [1440, 390]) {
+  for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     await check(`overflow-${width}`, async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Horizontal overflow'));
     await check(`typography-${width}`, async () => {
       const bad = await inspectTypography(page);
       await button('새 이력서').click();
       bad.push(...await inspectTypography(page));
+      await presentation(page, `editor-${width}`);
       await page.reload();
       assert(!bad.length, `Every visible text element needs font-size >=14px AND font-weight >=500. Actual computed styles: ${JSON.stringify(bad.slice(0, 8))}`);
     });
@@ -194,7 +231,8 @@ try {
   await browser?.close();
   await new Promise(r => server.close(r));
 }
-const report = { fixture: 'resume', checksVersion: 9, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
+await check('bound-dependencies', async () => assert(!unboundRequests.size, `Unbound review dependencies: ${[...unboundRequests].join(', ')}`));
+const report = { fixture: 'resume', checksVersion: 10, reviewRequired, designChecks: process.env.QWEN_DESIGN_CHECKS === '1', results, passed: results.filter(r => r.status === 'PASS').length, total: results.length, visualReview: 'UNVERIFIED', limitations: ['This fixture does not certify general UI quality, comprehensive security, all validation states or reference fidelity.'] };
 await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
 process.exitCode = report.passed === report.total ? 0 : 1;

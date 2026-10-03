@@ -1,5 +1,5 @@
 import { readFile, readdir, lstat } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { resolve, extname } from 'node:path';
 import { createHash } from 'node:crypto';
 
 export async function sourceBinding(target) {
@@ -14,5 +14,15 @@ export async function sourceBinding(target) {
     } else if (stat.isFile()) files[name] = createHash('sha256').update(await readFile(path)).digest('hex');
   };
   for (const name of ['index.html', 'styles.css', 'app.js', 'DESIGN.md', 'REFERENCE.md', 'assets', 'design/typography.json']) await visit(name);
+  const discover = async directory => {
+    for (const entry of await readdir(resolve(target, directory), { withFileTypes: true })) {
+      const name = directory ? `${directory}/${entry.name}` : entry.name;
+      if (/^(?:\.git|node_modules|design|assets|quality-[^/]*|repair-[^/]*)(?:\/|$)/.test(name)) continue;
+      if (entry.isSymbolicLink()) throw new Error(`Review source must not be a symlink: ${name}`);
+      if (entry.isDirectory()) await discover(name);
+      else if (/^\.(?:html?|css|[cm]?js|json|woff2?|ttf|otf|svg|png|jpe?g|webp|gif|avif|ico|mp4|webm|mp3|wav)$/.test(extname(name).toLowerCase()) && !['QUALITY-RESULT.json', 'QUALITY.json'].includes(name)) await visit(name);
+    }
+  };
+  await discover('');
   return files;
 }
