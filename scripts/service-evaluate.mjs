@@ -129,6 +129,8 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         assert.equal(await page.locator('b').filter({ hasText: 'literal ticket' }).count(), 0);
       });
       if (fixture.flow === 'learning') await exercise('lesson-progress-and-independent-notes', async page => {
+        await page.getByRole('button', { name: /의미 있는 HTML/ }).click();
+        assert.match(await page.locator('#lesson-title').innerText(), /의미 있는 HTML/);
         await page.locator('#note').fill('첫 수업 메모');
         await button(page, '메모 저장').click();
         await page.locator('#complete').click();
