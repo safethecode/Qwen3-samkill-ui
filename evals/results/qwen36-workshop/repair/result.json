@@ -1,0 +1,308 @@
+{
+  "status": "INCOMPLETE",
+  "visual": "UNVERIFIED",
+  "sourceHashes": {
+    "index.html": "f16fb334c674cfa63cd50abc20f9690aede411a6aade7ac837b705fb23631f8e",
+    "styles.css": "4d179618b38341258f7f8f97be4220481cb13b8a3e97b09bcf9bba2399b5f9f4",
+    "app.js": "3779520f2dae87173e596f8504fd0560ede9d52c9cb98b1f160c48e672024f3a"
+  },
+  "report": {
+    "case": "workshop",
+    "scope": "held-out original service",
+    "visual": "UNVERIFIED",
+    "reviewRequired": [
+      {
+        "status": "UNVERIFIED",
+        "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+        "evidence": "font-rendering-1440.json",
+        "category": "fonts",
+        "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+        "rules": [
+          "ORC-G06"
+        ]
+      },
+      {
+        "status": "UNVERIFIED",
+        "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+        "evidence": "font-rendering-390.json",
+        "category": "fonts",
+        "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+        "rules": [
+          "ORC-G06"
+        ]
+      },
+      {
+        "status": "UNVERIFIED",
+        "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+        "evidence": "font-rendering-320.json",
+        "category": "fonts",
+        "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+        "rules": [
+          "ORC-G06"
+        ]
+      },
+      {
+        "status": "UNVERIFIED",
+        "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+        "evidence": "search-empty-recovery-presentation.json",
+        "category": "fonts",
+        "id": "4612b45f17f859ebdf8e16cf2ecff2afbc5f11afe04d09f908f8d58b0cbeee30",
+        "rules": [
+          "ORC-G06"
+        ]
+      }
+    ],
+    "measurements": {
+      "readable-1440": 19,
+      "font-rendering-1440": 3,
+      "assets-1440": 0,
+      "icons-1440": 0,
+      "labels-1440": 1,
+      "readable-390": 19,
+      "font-rendering-390": 3,
+      "assets-390": 0,
+      "icons-390": 0,
+      "labels-390": 1,
+      "readable-320": 19,
+      "font-rendering-320": 3,
+      "assets-320": 0,
+      "icons-320": 0,
+      "labels-320": 1
+    },
+    "contentInventory": {
+      "320": {
+        "틈 공방": 1,
+        "이번 주, 손으로 만드는 시간": 1,
+        "직접 만들고 경험하는 소규모 클래스": 1,
+        "도자기 첫 잔": 1,
+        "도자기": 1,
+        "55000원": 1,
+        "90분 | 최대 6명": 1,
+        "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+        "상세": 3,
+        "가죽 카드 지갑": 1,
+        "가죽": 1,
+        "60000원": 1,
+        "120분 | 최대 4명": 1,
+        "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+        "나무 트레이": 1,
+        "우드": 1,
+        "45000원": 1,
+        "60분 | 최대 8명": 1,
+        "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+        "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+      },
+      "390": {
+        "틈 공방": 1,
+        "이번 주, 손으로 만드는 시간": 1,
+        "직접 만들고 경험하는 소규모 클래스": 1,
+        "도자기 첫 잔": 1,
+        "도자기": 1,
+        "55000원": 1,
+        "90분 | 최대 6명": 1,
+        "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+        "상세": 3,
+        "가죽 카드 지갑": 1,
+        "가죽": 1,
+        "60000원": 1,
+        "120분 | 최대 4명": 1,
+        "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+        "나무 트레이": 1,
+        "우드": 1,
+        "45000원": 1,
+        "60분 | 최대 8명": 1,
+        "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+        "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+      },
+      "1440": {
+        "틈 공방": 1,
+        "이번 주, 손으로 만드는 시간": 1,
+        "직접 만들고 경험하는 소규모 클래스": 1,
+        "도자기 첫 잔": 1,
+        "도자기": 1,
+        "55000원": 1,
+        "90분 | 최대 6명": 1,
+        "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+        "상세": 3,
+        "가죽 카드 지갑": 1,
+        "가죽": 1,
+        "60000원": 1,
+        "120분 | 최대 4명": 1,
+        "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+        "나무 트레이": 1,
+        "우드": 1,
+        "45000원": 1,
+        "60분 | 최대 8명": 1,
+        "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+        "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+      }
+    },
+    "checks": [
+      {
+        "name": "content-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "overflow-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "readable-1440",
+        "status": "FAIL",
+        "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '18px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '직접 만들고 경험하는 소규모 클래스'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '도자기'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '55000원'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '90분 | 최대 6명'\n+   },\n+   {\n+     class: 'class-desc',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을'\n+   },\n+   {\n+     class: 'btn-detail',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '600',\n+     id:"
+      },
+      {
+        "name": "font-rendering-1440",
+        "status": "FAIL",
+        "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+      },
+      {
+        "name": "runtime-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "assets-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "icons-1440",
+        "status": "PASS"
+      },
+      {
+        "name": "labels-1440",
+        "status": "FAIL",
+        "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+      },
+      {
+        "name": "content-390",
+        "status": "PASS"
+      },
+      {
+        "name": "overflow-390",
+        "status": "PASS"
+      },
+      {
+        "name": "readable-390",
+        "status": "FAIL",
+        "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '18px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '직접 만들고 경험하는 소규모 클래스'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '도자기'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '55000원'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '90분 | 최대 6명'\n+   },\n+   {\n+     class: 'class-desc',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을'\n+   },\n+   {\n+     class: 'btn-detail',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '600',\n+     id:"
+      },
+      {
+        "name": "font-rendering-390",
+        "status": "FAIL",
+        "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+      },
+      {
+        "name": "runtime-390",
+        "status": "PASS"
+      },
+      {
+        "name": "assets-390",
+        "status": "PASS"
+      },
+      {
+        "name": "icons-390",
+        "status": "PASS"
+      },
+      {
+        "name": "labels-390",
+        "status": "FAIL",
+        "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+      },
+      {
+        "name": "content-320",
+        "status": "PASS"
+      },
+      {
+        "name": "overflow-320",
+        "status": "PASS"
+      },
+      {
+        "name": "readable-320",
+        "status": "FAIL",
+        "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '18px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '직접 만들고 경험하는 소규모 클래스'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '11px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '도자기'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '55000원'\n+   },\n+   {\n+     class: '',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '90분 | 최대 6명'\n+   },\n+   {\n+     class: 'class-desc',\n+     element: 'P',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을'\n+   },\n+   {\n+     class: 'btn-detail',\n+     element: 'BUTTON',\n+     fontSize: '13.3333px',\n+     fontWeight: '600',\n+     id: '',\n+     pseudo: null,\n+     text: '상세'\n+   },\n+   {\n+     class: 'category-badge',\n+     element: 'SPAN',\n+     fontSize: '11px',\n+     fontWeight: '600',\n+     id: '',\n+    "
+      },
+      {
+        "name": "font-rendering-320",
+        "status": "FAIL",
+        "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Arial',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.21019043166529,\n+     status: 'FAIL',\n+     tag: 'BUTTON',\n+     text: '상세',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+      },
+      {
+        "name": "runtime-320",
+        "status": "PASS"
+      },
+      {
+        "name": "assets-320",
+        "status": "PASS"
+      },
+      {
+        "name": "icons-320",
+        "status": "PASS"
+      },
+      {
+        "name": "labels-320",
+        "status": "FAIL",
+        "detail": "Visible fields require visible labels; aria-label and placeholders alone are insufficient\n+ actual - expected\n\n+ [\n+   'search'\n+ ]\n- []\n"
+      },
+      {
+        "name": "search-empty-recovery",
+        "status": "FAIL",
+        "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: 'Arial',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 4.21019043166529,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '상세',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: 'Arial',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 4.21019043166529,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '상세',\n+       threshold: 4.5,\n+       uncertain: false\n+     },\n+     {\n+       declaredFamily: 'Arial',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 4.21019043166529,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '상세',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '13.3333px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'P',\n+       fontSize: '18px',\n+   "
+      },
+      {
+        "name": "booking-validation",
+        "status": "FAIL",
+        "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '예약하기', exact: true }).first()\u001b[22m\n"
+      },
+      {
+        "name": "booking-persist-cancel",
+        "status": "FAIL",
+        "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '예약하기', exact: true }).first()\u001b[22m\n"
+      },
+      {
+        "name": "bound-dependencies",
+        "status": "PASS"
+      }
+    ],
+    "passed": 16,
+    "total": 28
+  },
+  "events": [
+    {
+      "attempt": 1,
+      "failure": "font-rendering-1440",
+      "accepted": true,
+      "pending": false,
+      "passed": 16,
+      "total": 28,
+      "regressions": []
+    },
+    {
+      "attempt": 2,
+      "failure": "font-rendering-1440",
+      "accepted": false,
+      "pending": true,
+      "passed": 16,
+      "total": 28,
+      "regressions": []
+    },
+    {
+      "attempt": 3,
+      "failure": "font-rendering-1440",
+      "accepted": false,
+      "pending": true,
+      "passed": 16,
+      "total": 28,
+      "regressions": []
+    },
+    {
+      "attempt": 4,
+      "failure": "font-rendering-1440",
+      "accepted": false,
+      "pending": true,
+      "passed": 16,
+      "total": 28,
+      "regressions": []
+    }
+  ],
+  "rolledBackPending": true
+}

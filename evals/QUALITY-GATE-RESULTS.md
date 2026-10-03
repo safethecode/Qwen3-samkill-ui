@@ -27,6 +27,12 @@ These are historical measurements from the harness hashes in the linked record, 
 
 ## Earlier development trials
 
+### Additional local model trial
+
+Qwen3.6 35B A3B Coding completed the six-unit workshop generation in 888 seconds, including one truncated CSS attempt and retry. It scored **15/27** under its recorded startup harness. The later dependency check adds one passing check, so the repair baseline is **16/28**, not an improvement. Four bounded repair attempts retained one measured partial correction: definite font/contrast findings fell from six to three per viewport, while total passing checks stayed **16/28**. The other pending edits were rolled back. [Generation record](results/qwen36-workshop/generation-study.json), [repair result](results/qwen36-workshop/repair/result.json), [rendered candidate](results/qwen36-workshop/repair/390.png).
+
+Direct inspection still finds a missing pottery illustration, unlabelled native search, undersized text and missing booking entry. Official icons were available to generation, but this candidate did not use them; an icon check with no icons is not proof of reference completeness. The model is experimental and has not replaced the normal OpenCode model. The repair trial exposed a repeated-unit bug: staged edits with no measured progress reset the excerpt index. A regression test reproduced it, and the runner now advances to another unit. This fix has passed targeted tests; a subsequent live convergence result is still pending.
+
 Measured on 2026-10-03. This adds an unattended inspection/repair mechanism; it does not establish that the current local model always reproduces samkill-ui quality.
 
 ## Automated verification
