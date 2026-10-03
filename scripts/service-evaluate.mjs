@@ -40,7 +40,10 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       if (options.captureStates) await options.captureStates(page, width, evidence, url);
       if (!options.reference) {
         await check(`content-${width}`, async () => {
-          for (const text of fixture.anchors) assert.ok(await page.getByText(text, { exact: false }).first().isVisible(), `Missing visible anchor: ${text}`);
+          for (const text of fixture.anchors) {
+            const candidates = await page.getByText(text, { exact: false }).all();
+            assert.ok((await Promise.all(candidates.map(candidate => candidate.isVisible()))).some(Boolean), `Missing visible anchor: ${text}`);
+          }
         });
         await check(`overflow-${width}`, async () => assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Horizontal page overflow'));
         await check(`readable-${width}`, async () => {

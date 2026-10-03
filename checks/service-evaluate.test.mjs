@@ -21,6 +21,13 @@ test('all seven available rounds and three distinct service flows remain in the 
   assert.ok(serviceCases.every(c => c.contract && c.reference && c.anchors.length >= 3));
 });
 
+test('a hidden duplicate heading does not hide a visible required action from the evaluator', async () => {
+  const target = await mkdtemp(resolve('runs/service-visible-anchor-'));
+  await writeFile(resolve(target, 'index.html'), '<html><body><h2 hidden>새 요청</h2><button>새 요청</button></body></html>');
+  const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'duplicate-anchor', scope: 'test fixture', anchors: ['새 요청'], flow: 'static' });
+  assert.ok(report.checks.filter(check => check.name.startsWith('content-')).every(check => check.status === 'PASS'));
+});
+
 test('reference capture rejects a missing HTTP entry instead of saving blank evidence', async () => {
   const target = await mkdtemp(resolve('runs/service-missing-reference-'));
   await assert.rejects(evaluateService(target, resolve(target, 'evidence'), { id: 'missing' }, { reference: true, entry: 'missing.html' }), /HTTP 404|HTTP_RESPONSE_CODE_FAILURE/);
