@@ -74,6 +74,7 @@ test('bounded repair overrides full-file escalation and rejects invalid source a
   assert.equal(request.options.num_predict, 2048);
   assert.equal(request.think, false);
   assert.equal(request.format.properties.patches.maxItems, 1);
-  assert.match(request.messages[1].content, /partial source window/);
+  assert.match(request.messages[1].content, /partial view of a complete file/);
+  assert.match(request.messages[1].content, /Unseen code still exists/);
   for (const [name, content] of Object.entries(files)) assert.equal(await readFile(resolve(target, name), 'utf8'), content);
 });
