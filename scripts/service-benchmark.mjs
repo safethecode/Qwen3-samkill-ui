@@ -8,6 +8,9 @@ import { inferenceOptions } from './inference-options.mjs';
 import { removeComments } from './comments.mjs';
 import { validateStudyResume, caseResumeMode, evaluateBoundSource } from './service-resume.mjs';
 import { samplingOptions } from './sampling.mjs';
+import { writeIconAssets, verifiedIconAssets } from './icon-assets.mjs';
+import { harnessBinding } from './harness-binding.mjs';
+import { prepareReferenceAssets } from './reference-assets.mjs';
 
 const output = resolve(process.argv[2] || 'runs/services');
 const selected = process.argv.slice(3);
@@ -16,8 +19,8 @@ process.env.QWEN_GENERATE_MODEL ||= 'qwen3-coder:30b';
 process.env.QWEN_GENERATE_THINK ||= 'false';
 await mkdir(output, { recursive: true });
 const digest = data => createHash('sha256').update(data).digest('hex');
-const harnessHashes = Object.fromEntries(await Promise.all(['scripts/generate-service.mjs', 'scripts/service-stages.mjs', 'scripts/service-evaluate.mjs', 'evals/service-cases.mjs', 'skills/qwen-samkill-ui/SKILL.md', 'skills/qwen-samkill-ui/references/service-contracts.md'].map(async file => [file, digest(await readFile(file))])));
-const study = { model: process.env.QWEN_GENERATE_MODEL, inferenceOptions: inferenceOptions(), samplingOptions: samplingOptions(), harnessHashes, started: new Date().toISOString(), missingUpstreamRounds: [5, 6, 7], results: [] };
+const harnessHashes = await harnessBinding();
+const study = { model: process.env.QWEN_GENERATE_MODEL, generationThinking: process.env.QWEN_GENERATE_THINK === 'true', inferenceOptions: inferenceOptions(), samplingOptions: samplingOptions(), harnessHashes, started: new Date().toISOString(), missingUpstreamRounds: [5, 6, 7], results: [] };
 const resume = process.env.QWEN_RESUME === '1';
 if (await access(resolve(output, 'study.json')).then(() => true, () => false)) {
   if (!resume) throw new Error('Study already exists; choose a fresh output or explicitly resume');
@@ -46,6 +49,8 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     if (await access(resolve(target, 'index.html')).then(() => true, () => false)) throw new Error('Existing source: choose a fresh output directory');
     await writeFile(resolve(target, 'DESIGN.md'), fixture.contract);
     await writeFile(resolve(target, 'REFERENCE.md'), fixture.reference);
+    if (!Object.keys(await verifiedIconAssets(target)).length) await writeIconAssets(target, ['Search', 'ChevronLeft', 'ChevronRight', 'Plus', 'X', 'Check', 'Calendar', 'Clock', 'Heart', 'GripVertical']);
+    if (process.env.QWEN_REFERENCE_ROOT && !await access(resolve(target, 'assets/reference-manifest.json')).then(() => true, () => false)) await prepareReferenceAssets(target, fixture, process.env.QWEN_REFERENCE_ROOT);
     await generateService(target, evidence, { interface: fixture.interface, resume });
     const names = ['index.html', 'styles.css', 'app.js'];
     const raw = await Promise.all(names.map(name => readFile(resolve(target, name), 'utf8')));

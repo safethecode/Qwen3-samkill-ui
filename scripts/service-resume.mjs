@@ -1,5 +1,5 @@
 export function validateStudyResume(previous, current) {
-  for (const key of ['model', 'inferenceOptions', 'samplingOptions', 'harnessHashes']) {
+  for (const key of ['model', 'generationThinking', 'inferenceOptions', 'samplingOptions', 'harnessHashes']) {
     if (JSON.stringify(previous[key]) !== JSON.stringify(current[key])) throw new Error(`Resume requires unchanged ${key}; keep the original study or start a new one`);
   }
 }
