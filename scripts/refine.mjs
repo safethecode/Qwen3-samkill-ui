@@ -9,5 +9,5 @@ if (review.name !== 'visual-review' || review.status !== 'FAIL' || !review.detai
 const evidence = resolve(process.argv[4]);
 await mkdir(dirname(evidence), { recursive: true });
 await mkdir(evidence);
-await repair(target, evidence, review);
+await repair(target, evidence, review, '', { bounded: true });
 console.log('Visual repair applied. Run the fixture evaluator and inspect fresh screenshots before approval.');

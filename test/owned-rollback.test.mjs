@@ -1,6 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { rollbackOwned } from '../scripts/owned-rollback.mjs';
+import { rollbackOwned, assertOwned } from '../scripts/owned-rollback.mjs';
+
+test('passing evaluation cannot accept a concurrently changed source snapshot', async () => {
+  const accepted = ['generated source'];
+  let current = [...accepted];
+  await assertOwned(async () => current, accepted);
+  current = ['edited while browser checks ran'];
+  await assert.rejects(assertOwned(async () => current, accepted), { code: 'STALE_SOURCE' });
+});
 
 test('failed requests that never wrote source preserve edits made during inference', async () => {
   let source = ['user edit'];

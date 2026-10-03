@@ -111,7 +111,7 @@ node scripts/refine.mjs runs/resume review.json runs/visual-repair-1
 node scripts/evaluate.mjs runs/resume runs/visual-evidence-1
 ```
 
-The evidence directory for refinement must be new. `QWEN_REPAIR_THINK=false` disables thinking for a small, concrete visual edit; thinking stays enabled by default. Large multi-component requests may still exceed the output budget and will be rejected. A refinement applies patches but never certifies visual quality: inspect its new desktop/mobile screenshots. The loop removes parsed code comments deterministically when that check fails, preserving strings and JavaScript line breaks, then reruns the checks.
+The evidence directory for refinement must be new. Refinement uses one bounded source unit and disables thinking by default; `QWEN_REPAIR_THINK` can explicitly override it. Large multi-component requests must be divided into separate observed defects. A refinement applies patches but never certifies visual quality: inspect its new desktop/mobile screenshots. The loop removes parsed code comments deterministically when that check fails, preserving strings and JavaScript line breaks, then reruns the checks.
 
 Checks include file existence, JavaScript syntax, example documents, visible labels, create/reload, independent duplication, archive/restore, create after edit, typography, runtime errors, required-title validation, parsed code comments and overflow at 1440/390 pixels. The evaluator intentionally uses the Korean control names in the supplied contract. Adapt it for another application; it is not a general-purpose UI test suite.
 

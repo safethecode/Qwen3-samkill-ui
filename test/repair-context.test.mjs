@@ -72,6 +72,7 @@ test('bounded repair overrides full-file escalation and rejects invalid source a
   try { await assert.rejects(repair(target, evidence, { name: 'visual-review', files: ['app.js'], detail: 'Fix state rendering' }, '', { mode: 'files', bounded: true }), /Invalid complete file/); }
   finally { globalThis.fetch = originalFetch; }
   assert.equal(request.options.num_predict, 2048);
+  assert.equal(request.think, false);
   assert.equal(request.format.properties.patches.maxItems, 1);
   assert.match(request.messages[1].content, /partial source window/);
   for (const [name, content] of Object.entries(files)) assert.equal(await readFile(resolve(target, name), 'utf8'), content);
