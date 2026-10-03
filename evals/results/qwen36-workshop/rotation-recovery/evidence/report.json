@@ -1,0 +1,253 @@
+{
+  "case": "workshop",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "category": "fonts",
+      "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "search-empty-recovery-presentation.json",
+      "category": "fonts",
+      "id": "4612b45f17f859ebdf8e16cf2ecff2afbc5f11afe04d09f908f8d58b0cbeee30",
+      "rules": [
+        "ORC-G06"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 0,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "틈 공방": 1,
+      "수업 검색": 1,
+      "이번 주, 손으로 만드는 시간": 1,
+      "직접 만들고 경험하는 소규모 클래스": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "55000원": 1,
+      "90분 | 최대 6명": 1,
+      "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "60000원": 1,
+      "120분 | 최대 4명": 1,
+      "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "45000원": 1,
+      "60분 | 최대 8명": 1,
+      "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+      "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+    },
+    "390": {
+      "틈 공방": 1,
+      "수업 검색": 1,
+      "이번 주, 손으로 만드는 시간": 1,
+      "직접 만들고 경험하는 소규모 클래스": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "55000원": 1,
+      "90분 | 최대 6명": 1,
+      "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "60000원": 1,
+      "120분 | 최대 4명": 1,
+      "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "45000원": 1,
+      "60분 | 최대 8명": 1,
+      "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+      "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+    },
+    "1440": {
+      "틈 공방": 1,
+      "수업 검색": 1,
+      "이번 주, 손으로 만드는 시간": 1,
+      "직접 만들고 경험하는 소규모 클래스": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "55000원": 1,
+      "90분 | 최대 6명": 1,
+      "손으로 빚는 첫 번째 그릇. 기본 테크닉과 굽기 과정을 경험합니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "60000원": 1,
+      "120분 | 최대 4명": 1,
+      "내 손길이 간직한 가죽 지갑. 컷팅부터 마감까지 전 과정을 배웁니다.": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "45000원": 1,
+      "60분 | 최대 8명": 1,
+      "천연 재질의 따뜻한 느낌. 샌딩과 코팅으로 완성하는 실용적인 트레이.": 1,
+      "© 틈 공방. 모든 예약은 브라우저에 저장됩니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "booking-validation",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '예약하기', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "booking-persist-cancel",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '예약하기', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 26,
+  "total": 28
+}

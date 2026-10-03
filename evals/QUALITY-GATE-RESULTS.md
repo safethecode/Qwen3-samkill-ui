@@ -4,7 +4,7 @@
 
 **INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
 
-The current harness passes 92 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
+The current harness passes 100 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
 
 An independent inspection of the actual generated workshop sample found **19 failed, 30 unknown, 9 scoped passes and 17 inapplicable catalog rules**. Its eight guide assessments are **5 failed, 2 unknown and 1 inapplicable**. The saved browser evaluation is **18/27** under the recorded pre-final harness. These counts must not be compared directly with later expanded check sets. [Full scoped audit](results/rule-coverage/workshop/audit.json), [browser report](results/rule-coverage/workshop/evidence/report.json), [generated source](results/rule-coverage/workshop/source).
 
@@ -26,6 +26,14 @@ The broader baseline includes all seven available upstream rounds (01, 02, 03, 0
 These are historical measurements from the harness hashes in the linked record, not results from the final additional dependency check. Broken assets, missing content, inaccessible workflows and visual hierarchy failures remain visible in the evidence. New generation supplies official icon assets and optional upstream local media, rejects invented asset paths, and splits navigation from forms/startup. This improves input and failure detection; it does not establish that the model now follows every rule.
 
 ## Earlier development trials
+
+### Follow-up repair measurements — 2026-10-04
+
+Four further local repair batches improved the existing workshop's recorded browser results from **16/28 to 26/28**. A fresh final evaluation also returns **26/28**. Font size/weight/contrast and label issues were reduced; both booking checks still fail. This is one repaired candidate, not repeated fresh-generation parity. [Source-bound study](results/qwen36-workshop/rotation-recovery/study.json), [fresh browser report](results/qwen36-workshop/rotation-recovery/evidence/report.json), [direct screenshot assessment](results/qwen36-workshop/rotation-recovery/visual-review.md).
+
+The runner now retries missing form labels during HTML generation, fixes base presentation before downstream workflows, rejects new measurement/content regressions even when the pass count rises, and supplies whole JavaScript statements where they fit the repair budget. The last change prevents ordinary functions from being cut in the middle of identifiers; oversized or invalid statements still require explicitly marked fragments. Selecting values are not accepted as field labels.
+
+**Visual quality is still below target.** Direct inspection finds a missing pottery illustration, an incomplete detail/booking flow and a newly crowded mobile header. The final whole-page gate remains incomplete. Earlier failed repair evidence is preserved; no candidate was reclassified as design-complete.
 
 ### Additional local model trial
 

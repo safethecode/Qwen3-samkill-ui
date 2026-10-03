@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>틈 공방</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="logo">틈 공방</div>
+<label for="search" class="sr-only">수업 검색</label>
+<input type="search" id="search" placeholder="수업 검색">
+</header>
+
+<main>
+<section class="hero">
+<h1>이번 주, 손으로 만드는 시간</h1>
+<p>직접 만들고 경험하는 소규모 클래스</p>
+</section>
+
+<section class="catalog">
+<div class="class-list" id="class-list">
+
+</div>
+</section>
+
+<section id="booking-panel" class="booking-panel hidden">
+<h2>예약하기</h2>
+<form id="booking-form">
+<label for="guest">예약자 이름</label>
+<input type="text" id="guest" required>
+
+<label for="date">방문일</label>
+<input type="date" id="date" required>
+
+<label for="slot">예약 시간</label>
+<select id="slot" required>
+<option value="">시간 선택</option>
+<option value="10:00">10:00</option>
+<option value="14:00">14:00</option>
+<option value="18:00">18:00</option>
+</select>
+
+<button type="submit">예약 확정</button>
+</form>
+</section>
+
+<section id="confirmation" class="confirmation-panel hidden">
+<h2>예약 확인</h2>
+<div id="confirmation-details"></div>
+</section>
+</main>
+
+<footer class="site-footer">
+<p>&copy; 틈 공방. 모든 예약은 브라우저에 저장됩니다.</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
