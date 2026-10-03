@@ -6,11 +6,27 @@ export function normalizeTypography(css) {
   root.walkDecls(declaration => {
     if (declaration.prop.startsWith('--')) tokens.set(declaration.prop, [...(tokens.get(declaration.prop) || []), declaration]);
   });
+  const references = value => [...value.matchAll(/var\(\s*(--[\w-]+)/g)].map(match => match[1]);
+  const protectedTokens = new Set();
+  root.walkDecls(declaration => {
+    if (!declaration.prop.startsWith('--') && !['font-weight', 'font-size'].includes(declaration.prop)) for (const token of references(declaration.value)) protectedTokens.add(token);
+  });
+  for (const token of protectedTokens) for (const declaration of tokens.get(token) || []) for (const dependency of references(declaration.value)) protectedTokens.add(dependency);
   const clamp = (declaration, kind, seen = new Set()) => {
     if (seen.has(declaration)) return;
     seen.add(declaration);
     const token = declaration.value.match(/^var\((--[\w-]+)\)$/)?.[1];
-    if (token) { for (const target of tokens.get(token) || []) clamp(target, kind, seen); return; }
+    if (token) {
+      const targets = tokens.get(token) || [];
+      if (protectedTokens.has(token)) {
+        const values = targets.map(target => kind === 'font-size' && /^\d+(\.\d+)?px$/.test(target.value) ? parseFloat(target.value) : kind === 'font-weight' && (target.value === 'normal' || /^\d+$/.test(target.value)) ? target.value === 'normal' ? 400 : Number(target.value) : NaN);
+        const minimum = kind === 'font-size' ? 14 : 500;
+        if (values.length && values.every(value => Number.isFinite(value) && value < minimum)) declaration.value = kind === 'font-size' ? '14px' : '500';
+        return;
+      }
+      for (const target of targets) clamp(target, kind, seen);
+      return;
+    }
     if (kind === 'font-weight' && (declaration.value === 'normal' || /^\d+$/.test(declaration.value) && Number(declaration.value) < 500)) declaration.value = '500';
     if (kind === 'font-size' && /^\d+(\.\d+)?px$/.test(declaration.value) && parseFloat(declaration.value) < 14) declaration.value = '14px';
   };

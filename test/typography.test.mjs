@@ -17,3 +17,10 @@ test('control defaults precede explicit control typography', () => {
   assert.match(result, /font:\s*inherit/);
   assert.ok(result.search(/font:\s*inherit/) < result.indexOf('font-size:24px'));
 });
+
+test('font correction does not enlarge spacing through a shared token', () => {
+  const result=normalizeTypography(':root{--unit:12px}.badge{font-size:var(--unit);padding:var(--unit)}');
+  assert.match(result,/--unit:\s*12px/);
+  assert.match(result,/font-size:\s*14px/);
+  assert.match(result,/padding:\s*var\(--unit\)/);
+});
