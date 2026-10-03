@@ -41,7 +41,7 @@ try {
     await mkdir(step);
     let owned = null;
     try {
-      const files = /^(overflow|readable)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html'];
+      const files = /^(overflow|readable)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
       const applied = await repair(target, step, { name: 'visual-review', files, detail: `${failure.name}: ${failure.detail}` }, '', { bounded: true, unitAttempt: unitAttempt++ });
       owned = names.map(name => applied.files[name]);
       const raw = await snapshot();

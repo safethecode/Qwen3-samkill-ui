@@ -88,7 +88,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       });
       if (fixture.flow === 'booking') {
         const open = async page => { await button(page, '상세').first().click(); await button(page, '예약하기').first().click(); };
-        await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false); });
+        await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false, `Empty booking must not display #confirmation (class=${await page.locator('#confirmation').getAttribute('class')}); verify form validation and hidden state styling`); });
         await exercise('booking-persist-cancel', async page => {
           await open(page);
           await page.locator('#guest').fill('테스트 사용자');
@@ -100,7 +100,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.match(await page.locator('#confirmation').innerText(), /테스트 사용자/);
           await button(page, '예약 취소').click();
           await page.reload();
-          assert.equal(await page.locator('#confirmation').isVisible(), false);
+          assert.equal(await page.locator('#confirmation').isVisible(), false, `Cancelled booking must not display #confirmation after reload (class=${await page.locator('#confirmation').getAttribute('class')}); verify saved state and hidden state styling`);
         });
       }
       if (fixture.flow === 'dispatch') await exercise('ticket-create-complete-persist', async page => {
