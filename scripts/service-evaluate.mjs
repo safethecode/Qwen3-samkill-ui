@@ -1,0 +1,170 @@
+import { createServer } from 'node:http';
+import { readFile, writeFile, mkdir, realpath } from 'node:fs/promises';
+import { resolve, sep, extname } from 'node:path';
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+
+export async function evaluateService(target, evidence, fixture, options = {}) {
+  await mkdir(evidence, { recursive: true });
+  const root = await realpath(target);
+  const server = createServer(async (req, res) => {
+    try {
+      const path = await realpath(resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname.replace(/\/$/, '/index.html'))));
+      if (!path.startsWith(root + sep)) throw new Error('Outside root');
+      res.setHeader('content-type', ({ '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.webp': 'image/webp' })[extname(path)] || 'application/octet-stream');
+      res.end(await readFile(path));
+    } catch { res.writeHead(404); res.end(); }
+  });
+  await new Promise(r => server.listen(0, '127.0.0.1', r));
+  let browser;
+  const checks = [];
+  const check = async (name, fn) => {
+    try { await fn(); checks.push({ name, status: 'PASS' }); }
+    catch (error) { checks.push({ name, status: 'FAIL', detail: error.message.slice(0, 1600) }); }
+  };
+  try {
+    browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+    const url = `http://127.0.0.1:${server.address().port}/${options.entry || 'index.html'}`;
+    for (const width of [1440, 390, 320]) {
+      const page = await browser.newPage({ viewport: { width, height: 900 }, locale: 'ko-KR' });
+      page.setDefaultTimeout(3000);
+      const errors = [];
+      page.on('pageerror', error => errors.push(error.message));
+      page.on('dialog', dialog => dialog.dismiss());
+      await page.goto(url);
+      await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: resolve(evidence, `${width}.png`) });
+      await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
+      if (!options.reference) {
+        await check(`content-${width}`, async () => {
+          for (const text of fixture.anchors) assert.ok(await page.getByText(text, { exact: false }).first().isVisible(), `Missing visible anchor: ${text}`);
+        });
+        await check(`overflow-${width}`, async () => assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Horizontal page overflow'));
+        await check(`readable-${width}`, async () => {
+          const small = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(el => [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()) && el.getBoundingClientRect().width && el.getBoundingClientRect().height && getComputedStyle(el).visibility !== 'hidden' && parseFloat(getComputedStyle(el).fontSize) < 14).map(el => el.textContent.slice(0, 70)));
+          assert.deepEqual(small, [], 'Text smaller than 14px');
+        });
+        await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
+      }
+      await page.close();
+    }
+    if (!options.reference && fixture.flow !== 'static') {
+      const exercise = async (name, fn) => check(name, async () => {
+        const page = await browser.newPage({ viewport: { width: 390, height: 900 }, locale: 'ko-KR' });
+        page.setDefaultTimeout(3000);
+        const errors = [];
+        page.on('pageerror', e => errors.push(e.message));
+        page.on('dialog', d => d.dismiss());
+        try { await page.goto(url); await fn(page); assert.deepEqual(errors, []); await page.screenshot({ path: resolve(evidence, `${name}.png`), fullPage: true }); }
+        finally { await page.close(); }
+      });
+      const button = (page, name) => page.getByRole('button', { name, exact: true });
+      if (['booking', 'dispatch', 'document', 'learning'].includes(fixture.flow)) await exercise('search-empty-recovery', async page => {
+        await page.locator('#search').fill('찾을수없는항목xyz');
+        assert.match(await page.locator('body').innerText(), /없|찾지|결과/);
+        await page.locator('#search').fill('');
+        assert.ok(await page.getByText(fixture.anchors[1], { exact: false }).first().isVisible());
+      });
+      if (fixture.flow === 'booking') {
+        const open = async page => { await button(page, '상세').first().click(); await button(page, '예약하기').first().click(); };
+        await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false); });
+        await exercise('booking-persist-cancel', async page => {
+          await open(page);
+          await page.locator('#guest').fill('테스트 사용자');
+          await page.locator('#date').fill('2027-05-15');
+          await page.locator('#slot').selectOption({ index: 1 });
+          await button(page, '예약 확정').click();
+          assert.match(await page.locator('#confirmation').innerText(), /테스트 사용자/);
+          await page.reload();
+          assert.match(await page.locator('#confirmation').innerText(), /테스트 사용자/);
+          await button(page, '예약 취소').click();
+          await page.reload();
+          assert.equal(await page.locator('#confirmation').isVisible(), false);
+        });
+      }
+      if (fixture.flow === 'dispatch') await exercise('ticket-create-complete-persist', async page => {
+        await button(page, '새 요청').click();
+        await page.locator('#title').fill('프린터 용지 걸림');
+        await page.locator('#space').fill('서쪽 사무실');
+        await page.locator('#priority').selectOption({ label: '긴급' });
+        await page.locator('#assignee').fill('김담당');
+        await button(page, '등록').click();
+        await page.locator('#search').fill('프린터 용지 걸림');
+        await button(page, '상세').first().click();
+        assert.match(await page.locator('#detail').innerText(), /프린터 용지 걸림/);
+        await button(page, '처리 완료').click();
+        await page.reload();
+        await page.locator('#search').fill('프린터 용지 걸림');
+        assert.match(await page.locator('body').innerText(), /완료/);
+      });
+      if (fixture.flow === 'learning') await exercise('lesson-progress-and-independent-notes', async page => {
+        await page.locator('#note').fill('첫 수업 메모');
+        await button(page, '메모 저장').click();
+        await page.locator('#complete').click();
+        assert.match(await page.locator('#progress').innerText(), /1\s*\/\s*8/);
+        await page.getByRole('button', { name: /키보드 탐색/ }).click();
+        assert.match(await page.locator('#lesson-title').innerText(), /키보드 탐색/);
+        assert.equal(await page.locator('#note').inputValue(), '');
+        await page.locator('#note').fill('둘째 수업 메모');
+        await button(page, '메모 저장').click();
+        await page.reload();
+        await page.getByRole('button', { name: /의미 있는 HTML/ }).click();
+        assert.equal(await page.locator('#note').inputValue(), '첫 수업 메모');
+        assert.match(await page.locator('#progress').innerText(), /1\s*\/\s*8/);
+      });
+      if (fixture.flow === 'cooking') await exercise('ingredients-and-cooking-step-persist', async page => {
+        await button(page, '요리 찾기').click();
+        assert.match(await page.locator('body').innerText(), /재료를 선택/);
+        await page.getByLabel('계란', { exact: true }).check();
+        await page.getByLabel('두부', { exact: true }).check();
+        await button(page, '요리 찾기').click();
+        await button(page, '조리 시작').first().click();
+        const first = await page.locator('#cooking').innerText();
+        await button(page, '다음 단계').click();
+        const second = await page.locator('#cooking').innerText();
+        assert.notEqual(second, first);
+        await page.reload();
+        assert.equal(await page.locator('#cooking').innerText(), second);
+        await button(page, '이전 단계').click();
+        assert.equal(await page.locator('#cooking').innerText(), first);
+      });
+      if (fixture.flow === 'document') await exercise('document-create-edit-persist', async page => {
+        await button(page, '새 이력서').click();
+        await page.locator('#title').fill('접근성 개발자 지원');
+        await page.locator('#name').fill('이새봄');
+        await page.locator('#intro').fill('키보드 사용성을 연구합니다.');
+        await button(page, '저장').click();
+        await page.reload();
+        await page.locator('#search').fill('접근성 개발자 지원');
+        await button(page, '편집').first().click();
+        assert.equal(await page.locator('#name').inputValue(), '이새봄');
+      });
+      if (fixture.flow === 'invitation') {
+        await exercise('rsvp-persist-delete', async page => {
+          await page.locator('#guest').fill('김하객');
+          await page.locator('#people').fill('2');
+          await button(page, '참석 응답 저장').click();
+          await page.reload();
+          assert.match(await page.locator('#confirmation').innerText(), /김하객/);
+          await button(page, '응답 삭제').click();
+          await page.reload();
+          assert.doesNotMatch(await page.locator('#confirmation').innerText(), /김하객/);
+        });
+        await exercise('guestbook-literal-text', async page => {
+          await page.locator('#author').fill('친구');
+          await page.locator('#message').fill('<b>축하해요</b>');
+          await button(page, '축하글 남기기').click();
+          await page.reload();
+          assert.match(await page.locator('#messages').innerText(), /<b>축하해요<\/b>/);
+          assert.equal(await page.locator('#messages b').count(), 0);
+        });
+      }
+    }
+  } finally {
+    await browser?.close();
+    await new Promise(r => server.close(r));
+  }
+  const report = { case: fixture.id, scope: fixture.scope, visual: 'UNVERIFIED', checks, passed: checks.filter(c => c.status === 'PASS').length, total: checks.length };
+  await writeFile(resolve(evidence, 'report.json'), JSON.stringify(report, null, 2));
+  return report;
+}
