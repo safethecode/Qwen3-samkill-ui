@@ -1,0 +1,16 @@
+{
+  "binding": "b6576bdc82bb4e04088aa00dda06d25ca015d6086ac525b80eb5082ae48723f0",
+  "stage": "behavior",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 81671,
+  "done_reason": "stop",
+  "load_duration": 3073000,
+  "prompt_eval_count": 6490,
+  "prompt_eval_duration": 68704441000,
+  "eval_count": 315,
+  "eval_duration": 12806779000,
+  "total_duration": 81648375700,
+  "content": "{\n\"code\": \"document.addEventListener('DOMContentLoaded', () => {\\n  const searchInput = document.getElementById('search');\\n  const chips = document.querySelectorAll('.chip');\\n\\n  searchInput.value = state.searchQuery;\\n  chips.forEach(chip => {\\n    if (chip.dataset.category === state.activeCategory) chip.classList.add('chip-active');\\n    chip.addEventListener('click', () => {\\n      chips.forEach(c => c.classList.remove('chip-active'));\\n      chip.classList.add('chip-active');\\n      state.activeCategory = chip.dataset.category;\\n      renderMentors();\\n    });\\n  });\\n\\n  searchInput.addEventListener('input', (e) => {\\n    state.searchQuery = e.target.value;\\n    renderMentors();\\n  });\\n\\n  document.getElementById('mentor-list').addEventListener('click', (e) => {\\n    const favBtn = e.target.closest('.fav-btn');\\n    if (favBtn) {\\n      const card = favBtn.closest('.mentor-card');\\n      const isFav = favBtn.classList.toggle('active');\\n      favBtn.setAttribute('aria-label', isFav ? '마음에서 제거' : '마음에 넣기');\\n      return;\\n    }\\n    const card = e.target.closest('.mentor-card');\\n    if (card) alert('멘토 상세: ' + card.dataset.id);\\n  });\\n});\"\n}"
+}

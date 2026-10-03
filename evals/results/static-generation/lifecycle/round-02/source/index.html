@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>멘토 찾기</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="container">
+  <h1 class="page-title">멘토 찾기</h1>
+
+  <div class="search-wrapper">
+    <label for="search" class="visually-hidden">멘토 검색</label>
+    <input type="search" id="search" placeholder="멘토 이름 또는 역할 검색">
+  </div>
+
+  <nav class="category-chips" aria-label="카테고리">
+    <button type="button" class="chip active" data-category="all">전체</button>
+    <button type="button" class="chip" data-category="design">디자인</button>
+    <button type="button" class="chip" data-category="dev">개발</button>
+    <button type="button" class="chip" data-category="data">데이터</button>
+  </nav>
+
+  <div id="mentor-list" class="mentor-grid">
+    
+  </div>
+
+  <footer class="page-footer">
+    <p>예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.</p>
+  </footer>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>

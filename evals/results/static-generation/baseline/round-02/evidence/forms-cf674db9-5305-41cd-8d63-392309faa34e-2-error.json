@@ -1,0 +1,6 @@
+{
+  "stage": "forms",
+  "binding": "b6576bdc82bb4e04088aa00dda06d25ca015d6086ac525b80eb5082ae48723f0",
+  "elapsedMs": 37167,
+  "error": "JavaScript references IDs absent from the supplied HTML and literal rendered markup: mentor-name, mentor-email, form-error, mentor-form. Use the existing shell IDs; do not silently return when a required container is missing."
+}

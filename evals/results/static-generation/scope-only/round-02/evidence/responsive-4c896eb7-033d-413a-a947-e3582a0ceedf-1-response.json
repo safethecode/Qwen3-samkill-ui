@@ -1,0 +1,16 @@
+{
+  "binding": "4ad30290a729e421b266a22a5d1a1b5b43d34575e4b1d3a92123315e92e1aa1d",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 147657,
+  "done_reason": "stop",
+  "load_duration": 3873900,
+  "prompt_eval_count": 9698,
+  "prompt_eval_duration": 106079137000,
+  "eval_count": 760,
+  "eval_duration": 41389581000,
+  "total_duration": 147639114900,
+  "content": "{\n\"code\": \"/* Form and Button States */\\n#search:disabled {\\n  cursor: not-allowed;\\n}\\n\\n.action-btn:disabled,\\n.chip:disabled {\\n  opacity: 0.5;\\n  cursor: not-allowed;\\n}\\n\\n/* Interactive Feedback */\\n.chip:not(:disabled):hover {\\n  background-color: var(--color-bg-canvas);\\n  border-color: var(--color-text-secondary);\\n  color: var(--color-text-primary);\\n}\\n\\n.chip:not(:disabled):active {\\n  transform: scale(0.98);\\n}\\n\\n#search-btn:not(:disabled):hover img {\\n  color: var(--color-text-primary);\\n}\\n\\n.favorite-btn:not(:disabled):hover img {\\n  color: #ef4444;\\n  transform: scale(1.1);\\n}\\n\\n/* Focus Indication */\\n#search:focus-visible {\\n  outline: 2px solid var(--color-focus-ring);\\n  outline-offset: -2px;\\n}\\n\\n.chip:focus-visible,\\n.action-btn:focus-visible,\\n.favorite-btn:focus-visible {\\n  outline: 2px solid var(--color-focus-ring);\\n  outline-offset: 2px;\\n}\\n\\n/* Hidden Utility */\\n[hidden] {\\n  display: none !important;\\n}\\n\\n/* Reduced Motion */\\n@media (prefers-reduced-motion: reduce) {\\n  *, *::before, *::after {\\n    animation-duration: 0.01ms !important;\\n    animation-iteration-count: 1 !important;\\n    transition-duration: 0.01ms !important;\\n    scroll-behavior: auto !important;\\n  }\\n}\\n\\n/* Mobile Adaptation: 390px */\\n@media (max-width: 390px) {\\n  .mentor-card {\\n    padding: var(--space-sm);\\n  }\\n\\n  .card-header {\\n    gap: var(--space-sm);\\n  }\\n\\n  .mentor-avatar {\\n    width: 48px;\\n    height: 48px;\\n  }\\n\\n  .mentor-name {\\n    font-size: 1.125rem;\\n  }\\n\\n  .mentor-meta {\\n    flex-wrap: wrap;\\n    gap: var(--space-xs) var(--space-sm);\\n  }\\n}\\n\\n/* Mobile Adaptation: 320px */\\n@media (max-width: 320px) {\\n  body > header,\\n  body > main,\\n  body > footer {\\n    padding-left: var(--space-sm);\\n    padding-right: var(--space-sm);\\n  }\\n\\n  .search-input-wrapper {\\n    padding: var(--space-xs) var(--space-sm);\\n  }\\n\\n  .chip {\\n    padding: var(--space-xs) var(--space-sm);\\n    font-size: 0.8125rem;\\n  }\\n\\n  .mentor-description {\\n    font-size: 0.875rem;\\n  }\\n\\n  .card-footer {\\n    flex-direction: column;\\n    align-items: flex-start;\\n    gap: var(--space-sm);\\n  }\\n\\n  .action-btn {\\n    width: 100%;\\n    text-align: center;\\n    padding: var(--space-md);\\n  }\\n}\"\n}"
+}

@@ -1,0 +1,6 @@
+{
+  "binding": "2f47ff19f45d0aa5194234729d9b9be894bcbaf691ea2e5cb15324452ff02dac",
+  "stage": "forms",
+  "producer": "host-static-lifecycle",
+  "code": "renderStaticView();\ndocument.querySelectorAll('button').forEach(button => { button.disabled = true; });"
+}

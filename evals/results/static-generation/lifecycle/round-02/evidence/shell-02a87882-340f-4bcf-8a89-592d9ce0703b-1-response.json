@@ -1,0 +1,16 @@
+{
+  "binding": "2f47ff19f45d0aa5194234729d9b9be894bcbaf691ea2e5cb15324452ff02dac",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 14464,
+  "done_reason": "stop",
+  "load_duration": 4182400,
+  "prompt_eval_count": 6536,
+  "prompt_eval_duration": 1667444000,
+  "eval_count": 305,
+  "eval_duration": 12453589000,
+  "total_duration": 14449073100,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>멘토 찾기</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<main class=\\\"container\\\">\\n  <h1 class=\\\"page-title\\\">멘토 찾기</h1>\\n\\n  <div class=\\\"search-wrapper\\\">\\n    <input type=\\\"search\\\" id=\\\"search\\\" placeholder=\\\"멘토 이름 또는 역할 검색\\\">\\n  </div>\\n\\n  <nav class=\\\"category-chips\\\" aria-label=\\\"카테고리\\\">\\n    <button type=\\\"button\\\" class=\\\"chip active\\\">전체</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\">디자인</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\">개발</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\">데이터</button>\\n  </nav>\\n\\n  <div id=\\\"mentor-list\\\" class=\\\"mentor-grid\\\">\\n  </div>\\n\\n  <footer class=\\\"page-footer\\\">\\n    <p>예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.</p>\\n  </footer>\\n</main>\\n<script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

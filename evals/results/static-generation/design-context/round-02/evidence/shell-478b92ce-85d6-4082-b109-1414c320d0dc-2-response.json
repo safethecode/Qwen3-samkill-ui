@@ -1,0 +1,16 @@
+{
+  "binding": "ffff400c9ee7d9ed0d91487d8155ce2bd171247ae22c0f958dd9974cacb655d7",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 36088,
+  "done_reason": "stop",
+  "load_duration": 3633800,
+  "prompt_eval_count": 9164,
+  "prompt_eval_duration": 9309144000,
+  "eval_count": 537,
+  "eval_duration": 26707282000,
+  "total_duration": 36068181300,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\\\">\\n<title>멘토 찾기</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<main id=\\\"app\\\">\\n<header class=\\\"page-header\\\">\\n<h1 id=\\\"page-title\\\">멘토 찾기</h1>\\n<div class=\\\"header-actions\\\">\\n<button type=\\\"button\\\" aria-label=\\\"알림\\\">\\n<img src=\\\"assets/icons/bell.svg\\\" width=\\\"20\\\" height=\\\"20\\\" alt=\\\"\\\">\\n</button>\\n<button type=\\\"button\\\" aria-label=\\\"프로필\\\">\\n<img src=\\\"assets/icons/user-round.svg\\\" width=\\\"20\\\" height=\\\"20\\\" alt=\\\"\\\">\\n</button>\\n</div>\\n</header>\\n\\n<section class=\\\"search-section\\\">\\n<div class=\\\"search-input-wrapper\\\">\\n<img src=\\\"assets/icons/Search.svg\\\" width=\\\"20\\\" height=\\\"20\\\" alt=\\\"\\\" class=\\\"search-icon\\\">\\n<input type=\\\"search\\\" id=\\\"search\\\" placeholder=\\\"멘토, 키워드 검색\\\" disabled aria-label=\\\"검색어 입력\\\">\\n<button type=\\\"button\\\" id=\\\"clear-search\\\" aria-label=\\\"검색어 지우기\\\" disabled>\\n<img src=\\\"assets/icons/X.svg\\\" width=\\\"20\\\" height=\\\"20\\\" alt=\\\"\\\">\\n</button>\\n</div>\\n<p class=\\\"example-disclosure\\\">이 화면은 예시입니다. 실제 입력은 사용할 수 없습니다.</p>\\n<nav class=\\\"category-filters\\\" aria-label=\\\"카테고리 필터\\\">\\n<button type=\\\"button\\\" class=\\\"filter-chip active\\\" data-category=\\\"all\\\">전체</button>\\n<button type=\\\"button\\\" class=\\\"filter-chip\\\" data-category=\\\"design\\\">디자인</button>\\n<button type=\\\"button\\\" class=\\\"filter-chip\\\" data-category=\\\"dev\\\">개발</button>\\n<button type=\\\"button\\\" class=\\\"filter-chip\\\" data-category=\\\"marketing\\\">마케팅</button>\\n<button type=\\\"button\\\" class=\\\"filter-chip\\\" data-category=\\\"planning\\\">기획</button>\\n</nav>\\n</section>\\n\\n<section id=\\\"mentor-list\\\" class=\\\"mentor-list\\\">\\n<!-- Rendered via JS -->\\n</section>\\n\\n</main>\\n<script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

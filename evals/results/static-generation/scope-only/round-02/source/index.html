@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>멘토 찾기</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="page-header">
+<h1 id="page-title">멘토 찾기</h1>
+<form id="search-form" role="search">
+<div class="search-input-wrapper">
+<label for="search" class="visually-hidden">멘토 검색</label>
+<input type="search" id="search" name="search" placeholder="멘토 이름 또는 스킬 검색" disabled aria-disabled="true">
+<button type="button" id="search-btn" disabled aria-disabled="true">
+<img src="assets/icons/Search.svg" alt="검색">
+</button>
+</div>
+<p class="example-disclosure">이 화면은 예시입니다. 실제 데이터는 로딩 후 표시됩니다.</p>
+</form>
+<nav id="category-nav" aria-label="카테고리 필터">
+<button type="button" class="chip active" disabled aria-disabled="true" data-category="all">전체</button>
+<button type="button" class="chip" disabled aria-disabled="true" data-category="design">디자인</button>
+<button type="button" class="chip" disabled aria-disabled="true" data-category="dev">개발</button>
+<button type="button" class="chip" disabled aria-disabled="true" data-category="marketing">마케팅</button>
+</nav>
+</header>
+<main id="mentor-list" role="list">
+
+</main>
+<footer class="page-footer">
+<p>&copy; 2024 Mentor Platform. All rights reserved.</p>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

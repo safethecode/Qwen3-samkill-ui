@@ -1,0 +1,16 @@
+{
+  "binding": "4ad30290a729e421b266a22a5d1a1b5b43d34575e4b1d3a92123315e92e1aa1d",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 20438,
+  "done_reason": "stop",
+  "load_duration": 3327500,
+  "prompt_eval_count": 6536,
+  "prompt_eval_duration": 2432285000,
+  "eval_count": 423,
+  "eval_duration": 17684881000,
+  "total_duration": 20422456800,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>멘토 찾기</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<header class=\\\"page-header\\\">\\n<h1 id=\\\"page-title\\\">멘토 찾기</h1>\\n<form id=\\\"search-form\\\" role=\\\"search\\\" aria-label=\\\"멘토 검색\\\">\\n<div class=\\\"search-input-wrapper\\\">\\n<input type=\\\"search\\\" id=\\\"search\\\" name=\\\"search\\\" placeholder=\\\"멘토 이름 또는 스킬 검색\\\" disabled aria-disabled=\\\"true\\\">\\n<button type=\\\"button\\\" id=\\\"search-btn\\\" disabled aria-disabled=\\\"true\\\">\\n<img src=\\\"assets/icons/Search.svg\\\" alt=\\\"검색\\\">\\n</button>\\n</div>\\n<p class=\\\"example-disclosure\\\">이 화면은 예시입니다. 실제 데이터는 로딩 후 표시됩니다.</p>\\n</form>\\n<nav id=\\\"category-nav\\\" aria-label=\\\"카테고리 필터\\\">\\n<button type=\\\"button\\\" class=\\\"chip active\\\" disabled aria-disabled=\\\"true\\\" data-category=\\\"all\\\">전체</button>\\n<button type=\\\"button\\\" class=\\\"chip\\\" disabled aria-disabled=\\\"true\\\" data-category=\\\"design\\\">디자인</button>\\n<button type=\\\"button\\\" class=\\\"chip\\\" disabled aria-disabled=\\\"true\\\" data-category=\\\"dev\\\">개발</button>\\n<button type=\\\"button\\\" class=\\\"chip\\\" disabled aria-disabled=\\\"true\\\" data-category=\\\"marketing\\\">마케팅</button>\\n</nav>\\n</header>\\n<main id=\\\"mentor-list\\\" role=\\\"list\\\">\\n<!-- Mentor cards injected by app.js -->\\n</main>\\n<footer class=\\\"page-footer\\\">\\n<p>&copy; 2024 Mentor Platform. All rights reserved.</p>\\n</footer>\\n<script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

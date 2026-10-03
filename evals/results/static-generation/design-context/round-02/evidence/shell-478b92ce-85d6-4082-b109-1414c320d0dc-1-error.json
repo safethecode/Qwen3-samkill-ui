@@ -1,0 +1,6 @@
+{
+  "stage": "shell",
+  "binding": "ffff400c9ee7d9ed0d91487d8155ce2bd171247ae22c0f958dd9974cacb655d7",
+  "elapsedMs": 116163,
+  "error": "Unprovided image/font assets: assets/icons/bell.svg, assets/icons/user-round.svg. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration."
+}

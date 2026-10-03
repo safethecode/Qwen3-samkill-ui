@@ -1,0 +1,457 @@
+{
+  "case": "round-02",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "김서연 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "b4fd5bb2bcd2bf50d18d020aa9575dcb2f33134aa24899b0818f2b4980c35981",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "박민준 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "23cd009b4419f58a70523b10172afc5a86148e1a4eef44cb992da2673590834c",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "김서연 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "3dd9631d4b405b2ebfe4e97692379f70008d0096718d0d8c1c184a8e181949a1",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "박민준 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "0147c3d8249a76d092deab98058a2aa08f40c3d239b72132ad836af2cebaa1e4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "category": "fonts",
+      "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "김서연 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "80b2eaa1a0efcbbf1ddfa88f3d0971b6a44752b6c98ebd21a9606d1e5a73b5db",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "viewBox": "0 0 24 24",
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          }
+        ]
+      ],
+      "control": true,
+      "label": "박민준 즐겨찾기",
+      "width": 32,
+      "height": 32,
+      "fill": "none",
+      "strokeWidth": "2px",
+      "paint": [
+        {
+          "stroke": "rgb(107, 114, 128)",
+          "strokeWidth": "2px",
+          "opacity": "1",
+          "strokeOpacity": "1",
+          "visibility": "visible",
+          "display": "inline",
+          "transform": "none",
+          "fill": "none"
+        }
+      ],
+      "invisible": false,
+      "status": "UNVERIFIED",
+      "problem": "SVG provenance requires an official asset manifest or documented existing-system review",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "10cff66e3554a50beb39954fe98881f1f0eab35a845964d0c15167066e94de16",
+      "rules": [
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 16,
+    "font-rendering-1440": 3,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 16,
+    "font-rendering-390": 3,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 16,
+    "font-rendering-320": 3,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "데이터": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "UX 전문가": 1,
+      "현재: 테크 주식회사": 1,
+      "사용자 경험 개선과 데이터 기반 디자인 의사결정을 전문으로 합니다. 복잡한 시스템을 직관적인 인터페이스로 변환하는 데 중점을 둡니다.": 1,
+      "상담료": 2,
+      "상담 신청": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "AWS 솔루션 아키텍트": 1,
+      "현재: 클라우드 스타트업": 1,
+      "반응형 웹 애플리케이션 및 고성능 UI 구현에 대한 깊은 이해를 가지고 있습니다. 접근성과 성능 최적화를 중요하게 생각합니다.": 1,
+      "예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.": 1
+    },
+    "390": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "데이터": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "UX 전문가": 1,
+      "현재: 테크 주식회사": 1,
+      "사용자 경험 개선과 데이터 기반 디자인 의사결정을 전문으로 합니다. 복잡한 시스템을 직관적인 인터페이스로 변환하는 데 중점을 둡니다.": 1,
+      "상담료": 2,
+      "상담 신청": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "AWS 솔루션 아키텍트": 1,
+      "현재: 클라우드 스타트업": 1,
+      "반응형 웹 애플리케이션 및 고성능 UI 구현에 대한 깊은 이해를 가지고 있습니다. 접근성과 성능 최적화를 중요하게 생각합니다.": 1,
+      "예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.": 1
+    },
+    "1440": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "데이터": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "UX 전문가": 1,
+      "현재: 테크 주식회사": 1,
+      "사용자 경험 개선과 데이터 기반 디자인 의사결정을 전문으로 합니다. 복잡한 시스템을 직관적인 인터페이스로 변환하는 데 중점을 둡니다.": 1,
+      "상담료": 2,
+      "상담 신청": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "AWS 솔루션 아키텍트": 1,
+      "현재: 클라우드 스타트업": 1,
+      "반응형 웹 애플리케이션 및 고성능 UI 구현에 대한 깊은 이해를 가지고 있습니다. 접근성과 성능 최적화를 중요하게 생각합니다.": 1,
+      "예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '멘토 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'chip active',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '전체'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '디자인'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '개발'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '데이터'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'UX 전문가'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '현재: 테크 주"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 테크 주식회사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 클라우드 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.097249309999117,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '멘토 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'chip active',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '전체'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '디자인'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '개발'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '데이터'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'UX 전문가'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '현재: 테크 주"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 테크 주식회사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 클라우드 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.097249309999117,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'visually-hidden',\n+     element: 'LABEL',\n+     fontSize: '14px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '멘토 검색'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   },\n+   {\n+     class: 'chip active',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '전체'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '디자인'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '개발'\n+   },\n+   {\n+     class: 'chip',\n+     element: 'BUTTON',\n+     fontSize: '12px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '데이터'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '11px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'UX 전문가'\n+   },\n+   {\n+     class: 'badge',\n+     element: 'SPAN',\n+     fontSize: '11px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: '현재: 테크 주"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 테크 주식회사',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.342399902843309,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '현재: 클라우드 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, \"Helvetica Neue\", Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.097249309999117,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '예시 데이터는 브라우저에만 저장되며 실제 서비스와 무관합니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 19,
+  "total": 25
+}

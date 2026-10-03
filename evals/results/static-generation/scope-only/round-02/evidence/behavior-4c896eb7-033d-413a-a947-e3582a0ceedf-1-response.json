@@ -1,0 +1,16 @@
+{
+  "binding": "4ad30290a729e421b266a22a5d1a1b5b43d34575e4b1d3a92123315e92e1aa1d",
+  "stage": "behavior",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 65339,
+  "done_reason": "stop",
+  "load_duration": 3624400,
+  "prompt_eval_count": 6090,
+  "prompt_eval_duration": 64687668000,
+  "eval_count": 13,
+  "eval_duration": 476120000,
+  "total_duration": 65331776600,
+  "content": "{\n\"code\": \"void 0;\"\n}"
+}

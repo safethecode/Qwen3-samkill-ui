@@ -1,0 +1,16 @@
+{
+  "binding": "b6576bdc82bb4e04088aa00dda06d25ca015d6086ac525b80eb5082ae48723f0",
+  "stage": "forms",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 115026,
+  "done_reason": "stop",
+  "load_duration": 3628500,
+  "prompt_eval_count": 8036,
+  "prompt_eval_duration": 84843652000,
+  "eval_count": 621,
+  "eval_duration": 30002250000,
+  "total_duration": 115014199100,
+  "content": "{\n  \"code\": \"/**\\n * Form validation, saving, cancelling and reload restoration.\\n */\\n\\nfunction validateForm() {\\n  const nameInput = document.getElementById('mentor-name');\\n  const emailInput = document.getElementById('mentor-email');\\n  const errorEl = document.getElementById('form-error');\\n  let isValid = true;\\n\\n  if (!nameInput.value.trim()) {\\n    nameInput.setCustomValidity('이름을 입력해주세요.');\\n    isValid = false;\\n  } else {\\n    nameInput.setCustomValidity('');\\n  }\\n\\n  if (!emailInput.value.trim() || !/\\\\S+@\\\\S+\\\\.\\\\S+/.test(emailInput.value)) {\\n    emailInput.setCustomValidity('올바른 이메일을 입력해주세요.');\\n    isValid = false;\\n  } else {\\n    emailInput.setCustomValidity('');\\n  }\\n\\n  if (errorEl) {\\n    errorEl.textContent = isValid ? '' : '입력값을 확인해주세요.';\\n    errorEl.classList.toggle('visible', !isValid);\\n  }\\n\\n  return isValid;\\n}\\n\\nfunction saveMentorRequest(formData) {\\n  try {\\n    localStorage.setItem('pending_mentor_request', JSON.stringify(formData));\\n    return true;\\n  } catch (e) {\\n    console.error('Save failed', e);\\n    const errorEl = document.getElementById('form-error');\\n    if (errorEl) {\\n      errorEl.textContent = '저장에 실패했습니다.';\\n      errorEl.classList.add('visible');\\n    }\\n    return false;\\n  }\\n}\\n\\nfunction cancelMentorRequest() {\\n  localStorage.removeItem('pending_mentor_request');\\n  const form = document.getElementById('mentor-form');\\n  if (form) form.reset();\\n  const errorEl = document.getElementById('form-error');\\n  if (errorEl) {\\n    errorEl.textContent = '';\\n    errorEl.classList.remove('visible');\\n  }\\n}\\n\\nfunction restoreFormState() {\\n  try {\\n    const saved = localStorage.getItem('pending_mentor_request');\\n    if (!saved) return;\\n    const data = JSON.parse(saved);\\n    const nameInput = document.getElementById('mentor-name');\\n    const emailInput = document.getElementById('mentor-email');\\n    if (nameInput) nameInput.value = data.name || '';\\n    if (emailInput) emailInput.value = data.email || '';\\n  } catch (e) {\\n    console.error('Restore failed', e);\\n  }\\n}\\n\\n// Initialize application after handlers and functions exist\\ndocument.addEventListener('DOMContentLoaded', () => {\\n  restoreFormState();\\n  // Existing search/chip handlers would go here if not already present\\n});\"\n}"
+}

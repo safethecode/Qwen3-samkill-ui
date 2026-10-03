@@ -4,7 +4,7 @@
 
 **INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
 
-The current harness passes 105 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
+The current harness passes 109 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
 
 An independent inspection of the actual generated workshop sample found **19 failed, 30 unknown, 9 scoped passes and 17 inapplicable catalog rules**. Its eight guide assessments are **5 failed, 2 unknown and 1 inapplicable**. The saved browser evaluation is **18/27** under the recorded pre-final harness. These counts must not be compared directly with later expanded check sets. [Full scoped audit](results/rule-coverage/workshop/audit.json), [browser report](results/rule-coverage/workshop/evidence/report.json), [generated source](results/rule-coverage/workshop/source).
 
@@ -24,6 +24,14 @@ The broader baseline includes all seven available upstream rounds (01, 02, 03, 0
 | Round 10 | Generation incomplete in baseline |
 
 These are historical measurements from the harness hashes in the linked record, not results from the final additional dependency check. Broken assets, missing content, inaccessible workflows and visual hierarchy failures remain visible in the evidence. New generation supplies official icon assets and optional upstream local media, rejects invented asset paths, and splits navigation from forms/startup. This improves input and failure detection; it does not establish that the model now follows every rule.
+
+## Static generation recovery — 2026-10-04
+
+A fresh Round 02 run with supplied original assets failed while inventing a registration form absent from its static contract. Restricting stage instructions stopped that expansion, but the resulting page still lacked its mentor cards because startup never invoked the renderer. The runner now requires a named static renderer, calls it once, and disables sample buttons without requesting two unnecessary model-generated behavior/form stages. Interactive service stages retain their existing behavior.
+
+The scope-only candidate scored **16/25** with no cards. A fresh lifecycle candidate renders both cards and original avatar assets and scores **19/25**, confirmed from the published source. This is a concrete content-rendering improvement, not design parity or a repeatability estimate. Typography, contrast and composition still fail; actual fonts are Malgun Gothic and Arial, with the intended role contract still missing. [Version-bound trials](results/static-generation/study.json), [direct visual inspection](results/static-generation/visual-review.md), [fresh report](results/static-generation/revalidation/report.json).
+
+A separate probe also supplied the upstream design and analysis documents. It failed twice on incorrect icon directories despite the matching files being available. [Failed probe and document hashes](results/static-generation/design-context/study.json). Asset errors now suggest an exact supplied path only when the filename has one matching candidate; ambiguous and unavailable assets remain rejected. A new probe and fresh Round 01/03 trials are pending and are not included in the passing results above.
 
 ## Workflow repair follow-up — 2026-10-04
 
