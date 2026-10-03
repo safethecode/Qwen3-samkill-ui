@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { serviceCases } from '../evals/service-cases.mjs';
 import { evaluateService } from './service-evaluate.mjs';
+import { evaluateBoundSource } from './service-resume.mjs';
 
 const root = resolve(process.argv[2] || 'runs/service-study');
 const study = JSON.parse(await readFile(resolve(root, 'study.json'), 'utf8'));
@@ -15,7 +16,7 @@ for (const result of study.results) {
   for (const [name, expected] of Object.entries(result.sourceHashes)) {
     if (digest(await readFile(resolve(target, name))) !== expected) throw new Error(`Source changed since generation: ${fixture.id}/${name}; record repairs separately`);
   }
-  const current = await evaluateService(target, resolve(root, fixture.id, 'reevaluated'), fixture);
+  const current = await evaluateBoundSource(result.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(result.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, resolve(root, fixture.id, 'reevaluated'), fixture));
   results.push({ ...result, ...current });
 }
 await writeFile(resolve(root, 'revalidation.json'), JSON.stringify({ ...study, revalidated: new Date().toISOString(), evaluatorHash: digest(await readFile(new URL('./service-evaluate.mjs', import.meta.url))), results }, null, 2));

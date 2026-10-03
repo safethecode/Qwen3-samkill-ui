@@ -6,7 +6,8 @@ import { generateService } from './generate-service.mjs';
 import { evaluateService } from './service-evaluate.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { removeComments } from './comments.mjs';
-import { validateStudyResume, caseResumeMode } from './service-resume.mjs';
+import { validateStudyResume, caseResumeMode, evaluateBoundSource } from './service-resume.mjs';
+import { samplingOptions } from './sampling.mjs';
 
 const output = resolve(process.argv[2] || 'runs/services');
 const selected = process.argv.slice(3);
@@ -16,7 +17,7 @@ process.env.QWEN_GENERATE_THINK ||= 'false';
 await mkdir(output, { recursive: true });
 const digest = data => createHash('sha256').update(data).digest('hex');
 const harnessHashes = Object.fromEntries(await Promise.all(['scripts/generate-service.mjs', 'scripts/service-stages.mjs', 'scripts/service-evaluate.mjs', 'evals/service-cases.mjs', 'skills/qwen-samkill-ui/SKILL.md'].map(async file => [file, digest(await readFile(file))])));
-const study = { model: process.env.QWEN_GENERATE_MODEL, inferenceOptions: inferenceOptions(), harnessHashes, started: new Date().toISOString(), missingUpstreamRounds: [5, 6, 7], results: [] };
+const study = { model: process.env.QWEN_GENERATE_MODEL, inferenceOptions: inferenceOptions(), samplingOptions: samplingOptions(), harnessHashes, started: new Date().toISOString(), missingUpstreamRounds: [5, 6, 7], results: [] };
 const resume = process.env.QWEN_RESUME === '1';
 if (await access(resolve(output, 'study.json')).then(() => true, () => false)) {
   if (!resume) throw new Error('Study already exists; choose a fresh output or explicitly resume');
@@ -56,7 +57,7 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     study.results.push({ case: fixture.id, scope: fixture.scope, phase: 'GENERATED', ...generated });
     await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
     }
-    const report = await evaluateService(target, evidence, fixture);
+    const report = await evaluateBoundSource(generated.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(generated.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, evidence, fixture));
     study.results = study.results.filter(result => result.case !== fixture.id);
     study.results.push({ ...report, ...generated, phase: 'EVALUATED', elapsedMs: Date.now() - started });
   } catch (error) {
