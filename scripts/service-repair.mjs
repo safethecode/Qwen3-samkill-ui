@@ -54,7 +54,7 @@ try {
       const { decision, regressions } = serviceProgress(current, candidate);
       events.push({ attempt, failure: failure.name, accepted: decision === 'accept', pending: decision === 'stage', passed: candidate.passed, total: candidate.total, regressions });
       if (decision === 'accept') { current = candidate; workingReport = candidate; acceptedSource = owned; workingSource = owned; unitAttempt = 0; }
-      else if (decision === 'stage') { workingReport = candidate; workingSource = owned; unitAttempt = 0; await writeFile(resolve(step, 'pending-source.json'), JSON.stringify(owned)); }
+      else if (decision === 'stage') { workingReport = candidate; workingSource = owned; await writeFile(resolve(step, 'pending-source.json'), JSON.stringify(owned)); }
       else { await writeFile(resolve(step, 'rejected-source.json'), JSON.stringify(await snapshot())); await rollbackOwned(snapshot, restore, owned, before); owned = null; }
     } catch (error) {
       if (error.code === 'STALE_SOURCE' || /Source changed during generation/.test(error.message)) throw error;

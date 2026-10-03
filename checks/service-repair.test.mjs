@@ -40,3 +40,27 @@ test('service repair preserves measured partial progress across separate runs wi
     assert.equal(passed.rolledBackPending, false);
   } finally { await new Promise(resolve => server.close(resolve)); }
 });
+
+test('staged edits without measured progress rotate to another source unit', async () => {
+  const root = await mkdtemp(resolve('runs/service-rotation-'));
+  const target = resolve(root, 'source');
+  await mkdir(target);
+  const html = '<html><body style="font:500 16px sans-serif"><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"></body></html>';
+  for (const [name, content] of Object.entries({ 'index.html': html, 'app.js': 'void 0;', 'styles.css': 'button,input{font:inherit}', 'DESIGN.md': 'Label the input.', 'REFERENCE.md': 'Keep the itinerary.' })) await writeFile(resolve(target, name), content);
+  const paths = [];
+  const server = createServer(async (req, res) => {
+    let body = ''; for await (const part of req) body += part;
+    const request = JSON.parse(body);
+    const path = request.format.properties.patches.items.properties.path.enum[0];
+    paths.push(path);
+    const patch = path === 'index.html' ? { path, oldString: '<input id="a">', newString: '<input id="a" data-review="pending">' } : { path, oldString: 'void 0;', newString: 'void 1;' };
+    res.setHeader('content-type', 'application/json');
+    res.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ patches: [patch] }) } }));
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    await assert.rejects(promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '2'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true }));
+    assert.deepEqual(paths, ['index.html', 'app.js']);
+    assert.equal(await readFile(resolve(target, 'index.html'), 'utf8'), html);
+  } finally { await new Promise(resolve => server.close(resolve)); }
+});
