@@ -5,6 +5,7 @@ import { parse } from 'acorn';
 import postcss from 'postcss';
 import { samplingOptions } from './sampling.mjs';
 import { inferenceOptions } from './inference-options.mjs';
+import { validateInterface } from './service-interface.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const phases = {
@@ -52,7 +53,7 @@ export async function generate(target, evidence, options = {}) {
           model: process.env.QWEN_GENERATE_MODEL, stream: false, think: process.env.QWEN_GENERATE_THINK !== 'false',
           messages: [
             { role: 'system', content: 'You implement one complete source file in a staged local UI build. Return only the structured JSON object. No explanations, markdown fences, code comments or placeholder implementations. The runner saves your file and independently tests the completed application. Never claim checks passed. Follow the design contract and coordinate exactly with supplied files.' },
-            { role: 'user', content: `SKILL\n${skill}\n\nDESIGN CONTRACT\n${contract}\n\nREFERENCE OBSERVATIONS\n${reference}\n\nGENERATE ${path}\n${instruction}\n\nPREVIOUS ERROR\n${error || 'None'}\n\nEXISTING SOURCE\n${Object.entries(files).map(([name, content]) => `FILE: ${name}\n${content}\nEND FILE`).join('\n\n')}` }
+            { role: 'user', content: `SKILL\n${skill}\n\nDESIGN CONTRACT\n${contract}\n\nREFERENCE OBSERVATIONS\n${reference}\n\nGENERATE ${path}\n${instruction}\n\nPREVIOUS ERROR\n${error || 'None'}\n\nEXISTING SOURCE\n${Object.entries(files).map(([name, content]) => `FILE: ${name}\n${content}\nEND FILE`).join('\n\n')}\n\nREQUIRED HTML INTERFACE (id: element tag; preserve exactly)\n${JSON.stringify(options.interface || {})}` }
           ],
           format: { type: 'object', properties: { path: { const: path }, content: { type: 'string' } }, required: ['path', 'content'], additionalProperties: false },
           options: { num_ctx: 32768, num_predict: options.profile === 'service' ? 6144 : 8192, ...samplingOptions(), ...inferenceOptions() }
@@ -61,7 +62,13 @@ export async function generate(target, evidence, options = {}) {
       if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
       const result = await response.json();
       await writeFile(resolve(evidence, `generate-${path}-${attempt}.json`), JSON.stringify({ model: result.model, done_reason: result.done_reason, prompt_eval_count: result.prompt_eval_count, prompt_eval_duration: result.prompt_eval_duration, load_duration: result.load_duration, eval_count: result.eval_count, eval_duration: result.eval_duration, total_duration: result.total_duration, content: result.message?.content }, null, 2));
-      try { files[path] = validateGeneratedFile(path, result); break; }
+      try {
+        const content = validateGeneratedFile(path, result);
+        if (path === 'index.html') validateInterface(content, options.interface);
+        files[path] = content;
+        await writeFile(resolve(evidence, `validated-${path}`), content);
+        break;
+      }
       catch (failure) { error = failure.message; if (attempt === 2) throw failure; }
     }
   }
