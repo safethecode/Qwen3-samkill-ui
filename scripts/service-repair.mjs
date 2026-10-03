@@ -34,7 +34,7 @@ try {
   let unitAttempt = 0;
   for (let attempt = 1; attempt <= rounds && current.passed < current.total; attempt++) {
     await assertOwned(snapshot, workingSource);
-    const failure = workingReport.checks.find(c => c.status === 'FAIL' && !/^(content|overflow|readable|runtime)-/.test(c.name)) || workingReport.checks.find(c => c.status === 'FAIL');
+    const failure = workingReport.checks.find(c => c.status === 'FAIL');
     if (failure.name !== previousName) { previousName = failure.name; unitAttempt = 0; }
     const before = await snapshot();
     const step = resolve(evidence, `attempt-${attempt}`);

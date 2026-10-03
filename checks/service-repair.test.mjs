@@ -45,7 +45,7 @@ test('staged edits without measured progress rotate to another source unit', asy
   const root = await mkdtemp(resolve('runs/service-rotation-'));
   const target = resolve(root, 'source');
   await mkdir(target);
-  const html = '<html><body style="font:500 16px sans-serif"><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"></body></html>';
+  const html = '<html><head><link rel="stylesheet" href="styles.css"></head><body style="font:500 16px sans-serif"><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"></body></html>';
   for (const [name, content] of Object.entries({ 'index.html': html, 'app.js': 'void 0;', 'styles.css': 'button,input{font:inherit}', 'DESIGN.md': 'Label the input.', 'REFERENCE.md': 'Keep the itinerary.' })) await writeFile(resolve(target, name), content);
   const paths = [];
   const server = createServer(async (req, res) => {
@@ -62,5 +62,25 @@ test('staged edits without measured progress rotate to another source unit', asy
     await assert.rejects(promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '2'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true }));
     assert.deepEqual(paths, ['index.html', 'app.js']);
     assert.equal(await readFile(resolve(target, 'index.html'), 'utf8'), html);
+  } finally { await new Promise(resolve => server.close(resolve)); }
+});
+
+test('foundational typography is repaired before downstream workflow or label failures', async () => {
+  const root = await mkdtemp(resolve('runs/service-typography-first-'));
+  const target = resolve(root, 'source');
+  await mkdir(target);
+  for (const [name, content] of Object.entries({ 'index.html': '<html><head><link rel="stylesheet" href="styles.css"></head><body><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"></body></html>', 'app.js': 'void 0;', 'styles.css': 'body{font:400 16px sans-serif}button,input{font:inherit}', 'DESIGN.md': 'Minimum text weight 500 and visible labels.', 'REFERENCE.md': 'Keep the itinerary.' })) await writeFile(resolve(target, name), content);
+  const paths = [];
+  const server = createServer(async (req, res) => {
+    let body = ''; for await (const part of req) body += part;
+    paths.push(JSON.parse(body).format.properties.patches.items.properties.path.enum[0]);
+    res.setHeader('content-type', 'application/json');
+    res.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'styles.css', oldString: 'font:400 16px', newString: 'font:500 16px' }] }) } }));
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    await assert.rejects(promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '1'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true }));
+    assert.deepEqual(paths, ['styles.css']);
+    assert.match(await readFile(resolve(target, 'styles.css'), 'utf8'), /font:500/);
   } finally { await new Promise(resolve => server.close(resolve)); }
 });
