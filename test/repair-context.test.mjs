@@ -56,3 +56,23 @@ test('quality escalation explicitly requests validated complete affected files',
   assert.equal(await readFile(resolve(target, 'styles.css'), 'utf8'), 'body { color: navy; }');
   assert.equal(await readFile(resolve(target, 'app.js'), 'utf8'), 'const state = 1;');
 });
+
+test('bounded repair overrides full-file escalation and rejects invalid source atomically', async () => {
+  const target = await mkdtemp(resolve('runs/repair-unit-'));
+  const evidence = resolve(target, 'evidence');
+  await mkdir(evidence);
+  const files = { 'index.html': '<html><button id="open">Open</button></html>', 'styles.css': 'body { color: black; }', 'app.js': 'const state = 1;', 'DESIGN.md': 'Preserve the service layout.' };
+  for (const [name, content] of Object.entries(files)) await writeFile(resolve(target, name), content);
+  const originalFetch = globalThis.fetch;
+  let request;
+  globalThis.fetch = async (_url, options) => {
+    request = JSON.parse(options.body);
+    return { ok: true, json: async () => ({ model: 'mock', done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'app.js', oldString: '1', newString: '(' }] }) } }) };
+  };
+  try { await assert.rejects(repair(target, evidence, { name: 'visual-review', files: ['app.js'], detail: 'Fix state rendering' }, '', { mode: 'files', bounded: true }), /Invalid complete file/); }
+  finally { globalThis.fetch = originalFetch; }
+  assert.equal(request.options.num_predict, 2048);
+  assert.equal(request.format.properties.patches.maxItems, 1);
+  assert.match(request.messages[1].content, /partial source window/);
+  for (const [name, content] of Object.entries(files)) assert.equal(await readFile(resolve(target, name), 'utf8'), content);
+});

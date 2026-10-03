@@ -34,7 +34,7 @@ export async function runQualityLoop({ rounds, inspect, snapshot, restore, repai
         if (error.code === 'STALE_SOURCE') return incomplete(error.message);
         await restore(before);
         await record({ type: 'repair-rejected', attempt: attempts, strategy, reason: error.message });
-        if (!(error instanceof PatchError || error instanceof SyntaxError)) return incomplete(error.message);
+        if (!(error instanceof PatchError || error instanceof SyntaxError || error.name === 'TimeoutError')) return incomplete(error.message);
         stalled++;
         continue;
       }

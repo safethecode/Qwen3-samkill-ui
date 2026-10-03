@@ -6,6 +6,14 @@ import { PatchError } from '../scripts/patches.mjs';
 
 const inspection = (score, binding = 'same') => ({ binding, functional: { passed: 1, total: 1, results: [{ name: 'create', status: 'PASS' }] }, visual: Object.fromEntries(['desktop', 'mobile'].map(view => [view, { criteria: criteria.map(id => ({ id, score, confidence: 0.95, observation: 'The supplied screenshot shows comparable document hierarchy.' })), issues: score >= 4 ? [] : [{ criterion: 'actions', location: 'first card actions', problem: 'Three oversized mobile action rows.', correction: 'Use a compact row with one emphasized primary action.', files: ['styles.css'] }] }])) });
 
+test('repair timeouts consume the bounded retry budget without claiming completion', async () => {
+  let calls = 0;
+  const result = await runQualityLoop({ rounds: 2, inspect: async () => inspection(3), snapshot: async () => 'source', restore: async () => {}, repair: async () => { calls++; throw new DOMException('Timed out', 'TimeoutError'); }, record: async () => {} });
+  assert.equal(calls, 2);
+  assert.equal(result.status, 'INCOMPLETE');
+  assert.match(result.reason, /budget/);
+});
+
 test('a passing first review cannot finish when independent confirmation fails', async () => {
   const pending = [inspection(4), inspection(3)];
   const result = await runQualityLoop({ rounds: 0, inspect: async () => pending.shift(), snapshot: async () => 'source', restore: async () => {}, repair: async () => {}, record: async () => {} });

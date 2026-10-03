@@ -81,14 +81,18 @@ try {
     console.log(`${audit ? 'Audit' : 'Inspection'} ${step}: functional ${functional.passed}/${functional.total}`);
     return result;
   };
+  let lastRepairKey = '';
+  let unitAttempt = 0;
   const result = await runQualityLoop({ rounds, inspect, snapshot, restore,
     repair: async (failure, mode, attempt) => {
       const directory = resolve(evidence, `repair-${attempt}`);
       await mkdir(directory);
       await save(resolve(directory, 'request.json'), { failure, mode });
       console.log(`Visual repair ${attempt}: ${mode}, ${failure.detail}`);
+      const repairKey = JSON.stringify(failure);
+      if (repairKey !== lastRepairKey) { lastRepairKey = repairKey; unitAttempt = 0; }
       const before = await bindings();
-      try { await repair(target, directory, failure, '', { mode }); }
+      try { await repair(target, directory, failure, '', { bounded: true, unitAttempt: unitAttempt++ }); }
       catch (error) {
         if (await bindings() !== before && /Source changed during generation/.test(error.message)) throw stale();
         throw error;
