@@ -16,6 +16,7 @@ test('interrupted service generation resumes only unchanged, validated completed
   let fail = true;
   const fetcher = async (_url, options) => {
     const request = JSON.parse(options.body);
+    assert.ok(request.messages[1].content.includes('Choose the dominant structure from the task'));
     const id = /CURRENT UNIT: (\w+)/.exec(request.messages[1].content)[1];
     calls.push(id);
     if (fail && id === 'state') throw new DOMException('timeout', 'TimeoutError');

@@ -11,7 +11,7 @@ export async function generateService(target, evidence, options = {}) {
   for (const file of ['index.html', 'app.js', 'styles.css']) if (await access(resolve(target, file)).then(() => true, () => false)) throw new Error('Split generation requires a fresh target');
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8');
-  const skill = await readFile(new URL('../skills/qwen-samkill-ui/SKILL.md', import.meta.url), 'utf8');
+  const skill = `${await readFile(new URL('../skills/qwen-samkill-ui/SKILL.md', import.meta.url), 'utf8')}\n\nSERVICE IMPLEMENTATION GUIDE\n${await readFile(new URL('../skills/qwen-samkill-ui/references/service-contracts.md', import.meta.url), 'utf8')}`;
   const settings = { model: process.env.QWEN_GENERATE_MODEL || 'qwen3-coder:30b', options: { num_ctx: 16384, ...samplingOptions(), ...inferenceOptions() } };
   const binding = createHash('sha256').update(JSON.stringify({ contract, reference, skill, settings, interface: options.interface, serviceStages })).digest('hex');
   const checkpointPath = resolve(evidence, 'generation-checkpoint.json');

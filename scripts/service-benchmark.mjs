@@ -16,7 +16,7 @@ process.env.QWEN_GENERATE_MODEL ||= 'qwen3-coder:30b';
 process.env.QWEN_GENERATE_THINK ||= 'false';
 await mkdir(output, { recursive: true });
 const digest = data => createHash('sha256').update(data).digest('hex');
-const harnessHashes = Object.fromEntries(await Promise.all(['scripts/generate-service.mjs', 'scripts/service-stages.mjs', 'scripts/service-evaluate.mjs', 'evals/service-cases.mjs', 'skills/qwen-samkill-ui/SKILL.md'].map(async file => [file, digest(await readFile(file))])));
+const harnessHashes = Object.fromEntries(await Promise.all(['scripts/generate-service.mjs', 'scripts/service-stages.mjs', 'scripts/service-evaluate.mjs', 'evals/service-cases.mjs', 'skills/qwen-samkill-ui/SKILL.md', 'skills/qwen-samkill-ui/references/service-contracts.md'].map(async file => [file, digest(await readFile(file))])));
 const study = { model: process.env.QWEN_GENERATE_MODEL, inferenceOptions: inferenceOptions(), samplingOptions: samplingOptions(), harnessHashes, started: new Date().toISOString(), missingUpstreamRounds: [5, 6, 7], results: [] };
 const resume = process.env.QWEN_RESUME === '1';
 if (await access(resolve(output, 'study.json')).then(() => true, () => false)) {
