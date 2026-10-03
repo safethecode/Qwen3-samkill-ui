@@ -1,7 +1,7 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
-import { serviceStages, validateStage, assembleStages, stageSource } from './service-stages.mjs';
+import { stagesForFlow, validateStage, assembleStages, stageSource } from './service-stages.mjs';
 import { validateInterface, validateShellLabels } from './service-interface.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { samplingOptions } from './sampling.mjs';
@@ -13,6 +13,7 @@ import { removeComments } from './comments.mjs';
 import { validateAssetReferences } from './asset-references.mjs';
 
 export async function generateService(target, evidence, options = {}) {
+  const serviceStages = stagesForFlow(options.flow);
   const requestRun = randomUUID();
   for (const file of ['index.html', 'app.js', 'styles.css']) if (await access(resolve(target, file)).then(() => true, () => false)) throw new Error('Split generation requires a fresh target');
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');

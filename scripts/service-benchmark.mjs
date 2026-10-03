@@ -51,7 +51,7 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     await writeFile(resolve(target, 'REFERENCE.md'), fixture.reference);
     if (!Object.keys(await verifiedIconAssets(target)).length) await writeIconAssets(target, ['Search', 'ChevronLeft', 'ChevronRight', 'Plus', 'X', 'Check', 'Calendar', 'Clock', 'Heart', 'GripVertical']);
     if (process.env.QWEN_REFERENCE_ROOT && !await access(resolve(target, 'assets/reference-manifest.json')).then(() => true, () => false)) await prepareReferenceAssets(target, fixture, process.env.QWEN_REFERENCE_ROOT);
-    await generateService(target, evidence, { interface: fixture.interface, resume });
+    await generateService(target, evidence, { interface: fixture.interface, flow: fixture.flow, resume });
     const names = ['index.html', 'styles.css', 'app.js'];
     const raw = await Promise.all(names.map(name => readFile(resolve(target, name), 'utf8')));
     const cleaned = removeComments(...raw);

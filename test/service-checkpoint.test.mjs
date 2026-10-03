@@ -88,3 +88,24 @@ test('interface retry receives rejected source and the exact error', async () =>
   const saved = JSON.parse(await readFile(join(evidence, 'generation-checkpoint.json'), 'utf8'));
   assert.ok(saved.completed.shell.includes('<input id="search">'));
 });
+
+test('static translation stages do not request product behavior and cannot resume as an interactive flow', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'qwen-static-stages-'));
+  const target = join(root, 'source'); const evidence = join(root, 'evidence');
+  await mkdir(target); await mkdir(evidence);
+  await writeFile(join(target, 'DESIGN.md'), 'Static translation with disabled example controls.');
+  await writeFile(join(target, 'REFERENCE.md'), 'Two reference cards.');
+  const instructions = {};
+  const fetcher = async (_url, options) => {
+    const content = JSON.parse(options.body).messages[1].content;
+    const [, id, instruction] = /CURRENT UNIT: (\w+)\n([\s\S]*?)\nPREVIOUS ERROR:/.exec(content);
+    instructions[id] = instruction;
+    if (id === 'layout') throw new Error('Stop before layout');
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ code: id === 'shell' ? '<html><body><h1>Static</h1></body></html>' : 'void 0;' }) } }) };
+  };
+  await assert.rejects(generateService(target, evidence, { fetcher, flow: 'static' }), /Stop before layout/);
+  assert.doesNotMatch(instructions.state, /safe localStorage loading\/saving/);
+  assert.doesNotMatch(instructions.behavior, /wire search, filters/);
+  for (const id of ['shell', 'state', 'behavior', 'forms']) assert.match(instructions[id], /STATIC TRANSLATION/);
+  await assert.rejects(generateService(target, evidence, { flow: 'booking', resume: true, fetcher: async () => { throw new Error('Unexpected model request'); } }), /does not match/);
+});

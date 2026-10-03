@@ -10,6 +10,17 @@ export const serviceStages = [
   { id: 'responsive', file: 'styles.css', tokens: 1536, instruction: 'Write ONLY the final part of styles.css: form and button styling, hidden states, status/selected states, keyboard focus, reduced motion, and mobile 390/320 adaptations. Previous CSS will be prepended. Reuse its tokens and override only where necessary. Preserve 14px minimum visible type, inherited form fonts and [hidden]{display:none!important}. No page horizontal overflow. Keep at most 45 short rules.' }
 ];
 
+export function stagesForFlow(flow) {
+  if (flow !== 'static') return serviceStages;
+  const instructions = {
+    shell: `${serviceStages[0].instruction} STATIC TRANSLATION: show example controls disabled with a visible example disclosure. Preserve native text entry only where the contract requests it. Do not create forms, booking panels or product workflows absent from the contract.`,
+    state: 'STATIC TRANSLATION: write ONLY static example data and named render functions for the existing HTML. Preserve reference assets and full content. Use textContent or escape strings. Do not initialize yet. Do not add storage, user accounts, editable data, forms or product state. Under 90 compact lines.',
+    behavior: 'STATIC TRANSLATION: write ONLY JavaScript needed to keep example controls explicitly disabled. Native text entry may remain when required, but do not wire filtering, navigation, favorite toggles, alerts, submission or persistence. Do not initialize or repeat render functions. Return void 0; when no JavaScript is needed.',
+    forms: 'STATIC TRANSLATION: write ONLY startup calling the existing render functions once. There are no form workflows to implement. Keep example actions disabled after rendering. Do not invent form elements, validation, saving, cancellation, storage, alerts or listeners for nonexistent elements. Reuse the exact functions already defined. Return void 0; if no startup is needed.'
+  };
+  return serviceStages.map(stage => ({ ...stage, instruction: instructions[stage.id] || stage.instruction }));
+}
+
 export const stageSource = (stage, code, completed) => [...serviceStages.slice(0, serviceStages.findIndex(item => item.id === stage.id)).filter(item => item.file === stage.file).map(item => completed[item.id]), code].join('\n');
 
 export function validateStage(stage, code, completed) {
