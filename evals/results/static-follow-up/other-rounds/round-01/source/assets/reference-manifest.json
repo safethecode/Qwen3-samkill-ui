@@ -1,0 +1,35 @@
+{
+  "referenceEntry": "round-01/screen.html",
+  "source": "User-supplied upstream checkout",
+  "provenance": "Copied existing reference assets; source licensing and intended roles remain part of the catalog review.",
+  "files": [
+    {
+      "path": "assets/reference/chevron-left.svg",
+      "sha256": "24130ae37aa5817e3a20692c21c09ef5875ca52fb72b7f2b3b229d7797df3ba1"
+    },
+    {
+      "path": "assets/reference/grip-vertical.svg",
+      "sha256": "6ddcbe3d0547f531ff2b9d0d482e6fec47e089d9522085b23e4fb223c542ed26"
+    },
+    {
+      "path": "assets/reference/photo-1.png",
+      "sha256": "4646698ab70e1e29ca47fbf3ead54be139d0b15ab0de463ebea9ddc7826a8584"
+    },
+    {
+      "path": "assets/reference/photo-2.png",
+      "sha256": "e896a767b74ce01a051ad2be6f729717d96a28921f47b1d27901887be0b213d8"
+    },
+    {
+      "path": "assets/reference/photo-3.png",
+      "sha256": "4b24197819ebaf803cb2abc2998d16ac968f604fa82d46aa81edd78d5154e761"
+    },
+    {
+      "path": "assets/reference/photo-fragment.png",
+      "sha256": "05549f6daf94414350127a9d65fe7de2db89c91e11a0a316877349bd810d9bdc"
+    },
+    {
+      "path": "assets/reference/source.png",
+      "sha256": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d"
+    }
+  ]
+}

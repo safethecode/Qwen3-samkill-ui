@@ -1,0 +1,16 @@
+{
+  "binding": "ffff400c9ee7d9ed0d91487d8155ce2bd171247ae22c0f958dd9974cacb655d7",
+  "stage": "state",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 102553,
+  "done_reason": "stop",
+  "load_duration": 4122400,
+  "prompt_eval_count": 7522,
+  "prompt_eval_duration": 78590454000,
+  "eval_count": 537,
+  "eval_duration": 23738893000,
+  "total_duration": 102545732600,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>멘토 찾기</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<main id=\\\"mentor-discovery\\\">\\n  <header class=\\\"page-header\\\">\\n    <h1 id=\\\"page-title\\\">멘토 찾기</h1>\\n    <nav class=\\\"header-tools\\\">\\n      <button type=\\\"button\\\" aria-label=\\\"필터\\\" class=\\\"icon-btn filter-toggle\\\">\\n        <img src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n      </button>\\n    </nav>\\n  </header>\\n\\n  <section id=\\\"search-section\\\">\\n    <label for=\\\"search\\\" class=\\\"visually-hidden\\\">멘토 검색</label>\\n    <div class=\\\"input-wrapper example-mode\\\">\\n      <img src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\" class=\\\"search-icon\\\">\\n      <input type=\\\"search\\\" id=\\\"search\\\" placeholder=\\\"멘토 이름, 전문분야 검색\\\" disabled aria-label=\\\"멘토 이름, 전문분야 검색\\\">\\n      <button type=\\\"button\\\" id=\\\"clear-search\\\" class=\\\"icon-btn clear-btn\\\" disabled>\\n        <img src=\\\"assets/icons/X.svg\\\" alt=\\\"\\\" width=\\\"16\\\" height=\\\"16\\\">\\n      </button>\\n    </div>\\n  </section>\\n\\n  <nav id=\\\"category-filters\\\" class=\\\"chip-list example-mode\\\" aria-label=\\\"전문 분야 필터\\\">\\n    <button type=\\\"button\\\" class=\\\"chip active\\\" data-category=\\\"all\\\">전체</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\" data-category=\\\"design\\\">디자인</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\" data-category=\\\"dev\\\">개발</button>\\n    <button type=\\\"button\\\" class=\\\"chip\\\" data-category=\\\"marketing\\\">마케팅</button>\\n  </nav>\\n\\n  <section id=\\\"mentor-list\\\" aria-label=\\\"멘토 목록\\\">\\n    <!-- Rendered by app.js -->\\n  </section>\\n\\n  <p class=\\\"example-disclosure\\\">이 화면은 예시 데이터입니다.</p>\\n</main>\\n<script defer src=\\\"app.js\\\"></script>\\n</body>\\n</html>\"\n}"
+}

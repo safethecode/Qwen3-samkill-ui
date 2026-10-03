@@ -1,0 +1,344 @@
+{
+  "model": "qwen3.6:35b-a3b-coding",
+  "generationThinking": false,
+  "inferenceOptions": {
+    "num_gpu": 16,
+    "num_ctx": 16384,
+    "num_batch": 128
+  },
+  "samplingOptions": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1.05
+  },
+  "harnessHashes": {
+    "evals/service-cases.mjs": "33b7ecff8fd794a3a431259a78d423d9cf2e6c71154497deb129f7e2a94ec412",
+    "package-lock.json": "97f0b672e3c84a57a0c8a3a291170929b80ef3025a88318aa99b7b4ad9cbdee6",
+    "scripts/asset-references.mjs": "27e2487a3a151a7b8bef477da5378b1f5f71248150ea2610c959049242d2fa15",
+    "scripts/benchmark.mjs": "a97bfa6c6021884cfdb45ac631f853d115fc4245ae218dd6edcb3f68bab7f861",
+    "scripts/catalog-gate.mjs": "06f6817721e160682b34f96605f58a7780c9d907423676c2d9cbb8b6856e6495",
+    "scripts/catalog-plan.mjs": "f1cf03229d42e1f56887d3ecced5df8c1ff9da70bdffb7ff1b747e0c3178a2d8",
+    "scripts/catalog.mjs": "bdd1e96da8c9d42ab7e89b4de5f3bde67ba338d9ac25f2eef7607c2e997e8bc6",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/dom-references.mjs": "f98202274d55fa641fdb94349fabbd7557ddee2c1a379a90a595eed22e41baf0",
+    "scripts/evaluate.mjs": "68665c6f0a67c6f8f9d2ecb1d993f945b635e4988d3ca9576729d27aca099222",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/font-rendering.mjs": "c7ffb51539edaaff991e41946c6f60ca85c48e81905be5c6b2497bfe49b9b961",
+    "scripts/generate-service.mjs": "85f21b2cbd4066788e4d6d1f69b16b7e30114acf1d28cced520720c251e904e3",
+    "scripts/generate.mjs": "2d49ebc56706e83e65f3cae674b8e194ee486b9a8cd7484b5ae326212487d081",
+    "scripts/harness-binding.mjs": "6b71529cbc7778c4a5a071b2de25cd4662f04f0383cab95941eebe0f1b8df1ff",
+    "scripts/icon-assets.mjs": "de29824f013bc2bb71fe5b10063986cffa26a79fae41925e17cd56d54cc79a62",
+    "scripts/icon-check.mjs": "dc7c96dcf3e2e7198d04ac9380d73017f12363e9bea792070a864e24a5ab4b80",
+    "scripts/icons.mjs": "105ad7cf37f100e0e922bbe086bbd5eb40e8e0389860fa75edbceefeaf58a679",
+    "scripts/inference-options.mjs": "5554438d5a454be997f1b24cadf666a0a4c6fb6990fc095c04cefc03bcd664f3",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/label-check.mjs": "a7b4a99003e80ac49df855adbcc80d8604ef2364b6441b5ccef24781a3b2e081",
+    "scripts/owned-rollback.mjs": "e7ae6ea4ba450f14a621dfe5e4c958e7ff619e33dd7f16332e6a776e937e879e",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/quality-loop.mjs": "4d8168ba213788ab413be20d3574c5cf5eaa8516031b57267a4d95ff30ec001b",
+    "scripts/quality-policy.mjs": "29fe2de8114a08a610ec2c7061f8a69a7e712ecf796d5c5a163cc37602fb9b35",
+    "scripts/quality.mjs": "ed6be5b97283fd503ef6fa705f5a4e96944d1821ec6fd55fad2755142dd5d4d0",
+    "scripts/reference-assets.mjs": "647cf0c06f2715817b181eefb907a0815ef62cc39a8b77ce23938c221da5831e",
+    "scripts/reference-capture.mjs": "e9f80432bc4865a4775a1deefd5b7b4c9165c143aa6a68f2adbd189dfc423157",
+    "scripts/refine.mjs": "3f233369b6ac5c353ed4e971672a2066aaba8e564397f79f7256373e3df9b52c",
+    "scripts/repair-units.mjs": "4ddfb5804c3c39fddd82f48b9d7844627c2b92ca363d69a2a0feb266e987b707",
+    "scripts/repair.mjs": "9e7f66ec9477b72df91307153af626b0c436ccfdcb03547fe1df6c369d0cf864",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/review-findings.mjs": "a78e302e3a8ebf060a805028083e405d10b0699cabbca61c1db6dd307b546655",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/service-benchmark.mjs": "19eebdf09399b33b18c765e6996b744d103bedb2065bbf968ed45647dcf8e348",
+    "scripts/service-evaluate.mjs": "637b80754251c069cc03ac159213d40282a4a6e71d5ee209a36225ea93c5f3f1",
+    "scripts/service-gallery.mjs": "78621a605a0b9869a12fb4e34f243a5c5ad3407db0d1f8a298e823f59cabcf74",
+    "scripts/service-interface.mjs": "4526ebefde7e6f38b7ebf294e3cb36866a753518eed39f3dd943f065eacdb550",
+    "scripts/service-progress.mjs": "4f1d99b8a23ea26ed984d07983d9a542d555acf6c7907c07da66df6b9815bb34",
+    "scripts/service-repair.mjs": "61f86f8af861686435092397d5caf0722aa9424c54db707c61655dd2261772bb",
+    "scripts/service-resume.mjs": "1956218819ba5d2cc0263cc11c71d911a19c5f871e2194bebf8a7f45ded498d2",
+    "scripts/service-revalidate.mjs": "ba364e7a7839d5372b8a93cedf112a1651a00f738ca1f114f157032014db6a7d",
+    "scripts/service-stages.mjs": "af71c3ca83a35ad19cb792f253daa9367136d1d13b130022ce0e4cad27ca23d2",
+    "scripts/setup.mjs": "8a9e96c393a64bf7bfb28462945b537b277725bc0b0d951b3dfed4c370a4e363",
+    "scripts/skill-context.mjs": "b7781749eee1ff33bdf2c246323f7d553635f594f968fbe66a346302a6a1f55a",
+    "scripts/source-binding.mjs": "3cf0cbbf48ef6ad7abbbdd907bf742691bf173c88d140273bf6dc97d008582bd",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "a86a9cd93173edc5ea04f16ac9331101ceb59db1a73c677348fd804ea5c577b1",
+    "scripts/visibility.mjs": "fa748f7755f974823270b34f3e9a94e8d9913a4a8e22a631d561a0ac76f4f9d5",
+    "scripts/vision-review.mjs": "44d988922e8468b8086f62d6900747f0a1d27315f0ae07658848ceb4df239ae8",
+    "scripts/workflow-state.mjs": "d2cbbdcc14238eedd7c91b805cca0eade24cc38f4c0b9c23001c065494e15a56",
+    "skills/qwen-samkill-ui/SKILL.md": "559793ed8a25e694f93b87ed89ec99eaac184b02b75b5590efdfb9e78d5da0b0",
+    "skills/qwen-samkill-ui/references/service-contracts.md": "9eef6278c163695455a6b37acf3c5513ca6e1850251e37c2bff024f8a9b521e3",
+    "skills/qwen-samkill-ui/references/upstream/design-md/guide.md": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76",
+    "skills/qwen-samkill-ui/references/upstream/design-md/references/document-contract.md": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/guide.md": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/references/flow-contract.md": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/guide.md": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/references/element-contract.md": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/guide.md": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/change-review.md": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/design-gate.md": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/deslop-triage.md": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/failure-catalog.json": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/feedback-regression.md": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/review-criteria.md": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/state-stress.md": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/guide.md": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/anti-slop-code.md": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/application-format.md": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/dashboard.md": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-guardrails.md": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-tokens.md": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/icon-controls.md": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/mobile.md": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/product-reasoning.md": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/reference-synthesis.md": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/typography.md": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/ui-composition.md": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d",
+    "skills/qwen-samkill-ui/references/upstream/samkill-ui/guide.md": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/guide.md": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/component-anatomy.md": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/observation-format.md": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/research-plan.md": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/search-examples.md": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/guide.md": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/copy-contract.md": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/korean-writing.md": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+  },
+  "started": "2026-10-03T21:41:18.621Z",
+  "missingUpstreamRounds": [
+    5,
+    6,
+    7
+  ],
+  "results": [
+    {
+      "case": "round-01",
+      "scope": "static translation",
+      "visual": "UNVERIFIED",
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-1440.json",
+          "category": "fonts",
+          "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+          "rules": [
+            "ORC-G06"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-390.json",
+          "category": "fonts",
+          "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+          "rules": [
+            "ORC-G06"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+          "evidence": "font-rendering-320.json",
+          "category": "fonts",
+          "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+          "rules": [
+            "ORC-G06"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 11,
+        "font-rendering-1440": 0,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "readable-390": 11,
+        "font-rendering-390": 0,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 0,
+        "readable-320": 15,
+        "font-rendering-320": 0,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "일정 편집": 1,
+          "Day 1": 2,
+          "Day 2": 2,
+          "Day 3": 1,
+          "해변 산책": 1,
+          "서귀포시 · 야외": 1,
+          "오래된 골목 카페": 1,
+          "제주시 · 카페": 1,
+          "오름 전망대": 1,
+          "성산군 · 경관": 1,
+          "저녁 시장": 1,
+          "서귀포시 · 식도락": 1,
+          "완료": 1
+        },
+        "390": {
+          "일정 편집": 1,
+          "Day 1": 2,
+          "Day 2": 2,
+          "Day 3": 1,
+          "해변 산책": 1,
+          "서귀포시 · 야외": 1,
+          "오래된 골목 카페": 1,
+          "제주시 · 카페": 1,
+          "오름 전망대": 1,
+          "성산군 · 경관": 1,
+          "저녁 시장": 1,
+          "서귀포시 · 식도락": 1,
+          "완료": 1
+        },
+        "1440": {
+          "일정 편집": 1,
+          "Day 1": 2,
+          "Day 2": 2,
+          "Day 3": 1,
+          "해변 산책": 1,
+          "서귀포시 · 야외": 1,
+          "오래된 골목 카페": 1,
+          "제주시 · 카페": 1,
+          "오름 전망대": 1,
+          "성산군 · 경관": 1,
+          "저녁 시장": 1,
+          "서귀포시 · 식도락": 1,
+          "완료": 1
+        }
+      },
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'pill active',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 1'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 2'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 3'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '서귀포시 · 야외'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '제주시 · 카페'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-3',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'pill active',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 1'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 2'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 3'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '서귀포시 · 야외'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '제주시 · 카페'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-3',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '12px',\n+     fontWeight: '400',\n+     id: '"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-320",
+          "status": "FAIL",
+          "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'pill active',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 1'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 2'\n+   },\n+   {\n+     class: 'pill',\n+     element: 'BUTTON',\n+     fontSize: '13px',\n+     fontWeight: '500',\n+     id: '',\n+     pseudo: null,\n+     text: 'Day 3'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-name',\n+     element: 'DIV',\n+     fontSize: '13px',\n+     fontWeight: '600',\n+     id: 'name-place-1',\n+     pseudo: null,\n+     text: '해변 산책'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '11px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '서귀포시 · 야외'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-place-2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-name',\n+     element: 'DIV',\n+     fontSize: '13px',\n+     fontWeight: '600',\n+     id: 'name-place-2',\n+     pseudo: null,\n+     text: '오래된 골목 카페'\n+   },\n+   {\n+     class: 'place-meta',\n+     element: 'DIV',\n+     fontSize: '11px',\n+     fontWeight: "
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "PASS"
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        },
+        {
+          "name": "bound-dependencies",
+          "status": "PASS"
+        }
+      ],
+      "passed": 22,
+      "total": 25,
+      "contractHash": "befbfdb6de5c9b8e267856da7ebc5833f16014d1db3d632815a97b430dc33bd6",
+      "sourceHashes": {
+        "index.html": "68a3a10997345fb86c329c1c6896e2bd61f7b682cbe6de45bb0b1c4c2df243b2",
+        "app.js": "e81c4e65afdbceae791e259cb5b386839aa1ddd3b786e64a6a6d41df4ad5c087",
+        "styles.css": "5016e3f81aad37155901c2b1c05c2488818efc6abc553b1c6cc9d941696824df"
+      },
+      "hostNormalization": "Static lifecycle bootstrap and parser-based comment removal",
+      "phase": "EVALUATED",
+      "elapsedMs": 507344
+    },
+    {
+      "case": "round-03",
+      "scope": "static translation",
+      "phase": "GENERATION_FAILED",
+      "status": "INCOMPLETE",
+      "error": "Unprovided image/font assets: assets/reference/clock.svg, assets/reference/check.svg. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration.",
+      "elapsedMs": 200749
+    }
+  ]
+}

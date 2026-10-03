@@ -1,0 +1,6 @@
+{
+  "binding": "8d1f2da5a4219b04ebed8f429d31af5c746866dd8d9fdcaa9e0690af335aed9b",
+  "stage": "behavior",
+  "producer": "host-static-lifecycle",
+  "code": "void 0;"
+}

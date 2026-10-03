@@ -1,0 +1,1 @@
+Preserve the original round01 outside-checkbox/photo/text/handle ownership and compact mobile frame. No invented interactive success.

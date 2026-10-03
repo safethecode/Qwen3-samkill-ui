@@ -1,0 +1,6 @@
+{
+  "stage": "shell",
+  "binding": "ffff400c9ee7d9ed0d91487d8155ce2bd171247ae22c0f958dd9974cacb655d7",
+  "elapsedMs": 28832,
+  "error": "Field #search requires a nonempty visible label; a placeholder or aria-label alone is insufficient"
+}

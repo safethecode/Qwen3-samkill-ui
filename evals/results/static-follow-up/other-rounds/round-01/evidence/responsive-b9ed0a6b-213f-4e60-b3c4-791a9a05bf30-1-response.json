@@ -1,0 +1,16 @@
+{
+  "binding": "8d1f2da5a4219b04ebed8f429d31af5c746866dd8d9fdcaa9e0690af335aed9b",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 128430,
+  "done_reason": "stop",
+  "load_duration": 3661400,
+  "prompt_eval_count": 8695,
+  "prompt_eval_duration": 92257375000,
+  "eval_count": 728,
+  "eval_duration": 35837862000,
+  "total_duration": 128421231400,
+  "content": "{\n  \"code\": \"/* Form and input styling */\\ninput[type=\\\"text\\\"],\\ninput[type=\\\"number\\\"],\\ntextarea,\\nselect {\\n  font-family: inherit;\\n  font-size: inherit;\\n  color: inherit;\\n  background-color: transparent;\\n  border: 1px solid var(--color-border);\\n  border-radius: var(--radius-sm);\\n  padding: var(--space-xs) var(--space-sm);\\n  width: 100%;\\n}\\n\\ninput:focus,\\ntextarea:focus,\\nselect:focus {\\n  outline: none;\\n  border-color: var(--color-text-primary);\\n  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);\\n}\\n\\n/* Hidden states */\\n[hidden] {\\n  display: none !important;\\n}\\n\\n/* Status and selected states */\\n.status-saved {\\n  color: var(--color-text-secondary);\\n  font-size: 12px;\\n  margin-top: var(--space-xs);\\n  text-align: center;\\n}\\n\\n.selected-item {\\n  background-color: rgba(0, 0, 0, 0.03);\\n  border-left: 3px solid var(--color-text-primary);\\n}\\n\\n/* Keyboard focus visible ring */\\n:focus-visible {\\n  outline: 2px solid var(--color-text-primary);\\n  outline-offset: 2px;\\n}\\n\\n/* Reduced motion */\\n@media (prefers-reduced-motion: reduce) {\\n  *,\\n  *::before,\\n  *::after {\\n    animation-duration: 0.01ms !important;\\n    animation-iteration-count: 1 !important;\\n    transition-duration: 0.01ms !important;\\n    scroll-behavior: auto !important;\\n  }\\n}\\n\\n/* Mobile 390px adaptation */\\n@media (max-width: 390px) {\\n  #app {\\n    padding-left: var(--space-sm);\\n    padding-right: var(--space-sm);\\n  }\\n\\n  .place-name {\\n    font-size: 14px;\\n  }\\n\\n  .place-meta {\\n    font-size: 12px;\\n  }\\n\\n  .destination-pills {\\n    gap: var(--space-xs);\\n  }\\n\\n  .pill {\\n    padding: var(--space-xs) var(--space-sm);\\n    font-size: 13px;\\n  }\\n}\\n\\n/* Mobile 320px adaptation */\\n@media (max-width: 320px) {\\n  .place-row {\\n    padding: var(--space-xs);\\n    gap: var(--space-xs);\\n  }\\n\\n  .place-media {\\n    width: 40px;\\n    height: 40px;\\n  }\\n\\n  .place-name {\\n    font-size: 13px;\\n  }\\n\\n  .place-meta {\\n    font-size: 11px;\\n  }\\n\\n  .btn-primary {\\n    padding: var(--space-sm);\\n    font-size: 15px;\\n  }\\n}\\n\"\n}"
+}

@@ -1,0 +1,6 @@
+{
+  "stage": "state",
+  "binding": "ffff400c9ee7d9ed0d91487d8155ce2bd171247ae22c0f958dd9974cacb655d7",
+  "elapsedMs": 102555,
+  "error": "Unexpected token (1:0)"
+}

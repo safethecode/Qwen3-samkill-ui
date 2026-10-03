@@ -1,0 +1,6 @@
+{
+  "stage": "shell",
+  "binding": "6c366995272ca5b50e1024c8ce76928bd4f49350b68af728157e5367777646be",
+  "elapsedMs": 69487,
+  "error": "Unprovided image/font assets: assets/reference/clock.svg, assets/reference/check.svg. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration."
+}
