@@ -26,3 +26,15 @@ test('extra local styles scripts and fonts are bound outside assets', async () =
   await writeFile(join(target, 'theme.css'), 'changed');
   assert.notDeepEqual(await sourceBinding(target), before);
 });
+
+test('new evaluation output does not invalidate unchanged application sources', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'qwen-evidence-binding-'));
+  await writeFile(join(target, 'index.html'), '<html></html>');
+  const before = await sourceBinding(target);
+  for (const directory of ['run-123/preflight', 'quality-123/inspection', 'repair-123/initial']) {
+    await mkdir(join(target, directory), { recursive: true });
+    await writeFile(join(target, directory, 'report.json'), '{}');
+    await writeFile(join(target, directory, 'desktop.png'), 'evidence');
+  }
+  assert.deepEqual(await sourceBinding(target), before);
+});

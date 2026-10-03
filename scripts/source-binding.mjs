@@ -17,7 +17,7 @@ export async function sourceBinding(target) {
   const discover = async directory => {
     for (const entry of await readdir(resolve(target, directory), { withFileTypes: true })) {
       const name = directory ? `${directory}/${entry.name}` : entry.name;
-      if (/^(?:\.git|node_modules|design|assets|quality-[^/]*|repair-[^/]*)(?:\/|$)/.test(name)) continue;
+      if (/^(?:\.git|node_modules|design|assets|quality-[^/]*|repair-[^/]*|run-[^/]*)(?:\/|$)/.test(name)) continue;
       if (entry.isSymbolicLink()) throw new Error(`Review source must not be a symlink: ${name}`);
       if (entry.isDirectory()) await discover(name);
       else if (/^\.(?:html?|css|[cm]?js|json|woff2?|ttf|otf|svg|png|jpe?g|webp|gif|avif|ico|mp4|webm|mp3|wav)$/.test(extname(name).toLowerCase()) && !['QUALITY-RESULT.json', 'QUALITY.json'].includes(name)) await visit(name);
