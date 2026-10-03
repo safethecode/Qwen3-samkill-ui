@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "references": {
+    "desktop": "references/desktop.png",
+    "mobile": "references/mobile.png"
+  },
+  "observations": "Compare the reduced resume collection: heading and creation action, pale preview stages with white paper, readable personal name/role/introduction and section structure, metadata below previews, Edit emphasized over duplicate/archive, compact mobile actions. The design contract overrides reference wording and features. Preserve required subtitle, labels and controls. Do not add backup/import or extra filters from a larger reference product."
+}

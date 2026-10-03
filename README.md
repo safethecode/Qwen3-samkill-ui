@@ -41,6 +41,8 @@ The UI agent allows local file tools, shell checks, skills and optional `vision_
 
 ## Reproduce the evaluation
 
+For unattended functional **and visual** gating, use [the quality workflow](docs/QUALITY.md): `npm run quality -- TARGET 4`. It requires desktop/mobile reference images and a `QUALITY.json` manifest, rejects regressions, escalates stalled repairs and requires a separate final visual audit. The functional-only commands below do not certify design completion.
+
 For unattended generation without OpenCode tool calling, the staged Ollama backend writes HTML, JavaScript and CSS separately, passing earlier files to later stages. It starts from the design contract, not the saved example. The measured configuration generates with Coder 30B and uses Qwen3.5 9B for bounded repairs:
 
 ```powershell

@@ -17,6 +17,8 @@ Deliver working files, not a description of files. Follow the user's requirement
 4. Review screenshots against the contract: hierarchy, document/content density, spacing, typography, reference fidelity and mobile layout. Record visual review as UNVERIFIED if images were not inspected. Automated tests cannot establish design quality.
 5. Report actual files and executed checks. Never say all requirements are met when any gate is FAIL or UNVERIFIED. Persist remaining work in UI-STATUS.md before context exhaustion.
 
+When QUALITY.json exists, read `.opencode/quality-runner.json` and execute its registered Node binary and script with the target directory and visual repair budget 4. The installer records these local runtime paths. Alternatively run `npm run quality -- TARGET 4` from the Qwen3-samkill-ui repository checkout. The target needs DESIGN.md and approved desktop/mobile references declared in QUALITY.json. Read QUALITY-RESULT.json and the process exit status. Functional-only iterate/evaluate success does not establish visual completion. Missing references or an unavailable runner leave visual quality UNVERIFIED; never substitute a self-written PASS. The quality runner owns its repair loop, so do not edit the target concurrently with it. A failed gate must not be bypassed by rewriting the manifest, relaxing its criteria or replacing the reference with the candidate.
+
 ## Non-negotiable UI rules
 
 - Use semantic controls and persistent visible labels. Placeholder text is not a label.
