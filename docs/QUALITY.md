@@ -58,7 +58,13 @@ Each `quality-*` directory retains functional logs, screenshots, review response
 
 Visual judgments can be wrong or inconsistent. Strict rollback can reject a useful edit when the judge's scores fluctuate. Reference selection and representative positive/negative calibration remain necessary; adding gates improves rejection discipline without guaranteeing every task converges.
 
-## Resource budgets
+## Auditable generation typography
+
+The service benchmark opts into `generateService()` with `normalizeContractTypography: true` because its contracts explicitly require at least 14px text and weight 500. Direct API callers retain unchanged output by default. This supported CSS normalization records before/after hashes and `APPLIED_NOT_APPROVED` in `typography-normalization.json`; original model responses remain available. Shared tokens used for spacing are preserved instead of enlarging padding when correcting font size.
+
+This is a generation foundation, not a quality approval or interception of arbitrary OpenCode chats. Unsupported CSS, intended font families and roles, responsive geometry, enlarged-text layouts and the full catalog still require verification and repair. The recorded Round 02 enlarged-text overflow worsened after normalization despite improved basic readability checks. See the [source-bound experiment](../evals/results/typography-foundation/visual-review.md).
+
+## Inference resource settings
 
 `QWEN_NUM_GPU`, `QWEN_NUM_CTX` and `QWEN_NUM_BATCH` explicitly override Ollama request options across generation, repair and review. They are optional; choose them for the local machine rather than assuming full GPU offload fits alongside other applications. For example, `16`, `16384` and `128` reserve more headroom by offloading fewer layers. This can slow token generation while avoiding resource contention. A timeout can occur during model load, image encoding, prompt processing or output generation; it is not evidence of poor UI quality. Responses retain load, prompt and generation timings. Bounded repair requests also record excerpt location, input length, output budget and timeout telemetry.
 
