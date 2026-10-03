@@ -28,6 +28,14 @@ test('a hidden duplicate heading does not hide a visible required action from th
   assert.ok(report.checks.filter(check => check.name.startsWith('content-')).every(check => check.status === 'PASS'));
 });
 
+test('missing visible image assets fail even without JavaScript errors', async () => {
+  const target = await mkdtemp(resolve('runs/service-broken-image-'));
+  await writeFile(resolve(target, 'index.html'), '<html><body><h1>Test</h1><img src="missing.jpg" alt="Place" width="96" height="96"></body></html>');
+  const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'broken-image', scope: 'test fixture', anchors: ['Test'], flow: 'static' });
+  assert.equal(report.checks.find(check => check.name === 'assets-390').status, 'FAIL');
+  assert.equal(report.checks.find(check => check.name === 'runtime-390').status, 'PASS');
+});
+
 test('reference capture rejects a missing HTTP entry instead of saving blank evidence', async () => {
   const target = await mkdtemp(resolve('runs/service-missing-reference-'));
   await assert.rejects(evaluateService(target, resolve(target, 'evidence'), { id: 'missing' }, { reference: true, entry: 'missing.html' }), /HTTP 404|HTTP_RESPONSE_CODE_FAILURE/);

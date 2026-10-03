@@ -51,6 +51,10 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.deepEqual(small, [], 'Text smaller than 14px');
         });
         await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
+        await check(`assets-${width}`, async () => {
+          const broken = await page.locator('img').evaluateAll(images => images.filter(image => image.getBoundingClientRect().width && image.getBoundingClientRect().height && (!image.complete || !image.naturalWidth)).map(image => image.getAttribute('src')));
+          assert.deepEqual(broken, [], 'Visible images failed to load');
+        });
         await check(`labels-${width}`, async () => {
           const unlabeled = await page.evaluate(() => [...document.querySelectorAll('input:not([type=hidden]),textarea,select')].filter(el => el.getBoundingClientRect().width && el.getBoundingClientRect().height && !el.disabled && ![...el.labels || []].some(label => label.getBoundingClientRect().width && label.getBoundingClientRect().height && label.textContent.trim())).map(el => el.id || el.name || el.tagName));
           assert.deepEqual(unlabeled, [], 'Visible fields require visible labels; aria-label and placeholders alone are insufficient');
