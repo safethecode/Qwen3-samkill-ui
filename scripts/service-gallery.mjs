@@ -24,7 +24,7 @@ for (const fixture of serviceCases) {
     }
     images.push(`<details ${width === 390 ? 'open' : ''}><summary>${width}px 비교</summary><div class="pair">${pair.join('') || '<p>캡처 없음</p>'}</div></details>`);
   }
-  for (const [kind, source] of [['reference', resolve(referenceDirectory, fixture.id)], ['candidate', resolve(studyDirectory, fixture.id, revalidated ? 'reevaluated' : 'evidence')]]) {
+  for (const [kind, source] of [['reference', resolve(referenceDirectory, fixture.id)], ['candidate', resolve(studyDirectory, fixture.id, revalidated ? 'reevaluated' : 'evidence')], ['manual-inspection', resolve(studyDirectory, fixture.id, 'manual-states')]]) {
     const files = (await readdir(source).catch(() => [])).filter(name => name.endsWith('.png') && !/^\d+(?:-full)?\.png$/.test(name));
     const states = [];
     for (const file of files) {
@@ -32,7 +32,7 @@ for (const fixture of serviceCases) {
       await copyFile(resolve(source, file), resolve(directory, name));
       states.push(`<figure><figcaption>${escape(kind)} · ${escape(file)}</figcaption><a href="${fixture.id}/${encodeURIComponent(name)}"><img loading="lazy" src="${fixture.id}/${encodeURIComponent(name)}" alt="${escape(file)}"></a></figure>`);
     }
-    if (states.length) images.push(`<details><summary>${kind === 'reference' ? '원본 추가 화면' : '실행한 동작의 결과 화면'} · 서로 같은 상태라는 보장은 없음</summary><div class="pair">${states.join('')}</div></details>`);
+    if (states.length) images.push(`<details><summary>${kind === 'reference' ? '원본 추가 화면' : kind === 'manual-inspection' ? '직접 검사로 추가 확인한 화면 · 자동 검사 통과를 뜻하지 않음' : '실행한 동작의 결과 화면'} · 서로 같은 상태라는 보장은 없음</summary><div class="pair">${states.join('')}</div></details>`);
   }
   sections.push(`<section id="${fixture.id}"><h2>${escape(fixture.title)}</h2><p>${escape(fixture.scope)} · ${result?.total ? `실행 검사 ${result.passed}/${result.total}` : escape(result?.error || '실행 결과 없음')} · 시각 품질 자동 승인 없음</p><p>${escape(fixture.reference)}</p>${images.join('')}<details><summary>고정한 서비스 기획</summary><pre>${escape(fixture.contract)}</pre></details></section>`);
 }

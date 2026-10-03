@@ -14,7 +14,7 @@ for (const fixture of serviceCases.filter(c => c.entry)) {
     const captureStates = async (page, width, evidence, url) => {
       const actions = ({
         'round-04': [['detail', () => page.getByRole('link', { name: '온실 커피 상세 보기', exact: true }).click()], ['booking', () => page.getByRole('button', { name: /온실 커피.*예약 선택/ }).first().click()]],
-        'round-08': [['ingredients', () => page.getByRole('button', { name: '바꾸기', exact: true }).click()]],
+        'round-08': [['ingredients', () => page.getByRole('button', { name: '바꾸기', exact: true }).click()], ['detail', () => page.getByRole('button', { name: '토마토 달걀 덮밥 자세히 보기', exact: true }).click()], ['cooking', async () => { await page.getByRole('button', { name: '토마토 달걀 덮밥 자세히 보기', exact: true }).click(); await page.getByRole('button', { name: '요리 시작', exact: true }).click(); }]],
         'round-09': [['editor', () => page.getByRole('button', { name: '편집', exact: true }).first().click()]],
         'round-10': [['response', () => page.locator('#respond-button').click()]]
       })[fixture.id] || [];
