@@ -34,3 +34,11 @@ test('unit repairs reject writes outside the selected source window or file', ()
   assert.throws(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: '.elsewhere{}', newString: '.elsewhere{color:red}' }]));
   assert.throws(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: '', newString: 'bad' }]));
 });
+
+test('markup repair can inspect the renderer without gaining permission to rewrite it', () => {
+  const script = 'function render(){document.querySelector("#items").replaceChildren();}';
+  const unit = selectRepairUnit({ 'index.html': '<main id="items"></main>', 'app.js': script }, ['index.html'], 'missing action');
+  assert.ok(unit.context.includes(script));
+  assert.match(unit.context, /READ-ONLY JAVASCRIPT/);
+  assert.throws(() => validateUnitPatches(unit, [{ path: 'app.js', oldString: script, newString: 'void 0;' }]));
+});
