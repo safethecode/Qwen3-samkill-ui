@@ -41,13 +41,35 @@ test('changed contracts invalidate resumable generation checkpoints', async () =
   await assert.rejects(generateService(target, evidence, { resume: true, fetcher: async () => { throw new Error('Should not call model'); } }), /does not match/);
 });
 
+test('missing field labels are repaired in the shell before any implementation unit', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'qwen-label-retry-'));
+  const target = join(root, 'source'); const evidence = join(root, 'evidence');
+  await mkdir(target); await mkdir(evidence);
+  await writeFile(join(target, 'DESIGN.md'), 'Visible search label.');
+  await writeFile(join(target, 'REFERENCE.md'), 'Search the catalogue.');
+  const calls = [];
+  const fetcher = async (_url, options) => {
+    const content = JSON.parse(options.body).messages[1].content;
+    const id = /CURRENT UNIT: (\w+)/.exec(content)[1];
+    calls.push(id);
+    if (id !== 'shell') throw new Error('Stop after label validation');
+    const second = calls.length === 2;
+    if (second) assert.match(content, /#search requires a nonempty visible label/);
+    const code = `<html><body>${second ? '<label for="search">Search</label>' : ''}<input id="search" placeholder="Search"></body></html>`;
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ code }) } }) };
+  };
+  await assert.rejects(generateService(target, evidence, { fetcher, interface: { search: 'input' } }), /Stop after label validation/);
+  assert.deepEqual(calls.slice(0, 3), ['shell', 'shell', 'state']);
+  assert.match(JSON.parse(await readFile(join(evidence, 'generation-checkpoint.json'), 'utf8')).completed.shell, /<label/);
+});
+
 test('interface retry receives rejected source and the exact error', async () => {
   const root = await mkdtemp(join(tmpdir(), 'qwen-interface-retry-'));
   const target = join(root, 'source'); const evidence = join(root, 'evidence');
   await mkdir(target); await mkdir(evidence);
   await writeFile(join(target, 'DESIGN.md'), 'Keep the working search input.');
   await writeFile(join(target, 'REFERENCE.md'), 'A booking form.');
-  const rejected = '<html><body><input id="search"><section id="booking-form"></section></body></html>';
+  const rejected = '<html><body><label for="search">Search</label><input id="search"><section id="booking-form"></section></body></html>';
   let shells = 0;
   const fetcher = async (_url, options) => {
     const content = JSON.parse(options.body).messages[1].content;
