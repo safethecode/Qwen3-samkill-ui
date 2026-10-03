@@ -51,14 +51,14 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     await writeFile(resolve(target, 'REFERENCE.md'), fixture.reference);
     if (!Object.keys(await verifiedIconAssets(target)).length) await writeIconAssets(target, ['Search', 'ChevronLeft', 'ChevronRight', 'Plus', 'X', 'Check', 'Calendar', 'Clock', 'Heart', 'GripVertical']);
     if (process.env.QWEN_REFERENCE_ROOT && !await access(resolve(target, 'assets/reference-manifest.json')).then(() => true, () => false)) await prepareReferenceAssets(target, fixture, process.env.QWEN_REFERENCE_ROOT);
-    await generateService(target, evidence, { interface: fixture.interface, flow: fixture.flow, resume });
+    await generateService(target, evidence, { interface: fixture.interface, flow: fixture.flow, normalizeContractTypography: true, resume });
     const names = ['index.html', 'styles.css', 'app.js'];
     const raw = await Promise.all(names.map(name => readFile(resolve(target, name), 'utf8')));
     const cleaned = removeComments(...raw);
     const normalized = [cleaned.html, cleaned.css, cleaned.js];
     for (let index = 0; index < names.length; index++) await writeFile(resolve(target, names[index]), normalized[index]);
     const sourceHashes = Object.fromEntries(await Promise.all(['index.html', 'app.js', 'styles.css'].map(async name => [name, createHash('sha256').update(await readFile(resolve(target, name))).digest('hex')])));
-    generated = { contractHash: digest(fixture.contract), sourceHashes, hostNormalization: fixture.flow === 'static' ? 'Static lifecycle bootstrap and parser-based comment removal' : 'Parser-based comment removal only' };
+    generated = { contractHash: digest(fixture.contract), sourceHashes, hostNormalization: fixture.flow === 'static' ? 'Static lifecycle bootstrap, contract typography normalization and parser-based comment removal' : 'Contract typography normalization and parser-based comment removal' };
     study.results.push({ case: fixture.id, scope: fixture.scope, phase: 'GENERATED', ...generated });
     await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
     }

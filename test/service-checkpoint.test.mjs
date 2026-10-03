@@ -156,3 +156,30 @@ test('JavaScript retries name the required language and do not repeat the HTML c
   await assert.rejects(generateService(target,evidence,{flow:'static',fetcher}),/Stop after corrected JavaScript/);
   assert.equal(retries,2);
 });
+
+test('contract typography normalization is explicit and preserves model output evidence', async () => {
+  const {createHash}=await import('node:crypto');
+  for (const enabled of [false,true]) {
+    const root=await mkdtemp(join(tmpdir(),'qwen-font-foundation-'));
+    const target=join(root,'source'); const evidence=join(root,'evidence');
+    await mkdir(target); await mkdir(evidence);
+    await writeFile(join(target,'DESIGN.md'),'Minimum type 14px and weight 500.');
+    await writeFile(join(target,'REFERENCE.md'),'Readable metadata.');
+    const parts={shell:'<html><body><h1>Test</h1></body></html>',state:'function renderStaticView() {}',layout:'body{font-family:system-ui;font-weight:400}.meta{font-size:11px}',responsive:'@media(max-width:400px){.meta{font-size:10px}}'};
+    const fetcher=async(_url,options)=>{
+      const id=/CURRENT UNIT: (\w+)/.exec(JSON.parse(options.body).messages[1].content)[1];
+      return {ok:true,json:async()=>({done_reason:'stop',message:{content:JSON.stringify({code:parts[id]})}})};
+    };
+    await generateService(target,evidence,{flow:'static',normalizeContractTypography:enabled,fetcher});
+    const css=await readFile(join(target,'styles.css'),'utf8');
+    const raw=JSON.parse(await readFile(join(evidence,'generation-checkpoint.json'),'utf8'));
+    assert.match(raw.completed.layout,/font-size:11px/);
+    if(enabled) {
+      assert.doesNotMatch(css,/font-size:\s*(10|11)px|font-weight:\s*400/);
+      assert.match(css,/font-family:system-ui/);
+      const record=JSON.parse(await readFile(join(evidence,'typography-normalization.json'),'utf8'));
+      assert.equal(record.afterSha256,createHash('sha256').update(css).digest('hex'));
+      assert.equal(record.status,'APPLIED_NOT_APPROVED');
+    } else assert.match(css,/font-size:11px/);
+  }
+});

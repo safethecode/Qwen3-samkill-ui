@@ -11,6 +11,7 @@ import { validateDomReferences } from './dom-references.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { removeComments } from './comments.mjs';
 import { validateAssetReferences } from './asset-references.mjs';
+import { normalizeTypography } from './typography.mjs';
 
 export async function generateService(target, evidence, options = {}) {
   const serviceStages = stagesForFlow(options.flow);
@@ -25,7 +26,7 @@ export async function generateService(target, evidence, options = {}) {
   const assets = await verifiedIconAssets(target);
   const referenceAssets = await readFile(resolve(target, 'assets/reference-manifest.json'), 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
   await writeFile(resolve(evidence, 'skill-coverage.json'), JSON.stringify({ ...inventory, generationInputs: Object.fromEntries(Object.entries(contexts).map(([id, context]) => [id, context.sources])), compliance: 'UNVERIFIED' }, null, 2));
-  const binding = createHash('sha256').update(JSON.stringify({ contract, reference, skill, settings, contexts, inventory, assets, referenceAssets, interface: options.interface, serviceStages })).digest('hex');
+  const binding = createHash('sha256').update(JSON.stringify({ contract, reference, skill, settings, contexts, inventory, assets, referenceAssets, interface: options.interface, serviceStages, normalizeContractTypography: options.normalizeContractTypography === true })).digest('hex');
   const checkpointPath = resolve(evidence, 'generation-checkpoint.json');
   const completed = {};
   if (options.resume && await access(checkpointPath).then(() => true, () => false)) {
@@ -95,6 +96,12 @@ export async function generateService(target, evidence, options = {}) {
   }
   const assembled = assembleStages(completed);
   const clean = removeComments(assembled['index.html'], assembled['styles.css'], assembled['app.js']);
+  if (options.normalizeContractTypography === true) {
+    const before = clean.css;
+    clean.css = normalizeTypography(before);
+    const hash = value => createHash('sha256').update(value).digest('hex');
+    await writeFile(resolve(evidence, 'typography-normalization.json'), JSON.stringify({ producer: 'host-contract-typography', status: 'APPLIED_NOT_APPROVED', minimumFontSizePx: 14, minimumFontWeight: 500, beforeSha256: hash(before), afterSha256: hash(clean.css), changed: before !== clean.css, limitation: 'Normalizes supported CSS declarations only. Browser checks, responsive review, actual font-role verification and the full catalog remain required.' }, null, 2));
+  }
   for (const [file, code] of Object.entries({ 'index.html': clean.html, 'styles.css': clean.css, 'app.js': clean.js })) await writeFile(resolve(target, file), code, { flag: 'wx' });
   await prepareCatalogPlan(target);
 }
