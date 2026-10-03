@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>틈 공방 - 예약</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <h1><span id="page-title">이번 주, 손으로 만드는 시간</span></h1>
+  </header>
+
+  <main>
+    <section class="catalogue" aria-labelledby="class-list-heading">
+      <h2 id="class-list-heading">클래스 목록</h2>
+      
+      
+      <div class="controls-bar">
+        <label for="search" class="visually-hidden">수업 검색</label>
+        <input type="text" id="search" placeholder="수업명 입력">
+      </div>
+
+      <ul id="class-list" class="list-grid" role="list">
+        
+      </ul>
+    </section>
+
+    
+    <aside id="booking-panel" aria-hidden="true" hidden>
+      <h2>예약하기</h2>
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="guest">예약자 이름</label>
+          <input type="text" id="guest" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="date">방문일</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="slot">예약 시간</label>
+          <select id="slot" required>
+            <option value="10:00">오전 10:00</option>
+            <option value="14:00">오후 2:00</option>
+            <option value="18:00">오후 6:00</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">예약 확정</button>
+      </form>
+    </aside>
+
+    
+    <section id="confirmation" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

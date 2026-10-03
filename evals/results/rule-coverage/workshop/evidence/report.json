@@ -1,0 +1,243 @@
+{
+  "case": "workshop",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "tag": "SPAN",
+      "id": "page-title",
+      "pseudo": null,
+      "text": "이번 주, 손으로 만드는 시간",
+      "declaredFamily": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 13.506718707761356,
+      "threshold": 3,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "page-title",
+      "pseudo": null,
+      "text": "이번 주, 손으로 만드는 시간",
+      "declaredFamily": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 13.506718707761356,
+      "threshold": 3,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "page-title",
+      "pseudo": null,
+      "text": "이번 주, 손으로 만드는 시간",
+      "declaredFamily": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "ratio": 13.506718707761356,
+      "threshold": 3,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "rules": [
+        "ORC-G11",
+        "RUI-09"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 2,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 2,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 2,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "이번 주, 손으로 만드는 시간": 1,
+      "클래스 목록": 1,
+      "수업 검색": 1
+    },
+    "390": {
+      "이번 주, 손으로 만드는 시간": 1,
+      "클래스 목록": 1,
+      "수업 검색": 1
+    },
+    "1440": {
+      "이번 주, 손으로 만드는 시간": 1,
+      "클래스 목록": 1,
+      "수업 검색": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 틈 공방"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 틈 공방"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 틈 공방"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "No initial searchable results"
+    },
+    {
+      "name": "booking-validation",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '상세', exact: true }).first()\u001b[22m\n"
+    },
+    {
+      "name": "booking-persist-cancel",
+      "status": "FAIL",
+      "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '상세', exact: true }).first()\u001b[22m\n"
+    }
+  ],
+  "passed": 18,
+  "total": 27
+}
