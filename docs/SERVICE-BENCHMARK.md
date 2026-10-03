@@ -31,7 +31,11 @@ node scripts/service-benchmark.mjs runs/service-study dispatch workshop learning
 
 Resource values are examples, not universal recommendations. Partial offload can be slower but fit alongside other GPU applications. Do not benchmark model switching while retaining both large models on a constrained device. Record resource settings and avoid presenting contended run times as isolated hardware benchmarks.
 
-Each source file is generated separately. The HTML interface is checked before dependent behavior is generated, and completed validated stages are retained in evidence even if a later stage fails. Syntax errors receive one retry with the actual error. Model response text and timing counters are retained; reasoning text is not requested or published. The runner removes parsed comments deterministically; this host assistance is disclosed in the study. Source hashes bind the generated sample to its report. Use a fresh output directory for each run.
+Generation has five bounded units: HTML shell, JavaScript state/rendering, JavaScript interactions, CSS structure and CSS responsive/control states. Later units append to earlier units without rewriting them. Every fragment must parse; the combined JavaScript must also parse, detecting duplicated declarations. The HTML interface is checked before dependent behavior is generated. Each request has a finite output budget and deadline, and one retry with its actual error.
+
+Validated units are checkpointed. Set `QWEN_RESUME=1` and rerun the same command to skip verified completed cases and resume incomplete ones without regenerating validated units. Contract, skill, interface, model settings and stage definitions must match the checkpoint. Existing reports remain in the attempt history. Use a fresh output directory when intentionally changing these inputs.
+
+Model response text and timing counters are retained; reasoning text is not requested or published. The runner removes parsed comments deterministically; this host assistance is disclosed in the study. Source hashes bind the generated sample to its report.
 
 ```sh
 node scripts/reference-capture.mjs PATH_TO_SAMKILL_UI runs/reference-captures
