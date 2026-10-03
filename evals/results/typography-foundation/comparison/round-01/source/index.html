@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 일정 편집</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="page-header">
+            <h1 id="page-title">일정 편집</h1>
+        </header>
+
+        <div class="destination-pills" role="group" aria-label="여행지 선택">
+            <button type="button" class="pill active" disabled>서울</button>
+            <button type="button" class="pill" disabled>부산</button>
+            <button type="button" class="pill" disabled>제주</button>
+        </div>
+
+        <div id="itinerary-list">
+            
+        </div>
+
+        <footer class="action-footer">
+            <button type="button" id="btn-complete" class="btn-primary" disabled>완료</button>
+        </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

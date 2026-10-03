@@ -1,0 +1,95 @@
+{
+  "referenceEntry": "round-03/screen.html",
+  "source": "User-supplied upstream checkout",
+  "provenance": "Copied existing reference assets; source licensing and intended roles remain part of the catalog review.",
+  "files": [
+    {
+      "path": "assets/reference/attendance.png",
+      "sha256": "594486b17e3aaa886c181c794e33aa175a3bf63349f81434d28f2afd898f7dea"
+    },
+    {
+      "path": "assets/reference/banner.png",
+      "sha256": "3e6207c62451c8042575009669e21949bdbc0e05723cd34039706510379c19dc"
+    },
+    {
+      "path": "assets/reference/battle.png",
+      "sha256": "64132f2001bf07b11c2bcb4b1e9a1636011b20215e2c111f4f7b0d9368141d45"
+    },
+    {
+      "path": "assets/reference/bell.svg",
+      "sha256": "e769d07778a974e22327ca663bac379281768fc948e7ad7ec988207283307ebd"
+    },
+    {
+      "path": "assets/reference/book-open.svg",
+      "sha256": "1af6b3cfbb82f4042c5a636ba8d58e4ba0b1d24257b8baa05cc88515f282be5b"
+    },
+    {
+      "path": "assets/reference/calendar.svg",
+      "sha256": "20fa0ada1710f37a44a4cbcd0300ccfc349993c02b46283a34f6428c26c04bf5"
+    },
+    {
+      "path": "assets/reference/chevron-down.svg",
+      "sha256": "df0809577fd4661afa2e6335dc6773286f510ce6b93d9a2822fc332f8fdf2cf0"
+    },
+    {
+      "path": "assets/reference/coin.png",
+      "sha256": "6e2fb5905a749193feccafb4e1170d2d890bc6277ed882957008dea66e1a63d7"
+    },
+    {
+      "path": "assets/reference/emotion.png",
+      "sha256": "756196db500f12b61c6a105355c1276d4967525adcb93ba4a73c4be3e44c6fd1"
+    },
+    {
+      "path": "assets/reference/flag.png",
+      "sha256": "9fbbd0d61d4452ad2552956d1ce6130538982cbeda7622fcb178b0b9bc7ababf"
+    },
+    {
+      "path": "assets/reference/heart.svg",
+      "sha256": "16b5db71af67c7989163d3f0c695583af35b751972ced933fdd599bab62689ef"
+    },
+    {
+      "path": "assets/reference/lottery.png",
+      "sha256": "720e97965fb4c0c1efba4c2eef0aae2116b2054e14576d77cab6f02cfa419c8a"
+    },
+    {
+      "path": "assets/reference/message-circle.svg",
+      "sha256": "81f91b048fd80a1cc7daf53ab4a57d6679f85f2dac689e82305b27e7e17199cd"
+    },
+    {
+      "path": "assets/reference/plus.svg",
+      "sha256": "f50294735c162595ea59e425a098d4e3679a89b82f1efd06779425a5922720c2"
+    },
+    {
+      "path": "assets/reference/quiz.png",
+      "sha256": "9c6f46704c05637de45482cf230c95da4ca769658b12d3818547f5689ab50011"
+    },
+    {
+      "path": "assets/reference/roulette.png",
+      "sha256": "7c09ce011964322a2cc6d7dcd381e4758a3c67e17014c9621417f382475dadb5"
+    },
+    {
+      "path": "assets/reference/shoe.png",
+      "sha256": "a4730402e429671bff6dd6b74c25c09959e25eb0e7eb8056c78df632621a477b"
+    },
+    {
+      "path": "assets/reference/shopping-bag.svg",
+      "sha256": "247582ae377275dfc4aed374b8771e3ac6d968fdc13287592c9cac97f5ea0154"
+    },
+    {
+      "path": "assets/reference/source-app.png",
+      "sha256": "0d49ce466e9ca480e2c3cefdb2f863160ed2f7bb50b0c9a5d09bcc2d20ca9275"
+    },
+    {
+      "path": "assets/reference/source.png",
+      "sha256": "9534a08e1353eb61f4e4faddd759b22c805172a97ffc227a6d1eaf94af91a62c"
+    },
+    {
+      "path": "assets/reference/user-round.svg",
+      "sha256": "64535953c7d421e4c3a5e788940fe45cf9113f2209849c6d676241d8c728a24d"
+    },
+    {
+      "path": "assets/reference/welcome.png",
+      "sha256": "2786aa6c23f5df15b534b34d6f0e67f36b6a49f689b669f872b1f02313e2399d"
+    }
+  ]
+}

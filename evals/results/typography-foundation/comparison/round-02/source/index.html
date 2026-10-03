@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>멘토 찾기</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header" id="header">
+  <h1 class="heading">멘토 찾기</h1>
+  <nav class="header-tools">
+    <button type="button" aria-label="검색">
+      <img src="assets/icons/Search.svg" alt="" width="20" height="20">
+    </button>
+    <button type="button" aria-label="알림">
+      <img src="assets/reference/bell.svg" alt="" width="20" height="20">
+    </button>
+    <button type="button" aria-label="프로필">
+      <img src="assets/reference/user-round.svg" alt="" width="20" height="20">
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="search-wrapper">
+    <label for="search" class="visually-hidden">멘토 검색</label>
+    <img class="search-icon" src="assets/icons/Search.svg" alt="" width="20" height="20">
+    <input type="search" id="search" name="q" placeholder="검색" disabled aria-label="멘토 검색">
+    <button type="button" id="clear-search" class="clear-btn" disabled aria-label="검색 지우기">
+      <img src="assets/icons/X.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div id="filters" class="filters" role="group" aria-label="카테고리 필터">
+    <button type="button" class="filter-chip active" data-filter="all">전체</button>
+    <button type="button" class="filter-chip" data-filter="design">디자인</button>
+    <button type="button" class="filter-chip" data-filter="dev">개발</button>
+    <button type="button" class="filter-chip" data-filter="marketing">마케팅</button>
+  </div>
+
+  <section id="mentor-list" class="mentor-list" aria-label="멘토 목록">
+    
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="example-disclosure">이 화면은 예시 데이터로 구성된 정적 번역본입니다. 실제 기능은 작동하지 않습니다.</p>
+</footer>
+
+<script defer src="app.js"></script>
+</body>
+</html>

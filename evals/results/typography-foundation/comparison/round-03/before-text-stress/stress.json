@@ -1,0 +1,298 @@
+{
+  "sourceBinding": {
+    "index.html": "5b8e9936304f58f2e447e2c9eb74c29d55326f69fc2bd0111b96fe491bf698b2",
+    "styles.css": "de1436a1128d2e402df8ac9019d655accffd5ddb7e1e57dc11d0fd35f65a1b1a",
+    "app.js": "8007a239fe746629f04756164a265e95749185070aeec78f86771dd628248460",
+    "DESIGN.md": "09a0f04cb6e3d8703ba42505de4bd449d7b594bb7ff3c8b08f0011509e7270a8",
+    "REFERENCE.md": "f48de769be79ba2e2c36b6c8b2875af1b95f508eeacd57a5aa394b139b0ecdd9",
+    "assets/icons/Calendar.svg": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+    "assets/icons/Check.svg": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+    "assets/icons/ChevronLeft.svg": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/GripVertical.svg": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/Plus.svg": "3d4f93d0e5a8eb932e4d1f0d71122d01917e7624439adc35dddcd5352d7a228f",
+    "assets/icons/Search.svg": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+    "assets/icons/X.svg": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+    "assets/icons/manifest.json": "8c535b19e80beb51a36f4941a8ab46680340fc26e3b5ae9dedc4ad9f23ba3ad7",
+    "assets/reference/attendance.png": "594486b17e3aaa886c181c794e33aa175a3bf63349f81434d28f2afd898f7dea",
+    "assets/reference/banner.png": "3e6207c62451c8042575009669e21949bdbc0e05723cd34039706510379c19dc",
+    "assets/reference/battle.png": "64132f2001bf07b11c2bcb4b1e9a1636011b20215e2c111f4f7b0d9368141d45",
+    "assets/reference/bell.svg": "e769d07778a974e22327ca663bac379281768fc948e7ad7ec988207283307ebd",
+    "assets/reference/book-open.svg": "1af6b3cfbb82f4042c5a636ba8d58e4ba0b1d24257b8baa05cc88515f282be5b",
+    "assets/reference/calendar.svg": "20fa0ada1710f37a44a4cbcd0300ccfc349993c02b46283a34f6428c26c04bf5",
+    "assets/reference/chevron-down.svg": "df0809577fd4661afa2e6335dc6773286f510ce6b93d9a2822fc332f8fdf2cf0",
+    "assets/reference/coin.png": "6e2fb5905a749193feccafb4e1170d2d890bc6277ed882957008dea66e1a63d7",
+    "assets/reference/emotion.png": "756196db500f12b61c6a105355c1276d4967525adcb93ba4a73c4be3e44c6fd1",
+    "assets/reference/flag.png": "9fbbd0d61d4452ad2552956d1ce6130538982cbeda7622fcb178b0b9bc7ababf",
+    "assets/reference/heart.svg": "16b5db71af67c7989163d3f0c695583af35b751972ced933fdd599bab62689ef",
+    "assets/reference/lottery.png": "720e97965fb4c0c1efba4c2eef0aae2116b2054e14576d77cab6f02cfa419c8a",
+    "assets/reference/message-circle.svg": "81f91b048fd80a1cc7daf53ab4a57d6679f85f2dac689e82305b27e7e17199cd",
+    "assets/reference/plus.svg": "f50294735c162595ea59e425a098d4e3679a89b82f1efd06779425a5922720c2",
+    "assets/reference/quiz.png": "9c6f46704c05637de45482cf230c95da4ca769658b12d3818547f5689ab50011",
+    "assets/reference/roulette.png": "7c09ce011964322a2cc6d7dcd381e4758a3c67e17014c9621417f382475dadb5",
+    "assets/reference/shoe.png": "a4730402e429671bff6dd6b74c25c09959e25eb0e7eb8056c78df632621a477b",
+    "assets/reference/shopping-bag.svg": "247582ae377275dfc4aed374b8771e3ac6d968fdc13287592c9cac97f5ea0154",
+    "assets/reference/source-app.png": "0d49ce466e9ca480e2c3cefdb2f863160ed2f7bb50b0c9a5d09bcc2d20ca9275",
+    "assets/reference/source.png": "9534a08e1353eb61f4e4faddd759b22c805172a97ffc227a6d1eaf94af91a62c",
+    "assets/reference/user-round.svg": "64535953c7d421e4c3a5e788940fe45cf9113f2209849c6d676241d8c728a24d",
+    "assets/reference/welcome.png": "2786aa6c23f5df15b534b34d6f0e67f36b6a49f689b669f872b1f02313e2399d",
+    "assets/reference-manifest.json": "82ec3bad47a3a12d6ab6023d22daaa59c1f0bbfa09cfe67a2d6c1e1f9ef1a1c2"
+  },
+  "recordedAt": "2026-10-03T23:10:36.603Z",
+  "observations": [
+    {
+      "width": 1440,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 1440,
+        "scrollWidth": 1440,
+        "possibleClipping": [
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "07:30",
+            "clientWidth": 50,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "08:15",
+            "clientWidth": 50,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "12:40",
+            "clientWidth": 50,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "19:00",
+            "clientWidth": 50,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "class": "bottom-nav",
+            "text": "홈\n\n\n\n기록\n\n\n\n분석\n\n\n\n설정",
+            "clientWidth": 430,
+            "scrollWidth": 430,
+            "clientHeight": 69,
+            "scrollHeight": 75,
+            "overflow": "visible"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 1440,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 1440,
+        "scrollWidth": 1440,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 390,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 390,
+        "scrollWidth": 390,
+        "possibleClipping": [
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "07:30",
+            "clientWidth": 45,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "08:15",
+            "clientWidth": 45,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "12:40",
+            "clientWidth": 45,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "19:00",
+            "clientWidth": 45,
+            "scrollWidth": 57,
+            "clientHeight": 38,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "class": "bottom-nav",
+            "text": "홈\n\n\n\n기록\n\n\n\n분석\n\n\n\n설정",
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "clientHeight": 69,
+            "scrollHeight": 75,
+            "overflow": "visible"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 390,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 390,
+        "scrollWidth": 390,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 320,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 320,
+        "scrollWidth": 320,
+        "possibleClipping": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "promo-content",
+            "text": "예시\n건강 기록 7일 연속!\n보상을 받으세요.",
+            "clientWidth": 33,
+            "scrollWidth": 40,
+            "clientHeight": 762,
+            "scrollHeight": 762,
+            "overflow": "visible"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "class": "promo-title",
+            "text": "건강 기록 7일 연속!",
+            "clientWidth": 33,
+            "scrollWidth": 40,
+            "clientHeight": 384,
+            "scrollHeight": 384,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "07:30",
+            "clientWidth": 40,
+            "scrollWidth": 52,
+            "clientHeight": 35,
+            "scrollHeight": 35,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "08:15",
+            "clientWidth": 40,
+            "scrollWidth": 52,
+            "clientHeight": 35,
+            "scrollHeight": 35,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "12:40",
+            "clientWidth": 40,
+            "scrollWidth": 52,
+            "clientHeight": 35,
+            "scrollHeight": 35,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "timeline-time",
+            "text": "19:00",
+            "clientWidth": 40,
+            "scrollWidth": 52,
+            "clientHeight": 35,
+            "scrollHeight": 35,
+            "overflow": "visible"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "class": "bottom-nav",
+            "text": "홈\n\n\n\n기록\n\n\n\n분석\n\n\n\n설정",
+            "clientWidth": 320,
+            "scrollWidth": 320,
+            "clientHeight": 69,
+            "scrollHeight": 75,
+            "overflow": "visible"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 320,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 320,
+        "scrollWidth": 320,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    }
+  ],
+  "method": "Text-only 200% computed-font override and separate WCAG-style text-spacing override in Chromium. Geometry identifies review candidates, not automatic accessibility failures. Not real-device zoom, Safari or IME validation."
+}

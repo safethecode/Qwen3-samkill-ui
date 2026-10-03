@@ -1,0 +1,31 @@
+{
+  "icons": [],
+  "issues": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/calendar.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/heart.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg"
+    }
+  ],
+  "scope": "Official inline geometry and basic control semantics; optical alignment, actual edge clicks and state transitions require separate evidence."
+}

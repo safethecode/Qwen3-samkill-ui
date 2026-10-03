@@ -1,0 +1,421 @@
+{
+  "case": "round-03",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "dfc0fcc5f7657083982ea68bbf7d16ff4c34a31fc497fe8372ed4b53cadf5b5c",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "dfc0fcc5f7657083982ea68bbf7d16ff4c34a31fc497fe8372ed4b53cadf5b5c",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/calendar.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "641618f705133721923645baf8bc23fbb19742a7f2ac13380ce8f05d64ed964d",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/heart.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "cf2bc7f3ec498ffd107e2b91a1811be9887fb91e7cbc7f99e2cbcd9c7e9e7d6a",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "dfc0fcc5f7657083982ea68bbf7d16ff4c34a31fc497fe8372ed4b53cadf5b5c",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "e50eacb933bd864589ad26fe8833aaca8521985d4365079ef975b969e66f1e88",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "e50eacb933bd864589ad26fe8833aaca8521985d4365079ef975b969e66f1e88",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/calendar.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "c9dea68b7084ca22fa7516626affa0de40ae9c43d0d14ac984fe7f68cb51d7b4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/heart.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "25494ff93b92ffbc09610ab5a8dd93015c25aeccb70a2c336a21dec3a1b1ae91",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "e50eacb933bd864589ad26fe8833aaca8521985d4365079ef975b969e66f1e88",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "category": "fonts",
+      "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "ad39d9850c6742bccece2b66ca62cc7a4d66d9bc0d2fc5b0b1493fab61f332c4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "ad39d9850c6742bccece2b66ca62cc7a4d66d9bc0d2fc5b0b1493fab61f332c4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/calendar.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "23cc3dae65837cfdcd4860698be0693ecfa9975d5e8db46a4255bd5087fc9260",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/icons/heart.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "a230a1d50bd1790a247a10cf47b8376f0766ccb9bd371f2ce183cc62da97fea4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "ad39d9850c6742bccece2b66ca62cc7a4d66d9bc0d2fc5b0b1493fab61f332c4",
+      "rules": [
+        "RUI-12"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 0,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "오늘의 건강": 1,
+      "예시": 2,
+      "건강 기록 7일 연속!": 1,
+      "보상을 받으세요.": 1,
+      "예시: 보상 받기": 1,
+      "혈당": 2,
+      "105 mg/dL": 2,
+      "식사": 2,
+      "3회": 1,
+      "활동": 2,
+      "4,500 보행": 1,
+      "약": 1,
+      "도전 과제": 1,
+      "오늘 8,000보 걷기": 1,
+      "기록 타임라인": 1,
+      "07:30": 1,
+      "공복 혈당": 1,
+      "08:15": 1,
+      "아침 식사": 1,
+      "밥 한 공기, 계란후레, 김치": 1,
+      "12:40": 1,
+      "점심 산책": 1,
+      "30분, 2,500 보행": 1,
+      "19:00": 1,
+      "저녁 식사": 1,
+      "국물 있는 반찬 위주": 1,
+      "홈": 1,
+      "기록": 1,
+      "분석": 1,
+      "설정": 1
+    },
+    "390": {
+      "오늘의 건강": 1,
+      "예시": 2,
+      "건강 기록 7일 연속!": 1,
+      "보상을 받으세요.": 1,
+      "예시: 보상 받기": 1,
+      "혈당": 2,
+      "105 mg/dL": 2,
+      "식사": 2,
+      "3회": 1,
+      "활동": 2,
+      "4,500 보행": 1,
+      "약": 1,
+      "도전 과제": 1,
+      "오늘 8,000보 걷기": 1,
+      "기록 타임라인": 1,
+      "07:30": 1,
+      "공복 혈당": 1,
+      "08:15": 1,
+      "아침 식사": 1,
+      "밥 한 공기, 계란후레, 김치": 1,
+      "12:40": 1,
+      "점심 산책": 1,
+      "30분, 2,500 보행": 1,
+      "19:00": 1,
+      "저녁 식사": 1,
+      "국물 있는 반찬 위주": 1,
+      "홈": 1,
+      "기록": 1,
+      "분석": 1,
+      "설정": 1
+    },
+    "1440": {
+      "오늘의 건강": 1,
+      "예시": 2,
+      "건강 기록 7일 연속!": 1,
+      "보상을 받으세요.": 1,
+      "예시: 보상 받기": 1,
+      "혈당": 2,
+      "105 mg/dL": 2,
+      "식사": 2,
+      "3회": 1,
+      "활동": 2,
+      "4,500 보행": 1,
+      "약": 1,
+      "도전 과제": 1,
+      "오늘 8,000보 걷기": 1,
+      "기록 타임라인": 1,
+      "07:30": 1,
+      "공복 혈당": 1,
+      "08:15": 1,
+      "아침 식사": 1,
+      "밥 한 공기, 계란후레, 김치": 1,
+      "12:40": 1,
+      "점심 산책": 1,
+      "30분, 2,500 보행": 1,
+      "19:00": 1,
+      "저녁 식사": 1,
+      "국물 있는 반찬 위주": 1,
+      "홈": 1,
+      "기록": 1,
+      "분석": 1,
+      "설정": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 25,
+  "total": 25
+}

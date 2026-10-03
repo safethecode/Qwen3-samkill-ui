@@ -1,0 +1,20 @@
+[
+  {
+    "attempt": 1,
+    "failure": "font-rendering-1440",
+    "accepted": true,
+    "pending": false,
+    "passed": 22,
+    "total": 25,
+    "regressions": []
+  },
+  {
+    "attempt": 2,
+    "failure": "font-rendering-1440",
+    "accepted": true,
+    "pending": false,
+    "passed": 25,
+    "total": 25,
+    "regressions": []
+  }
+]

@@ -1,0 +1,376 @@
+{
+  "case": "round-01",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "tag": "SPAN",
+      "id": "c614616d0f98d8a4c82ffa40a73c4d9d98c62f0238d7bb3ae4573d8bddd5bed2",
+      "pseudo": null,
+      "text": "성산구",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "b9e8b7d663eaa41b462f2a007719f70ec5d1a5d5cbf66d485dcb47ecae431e85",
+      "pseudo": null,
+      "text": "제주시",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "c79313411cf26601ba67c305ee69403e2d37d16d49b431dd8199adaabb18256a",
+      "pseudo": null,
+      "text": "서귀포시",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "f641f9a30338cf626c96bf92582a4a78ce5f56cbcb5c8e19a3c327cdec6f9e30",
+      "pseudo": null,
+      "text": "문익점로",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "a4fee6992aef804c07b7501f829fd1e6b7159a45770f8cf2b13ee15df321ea85",
+      "pseudo": null,
+      "text": "성산구",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "84fc31b0fc2fbd179b307bb851b0d7bc9c2a30e9b441cc25f44d5063d637d5d4",
+      "pseudo": null,
+      "text": "제주시",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "09b7986671fc2b812b06c42405e49704d1c5e7f0cfce75bdad131f09a1747b1d",
+      "pseudo": null,
+      "text": "서귀포시",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "id": "faf74bdad2093b4c049887f498bdabcd7d1ebbb1eaa1287e7d8561725cb3fa1d",
+      "pseudo": null,
+      "text": "문익점로",
+      "declaredFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "ratio": 3.3272608288870615,
+      "threshold": 4.5,
+      "uncertain": true,
+      "disabled": false,
+      "status": "UNVERIFIED",
+      "problem": "Contrast requires rendered-surface review for image, gradient, overlay or compositing",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "rules": [
+        "ORC-G11"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "category": "fonts",
+      "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+      "rules": [
+        "ORC-G06"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 14,
+    "font-rendering-1440": 6,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 14,
+    "font-rendering-390": 6,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 14,
+    "font-rendering-320": 10,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "일정 편집": 1,
+      "서울": 1,
+      "부산": 1,
+      "제주": 1,
+      "Day 1": 1,
+      "2023-10-01": 1,
+      "해변 산책": 1,
+      "성산구": 1,
+      "명소": 2,
+      "오래된 골목 카페": 1,
+      "제주시": 1,
+      "카페": 1,
+      "Day 2": 1,
+      "2023-10-02": 1,
+      "오름 전망대": 1,
+      "서귀포시": 1,
+      "저녁 시장": 1,
+      "문익점로": 1,
+      "시장": 1,
+      "완료": 1
+    },
+    "390": {
+      "일정 편집": 1,
+      "서울": 1,
+      "부산": 1,
+      "제주": 1,
+      "Day 1": 1,
+      "2023-10-01": 1,
+      "해변 산책": 1,
+      "성산구": 1,
+      "명소": 2,
+      "오래된 골목 카페": 1,
+      "제주시": 1,
+      "카페": 1,
+      "Day 2": 1,
+      "2023-10-02": 1,
+      "오름 전망대": 1,
+      "서귀포시": 1,
+      "저녁 시장": 1,
+      "문익점로": 1,
+      "시장": 1,
+      "완료": 1
+    },
+    "1440": {
+      "일정 편집": 1,
+      "서울": 1,
+      "부산": 1,
+      "제주": 1,
+      "Day 1": 1,
+      "2023-10-01": 1,
+      "해변 산책": 1,
+      "성산구": 1,
+      "명소": 2,
+      "오래된 골목 카페": 1,
+      "제주시": 1,
+      "카페": 1,
+      "Day 2": 1,
+      "2023-10-02": 1,
+      "오름 전망대": 1,
+      "서귀포시": 1,
+      "저녁 시장": 1,
+      "문익점로": 1,
+      "시장": 1,
+      "완료": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-01'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '성산구'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '명소'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '제주시'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-02'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p3',\n+     ps"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6228624861376004,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '2023-10-01',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '명소',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '카페',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id:"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-01'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '성산구'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '명소'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '제주시'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-02'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p3',\n+     ps"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6228624861376004,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '2023-10-01',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '명소',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '카페',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id:"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-01'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p1',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '성산구'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '명소'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p2',\n+     pseudo: null,\n+     text: 'on'\n+   },\n+   {\n+     class: 'place-region',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '제주시'\n+   },\n+   {\n+     class: 'place-type',\n+     element: 'SPAN',\n+     fontSize: '13px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '카페'\n+   },\n+   {\n+     class: 'day-date',\n+     element: 'SPAN',\n+     fontSize: '15px',\n+     fontWeight: '400',\n+     id: '',\n+     pseudo: null,\n+     text: '2023-10-02'\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '13.3333px',\n+     fontWeight: '400',\n+     id: 'check-p3',\n+     ps"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6228624861376004,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '2023-10-01',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '성산구',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.3272608288870615,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '명소',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif',\n+     disabled: false,\n+     id"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 19,
+  "total": 25
+}

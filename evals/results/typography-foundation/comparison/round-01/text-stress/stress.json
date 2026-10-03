@@ -1,0 +1,547 @@
+{
+  "sourceBinding": {
+    "index.html": "3118526a0d176517d1eb0f102346114d9bf5559baa173094b8174078d6a4ead1",
+    "styles.css": "2fa8fe8e1d190f3305ff0cc771aa181b50c55c58bd242f81966f673279a98548",
+    "app.js": "6a29bc73f2cb3cc2c025089817cb0ef0f8df9182dba2df26fc2e5dfe5aac98b1",
+    "DESIGN.md": "befbfdb6de5c9b8e267856da7ebc5833f16014d1db3d632815a97b430dc33bd6",
+    "REFERENCE.md": "206a440d4ee7e131f5fc24deda532434a4737a103c239e18ff148f8017ef8484",
+    "assets/icons/Calendar.svg": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+    "assets/icons/Check.svg": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+    "assets/icons/ChevronLeft.svg": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/GripVertical.svg": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/Plus.svg": "3d4f93d0e5a8eb932e4d1f0d71122d01917e7624439adc35dddcd5352d7a228f",
+    "assets/icons/Search.svg": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+    "assets/icons/X.svg": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+    "assets/icons/manifest.json": "8c535b19e80beb51a36f4941a8ab46680340fc26e3b5ae9dedc4ad9f23ba3ad7",
+    "assets/reference/chevron-left.svg": "24130ae37aa5817e3a20692c21c09ef5875ca52fb72b7f2b3b229d7797df3ba1",
+    "assets/reference/grip-vertical.svg": "6ddcbe3d0547f531ff2b9d0d482e6fec47e089d9522085b23e4fb223c542ed26",
+    "assets/reference/photo-1.png": "4646698ab70e1e29ca47fbf3ead54be139d0b15ab0de463ebea9ddc7826a8584",
+    "assets/reference/photo-2.png": "e896a767b74ce01a051ad2be6f729717d96a28921f47b1d27901887be0b213d8",
+    "assets/reference/photo-3.png": "4b24197819ebaf803cb2abc2998d16ac968f604fa82d46aa81edd78d5154e761",
+    "assets/reference/photo-fragment.png": "05549f6daf94414350127a9d65fe7de2db89c91e11a0a316877349bd810d9bdc",
+    "assets/reference/source.png": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d",
+    "assets/reference-manifest.json": "df7531195141089e63fec46528a47aab2a55ec2f6e633ff179f8cede0afd87f8"
+  },
+  "recordedAt": "2026-10-03T23:09:42.993Z",
+  "observations": [
+    {
+      "width": 1440,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 1440,
+        "scrollWidth": 1440,
+        "possibleClipping": [
+          {
+            "tag": "H1",
+            "id": "page-title",
+            "class": "",
+            "text": "일정 편집",
+            "clientWidth": 398,
+            "scrollWidth": 398,
+            "clientHeight": 67,
+            "scrollHeight": 71,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 12023-10-01",
+            "clientWidth": 398,
+            "scrollWidth": 398,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 1",
+            "clientWidth": 110,
+            "scrollWidth": 110,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-01",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "해변 산책",
+            "clientWidth": 160,
+            "scrollWidth": 160,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오래된 골목 카페",
+            "clientWidth": 231,
+            "scrollWidth": 231,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 22023-10-02",
+            "clientWidth": 398,
+            "scrollWidth": 398,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 2",
+            "clientWidth": 110,
+            "scrollWidth": 110,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-02",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오름 전망대",
+            "clientWidth": 188,
+            "scrollWidth": 188,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "저녁 시장",
+            "clientWidth": 188,
+            "scrollWidth": 188,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 1440,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 1440,
+        "scrollWidth": 1440,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 390,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 390,
+        "scrollWidth": 390,
+        "possibleClipping": [
+          {
+            "tag": "H1",
+            "id": "page-title",
+            "class": "",
+            "text": "일정 편집",
+            "clientWidth": 374,
+            "scrollWidth": 374,
+            "clientHeight": 67,
+            "scrollHeight": 71,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 12023-10-01",
+            "clientWidth": 374,
+            "scrollWidth": 374,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 1",
+            "clientWidth": 110,
+            "scrollWidth": 110,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-01",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "해변 산책",
+            "clientWidth": 160,
+            "scrollWidth": 160,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오래된 골목 카페",
+            "clientWidth": 231,
+            "scrollWidth": 231,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 22023-10-02",
+            "clientWidth": 374,
+            "scrollWidth": 374,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 2",
+            "clientWidth": 110,
+            "scrollWidth": 110,
+            "clientHeight": 48,
+            "scrollHeight": 51,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-02",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오름 전망대",
+            "clientWidth": 188,
+            "scrollWidth": 188,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "저녁 시장",
+            "clientWidth": 188,
+            "scrollWidth": 188,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 390,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 390,
+        "scrollWidth": 390,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 320,
+      "mode": "text-200",
+      "geometry": {
+        "pageWidth": 320,
+        "scrollWidth": 320,
+        "possibleClipping": [
+          {
+            "tag": "H1",
+            "id": "page-title",
+            "class": "",
+            "text": "일정 편집",
+            "clientWidth": 304,
+            "scrollWidth": 304,
+            "clientHeight": 58,
+            "scrollHeight": 60,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 12023-10-01",
+            "clientWidth": 304,
+            "scrollWidth": 304,
+            "clientHeight": 43,
+            "scrollHeight": 45,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 1",
+            "clientWidth": 99,
+            "scrollWidth": 99,
+            "clientHeight": 43,
+            "scrollHeight": 45,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-01",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-info",
+            "text": "해변 산책성산구명소",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 105,
+            "scrollHeight": 107,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "해변 산책",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-meta",
+            "text": "성산구명소",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 67,
+            "scrollHeight": 69,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-info",
+            "text": "오래된 골목 카페제주시카페",
+            "clientWidth": 184,
+            "scrollWidth": 184,
+            "clientHeight": 105,
+            "scrollHeight": 107,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오래된 골목 카페",
+            "clientWidth": 184,
+            "scrollWidth": 231,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-meta",
+            "text": "제주시카페",
+            "clientWidth": 184,
+            "scrollWidth": 184,
+            "clientHeight": 67,
+            "scrollHeight": 69,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "day-header",
+            "text": "Day 22023-10-02",
+            "clientWidth": 304,
+            "scrollWidth": 304,
+            "clientHeight": 43,
+            "scrollHeight": 45,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-label",
+            "text": "Day 2",
+            "clientWidth": 99,
+            "scrollWidth": 99,
+            "clientHeight": 43,
+            "scrollHeight": 45,
+            "overflow": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "day-date",
+            "text": "2023-10-02",
+            "clientWidth": 157,
+            "scrollWidth": 157,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-info",
+            "text": "오름 전망대서귀포시명소",
+            "clientWidth": 161,
+            "scrollWidth": 161,
+            "clientHeight": 105,
+            "scrollHeight": 107,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "오름 전망대",
+            "clientWidth": 161,
+            "scrollWidth": 161,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-meta",
+            "text": "서귀포시명소",
+            "clientWidth": 161,
+            "scrollWidth": 161,
+            "clientHeight": 67,
+            "scrollHeight": 69,
+            "overflow": "visible"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-info",
+            "text": "저녁 시장문익점로시장",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 105,
+            "scrollHeight": 107,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "class": "place-name",
+            "text": "저녁 시장",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 36,
+            "scrollHeight": 38,
+            "overflow": "hidden"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "class": "place-meta",
+            "text": "문익점로시장",
+            "clientWidth": 131,
+            "scrollWidth": 131,
+            "clientHeight": 67,
+            "scrollHeight": 69,
+            "overflow": "visible"
+          }
+        ]
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    },
+    {
+      "width": 320,
+      "mode": "text-spacing",
+      "geometry": {
+        "pageWidth": 320,
+        "scrollWidth": 320,
+        "possibleClipping": []
+      },
+      "status": "REQUIRES_VISUAL_REVIEW"
+    }
+  ],
+  "method": "Text-only 200% computed-font override and separate WCAG-style text-spacing override in Chromium. Geometry identifies review candidates, not automatic accessibility failures. Not real-device zoom, Safari or IME validation."
+}

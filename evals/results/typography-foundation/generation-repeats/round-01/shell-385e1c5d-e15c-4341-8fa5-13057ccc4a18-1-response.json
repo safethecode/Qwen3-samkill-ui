@@ -1,0 +1,16 @@
+{
+  "binding": "eccedd6150c352ced0767456fda079379dade9a185d8dc3e95d04d3bdd66c62e",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 76814,
+  "done_reason": "stop",
+  "load_duration": 3182800,
+  "prompt_eval_count": 6358,
+  "prompt_eval_duration": 64921269000,
+  "eval_count": 300,
+  "eval_duration": 11627720000,
+  "total_duration": 76800543400,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>여행 일정 편집</title>\\n    <link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n    <main class=\\\"app-container\\\">\\n        <header class=\\\"page-header\\\">\\n            <h1 id=\\\"page-title\\\">일정 편집</h1>\\n        </header>\\n\\n        <div class=\\\"destination-pills\\\" role=\\\"group\\\" aria-label=\\\"여행지 선택\\\">\\n            <button type=\\\"button\\\" class=\\\"pill active\\\" disabled>서울</button>\\n            <button type=\\\"button\\\" class=\\\"pill\\\" disabled>부산</button>\\n            <button type=\\\"button\\\" class=\\\"pill\\\" disabled>제주</button>\\n        </div>\\n\\n        <div id=\\\"itinerary-list\\\">\\n            <!-- Rendered by app.js -->\\n        </div>\\n\\n        <footer class=\\\"action-footer\\\">\\n            <button type=\\\"button\\\" id=\\\"btn-complete\\\" class=\\\"btn-primary\\\" disabled>완료</button>\\n        </footer>\\n    </main>\\n\\n    <script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

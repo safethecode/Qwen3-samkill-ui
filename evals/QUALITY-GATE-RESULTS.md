@@ -4,7 +4,7 @@
 
 **INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
 
-The current harness passes 111 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
+The current harness passes 113 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
 
 An independent inspection of the actual generated workshop sample found **19 failed, 30 unknown, 9 scoped passes and 17 inapplicable catalog rules**. Its eight guide assessments are **5 failed, 2 unknown and 1 inapplicable**. The saved browser evaluation is **18/27** under the recorded pre-final harness. These counts must not be compared directly with later expanded check sets. [Full scoped audit](results/rule-coverage/workshop/audit.json), [browser report](results/rule-coverage/workshop/evidence/report.json), [generated source](results/rule-coverage/workshop/source).
 
@@ -25,11 +25,17 @@ The broader baseline includes all seven available upstream rounds (01, 02, 03, 0
 
 These are historical measurements from the harness hashes in the linked record, not results from the final additional dependency check. Broken assets, missing content, inaccessible workflows and visual hierarchy failures remain visible in the evidence. New generation supplies official icon assets and optional upstream local media, rejects invented asset paths, and splits navigation from forms/startup. This improves input and failure detection; it does not establish that the model now follows every rule.
 
+## Typography foundation and layout regression — 2026-10-04
+
+Controlled copies of three local outputs improved in basic checks after auditable host typography normalization: Round 01 **19/25 to 22/25**, Round 02 **19/25 to 22/25**, and Round 03 **22/25 to 25/25**. Two bounded local contrast repairs then brought Round 02 to **25/25**, confirmed from the published source. The normalizer now preserves tokens shared with spacing. Original model responses and before/after source hashes remain available.
+
+**These artifacts remain INCOMPLETE.** Direct enlarged-text inspection finds clipping, overlaps and broken narrow layouts. Round 02 horizontal scroll width at 200% text worsened from 395 to 415 pixels at width 390, and from 389 to 409 at width 320 after normalization. Intended font roles, complete icon coverage and catalog approval are still missing. The current functional repair loop stopping at 25/25 does not resolve these failures. [Measured comparison and visual findings](results/typography-foundation/visual-review.md), [fresh repaired-source verification](results/typography-foundation/contrast-repair/revalidation.json).
+
 ## Stage-contract recovery — 2026-10-04
 
 The new Round 02 reference-document probe completed. JavaScript was returned in the requested language, and the 2,017-token base stylesheet completed without retry under the new 2,048-token initial limit. Published-source revalidation remains **19/25**: there is no overall count improvement over the earlier completed Round 02 sample. Spatial grouping is closer to the reference, but small metadata, contrast, missing visible search labeling and incorrect footer semantics remain. This is execution recovery, not overall design parity. [Bound generation](results/stage-contract-recovery/study.json), [fresh verification](results/stage-contract-recovery/revalidation.json), [direct visual findings](results/stage-contract-recovery/visual-review.md).
 
-A separate text-only 200% enlargement test of the earlier Round 01 source revealed an ellipsized place name at 320 pixels, beyond its basic 22/25 result. [Text-stress evidence and scope](results/static-follow-up/visual-review.md#text-stress-follow-up). Fresh Round 01/03 repetitions remain running and are not counted as successful results.
+A separate text-only 200% enlargement test of the earlier Round 01 source revealed an ellipsized place name at 320 pixels, beyond its basic 22/25 result. [Text-stress evidence and scope](results/static-follow-up/visual-review.md#text-stress-follow-up). Those fresh repetitions subsequently completed at 19/25 and 22/25; their typography follow-up is recorded above.
 
 ## Broader static follow-up — 2026-10-04
 

@@ -1,0 +1,1 @@
+Round03: multiple content densities; separate summary capsule, shortcut row, challenge and chronological records; floating add must not hide the bottom record.

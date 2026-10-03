@@ -1,0 +1,16 @@
+{
+  "binding": "4a45aa255fa617bc0931ba6597c1454b27088a08a26a1b94e462aafc45b563e5",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 171769,
+  "done_reason": "stop",
+  "load_duration": 3589000,
+  "prompt_eval_count": 11322,
+  "prompt_eval_duration": 124656449000,
+  "eval_count": 767,
+  "eval_duration": 46704642000,
+  "total_duration": 171753263700,
+  "content": "{\n\"code\": \"/* Form and Button States */\\ninput, textarea, select {\\n  font-family: inherit;\\n  font-size: inherit;\\n  color: var(--color-text-primary);\\n  border: 1px solid var(--color-border);\\n  border-radius: var(--radius-sm);\\n  padding: var(--spacing-sm) var(--spacing-md);\\n  background-color: var(--color-surface);\\n  width: 100%;\\n}\\n\\ninput:focus, textarea:focus, select:focus {\\n  outline: none;\\n  border-color: var(--color-accent-blue);\\n  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);\\n}\\n\\nbutton:not(.fab-add):not(.btn-claim) {\\n  font-family: inherit;\\n  font-size: 14px;\\n  font-weight: var(--font-weight-medium);\\n  cursor: pointer;\\n}\\n\\n/* Hidden States */\\n[hidden] {\\n  display: none !important;\\n}\\n\\n/* Keyboard Focus */\\na:focus-visible, button:focus-visible, input:focus-visible {\\n  outline: 2px solid var(--color-accent-blue);\\n  outline-offset: 2px;\\n}\\n\\n/* Reduced Motion */\\n@media (prefers-reduced-motion: reduce) {\\n  *, *::before, *::after {\\n    animation-duration: 0.01ms !important;\\n    animation-iteration-count: 1 !important;\\n    transition-duration: 0.01ms !important;\\n  }\\n}\\n\\n/* Mobile 390px */\\n@media (max-width: 390px) {\\n  .summary-panel {\\n    grid-template-columns: repeat(3, 1fr);\\n    gap: var(--spacing-xs);\\n  }\\n  \\n  .shortcut-grid {\\n    grid-template-columns: repeat(4, 1fr);\\n  }\\n  \\n  .timeline-time {\\n    width: 45px;\\n    font-size: 12px;\\n  }\\n}\\n\\n/* Mobile 320px */\\n@media (max-width: 320px) {\\n  .header {\\n    padding: 0 var(--spacing-sm);\\n  }\\n  \\n  .title {\\n    font-size: 18px;\\n  }\\n  \\n  .panel {\\n    margin: 0 var(--spacing-sm) var(--spacing-sm);\\n    padding: var(--spacing-sm);\\n  }\\n  \\n  .shortcut-grid {\\n    padding: 0 var(--spacing-sm) var(--spacing-sm);\\n    gap: var(--spacing-xs);\\n  }\\n  \\n  .shortcut-card {\\n    font-size: 12px;\\n    padding: var(--spacing-xs) 0;\\n  }\\n  \\n  .summary-item .value {\\n    font-size: 14px;\\n  }\\n  \\n  .timeline-time {\\n    width: 40px;\\n    font-size: 11px;\\n  }\\n  \\n  .timeline-value {\\n    font-size: 13px;\\n  }\\n  \\n  .fab-add {\\n    bottom: calc(var(--nav-height) + var(--spacing-md));\\n    right: var(--spacing-sm);\\n  }\\n}\"\n}"
+}

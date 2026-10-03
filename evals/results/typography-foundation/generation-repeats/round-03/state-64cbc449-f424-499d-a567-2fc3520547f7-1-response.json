@@ -1,0 +1,16 @@
+{
+  "binding": "4a45aa255fa617bc0931ba6597c1454b27088a08a26a1b94e462aafc45b563e5",
+  "stage": "state",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 97352,
+  "done_reason": "stop",
+  "load_duration": 3060600,
+  "prompt_eval_count": 6930,
+  "prompt_eval_duration": 73644119000,
+  "eval_count": 520,
+  "eval_duration": 23390571000,
+  "total_duration": 97341976700,
+  "content": "{\n\"code\": \"function renderStaticView() {\\n  const recordList = document.getElementById('record-list');\\n  if (!recordList) return;\\n\\n  const sampleRecords = [\\n    {\\n      time: '07:30',\\n      type: 'glucose',\\n      label: '공복 혈당',\\n      value: '105 mg/dL',\\n      note: '예시 데이터'\\n    },\\n    {\\n      time: '08:15',\\n      type: 'meal',\\n      label: '아침 식사',\\n      value: '밥 한 공기, 계란후레, 김치',\\n      note: '예시 데이터'\\n    },\\n    {\\n      time: '12:40',\\n      type: 'activity',\\n      label: '점심 산책',\\n      value: '30분, 2,500 보행',\\n      note: '예시 데이터'\\n    },\\n    {\\n      time: '19:00',\\n      type: 'meal',\\n      label: '저녁 식사',\\n      value: '국물 있는 반찬 위주',\\n      note: '예시 데이터'\\n    }\\n  ];\\n\\n  recordList.innerHTML = '';\\n\\n  sampleRecords.forEach(record => {\\n    const row = document.createElement('div');\\n    row.className = `timeline-row timeline-row--${record.type}`;\\n\\n    const timeCell = document.createElement('span');\\n    timeCell.className = 'timeline-time';\\n    timeCell.textContent = record.time;\\n\\n    const contentCell = document.createElement('div');\\n    contentCell.className = 'timeline-content';\\n\\n    const typeLabel = document.createElement('span');\\n    typeLabel.className = `timeline-type-badge timeline-type-badge--${record.type}`;\\n    typeLabel.textContent = record.label;\\n\\n    const valueText = document.createElement('p');\\n    valueText.className = 'timeline-value';\\n    valueText.textContent = record.value;\\n\\n    contentCell.appendChild(typeLabel);\\n    contentCell.appendChild(valueText);\\n\\n    row.appendChild(timeCell);\\n    row.appendChild(contentCell);\\n    recordList.appendChild(row);\\n  });\\n}\"\n}"
+}

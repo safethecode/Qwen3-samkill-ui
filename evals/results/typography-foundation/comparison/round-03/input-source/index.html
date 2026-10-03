@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 건강</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app-container">
+<header class="header">
+<h1 class="title">오늘의 건강</h1>
+<div class="user-icon">
+<img src="assets/reference/user-round.svg" alt="사용자 프로필">
+</div>
+</header>
+
+<section class="promotion-panel panel">
+<div class="promo-content">
+<span class="badge">예시</span>
+<h2 class="promo-title">건강 기록 7일 연속!</h2>
+<p class="promo-desc">보상을 받으세요.</p>
+</div>
+<button type="button" disabled class="btn-claim">예시: 보상 받기</button>
+</section>
+
+<section class="summary-panel panel">
+<div class="summary-item">
+<span class="label">혈당</span>
+<span class="value">105 mg/dL</span>
+</div>
+<div class="summary-item">
+<span class="label">식사</span>
+<span class="value">3회</span>
+</div>
+<div class="summary-item">
+<span class="label">활동</span>
+<span class="value">4,500 보행</span>
+</div>
+</section>
+
+<nav class="shortcut-grid">
+<a href="#" class="shortcut-card" aria-label="혈당 기록">혈당</a>
+<a href="#" class="shortcut-card" aria-label="식사 기록">식사</a>
+<a href="#" class="shortcut-card" aria-label="활동 기록">활동</a>
+<a href="#" class="shortcut-card" aria-label="약 복용">약</a>
+</nav>
+
+<section class="challenge-panel panel">
+<div class="challenge-header">
+<h3 class="challenge-title">도전 과제</h3>
+<span class="badge">예시</span>
+</div>
+<p class="challenge-desc">오늘 8,000보 걷기</p>
+<div class="progress-bar-bg">
+<div class="progress-bar-fill" style="width: 56%;"></div>
+</div>
+</section>
+
+<section class="timeline-panel panel">
+<h3 class="section-title">기록 타임라인</h3>
+<div id="record-list">
+
+</div>
+</section>
+
+<button type="button" id="fab-add" aria-label="새 기록 추가" class="fab-add">
+<img src="assets/icons/Plus.svg" alt="+">
+</button>
+
+<nav class="bottom-nav">
+<a href="#home" class="nav-item active">
+<img src="assets/reference/user-round.svg" alt="홈">
+<span>홈</span>
+</a>
+<a href="#record" class="nav-item">
+<img src="assets/icons/calendar.svg" alt="기록">
+<span>기록</span>
+</a>
+<a href="#analytics" class="nav-item">
+<img src="assets/icons/heart.svg" alt="분석">
+<span>분석</span>
+</a>
+<a href="#settings" class="nav-item">
+<img src="assets/reference/user-round.svg" alt="설정">
+<span>설정</span>
+</a>
+</nav>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
