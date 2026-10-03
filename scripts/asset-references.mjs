@@ -1,5 +1,5 @@
-import { access, realpath } from 'node:fs/promises';
-import { resolve, sep } from 'node:path';
+import { access, realpath, readdir } from 'node:fs/promises';
+import { resolve, sep, posix } from 'node:path';
 import { parse } from 'acorn';
 import { parse as parseHTML } from 'parse5';
 
@@ -33,5 +33,25 @@ export async function validateAssetReferences(target, stage, code) {
     const actual = await realpath(path).catch(() => null);
     if (!actual || !actual.startsWith(root + sep) || !await access(actual).then(() => true, () => false)) missing.push(source);
   }
-  if (missing.length) throw new Error(`Unprovided image/font assets: ${missing.join(', ')}. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration.`);
+  if (missing.length) {
+    const supplied = [];
+    const visit = async directory => {
+      const actual = await realpath(resolve(root, directory)).catch(() => null);
+      if (!actual?.startsWith(root + sep)) return;
+      const entries = await readdir(resolve(root, directory), { withFileTypes: true }).catch(error => { if (error.code === 'ENOENT') return []; throw error; });
+      for (const entry of entries) {
+        const path = `${directory}/${entry.name}`;
+        if (entry.isDirectory()) await visit(path);
+        else if (entry.isFile()) supplied.push(path);
+      }
+    };
+    await visit('assets');
+    const suggestions = missing.flatMap(source => {
+      if (!/^\.?\/?assets\//.test(source) || source.includes('..')) return [];
+      const filename = posix.basename(source.split(/[?#]/)[0]);
+      const matches = supplied.filter(path => posix.basename(path) === filename);
+      return matches.length === 1 ? [`${source} -> ${matches[0]}`] : [];
+    });
+    throw new Error(`Unprovided image/font assets: ${missing.join(', ')}. Use only supplied files; do not invent URLs or local font availability. Preserve required media with a real supplied asset or the explicitly requested CSS illustration.${suggestions.length ? ` Unambiguous supplied filename matches (use these exact local paths): ${suggestions.join('; ')}` : ''}`);
+  }
 }
