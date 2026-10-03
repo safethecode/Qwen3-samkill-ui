@@ -26,7 +26,7 @@ test('startup publication failure releases the target lock', async () => {
   await assert.rejects(access(resolve(target, '.quality-lock')));
 });
 
-test('quality CLI runs real browser checks and requires four image reviews before completion', async () => {
+test('quality CLI runs real browser checks and requires all twelve review chunks before completion', async () => {
   const target = await mkdtemp(resolve(repo, 'runs/quality-cli-'));
   const source = resolve(repo, 'evals/results/unattended/visual-polish');
   for (const file of ['index.html', 'styles.css', 'app.js', 'DESIGN.md', 'REFERENCE.md']) await copyFile(resolve(source, 'source', file), resolve(target, file));
@@ -41,7 +41,7 @@ test('quality CLI runs real browser checks and requires four image reviews befor
     assert.equal(request.url, '/api/chat');
     assert.equal(data.messages[1].images.length, 2);
     reviews++;
-    response.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ criteria: criteria.map(id => ({ id, score: 4, confidence: 0.95, observation: 'Reference and current preserve the required visual relationships.' })), issues: [] }) } }));
+    response.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ criteria: data.format.properties.criteria.items.properties.id.enum.map(id => ({ id, score: 4, confidence: 0.95, observation: 'Reference and current preserve the required visual relationships.' })), issues: [] }) } }));
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   try {
@@ -50,6 +50,6 @@ test('quality CLI runs real browser checks and requires four image reviews befor
     assert.equal(result.status, 'COMPLETE');
     assert.equal(result.inspection.functional.passed, 25);
     assert.equal(result.confirmation.binding, result.inspection.binding);
-    assert.equal(reviews, 4);
+    assert.equal(reviews, 12);
   } finally { await new Promise(resolve => server.close(resolve)); }
 });

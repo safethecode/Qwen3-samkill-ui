@@ -13,12 +13,18 @@ test('vision review uses ordered images and no writer history; truncated or miss
   await writeFile(join(dir, 'current.png'), png);
   const content = { criteria: criteria.map(id => ({ id, score: 4, confidence: 0.9, observation: 'Both images show aligned, readable document content.' })), issues: [] };
   let request;
+  let calls = 0;
   const fetcher = async (url, options) => {
     request = JSON.parse(options.body);
-    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify(content) } }) };
+    calls++;
+    const selected = request.format.properties.criteria.items.properties.id.enum;
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify({ ...content, criteria: content.criteria.filter(c => selected.includes(c.id)) }) } }) };
   };
   const options = { model: 'local-vision', endpoint: 'http://127.0.0.1:11434', reference: join(dir, 'reference.png'), current: join(dir, 'current.png'), viewport: 'mobile', contract: 'Resume UI', observations: 'Preserve paper previews.', audit: true, evidence: dir, fetcher };
   const result = await reviewViewport(options);
+  assert.equal(calls, 3);
+  assert.equal(request.options.num_predict, 1536);
+  assert.equal(result.criteria.length, 6);
   assert.equal(request.messages.length, 2);
   assert.equal(request.messages[1].images.length, 2);
   assert.equal(request.messages[1].images[0], png.toString('base64'));

@@ -22,7 +22,7 @@ npm run quality -- runs/my-ui 4
 
 The number is the maximum visual repair attempts, from 0 to 10. Zero disables visual repairs; the separate functional stage may still generate or repair within QWEN_FUNCTIONAL_ROUNDS before visual inspection and confirmation. An optional fourth CLI argument selects a manifest outside the target: `node scripts/quality.mjs TARGET 4 PATH_TO_QUALITY_JSON`.
 
-Default models are Coder 30B for generation and Qwen3.5 9B for repairs and vision review. They run sequentially against local Ollama. The reviewer starts a fresh request for each viewport, sees only reference/current images, the contract and observations, and receives no generation conversation or previous scores. Sharing model weights still creates correlated judgment errors; separate requests are not independent human reviewers.
+Default models are Coder 30B for generation and Qwen3.5 9B for repairs and vision review. They run sequentially against local Ollama. Each viewport review is divided into three requests of two criteria, with a 1,536-token output budget per request. All chunks must validate; partial reviews cannot pass. The reviewer sees only reference/current images, the contract and observations, and receives no generation conversation or previous scores. Sharing model weights still creates correlated judgment errors; separate requests are not independent human reviewers. Splitting output does not eliminate image-encoding cost.
 
 ```powershell
 $env:QWEN_GENERATE_MODEL = 'qwen-ui'
@@ -39,7 +39,7 @@ npm run quality -- runs/my-ui 4
 1. Validate the manifest, both images and vision capability before generating or repairing.
 2. Complete the existing functional loop and independently rerun its browser checks, including design geometry. Capture fresh desktop/mobile images.
 3. Review composition, hierarchy, spacing, typography, document content and action priority at both widths. Every criterion needs evidence, score at least 4/5 and confidence at least 0.8; all reported issues must be resolved. Confidence is self-reported, not a calibrated probability.
-4. Feed one localized defect to the repair model. Validate exact patches before writing. After two stalled attempts, request complete affected files instead. Preserve other source and all passing functional checks. Parsed comments are removed deterministically before evaluation.
+4. Feed one localized defect to the repair model. Select a ranked source excerpt of at most 6,000 characters and request one patch, with at most 2,000 matching and 4,000 replacement characters. Read-only HTML structure supplies bounded cross-file context. Stalled attempts rotate through excerpts instead of expanding to full-file output. Each request has a 2,048-token output budget and a 120-second deadline. Timeout consumes a repair attempt; retries remain bounded. Validate the entire resulting file and preserve all passing functional checks. Parsed comments are removed deterministically before evaluation.
 5. Reject and restore candidates that regress any protected visual criterion, introduce functional failures or make no measured progress. Keep rejected evidence locally. Do not relax thresholds when the model struggles.
 6. A separate adversarial audit must pass both viewports using the same source and screenshot hashes. Source, contract or reference changes invalidate completion.
 
@@ -48,5 +48,11 @@ npm run quality -- runs/my-ui 4
 Each `quality-*` directory retains functional logs, screenshots, review responses without private reasoning, reference/source bindings, repair requests and decisions. Raw source snapshots may contain project data; review them before sharing. A target lock prevents simultaneous quality runs. An interrupted process can leave `.quality-lock`; verify no process still uses that target before removing it.
 
 Visual judgments can be wrong or inconsistent. Strict rollback can reject a useful edit when the judge's scores fluctuate. Reference selection and representative positive/negative calibration remain necessary; adding gates improves rejection discipline without guaranteeing every task converges.
+
+## Resource budgets
+
+`QWEN_NUM_GPU`, `QWEN_NUM_CTX` and `QWEN_NUM_BATCH` explicitly override Ollama request options across generation, repair and review. They are optional; choose them for the local machine rather than assuming full GPU offload fits alongside other applications. For example, `16`, `16384` and `128` reserve more headroom by offloading fewer layers. This can slow token generation while avoiding resource contention. A timeout can occur during model load, image encoding, prompt processing or output generation; it is not evidence of poor UI quality. Responses retain load, prompt and generation timings. Bounded repair requests also record excerpt location, input length, output budget and timeout telemetry.
+
+The legacy direct `repair()` API still supports full-file mode for existing callers. The quality runner always uses bounded units. Small units may fail on a change that requires a coordinated cross-file transaction; such work stays INCOMPLETE rather than silently claiming success.
 
 See the [measured gate verification](../evals/QUALITY-GATE-RESULTS.md) for test coverage, actual local failures and calibration limits. A real end-to-end COMPLETE result has not yet been established.
