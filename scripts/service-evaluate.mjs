@@ -167,11 +167,14 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.equal(await page.locator('#booking-form').isVisible(), false, 'Detail must precede the booking form; implement the actual detail view and its 예약하기 action');
           const action = button(page, '예약하기').first();
           await action.waitFor({ state: 'visible' });
-          const detailText = await action.evaluate(element => element.closest('section,article,dialog,[role=dialog]')?.innerText || '');
-          assert.ok(title && detailText.includes(title), 'The booking action must belong to a detail region identifying the selected item');
+          const detail = await action.evaluate(element => {
+            const region = element.closest('section,article,dialog,[role=dialog]');
+            return { text: region?.innerText || '', headingsAndActions: [...region?.querySelectorAll('h1,h2,h3,h4,h5,h6,button,a,[role=button]') || []].map(node => node.innerText.trim()) };
+          });
+          assert.ok(title && detail.text.includes(title), 'The booking action must belong to a detail region identifying the selected item');
           const after = (await page.locator('body').innerText()).split('\n').map(text => text.trim()).filter(Boolean);
           for (const line of before) { const index = after.indexOf(line); if (index >= 0) after.splice(index, 1); }
-          assert.ok(after.some(text => text !== '예약하기' && detailText.includes(text)), 'The detail action must reveal item information, not only another button');
+          assert.ok(after.some(text => text !== title && !detail.headingsAndActions.includes(text) && detail.text.includes(text)), 'The detail action must reveal item information beyond repeated headings and actions');
           await action.click();
           assert.equal(await page.locator('#booking-form').isVisible(), true, 'The 예약하기 action must open the booking form');
         };

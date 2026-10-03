@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, writeFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { evaluateService } from '../scripts/service-evaluate.mjs';
 import { serviceCases } from '../evals/service-cases.mjs';
@@ -93,4 +93,8 @@ test('a real selected-item detail view can lead to a validated booking form', as
   await writeFile(resolve(target, 'index.html'), '<html><head><style>body{font:500 16px sans-serif}button,input,select{font:inherit}[hidden]{display:none!important}</style></head><body><h1>Test</h1><input id="search"><article><h3>Pottery</h3><button onclick="document.querySelector(\'#detail\').hidden=false">상세</button></article><section id="detail" hidden><h2>Pottery</h2><p>Clay workshop with instruction and materials.</p><button onclick="document.querySelector(\'#detail\').hidden=true;document.querySelector(\'#booking-form\').hidden=false">예약하기</button></section><form id="booking-form" hidden onsubmit="event.preventDefault()"><label for="guest">이름</label><input id="guest" required><label for="date">날짜</label><input id="date" type="date" required><label for="slot">시간</label><select id="slot"><option>10:00</option><option>14:00</option></select><button>예약 확정</button></form><section id="confirmation" hidden></section></body></html>');
   const report = await evaluateService(target, resolve(target, 'evidence'), { id: 'real-detail', scope: 'test fixture', anchors: ['Test'], flow: 'booking' });
   assert.equal(report.checks.find(check => check.name === 'booking-validation').status, 'PASS');
+  const html = await readFile(resolve(target, 'index.html'), 'utf8');
+  await writeFile(resolve(target, 'index.html'), html.replace('<p>Clay workshop with instruction and materials.</p>', ''));
+  const titleOnly = await evaluateService(target, resolve(target, 'title-only-evidence'), { id: 'title-only-detail', scope: 'test fixture', anchors: ['Test'], flow: 'booking' });
+  assert.equal(titleOnly.checks.find(check => check.name === 'booking-validation').status, 'FAIL');
 });
