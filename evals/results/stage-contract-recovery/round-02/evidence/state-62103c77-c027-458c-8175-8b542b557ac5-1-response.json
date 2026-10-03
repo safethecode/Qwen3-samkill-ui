@@ -1,0 +1,16 @@
+{
+  "binding": "5a1c1f9c6a886f66f4a5dcac1d3be5f7377abf9bd61f738851222e27d56264a7",
+  "stage": "state",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 107342,
+  "done_reason": "stop",
+  "load_duration": 4758800,
+  "prompt_eval_count": 7632,
+  "prompt_eval_duration": 80465305000,
+  "eval_count": 569,
+  "eval_duration": 26662972000,
+  "total_duration": 107327704800,
+  "content": "{\n  \"code\": \"function renderStaticView() {\\n  const container = document.getElementById('mentor-list');\\n  if (!container) return;\\n\\n  const mentors = [\\n    {\\n      name: '김서연',\\n      role: '프로덕트 디자이너',\\n      avatar: 'assets/reference/avatar-1.png',\\n      certification: 'PD Certification',\\n      employer: '현직 A사',\\n      description: '서비스 기획과 디자인 시스템 구축에 강점이 있습니다. 0부터 1을 만드는 과정을 함께 경험해 보세요.',\\n      reviews: '전문분야 45회 / 노하우 12회'\\n    },\\n    {\\n      name: '박민준',\\n      role: '프론트엔드 개발자',\\n      avatar: 'assets/reference/avatar-2.png',\\n      certification: 'FE Expert',\\n      employer: '현직 B사',\\n      description: '리액트와 성능 최적화에 집중하고 있습니다. 복잡한 UI를 깔끔하게 구현하는 노하우를 공유합니다.',\\n      reviews: '전문분야 32회 / 노하우 8회'\\n    }\\n  ];\\n\\n  const fragment = document.createDocumentFragment();\\n\\n  mentors.forEach(mentor => {\\n    const card = document.createElement('article');\\n    card.className = 'mentor-card';\\n\\n    card.innerHTML = `\\n      <div class=\\\"card-header\\\">\\n        <img class=\\\"avatar\\\" src=\\\"${mentor.avatar}\\\" alt=\\\"${mentor.name} 프로필 이미지\\\" width=\\\"48\\\" height=\\\"48\\\">\\n        <div class=\\\"meta\\\">\\n          <h2 class=\\\"name\\\">${mentor.name}</h2>\\n          <span class=\\\"role\\\">${mentor.role}</span>\\n          <span class=\\\"certification\\\">${mentor.certification}</span>\\n          <span class=\\\"employer\\\">${mentor.employer}</span>\\n        </div>\\n        <button type=\\\"button\\\" class=\\\"fav-btn\\\" aria-label=\\\"찜\\\">\\n          <img src=\\\"assets/icons/Heart.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n        </button>\\n      </div>\\n      <p class=\\\"description\\\">${mentor.description}</p>\\n      <div class=\\\"footer\\\">\\n        <span class=\\\"reviews\\\">${mentor.reviews}</span>\\n        <button type=\\\"button\\\" class=\\\"action-btn disabled\\\">상담 신청</button>\\n      </div>\\n    `;\\n\\n    fragment.appendChild(card);\\n  });\\n\\n  container.appendChild(fragment);\\n}\"\n}"
+}

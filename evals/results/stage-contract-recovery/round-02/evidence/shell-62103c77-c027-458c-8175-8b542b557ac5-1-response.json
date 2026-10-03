@@ -1,0 +1,16 @@
+{
+  "binding": "5a1c1f9c6a886f66f4a5dcac1d3be5f7377abf9bd61f738851222e27d56264a7",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 135326,
+  "done_reason": "stop",
+  "load_duration": 16477286900,
+  "prompt_eval_count": 8498,
+  "prompt_eval_duration": 88178437000,
+  "eval_count": 635,
+  "eval_duration": 30595012000,
+  "total_duration": 135311385200,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\">\\n<title>멘토 찾기</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<header class=\\\"header\\\" id=\\\"header\\\">\\n  <h1 class=\\\"heading\\\">멘토링</h1>\\n  <nav class=\\\"header-tools\\\">\\n    <button type=\\\"button\\\" aria-label=\\\"검색\\\">\\n      <img src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n    </button>\\n    <button type=\\\"button\\\" aria-label=\\\"알림\\\">\\n      <img src=\\\"assets/reference/bell.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n    </button>\\n    <button type=\\\"button\\\" aria-label=\\\"프로필\\\">\\n      <img src=\\\"assets/reference/user-round.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n    </button>\\n  </nav>\\n</header>\\n\\n<main class=\\\"container\\\">\\n  <form id=\\\"search-form\\\" class=\\\"search-form\\\" role=\\\"search\\\">\\n    <div class=\\\"input-wrapper\\\">\\n      <img class=\\\"search-icon\\\" src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\">\\n      <input type=\\\"search\\\" id=\\\"search\\\" name=\\\"q\\\" placeholder=\\\"검색\\\" disabled aria-label=\\\"멘토 검색\\\">\\n      <button type=\\\"button\\\" id=\\\"clear-search\\\" class=\\\"clear-btn\\\" disabled aria-label=\\\"검색 지우기\\\">\\n        <img src=\\\"assets/icons/X.svg\\\" alt=\\\"\\\" width=\\\"16\\\" height=\\\"16\\\">\\n      </button>\\n    </div>\\n  </form>\\n\\n  <div id=\\\"filters\\\" class=\\\"filters\\\" role=\\\"group\\\" aria-label=\\\"카테고리 필터\\\">\\n    <button type=\\\"button\\\" class=\\\"filter-chip active\\\" data-filter=\\\"all\\\">전체</button>\\n    <button type=\\\"button\\\" class=\\\"filter-chip\\\" data-filter=\\\"design\\\">디자인</button>\\n    <button type=\\\"button\\\" class=\\\"filter-chip\\\" data-filter=\\\"dev\\\">개발</button>\\n    <button type=\\\"button\\\" class=\\\"filter-chip\\\" data-filter=\\\"marketing\\\">마케팅</button>\\n  </div>\\n\\n  <section id=\\\"mentor-list\\\" class=\\\"mentor-list\\\" aria-label=\\\"멘토 목록\\\">\\n    <!-- Rendered by app.js -->\\n  </section>\\n</main>\\n\\n<footer class=\\\"footer\\\">\\n  <p class=\\\"example-disclosure\\\">이 화면은 예시 데이터로 구성된 정적 번역본입니다. 실제 기능은 작동하지 않습니다.</p>\\n</footer>\\n\\n<script defer src=\\\"app.js\\\"></script>\\n</body>\\n</html>\"\n}"
+}

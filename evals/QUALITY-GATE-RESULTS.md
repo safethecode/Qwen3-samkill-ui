@@ -25,6 +25,12 @@ The broader baseline includes all seven available upstream rounds (01, 02, 03, 0
 
 These are historical measurements from the harness hashes in the linked record, not results from the final additional dependency check. Broken assets, missing content, inaccessible workflows and visual hierarchy failures remain visible in the evidence. New generation supplies official icon assets and optional upstream local media, rejects invented asset paths, and splits navigation from forms/startup. This improves input and failure detection; it does not establish that the model now follows every rule.
 
+## Stage-contract recovery — 2026-10-04
+
+The new Round 02 reference-document probe completed. JavaScript was returned in the requested language, and the 2,017-token base stylesheet completed without retry under the new 2,048-token initial limit. Published-source revalidation remains **19/25**: there is no overall count improvement over the earlier completed Round 02 sample. Spatial grouping is closer to the reference, but small metadata, contrast, missing visible search labeling and incorrect footer semantics remain. This is execution recovery, not overall design parity. [Bound generation](results/stage-contract-recovery/study.json), [fresh verification](results/stage-contract-recovery/revalidation.json), [direct visual findings](results/stage-contract-recovery/visual-review.md).
+
+A separate text-only 200% enlargement test of the earlier Round 01 source revealed an ellipsized place name at 320 pixels, beyond its basic 22/25 result. [Text-stress evidence and scope](results/static-follow-up/visual-review.md#text-stress-follow-up). Fresh Round 01/03 repetitions remain running and are not counted as successful results.
+
 ## Broader static follow-up — 2026-10-04
 
 The pending experiments finished. Round 01 rendered four itinerary rows and scored **22/25**, reconfirmed from the published source. Direct reference comparison still finds checkboxes inside the rows, undersized photographs, missing group dates and shrinking narrow-screen text. This is below target despite the count. Round 02 with extra reference documents emitted HTML twice in its JavaScript state unit; Round 03 stopped on incorrect icon paths. Neither incomplete generation receives a visual score. [Bound results](results/static-follow-up/study.json), [direct inspection](results/static-follow-up/visual-review.md), [failed Round 02 probe](results/static-follow-up/round-02-context/study.json).

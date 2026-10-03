@@ -1,0 +1,16 @@
+{
+  "binding": "5a1c1f9c6a886f66f4a5dcac1d3be5f7377abf9bd61f738851222e27d56264a7",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 154746,
+  "done_reason": "stop",
+  "load_duration": 4187100,
+  "prompt_eval_count": 11411,
+  "prompt_eval_duration": 123650366000,
+  "eval_count": 492,
+  "eval_duration": 30814309000,
+  "total_duration": 154738168700,
+  "content": "{\n  \"code\": \".search-wrapper:focus-within {\\n  box-shadow: 0 0 0 2px var(--bg-pale-lavender), 0 0 0 4px var(--text-heading);\\n}\\n\\n#search:disabled,\\n.clear-btn:disabled {\\n  opacity: 1;\\n  cursor: default;\\n  background: none;\\n}\\n\\n.clear-btn[disabled] {\\n  display: flex;\\n}\\n\\n.filter-chip:focus-visible {\\n  outline: 2px solid var(--text-heading);\\n  outline-offset: 2px;\\n}\\n\\n.fav-btn:focus-visible,\\n.action-btn:focus-visible {\\n  outline: 2px solid var(--text-heading);\\n  outline-offset: 2px;\\n}\\n\\n.fav-btn[disabled]:focus-visible {\\n  outline: none;\\n}\\n\\n@media (max-width: 390px) {\\n  .mentor-card {\\n    padding: 14px;\\n  }\\n\\n  .name {\\n    font-size: 15px;\\n  }\\n\\n  .certification,\\n  .employer {\\n    font-size: 10px;\\n  }\\n}\\n\\n@media (max-width: 320px) {\\n  .container {\\n    padding: 0 12px;\\n  }\\n\\n  .header {\\n    padding-left: 12px;\\n  }\\n\\n  .search-wrapper {\\n    height: 44px;\\n    padding: 0 10px;\\n  }\\n\\n  .mentor-card {\\n    padding: 12px;\\n  }\\n\\n  .name {\\n    font-size: 14px;\\n  }\\n\\n  .description {\\n    -webkit-line-clamp: 3;\\n  }\\n}\\n\\n@media (prefers-reduced-motion: reduce) {\\n  *,\\n  *::before,\\n  *::after {\\n    animation-duration: 0.01ms !important;\\n    transition-duration: 0.01ms !important;\\n  }\\n}\\n\\n[hidden] {\\n  display: none !important;\\n}\"\n}"
+}
