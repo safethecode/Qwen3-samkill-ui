@@ -9,6 +9,7 @@ import { inspectFontRendering } from './font-rendering.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
+import { inspectFieldLabels } from './label-check.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -102,7 +103,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.deepEqual(icons.issues.filter(issue => issue.status === 'FAIL'), [], 'Icon geometry or control semantics failed');
         });
         await check(`labels-${width}`, async () => {
-          const unlabeled = await page.evaluate(() => [...document.querySelectorAll('input:not([type=hidden]),textarea,select')].filter(el => el.getBoundingClientRect().width && el.getBoundingClientRect().height && !el.disabled && ![...el.labels || []].some(label => label.getBoundingClientRect().width && label.getBoundingClientRect().height && label.textContent.trim())).map(el => el.id || el.name || el.tagName));
+          const unlabeled = await inspectFieldLabels(page);
           measurements[`labels-${width}`] = unlabeled.length;
           assert.deepEqual(unlabeled, [], 'Visible fields require visible labels; aria-label and placeholders alone are insufficient');
         });

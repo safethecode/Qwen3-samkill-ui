@@ -5,7 +5,7 @@ export function validateShellLabels(html) {
   const labels = [];
   const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value;
   const labelText = node => {
-    if (attr(node, 'hidden') !== undefined || /(?:display\s*:\s*none|visibility\s*:\s*hidden)/i.test(attr(node, 'style') || '') || ['script', 'style', 'template'].includes(node.tagName)) return '';
+    if (attr(node, 'hidden') !== undefined || /(?:display\s*:\s*none|visibility\s*:\s*hidden)/i.test(attr(node, 'style') || '') || ['script', 'style', 'template', 'input', 'select', 'option', 'textarea', 'button'].includes(node.tagName)) return '';
     return node.nodeName === '#text' ? node.value : (node.childNodes || []).map(labelText).join('');
   };
   const visit = node => {

@@ -13,6 +13,7 @@ import { inspectIcons } from './icon-check.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
+import { hasVisibleLabel } from './label-check.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
 const output = resolve(process.argv[3] || 'runs/evidence');
@@ -103,7 +104,7 @@ try {
       await searchPage.goto(`http://127.0.0.1:${server.address().port}`);
       const search = searchPage.getByRole('textbox', { name: '이력서 검색', exact: true });
       const edit = searchPage.getByRole('button', { name: '편집', exact: true });
-      assert(await search.evaluate(e => [...(e.labels || [])].some(label => label.getBoundingClientRect().width > 0)), 'Search needs a visible label');
+      assert(await search.evaluate(hasVisibleLabel), 'Search needs a visible label');
       await search.fill('no-match-fixture-932');
       const filtered = await edit.first().waitFor({ state: 'detached' }).then(() => true, () => false);
       if (!filtered) {
@@ -120,7 +121,7 @@ try {
     for (const [label, value] of Object.entries({ 제목: '검증 이력서', 이름: '테스트', 직무: '개발자', 이메일: 'test@example.com', 소개: '검증용 소개' })) {
       const field = page.getByLabel(new RegExp(`^${label}\\s*\\*?$`));
       assert(await field.isVisible(), `Clicking 새 이력서 did not reveal the editor field ${label}; inspect its click handler and hidden state`);
-      assert(await field.evaluate(e => [...(e.labels || [])].some(label => label.getBoundingClientRect().width > 0)), `Missing visible label: ${label}`);
+      assert(await field.evaluate(hasVisibleLabel), `Missing visible label: ${label}`);
       await field.fill(value);
     }
     await button('저장').click();
