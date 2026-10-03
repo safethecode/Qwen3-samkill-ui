@@ -20,6 +20,8 @@ Names and sample data are fictional. There are no connected payments, venues, me
 
 ## Run
 
+New runs receive a small pinned official Lucide asset set with source, license and integrity hashes. Existing historical runs retain their original no-external-assets contracts. Original photographs and brand assets are still not provided automatically. Font and icon checks record actual rendering and unresolved review findings; they do not equate an asset manifest with visual fidelity. Stage-specific original guide text and a full 75-rule/eight-guide inventory are recorded in generation evidence. The inventory is not a compliance report.
+
 Install dependencies with `npm ci`. Set `CHROME_PATH` when using an installed Chrome. Ollama must already expose the selected model.
 
 ```powershell

@@ -21,10 +21,15 @@ When QUALITY.json exists, read `.opencode/quality-runner.json` and execute its r
 
 ## Non-negotiable UI rules
 
+The short rules below do not replace the upstream guides. For implementation completion, assess every active ID in `references/upstream/reference-review/references/failure-catalog.json`, preserve each original check kind, and record scope, applicability, exceptions and actual evidence. Also record coverage of all eight linked guides; research or onboarding may be inapplicable only for a concrete project reason. A six-category visual score is not this review. Use the bundled design gate as described in `references/upstream/reference-review/references/design-gate.md`. Missing evidence stays unknown.
+
+The repository runner creates `design/review-plan.json` as an inventory, not proof. `node scripts/catalog.mjs TARGET init` creates unknown review drafts. Complete `design/gate-contract.json` and `design/gate-report.json` from actual inspections, including the `PROJECT-GUIDE-*` entries. The quality command requires the catalog gate too. Do not stamp every rule pass or declare a whole guide inapplicable to finish sooner.
+
 - Use semantic controls and persistent visible labels. Placeholder text is not a label.
 - Default text is at least 14px and font weight at least 500; use the project's stricter rules. Set form controls to inherit typography.
 - Define and reuse CSS design tokens. Respect the contract's spacing and colors.
-- Do not invent logos, icons, reference URLs, analytics or screenshot observations. Use existing official assets or omit icons.
+- Do not invent logos, icons, reference URLs, analytics or screenshot observations. Use verified official or existing-system assets. Omit only optional icons; a required reference icon with no verified asset is unfinished, not permission to erase it or use emoji. The repository exports pinned official icons with `node scripts/icons.mjs TARGET Search X`; preserve their files, manifest, geometry and license. Check rendered paint, label, target, edge clicks, focus and state changes, not SVG attributes alone.
+- Read the typography and icon-controls references before changing these components. Record intended rendered font families by role and selector in `design/typography.json`. Verify actual browser fonts, Korean/Latin/numeric fallback, loading and weight support; a CSS family string is insufficient. Test long text, 200% text and text spacing as applicable. Read the upstream guide for exceptions and platform limits; do not report unexecuted device checks as passed.
 - No decorative separators, tab underlines, fake KPIs or unnecessary hero sections. Focus indication must remain visible; prefer an inset field ring. Honor reduced motion.
 - Implement every requested state: empty, validation, saved, editing, errors and recovery. Keep create and edit identities separate; clear edit state when starting a new item. Render user content as text, not HTML.
 - Seed examples only when saved storage is absent and mark them explicitly. Implement archive, restore and duplication only when required by this product contract: archive removes an active record, restore reverses it, and duplicates get independent IDs. Do not add document controls to unrelated services. A required visible label does not make its value mandatory.

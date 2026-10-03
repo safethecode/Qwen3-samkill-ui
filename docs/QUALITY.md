@@ -36,12 +36,19 @@ npm run quality -- runs/my-ui 4
 
 ## Gates and recovery
 
+For a supported service case, set `serviceCase` in `QUALITY.json` to its ID from `evals/service-cases.mjs`; otherwise the legacy resume evaluator is used. The service evaluator checks font weight, form/placeholder typography, actual Chromium fonts, solid-background contrast, verified icon geometry/paint and assets at 1440/390/320 pixels and workflow end states. Complex surfaces, unverified icon systems and missing intended typography remain explicit review findings. They are not proof of failure or permission to claim completion.
+
+Declare intended font roles in `design/typography.json`, for example `{"roles":[{"selector":"h1,p,label,button","families":["Malgun Gothic"]}]}` for a contract explicitly using that system font. Use the actual project's font choices and supported fallbacks; this example is not a cross-platform font recommendation. Fonts and icons under `assets/` and the typography contract participate in the completion binding.
+
+Run `node scripts/catalog.mjs TARGET init` to create conservative unknown drafts covering 75 catalog rules and eight guides. Determine each rule's actual scope and applicability, retain original check kinds and add project-specific requirements. Inspect the implementation and evidence before filling findings. `node scripts/catalog.mjs TARGET fingerprint` invokes the bundled Python gate; set `QWEN_PYTHON` to a working Python 3 executable if needed. Copy its current hashes into the report only after conducting the review. Then run `node scripts/catalog.mjs TARGET check`. The gate checks evidence integrity and coverage, not the truth of a reviewer's aesthetic judgment. The drafts do not automatically review themselves, and automatic full-catalog completion has not been demonstrated.
+
 1. Validate the manifest, both images and vision capability before generating or repairing.
 2. Complete the existing functional loop and independently rerun its browser checks, including design geometry. Capture fresh desktop/mobile images.
 3. Review composition, hierarchy, spacing, typography, document content and action priority at both widths. Every criterion needs evidence, score at least 4/5 and confidence at least 0.8; all reported issues must be resolved. Confidence is self-reported, not a calibrated probability.
 4. Feed one localized defect to the repair model. Select a ranked source excerpt of at most 6,000 characters and request one patch, with at most 2,000 matching and 4,000 replacement characters. Read-only HTML structure supplies bounded cross-file context. Stalled attempts rotate through excerpts instead of expanding to full-file output. Each request has a 2,048-token output budget and a 120-second deadline. Timeout consumes a repair attempt; retries remain bounded. Validate the entire resulting file and preserve all passing functional checks. Parsed comments are removed deterministically before evaluation.
 5. Reject and restore candidates that regress any protected visual criterion, introduce functional failures or make no measured progress. Keep rejected evidence locally. Do not relax thresholds when the model struggles.
 6. A separate adversarial audit must pass both viewports using the same source and screenshot hashes. Source, contract or reference changes invalidate completion.
+7. Require the upstream Python catalog gate, complete source/asset scope, role-specific typography and eight-guide coverage. A visual pass cannot bypass missing, stale or unknown catalog evidence.
 
 `QUALITY-RESULT.json` and `UI-STATUS.md` record RUNNING, COMPLETE or INCOMPLETE. COMPLETE means the declared automated gates passed; it does not guarantee samkill-ui parity on every task. Errors, truncated or malformed review, unavailable vision and exhausted rounds return a nonzero status. Never interpret attempted repair as completion.
 

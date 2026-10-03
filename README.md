@@ -6,6 +6,8 @@ This does not train model weights or make every model reliable. The included eva
 
 ## Install in a project
 
+The original 75-rule catalog and all eight upstream guides are now required for completion, in addition to browser checks and visual review. Fonts and icons have dedicated rendered checks and source/asset bindings. **Unattended parity is still unproven**: the broader service trials exposed missing content, broken workflows and rule violations. A stricter rejection gate is not evidence that generation quality has reached the reference. See [quality verification](evals/QUALITY-GATE-RESULTS.md) and [the full review setup](docs/QUALITY.md).
+
 Requires Node.js 22+, OpenCode and a running local Ollama server. Clone this repository, then run:
 
 ```sh
