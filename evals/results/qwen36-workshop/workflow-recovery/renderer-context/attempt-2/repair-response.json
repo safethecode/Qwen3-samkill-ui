@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "index.html",
+    "offset": 0,
+    "count": 5
+  },
+  "inputCharacters": 13469,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 42728,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3537,
+  "prompt_eval_duration": 39284719000,
+  "load_duration": 4412900,
+  "eval_count": 106,
+  "eval_duration": 3268544000,
+  "total_duration": 42724825000,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"index.html\",\n      \"oldString\": \"<section id=\\\"booking-panel\\\" class=\\\"booking-panel hidden\\\">\\n<h2>예약하기</h2>\\n<form id=\\\"booking-form\\\">\",\n      \"newString\": \"<section id=\\\"booking-panel\\\" class=\\\"booking-panel hidden\\\">\\n<h2 id=\\\"booking-title\\\">예약하기</h2>\\n<form id=\\\"booking-form\\\">\"\n    }\n  ]\n}"
+}

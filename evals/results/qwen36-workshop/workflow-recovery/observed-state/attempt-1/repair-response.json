@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 15,
+    "count": 5
+  },
+  "inputCharacters": 10324,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 68558,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 2587,
+  "prompt_eval_duration": 29282528000,
+  "load_duration": 15764656800,
+  "eval_count": 580,
+  "eval_duration": 23480756000,
+  "total_duration": 68545068200,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"const searchInput = document.getElementById('search');\\nconst classListEl = document.getElementById('class-list');\\nconst bookingPanel = document.getElementById('booking-panel');\\nconst bookingForm = document.getElementById('booking-form');\\n\\nfunction openBooking(classId) {\\n  const cls = state.classes.find(c => c.id === classId);\\n  if (!cls) return;\\n\\n                 \\n  bookingForm.reset();\\n  \\n                              \\n  bookingPanel.dataset.classId = classId;\\n  bookingPanel.querySelector('h2').textContent = `${cls.name} 예약하기`;\\n  \\n  bookingPanel.classList.remove('hidden');\\n  bookingForm.guest.focus();\\n}\\n\\nfunction closeBooking() {\\n  bookingPanel.classList.add('hidden');\\n  delete bookingPanel.dataset.classId;\\n}\\n\\n         \\nsearchInput.addEventListener('input', (e) => {\\n  state.searchQuery = e.target.value.trim().toLowerCase();\\n  renderClassList();\\n});\\n\\n                  \\nclassListEl.addEventListener('click', (e) => {\\n  const btn = e.target.closest('.btn-detail');\\n  if (btn) {\\n    openBooking(btn.dataset.id);\\n    return;\\n  }\\n});\",\n      \"newString\": \"const searchInput = document.getElementById('search');\\nconst classListEl = document.getElementById('class-list');\\nconst bookingPanel = document.getElementById('booking-panel');\\nconst bookingForm = document.getElementById('booking-form');\\n\\nfunction openBooking(classId) {\\n  const cls = state.classes.find(c => c.id === classId);\\n  if (!cls) return;\\n\\n  bookingForm.reset();\\n  \\n  bookingPanel.dataset.classId = classId;\\n  bookingPanel.querySelector('h2').textContent = `${cls.name} 예약하기`;\\n  \\n  bookingPanel.classList.remove('hidden');\\n  bookingForm.guest.focus();\\n}\\n\\nfunction closeBooking() {\\n  bookingPanel.classList.add('hidden');\\n  delete bookingPanel.dataset.classId;\\n}\\n\\nsearchInput.addEventListener('input', (e) => {\\n  state.searchQuery = e.target.value.trim().toLowerCase();\\n  renderClassList();\\n});\\n\\nclassListEl.addEventListener('click', (e) => {\\n  const btn = e.target.closest('.btn-detail');\\n  if (btn) {\\n    openBooking(btn.dataset.id);\\n    return;\\n  }\\n});\"\n    }\n  ]\n}"
+}

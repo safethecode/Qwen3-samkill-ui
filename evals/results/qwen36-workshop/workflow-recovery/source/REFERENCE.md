@@ -1,0 +1,1 @@
+Original held-out brief. Class media and factual class information dominate; generous editorial introduction balanced against efficient booking. Compare media/content ownership with round04 and invitation rhythm with round10; preserve original product personality.

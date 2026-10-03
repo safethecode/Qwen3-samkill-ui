@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 5000,
+    "count": 5
+  },
+  "inputCharacters": 8529,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 33885,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 2454,
+  "prompt_eval_duration": 27547135000,
+  "load_duration": 3077700,
+  "eval_count": 198,
+  "eval_duration": 6225192000,
+  "total_duration": 33879440800,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".class-card button,\\n.btn-cancel {\\n  \\n  color: inherit;\\n}\",\n      \"newString\": \".class-card button,\\n.btn-cancel {\\n  padding: 0.75rem 1.25rem;\\n  background-color: var(--color-accent);\\n  color: var(--color-surface);\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  font-family: var(--font-body);\\n  font-weight: 600;\\n  cursor: pointer;\\n  transition: opacity 0.2s ease;\\n}\\n\\n.class-card button:hover {\\n  opacity: 0.9;\\n}\\n\\n.btn-cancel {\\n  \\n  color: inherit;\\n}\"\n    }\n  ]\n}"
+}

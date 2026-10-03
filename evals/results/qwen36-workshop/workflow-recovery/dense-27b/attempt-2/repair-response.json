@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 15,
+    "count": 5
+  },
+  "inputCharacters": 17033,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 76414,
+  "model": "qwen3.5:27b",
+  "done_reason": "stop",
+  "prompt_eval_count": 4354,
+  "prompt_eval_duration": 47150362000,
+  "load_duration": 6429200,
+  "eval_count": 106,
+  "eval_duration": 28979840000,
+  "total_duration": 76410261600,
+  "content": "{\"patches\":[{\"path\":\"app.js\",\"oldString\":\"  const btn = document.createElement('button');\\n    btn.className = 'btn-detail';\\n    btn.textContent = '상세';\\n    btn.dataset.id = cls.id;\",\"newString\":\"  const btn = document.createElement('button');\\n    btn.className = 'btn-book';\\n    btn.type = 'button';\\n    btn.textContent = '예약하기';\\n    btn.dataset.id = cls.id;\"}]}"
+}

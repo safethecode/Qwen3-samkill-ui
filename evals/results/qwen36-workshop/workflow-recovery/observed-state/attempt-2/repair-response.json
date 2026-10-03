@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "index.html",
+    "offset": 0,
+    "count": 5
+  },
+  "inputCharacters": 6363,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 35849,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 1648,
+  "prompt_eval_duration": 17836130000,
+  "load_duration": 5860200,
+  "eval_count": 513,
+  "eval_duration": 17933586000,
+  "total_duration": 35845129000,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"index.html\",\n      \"oldString\": \"<div class=\\\"class-list\\\" id=\\\"class-list\\\">\\n\\n</div>\",\n      \"newString\": \"<div class=\\\"class-list\\\" id=\\\"class-list\\\">\\n  <article class=\\\"class-card\\\">\\n    <h3>도자기 첫 잔</h3>\\n    <p class=\\\"category\\\">도자기</p>\\n    <p class=\\\"price\\\">예시 45,000원</p>\\n    <p class=\\\"duration\\\">예시 120분</p>\\n    <p class=\\\"capacity\\\">정원 6명</p>\\n    <p class=\\\"description\\\">예시 첫 번째로 만드는 도자기 잔을 통해 소성 과정을 경험합니다.</p>\\n    <button class=\\\"btn-details\\\" data-class=\\\"도자기 첫 잔\\\">상세</button>\\n  </article>\\n  <article class=\\\"class-card\\\">\\n    <h3>가죽 카드 지갑</h3>\\n    <p class=\\\"category\\\">가죽</p>\\n    <p class=\\\"price\\\">예시 55,000원</p>\\n    <p class=\\\"duration\\\">예시 90분</p>\\n    <p class=\\\"capacity\\\">정원 4명</p>\\n    <p class=\\\"description\\\">예시 내비홀더와 카드지갑을 결합한 실용적인 가죽 소품을 제작합니다.</p>\\n    <button class=\\\"btn-details\\\" data-class=\\\"가죽 카드 지갑\\\">상세</button>\\n  </article>\\n  <article class=\\\"class-card\\\">\\n    <h3>나무 트레이</h3>\\n    <p class=\\\"category\\\">우드</p>\\n    <p class=\\\"price\\\">예시 60,000원</p>\\n    <p class=\\\"duration\\\">예시 150분</p>\\n    <p class=\\\"capacity\\\">정원 4명</p>\\n    <p class=\\\"description\\\">예시 오일 스프레이와 연마를 통해 완성하는 나무 트레이 클래스입니다.</p>\\n    <button class=\\\"btn-details\\\" data-class=\\\"나무 트레이\\\">상세</button>\\n  </article>\\n</div>\"\n    }\n  ]\n}"
+}

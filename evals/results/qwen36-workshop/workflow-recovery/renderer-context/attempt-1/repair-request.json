@@ -1,0 +1,10 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 15,
+    "count": 5
+  },
+  "inputCharacters": 16903,
+  "maxOutputTokens": 2048
+}

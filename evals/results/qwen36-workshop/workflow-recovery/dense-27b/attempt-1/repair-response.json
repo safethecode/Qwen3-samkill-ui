@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "index.html",
+    "offset": 0,
+    "count": 5
+  },
+  "inputCharacters": 12958,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 85705,
+  "model": "qwen3.5:27b",
+  "done_reason": "stop",
+  "prompt_eval_count": 3390,
+  "prompt_eval_duration": 37052277000,
+  "load_duration": 12530754400,
+  "eval_count": 134,
+  "eval_duration": 36087951000,
+  "total_duration": 85688708600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"index.html\",\n      \"oldString\": \"<section id=\\\"booking-panel\\\" class=\\\"booking-panel hidden\\\">\\n<h2>예약하기</h2>\\n<form id=\\\"booking-form\\\">\",\n      \"newString\": \"<section id=\\\"booking-panel\\\" class=\\\"booking-panel hidden\\\">\\n<button type=\\\"button\\\" aria-label=\\\"닫기\\\" onclick=\\\"document.getElementById('booking-panel').classList.add('hidden')\\\">✕</button>\\n<h2>예약하기</h2>\\n<form id=\\\"booking-form\\\">\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 5
+  },
+  "inputCharacters": 11041,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 44275,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3411,
+  "prompt_eval_duration": 39339067000,
+  "load_duration": 6209300,
+  "eval_count": 152,
+  "eval_duration": 4791445000,
+  "total_duration": 44271536700,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"#booking-form button[type=\\\"submit\\\"\",\n      \"newString\": \"#booking-form button[type=\\\"submit\\\"] {\\n  padding: 0.75rem;\\n  background-color: var(--color-accent);\\n  color: var(--color-surface);\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  font-weight: 600;\\n  cursor: pointer;\\n}\\n\\n#booking-form button[type=\\\"submit\\\"]:hover {\\n  background-color: #A6442B;\\n}\"\n    }\n  ]\n}"
+}
