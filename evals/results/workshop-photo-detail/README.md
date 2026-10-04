@@ -20,6 +20,8 @@ First bounded repair was rejected for an unchanged HTML patch. [Response](reject
 
 ## Working candidate
 
+An [independent generation from the same original plan](independent-repeat/generation) reproduced the stacked favorite/action defect at all four widths. [Render](independent-repeat/render/390.png), [audit](independent-repeat/render/report.json). The price audit also failed to resolve its selector because this generation chose a different class; that failure is not proof of a misplaced price. Both remain recorded. This repeat confirms that the repaired screenshot does not establish reliable generation.
+
 [Complete interactive source](interactive/source), [mobile](interactive/render/390.png), [desktop](interactive/render/1440.png), [booking form](interactive/render/form-390.png), [persisted confirmation](interactive/render/confirmation-390.png), [source-bound report](interactive/render/report.json).
 
 The host integrated a native dialog, form styling and demo booking/favorite/persistence behavior around the local components. No real booking or payment is offered. Four widths verify favorite toggling, empty-form rejection, persisted class/guest/date/time/price, cancellation after reload, Escape and focus restoration. Actual loaded fonts and text contrast are inspected. Structural checks and these interaction checks are not a commercial-quality score.

@@ -1,0 +1,171 @@
+@font-face{font-family:"Noto Sans KR";src:url("assets/fonts/NotoSansKR.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap;}
+*{box-sizing:border-box}body{margin:0;color:#202024;background:#fff;font-family:"Noto Sans KR",sans-serif;font-weight:500}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}img{display:block;max-width:100%}p,h1,h2,h3{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #5146d7;outline-offset:4px}.site-header{height:64px;border-bottom:1px solid #ededf0;display:flex;align-items:center;max-width:1120px;margin:auto;padding:0 24px;font-size:20px;font-weight:800}.product{max-width:1120px;margin:40px auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding:0 24px}.details{min-width:0}.disclosure{max-width:1120px;margin:32px auto;padding:0 24px 32px;font-size:14px;color:#60606a;line-height:1.7}@media(max-width:700px){.site-header{height:52px;padding:0 20px;font-size:18px}.product{display:block;margin:0;padding:0}.details{padding:0 20px}.disclosure{padding:0 20px 24px;margin-top:24px}}
+[data-ui-unit="media"].product-media {
+  margin: 0;
+}
+
+[data-ui-unit="media"].product-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 44% center;
+  border-radius: 0;
+}
+
+@media (min-width: 701px) {
+  [data-ui-unit="media"].product-media img {
+    border-radius: 8px;
+  }
+}
+[data-ui-unit="identity"].product-identity[data-ui-unit="identity"] {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+[data-ui-unit="identity"].product-identity .eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  color: #60606a;
+  margin-bottom: 8px;
+}
+
+[data-ui-unit="identity"].product-identity .title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #202024;
+  margin-bottom: 12px;
+}
+
+[data-ui-unit="identity"].product-identity .price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #202024;
+  margin-bottom: 24px;
+}
+
+[data-ui-unit="identity"].product-identity .metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+[data-ui-unit="identity"].product-identity .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555560;
+}
+
+[data-ui-unit="identity"].product-identity .meta-item img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+[data-ui-unit="identity"].product-identity .description {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #202024;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 701px) {
+  [data-ui-unit="identity"].product-identity[data-ui-unit="identity"] {
+    padding-top: 0;
+  }
+
+  [data-ui-unit="identity"].product-identity .title {
+    font-size: 28px;
+  }
+}
+[data-ui-unit="booking"] .booking-host {
+  padding: 20px 0;
+  border-top: 1px solid #ededf0;
+}
+
+[data-ui-unit="booking"] .booking-studio {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #202024;
+  margin-bottom: 4px;
+}
+
+[data-ui-unit="booking"] .booking-meta {
+  display: block;
+  font-size: 14px;
+  color: #60606a;
+  line-height: 1.4;
+}
+
+[data-ui-unit="booking"] .booking-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+[data-ui-unit="booking"] #favorite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #60606a;
+}
+
+[data-ui-unit="booking"] #favorite img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+[data-ui-unit="booking"] #book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background-color: #5146d7;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+}
+
+[data-ui-unit="booking"] .booking-note {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #60606a;
+}
+
+
+[data-ui-unit="booking"] #favorite:hover {
+  background-color: #f5f5f7;
+  color: #202024;
+}
+
+[data-ui-unit="booking"] #favorite:active {
+  transform: scale(0.95);
+}
+
+[data-ui-unit="booking"] #book:hover {
+  opacity: 0.9;
+}
+
+[data-ui-unit="booking"] #book:active {
+  background-color: #3e36b5;
+}

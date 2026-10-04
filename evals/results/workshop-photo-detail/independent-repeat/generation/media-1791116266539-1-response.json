@@ -1,0 +1,33 @@
+{
+  "binding": "8a83700feb24f97924b461f5aebab07e16117a9e756d968c170762c796409a0c",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 22546,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:17:46.5354799Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<figure class=\\\"product-media\\\" aria-label=\\\"Product Image\\\"><img src=\\\"assets/photos/pottery.jpg\\\" alt=\\\"물레 위 흙을 손으로 빚는 도자기 작업\\\"></figure>\",\n  \"css\": \".product-media {\\n  margin: 0;\\n  width: 100%;\\n}\\n\\n.product-media img {\\n  width: 100%;\\n  aspect-ratio: 1 / 1;\\n  object-fit: cover;\\n  object-position: 44% center;\\n  border-radius: 0;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-media img {\\n    border-radius: 8px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 22529036400,
+  "load_duration": 2602600,
+  "prompt_eval_count": 1561,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 17359500000,
+  "eval_count": 170,
+  "eval_duration": 4977233000
+}

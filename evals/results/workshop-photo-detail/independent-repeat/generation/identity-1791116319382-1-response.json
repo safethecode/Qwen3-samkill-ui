@@ -1,0 +1,33 @@
+{
+  "binding": "8a83700feb24f97924b461f5aebab07e16117a9e756d968c170762c796409a0c",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 28306,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:18:39.3809871Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<div class=\\\"product-identity\\\" data-ui-unit=\\\"identity\\\">\\n  <span class=\\\"eyebrow\\\">도자기 · 입문</span>\\n  <h1 class=\\\"title\\\">내 손으로 빚는 첫 번째 도자기 잔</h1>\\n  <div class=\\\"price\\\">55,000원</div>\\n  <div class=\\\"metadata\\\">\\n    <div class=\\\"meta-item\\\">\\n      <img src=\\\"assets/icons/Clock.svg\\\" alt=\\\"\\\"\\n           width=\\\"20\\\" height=\\\"20\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\\n      <span>90분</span>\\n    </div>\\n    <div class=\\\"meta-item\\\">\\n      <img src=\\\"assets/icons/Users.svg\\\" alt=\\\"\\\"\\n           width=\\\"20\\\" height=\\\"20\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\\n      <span>최대6명</span>\\n    </div>\\n    <div class=\\\"meta-item\\\">\\n      <img src=\\\"assets/icons/MapPin.svg\\\" alt=\\\"\\\"\\n           width=\\\"20\\\" height=\\\"20\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\\n      <span>서울·연남동</span>\\n    </div>\\n  </div>\\n  <p class=\\\"description\\\">흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.</p>\\n</div>\",\n  \"css\": \".product-identity[data-ui-unit=\\\"identity\\\"] {\\n  padding-top: 24px;\\n  padding-bottom: 24px;\\n}\\n\\n.product-identity .eyebrow {\\n  display: inline-block;\\n  font-size: 14px;\\n  color: #60606a;\\n  margin-bottom: 8px;\\n}\\n\\n.product-identity .title {\\n  font-size: 22px;\\n  font-weight: 700;\\n  line-height: 1.45;\\n  color: #202024;\\n  margin-bottom: 12px;\\n}\\n\\n.product-identity .price {\\n  font-size: 24px;\\n  font-weight: 800;\\n  color: #202024;\\n  margin-bottom: 24px;\\n}\\n\\n.product-identity .metadata {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 16px;\\n  margin-bottom: 24px;\\n}\\n\\n.product-identity .meta-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 8px;\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #555560;\\n}\\n\\n.product-identity .meta-item img {\\n  width: 20px;\\n  height: 20px;\\n  display: block;\\n}\\n\\n.product-identity .description {\\n  font-size: 15px;\\n  line-height: 1.75;\\n  color: #202024;\\n  margin-top: 20px;\\n  margin-bottom: 0;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-identity[data-ui-unit=\\\"identity\\\"] {\\n    padding-top: 0;\\n  }\\n\\n  .product-identity .title {\\n    font-size: 28px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 28285858000,
+  "load_duration": 3079800,
+  "prompt_eval_count": 1833,
+  "prompt_eval_cached_count": 1829,
+  "prompt_eval_duration": 129954000,
+  "eval_count": 793,
+  "eval_duration": 28052473000
+}
