@@ -13,6 +13,14 @@ export async function inspectTextStress(page, capture = async () => {}) {
         const visible = element => element.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }) && element.getBoundingClientRect().width > 0;
         const describe = element => ({ tag: element.tagName, id: element.id, class: String(element.className), text: element.textContent.trim().slice(0, 100), width: element.clientWidth, scrollWidth: element.scrollWidth, height: element.clientHeight, scrollHeight: element.scrollHeight, overflow: getComputedStyle(element).overflow });
         const elements = [...document.querySelectorAll('body *')].filter(visible);
+        const gridPressure = elements.flatMap(element => {
+          const parent = element.parentElement;
+          if (!parent) return [];
+          const style = getComputedStyle(element);
+          const layout = getComputedStyle(parent);
+          if (!['grid', 'inline-grid'].includes(layout.display) || parent.scrollWidth <= parent.clientWidth + 1 || style.minWidth !== 'auto') return [];
+          return [{ tag: element.tagName, id: element.id, class: String(element.className), width: element.getBoundingClientRect().width, minWidth: style.minWidth, parent: { tag: parent.tagName, id: parent.id, class: String(parent.className), width: parent.clientWidth, scrollWidth: parent.scrollWidth, columns: layout.gridTemplateColumns }, hypothesis: 'An automatic grid track or item minimum may force this row wider than its container. Inspect the track definition and item min-width; a zero-minimum flexible track such as minmax(0,1fr) may permit reflow. Preserve content and font size; do not hide overflow.' }];
+        }).slice(0, 10);
         const flexPressure = elements.flatMap(element => {
           const parent = element.parentElement;
           if (!parent) return [];
@@ -49,6 +57,7 @@ export async function inspectTextStress(page, capture = async () => {}) {
           scrollWidth: document.documentElement.scrollWidth,
           overflowPx: Math.max(0, document.documentElement.scrollWidth - innerWidth - 1),
           flexPressure,
+          gridPressure,
           clippedByAncestor,
           outsideViewport: elements.filter(element => element.getBoundingClientRect().right > innerWidth + 1).slice(0, 30).map(describe),
           clippingCandidates: elements.filter(element => element.textContent.trim() && (element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)).slice(0, 50).map(describe)

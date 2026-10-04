@@ -3,6 +3,21 @@ import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { inspectTextStress } from '../scripts/text-stress.mjs';
 
+test('grid diagnostics identify automatic track minimum pressure and clear after a zero-minimum track repair', async () => {
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+  try {
+    const page = await browser.newPage({ viewport: { width: 320, height: 900 } });
+    await page.setContent('<style>body{margin:16px;font:500 16px sans-serif}.grid{display:grid;grid-template-columns:1fr}section{overflow-wrap:break-word}</style><div class="grid"><section id="content">AccessibilityCourseNavigation</section></div>');
+    const report = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.ok(report.overflowPx > 0);
+    assert.ok(report.gridPressure.some(item => item.id === 'content' && item.parent.class === 'grid'));
+    await page.addStyleTag({ content: '.grid{grid-template-columns:minmax(0,1fr)}' });
+    const fixed = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.equal(fixed.overflowPx, 0);
+    assert.deepEqual(fixed.gridPressure, []);
+  } finally { await browser.close(); }
+});
+
 test('reflow diagnostics identify the intrinsic minimum of a flexible input instead of its outer container', async () => {
   const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
   try {
