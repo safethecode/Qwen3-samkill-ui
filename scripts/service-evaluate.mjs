@@ -214,17 +214,27 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           assert.ok(after.some(text => text !== title && !detail.headingsAndActions.includes(text) && detail.text.includes(text)), 'The detail action must reveal item information beyond repeated headings and actions');
           await action.click();
           assert.equal(await page.locator('#booking-form').isVisible(), true, 'The 예약하기 action must open the booking form');
+          return title;
         };
         await exercise('booking-validation', async page => { await open(page); await button(page, '예약 확정').click(); assert.equal(await page.locator('#confirmation').isVisible(), false, `Empty booking must not display #confirmation (class=${await page.locator('#confirmation').getAttribute('class')}); verify form validation and hidden state styling`); });
         await exercise('booking-persist-cancel', async page => {
-          await open(page);
+          const title = await open(page);
           await page.locator('#guest').fill('테스트 사용자');
           await page.locator('#date').fill('2027-05-15');
           await page.locator('#slot').selectOption({ index: 1 });
+          const slot = (await page.locator('#slot option:checked').innerText()).trim();
+          const verifyConfirmation = async () => {
+            assert.equal(await page.locator('#confirmation').isVisible(), true, 'Saved booking confirmation must be visible');
+            const text = (await page.locator('#confirmation').innerText()).replace(/\s+/g, ' ');
+            assert.ok(text.includes(title.replace(/\s+/g, ' ')), 'Booking confirmation must identify the selected class');
+            assert.match(text, /테스트 사용자/);
+            assert.match(text, /(?:^|\D)2027\D+0?5\D+15(?:\D|$)/, 'Booking confirmation must show the selected date');
+            assert.ok(slot && text.includes(slot), 'Booking confirmation must show the selected time');
+          };
           await button(page, '예약 확정').click();
-          assert.match(await page.locator('#confirmation').innerText(), /테스트 사용자/);
+          await verifyConfirmation();
           await page.reload();
-          assert.match(await page.locator('#confirmation').innerText(), /테스트 사용자/);
+          await verifyConfirmation();
           await button(page, '예약 취소').click();
           await page.reload();
           assert.equal(await page.locator('#confirmation').isVisible(), false, `Cancelled booking must not display #confirmation after reload (class=${await page.locator('#confirmation').getAttribute('class')}); verify saved state and hidden state styling`);
