@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 1038,
+    "count": 64
+  },
+  "inputCharacters": 7282,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 19433,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 1621,
+  "prompt_eval_duration": 16812483000,
+  "load_duration": 1540500,
+  "eval_count": 82,
+  "eval_duration": 2465135000,
+  "total_duration": 19417896200,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"button {\\n  font-family: inherit;\\n  cursor: pointer;\\n}\",\n      \"newString\": \"button, input, select, textarea {\\n  font: inherit;\\n  cursor: pointer;\\n}\"\n    }\n  ]\n}"
+}

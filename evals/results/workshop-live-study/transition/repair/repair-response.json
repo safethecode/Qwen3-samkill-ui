@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 0,
+    "count": 1
+  },
+  "inputCharacters": 17658,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 59142,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 4494,
+  "prompt_eval_duration": 49849187000,
+  "load_duration": 3991100,
+  "eval_count": 238,
+  "eval_duration": 8900834000,
+  "total_duration": 59125621900,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"function init() {\\n  loadState();\\n  if (!state.classes.length) state.classes = CLASSES;\\n  renderCatalogue();\\n  renderConfirmation();\\n}\\n\\ninit();\",\n      \"newString\": \"document.getElementById('open-booking-btn').addEventListener('click', () => {\\n  if (!state.selectedClassId) return;\\n  const form = document.getElementById('booking-form');\\n  const detailsPanel = document.getElementById('details-panel');\\n  const confirmation = document.getElementById('confirmation');\\n\\n  renderBookingSummary();\\n  form.hidden = false;\\n  detailsPanel.hidden = true;\\n  confirmation.hidden = true;\\n  document.getElementById('guest').focus();\\n});\\n\\nfunction init() {\\n  loadState();\\n  if (!state.classes.length) state.classes = CLASSES;\\n  renderCatalogue();\\n  renderConfirmation();\\n}\\n\\ninit();\"\n    }\n  ]\n}"
+}

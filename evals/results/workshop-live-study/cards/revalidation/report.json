@@ -1,0 +1,608 @@
+{
+  "case": "workshop",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-1440.json",
+      "category": "layout",
+      "id": "9d7d85864311a56eec34d0fe95d9a735a5fdee39b4bfc7f6de33f5f9bcbdf220",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-390.json",
+      "category": "layout",
+      "id": "b18357cba246183bd83b94cf8b2494fe292b589f6cc967915a054b406d0c8358",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-320.json",
+      "category": "layout",
+      "id": "fbeeda72ad2b9d3e299c9421395b1346fcc508c193cb308e4453247cc74b6e82",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 2,
+    "font-rendering-1440": 4,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "text-200-1440": 0,
+    "text-200-clipping-1440": 0,
+    "text-spacing-1440": 0,
+    "text-spacing-clipping-1440": 0,
+    "readable-390": 2,
+    "font-rendering-390": 4,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "text-200-390": 0,
+    "text-200-clipping-390": 0,
+    "text-spacing-390": 0,
+    "text-spacing-clipping-390": 0,
+    "readable-320": 2,
+    "font-rendering-320": 4,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0,
+    "text-200-320": 0,
+    "text-200-clipping-320": 0,
+    "text-spacing-320": 0,
+    "text-spacing-clipping-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기": 1,
+      "도자기 첫 잔": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "90분": 1,
+      "8명": 1,
+      "65,000원": 1,
+      "상세": 3,
+      "가죽공예": 1,
+      "가죽 카드 지갑": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "120분": 1,
+      "6명": 1,
+      "55,000원": 1,
+      "목공예": 1,
+      "나무 트레이": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "150분": 1,
+      "5명": 1,
+      "70,000원": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    },
+    "390": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기": 1,
+      "도자기 첫 잔": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "90분": 1,
+      "8명": 1,
+      "65,000원": 1,
+      "상세": 3,
+      "가죽공예": 1,
+      "가죽 카드 지갑": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "120분": 1,
+      "6명": 1,
+      "55,000원": 1,
+      "목공예": 1,
+      "나무 트레이": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "150분": 1,
+      "5명": 1,
+      "70,000원": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    },
+    "1440": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기": 1,
+      "도자기 첫 잔": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "90분": 1,
+      "8명": 1,
+      "65,000원": 1,
+      "상세": 3,
+      "가죽공예": 1,
+      "가죽 카드 지갑": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "120분": 1,
+      "6명": 1,
+      "55,000원": 1,
+      "목공예": 1,
+      "나무 트레이": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "150분": 1,
+      "5명": 1,
+      "70,000원": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       actual: 'Arial',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Arial',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     }\n+   ]\n-   typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": false
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "booking-validation",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       actual: 'Arial',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Arial',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'guest',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       f",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이",
+          "예약 신청"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "INPUT",
+            "id": "guest",
+            "type": "text",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "예약자 이름"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "INPUT",
+            "id": "date",
+            "type": "date",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "방문일"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "SELECT",
+            "id": "slot",
+            "type": null,
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "예약 시간"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "submit",
+            "text": "예약 확정",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": false
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "booking-persist-cancel",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       actual: 'Arial',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Arial',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     }\n+   ]\n-   typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": false
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 28,
+  "total": 40
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 0,
+    "count": 1
+  },
+  "inputCharacters": 18971,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 79893,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 4767,
+  "prompt_eval_duration": 52896957000,
+  "load_duration": 3670600,
+  "eval_count": 703,
+  "eval_duration": 26777044000,
+  "total_duration": 79877800900,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"  filtered.forEach(c => {\\n    const card = document.createElement('article');\\n    card.className = 'class-card';\\n    card.dataset.id = c.id;\\n    const title = document.createElement('h3');\\n    title.textContent = c.title;\\n    const meta = document.createElement('p');\\n    meta.textContent = `${c.category} · ${c.duration} · ${c.capacity}명 · ${c.price.toLocaleString()}원`;\\n    const desc = document.createElement('p');\\n    desc.textContent = c.desc;\\n    const btn = document.createElement('button');\\n    btn.textContent = '상세';\\n    btn.addEventListener('click', () => selectClass(c.id));\\n    card.append(title, meta, desc, btn);\\n    container.appendChild(card);\\n  });\",\n      \"newString\": \"  filtered.forEach(c => {\\n    const card = document.createElement('article');\\n    card.className = 'class-card';\\n    card.dataset.id = c.id;\\n\\n    const art = document.createElement('div');\\n    art.className = 'class-art';\\n    art.dataset.kind = c.category;\\n    art.setAttribute('aria-hidden', 'true');\\n    card.appendChild(art);\\n\\n    const cat = document.createElement('p');\\n    cat.className = 'class-category';\\n    cat.textContent = c.category;\\n    card.appendChild(cat);\\n\\n    const title = document.createElement('h3');\\n    title.textContent = c.title;\\n    card.appendChild(title);\\n\\n    const desc = document.createElement('p');\\n    desc.className = 'class-description';\\n    desc.textContent = c.desc;\\n    card.appendChild(desc);\\n\\n    const log = document.createElement('p');\\n    log.className = 'class-logistics';\\n    const clockIcon = document.createElement('img');\\n    clockIcon.src = 'assets/icons/Clock.svg';\\n    clockIcon.alt = '';\\n    clockIcon.width = 20;\\n    clockIcon.height = 20;\\n    clockIcon.setAttribute('aria-hidden', 'true');\\n    log.appendChild(clockIcon);\\n    log.appendChild(document.createTextNode(` ${c.duration}`));\\n\\n    const usersIcon = document.createElement('img');\\n    usersIcon.src = 'assets/icons/Users.svg';\\n    usersIcon.alt = '';\\n    usersIcon.width = 20;\\n    usersIcon.height = 20;\\n    usersIcon.setAttribute('aria-hidden', 'true');\\n    log.appendChild(usersIcon);\\n    log.appendChild(document.createTextNode(` ${c.capacity}명`));\\n    card.appendChild(log);\\n\\n    const price = document.createElement('p');\\n    price.className = 'class-price';\\n    price.textContent = `${c.price.toLocaleString()}원`;\\n    card.appendChild(price);\\n\\n    const btn = document.createElement('button');\\n    btn.textContent = '상세';\\n    btn.addEventListener('click', () => selectClass(c.id));\\n    card.appendChild(btn);\\n\\n    container.appendChild(card);\\n  });\"\n    }\n  ]\n}"
+}
