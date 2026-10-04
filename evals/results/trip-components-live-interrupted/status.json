@@ -1,0 +1,27 @@
+{
+  "status": "INTERRUPTED_BEFORE_FIRST_COMPONENT_RESPONSE",
+  "reason": "Another local client was observed using the same Ollama server with qwen-local-dev:latest after this experiment started. Only this experiment process was stopped to avoid competing inference. No model-generated UI or quality score exists for this run.",
+  "inputValidation": "Four semantic units and their immutable HTML validated; this does not validate generated CSS or visual quality.",
+  "sourceHashes": {
+    "DESIGN.md": "ac40cd2f068370cbbaa126db2d339494ee2222b7eb16c5caf056cd9ff59c116c",
+    "REFERENCE.md": "fc394702ac144f6f8da5b83e309069d69f993681db8793f3d43a8a15fbacb389",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/ChevronLeft.svg": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+    "assets/icons/GripVertical.svg": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/manifest.json": "76842246dec6bd7d041f9b2d44e52364387bd5c30efeae7f5f0d228038fc11b4",
+    "assets/reference/crops.json": "7a058a2ea319db5e92cf5b81210dc0bbecb73649906b16415faf911a4418d36a",
+    "assets/reference/live-retrieval.json": "78866bb20c32eedd921b7641cf646845eebf76f1cc80bd5be00a4d8a630f58f0",
+    "assets/reference/photo-1.png": "4646698ab70e1e29ca47fbf3ead54be139d0b15ab0de463ebea9ddc7826a8584",
+    "assets/reference/photo-2.png": "e896a767b74ce01a051ad2be6f729717d96a28921f47b1d27901887be0b213d8",
+    "assets/reference/photo-3.png": "4b24197819ebaf803cb2abc2998d16ac968f604fa82d46aa81edd78d5154e761",
+    "assets/reference/photo-fragment.png": "05549f6daf94414350127a9d65fe7de2db89c91e11a0a316877349bd810d9bdc",
+    "assets/reference/source.jpg": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d",
+    "design/typography.json": "534c3deed77d20d1d9839d0eceda9925e0cdb26b2f632ba652d29bb5e1909cee",
+    "design/component-plan.json": "c56ffab35c2bde5516cc53f2418246a8dc5de9862eb88a962288cfad032b4418",
+    "design/layout-contract.json": "96ca4c1f870c7c77a3afe36b058d43262fa82d03bd88695793507e5dff769d21"
+  },
+  "resume": "Use a fresh target or the existing generator resume mechanism only after confirming there is no competing inference. Preserve this interrupted record."
+}
