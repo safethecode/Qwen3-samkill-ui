@@ -2,6 +2,8 @@
 
 Before generating a new service, identify its user, primary task and one complete state transition. Specify the initial, empty, invalid, saved and recovered state. A static translation exercise must not imply that disabled sample controls are real product functionality.
 
+For reference-driven work, follow [Decomposed layout](decomposed-layout.md) before implementation. Break the dominant component into owned semantic regions, declare layout relationships, and compare element samples with the assembled screen. File-by-file generation alone is not decomposition.
+
 Choose the dominant structure from the task, not from the last generated application:
 
 | Task | Dominant content | Relationships to preserve |
