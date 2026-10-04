@@ -2,6 +2,8 @@
 
 ## Current status — 2026-10-04
 
+The latest semantic decomposition trial completed seven elements with fixed HTML assistance for search and card bodies. Its original browser result is 34/37; all 21 sample/assembly width comparisons agree. The subsequent expanded layout audit is 34/40 and correctly rejects an invented description inside the identity region at all three widths. Typography, selected icon appearance and inconsistent card actions remain below the reference. [Direct review](results/decomposed-mentor-v3/visual-review.md), [post-generation layout audit](results/decomposed-mentor-layout-audit/README.md). The skill now requires semantic ownership and layout contracts; the browser gates enforce declared containment, separation, row density and sample widths. These measurements do not approve visual quality.
+
 A fresh font-intent trial exposed another gap: a matching installed font can satisfy the family-name check while the supplied local font file is never loaded. Generation now receives the predeclared role contract. A bounded local-model follow-up added the missing loading rule, but the font's internal platform name differs from its CSS family, leaving strict role checks failed. The original contract and failures are preserved. Visible-label and enlargement defects also remain. [Font trial and rendered comparison](results/font-intent-generation/visual-review.md).
 
 **INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
