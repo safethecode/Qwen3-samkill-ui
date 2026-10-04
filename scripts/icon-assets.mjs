@@ -10,6 +10,23 @@ export const iconNodes = name => {
 };
 const escape = value => String(value).replace(/[&"<>]/g, character => ({ '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' })[character]);
 const digest = data => createHash('sha256').update(data).digest('hex');
+const variantMarkup = icon => {
+  if (!/^[a-z][a-z0-9-]{0,31}$/.test(icon.variant || '') || ![icon.fill, icon.stroke].every(value => /^(?:#[a-fA-F0-9]{6}|none)$/.test(value))) throw new Error('Invalid explicit icon paint variant');
+  return iconMarkup(icon.name).replace('fill="none" stroke="currentColor"', `fill="${icon.fill}" stroke="${icon.stroke}"`);
+};
+
+export async function appendIconVariant(target, variant) {
+  const svg = variantMarkup(variant);
+  await verifiedIconAssets(target);
+  const folder = resolve(target, 'assets/icons');
+  const manifest = JSON.parse(await readFile(resolve(folder, 'manifest.json'), 'utf8'));
+  const file = `${variant.name}-${variant.variant}.svg`;
+  if (manifest.icons.some(icon => icon.file === file)) throw new Error('Icon variant already exists');
+  await writeFile(resolve(folder, file), svg, { flag: 'wx' });
+  manifest.icons.push({ name: variant.name, variant: variant.variant, fill: variant.fill, stroke: variant.stroke, file, sha256: digest(svg), geometrySha256: digest(JSON.stringify(iconNodes(variant.name))) });
+  await writeFile(resolve(folder, 'manifest.json'), JSON.stringify(manifest, null, 2));
+  return file;
+}
 export function iconMarkup(name) {
   const nodes = iconNodes(name).map(([tag, attributes]) => `<${tag} ${Object.entries(attributes).map(([key, value]) => `${key}="${escape(value)}"`).join(' ')}></${tag}>`).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" data-icon-source="lucide@${iconVersion}" data-icon-name="${name}" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${nodes}</svg>`;
@@ -41,9 +58,10 @@ export async function verifiedIconAssets(target) {
   if (digest(await readFile(resolve(folder, 'LICENSE'))) !== digest(expectedLicense) || manifest.licenseSha256 !== digest(expectedLicense)) throw new Error('Icon license integrity mismatch');
   const result = {};
   for (const icon of manifest.icons) {
-    if (icon.file !== `${icon.name}.svg`) throw new Error('Invalid icon asset path');
+    if (icon.file !== (icon.variant === undefined ? `${icon.name}.svg` : `${icon.name}-${icon.variant}.svg`)) throw new Error('Invalid icon asset path');
+    const expected = icon.variant === undefined ? iconMarkup(icon.name) : variantMarkup(icon);
     const data = await readFile(resolve(folder, icon.file));
-    if (digest(data) !== icon.sha256 || icon.sha256 !== digest(iconMarkup(icon.name)) || icon.geometrySha256 !== digest(JSON.stringify(iconNodes(icon.name)))) throw new Error(`Official icon asset integrity mismatch: ${icon.name}`);
+    if (digest(data) !== icon.sha256 || icon.sha256 !== digest(expected) || icon.geometrySha256 !== digest(JSON.stringify(iconNodes(icon.name)))) throw new Error(`Official icon asset integrity mismatch: ${icon.name}`);
     result[`/assets/icons/${icon.file}`] = { name: icon.name, source: `lucide@${iconVersion}` };
   }
   return result;
