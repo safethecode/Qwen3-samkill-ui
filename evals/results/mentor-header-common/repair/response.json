@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 48175,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T07:33:11.5071925Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"html\",\n      \"oldString\": \"    <img src=\\\"assets/reference/bell.svg\\\" alt=\\\"알림\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/reference/heart.svg\\\" alt=\\\"찜\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/reference/user-round.svg\\\" alt=\\\"프로필\\\" class=\\\"e1-icon\\\">\",\n      \"newString\": \"    <img src=\\\"assets/icons/Bell-quiet.svg\\\" alt=\\\"알림\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/icons/Heart-quiet.svg\\\" alt=\\\"찜\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/icons/UserRound-quiet.svg\\\" alt=\\\"프로필\\\" class=\\\"e1-icon\\\">\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 48159266200,
+  "load_duration": 16526826700,
+  "prompt_eval_count": 2219,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 25961244000,
+  "eval_count": 184,
+  "eval_duration": 5655326000
+}
