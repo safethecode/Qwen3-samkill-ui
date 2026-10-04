@@ -1,0 +1,56 @@
+{
+  "package": "lucide",
+  "version": "1.51.0",
+  "source": "https://github.com/lucide-icons/lucide",
+  "licenseSha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "icons": [
+    {
+      "name": "Search",
+      "file": "Search.svg",
+      "sha256": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+      "geometrySha256": "7ef625bc9cd6f86bafe04b5b707937af56db855eeb74894d275f2b56b5d3c42e"
+    },
+    {
+      "name": "Calendar",
+      "file": "Calendar.svg",
+      "sha256": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+      "geometrySha256": "a2fed7c03abb4aa76183dfb2af03357299cab2fbf8a008e80d01397cc1b3f727"
+    },
+    {
+      "name": "Clock",
+      "file": "Clock.svg",
+      "sha256": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+      "geometrySha256": "dd21f95bc00fa4d93395ffd11d86153487f49750df91981dd67cf0cbdec18c4d"
+    },
+    {
+      "name": "Users",
+      "file": "Users.svg",
+      "sha256": "01824f8e3f0fd8152511dbcdcce74dd7818ffa7ad1f34bea0e1a2b052a51b9ec",
+      "geometrySha256": "d4b9ca064a90a332656039b9dab4968183dedb4bac326d31bd9a91f8851cc9c7"
+    },
+    {
+      "name": "ArrowRight",
+      "file": "ArrowRight.svg",
+      "sha256": "088a926d15e017ef0ea07d2440868adbc6b826533a15b4f453db741860174b0b",
+      "geometrySha256": "2f0991761ea920afc88b854d23bbcd9870c1af6c95787b55b1794c1e5c912ebb"
+    },
+    {
+      "name": "ChevronLeft",
+      "file": "ChevronLeft.svg",
+      "sha256": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+      "geometrySha256": "94794b73e9d642ed29676ec1f3e4f2b43824f1ed14be22a9c7e2cf68eb369ffc"
+    },
+    {
+      "name": "X",
+      "file": "X.svg",
+      "sha256": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+      "geometrySha256": "7bf13b1e2e2ab7bb7226b828a7b6ded9a6482211bdeafc7a1e61ea450232d212"
+    },
+    {
+      "name": "Check",
+      "file": "Check.svg",
+      "sha256": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+      "geometrySha256": "ab4347e7adf6b32287f8d623f659ef18e4686d9ef0a5d9f56b379024daf16f3e"
+    }
+  ]
+}

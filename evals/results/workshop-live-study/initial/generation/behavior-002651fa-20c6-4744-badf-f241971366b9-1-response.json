@@ -1,0 +1,16 @@
+{
+  "binding": "c32560755b0322c9577ec98249190a94edadf2d4feddb5a1c733ecb84e8f58f0",
+  "stage": "behavior",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 88357,
+  "done_reason": "stop",
+  "load_duration": 3598600,
+  "prompt_eval_count": 7101,
+  "prompt_eval_duration": 74218861000,
+  "eval_count": 333,
+  "eval_duration": 13953780000,
+  "total_duration": 88340954800,
+  "content": "{\n\"code\": \"function selectClass(id) {\\n  state.selectedClassId = id;\\n  const cls = state.classes.find(c => c.id === id);\\n  if (!cls) return;\\n  const panel = document.getElementById('details-panel');\\n  const content = document.getElementById('details-content');\\n  const closeBtn = document.getElementById('close-details');\\n  const bookingBtn = document.getElementById('open-booking-btn');\\n\\n  content.innerHTML = '';\\n  const h3 = document.createElement('h3');\\n  h3.textContent = cls.title;\\n  const pCat = document.createElement('p');\\n  pCat.textContent = `${cls.category} · ${cls.duration} · ${cls.capacity}명 · ${cls.price.toLocaleString()}원`;\\n  const pDesc = document.createElement('p');\\n  pDesc.textContent = cls.desc;\\n  content.append(h3, pCat, pDesc);\\n\\n  panel.hidden = false;\\n  closeBtn.focus();\\n}\\n\\ndocument.addEventListener('click', (e) => {\\n  const card = e.target.closest('.class-card');\\n  if (card) selectClass(card.dataset.id);\\n\\n  const closeBtn = document.getElementById('close-details');\\n  if (e.target === closeBtn) {\\n    document.getElementById('details-panel').hidden = true;\\n  }\\n});\\n\\ndocument.getElementById('search').addEventListener('input', (e) => {\\n  renderCatalogue(e.target.value);\\n});\"\n}"
+}

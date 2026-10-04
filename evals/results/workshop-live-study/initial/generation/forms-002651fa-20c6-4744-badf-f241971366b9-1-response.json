@@ -1,0 +1,16 @@
+{
+  "binding": "c32560755b0322c9577ec98249190a94edadf2d4feddb5a1c733ecb84e8f58f0",
+  "stage": "forms",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 100878,
+  "done_reason": "stop",
+  "load_duration": 3619500,
+  "prompt_eval_count": 8664,
+  "prompt_eval_duration": 90754638000,
+  "eval_count": 237,
+  "eval_duration": 9929262000,
+  "total_duration": 100870269400,
+  "content": "{\n  \"code\": \"document.getElementById('booking-form').addEventListener('submit', (e) => {\\n  e.preventDefault();\\n  const guest = document.getElementById('guest').value.trim();\\n  const date = document.getElementById('date').value;\\n  const slot = document.getElementById('slot').value;\\n  if (!state.selectedClassId || !guest || !date || !slot) return;\\n  state.bookings = [{ classId: state.selectedClassId, guest, date, slot }];\\n  saveState();\\n  document.getElementById('booking-form').hidden = true;\\n  document.getElementById('details-panel').hidden = true;\\n  renderConfirmation();\\n});\\n\\ndocument.getElementById('cancel-booking-btn').addEventListener('click', () => {\\n  state.bookings = [];\\n  saveState();\\n  renderConfirmation();\\n});\\n\\nfunction init() {\\n  loadState();\\n  if (!state.classes.length) state.classes = CLASSES;\\n  renderCatalogue();\\n  renderConfirmation();\\n}\\n\\ninit();\"\n}"
+}

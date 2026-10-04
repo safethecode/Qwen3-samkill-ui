@@ -1,0 +1,13 @@
+{
+  "tool": "search_ui_patterns",
+  "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+  "retrievedAtUtc": "2026-10-04T09:51:32.2616068Z",
+  "previewSha256": "aa0435b5ac5c0fa6ae429bc0088df928290d163998e039ca03243ed7ce2d624a",
+  "screenId": "clvf05mq0001ilc08yzi7iq31",
+  "arguments": {
+    "app_name": "프립",
+    "limit": 3,
+    "query": "예약"
+  },
+  "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%98%88%EC%95%BD%C2%B7%EA%B2%B0%EC%A0%9C"
+}

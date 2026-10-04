@@ -1,0 +1,16 @@
+{
+  "binding": "c32560755b0322c9577ec98249190a94edadf2d4feddb5a1c733ecb84e8f58f0",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 118154,
+  "done_reason": "stop",
+  "load_duration": 17046875100,
+  "prompt_eval_count": 7109,
+  "prompt_eval_duration": 72831392000,
+  "eval_count": 648,
+  "eval_duration": 28197059000,
+  "total_duration": 118136502800,
+  "content": "{\n\"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>틈 공방 - 이번 주, 손으로 만드는 시간</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<header class=\\\"masthead\\\">\\n<h1 class=\\\"site-title\\\">틈 공방</h1>\\n<p class=\\\"site-intro\\\">이번 주, 손으로 만드는 시간</p>\\n</header>\\n\\n<main>\\n<section class=\\\"hero\\\">\\n<div class=\\\"pottery-illustration\\\" aria-hidden=\\\"true\\\"></div>\\n<div class=\\\"hero-content\\\">\\n<h2>이번 주, 손으로 만드는 시간</h2>\\n<p>성인들을 위한 소그룹 공예 클래스</p>\\n</div>\\n</section>\\n\\n<section class=\\\"search-section\\\">\\n<label for=\\\"search\\\" class=\\\"visually-hidden\\\">수업 검색</label>\\n<input type=\\\"search\\\" id=\\\"search\\\" placeholder=\\\"수업명으로 검색...\\\">\\n</section>\\n\\n<section class=\\\"catalogue\\\" id=\\\"class-list\\\">\\n<!-- Classes rendered by app.js -->\\n</section>\\n\\n<section class=\\\"details-panel\\\" id=\\\"details-panel\\\" hidden>\\n<button id=\\\"close-details\\\" aria-label=\\\"상세 정보 닫기\\\">닫기</button>\\n<div id=\\\"details-content\\\"></div>\\n<button id=\\\"open-booking-btn\\\">예약하기</button>\\n</section>\\n\\n<form id=\\\"booking-form\\\" hidden>\\n<h2>예약 신청</h2>\\n<div class=\\\"booking-summary\\\" id=\\\"booking-summary\\\"></div>\\n<div class=\\\"form-group\\\">\\n<label for=\\\"guest\\\">예약자 이름</label>\\n<input type=\\\"text\\\" id=\\\"guest\\\" required>\\n</div>\\n<div class=\\\"form-group\\\">\\n<label for=\\\"date\\\">방문일</label>\\n<input type=\\\"date\\\" id=\\\"date\\\" required>\\n</div>\\n<div class=\\\"form-group\\\">\\n<label for=\\\"slot\\\">예약 시간</label>\\n<select id=\\\"slot\\\" required>\\n<option value=\\\"10:00\\\">10:00</option>\\n<option value=\\\"14:00\\\">14:00</option>\\n<option value=\\\"18:00\\\">18:00</option>\\n</select>\\n</div>\\n<button type=\\\"submit\\\">예약 확정</button>\\n</form>\\n\\n<section id=\\\"confirmation\\\" hidden>\\n<h2>예약 확인</h2>\\n<div id=\\\"confirmation-content\\\"></div>\\n<button id=\\\"cancel-booking-btn\\\">예약 취소</button>\\n</section>\\n</main>\\n\\n<footer class=\\\"footer\\\">\\n<p>© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.</p>\\n</footer>\\n\\n<script defer src=\\\"app.js\\\"></script>\\n</body>\\n</html>\"\n}"
+}

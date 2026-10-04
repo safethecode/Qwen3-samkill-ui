@@ -1,0 +1,84 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "site-title",
+        "text": "틈 공방",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 67,
+        "scrollHeight": 74,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "이번 주, 손으로 만드는 시간",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 115,
+        "scrollHeight": 121,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "",
+        "text": "도자기 첫 잔",
+        "width": 292,
+        "scrollWidth": 292,
+        "height": 48,
+        "scrollHeight": 53,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "",
+        "text": "가죽 카드 지갑",
+        "width": 292,
+        "scrollWidth": 292,
+        "height": 48,
+        "scrollHeight": 53,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "",
+        "text": "나무 트레이",
+        "width": 292,
+        "scrollWidth": 292,
+        "height": 48,
+        "scrollHeight": 53,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]
