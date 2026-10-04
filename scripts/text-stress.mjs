@@ -48,6 +48,18 @@ export async function inspectTextStress(page, capture = async () => {}) {
           }
           return [];
         });
+        const controlTextOverflow = elements.filter(element => element.matches('button,[role="button"]')).flatMap(element => {
+          const bounds = element.getBoundingClientRect();
+          const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+          let node;
+          while ((node = walker.nextNode())) {
+            if (!node.textContent.trim() || !visible(node.parentElement)) continue;
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            for (const rect of range.getClientRects()) if (rect.width > 0 && rect.height > 0 && (rect.top < bounds.top - 2 || rect.bottom > bounds.bottom + 2 || rect.left < bounds.left - 2 || rect.right > bounds.right + 2)) return [{ ...describe(element), method: 'Visible label text range extends outside its control box; inspect wrapping, padding and automatic height.' }];
+          }
+          return [];
+        });
         const clippedByAncestor = [];
         for (const element of elements) {
           const rects = [];
@@ -79,6 +91,7 @@ export async function inspectTextStress(page, capture = async () => {}) {
           gridPressure,
           clippedByAncestor,
           overlappingLines,
+          controlTextOverflow,
           outsideViewport: elements.filter(element => element.getBoundingClientRect().right > innerWidth + 1).slice(0, 30).map(describe),
           clippingCandidates: elements.filter(element => element.textContent.trim() && (element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)).slice(0, 50).map(describe)
         };

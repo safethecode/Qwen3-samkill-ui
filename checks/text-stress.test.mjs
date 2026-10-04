@@ -68,3 +68,16 @@ test('wrapped text with a fixed line height exposes overlapping line boxes under
     assert.equal(after.overlappingLines.length, 0);
   } finally { await browser.close(); }
 });
+
+test('enlarged button labels must fit their own visible control box', async () => {
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+  try {
+    const page = await browser.newPage({ viewport: { width: 320, height: 900 } });
+    await page.setContent('<style>button{width:180px;height:52px;font:700 16px/1.5 Arial;white-space:normal}</style><button>Choose date and book workshop</button>');
+    const before = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.ok(before.controlTextOverflow.some(item => item.tag === 'BUTTON'));
+    await page.addStyleTag({content:'button{height:auto;min-height:52px;padding:12px}'});
+    const after = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.equal(after.controlTextOverflow.length,0);
+  } finally { await browser.close(); }
+});
