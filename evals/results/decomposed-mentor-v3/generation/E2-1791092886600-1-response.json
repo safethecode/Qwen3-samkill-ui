@@ -1,0 +1,33 @@
+{
+  "binding": "76454f7d2d014e100d8e847efb7aff1432c2c3d757b2ada0c18d6a9683837192",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 27464,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:48:06.5997318Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".search-unit {\\n  width: 100%;\\n}\\n\\n.search-label {\\n  display: block;\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #283548;\\n  margin-bottom: 8px;\\n  line-height: 1.5;\\n}\\n\\n.search-surface {\\n  display: flex;\\n  align-items: center;\\n  min-height: 46px;\\n  background-color: #fff;\\n  border-radius: 12px;\\n  padding: 0 16px;\\n  gap: 12px;\\n}\\n\\n.search-surface img {\\n  flex-shrink: 0;\\n  width: 20px;\\n  height: 20px;\\n  object-fit: contain;\\n  opacity: 0.5;\\n}\\n\\n.search-surface input {\\n  flex: 1;\\n  min-width: 0;\\n  background-color: transparent;\\n  border: none;\\n  padding: 0;\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #283548;\\n  outline: none;\\n}\\n\\n.search-surface input::placeholder {\\n  color: #566273;\\n  opacity: 1;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 27450587800,
+  "load_duration": 4651300,
+  "prompt_eval_count": 1560,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 17299348000,
+  "eval_count": 322,
+  "eval_duration": 10050385000
+}

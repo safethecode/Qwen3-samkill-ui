@@ -1,0 +1,33 @@
+{
+  "binding": "76454f7d2d014e100d8e847efb7aff1432c2c3d757b2ada0c18d6a9683837192",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 50060,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:51:20.8448529Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<div data-ui-unit=\\\"E4b\\\" class=\\\"e4b-card\\\">\\n  <div class=\\\"e4b-header\\\">\\n    <div class=\\\"e4b-identity\\\">\\n      <img class=\\\"e4b-avatar\\\" src=\\\"assets/reference/avatar-2.png\\\" alt=\\\"박민준 프로필 이미지\\\">\\n      <div class=\\\"e4b-info\\\">\\n        <div class=\\\"e4b-name\\\">박민준</div>\\n        <div class=\\\"e4b-meta-row\\\">\\n          <img class=\\\"e4b-badge-check\\\" src=\\\"assets/reference/badge-check.svg\\\" alt=\\\"인증\\\">\\n          <span class=\\\"e4b-badge-label\\\">인증</span>\\n          <span class=\\\"e4b-divider\\\"></span>\\n          <span class=\\\"e4b-role\\\">소프트웨어 개발</span>\\n        </div>\\n      </div>\\n    </div>\\n    <button class=\\\"e4b-action-btn\\\" aria-pressed=\\\"false\\\" disabled title=\\\"박민준 찜하지 않은 상태 예시\\\">\\n      <img class=\\\"e4b-heart-icon\\\" src=\\\"assets/reference/heart.svg\\\" alt=\\\"찜\\\">\\n    </button>\\n  </div>\\n</div>\",\n  \"css\": \".e4b-card {\\n  display: flex;\\n  flex-direction: column;\\n  width: 100%;\\n  min-width: 0;\\n}\\n\\n.e4b-header {\\n  display: flex;\\n  align-items: flex-start;\\n  justify-content: space-between;\\n  width: 100%;\\n}\\n\\n.e4b-identity {\\n  display: flex;\\n  align-items: flex-start;\\n  gap: 8px;\\n  min-width: 0;\\n  flex: 1;\\n}\\n\\n.e4b-avatar {\\n  width: 48px;\\n  height: 48px;\\n  border-radius: 50%;\\n  object-fit: cover;\\n  flex-shrink: 0;\\n}\\n\\n.e4b-info {\\n  display: flex;\\n  flex-direction: column;\\n  gap: 2px;\\n  min-width: 0;\\n}\\n\\n.e4b-name {\\n  font-size: 18px;\\n  line-height: 24px;\\n  font-weight: 700;\\n  color: var(--ink, #283548);\\n  white-space: nowrap;\\n}\\n\\n.e4b-meta-row {\\n  display: flex;\\n  align-items: center;\\n  gap: 8px;\\n  flex-wrap: wrap;\\n}\\n\\n.e4b-badge-check {\\n  width: 14px;\\n  height: 14px;\\n  flex-shrink: 0;\\n}\\n\\n.e4b-badge-label {\\n  font-size: 14px;\\n  line-height: 20px;\\n  color: var(--purple, #713ac7);\\n  font-weight: 500;\\n}\\n\\n.e4b-divider {\\n  width: 1px;\\n  height: 20px;\\n  background-color: #d1d5db;\\n  flex-shrink: 0;\\n}\\n\\n.e4b-role {\\n  font-size: 14px;\\n  line-height: 20px;\\n  padding: 1px 6px;\\n  border-radius: 6px;\\n  background-color: #f3effc;\\n  color: var(--purple, #713ac7);\\n  white-space: nowrap;\\n}\\n\\n.e4b-action-btn {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 24px;\\n  height: 24px;\\n  border: none;\\n  background: transparent;\\n  cursor: default;\\n  padding: 0;\\n  margin-left: 8px;\\n  flex-shrink: 0;\\n}\\n\\n.e4b-heart-icon {\\n  width: 100%;\\n  height: 100%;\\n  display: block;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 50057569200,
+  "load_duration": 3669700,
+  "prompt_eval_count": 1586,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 18022044000,
+  "eval_count": 945,
+  "eval_duration": 31965799000
+}

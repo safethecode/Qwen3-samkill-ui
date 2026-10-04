@@ -1,0 +1,33 @@
+{
+  "binding": "76454f7d2d014e100d8e847efb7aff1432c2c3d757b2ada0c18d6a9683837192",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 43227,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:47:39.1221691Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<header class=\\\"e1-header\\\" data-ui-unit=\\\"E1\\\">\\n  <h2 class=\\\"e1-title\\\">멘토 찾기</h2>\\n  <div class=\\\"e1-tools\\\">\\n    <img src=\\\"assets/reference/bell.svg\\\" alt=\\\"알림\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/reference/heart.svg\\\" alt=\\\"찜\\\" class=\\\"e1-icon\\\">\\n    <img src=\\\"assets/reference/user-round.svg\\\" alt=\\\"프로필\\\" class=\\\"e1-icon\\\">\\n  </div>\\n</header>\",\n  \"css\": \".e1-header {\\n  display: flex;\\n  align-items: center;\\n  justify-content: space-between;\\n  height: 54px;\\n  min-width: 0;\\n}\\n\\n.e1-title {\\n  font-size: 18px;\\n  font-weight: 700;\\n  color: #283548;\\n  margin: 0;\\n  white-space: nowrap;\\n}\\n\\n.e1-tools {\\n  display: flex;\\n  align-items: center;\\n  gap: 20px;\\n  flex-shrink: 0;\\n}\\n\\n.e1-icon {\\n  width: 24px;\\n  height: 24px;\\n  color: #566273;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 43211463600,
+  "load_duration": 15973368700,
+  "prompt_eval_count": 1479,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 17100599999,
+  "eval_count": 311,
+  "eval_duration": 10112774000
+}

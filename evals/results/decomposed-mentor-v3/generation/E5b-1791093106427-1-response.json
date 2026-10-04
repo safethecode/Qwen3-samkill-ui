@@ -1,0 +1,33 @@
+{
+  "binding": "76454f7d2d014e100d8e847efb7aff1432c2c3d757b2ada0c18d6a9683837192",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 25568,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:51:46.4265943Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"css\": \".mentor-body {\\n  font-size: 14px;\\n  line-height: 22px;\\n  font-weight: 500;\\n  color: var(--muted);\\n}\\n\\n.mentor-role {\\n  margin-bottom: 4px;\\n}\\n\\n.mentor-description {\\n  margin-bottom: 14px;\\n}\\n\\n.mentor-footer {\\n  display: flex;\\n  flex-direction: row;\\n  justify-content: space-between;\\n  align-items: center;\\n  gap: 8px;\\n  margin-top: 14px;\\n  flex-wrap: wrap;\\n}\\n\\n.mentor-footer button {\\n  padding: 2px 6px;\\n  border-radius: 6px;\\n  font-size: 14px;\\n  font-weight: 500;\\n  line-height: 1.5;\\n  background-color: var(--surface);\\n  color: var(--ink);\\n  border: none;\\n  cursor: default;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 25560915500,
+  "load_duration": 3623000,
+  "prompt_eval_count": 1606,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 17995844000,
+  "eval_count": 237,
+  "eval_duration": 7461621000
+}

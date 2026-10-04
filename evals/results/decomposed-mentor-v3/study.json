@@ -1,0 +1,445 @@
+{
+  "status": "INCOMPLETE_REFERENCE_REVIEW_REQUIRED",
+  "method": "Seven semantic elements styled sequentially by the local model and assembled without a model rewrite. Search and two body fragments have predeclared fixed HTML; other HTML is model output. Shared CSS, selector scoping, font loading and templates are host supplied.",
+  "sourceBinding": {
+    "index.html": "ef98e296c2538b34c02cfd06fd307e3798734bbfb85df041ac39b8737b107425",
+    "styles.css": "48c4f0bfeca60d8653ee22369f134476be539603ee890fde577009d34c2f0a71",
+    "app.js": "903de0737ff5d035e8de2cdf4700e52a6f76b0ad9b3febec5aaf092725a664f7",
+    "DESIGN.md": "4b09927953caf23e900f228c213c827a92a6dbc0df7e0cd342df88b548113e15",
+    "REFERENCE.md": "e2e3bbceafa15e327217f0a1f8a0bddbf3d2ca1c55d5f39f5bcfc0140c9f9d80",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/Calendar.svg": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+    "assets/icons/Check.svg": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+    "assets/icons/ChevronLeft.svg": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/GripVertical.svg": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/Plus.svg": "3d4f93d0e5a8eb932e4d1f0d71122d01917e7624439adc35dddcd5352d7a228f",
+    "assets/icons/Search.svg": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+    "assets/icons/X.svg": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+    "assets/icons/manifest.json": "8c535b19e80beb51a36f4941a8ab46680340fc26e3b5ae9dedc4ad9f23ba3ad7",
+    "assets/reference/avatar-1.png": "d228d0f6eb125355d7700a129698ae1b14094738df164f720e2b2fdce9ecc786",
+    "assets/reference/avatar-2.png": "2365ad110e070d796e93fae6a12cb09cd823e1ffa3c4484635d3e2700a1f59ee",
+    "assets/reference/badge-check.svg": "c4fbf2f1acf094cfbfd744e4f2b3c92072c406ce35240b441a944cc4e84fded0",
+    "assets/reference/bell.svg": "e769d07778a974e22327ca663bac379281768fc948e7ad7ec988207283307ebd",
+    "assets/reference/bookmark-check.svg": "4e695fdb27c44f532c36a3fcf6d64340959eae47ec1c606d5b4eb7674d8e955f",
+    "assets/reference/heart.svg": "16b5db71af67c7989163d3f0c695583af35b751972ced933fdd599bab62689ef",
+    "assets/reference/search.svg": "f1d736cf57b12b7784ac894db511028c451e0ce5bc40420e77ba995829cd3900",
+    "assets/reference/source.png": "1d2a52371386de1538cf631871229044a16a4d15d15f19d6bf10652b10b28eaa",
+    "assets/reference/user-round.svg": "64535953c7d421e4c3a5e788940fe45cf9113f2209849c6d676241d8c728a24d",
+    "assets/reference-manifest.json": "531f30a5290dba68368dd66848176a6f8828d94b80f92d9f764b8ffb61c83483",
+    "design/typography.json": "534c3deed77d20d1d9839d0eceda9925e0cdb26b2f632ba652d29bb5e1909cee",
+    "design/component-plan.json": "7ef85ac6b5f2ddb5eb6796379979cf5edc923564e79cae1f83d05445de70301d",
+    "sample-E1.html": "698bd08269e571700d759de7682688b63848c371569c7fcce11ab4936eeb2317",
+    "sample-E2.html": "bec2dfd78160c4c40b1af18f3e76b740b676b2583ea8ec025cf1fc024b81c03b",
+    "sample-E3.html": "6ebf7895dd1e1fe95d4d6f51148674aec56d05ac6b2e02d3e194d9676e075941",
+    "sample-E4a.html": "422392601f0003acd44583fc5311c4aa73bad91958d9aa57ee09473bdbe3b538",
+    "sample-E4b.html": "6b45320c3e2a2b7c0f39a31539a367223669b5d0a9a92cc9b5215817f22e5630",
+    "sample-E5a.html": "b379e9a3d7304d09bca598b81766261ed7c603dce999dc73bd1c5fc0a15bd14d",
+    "sample-E5b.html": "3f1018bb3914b89e83bd0b271efbc5a9a54554f84f40e6dcbc2dc62f5357fbe1"
+  },
+  "harnessHashes": {
+    "evals/service-cases.mjs": "32e9f476eae3539437bccad4892bfc839bb4ab12dc3e3842fb6c2a7c49d35e4e",
+    "package-lock.json": "97f0b672e3c84a57a0c8a3a291170929b80ef3025a88318aa99b7b4ad9cbdee6",
+    "scripts/asset-references.mjs": "669299f3a8b72b22648f4909d50a91d94c00af8eb444834c74d3cc075b892d5e",
+    "scripts/benchmark.mjs": "a97bfa6c6021884cfdb45ac631f853d115fc4245ae218dd6edcb3f68bab7f861",
+    "scripts/catalog-gate.mjs": "06f6817721e160682b34f96605f58a7780c9d907423676c2d9cbb8b6856e6495",
+    "scripts/catalog-plan.mjs": "f1cf03229d42e1f56887d3ecced5df8c1ff9da70bdffb7ff1b747e0c3178a2d8",
+    "scripts/catalog.mjs": "bdd1e96da8c9d42ab7e89b4de5f3bde67ba338d9ac25f2eef7607c2e997e8bc6",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/component-plan.mjs": "511c6973678f21d05829477bd3c1295cad2a407763368aef53d390b575d29f5c",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/dom-references.mjs": "f98202274d55fa641fdb94349fabbd7557ddee2c1a379a90a595eed22e41baf0",
+    "scripts/evaluate.mjs": "68665c6f0a67c6f8f9d2ecb1d993f945b635e4988d3ca9576729d27aca099222",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/font-rendering.mjs": "875072cfa780146fb6304ef6176ccc081416b781ded20c6b8af76838d9cb39d4",
+    "scripts/generate-components.mjs": "cc03223ad8c33a2f209be900893ef1ea1140605335a934f08d1a1891045fdf90",
+    "scripts/generate-service.mjs": "0a6f1f3d83c8eb1ff95008e8e1a202e2f23cc30023a4ad096964511a226cf4d5",
+    "scripts/generate.mjs": "2d49ebc56706e83e65f3cae674b8e194ee486b9a8cd7484b5ae326212487d081",
+    "scripts/harness-binding.mjs": "6b71529cbc7778c4a5a071b2de25cd4662f04f0383cab95941eebe0f1b8df1ff",
+    "scripts/icon-assets.mjs": "de29824f013bc2bb71fe5b10063986cffa26a79fae41925e17cd56d54cc79a62",
+    "scripts/icon-check.mjs": "dc7c96dcf3e2e7198d04ac9380d73017f12363e9bea792070a864e24a5ab4b80",
+    "scripts/icons.mjs": "105ad7cf37f100e0e922bbe086bbd5eb40e8e0389860fa75edbceefeaf58a679",
+    "scripts/inference-options.mjs": "5554438d5a454be997f1b24cadf666a0a4c6fb6990fc095c04cefc03bcd664f3",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/label-check.mjs": "a7b4a99003e80ac49df855adbcc80d8604ef2364b6441b5ccef24781a3b2e081",
+    "scripts/local-font.mjs": "b3aa5c07856bf905ad1d34d7f55d58ae38a4fe6cf995e524ad2e3cb834c41a9b",
+    "scripts/owned-rollback.mjs": "e7ae6ea4ba450f14a621dfe5e4c958e7ff619e33dd7f16332e6a776e937e879e",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/quality-loop.mjs": "4d8168ba213788ab413be20d3574c5cf5eaa8516031b57267a4d95ff30ec001b",
+    "scripts/quality-policy.mjs": "29fe2de8114a08a610ec2c7061f8a69a7e712ecf796d5c5a163cc37602fb9b35",
+    "scripts/quality.mjs": "810669c1cd79d72e4d4739f94756aff56958da4217689e04c2a44f6571a86724",
+    "scripts/reference-assets.mjs": "647cf0c06f2715817b181eefb907a0815ef62cc39a8b77ce23938c221da5831e",
+    "scripts/reference-capture.mjs": "e9f80432bc4865a4775a1deefd5b7b4c9165c143aa6a68f2adbd189dfc423157",
+    "scripts/refine.mjs": "3f233369b6ac5c353ed4e971672a2066aaba8e564397f79f7256373e3df9b52c",
+    "scripts/repair-units.mjs": "e7201bc1da5cb8c934585c1b755491d5b60354c6c8c6b62c2c5b2e3292938229",
+    "scripts/repair.mjs": "9e7f66ec9477b72df91307153af626b0c436ccfdcb03547fe1df6c369d0cf864",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/review-findings.mjs": "2050e8b80eeb933d813f64cbeef0d873aab8c9fb9e5d2474309660fed4af26c6",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/service-benchmark.mjs": "d72bc81fe06a87994d3d3f7f703f68839867f98b2f82c6483ce77ce4cb3e81d3",
+    "scripts/service-evaluate.mjs": "0c6c4ce61bc9ec02a2d4ea515bf60be943f1a6badccb6d4f828cf76f304d5e58",
+    "scripts/service-gallery.mjs": "78621a605a0b9869a12fb4e34f243a5c5ad3407db0d1f8a298e823f59cabcf74",
+    "scripts/service-interface.mjs": "4526ebefde7e6f38b7ebf294e3cb36866a753518eed39f3dd943f065eacdb550",
+    "scripts/service-progress.mjs": "4f1d99b8a23ea26ed984d07983d9a542d555acf6c7907c07da66df6b9815bb34",
+    "scripts/service-repair.mjs": "08ddc619c826136dd1c25f986eec6608e86980cadc6f3297f75e9b874b4ff4e4",
+    "scripts/service-resume.mjs": "1956218819ba5d2cc0263cc11c71d911a19c5f871e2194bebf8a7f45ded498d2",
+    "scripts/service-revalidate.mjs": "bba83ba00a9e8bf53ee1133e3c7f2da44f8bf4b50bd34ae66908edb69bc231c7",
+    "scripts/service-stages.mjs": "3a9fb2ffb89e201511e14680655003b4746dc9d0f477454d48f30f168b278bc5",
+    "scripts/setup.mjs": "8a9e96c393a64bf7bfb28462945b537b277725bc0b0d951b3dfed4c370a4e363",
+    "scripts/skill-context.mjs": "b7781749eee1ff33bdf2c246323f7d553635f594f968fbe66a346302a6a1f55a",
+    "scripts/source-binding.mjs": "f4ec6ea94ce11c535ab0e73d9d34d9fe6840b28c1ed223b354f064e75f445ee0",
+    "scripts/stacked-content.mjs": "33d78907983e41a23e9dbabd3fc162bea16564f9ed563f0989964cdb8bffae34",
+    "scripts/text-stress.mjs": "e5f658da56f73984597f3ad7ea02f0af23cf6301a677615ec7f06ce05cad4d8b",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "51d6b7cc8fcf6ee615569ce31134c53b99aceeac533f94880a1111e6c12d65df",
+    "scripts/visibility.mjs": "fa748f7755f974823270b34f3e9a94e8d9913a4a8e22a631d561a0ac76f4f9d5",
+    "scripts/vision-review.mjs": "44d988922e8468b8086f62d6900747f0a1d27315f0ae07658848ceb4df239ae8",
+    "scripts/workflow-state.mjs": "d2cbbdcc14238eedd7c91b805cca0eade24cc38f4c0b9c23001c065494e15a56",
+    "skills/qwen-samkill-ui/SKILL.md": "559793ed8a25e694f93b87ed89ec99eaac184b02b75b5590efdfb9e78d5da0b0",
+    "skills/qwen-samkill-ui/references/service-contracts.md": "9eef6278c163695455a6b37acf3c5513ca6e1850251e37c2bff024f8a9b521e3",
+    "skills/qwen-samkill-ui/references/upstream/design-md/guide.md": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76",
+    "skills/qwen-samkill-ui/references/upstream/design-md/references/document-contract.md": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/guide.md": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/references/flow-contract.md": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/guide.md": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/references/element-contract.md": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/guide.md": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/change-review.md": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/design-gate.md": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/deslop-triage.md": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/failure-catalog.json": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/feedback-regression.md": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/review-criteria.md": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/state-stress.md": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/guide.md": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/anti-slop-code.md": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/application-format.md": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/dashboard.md": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-guardrails.md": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-tokens.md": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/icon-controls.md": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/mobile.md": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/product-reasoning.md": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/reference-synthesis.md": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/typography.md": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/ui-composition.md": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d",
+    "skills/qwen-samkill-ui/references/upstream/samkill-ui/guide.md": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/guide.md": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/component-anatomy.md": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/observation-format.md": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/research-plan.md": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/search-examples.md": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/guide.md": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/copy-contract.md": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/korean-writing.md": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+  },
+  "passed": 34,
+  "total": 37,
+  "sampleWidthsMatch": true,
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bell.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "5583761904dea17c2c529cca0037ef9db8500c2d68d6d068bd2c787d7ba372a1",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "d7945607b0d6c68b5337a301cf56d3799dc57ba6ae38933118ae9fa0e4ac6087",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "dfc0fcc5f7657083982ea68bbf7d16ff4c34a31fc497fe8372ed4b53cadf5b5c",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/search.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "e72bab75bd16fd17b84c5691c954068d5844e112359aca42a296f2e9845ad9a2",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "d7945607b0d6c68b5337a301cf56d3799dc57ba6ae38933118ae9fa0e4ac6087",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bookmark-check.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "e7e767d80606ebff21bfa264efdeb7fa028b7a30ba72a9433f916b017079276f",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/badge-check.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "9affe7b21ba4917be357f485badcef87ee32b03fb56a5a83ae0f2dbca5d4c33f",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-1440.json",
+      "category": "icons",
+      "id": "d7945607b0d6c68b5337a301cf56d3799dc57ba6ae38933118ae9fa0e4ac6087",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bell.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "0a426d6a592ab5054bac9f5cab5b6e03b80aafaf3e69c6407a9bd41a983d8626",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "07e1ba405cf53319aa2bb05de2bed77559d439d429ca85249e1b96dc99661f08",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "e50eacb933bd864589ad26fe8833aaca8521985d4365079ef975b969e66f1e88",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/search.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "1935f0aa583ffb73e9709d13d29fd8eb3d6e92a2258728b6a0166b443522f069",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "07e1ba405cf53319aa2bb05de2bed77559d439d429ca85249e1b96dc99661f08",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bookmark-check.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "c8468b412575cbdab11605f2d978058d52d81761da7c3678844cec994cef0e8b",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/badge-check.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "cb504d2bd690220a752d40166bfee8b18becdece8f39cee348745c72abc3e1af",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-390.json",
+      "category": "icons",
+      "id": "07e1ba405cf53319aa2bb05de2bed77559d439d429ca85249e1b96dc99661f08",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bell.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "c5e0cb1931dfe08c4af74436b02adf036be15352ad6812d7893665abc9bbac69",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "5088fedb1466fd19792d41a6228ec06f7989477b6b600c4f1303e261f62a6205",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "ad39d9850c6742bccece2b66ca62cc7a4d66d9bc0d2fc5b0b1493fab61f332c4",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/search.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "ce598a1c9ff6099f508771c024bc785ba475f5d2b387435fc356968437d7704a",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "5088fedb1466fd19792d41a6228ec06f7989477b6b600c4f1303e261f62a6205",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bookmark-check.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "b89d0cd09602686697ad189404c9d314bd4985878991060a265ac480443c457a",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/badge-check.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "a0afd2ff0f5c8bdbea353e0aa8b5e45eb9f1adebc3cfd8daa66192aa96645505",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg",
+      "evidence": "icons-320.json",
+      "category": "icons",
+      "id": "5088fedb1466fd19792d41a6228ec06f7989477b6b600c4f1303e261f62a6205",
+      "rules": [
+        "RUI-12"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ]
+}

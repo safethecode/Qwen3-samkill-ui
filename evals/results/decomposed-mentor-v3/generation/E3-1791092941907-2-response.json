@@ -1,0 +1,33 @@
+{
+  "binding": "76454f7d2d014e100d8e847efb7aff1432c2c3d757b2ada0c18d6a9683837192",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 29825,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:49:01.9055103Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<div class=\\\"e3\\\" data-ui-unit=\\\"E3\\\" role=\\\"group\\\" aria-label=\\\"상담 분야\\\">\\n  <button class=\\\"chip chip-selected\\\" disabled type=\\\"button\\\">전체</button>\\n  <button class=\\\"chip\\\" disabled type=\\\"button\\\">커리어</button>\\n  <button class=\\\"chip\\\" disabled type=\\\"button\\\">자소서</button>\\n  <button class=\\\"chip\\\" disabled type=\\\"button\\\">면접</button>\\n</div>\",\n  \"css\": \".e3 {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 4px;\\n  min-height: 36px;\\n  padding: 0 12px;\\n}\\n\\n.chip {\\n  height: 36px;\\n  border-radius: 18px;\\n  padding: 0 12px;\\n  font-size: 14px;\\n  font-weight: 500;\\n  line-height: 1.57;\\n  white-space: nowrap;\\n  cursor: default;\\n}\\n\\n.chip-selected {\\n  background-color: var(--ink);\\n  color: #fff;\\n}\\n\\n.chip:not(.chip-selected) {\\n  background-color: var(--surface);\\n  color: var(--muted);\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 29812515900,
+  "load_duration": 3616300,
+  "prompt_eval_count": 1763,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 20221327000,
+  "eval_count": 299,
+  "eval_duration": 9578834000
+}

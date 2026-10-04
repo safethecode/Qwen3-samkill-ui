@@ -1,0 +1,359 @@
+[
+  {
+    "id": "E1",
+    "width": 1440,
+    "assembled": {
+      "x": 521,
+      "y": 0,
+      "width": 398,
+      "height": 54
+    },
+    "sample": {
+      "x": 521,
+      "y": 0,
+      "width": 398,
+      "height": 54
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E2",
+    "width": 1440,
+    "assembled": {
+      "x": 521,
+      "y": 70,
+      "width": 398,
+      "height": 75
+    },
+    "sample": {
+      "x": 521,
+      "y": 0,
+      "width": 398,
+      "height": 75
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E3",
+    "width": 1440,
+    "assembled": {
+      "x": 521,
+      "y": 153,
+      "width": 398,
+      "height": 36
+    },
+    "sample": {
+      "x": 521,
+      "y": 0,
+      "width": 398,
+      "height": 36
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4a",
+    "width": 1440,
+    "assembled": {
+      "x": 537,
+      "y": 225,
+      "width": 366,
+      "height": 103.9375
+    },
+    "sample": {
+      "x": 537,
+      "y": 16,
+      "width": 366,
+      "height": 103.9375
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5a",
+    "width": 1440,
+    "assembled": {
+      "x": 537,
+      "y": 348.9375,
+      "width": 366,
+      "height": 109.96875
+    },
+    "sample": {
+      "x": 537,
+      "y": 16,
+      "width": 366,
+      "height": 109.96875
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4b",
+    "width": 1440,
+    "assembled": {
+      "x": 537,
+      "y": 502.90625,
+      "width": 366,
+      "height": 48
+    },
+    "sample": {
+      "x": 537,
+      "y": 16,
+      "width": 366,
+      "height": 48
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5b",
+    "width": 1440,
+    "assembled": {
+      "x": 537,
+      "y": 570.90625,
+      "width": 366,
+      "height": 87
+    },
+    "sample": {
+      "x": 537,
+      "y": 16,
+      "width": 366,
+      "height": 87
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E1",
+    "width": 390,
+    "assembled": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 54
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 54
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E2",
+    "width": 390,
+    "assembled": {
+      "x": 16,
+      "y": 70,
+      "width": 358,
+      "height": 75
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 75
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E3",
+    "width": 390,
+    "assembled": {
+      "x": 16,
+      "y": 153,
+      "width": 358,
+      "height": 36
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 36
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4a",
+    "width": 390,
+    "assembled": {
+      "x": 32,
+      "y": 225,
+      "width": 326,
+      "height": 103.9375
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 326,
+      "height": 103.9375
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5a",
+    "width": 390,
+    "assembled": {
+      "x": 32,
+      "y": 348.9375,
+      "width": 326,
+      "height": 109.96875
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 326,
+      "height": 109.96875
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4b",
+    "width": 390,
+    "assembled": {
+      "x": 32,
+      "y": 502.90625,
+      "width": 326,
+      "height": 48
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 326,
+      "height": 48
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5b",
+    "width": 390,
+    "assembled": {
+      "x": 32,
+      "y": 570.90625,
+      "width": 326,
+      "height": 87
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 326,
+      "height": 87
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E1",
+    "width": 320,
+    "assembled": {
+      "x": 16,
+      "y": 0,
+      "width": 288,
+      "height": 54
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 288,
+      "height": 54
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E2",
+    "width": 320,
+    "assembled": {
+      "x": 16,
+      "y": 70,
+      "width": 288,
+      "height": 75
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 288,
+      "height": 75
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E3",
+    "width": 320,
+    "assembled": {
+      "x": 16,
+      "y": 153,
+      "width": 288,
+      "height": 36
+    },
+    "sample": {
+      "x": 16,
+      "y": 0,
+      "width": 288,
+      "height": 36
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4a",
+    "width": 320,
+    "assembled": {
+      "x": 32,
+      "y": 225,
+      "width": 256,
+      "height": 103.9375
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 256,
+      "height": 103.9375
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5a",
+    "width": 320,
+    "assembled": {
+      "x": 32,
+      "y": 348.9375,
+      "width": 256,
+      "height": 109.96875
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 256,
+      "height": 109.96875
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E4b",
+    "width": 320,
+    "assembled": {
+      "x": 32,
+      "y": 502.90625,
+      "width": 256,
+      "height": 76
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 256,
+      "height": 76
+    },
+    "equalAvailableWidth": true
+  },
+  {
+    "id": "E5b",
+    "width": 320,
+    "assembled": {
+      "x": 32,
+      "y": 598.90625,
+      "width": 256,
+      "height": 109
+    },
+    "sample": {
+      "x": 32,
+      "y": 16,
+      "width": 256,
+      "height": 109
+    },
+    "equalAvailableWidth": true
+  }
+]
