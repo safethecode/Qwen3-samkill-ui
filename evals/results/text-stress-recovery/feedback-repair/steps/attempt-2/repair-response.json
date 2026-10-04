@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 5000,
+    "count": 2
+  },
+  "inputCharacters": 9371,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 6324,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3163,
+  "prompt_eval_duration": 2074706000,
+  "load_duration": 3075600,
+  "eval_count": 135,
+  "eval_duration": 4115966999,
+  "total_duration": 6305931000,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"@media (min-width: 1440px) {\\n  .container {\\n    max-width: 390px;\\n  }\\n}\",\n      \"newString\": \"@media (min-width: 1440px) {\\n  .container {\\n    max-width: 390px;\\n  }\\n}\\n\\n.container {\\n  width: 100%;\\n  box-sizing: border-box;\\n}\"\n    }\n  ]\n}"
+}

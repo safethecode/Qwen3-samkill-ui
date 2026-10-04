@@ -1,0 +1,302 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "clippedByAncestor": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "text": "",
+        "width": 343,
+        "scrollWidth": 343,
+        "height": 44,
+        "scrollHeight": 44,
+        "overflow": "clip",
+        "clippedBy": {
+          "tag": "DIV",
+          "id": "",
+          "class": "search-wrapper",
+          "overflowX": "hidden",
+          "overflowY": "auto"
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "id": "clear-search",
+        "class": "clear-btn",
+        "text": "",
+        "width": 16,
+        "scrollWidth": 16,
+        "height": 16,
+        "scrollHeight": 16,
+        "overflow": "visible",
+        "clippedBy": {
+          "tag": "DIV",
+          "id": "",
+          "class": "search-wrapper",
+          "overflowX": "hidden",
+          "overflowY": "auto"
+        }
+      },
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "text": "",
+        "width": 16,
+        "scrollWidth": 16,
+        "height": 16,
+        "scrollHeight": 16,
+        "overflow": "clip",
+        "clippedBy": {
+          "tag": "DIV",
+          "id": "",
+          "class": "search-wrapper",
+          "overflowX": "hidden",
+          "overflowY": "auto"
+        }
+      }
+    ],
+    "outsideViewport": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "text": "",
+        "width": 343,
+        "scrollWidth": 343,
+        "height": 44,
+        "scrollHeight": 44,
+        "overflow": "clip"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "clear-search",
+        "class": "clear-btn",
+        "text": "",
+        "width": 16,
+        "scrollWidth": 16,
+        "height": 16,
+        "scrollHeight": 16,
+        "overflow": "visible"
+      },
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "text": "",
+        "width": 16,
+        "scrollWidth": 16,
+        "height": 16,
+        "scrollHeight": 16,
+        "overflow": "clip"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "filter-chip",
+        "text": "마케팅",
+        "width": 109,
+        "scrollWidth": 109,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "heading",
+        "text": "멘토 찾기",
+        "width": 139,
+        "scrollWidth": 139,
+        "height": 43,
+        "scrollHeight": 45,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "search-wrapper",
+        "text": "멘토 검색",
+        "width": 296,
+        "scrollWidth": 407,
+        "height": 44,
+        "scrollHeight": 44,
+        "overflow": "hidden auto"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 111,
+        "height": 1,
+        "scrollHeight": 42,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": "filters",
+        "class": "filters",
+        "text": "전체\n    디자인\n    개발\n    마케팅",
+        "width": 296,
+        "scrollWidth": 410,
+        "height": 40,
+        "scrollHeight": 42,
+        "overflow": "auto"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "filter-chip active",
+        "text": "전체",
+        "width": 84,
+        "scrollWidth": 84,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "filter-chip",
+        "text": "디자인",
+        "width": 109,
+        "scrollWidth": 109,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "filter-chip",
+        "text": "개발",
+        "width": 84,
+        "scrollWidth": 84,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "filter-chip",
+        "text": "마케팅",
+        "width": 109,
+        "scrollWidth": 109,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "description",
+        "text": "서비스 기획과 디자인 시스템 구축에 강점이 있습니다. 0부터 1을 만드는 과정을 함께 경험해 보세요.",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 126,
+        "scrollHeight": 210,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "action-btn disabled",
+        "text": "상담 신청",
+        "width": 104,
+        "scrollWidth": 104,
+        "height": 36,
+        "scrollHeight": 84,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "description",
+        "text": "리액트와 성능 최적화에 집중하고 있습니다. 복잡한 UI를 깔끔하게 구현하는 노하우를 공유합니다.",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 126,
+        "scrollHeight": 210,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "action-btn disabled",
+        "text": "상담 신청",
+        "width": 105,
+        "scrollWidth": 105,
+        "height": 36,
+        "scrollHeight": 84,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 66,
+        "height": 1,
+        "scrollHeight": 21,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": "filters",
+        "class": "filters",
+        "text": "전체\n    디자인\n    개발\n    마케팅",
+        "width": 296,
+        "scrollWidth": 298,
+        "height": 40,
+        "scrollHeight": 40,
+        "overflow": "auto"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "action-btn disabled",
+        "text": "상담 신청",
+        "width": 102,
+        "scrollWidth": 102,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "action-btn disabled",
+        "text": "상담 신청",
+        "width": 104,
+        "scrollWidth": 104,
+        "height": 36,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "attempt": 1,
+    "failure": "text-200-390",
+    "accepted": false,
+    "pending": true,
+    "passed": 35,
+    "total": 37,
+    "regressions": []
+  },
+  {
+    "attempt": 2,
+    "failure": "text-200-390",
+    "accepted": false,
+    "pending": true,
+    "passed": 35,
+    "total": 37,
+    "regressions": []
+  },
+  {
+    "attempt": 3,
+    "failure": "text-200-390",
+    "accepted": false,
+    "pending": true,
+    "passed": 35,
+    "total": 37,
+    "regressions": []
+  },
+  {
+    "attempt": 4,
+    "failure": "text-200-390",
+    "accepted": false,
+    "pending": false,
+    "passed": 34,
+    "total": 37,
+    "regressions": [
+      "text-200-clipping-1440",
+      "text-200-clipping-390",
+      "text-200-clipping-320"
+    ]
+  }
+]
