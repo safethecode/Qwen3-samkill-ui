@@ -4,6 +4,8 @@ Read the upstream decomposition guide and its element contract. Record observed 
 
 ## Before generation
 
+Match the reference and candidate screen purpose and visible state before comparing them. A checkout screenshot does not specify a catalogue hero. For a photo-led reference, obtain and inspect suitable real media with provenance before implementation; abstract decorative shapes are not a substitute for missing product imagery. Record substitutions explicitly. For illustration-led references, preserve that medium instead of imposing photography. Freeze the initial render before changing the contract.
+
 Define shared typography, colors, spacing, surfaces and responsive behavior. Divide the screen into semantic elements with explicit owned text, assets, actions and states. Give each element its available width, parent padding, adjacent read-only structure and forbidden duplicate content. Assign inter-element spacing to the assembly so two elements cannot both add it.
 
 Preserve the reference's grouping. Identity, description, price and actions need a deliberate reading order. A favorite that belongs to identity must stay there; price and consultation can share a quiet footer only where the reference and available space support it. Avoid adding separators, large buttons or explanatory paragraphs absent from the contract. At narrow widths, wrap the intended groups rather than shrinking type or forcing every control onto one row. These are reference-specific relationships, not a universal card template.
@@ -30,6 +32,7 @@ Create `design/layout-contract.json` with a nonempty `rules` array. Each rule ne
 | absent | subject | No duplicated or forbidden content in a region |
 | below | subject, reference, minGap | Ordered regions with a minimum vertical gap |
 | disjoint | subject, reference | Independent regions do not overlap |
+| sameRow | subject, reference, tolerance | Horizontally separated regions have aligned vertical centers; tolerance defaults to 2px, maximum 8px |
 | rowLimit | groups, maximum | Maximum semantic groups sharing a horizontal row |
 | sampleWidth | subject, sample | Sample HTML and assembly have equal width and inset |
 
