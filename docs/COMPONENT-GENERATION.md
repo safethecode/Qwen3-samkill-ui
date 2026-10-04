@@ -10,6 +10,8 @@ Create a fresh target containing `DESIGN.md`, `REFERENCE.md`, official local ass
 - `elements`: IDs, focused prompts, allowed asset paths and standalone sample templates.
 - `assembly`: a template with each `{{elementId}}` exactly once. Each sample includes only its own slot and reproduces its assembly slot's available width and parent padding.
 
+An element can supply immutable `html` when its semantic structure and copy are already decided. That request returns CSS only; the model cannot insert an unrelated profile, action or image into the fixed fragment. `fixedMarkupElements` lists this host assistance in the generation record. This is useful for small bodies, labelled fields and footers; it is not evidence that the model independently discovered their structure.
+
 Each model call writes one root with `data-ui-unit="elementId"` and CSS scoped to that root. Its prompt receives the shared contract and only that element's requirements. The runner scopes local class/type selectors to the component root; document selectors and sibling escapes are rejected. Scripts, inline handlers/styles and undeclared media are rejected. Accepted HTML/CSS is reused unchanged for its sample and assembly; the model never rewrites the completed page during assembly.
 
 Run `node scripts/generate-components.mjs TARGET EVIDENCE`, with evidence outside the source directory. Use the normal local model environment variables. Each element has two bounded attempts and a five-minute request timeout. Raw responses, errors and input-bound checkpoints are retained. Set `QWEN_RESUME=1` to resume only unchanged inputs and runner state after an interrupted element; completed elements are validated and reused. Completed application source cannot be overwritten.
