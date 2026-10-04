@@ -19,6 +19,11 @@ export async function generateService(target, evidence, options = {}) {
   for (const file of ['index.html', 'app.js', 'styles.css']) if (await access(resolve(target, file)).then(() => true, () => false)) throw new Error('Split generation requires a fresh target');
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8');
+  const typographyIntent = await readFile(resolve(target, 'design/typography.json'), 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+  if (typographyIntent) {
+    const parsed = JSON.parse(typographyIntent);
+    if (typographyIntent.length > 12000 || !Array.isArray(parsed.roles) || !parsed.roles.length || parsed.roles.some(role => !role || typeof role.selector !== 'string' || !role.selector.trim() || !Array.isArray(role.families) || !role.families.length || role.families.some(family => typeof family !== 'string' || !family.trim()))) throw new Error('Predeclared typography requires nonempty selectors and rendered font families within 12000 characters');
+  }
   const skill = `${await readFile(new URL('../skills/qwen-samkill-ui/SKILL.md', import.meta.url), 'utf8')}\n\nSERVICE IMPLEMENTATION GUIDE\n${await readFile(new URL('../skills/qwen-samkill-ui/references/service-contracts.md', import.meta.url), 'utf8')}`;
   const settings = { model: process.env.QWEN_GENERATE_MODEL || 'qwen3-coder:30b', think: process.env.QWEN_GENERATE_THINK === 'true', options: { num_ctx: 16384, ...samplingOptions(), ...inferenceOptions() } };
   const contexts = Object.fromEntries(await Promise.all(serviceStages.map(async stage => [stage.id, await stageSkillContext(stage.id)])));
@@ -26,7 +31,7 @@ export async function generateService(target, evidence, options = {}) {
   const assets = await verifiedIconAssets(target);
   const referenceAssets = await readFile(resolve(target, 'assets/reference-manifest.json'), 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
   await writeFile(resolve(evidence, 'skill-coverage.json'), JSON.stringify({ ...inventory, generationInputs: Object.fromEntries(Object.entries(contexts).map(([id, context]) => [id, context.sources])), compliance: 'UNVERIFIED' }, null, 2));
-  const binding = createHash('sha256').update(JSON.stringify({ contract, reference, skill, settings, contexts, inventory, assets, referenceAssets, interface: options.interface, serviceStages, normalizeContractTypography: options.normalizeContractTypography === true })).digest('hex');
+  const binding = createHash('sha256').update(JSON.stringify({ contract, reference, typographyIntent, skill, settings, contexts, inventory, assets, referenceAssets, interface: options.interface, serviceStages, normalizeContractTypography: options.normalizeContractTypography === true })).digest('hex');
   const checkpointPath = resolve(evidence, 'generation-checkpoint.json');
   const completed = {};
   if (options.resume && await access(checkpointPath).then(() => true, () => false)) {
@@ -52,7 +57,7 @@ export async function generateService(target, evidence, options = {}) {
       await writeFile(checkpointPath, JSON.stringify({ binding, settings, completed }, null, 2));
       continue;
     }
-    const assetContext = `\nVERIFIED LOCAL ICON ASSETS\n${Object.keys(assets).join('\n') || 'None supplied. Do not invent asset paths.'}\nUse these only for required actions, preserving semantic labels and their official shape. Example for an available Search asset: <img src="assets/icons/Search.svg" alt="" width="20" height="20">. File names are case-sensitive. Do not replace reference icons with emoji or hand-drawn SVG.\nEXISTING REFERENCE ASSETS\n${referenceAssets || 'No original media supplied. Do not invent image URLs or claim media fidelity.'}`;
+    const assetContext = `\nPREDECLARED TYPOGRAPHY INTENT\n${typographyIntent || 'No role contract supplied. Do not infer or claim verified font fidelity.'}\nWhen supplied, implement these role selectors and font choices. Keep font intent unchanged; do not substitute a family merely to pass checks. A family name does not prove that its font file is available or loaded. Use supplied local assets or explicitly intended system fonts. Actual rendering still requires browser verification.\nVERIFIED LOCAL ICON ASSETS\n${Object.keys(assets).join('\n') || 'None supplied. Do not invent asset paths.'}\nUse these only for required actions, preserving semantic labels and their official shape. Example for an available Search asset: <img src="assets/icons/Search.svg" alt="" width="20" height="20">. File names are case-sensitive. Do not replace reference icons with emoji or hand-drawn SVG.\nEXISTING REFERENCE ASSETS\n${referenceAssets || 'No original media supplied. Do not invent image URLs or claim media fidelity.'}`;
     const outputContract = stage.file === 'index.html'
       ? `HTML only for index.html. Include each required element exactly once now, not in a later stage.\n${Object.entries(options.interface || {}).map(([id, tag]) => `Exactly one <${tag === '*' ? 'section' : tag} id="${id}"> on that element itself.`).join('\n')}`
       : stage.file === 'app.js'
