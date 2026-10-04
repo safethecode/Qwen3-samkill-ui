@@ -31,6 +31,7 @@ export function validateComponentPlan(plan) {
   if (assemblySlots.length !== ids.length || ids.some(id => assemblySlots.filter(slot => slot === id).length !== 1)) throw new Error('Every element needs exactly one assembly slot');
   for (const element of plan.elements) {
     if (typeof element.prompt !== 'string' || !element.prompt.trim() || !Array.isArray(element.assets) || element.assets.some(asset => typeof asset !== 'string') || typeof element.sample !== 'string' || slots(element.sample).join() !== element.id) throw new Error('Each component requires a prompt, assets and its own sample slot');
+    if (element.html !== undefined) validateComponent(element, { html: element.html, css: `[data-ui-unit="${element.id}"]{min-width:0}` });
   }
   postcss.parse(plan.sharedCss);
   return plan;

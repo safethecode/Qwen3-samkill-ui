@@ -41,6 +41,7 @@ test('host selector scoping preserves component roots and children without docum
 });
 
 test('component generation resumes fixed element outputs and rejects changed decomposition', async () => {
+  const generationPlan = { ...plan, elements: plan.elements.map(element => element.id === 'E2' ? { ...element, html: search.html } : element) };
   const root = await mkdtemp(join(tmpdir(), 'qwen-components-'));
   const target = join(root, 'source');
   const evidence = join(root, 'evidence');
@@ -48,21 +49,23 @@ test('component generation resumes fixed element outputs and rejects changed dec
   await writeFile(join(target, 'DESIGN.md'), 'Prototype.');
   await writeFile(join(target, 'REFERENCE.md'), 'Reference.');
   await writeFile(join(target, 'design/typography.json'), JSON.stringify({ roles: [{ selector: 'body *', families: ['Arial'] }] }));
-  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify(plan));
+  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify(generationPlan));
   let fail = true;
   const calls = [];
   const fetcher = async (_url, options) => {
-    const input = JSON.parse(options.body).messages[1].content;
+    const request = JSON.parse(options.body);
+    const input = request.messages[1].content;
     const id = /ONE ELEMENT (E\d)/.exec(input)[1];
     calls.push(id);
     if (id === 'E1') assert.ok(!input.includes('ONE ELEMENT E2'));
+    if (id === 'E2') { assert.match(input, /IMMUTABLE COMPONENT HTML/); assert.equal(request.format.properties.html, undefined); }
     if (id === 'E2' && fail) throw new Error('Injected failure');
-    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify(id === 'E1' ? title : search) } }) };
+    return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify(id === 'E1' ? title : { css: search.css }) } }) };
   };
   await assert.rejects(generateComponents(target, evidence, { fetcher }), /Injected failure/);
-  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify({ ...plan, shared: 'Changed' }));
+  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify({ ...generationPlan, shared: 'Changed' }));
   await assert.rejects(generateComponents(target, evidence, { fetcher, resume: true }), /checkpoint/);
-  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify(plan));
+  await writeFile(join(target, 'design/component-plan.json'), JSON.stringify(generationPlan));
   fail = false;
   await generateComponents(target, evidence, { fetcher, resume: true });
   assert.equal(calls.filter(id => id === 'E1').length, 1);
