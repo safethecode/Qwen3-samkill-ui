@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>틈 공방 - 이번 주, 손으로 만드는 시간</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead">
+<h1>틈 공방</h1>
+<p class="subtitle">이번 주, 손으로 만드는 시간</p>
+</header>
+
+<main>
+<section class="editorial-hero">
+<div class="pottery-illustration" aria-hidden="true"></div>
+<div class="hero-content">
+<h2>이번 주, 손으로 만드는 시간</h2>
+<p> neighbourhood workshop for adults</p>
+</div>
+</section>
+
+<section class="search-section">
+<label for="search" class="visually-hidden">수업 검색</label>
+<input type="text" id="search" placeholder="수업 검색">
+</section>
+
+<section class="catalogue" id="catalogue-list">
+
+</section>
+
+<section class="booking-section" id="booking-section" style="display: none;">
+<h2>예약하기</h2>
+<div class="class-summary" id="selected-class-info"></div>
+<form id="booking-form">
+<div class="form-group">
+<label for="guest">예약자 이름</label>
+<input type="text" id="guest" required>
+</div>
+<div class="form-group">
+<label for="date">방문일</label>
+<input type="date" id="date" required>
+</div>
+<div class="form-group">
+<label for="slot">예약 시간</label>
+<select id="slot" required>
+<option value="10:00">10:00</option>
+<option value="14:00">14:00</option>
+<option value="18:00">18:00</option>
+</select>
+</div>
+<button type="submit" class="btn-primary">예약 확정</button>
+</form>
+</section>
+
+<section id="confirmation" style="display: none;">
+<h2>예약 확인</h2>
+<div id="confirmation-details"></div>
+<button id="cancel-booking" class="btn-secondary">예약 취소</button>
+</section>
+
+<section class="demo-disclosure">
+<p>이 데모는 브라우저에만 데이터를 저장합니다. 실제 결제는 진행되지 않습니다.</p>
+</section>
+</main>
+
+<script src="app.js" defer></script>
+</body>
+</html>

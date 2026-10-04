@@ -1,0 +1,1644 @@
+{
+  "sources": [
+    {
+      "path": "design-md/guide.md",
+      "sha256": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76"
+    },
+    {
+      "path": "design-md/references/document-contract.md",
+      "sha256": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23"
+    },
+    {
+      "path": "onboarding-flow/guide.md",
+      "sha256": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336"
+    },
+    {
+      "path": "onboarding-flow/references/flow-contract.md",
+      "sha256": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8"
+    },
+    {
+      "path": "reference-decompose/guide.md",
+      "sha256": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2"
+    },
+    {
+      "path": "reference-decompose/references/element-contract.md",
+      "sha256": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c"
+    },
+    {
+      "path": "reference-review/guide.md",
+      "sha256": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898"
+    },
+    {
+      "path": "reference-review/references/change-review.md",
+      "sha256": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb"
+    },
+    {
+      "path": "reference-review/references/design-gate.md",
+      "sha256": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741"
+    },
+    {
+      "path": "reference-review/references/deslop-triage.md",
+      "sha256": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69"
+    },
+    {
+      "path": "reference-review/references/failure-catalog.json",
+      "sha256": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f"
+    },
+    {
+      "path": "reference-review/references/feedback-regression.md",
+      "sha256": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b"
+    },
+    {
+      "path": "reference-review/references/review-criteria.md",
+      "sha256": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f"
+    },
+    {
+      "path": "reference-review/references/state-stress.md",
+      "sha256": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5"
+    },
+    {
+      "path": "reference-to-ui/guide.md",
+      "sha256": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d"
+    },
+    {
+      "path": "reference-to-ui/references/anti-slop-code.md",
+      "sha256": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130"
+    },
+    {
+      "path": "reference-to-ui/references/application-format.md",
+      "sha256": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a"
+    },
+    {
+      "path": "reference-to-ui/references/dashboard.md",
+      "sha256": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0"
+    },
+    {
+      "path": "reference-to-ui/references/design-guardrails.md",
+      "sha256": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9"
+    },
+    {
+      "path": "reference-to-ui/references/design-tokens.md",
+      "sha256": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a"
+    },
+    {
+      "path": "reference-to-ui/references/icon-controls.md",
+      "sha256": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e"
+    },
+    {
+      "path": "reference-to-ui/references/mobile.md",
+      "sha256": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03"
+    },
+    {
+      "path": "reference-to-ui/references/product-reasoning.md",
+      "sha256": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3"
+    },
+    {
+      "path": "reference-to-ui/references/reference-synthesis.md",
+      "sha256": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d"
+    },
+    {
+      "path": "reference-to-ui/references/typography.md",
+      "sha256": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7"
+    },
+    {
+      "path": "reference-to-ui/references/ui-composition.md",
+      "sha256": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d"
+    },
+    {
+      "path": "samkill-ui/guide.md",
+      "sha256": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f"
+    },
+    {
+      "path": "uibowl-research/guide.md",
+      "sha256": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209"
+    },
+    {
+      "path": "uibowl-research/references/component-anatomy.md",
+      "sha256": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106"
+    },
+    {
+      "path": "uibowl-research/references/observation-format.md",
+      "sha256": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1"
+    },
+    {
+      "path": "uibowl-research/references/research-plan.md",
+      "sha256": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf"
+    },
+    {
+      "path": "uibowl-research/references/search-examples.md",
+      "sha256": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81"
+    },
+    {
+      "path": "ux-copy/guide.md",
+      "sha256": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b"
+    },
+    {
+      "path": "ux-copy/references/copy-contract.md",
+      "sha256": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f"
+    },
+    {
+      "path": "ux-copy/references/korean-writing.md",
+      "sha256": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+    }
+  ],
+  "catalogVersion": 5,
+  "rules": [
+    {
+      "id": "ORC-F01",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "SIDEBAR-CONTENT MOOD MISMATCH",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1110,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #1: SIDEBAR-CONTENT MOOD MISMATCH**\nDark sidebar + light content = two products glued together.\n→ Decide overall mode FIRST. Light sidebar = white/gray-50, NOT dark. \"Cover test\": cover each zone — same product?",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F02",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "ACCENT COLOR ISOLATION",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1114,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #2: ACCENT COLOR ISOLATION**\nAccent only in sidebar, absent from content.\n→ Accent in BOTH zones. Remove sidebar — can you still tell the accent? If no, fix.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F03",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "INVISIBLE TEXT ON DARK BACKGROUNDS",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1118,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #3: INVISIBLE TEXT ON DARK BACKGROUNDS**\nInsufficient contrast, brand name disappears.\n→ Dark bg text: #ffffff, weight >= 500. Secondary: minimum #d1d5db. Brand: weight 600, pure white. WCAG 4.5:1.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F04",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "DUPLICATE CTAs",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1122,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #4: DUPLICATE CTAs**\nSame action in sidebar AND content header.\n→ Every action in EXACTLY ONE location. List all CTAs — duplicates? Remove.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F05",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "CARD LAYOUT WHERE TABLE IS NEEDED",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1126,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #5: CARD LAYOUT WHERE TABLE IS NEEDED**\nCards for tabular data (users, invoices, docs).\n→ \"Will list grow > 20 items?\" → TABLE. \"3+ attributes per item?\" → TABLE. Cards only for visual content.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F06",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "SEMANTIC COLOR MISMATCH",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1130,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #6: SEMANTIC COLOR MISMATCH**\nRed badge for \"in progress\" status — red universally means danger, not progress.\n→ Gray=neutral, Blue=active/progress, Amber=warning, Green=success, Red=danger. Never red for positive.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F07",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "OVERSIZED PAGE TITLES",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1134,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #7: OVERSIZED PAGE TITLES**\n32-40px title = landing page, not tool.\n→ 20-24px max, weight 600. Title row 48-56px. margin-bottom <= 16px to content.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F08",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "REPEATING ACTIONS ON EVERY ITEM",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1138,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #8: REPEATING ACTIONS ON EVERY ITEM**\nButtons on every row = visual noise.\n→ Actions hidden by default, show on hover. Critical action = clickable row. Visible buttons <= item count.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F09",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "MULTI-COLUMN HEIGHT MISMATCH",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1142,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #9: MULTI-COLUMN HEIGHT MISMATCH**\nDashboard with 2+ columns where one is significantly taller. Right column ends early, full-width section below looks \"attached\" to left but \"detached\" from right.\n→ Before choosing multi-column: estimate content height. If difference >30%, stack smaller widgets in the short column (like GL-6/GL-2 dashboards), give shorter section fixed height with scroll, or rethink grid entirely. \"Scroll test\": at any position, do both columns have content visible?",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F10",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "ICON-TEXT VERTICAL MISALIGNMENT",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1146,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #10: ICON-TEXT VERTICAL MISALIGNMENT**\nIcon and text not vertically centered. Icon sits 1-3px higher/lower than text baseline. Common in buttons (\"+ New\"), menu items, nav links.\n→ EVERY icon+text pair: `flex items-center gap-2`. Icon size = text size + 2~4px (text-sm 14px → icon 16px). SVG icons must be `display: block` or `flex-shrink-0`. Use proper icon components, never text \"+\" characters.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F11",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "PARTIAL COLOR APPLICATION",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1150,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #11: PARTIAL COLOR APPLICATION**\nSemantic color on text but NOT on adjacent icon. \"Logout\" text is red but icon stays gray.\n→ Icon+text = ONE visual unit, same color. Apply color to the CONTAINER (`<div className=\"text-red-600 flex items-center gap-2\">`), not individual children. Hover states must change both together.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F12",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "INCONSISTENT ELEMENT SPACING & GAPS",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1154,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #12: INCONSISTENT ELEMENT SPACING & GAPS**\nHeader/toolbar elements have uneven gaps (8px here, 12px there, 16px elsewhere). Left padding !== right padding.\n→ Container padding: left === right, always. Use single gap value for all siblings in a row. Action icons in one flex container with consistent gap. Dividers: equal space both sides (mx-2, not ml-2 mr-4). \"Ruler test\": every gap must be multiple of 4px base unit.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F13",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "MISSING CURSOR POINTER ON INTERACTIVE ELEMENTS",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1158,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #13: MISSING CURSOR POINTER ON INTERACTIVE ELEMENTS**\nClickable divs/spans with onClick but no cursor: pointer. User hovers, cursor stays as arrow.\n→ EVERY element with onClick MUST have cursor-pointer. This includes: clickable rows, cards, tabs, icon buttons, custom toggles, breadcrumbs, \"show more\" links, sidebar nav items. Use `<button>`/`<a>` when possible (free pointer). Disabled = cursor-not-allowed. \"Hover sweep test\": mentally hover every element — clickable = pointer, not clickable = default.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F14",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "MEANINGLESS WRAPPER DIVS AND NON-SEMANTIC MARKUP",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1162,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #14: MEANINGLESS WRAPPER DIVS AND NON-SEMANTIC MARKUP**\n`<div>` soup: deeply nested wrappers that add no meaning, styling, or layout. A `<div>` wrapping a single child with no classes. Navigation built with `<div>` instead of `<nav>`. Lists built with stacked `<div>`s instead of `<ul>`/`<li>`. Clickable elements using `<div onClick>` instead of `<button>`. Links using `<span onClick>` instead of `<a>`.\n→ RULES: (1) Every HTML element must be the most semantic option available: `<nav>` for navigation, `<main>` for primary content, `<section>`/`<article>` for content blocks, `<header>`/`<footer>` for landmarks, `<aside>` for sidebars, `<button>` for actions, `<a>` for links, `<ul>`/`<li>` for lists, `<figure>` for media, `<time>` for dates, `<dialog>` for modals. (2) A `<div>` is ONLY justified when no semantic element fits AND it serves a layout purpose (flex/grid container, positioning wrapper). (3) If a `<div>` has zero classes/styles or only one class that could be merged into parent/child — delete it. (4) Max nesting depth without semantic justification: 4 levels. Deeper = flatten. (5) After generating, count `<div>` tags. If `<div>` is >50% of all tags, refactor.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F16",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "UNNECESSARY SCROLLBARS",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1166,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #16: UNNECESSARY SCROLLBARS**\nContainers with `overflow-auto` or fixed heights that create scrollbars when content could fit naturally. A card with `max-h-64 overflow-y-auto` showing 3 items. A sidebar section with `h-[300px] overflow-auto` that's half empty. A dashboard widget with a scrollbar for 5 list items. These micro-scrollbars make the UI feel like an iframe patchwork, not a cohesive product.\n→ RULES: (1) Never add `overflow-auto/scroll` preemptively \"just in case.\" Only add when you KNOW content will exceed the container in normal use. (2) Fixed heights on content containers are almost always wrong — let content determine height, use `flex-grow` or `min-h` instead. (3) If a list might grow long, paginate or \"show more\" — don't scroll. (4) The ONLY acceptable scrollable areas: the page itself, code blocks, modal bodies with long forms, data tables with 50+ rows, and chat/log feeds. (5) \"Scrollbar audit\": after generating, mentally scan every container — if you see a scrollbar, ask \"would GL-6/GL-2 scroll here?\" If no, remove it. (6) Nested scrollbars (scroll inside scroll) are NEVER acceptable.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-F15",
+      "status": "active",
+      "family": "Known AI Failure Patterns",
+      "title": "RAINBOW BADGE / TAG SYNDROME",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Known AI Failure Patterns",
+        "start_line": 1170,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "**FAILURE #15: RAINBOW BADGE / TAG SYNDROME**\nEvery status badge uses a different color: blue for active, green for complete, amber for pending, purple for review, pink for draft, teal for archived. The page looks like a color palette demo, not a professional tool. Real SaaS products (GL-6, GL-2, GL-3) use color sparingly — most statuses are gray.\n→ RULES: (1) Gray is the DEFAULT badge color. Use `bg-gray-100 text-gray-600` for any status that does not require immediate user attention: draft, active, pending, in review, archived, default, unknown. (2) Color is RESERVED for exactly 3 situations: red = danger/error/overdue/failed, amber = warning/needs attention, green = success/complete/approved. (3) Maximum 3 distinct badge colors on any single page (gray + up to 2 semantic colors). If you have 4+ colored badge variants, demote the least urgent ones to gray. (4) Never use blue, purple, pink, teal, or indigo for status badges — these are decorative, not semantic. The accent color (blue) is for interactive elements (buttons, links), NOT for status indicators. (5) \"Traffic light test\": if your badge colors don't map to red/amber/green intuition, they're decorative. (6) Reference: look at GL-6's status badges — most are subtle gray dots with text. GL-3's dashboard — statuses are almost entirely gray with only red for failed. That's the standard.\n→ EXTENDS TO NON-BADGE ELEMENTS: This rule applies to ALL repeated visual elements in lists/tables, not just badges. (7) **Project/entity icons** in a table or list: use ONE neutral color (`bg-gray-100 text-gray-600`) for all items. Each row having a different icon color (blue, amber, green, violet, orange) is the same rainbow problem — it makes the table look like a children's toy. (8) **Avatar fallbacks** in a table or list: use ONE color scheme (`bg-primary-100 text-primary-700`) for all avatars. Never assign each user a different avatar color (rose, emerald, violet, orange). Real products like GL-6 use a single gray or brand-colored avatar fallback. (9) \"Color audit\" for tables: scan every column. If any column has 3+ distinct colors across rows, unify to one neutral color. The only column allowed multiple colors is the status badge column — and even that follows rules (1)-(6).",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G01",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "GRADIENT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1011,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **GRADIENT CHECK** — Any linear-gradient or radial-gradient? (Exception: reference explicitly has one) → Fix: flat solid color.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G02",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "SHADOW CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1012,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **SHADOW CHECK** — More than --shadow-md? Hover adds shadow? → Fix: remove or reduce.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G03",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "BORDER-RADIUS CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1013,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **BORDER-RADIUS CHECK** — Any radius > 8px? (Exception: avatars, pills) → Fix: reduce to 6px.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G04",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "COLOR COUNT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1014,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **COLOR COUNT CHECK** — More than 2 non-gray colors? → Fix: 1 accent + semantic only.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G05",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "HOVER CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1015,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **HOVER CHECK** — Any hover with transform/scale/translateY/shadow/opacity? → Fix: bg-color shift only.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G06",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "FONT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1016,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **FONT CHECK** — More than 3 font sizes on one view? → Fix: consolidate.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G07",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "SPACING CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1017,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **SPACING CHECK** — Inconsistent spacing? → Fix: snap to 4px grid.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G08",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "DENSITY CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1018,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **DENSITY CHECK** — Feels like landing page, not tool? → Fix: tighten spacing.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G09",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "DECORATION CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1019,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **DECORATION CHECK** — Purely decorative elements? → Fix: remove.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G10",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "MOOD UNITY CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1020,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **MOOD UNITY CHECK** — Sidebar and content look like different products? → Fix: unify mode.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G11",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "TEXT VISIBILITY CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1021,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **TEXT VISIBILITY CHECK** — Text on dark bg thinner than weight 500? → Fix: increase weight/contrast.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G12",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "CTA DUPLICATION CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1022,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **CTA DUPLICATION CHECK** — Same action in multiple places? → Fix: one action, one location.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G13",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "LAYOUT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1023,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **LAYOUT CHECK** — Card grid for 20+ item data? → Fix: use table.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G14",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "SEMANTIC COLOR CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1024,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **SEMANTIC COLOR CHECK** — Red for non-danger? Green for non-success? → Fix: realign.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G15",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "TITLE PROPORTION CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1025,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **TITLE PROPORTION CHECK** — Page title > 24px? → Fix: 20-24px max.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G16",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "ACTION NOISE CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1026,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **ACTION NOISE CHECK** — Actions permanently visible on every item? → Fix: hide, show on hover.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G17",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "COLUMN HEIGHT BALANCE CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1027,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **COLUMN HEIGHT BALANCE CHECK** — Multi-column layout with one column >30% taller? → Fix: stack widgets in short column, add scroll, or restructure grid.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G18",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "ICON-TEXT ALIGNMENT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1028,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **ICON-TEXT ALIGNMENT CHECK** — Every icon+text pair using flex items-center? Icon size proportional to text (+2~4px)? \"+\" chars replaced with SVG icons? → Fix: flex items-center gap-2, use proper icon components.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G19",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "COLOR UNITY CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1029,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **COLOR UNITY CHECK** — For every colored text: is adjacent icon the SAME color? Color on parent container, not children? Hover changes both icon and text? → Fix: move color to parent flex container.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G20",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "SPACING CONSISTENCY CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1030,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **SPACING CONSISTENCY CHECK** — In headers/toolbars: all gaps equal? Left padding === right padding? Action icons in single flex with one gap? Header padding matches content padding? → Fix: use flex gap, snap to 4px grid.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G21",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "CURSOR POINTER CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1031,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **CURSOR POINTER CHECK** — Every element with onClick has cursor: pointer? Non-button/a clickable elements have cursor-pointer? Disabled shows not-allowed? → Fix: add cursor-pointer to all clickable elements.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G22",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "BADGE COLOR RESTRAINT CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1032,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **BADGE COLOR RESTRAINT CHECK** — Count distinct badge/tag colors on the page. More than 3 (including gray)? → Fix: default to gray for most statuses, use color ONLY for states that demand user attention (danger=red, warning=amber, success=green). \"Active\", \"Draft\", \"Pending\", \"Archived\" should ALL be gray variants (gray-100/gray-500 bg/text), not each a different color. If every badge is a different color, the page looks like a children's toy, not a SaaS tool.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G23",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "UNNECESSARY SCROLL CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1033,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **UNNECESSARY SCROLL CHECK** — Any container with `overflow-auto`, `overflow-y-scroll`, or fixed height that creates a scrollbar when content fits without one? → Fix: remove fixed height or overflow property. Use `overflow-hidden` + `text-ellipsis` for truncation, not scroll. Scrollable areas are only justified for: (1) main content areas with genuinely unbounded data, (2) code blocks, (3) modals with long forms. A card, sidebar section, or widget should NEVER have its own scrollbar — restructure the layout instead.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-G24",
+      "status": "active",
+      "family": "Anti-Pattern Guardrails",
+      "title": "SEMANTIC MARKUP CHECK",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "Anti-Pattern Guardrails",
+        "start_line": 1034,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "- **SEMANTIC MARKUP CHECK** — Any `<div>` or `<span>` where a semantic element exists? → Fix: `<nav>`, `<main>`, `<section>`, `<article>`, `<header>`, `<footer>`, `<aside>`, `<button>`, `<a>`, `<ul>`/`<li>`, `<figure>`, `<time>`, `<dialog>`. Wrapper divs that only add one class? → Fix: merge into parent or child. Nesting depth >4 without semantic reason? → Fix: flatten. Every `<div>` must justify its existence — if removing it changes nothing, delete it.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A01",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Uniform radius everywhere",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2070,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "1. **Uniform radius everywhere** — Do NOT apply `rounded-lg` to every element. Vary by component: `rounded-sm` for badges, `rounded-md` for inputs, `rounded-xl` for featured cards, `rounded-none` for data tables.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A02",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Flat single-color backgrounds",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2071,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "2. **Flat single-color backgrounds** — Never `bg-white` or `bg-gray-50` alone. Layer with subtle borders (`border border-black/5`), micro-gradients (`bg-gradient-to-b from-white to-gray-50/50`), or texture.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A03",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Shadows",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2072,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "3. **Shadows** — Do NOT use box-shadow at all. Use borders (`border border-black/5`) and background shifts (`hover:bg-muted/30`) for depth.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A04",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Blue-500 default",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2073,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "4. **Blue-500 default** — Never use Tailwind's default blue as the only accent. Derive a project-specific palette from the brand/audience. If no brand exists, propose 3 distinct directions.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A05",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Excessive symmetry",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2074,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "5. **Excessive symmetry** — Real layouts have intentional asymmetry: hero text left + image right, sidebar narrower than content, footer columns of different widths.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A06",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Western minimalism on Korean sites",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2075,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "6. **Western minimalism on Korean sites** — Korean users expect information density. Empty viewport = wasted space. Show price, rating, badge, seller, all visible without hover.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A07",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Icon-only without labels",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2076,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "7. **Icon-only without labels** — Especially for Korean market: every icon needs a text label. \"장바구니\" not just a cart icon. Clarity over elegance.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A08",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Generic stock imagery placeholder",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2077,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "8. **Generic stock imagery placeholder** — Never suggest `[Image placeholder]`. Specify image content, aspect ratio, and treatment (overlay gradient? border? rounded?).",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A09",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Monotonous card grids",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2078,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "9. **Monotonous card grids** — Not every card in a grid should be identical. Feature the first item larger, or vary image ratios, or add a CTA card variant in the grid.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "ORC-A10",
+      "status": "active",
+      "family": "AI Slop Checklist",
+      "title": "Missing empty/error/loading states",
+      "source": {
+        "path": "orchestrator/profiles/design.md",
+        "heading": "AI Slop Checklist",
+        "start_line": 2079,
+        "sha256": "69f897b60fcbf4bc769d3786e94498127dbd5e40a2c03a642c2d0c5800ae961d"
+      },
+      "original": "10. **Missing empty/error/loading states** — Every component needs: default, loading (skeleton), empty (illustration + message), error (retry action).",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "대상 UI에서 해당 요소·행동·맥락을 사용하는 경우",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-01",
+      "status": "active",
+      "family": "Reference UI workflow",
+      "title": "근거 없는 정밀값과 이미지/CSS 단위 혼동",
+      "source": {
+        "path": "samkill/user-requirements",
+        "heading": "2026-09-06 대화"
+      },
+      "original": "원본 배율 없이 이미지 px를 CSS px로 확정하거나 미관찰 동작·서체·색을 확인값으로 기록한다.",
+      "checks": [
+        "spec"
+      ],
+      "default_scope": "해당 작업과 사용자가 요청한 결과에 적용",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-02",
+      "status": "active",
+      "family": "Reference UI workflow",
+      "title": "토큰 정의 후 실제 사용 누락",
+      "source": {
+        "path": "samkill/user-requirements",
+        "heading": "2026-09-06 대화"
+      },
+      "original": "시각 스타일이 토큰을 우회하거나 상태별 배경·글자·아이콘 매핑이 빠진다. 설명된 직접값 예외는 별도 판단한다.",
+      "checks": [
+        "code"
+      ],
+      "default_scope": "해당 작업과 사용자가 요청한 결과에 적용",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-03",
+      "status": "active",
+      "family": "Reference UI workflow",
+      "title": "제외 목록 누락 또는 미검증 통과",
+      "source": {
+        "path": "samkill/user-requirements",
+        "heading": "2026-09-06 대화"
+      },
+      "original": "프로젝트 제외 목록과 적용 가능한 실패 기준을 확인하지 않고 완료로 표시한다.",
+      "checks": [
+        "spec"
+      ],
+      "default_scope": "해당 작업과 사용자가 요청한 결과에 적용",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-04",
+      "status": "active",
+      "family": "Reference UI workflow",
+      "title": "제품 핵심 과제 미구현",
+      "source": {
+        "path": "samkill/user-requirements",
+        "heading": "2026-09-06 대화"
+      },
+      "original": "보기 좋은 화면만 전달하고 요청한 핵심 행동·상태·정보를 구현하지 않는다. 명세 전용 작업의 실행 검증은 별도 범위다.",
+      "checks": [
+        "spec",
+        "interaction"
+      ],
+      "default_scope": "해당 작업과 사용자가 요청한 결과에 적용",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-05",
+      "status": "active",
+      "family": "Reference UI workflow",
+      "title": "아이디어 결합 요청을 표면 복제로 대체",
+      "source": {
+        "path": "samkill/user-requirements",
+        "heading": "2026-09-06 대화"
+      },
+      "original": "새 아이디어 결합을 요청받았지만 색상·카드 외형만 복제하고 제품 고유 요구를 반영하지 않는다. 충실한 재현을 명시한 작업은 별도 범위다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "해당 작업과 사용자가 요청한 결과에 적용",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-06",
+      "status": "active",
+      "family": "workflow",
+      "title": "생성 코드의 anti-slop 검증 누락",
+      "source": {
+        "path": "../reference-to-ui/references/anti-slop-code.md"
+      },
+      "original": "TS/JS 생성 코드에는 anti-slop 일반 규칙 검사를 적용한다. 실행하지 못한 검사를 통과로 보고하지 않는다. 다른 언어에는 해당 언어의 계약과 실제 동작 검사를 적용한다.",
+      "checks": [
+        "code"
+      ],
+      "default_scope": "생성하거나 수정한 제품 코드",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-07",
+      "status": "active",
+      "family": "workflow",
+      "title": "사용자 문제와 연결되지 않은 요소 배치",
+      "source": {
+        "path": "../reference-to-ui/references/product-reasoning.md"
+      },
+      "original": "주요 요소의 위치·크기·강조를 사용자의 정보·판단·행동에 연결한다. 빈 공간을 채우기 위한 장식과 기능을 추가하거나 사후에 근거를 꾸미지 않는다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "주요 화면 영역과 행동",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-08",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "요청 없는 로고·슬로건 생성",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "브랜드 자산이나 제작 요청 없이 로고·워드마크·슬로건을 만들거나 기능 아이콘을 브랜드 마크로 전용한다.",
+      "checks": [
+        "spec",
+        "code",
+        "visual"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-09",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "읽는 UI 글자 기본14px 및 제한적12px 예외 위반",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "보조 문구·라벨·버튼·시간·placeholder·대화를 포함한 읽는 텍스트를 실제 14 CSS px 미만으로 표시한다.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "읽는 UI 전체. 기본14px; 짧은 보조정보만 ui-composition의 조건과 프로젝트 예외 선언/검증을 거쳐 최소12px 허용. 행동·입력·핵심 안내 축소와12px미만은 허용하지 않음.",
+      "enforcement": "block-when-applicable",
+      "amendment": {
+        "date": "2026-09-10",
+        "source": "docs/session-context.md",
+        "reason": "사용자가 공간이 부족한 특별한 경우12px를 허용하되 남용하지 않도록 규칙 변경을 명시함. original은 과거14px절대하한 기록으로 보존.",
+        "criteria": "skills/reference-to-ui/references/ui-composition.md#글자-크기-하한"
+      }
+    },
+    {
+      "id": "RUI-10",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "CTA와 필터 혼동·텍스트 전용 행동 남발",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "실행 행동을 필터와 같은 표현으로 숨기거나 텍스트 전용 버튼을 남발한다. CTA는 명확한 표면/윤곽선 또는 의미 있는 아이콘과 라벨로 역할을 구분한다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-11",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "불필요한 보조 문구와 시선 분산 배치",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "필요한 판단과 연결되지 않은 힌트·중복 안내를 빈 공간에 배치한다. 삭제를 먼저 검토하고 필요한 문구는 관련 행동 근처에 둔다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-12",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "의미·출처가 불명확한 임의 아이콘",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "검증된 기존 세트 대신 기능과 맞지 않는 아이콘이나 임의 SVG를 급조한다. 아이콘 이름·출처·의미·스타일·접근 가능한 이름을 확인한다.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-13",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "내용보다 프레임 때문에 발생한 불필요한 스크롤",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "소수 항목이 형제의 과도한 공간 점유나 고정 높이 때문에 불필요하게 스크롤된다. 빈/소수/긴 내용과 키보드에서 확인하고 overflow 숨김으로 접근을 막지 않는다.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-14",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "영역 구분 바 또는 탭 기준선·선택 밑줄 사용",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-07 탭 선으로 재발한 바 금지 위반"
+      },
+      "original": "영역 구분 바와 탭 하단 기준선·선택 밑줄/이동 바는 단 하나도 사용하지 않는다. hr, border, pseudo-element, shadow, gradient, SVG 등 구현 방식과 무관하다. 간격·정렬·위계·필요한 표면으로 구분하고 선택 상태를 보존한다. 입력/버튼 경계·키보드 포커스·실제 데이터 표현은 별도 역할이다. 탭 관례나 레퍼런스를 이유로 금지 기준을 해제하지 않는다.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-15",
+      "status": "active",
+      "family": "Todo user feedback",
+      "title": "목록과 대화의 공간 경쟁·불완전한 채팅 흐름",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 Todo 테스트 피드백"
+      },
+      "original": "다른 과제인 목록과 대화를 상시 압축해 동시 배치하거나 전송·결과·오류·재시도·전환 복귀가 끊긴다. 탭/뷰 분리를 검토하고 필요한 상태를 실제 검증한다.",
+      "checks": [
+        "spec",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "해당 UI 요소·사용 과제가 있는 경우; 사용자 명시 기준을 우선",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-16",
+      "status": "active",
+      "family": "Reference synthesis feedback",
+      "title": "레퍼런스 장점의 실제 구현 대응 누락",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 레퍼런스 결합 품질 교정"
+      },
+      "original": "채택한 원본 영역·구체적인 시각 장점·구현 요소/토큰·나란히 비교 근거를 연결하지 않거나 색/기능 일부만으로 반영 완료를 선언한다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "레퍼런스 기반 UI 설계·구현·리뷰",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-17",
+      "status": "active",
+      "family": "Reference synthesis feedback",
+      "title": "레퍼런스 조합 품질의 퇴보를 의도적 차이로 통과",
+      "source": {
+        "path": "docs/session-context.md",
+        "heading": "2026-09-06 레퍼런스 결합 품질 교정"
+      },
+      "original": "원본의 핵심 위계·밀도·정렬·간격·컴포넌트 표현이 사라지거나 보조 레퍼런스와 충돌하는데 실제 비교 없이 동급 품질로 판단한다. 핵심 퇴보는 수정하고 미확인은 통과시키지 않는다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "레퍼런스 기반 UI 설계·구현·리뷰",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-18",
+      "status": "active",
+      "family": "Multi-reference and mobile navigation feedback",
+      "title": "복합 제품의 검색 분기·누적·적용 누락",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 여러 레퍼런스 누적과 모바일 탭"
+      },
+      "original": "핵심 제품과 보조 기능을 분리해 조사하지 않고 최신 키워드/단일 검색에 고착하거나 누적 출처를 덮어쓰고 마지막 결과만 구현한다. B-ID별 SC/R/D/Q 근거와 남은 검색 범위를 확인한다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "복합 제품 리서치·구현 또는 모바일 탭 내비게이션",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-19",
+      "status": "active",
+      "family": "Multi-reference and mobile navigation feedback",
+      "title": "모바일 탭을 과대한 CTA 형태로 표현",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 여러 레퍼런스 누적과 모바일 탭"
+      },
+      "original": "목적지 전환 탭을 큰 채움 버튼들로 늘리거나 과도한 높이/안전 영역 중복으로 콘텐츠를 압축한다. 목적지에 맞는 배치, 제한된 선택 표시, 아이콘/라벨, 상태/복귀를 모바일 레퍼런스와 비교한다.",
+      "checks": [
+        "spec",
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "복합 제품 리서치·구현 또는 모바일 탭 내비게이션",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-20",
+      "status": "active",
+      "family": "Form and cross-screen consistency feedback",
+      "title": "주 제목을 소제목/본문 스타일로 표시",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 폼·패딩·화면 통일 피드백"
+      },
+      "original": "생성/수정 표면의 목적 제목을 전역 h2/body 스타일로 내려 라벨·본문과 위계가 구분되지 않는다. 의미 heading과 시각 title 역할을 분리해 검증한다.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "생성/수정 폼, 상태별 목록 및 여러 화면의 동일 역할 요소",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-21",
+      "status": "active",
+      "family": "Form and cross-screen consistency feedback",
+      "title": "날짜·시간 선택형 입력의 제품 스타일·동작 미완성",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 폼·패딩·화면 통일 피드백"
+      },
+      "original": "브라우저 기본 날짜/시간 표현을 그대로 노출하거나 외형만 만든 picker를 완성으로 취급한다. 공통 입력 스타일, 선택/취소/초기화/포커스와 저장값을 검증한다.",
+      "checks": [
+        "code",
+        "visual",
+        "interaction"
+      ],
+      "default_scope": "생성/수정 폼, 상태별 목록 및 여러 화면의 동일 역할 요소",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-22",
+      "status": "active",
+      "family": "Form and cross-screen consistency feedback",
+      "title": "부모와 자식·상태 여백의 중복",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 폼·패딩·화면 통일 피드백"
+      },
+      "original": "부모 padding과 첫/마지막 자식 margin 또는 상태별 spacing이 합쳐져 의도한 inset·정렬을 깨뜨린다. 전체 박스 관계와 상태별 최종 거리를 확인한다.",
+      "checks": [
+        "code",
+        "visual"
+      ],
+      "default_scope": "생성/수정 폼, 상태별 목록 및 여러 화면의 동일 역할 요소",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-23",
+      "status": "active",
+      "family": "Form and cross-screen consistency feedback",
+      "title": "목록·대화·폼 사이의 톤과 컴포넌트 불일치",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 폼·패딩·화면 통일 피드백"
+      },
+      "original": "공통 토큰 사용만으로 전체 스타일 통일을 선언하거나 화면 전환마다 제목·표면·입력·버튼·간격이 다른 제품처럼 바뀐다. 모든 관련 화면을 같은 폭으로 나란히 비교한다.",
+      "checks": [
+        "spec",
+        "code",
+        "visual"
+      ],
+      "default_scope": "생성/수정 폼, 상태별 목록 및 여러 화면의 동일 역할 요소",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-24",
+      "status": "active",
+      "family": "Semantic information duplication feedback",
+      "title": "날짜·수량·상태의 의미 중복",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 날짜 정보 반복 교정"
+      },
+      "original": "제목·설명·배지에서 날짜/수량/상태를 다른 문자열 형식으로 반복한다. 역할 없는 표시를 합치거나 삭제하고 필요한 연도·조건 등 고유 정보는 보존한다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "같은 정보를 인접한 여러 위치에 표시하는 화면",
+      "enforcement": "block-when-applicable"
+    },
+    {
+      "id": "RUI-25",
+      "status": "active",
+      "family": "Section hierarchy feedback",
+      "title": "서로 다른 작업 섹션의 경계와 소속 불명확",
+      "source": {
+        "path": "docs/multi-reference-context.md",
+        "heading": "2026-09-06 서비스별 섹션 구분"
+      },
+      "original": "구분선을 제거하면서 다른 과제의 섹션 경계까지 없애거나 모든 영역을 같은 카드로 묶는다. 서비스와 정보 구조에 따라 내부/외부 간격·제목·표면 단계로 의미를 구별한다.",
+      "checks": [
+        "spec",
+        "visual"
+      ],
+      "default_scope": "서로 다른 판단·행동 영역을 함께 보여주는 화면",
+      "enforcement": "block-when-applicable"
+    }
+  ],
+  "routes": {
+    "shell": [
+      "reference-to-ui/references/application-format.md",
+      "reference-to-ui/references/icon-controls.md"
+    ],
+    "state": [
+      "onboarding-flow/references/flow-contract.md"
+    ],
+    "behavior": [
+      "reference-review/references/state-stress.md"
+    ],
+    "forms": [
+      "onboarding-flow/references/flow-contract.md",
+      "reference-review/references/state-stress.md"
+    ],
+    "layout": [
+      "reference-to-ui/references/typography.md",
+      "reference-to-ui/references/design-guardrails.md"
+    ],
+    "responsive": [
+      "reference-to-ui/references/mobile.md",
+      "reference-to-ui/references/icon-controls.md"
+    ]
+  },
+  "sharedGenerationGuides": [
+    "../decomposed-layout.md"
+  ],
+  "limitation": "Stage routing supports generation, not full compliance. Every active rule and relevant guide still requires scoped evidence in the mandatory catalog review.",
+  "generationInputs": {
+    "shell": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "reference-to-ui/references/application-format.md",
+        "sha256": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a"
+      },
+      {
+        "path": "reference-to-ui/references/icon-controls.md",
+        "sha256": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e"
+      }
+    ],
+    "state": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "onboarding-flow/references/flow-contract.md",
+        "sha256": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8"
+      }
+    ],
+    "behavior": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "reference-review/references/state-stress.md",
+        "sha256": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5"
+      }
+    ],
+    "forms": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "onboarding-flow/references/flow-contract.md",
+        "sha256": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8"
+      },
+      {
+        "path": "reference-review/references/state-stress.md",
+        "sha256": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5"
+      }
+    ],
+    "layout": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "reference-to-ui/references/typography.md",
+        "sha256": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7"
+      },
+      {
+        "path": "reference-to-ui/references/design-guardrails.md",
+        "sha256": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9"
+      }
+    ],
+    "responsive": [
+      {
+        "path": "../decomposed-layout.md",
+        "sha256": "a7757b65abe7d8184e024133a67ed0c519d157560c6e3e94c450a733fe714394"
+      },
+      {
+        "path": "reference-to-ui/references/mobile.md",
+        "sha256": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03"
+      },
+      {
+        "path": "reference-to-ui/references/icon-controls.md",
+        "sha256": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e"
+      }
+    ]
+  },
+  "compliance": "UNVERIFIED"
+}

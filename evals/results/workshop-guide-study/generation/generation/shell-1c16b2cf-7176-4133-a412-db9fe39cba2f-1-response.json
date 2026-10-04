@@ -1,0 +1,16 @@
+{
+  "binding": "b8b9badaaa90c346622815189b9258c643669463bbdb4d149f2facde16dc3cc6",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 129191,
+  "done_reason": "stop",
+  "load_duration": 17029169900,
+  "prompt_eval_count": 8148,
+  "prompt_eval_duration": 83529950000,
+  "eval_count": 611,
+  "eval_duration": 28558089000,
+  "total_duration": 129174680900,
+  "content": "{\n\"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>틈 공방 - 이번 주, 손으로 만드는 시간</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<header class=\\\"masthead\\\">\\n<h1>틈 공방</h1>\\n<p class=\\\"subtitle\\\">이번 주, 손으로 만드는 시간</p>\\n</header>\\n\\n<main>\\n<section class=\\\"editorial-hero\\\">\\n<div class=\\\"pottery-illustration\\\" aria-hidden=\\\"true\\\"></div>\\n<div class=\\\"hero-content\\\">\\n<h2>이번 주, 손으로 만드는 시간</h2>\\n<p> neighbourhood workshop for adults</p>\\n</div>\\n</section>\\n\\n<section class=\\\"search-section\\\">\\n<label for=\\\"search\\\" class=\\\"visually-hidden\\\">수업 검색</label>\\n<input type=\\\"text\\\" id=\\\"search\\\" placeholder=\\\"수업 검색\\\">\\n</section>\\n\\n<section class=\\\"catalogue\\\" id=\\\"catalogue-list\\\">\\n<!-- Classes rendered by JavaScript -->\\n</section>\\n\\n<section class=\\\"booking-section\\\" id=\\\"booking-section\\\" style=\\\"display: none;\\\">\\n<h2>예약하기</h2>\\n<div class=\\\"class-summary\\\" id=\\\"selected-class-info\\\"></div>\\n<form id=\\\"booking-form\\\">\\n<div class=\\\"form-group\\\">\\n<label for=\\\"guest\\\">예약자 이름</label>\\n<input type=\\\"text\\\" id=\\\"guest\\\" required>\\n</div>\\n<div class=\\\"form-group\\\">\\n<label for=\\\"date\\\">방문일</label>\\n<input type=\\\"date\\\" id=\\\"date\\\" required>\\n</div>\\n<div class=\\\"form-group\\\">\\n<label for=\\\"slot\\\">예약 시간</label>\\n<select id=\\\"slot\\\" required>\\n<option value=\\\"10:00\\\">10:00</option>\\n<option value=\\\"14:00\\\">14:00</option>\\n<option value=\\\"18:00\\\">18:00</option>\\n</select>\\n</div>\\n<button type=\\\"submit\\\" class=\\\"btn-primary\\\">예약 확정</button>\\n</form>\\n</section>\\n\\n<section id=\\\"confirmation\\\" style=\\\"display: none;\\\">\\n<h2>예약 확인</h2>\\n<div id=\\\"confirmation-details\\\"></div>\\n<button id=\\\"cancel-booking\\\" class=\\\"btn-secondary\\\">예약 취소</button>\\n</section>\\n\\n<section class=\\\"demo-disclosure\\\">\\n<p>이 데모는 브라우저에만 데이터를 저장합니다. 실제 결제는 진행되지 않습니다.</p>\\n</section>\\n</main>\\n\\n<script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

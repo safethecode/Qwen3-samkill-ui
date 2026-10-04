@@ -1,0 +1,16 @@
+{
+  "binding": "b8b9badaaa90c346622815189b9258c643669463bbdb4d149f2facde16dc3cc6",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 184976,
+  "done_reason": "stop",
+  "load_duration": 4764100,
+  "prompt_eval_count": 14137,
+  "prompt_eval_duration": 154927309000,
+  "eval_count": 419,
+  "eval_duration": 29679070000,
+  "total_duration": 184970571200,
+  "content": "{\n  \"code\": \".btn-primary,\\n.btn-secondary {\\n  display: inline-flex;\\n  align-items: center;\\n  justify-content: center;\\n}\\n\\n#confirmation .btn-secondary {\\n  margin-top: var(--space-lg);\\n}\\n\\n[hidden],\\n[style*=\\\"display: none\\\"] {\\n  display: none !important;\\n}\\n\\n@media (prefers-reduced-motion: reduce) {\\n  .catalogue-card,\\n  .btn-detail {\\n    transition: none;\\n  }\\n\\n  #booking-section {\\n    scroll-behavior: auto;\\n  }\\n}\\n\\n@media (max-width: 390px) {\\n  .editorial-hero {\\n    padding: var(--space-md);\\n    gap: var(--space-md);\\n  }\\n\\n  .hero-content h2 {\\n    font-size: 24px;\\n  }\\n\\n  .pottery-illustration {\\n    height: 160px;\\n  }\\n\\n  .catalogue-card {\\n    padding: var(--space-md);\\n  }\\n\\n  .card-meta {\\n    flex-wrap: wrap;\\n  }\\n\\n  #booking-section,\\n  #confirmation {\\n    padding: var(--space-md);\\n  }\\n\\n  main {\\n    padding: 0 var(--space-sm);\\n  }\\n}\\n\\n@media (max-width: 320px) {\\n  .masthead h1 {\\n    font-size: 24px;\\n  }\\n\\n  .hero-content h2 {\\n    font-size: 24px;\\n  }\\n\\n  .pottery-illustration {\\n    height: 140px;\\n  }\\n\\n  .btn-primary,\\n  .btn-detail {\\n    width: 100%;\\n  }\\n}\"\n}"
+}

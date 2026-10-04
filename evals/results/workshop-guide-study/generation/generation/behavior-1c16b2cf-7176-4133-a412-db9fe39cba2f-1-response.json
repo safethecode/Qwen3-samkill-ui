@@ -1,0 +1,16 @@
+{
+  "binding": "b8b9badaaa90c346622815189b9258c643669463bbdb4d149f2facde16dc3cc6",
+  "stage": "behavior",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 94231,
+  "done_reason": "stop",
+  "load_duration": 3579200,
+  "prompt_eval_count": 8558,
+  "prompt_eval_duration": 89087054000,
+  "eval_count": 130,
+  "eval_duration": 4933628000,
+  "total_duration": 94216141900,
+  "content": "{\n  \"code\": \"document.getElementById(\\\"search\\\").addEventListener(\\\"input\\\", (e) => {\\n  state.searchQuery = e.target.value;\\n  renderCatalogue();\\n});\\n\\ndocument.getElementById(\\\"catalogue-list\\\").addEventListener(\\\"click\\\", (e) => {\\n  const btn = e.target.closest(\\\".btn-detail\\\");\\n  if (!btn) return;\\n\\n  state.selectedClassId = btn.dataset.id;\\n  renderSelectedClass();\\n  document.getElementById(\\\"booking-section\\\").scrollIntoView({ behavior: \\\"smooth\\\" });\\n});\"\n}"
+}
