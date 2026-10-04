@@ -1,0 +1,43 @@
+{
+  "producer": "operator-diagnosed bounded local-model repair",
+  "before": {
+    "index.html": "845190fa1507096dd615d61acd851b5277ffb24488ef22fbebdf623b51f5a749",
+    "styles.css": "4aa2e748afbcee20abba1a1d86ac3ab1481064c22e810568ec72ee53afaadd08",
+    "app.js": "d3854e10ad6fb8d23b40d8e098e15a7908ebec0acca7f58bc88c01e951e842aa",
+    "DESIGN.md": "961b459a44c49c4b9891ec209bdcaa641abe08c361d32f58bc628e9cf1b4ec2d",
+    "REFERENCE.md": "61bf574a6300a4941ccc26e8dab0b9c1c889758f6313e0ed5c84bae94a875027",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/Calendar.svg": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+    "assets/icons/Check.svg": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+    "assets/icons/ChevronLeft.svg": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/GripVertical.svg": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/Plus.svg": "3d4f93d0e5a8eb932e4d1f0d71122d01917e7624439adc35dddcd5352d7a228f",
+    "assets/icons/Search.svg": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+    "assets/icons/X.svg": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+    "assets/icons/manifest.json": "8c535b19e80beb51a36f4941a8ab46680340fc26e3b5ae9dedc4ad9f23ba3ad7",
+    "assets/reference/avatar-1.png": "d228d0f6eb125355d7700a129698ae1b14094738df164f720e2b2fdce9ecc786",
+    "assets/reference/avatar-2.png": "2365ad110e070d796e93fae6a12cb09cd823e1ffa3c4484635d3e2700a1f59ee",
+    "assets/reference/badge-check.svg": "c4fbf2f1acf094cfbfd744e4f2b3c92072c406ce35240b441a944cc4e84fded0",
+    "assets/reference/bell.svg": "e769d07778a974e22327ca663bac379281768fc948e7ad7ec988207283307ebd",
+    "assets/reference/bookmark-check.svg": "4e695fdb27c44f532c36a3fcf6d64340959eae47ec1c606d5b4eb7674d8e955f",
+    "assets/reference/heart.svg": "16b5db71af67c7989163d3f0c695583af35b751972ced933fdd599bab62689ef",
+    "assets/reference/search.svg": "f1d736cf57b12b7784ac894db511028c451e0ce5bc40420e77ba995829cd3900",
+    "assets/reference/source.png": "1d2a52371386de1538cf631871229044a16a4d15d15f19d6bf10652b10b28eaa",
+    "assets/reference/user-round.svg": "64535953c7d421e4c3a5e788940fe45cf9113f2209849c6d676241d8c728a24d",
+    "assets/reference-manifest.json": "531f30a5290dba68368dd66848176a6f8828d94b80f92d9f764b8ffb61c83483",
+    "design/typography.json": "6f79dcc2a00eeb8da6ffcd88bf5cd875f75d8831af63f481e9c3039b29908011"
+  },
+  "failure": {
+    "name": "visual-review",
+    "files": [
+      "styles.css"
+    ],
+    "detail": "font-rendering: The predeclared local font file is never loaded. CSS declares Noto Sans KR but has no @font-face; Chromium reports isCustomFont=false and document.fonts has no web fonts. Implement the provided local variable font with @font-face using its exact asset path, CSS family, supported weight range and font-display. Do not use local() because that would bypass the supplied file. Preserve existing layout, type sizes, colors and content. This is only a font-loading correction, not a visual approval. PREDECLARED INTENT: {\r\n  \"asset\": \"assets/fonts/NotoSansKR.ttf\",\r\n  \"display\": \"swap\",\r\n  \"instructions\": \"Use @font-face with this local variable TTF, weight 100 900, and font-display swap. Apply Noto Sans KR to all visible Korean, Latin, numbers and form controls. This is a predeclared font integration experiment, not a claim of exact reference typography.\",\r\n  \"style\": \"normal\",\r\n  \"provenance\": {\r\n    \"sha256\": \"194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252\",\r\n    \"license\": \"assets/fonts/OFL.txt\",\r\n    \"source\": \"https://raw.githubusercontent.com/google/fonts/b38c5c93af322c45f633e17ac440ec1e6c94d489/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf\",\r\n    \"upstreamCommit\": \"b38c5c93af322c45f633e17ac440ec1e6c94d489\"\r\n  },\r\n  \"cssFamily\": \"Noto Sans KR\",\r\n  \"roles\": [\r\n    {\r\n      \"families\": [\r\n        \"Noto Sans KR\"\r\n      ],\r\n      \"selector\": \"body *\"\r\n    }\r\n  ],\r\n  \"weightRange\": \"100 900\"\r\n}\r\n"
+  }
+}

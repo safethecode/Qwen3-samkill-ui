@@ -1,0 +1,282 @@
+{
+  "case": "round-02",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "text-200-1440": 0,
+    "text-200-clipping-1440": 0,
+    "text-spacing-1440": 0,
+    "text-spacing-clipping-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "text-200-390": 165,
+    "text-200-clipping-390": 0,
+    "text-spacing-390": 0,
+    "text-spacing-clipping-390": 0,
+    "readable-320": 0,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0,
+    "text-200-320": 227,
+    "text-200-clipping-320": 0,
+    "text-spacing-320": 0,
+    "text-spacing-clipping-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "예시": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "마케팅": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Expert": 1,
+      "현재 재직: 스타트업 A": 1,
+      "사용자 중심 디자인과 데이터 기반 의사결정을 통해 복잡한 프로덕트를 직관적이고 아름다운 경험으로 전환합니다. Figma, 프로토타이핑 및 디자인 시스템 구축에 강점이 있습니다.": 1,
+      "상담비": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Certificate": 1,
+      "현재 재직: 플랫폼 B": 1,
+      "반응형 웹과 접근성을 고려한 견고한 UI 구현을 전문으로 합니다. React, TypeScript 기반의 컴포넌트 개발과 퍼포먼스 최적화에 대한 깊은 이해를 가지고 있습니다.": 1
+    },
+    "390": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "예시": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "마케팅": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Expert": 1,
+      "현재 재직: 스타트업 A": 1,
+      "사용자 중심 디자인과 데이터 기반 의사결정을 통해 복잡한 프로덕트를 직관적이고 아름다운 경험으로 전환합니다. Figma, 프로토타이핑 및 디자인 시스템 구축에 강점이 있습니다.": 1,
+      "상담비": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Certificate": 1,
+      "현재 재직: 플랫폼 B": 1,
+      "반응형 웹과 접근성을 고려한 견고한 UI 구현을 전문으로 합니다. React, TypeScript 기반의 컴포넌트 개발과 퍼포먼스 최적화에 대한 깊은 이해를 가지고 있습니다.": 1
+    },
+    "1440": {
+      "멘토 찾기": 1,
+      "멘토 검색": 1,
+      "예시": 1,
+      "전체": 1,
+      "디자인": 1,
+      "개발": 1,
+      "마케팅": 1,
+      "김서연": 1,
+      "프로덕트 디자이너": 1,
+      "Adobe Certified Expert": 1,
+      "현재 재직: 스타트업 A": 1,
+      "사용자 중심 디자인과 데이터 기반 의사결정을 통해 복잡한 프로덕트를 직관적이고 아름다운 경험으로 전환합니다. Figma, 프로토타이핑 및 디자인 시스템 구축에 강점이 있습니다.": 1,
+      "상담비": 2,
+      "박민준": 1,
+      "프론트엔드 개발자": 1,
+      "Google UX Design Certificate": 1,
+      "현재 재직: 플랫폼 B": 1,
+      "반응형 웹과 접근성을 고려한 견고한 UI 구현을 전문으로 합니다. React, TypeScript 기반의 컴포넌트 개발과 퍼포먼스 최적화에 대한 깊은 이해를 가지고 있습니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-390",
+      "status": "FAIL",
+      "detail": "Horizontal overflow under text-200. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: [{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":422,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":358,\"scrollWidth\":540,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"example-badge\",\"width\":65.53125,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":358,\"scrollWidth\":540,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"}]. Observed geometry: {\"mode\":\"text-200\",\"viewport\":390,\"scrollWidth\":556,\"overflowPx\":165,\"flexPressure\":[{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":422,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":358,\"scrollWidth\":540,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"example-badge\",\"width\":65.53125,"
+    },
+    {
+      "name": "text-200-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-320",
+      "status": "FAIL",
+      "detail": "Horizontal overflow under text-200. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: [{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":422,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":288,\"scrollWidth\":532,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"example-badge\",\"width\":65.53125,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":288,\"scrollWidth\":532,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"}]. Observed geometry: {\"mode\":\"text-200\",\"viewport\":320,\"scrollWidth\":548,\"overflowPx\":227,\"flexPressure\":[{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":422,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"FORM\",\"id\":\"search-form\",\"class\":\"search-bar\",\"width\":288,\"scrollWidth\":532,\"display\":\"flex\",\"gap\":\"8px\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"example-badge\",\"width\":65.53125,"
+    },
+    {
+      "name": "text-200-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 35,
+  "total": 37
+}

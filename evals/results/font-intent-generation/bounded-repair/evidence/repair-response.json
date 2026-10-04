@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 11068,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 46353,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3580,
+  "prompt_eval_duration": 41298144000,
+  "load_duration": 1526000,
+  "eval_count": 154,
+  "eval_duration": 4729339000,
+  "total_duration": 46334129600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"button, input, select, textarea {\\n  font: inherit;\\n}\\n\\n:root {\",\n      \"newString\": \"button, input, select, textarea {\\n  font: inherit;\\n}\\n\\n@font-face {\\n  font-family: 'Noto Sans KR';\\n  src: url('assets/fonts/NotoSansKR.ttf') format('truetype');\\n  font-weight: 100 900;\\n  font-style: normal;\\n  font-display: swap;\\n}\\n\\n:root {\"\n    }\n  ]\n}"
+}

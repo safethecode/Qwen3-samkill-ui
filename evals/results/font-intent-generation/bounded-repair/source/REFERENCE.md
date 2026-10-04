@@ -1,0 +1,1 @@
+Round02: profile head and description belong to one card; text should not be reduced to fit. White on lavender hierarchy, restrained status colors.

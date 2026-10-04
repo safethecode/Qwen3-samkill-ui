@@ -1,0 +1,16 @@
+{
+  "binding": "5ea61faa6577c396249602c67fd6e0ff93ead5b5f8baac4c53e09c6496881de8",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 141525,
+  "done_reason": "stop",
+  "load_duration": 3616700,
+  "prompt_eval_count": 9949,
+  "prompt_eval_duration": 108609616000,
+  "eval_count": 602,
+  "eval_duration": 32647194000,
+  "total_duration": 141515813100,
+  "content": "{\n  \"code\": \"/* form focus and input styling */\\n#search:focus-visible {\\n  outline: none;\\n}\\n\\n#search-form:focus-within {\\n  box-shadow: 0 0 0 2px var(--color-primary);\\n}\\n\\n/* disabled state for example controls */\\n[disabled] {\\n  cursor: not-allowed;\\n  user-select: none;\\n}\\n\\n.chip:disabled {\\n  background-color: #f9fafb;\\n  color: var(--color-text-muted);\\n}\\n\\n/* hidden utility */\\n[hidden] {\\n  display: none !important;\\n}\\n\\n/* keyboard focus for interactive elements */\\na:focus-visible,\\nbutton:focus-visible,\\ninput:focus-visible,\\n[role=\\\"tab\\\"]:focus-visible {\\n  outline: 2px solid var(--color-primary);\\n  outline-offset: 2px;\\n}\\n\\n/* reduced motion preference */\\n@media (prefers-reduced-motion: reduce) {\\n  *,\\n  *::before,\\n  *::after {\\n    animation-duration: 0.01ms !important;\\n    animation-iteration-count: 1 !important;\\n    transition-duration: 0.01ms !important;\\n    scroll-behavior: auto !important;\\n  }\\n}\\n\\n/* mobile 390px adaptation */\\n@media (max-width: 390px) {\\n  #mentor-discovery-view {\\n    padding: var(--space-md);\\n  }\\n\\n  .mentor-card {\\n    padding: var(--space-sm) var(--space-md);\\n  }\\n\\n  .mentor-name {\\n    font-size: 15px;\\n  }\\n\\n  .mentor-description {\\n    font-size: 13px;\\n    line-height: 1.5;\\n  }\\n\\n  #category-chips {\\n    gap: 6px;\\n  }\\n}\\n\\n/* mobile 320px adaptation */\\n@media (max-width: 320px) {\\n  #page-title {\\n    font-size: 20px;\\n  }\\n\\n  .search-bar {\\n    padding: var(--space-xs) var(--space-sm);\\n  }\\n\\n  .chip {\\n    font-size: 12px;\\n    padding: 4px 10px;\\n  }\\n\\n  .mentor-card {\\n    gap: var(--space-sm);\\n  }\\n\\n  .action-row {\\n    flex-direction: row;\\n    align-items: center;\\n  }\\n\\n  .fee-label {\\n    font-size: 12px;\\n  }\\n}\\n\"\n}"
+}

@@ -1,0 +1,351 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 548,
+    "overflowPx": 227,
+    "flexPressure": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "width": 422,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "0%",
+        "parent": {
+          "tag": "FORM",
+          "id": "search-form",
+          "class": "search-bar",
+          "width": 288,
+          "scrollWidth": 532,
+          "display": "flex",
+          "gap": "8px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-badge",
+        "width": 65.53125,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "FORM",
+          "id": "search-form",
+          "class": "search-bar",
+          "width": 288,
+          "scrollWidth": 532,
+          "display": "flex",
+          "gap": "8px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      }
+    ],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "text": "",
+        "width": 422,
+        "scrollWidth": 422,
+        "height": 45,
+        "scrollHeight": 45,
+        "overflow": "clip"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-badge",
+        "text": "예시",
+        "width": 64,
+        "scrollWidth": 64,
+        "height": 32,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "MAIN",
+        "id": "mentor-discovery-view",
+        "class": "view-container",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시\n      ",
+        "width": 320,
+        "scrollWidth": 548,
+        "height": 1732,
+        "scrollHeight": 1732,
+        "overflow": "visible"
+      },
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "page-header",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시",
+        "width": 288,
+        "scrollWidth": 532,
+        "height": 121,
+        "scrollHeight": 121,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H1",
+        "id": "page-title",
+        "class": "",
+        "text": "멘토 찾기",
+        "width": 288,
+        "scrollWidth": 288,
+        "height": 52,
+        "scrollHeight": 55,
+        "overflow": "visible"
+      },
+      {
+        "tag": "FORM",
+        "id": "search-form",
+        "class": "search-bar",
+        "text": "멘토 검색\n                \n                예시",
+        "width": 288,
+        "scrollWidth": 532,
+        "height": 53,
+        "scrollHeight": 53,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 111,
+        "height": 1,
+        "scrollHeight": 42,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-badge",
+        "text": "예시",
+        "width": 64,
+        "scrollWidth": 64,
+        "height": 32,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "김서연",
+        "width": 192,
+        "scrollWidth": 192,
+        "height": 39,
+        "scrollHeight": 41,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "박민준",
+        "width": 192,
+        "scrollWidth": 192,
+        "height": 39,
+        "scrollHeight": 41,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "width": 211,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "0%",
+        "parent": {
+          "tag": "FORM",
+          "id": "search-form",
+          "class": "search-bar",
+          "width": 288,
+          "scrollWidth": 298,
+          "display": "flex",
+          "gap": "8px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-badge",
+        "width": 43.125,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "FORM",
+          "id": "search-form",
+          "class": "search-bar",
+          "width": 288,
+          "scrollWidth": 298,
+          "display": "flex",
+          "gap": "8px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip active",
+        "width": 62.59375,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "NAV",
+          "id": "category-chips",
+          "class": "chip-list",
+          "width": 288,
+          "scrollWidth": 309,
+          "display": "flex",
+          "gap": "6px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip",
+        "width": 82.890625,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "NAV",
+          "id": "category-chips",
+          "class": "chip-list",
+          "width": 288,
+          "scrollWidth": 309,
+          "display": "flex",
+          "gap": "6px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip",
+        "width": 62.59375,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "NAV",
+          "id": "category-chips",
+          "class": "chip-list",
+          "width": 288,
+          "scrollWidth": 309,
+          "display": "flex",
+          "gap": "6px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip",
+        "width": 82.890625,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "NAV",
+          "id": "category-chips",
+          "class": "chip-list",
+          "width": 288,
+          "scrollWidth": 309,
+          "display": "flex",
+          "gap": "6px"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      }
+    ],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip",
+        "text": "마케팅",
+        "width": 81,
+        "scrollWidth": 81,
+        "height": 41,
+        "scrollHeight": 41,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "page-header",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시",
+        "width": 288,
+        "scrollWidth": 298,
+        "height": 81,
+        "scrollHeight": 81,
+        "overflow": "visible"
+      },
+      {
+        "tag": "FORM",
+        "id": "search-form",
+        "class": "search-bar",
+        "text": "멘토 검색\n                \n                예시",
+        "width": 288,
+        "scrollWidth": 298,
+        "height": 35,
+        "scrollHeight": 35,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 66,
+        "height": 1,
+        "scrollHeight": 21,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "NAV",
+        "id": "category-chips",
+        "class": "chip-list",
+        "text": "전체\n            디자인\n            개발\n            마케팅",
+        "width": 288,
+        "scrollWidth": 309,
+        "height": 59,
+        "scrollHeight": 59,
+        "overflow": "auto"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

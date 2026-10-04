@@ -1,0 +1,22 @@
+{
+  "asset": "assets/fonts/NotoSansKR.ttf",
+  "display": "swap",
+  "instructions": "Use @font-face with this local variable TTF, weight 100 900, and font-display swap. Apply Noto Sans KR to all visible Korean, Latin, numbers and form controls. This is a predeclared font integration experiment, not a claim of exact reference typography.",
+  "style": "normal",
+  "provenance": {
+    "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "license": "assets/fonts/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/b38c5c93af322c45f633e17ac440ec1e6c94d489/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
+    "upstreamCommit": "b38c5c93af322c45f633e17ac440ec1e6c94d489"
+  },
+  "cssFamily": "Noto Sans KR",
+  "roles": [
+    {
+      "families": [
+        "Noto Sans KR"
+      ],
+      "selector": "body *"
+    }
+  ],
+  "weightRange": "100 900"
+}

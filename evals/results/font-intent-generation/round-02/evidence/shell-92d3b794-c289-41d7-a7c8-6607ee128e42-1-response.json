@@ -1,0 +1,16 @@
+{
+  "binding": "5ea61faa6577c396249602c67fd6e0ff93ead5b5f8baac4c53e09c6496881de8",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 106323,
+  "done_reason": "stop",
+  "load_duration": 16002503700,
+  "prompt_eval_count": 6969,
+  "prompt_eval_duration": 73014781000,
+  "eval_count": 392,
+  "eval_duration": 17231353000,
+  "total_duration": 106306352000,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>멘토 찾기</title>\\n    <link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n    <main id=\\\"mentor-discovery-view\\\" class=\\\"view-container\\\">\\n        <header class=\\\"page-header\\\">\\n            <h1 id=\\\"page-title\\\">멘토 찾기</h1>\\n            <form id=\\\"search-form\\\" role=\\\"search\\\" class=\\\"search-bar\\\">\\n                <img src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\" class=\\\"search-icon\\\">\\n                <input type=\\\"search\\\" id=\\\"search\\\" name=\\\"search\\\" placeholder=\\\"멘토 이름 또는 전문 분야 검색\\\" disabled aria-label=\\\"멘토 검색\\\">\\n                <span class=\\\"example-badge\\\">예시</span>\\n            </form>\\n        </header>\\n\\n        <nav id=\\\"category-chips\\\" class=\\\"chip-list\\\" aria-label=\\\"전문 분야 필터\\\">\\n            <button type=\\\"button\\\" class=\\\"chip active\\\" disabled>전체</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>디자인</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>개발</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>마케팅</button>\\n        </nav>\\n\\n        <section id=\\\"mentor-list\\\" class=\\\"mentor-grid\\\">\\n            <!-- Rendered by app.js -->\\n        </section>\\n    </main>\\n\\n    <script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}
