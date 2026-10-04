@@ -1,0 +1,19 @@
+{
+  "node": "v24.19.0",
+  "undici": "7.29.0",
+  "results": [
+    {
+      "name": "fetch",
+      "elapsedMs": 305043,
+      "error": "fetch failed",
+      "cause": "UND_ERR_HEADERS_TIMEOUT"
+    },
+    {
+      "name": "inferenceFetch",
+      "elapsedMs": 310029,
+      "result": {
+        "complete": true
+      }
+    }
+  ]
+}
