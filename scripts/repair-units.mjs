@@ -9,7 +9,7 @@ function sourceUnits(path, source, detail) {
     return result;
   };
   const width = Number(detail.match(/(?:text-(?:200|spacing)-(?:clipping-)?|contract-stack-)(\d+)/)?.[1]);
-  if (path === 'styles.css' && width && /automatic grid|contract-stack/i.test(detail)) {
+  if (path === 'styles.css') {
     const rules = [];
     try {
       postcss.parse(source).walkRules(rule => {
@@ -22,7 +22,7 @@ function sourceUnits(path, source, detail) {
         let priority = 0;
         for (let parent = rule.parent; parent?.type === 'atrule'; parent = parent.parent) {
           scope.unshift(`@${parent.name} ${parent.params}`);
-          if (parent.name !== 'media') continue;
+          if (parent.name !== 'media' || !width) continue;
           for (const match of parent.params.matchAll(/(min|max)-width\s*:\s*(\d+(?:\.\d+)?)px/g)) {
             const boundary = Number(match[2]);
             const active = match[1] === 'max' ? width <= boundary : width >= boundary;

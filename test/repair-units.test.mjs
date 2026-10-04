@@ -2,6 +2,21 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { selectRepairUnit, validateUnitPatches } from '../scripts/repair-units.mjs';
 import { parse } from 'acorn';
+import postcss from 'postcss';
+
+test('ordinary typography repairs never cut a declaration at the source window boundary', () => {
+  const css = '.spacer {padding:0;}\n'.repeat(297) + '\nbutton {font-family:inherit;cursor:pointer;}\n#guest {font-size:1rem;}';
+  const files = { 'styles.css': css };
+  const first = selectRepairUnit(files, ['styles.css'], 'button font-family typography');
+  assert.equal(first.boundary, 'complete-css-rule');
+  assert.equal(first.selector, 'button');
+  assert.equal(first.content, 'button {font-family:inherit;cursor:pointer;}');
+  for (let attempt = 0; attempt < first.unitCount; attempt++) {
+    const unit = selectRepairUnit(files, ['styles.css'], 'button font-family typography', attempt);
+    assert.equal(css.slice(unit.offset, unit.offset + unit.content.length), unit.content);
+    assert.doesNotThrow(() => postcss.parse(unit.content));
+  }
+});
 
 test('reflow repair selects a complete active narrow grid rule with its media context', () => {
   const css = '.app-layout {display:grid;grid-template-columns:280px 1fr;}\n@media (max-width:1440px){.app-layout {grid-template-columns:240px 1fr;}}\n@media (max-width:390px){.app-layout {grid-template-columns:1fr;padding:16px;}}';
