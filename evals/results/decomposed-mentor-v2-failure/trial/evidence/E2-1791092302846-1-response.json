@@ -1,0 +1,33 @@
+{
+  "binding": "1a4acd03b9d4c87960a749b8679546e0b48786a3c7faca88a9cca654b0f2d44e",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 28482,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:38:22.8373826Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<div data-ui-unit=\\\"E2\\\">\\n  <label for=\\\"search\\\" class=\\\"search-label\\\">멘토 검색</label>\\n  <div class=\\\"search-surface\\\">\\n    <img src=\\\"assets/reference/search.svg\\\" alt=\\\"\\\" class=\\\"search-icon\\\" />\\n    <input type=\\\"text\\\" id=\\\"search\\\" placeholder=\\\"멘토 또는 회사를 검색하세요\\\" disabled />\\n  </div>\\n</div>\",\n  \"css\": \".search-label {\\n  display: block;\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #283548;\\n  margin-bottom: 8px;\\n}\\n\\n.search-surface {\\n  display: flex;\\n  align-items: center;\\n  background-color: #ffffff;\\n  border-radius: 12px;\\n  min-height: 46px;\\n  padding: 0 16px;\\n}\\n\\n.search-icon {\\n  width: 20px;\\n  height: 20px;\\n  flex-shrink: 0;\\n  opacity: 0.5;\\n}\\n\\ninput#search {\\n  flex: 1;\\n  min-width: 0;\\n  background: transparent;\\n  border: none;\\n  padding: 0;\\n  margin-left: 12px;\\n  color: #283548;\\n  font-family: inherit;\\n  font-size: 14px;\\n}\\n\\ninput#search::placeholder {\\n  color: #9aa3b0;\\n}\\n\\ninput#search:focus-visible {\\n  outline: none;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 28464309700,
+  "load_duration": 4639600,
+  "prompt_eval_count": 1445,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 15979430000,
+  "eval_count": 379,
+  "eval_duration": 12398984000
+}

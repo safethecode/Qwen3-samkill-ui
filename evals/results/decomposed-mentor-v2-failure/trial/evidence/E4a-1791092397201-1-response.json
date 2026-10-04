@@ -1,0 +1,33 @@
+{
+  "binding": "1a4acd03b9d4c87960a749b8679546e0b48786a3c7faca88a9cca654b0f2d44e",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 62182,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:39:57.2007383Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"html\": \"<div data-ui-unit=\\\"E4a\\\" class=\\\"e4a-card\\\">\\n    <div class=\\\"e4a-header\\\">\\n        <div class=\\\"e4a-avatar-group\\\">\\n            <img src=\\\"assets/reference/avatar-1.png\\\" alt=\\\"김서연 프로필 사진\\\" class=\\\"e4a-avatar\\\">\\n            <div class=\\\"e4a-info\\\">\\n                <h3 class=\\\"e4a-name\\\">김서연</h3>\\n                <div class=\\\"e4a-meta\\\">\\n                    <img src=\\\"assets/reference/bookmark-check.svg\\\" alt=\\\"현직 표시\\\" class=\\\"e4a-icon-bookmark\\\">\\n                    <span class=\\\"e4a-badge\\\">현직</span>\\n                    <span class=\\\"e4a-divider\\\"></span>\\n                    <span class=\\\"e4a-role\\\">스타트업 A</span>\\n                </div>\\n            </div>\\n        </div>\\n        <button type=\\\"button\\\" disabled aria-label=\\\"김서연 찜한 상태 예시\\\" class=\\\"e4a-favorite\\\">\\n            <img src=\\\"assets/reference/heart.svg\\\" alt=\\\"찜하기\\\" class=\\\"e4a-icon-heart\\\">\\n        </button>\\n    </div>\\n    <div class=\\\"e4a-body\\\">\\n        <label for=\\\"e4a-desc\\\">소개글</label>\\n        <textarea id=\\\"e4a-desc\\\" rows=\\\"3\\\" disabled>실무 중심의 멘토링을 통해 성장하는 개발자를 돕고 있습니다. 스타트업 환경에서의 프로덕트 개발 경험을 공유합니다.</textarea>\\n    </div>\\n</div>\",\n\"css\": \".e4a-card {\\n    background: var(--surface, #fff);\\n    border-radius: 14px;\\n    padding: 16px;\\n    min-width: 0;\\n    display: flex;\\n    flex-direction: column;\\n}\\n\\n.e4a-header {\\n    display: flex;\\n    align-items: flex-start;\\n    justify-content: space-between;\\n    min-width: 0;\\n    position: relative;\\n}\\n\\n.e4a-avatar-group {\\n    display: flex;\\n    align-items: center;\\n    min-width: 0;\\n    flex: 1;\\n}\\n\\n.e4a-avatar {\\n    width: 48px;\\n    height: 48px;\\n    border-radius: 50%;\\n    object-fit: cover;\\n    flex-shrink: 0;\\n}\\n\\n.e4a-info {\\n    display: flex;\\n    flex-direction: column;\\n    margin-left: 8px;\\n    min-width: 0;\\n}\\n\\n.e4a-name {\\n    font-family: \\\"Noto Sans KR\\\", sans-serif;\\n    font-size: 18px;\\n    line-height: 24px;\\n    font-weight: 700;\\n    color: var(--ink, #283548);\\n    margin: 0;\\n    padding: 0;\\n    white-space: nowrap;\\n}\\n\\n.e4a-meta {\\n    display: flex;\\n    align-items: center;\\n    margin-top: 2px;\\n    font-size: 14px;\\n    line-height: 1.5;\\n    color: var(--muted, #566273);\\n    min-width: 0;\\n}\\n\\n.e4a-icon-bookmark {\\n    width: 14px;\\n    height: 14px;\\n    flex-shrink: 0;\\n    margin-right: 4px;\\n}\\n\\n.e4a-badge {\\n    background-color: #e6f0ff;\\n    color: var(--blue, #365bcc);\\n    font-size: 12px;\\n    line-height: 20px;\\n    padding: 1px 6px;\\n    border-radius: 6px;\\n    white-space: nowrap;\\n}\\n\\n.e4a-divider {\\n    width: 1px;\\n    height: 14px;\\n    background-color: #dce1e8;\\n    margin: 0 8px;\\n    display: inline-block;\\n    vertical-align: middle;\\n}\\n\\n.e4a-role {\\n    white-space: nowrap;\\n}\\n\\n.e4a-favorite {\\n    background: transparent;\\n    border: none;\\n    padding: 0;\\n    margin-left: 8px;\\n    cursor: pointer;\\n    flex-shrink: 0;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n    margin-top: -2px;\\n}\\n\\n.e4a-icon-heart {\\n    width: 24px;\\n    height: 24px;\\n    fill: var(--red, #e85260);\\n}\\n\\n.e4a-body {\\n    margin-top: 16px;\\n}\\n\\n.e4a-body label {\\n    display: block;\\n    font-size: 14px;\\n    color: var(--muted, #566273);\\n    margin-bottom: 6px;\\n}\\n\\n#e4a-desc {\\n    width: 100%;\\n    resize: none;\\n    border: 1px solid transparent;\\n    background: transparent;\\n    color: var(--ink, #283548);\\n    padding: 0;\\n    font-family: \\\"Noto Sans KR\\\", sans-serif;\\n    font-size: 14px;\\n    line-height: 1.57;\\n    margin: 0;\\n}\\n\\n@media (prefers-reduced-motion: reduce) {\\n    .e4a-card, .e4a-icon-heart {\\n        transition: none !important;\\n        animation: none !important;\\n    }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 62173011000,
+  "load_duration": 3159700,
+  "prompt_eval_count": 1528,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 16534047999,
+  "eval_count": 1322,
+  "eval_duration": 45554703000
+}

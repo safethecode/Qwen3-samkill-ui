@@ -1,0 +1,33 @@
+{
+  "binding": "1a4acd03b9d4c87960a749b8679546e0b48786a3c7faca88a9cca654b0f2d44e",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 32165,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:38:55.0156584Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<div class=\\\"e3-wrapper\\\" data-ui-unit=\\\"E3\\\">\\n  <fieldset class=\\\"e3-group\\\">\\n    <legend class=\\\"e3-legend\\\">상담 분야</legend>\\n    <div class=\\\"e3-chips\\\">\\n      <button type=\\\"button\\\" class=\\\"e3-chip e3-chip--active\\\" disabled aria-pressed=\\\"true\\\">\\n        전체\\n      </button>\\n      <button type=\\\"button\\\" class=\\\"e3-chip\\\" disabled aria-pressed=\\\"false\\\">\\n        커리어\\n      </button>\\n      <button type=\\\"button\\\" class=\\\"e3-chip\\\" disabled aria-pressed=\\\"false\\\">\\n        자소서\\n      </button>\\n      <button type=\\\"button\\\" class=\\\"e3-chip\\\" disabled aria-pressed=\\\"false\\\">\\n        면접\\n      </button>\\n    </div>\\n  </fieldset>\\n</div>\",\n  \"css\": \".e3-wrapper {\\n  --ink: #283548;\\n  --muted: #566273;\\n  --surface: #fff;\\n}\\n\\n.e3-group {\\n  border: none;\\n  padding: 0;\\n  margin: 0;\\n  min-height: 36px;\\n}\\n\\n.e3-legend {\\n  position: absolute;\\n  width: 1px;\\n  height: 1px;\\n  padding: 0;\\n  margin: -1px;\\n  overflow: hidden;\\n  clip: rect(0, 0, 0, 0);\\n  white-space: nowrap;\\n  border: 0;\\n}\\n\\n.e3-chips {\\n  display: flex;\\n  gap: 4px;\\n  flex-wrap: wrap;\\n  padding: 12px 0;\\n}\\n\\n.e3-chip {\\n  font: 500 14px/1.57 \\\"Noto Sans KR\\\", sans-serif;\\n  background: var(--surface);\\n  color: var(--muted);\\n  border-radius: 18px;\\n  padding: 0 12px;\\n  min-height: 36px;\\n  cursor: default;\\n  white-space: nowrap;\\n}\\n\\n.e3-chip--active {\\n  background: var(--ink);\\n  color: var(--surface);\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 32154237100,
+  "load_duration": 3079100,
+  "prompt_eval_count": 1409,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 15168049000,
+  "eval_count": 535,
+  "eval_duration": 16906762999
+}
