@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 12992,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 55016,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3854,
+  "prompt_eval_duration": 44755647000,
+  "load_duration": 3669600,
+  "eval_count": 283,
+  "eval_duration": 10045331000,
+  "total_duration": 55001844700,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".btn-detail {\\n  width: 100%;\\n  padding: var(--space-sm) var(--space-md);\\n  background-color: transparent;\\n  border: 1px solid var(--color-terracotta);\\n  color: var(--color-terracotta);\\n  font-family: var(--font-body);\\n  font-size: 14px;\\n  font-weight: 600;\\n  border-radius: var(--radius-md);\\n  cursor: pointer;\\n  transition: background-color 0.2s ease;\\n}\",\n      \"newString\": \".btn-detail {\\n  width: 100%;\\n  padding: var(--space-sm) var(--space-md);\\n  background-color: transparent;\\n  border: 1px solid var(--color-terracotta);\\n  color: var(--color-terracotta);\\n  font-family: var(--font-body);\\n  font-size: 14px;\\n  font-weight: 600;\\n  border-radius: var(--radius-md);\\n  cursor: pointer;\\n  transition: none;\\n}\"\n    }\n  ]\n}"
+}

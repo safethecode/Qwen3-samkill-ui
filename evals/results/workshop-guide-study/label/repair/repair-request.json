@@ -1,0 +1,10 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "index.html",
+    "offset": 0,
+    "count": 1
+  },
+  "inputCharacters": 16326,
+  "maxOutputTokens": 2048
+}

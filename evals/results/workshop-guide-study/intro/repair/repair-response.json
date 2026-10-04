@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "index.html",
+    "offset": 0,
+    "count": 1
+  },
+  "inputCharacters": 16440,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 49985,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 4148,
+  "prompt_eval_duration": 46419308000,
+  "load_duration": 4382500,
+  "eval_count": 100,
+  "eval_duration": 3346427000,
+  "total_duration": 49973098100,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"index.html\",\n      \"oldString\": \"<h2>이번 주, 손으로 만드는 시간</h2>\\n<p> neighbourhood workshop for adults</p>\",\n      \"newString\": \"<h2>내 손으로 만드는 작은 즐거움</h2>\\n<p>소그룹 공예 클래스를 둘러보고 원하는 시간에 예약하세요.</p>\"\n    }\n  ]\n}"
+}

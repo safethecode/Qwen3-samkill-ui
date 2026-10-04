@@ -1,0 +1,415 @@
+{
+  "case": "workshop",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-1440.json",
+      "category": "layout",
+      "id": "9d7d85864311a56eec34d0fe95d9a735a5fdee39b4bfc7f6de33f5f9bcbdf220",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-390.json",
+      "category": "layout",
+      "id": "b18357cba246183bd83b94cf8b2494fe292b589f6cc967915a054b406d0c8358",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing",
+      "evidence": "layout-contract-320.json",
+      "category": "layout",
+      "id": "fbeeda72ad2b9d3e299c9421395b1346fcc508c193cb308e4453247cc74b6e82",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "text-200-1440": 0,
+    "text-200-clipping-1440": 0,
+    "text-spacing-1440": 0,
+    "text-spacing-clipping-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "text-200-390": 0,
+    "text-200-clipping-390": 0,
+    "text-spacing-390": 0,
+    "text-spacing-clipping-390": 0,
+    "readable-320": 0,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0,
+    "text-200-320": 0,
+    "text-200-clipping-320": 0,
+    "text-spacing-320": 0,
+    "text-spacing-clipping-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "neighbourhood workshop for adults": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "내 손으로 만드는 첫 번째 찻잔. 성형부터 유약 발림까지 기본을 배워보세요.": 1,
+      "90분": 1,
+      "정원 6명": 1,
+      "55,000원": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "소형 카드와 명함을 수납할 수 있는 심플한 지갑을 제작합니다.": 1,
+      "120분": 1,
+      "정원 5명": 1,
+      "48,000원": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "원목을 다듬고 손질하여 식탁 위에 놓을 예쁜 트레이를 완성합니다.": 1,
+      "150분": 1,
+      "정원 4명": 1,
+      "62,000원": 1,
+      "이 데모는 브라우저에만 데이터를 저장합니다. 실제 결제는 진행되지 않습니다.": 1
+    },
+    "390": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "neighbourhood workshop for adults": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "내 손으로 만드는 첫 번째 찻잔. 성형부터 유약 발림까지 기본을 배워보세요.": 1,
+      "90분": 1,
+      "정원 6명": 1,
+      "55,000원": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "소형 카드와 명함을 수납할 수 있는 심플한 지갑을 제작합니다.": 1,
+      "120분": 1,
+      "정원 5명": 1,
+      "48,000원": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "원목을 다듬고 손질하여 식탁 위에 놓을 예쁜 트레이를 완성합니다.": 1,
+      "150분": 1,
+      "정원 4명": 1,
+      "62,000원": 1,
+      "이 데모는 브라우저에만 데이터를 저장합니다. 실제 결제는 진행되지 않습니다.": 1
+    },
+    "1440": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "neighbourhood workshop for adults": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기": 1,
+      "내 손으로 만드는 첫 번째 찻잔. 성형부터 유약 발림까지 기본을 배워보세요.": 1,
+      "90분": 1,
+      "정원 6명": 1,
+      "55,000원": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽": 1,
+      "소형 카드와 명함을 수납할 수 있는 심플한 지갑을 제작합니다.": 1,
+      "120분": 1,
+      "정원 5명": 1,
+      "48,000원": 1,
+      "나무 트레이": 1,
+      "우드": 1,
+      "원목을 다듬고 손질하여 식탁 위에 놓을 예쁜 트레이를 완성합니다.": 1,
+      "150분": 1,
+      "정원 4명": 1,
+      "62,000원": 1,
+      "이 데모는 브라우저에만 데이터를 저장합니다. 실제 결제는 진행되지 않습니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "booking-validation",
+      "status": "PASS"
+    },
+    {
+      "name": "booking-persist-cancel",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: '\"Noto Sans KR\", sans-serif',\n+       disabled: false,\n+       id: '',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: null,\n+       ratio: 2.3550032622839194,\n+       status: 'FAIL',\n+       tag: 'BUTTON',\n+       text: '상세',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n    typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "text",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "catalogue-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "booking-section",
+            "visible": false
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 36,
+  "total": 40
+}

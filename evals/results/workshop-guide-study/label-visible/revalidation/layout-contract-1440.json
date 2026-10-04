@@ -1,0 +1,10 @@
+{
+  "results": [],
+  "issues": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Reference layout ownership and grouping contract is missing"
+    }
+  ],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}
