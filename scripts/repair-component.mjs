@@ -1,3 +1,4 @@
+import { inferenceFetch, inferenceTimeout } from './inference-http.mjs';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -36,7 +37,7 @@ export async function repairComponent(target, evidence, id, before, failure, opt
   await mkdir(evidence, { recursive: true });
   await writeFile(resolve(evidence, 'request.json'), JSON.stringify({ request, sourceHashes, harnessHashes }, null, 2), { flag: 'wx' });
   const started = Date.now();
-  const response = await (options.fetcher || fetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(300000) });
+  const response = await (options.fetcher || inferenceFetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(inferenceTimeout()) });
   if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
   const raw = await response.json();
   await writeFile(resolve(evidence, 'response.json'), JSON.stringify({ elapsedMs: Date.now() - started, ...raw }, null, 2));

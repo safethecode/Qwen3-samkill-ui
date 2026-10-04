@@ -1,3 +1,4 @@
+import { inferenceFetch, inferenceTimeout } from './inference-http.mjs';
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -24,14 +25,15 @@ export async function generateComponents(target, evidence, options = {}) {
   const guideSources = Object.fromEntries(Object.entries(guideContexts).map(([id, context]) => [id, context.sources]));
   const inputs = await sourceBinding(target);
   const harness = await harnessBinding();
+  const requestTimeoutMs = inferenceTimeout();
   const settings = { model: process.env.QWEN_GENERATE_MODEL || 'qwen3-coder:30b', think: false, options: { num_ctx: 16384, ...samplingOptions(), ...inferenceOptions(), num_predict: 2048 } };
-  const binding = createHash('sha256').update(JSON.stringify({ plan, typography, contract, reference, guideSources, inputs, harness, settings })).digest('hex');
+  const binding = createHash('sha256').update(JSON.stringify({ plan, typography, contract, reference, guideSources, inputs, harness, settings, requestTimeoutMs })).digest('hex');
   await mkdir(evidence, { recursive: true });
   const checkpoint = resolve(evidence, 'component-checkpoint.json');
   const saved = await readFile(checkpoint, 'utf8').then(JSON.parse, error => { if (error.code === 'ENOENT') return null; throw error; });
   if (saved && (!options.resume || saved.binding !== binding)) throw new Error('Component checkpoint does not match current inputs or resume was not requested');
   const completed = saved?.completed || {};
-  await writeFile(resolve(evidence, 'inputs.json'), JSON.stringify({ binding, settings, inputs, guideSources, harnessHashes: harness }, null, 2));
+  await writeFile(resolve(evidence, 'inputs.json'), JSON.stringify({ binding, settings, requestTimeoutMs, inputs, guideSources, harnessHashes: harness }, null, 2));
   for (const element of plan.elements) {
     if (completed[element.id]) { validateComponent(element, completed[element.id]); continue; }
     let previousError = '';
@@ -51,7 +53,7 @@ export async function generateComponents(target, evidence, options = {}) {
         } else request.messages[1].content += `\nFINAL ELEMENT BOUNDARY\n${element.prompt}`;
         request.messages[0].content += ' Never use + or ~ selector combinators, including between descendants inside the component. For spacing between repeated groups, use a parent gap or :not(:first-child) instead. The validator rejects all sibling combinators, not only selectors that escape the root.';
         request.messages[1].content = `APPLICABLE SOURCE GUIDES\n${guideContexts[element.id].text}\n\n${request.messages[1].content}`;
-        const response = await (options.fetcher || fetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(300000) });
+        const response = await (options.fetcher || inferenceFetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(requestTimeoutMs) });
         if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
         const result = await response.json();
         await writeFile(resolve(evidence, `${element.id}-${Date.now()}-${attempt}-response.json`), JSON.stringify({ binding, settings, elapsedMs: Date.now() - started, ...result }, null, 2));
@@ -67,7 +69,7 @@ export async function generateComponents(target, evidence, options = {}) {
         break;
       } catch (error) {
         previousError = error.name === 'TimeoutError' ? 'Timed out; return a smaller complete component.' : error.message;
-        await writeFile(resolve(evidence, `${element.id}-${Date.now()}-${attempt}-error.json`), JSON.stringify({ binding, elapsedMs: Date.now() - started, error: previousError }, null, 2));
+        await writeFile(resolve(evidence, `${element.id}-${Date.now()}-${attempt}-error.json`), JSON.stringify({ binding, elapsedMs: Date.now() - started, error: previousError, errorName: error.name, causeCode: error.cause?.code ?? error.code }, null, 2));
         if (attempt === 2) throw error;
       }
     }
@@ -79,7 +81,7 @@ export async function generateComponents(target, evidence, options = {}) {
   await writeFile(resolve(target, 'app.js'), 'void 0;\n', { flag: 'wx' });
   await writeFile(resolve(target, 'index.html'), document(assembled.html), { flag: 'wx' });
   for (const [id, html] of Object.entries(assembled.samples)) await writeFile(resolve(target, `sample-${id}.html`), document(html), { flag: 'wx' });
-  await writeFile(resolve(evidence, 'generation.json'), JSON.stringify({ status: 'UNVERIFIED', binding, settings, sourceHashes: await sourceBinding(target), harnessHashes: harness, fixedMarkupElements: plan.elements.filter(element => element.html !== undefined).map(element => element.id), hostAssistance: 'Supplied shared CSS, optional fixed semantic markup, hash-verified font loader, selector scoping, static templates and deterministic assembly. Scoped element outputs are reused unchanged in samples. Raw model responses are retained. No functional or visual approval.' }, null, 2));
+  await writeFile(resolve(evidence, 'generation.json'), JSON.stringify({ status: 'UNVERIFIED', binding, settings, requestTimeoutMs, sourceHashes: await sourceBinding(target), harnessHashes: harness, fixedMarkupElements: plan.elements.filter(element => element.html !== undefined).map(element => element.id), hostAssistance: 'Supplied shared CSS, optional fixed semantic markup, hash-verified font loader, selector scoping, static templates and deterministic assembly. Scoped element outputs are reused unchanged in samples. Raw model responses are retained. No functional or visual approval.' }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

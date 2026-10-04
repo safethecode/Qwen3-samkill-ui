@@ -1,3 +1,4 @@
+import { inferenceFetch, inferenceTimeout } from './inference-http.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { applyPatches, PatchError } from './patches.mjs';
@@ -79,7 +80,7 @@ export async function repair(target, evidence, failure, previousError = '', opti
   await writeFile(resolve(evidence, 'repair-request.json'), JSON.stringify(telemetry, null, 2));
   let response;
   try {
-    response = await fetch(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(unit ? 120000 : 240000) });
+    response = await (options.fetcher || inferenceFetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(inferenceTimeout(unit ? 120000 : 240000)) });
   } catch (error) {
     await writeFile(resolve(evidence, 'repair-error.json'), JSON.stringify({ ...telemetry, elapsedMs: Date.now() - started, error: error.name }, null, 2));
     throw error;

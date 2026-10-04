@@ -1,3 +1,4 @@
+import { inferenceFetch, inferenceTimeout } from './inference-http.mjs';
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -47,8 +48,8 @@ export async function generate(target, evidence, options = {}) {
     let error = '';
     for (let attempt = 1; attempt <= 2; attempt++) {
       console.log(`Generating ${path}, attempt ${attempt}`);
-      const response = await fetch(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, {
-        method: 'POST', headers: { 'content-type': 'application/json' }, signal: AbortSignal.timeout(300000),
+      const response = await inferenceFetch(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, {
+        method: 'POST', headers: { 'content-type': 'application/json' }, signal: AbortSignal.timeout(inferenceTimeout()),
         body: JSON.stringify({
           model: process.env.QWEN_GENERATE_MODEL, stream: false, think: process.env.QWEN_GENERATE_THINK !== 'false',
           messages: [
