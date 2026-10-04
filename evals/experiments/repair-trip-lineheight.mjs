@@ -1,0 +1,11 @@
+import {cp,mkdir,readFile} from 'node:fs/promises';
+import {repairComponent} from '../../scripts/repair-component.mjs';
+import {evaluateService} from '../../scripts/service-evaluate.mjs';
+import {serviceCases} from '../evals/service-cases.mjs';
+const root='runs/trip-responsive-lineheight';
+await mkdir(root,{recursive:true});
+await cp('runs/trip-responsive-repair/source',`${root}/source`,{recursive:true,force:false,errorOnExist:true});
+const before=JSON.parse(await readFile('runs/trip-responsive-repair/repair/repair.json','utf8')).after;
+await repairComponent(`${root}/source`,`${root}/repair`,'E3',before,'The responsive change improves regular320px layout but text-200-clipping-320 FAILS: label and metadata text ink overflows fixed19px line boxes after font size doubles, and the card overflow hides glyphs. Correct text sizing instead of bypassing clipping checks: at max-width360px set .place-title, .place-region and .place-type to unitless line-height:1.5 so line boxes scale with enlarged fonts. Preserve min14px type, all copy,72px photos,8px padding, automatic row growth and existing larger viewport layout. Do not remove overflow checks, hide text, reduce font size or alter HTML. Only this line-height issue is in scope.');
+const report=await evaluateService(`${root}/source`,`${root}/revalidation`,serviceCases.find(item=>item.id==='round-01'),{textStress:true});
+console.log({passed:report.passed,total:report.total,failures:report.checks.filter(item=>item.status==='FAIL')});

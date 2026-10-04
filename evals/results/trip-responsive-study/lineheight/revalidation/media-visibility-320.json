@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "src": "assets/icons/ChevronLeft.svg",
+      "width": 24,
+      "height": 24,
+      "visible": {
+        "left": 34,
+        "top": 19,
+        "right": 58,
+        "bottom": 43
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-1.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 185,
+        "right": 128,
+        "bottom": 257
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 271,
+        "top": 220,
+        "right": 289,
+        "bottom": 244
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-2.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 359,
+        "right": 128,
+        "bottom": 431
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 271,
+        "top": 411.5,
+        "right": 289,
+        "bottom": 435.5
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-3.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 508,
+        "right": 128,
+        "bottom": 580
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 271,
+        "top": 543,
+        "right": 289,
+        "bottom": 567
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-fragment.png",
+      "width": 96,
+      "height": 17,
+      "visible": {
+        "left": 56,
+        "top": 682,
+        "right": 152,
+        "bottom": 699
+      },
+      "findings": []
+    }
+  ],
+  "issues": [],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}

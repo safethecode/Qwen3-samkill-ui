@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 61212,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T09:20:04.6580539Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 19px; font-weight: 700; color: #111; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { font-size: 14px; line-height: 19px; font-weight: 500; color: #666; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 1.5; font-weight: 700; color: #111; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { font-size: 14px; line-height: 1.5; font-weight: 500; color: #666; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { width: 72px; height: 72px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n}\",\n      \"newString\": \"@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { width: 72px; height: 72px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n[data-ui-unit=\\\"E3\\\"] .place-title { line-height: 1.5; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { line-height: 1.5; }\\n}\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 61198159700,
+  "load_duration": 5302700,
+  "prompt_eval_count": 3657,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 41837596000,
+  "eval_count": 547,
+  "eval_duration": 19339852000
+}

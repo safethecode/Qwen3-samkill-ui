@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "src": "assets/icons/ChevronLeft.svg",
+      "width": 24,
+      "height": 24,
+      "visible": {
+        "left": 539,
+        "top": 19,
+        "right": 563,
+        "bottom": 43
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-1.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 561,
+        "top": 185,
+        "right": 657,
+        "bottom": 281
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 221,
+        "right": 904,
+        "bottom": 245
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-2.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 561,
+        "top": 361,
+        "right": 657,
+        "bottom": 457
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 400.5,
+        "right": 904,
+        "bottom": 424.5
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-3.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 561,
+        "top": 484,
+        "right": 657,
+        "bottom": 580
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 520,
+        "right": 904,
+        "bottom": 544
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-fragment.png",
+      "width": 96,
+      "height": 17,
+      "visible": {
+        "left": 561,
+        "top": 660,
+        "right": 657,
+        "bottom": 677
+      },
+      "findings": []
+    }
+  ],
+  "issues": [],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}

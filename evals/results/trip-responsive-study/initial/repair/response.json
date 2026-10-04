@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 70500,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T09:17:52.7285895Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-photo { width: 96px; height: 96px; object-fit: cover; flex-shrink: 0; border-radius: 5px 0 0 5px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 16px 12px 16px 16px; min-width: 0; flex: 1; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-photo { width: 96px; height: 96px; object-fit: cover; flex-shrink: 0; border-radius: 5px 0 0 5px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 16px 12px 16px 16px; min-width: 0; flex: 1; }\\n@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { width: 72px; height: 72px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n}\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 70484048700,
+  "load_duration": 17071162200,
+  "prompt_eval_count": 3624,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 41786994000,
+  "eval_count": 333,
+  "eval_duration": 11595446000
+}
