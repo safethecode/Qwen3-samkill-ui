@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 5900,
+    "count": 2
+  },
+  "inputCharacters": 16179,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 49561,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3916,
+  "prompt_eval_duration": 43867149000,
+  "load_duration": 4807700,
+  "eval_count": 165,
+  "eval_duration": 5480300000,
+  "total_duration": 49547061600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"document.getElementById(\\\"reveal-booking\\\").addEventListener(\\\"click\\\", () => {\\n  const form = document.getElementById(\\\"booking-form\\\");\\n  form.style.display = \\\"block\\\";\\n  document.getElementById(\\\"guest\\\").focus();\\n});\",\n      \"newString\": \"document.getElementById(\\\"reveal-booking\\\").addEventListener(\\\"click\\\", () => {\\n  const form = document.getElementById(\\\"booking-form\\\");\\n  form.style.display = \\\"block\\\";\\n  document.getElementById(\\\"reveal-booking\\\").style.display = \\\"none\\\";\\n  document.getElementById(\\\"guest\\\").focus();\\n});\"\n    }\n  ]\n}"
+}
