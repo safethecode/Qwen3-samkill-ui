@@ -16,6 +16,10 @@ The repository's explicit static pilot is `node scripts/generate-components.mjs 
 
 Render each element in a sample with the same available width and horizontal inset as its assembled slot. Review samples and the full page at desktop and mobile widths. Repair one owned region while retaining correct neighbors; rerun affected checks and the assembled view. The pilot's resume requires unchanged inputs; do not claim changed-plan checkpoints remain valid. Complete all requested interactions separately, including empty, error and recovery states.
 
+Each CSS unit needs the actual rendered element structure, including JavaScript-created children, exact attribute values, attribute owners and available custom properties. Supply complete CSS statements with nearby inheritance context. A tag-only shell omits dynamically rendered cards; a declaration cut midway omits valid existing source. Keep the writable unit explicit and its dependencies read-only.
+
+For decorative illustrations, implement the frame's dimensions and positioning context first, then each shape variant using the exact rendered attribute value. Review the painted result as well as its box: a positive-size empty background is not a completed illustration, and absolute pseudo-elements can escape a zero-height owner. Test every variant in the assembled page. For forms, verify the actual font and weight of inputs, selects and placeholders separately from body text. A supplied font file alone does not establish control inheritance.
+
 ## Executable layout contract
 
 Create `design/layout-contract.json` with a nonempty `rules` array. Each rule needs a unique `id` and `kind`. Selectors must identify exactly one visible element except `absent`, which requires no matching element. Optional `widths` and `states` restrict applicability and must not hide required coverage.

@@ -1,6 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { skillInventory, stageSkillContext } from '../scripts/skill-context.mjs';
+import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+
+test('direct model stages receive the linked local decomposition guide as source-bound text', async () => {
+  const text = await readFile(new URL('../skills/qwen-samkill-ui/references/decomposed-layout.md', import.meta.url), 'utf8');
+  const hash = createHash('sha256').update(text).digest('hex');
+  for (const stage of ['shell', 'state', 'behavior', 'forms', 'layout', 'responsive']) {
+    const context = await stageSkillContext(stage);
+    assert.ok(context.text.includes(text), `${stage} must receive the actual guide, not just a link`);
+    assert.ok(context.sources.some(source => source.path === '../decomposed-layout.md' && source.sha256 === hash));
+  }
+});
 
 test('all active catalog rules remain available and stage prompts carry original font and icon rules', async () => {
   const inventory = await skillInventory();
