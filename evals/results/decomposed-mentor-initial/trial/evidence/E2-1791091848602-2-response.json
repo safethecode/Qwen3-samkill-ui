@@ -1,0 +1,33 @@
+{
+  "binding": "5a5165b616ac832df0632c7abe8933da4d3200c2c285d56371de6425191d0d41",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 22779,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:30:48.5931697Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"html\": \"<div data-ui-unit=\\\"E2\\\" class=\\\"e2-root\\\">\\n    <label class=\\\"e2-label\\\">멘토 검색</label>\\n    <div class=\\\"e2-search-surface\\\">\\n        <svg class=\\\"e2-icon\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"20\\\" height=\\\"20\\\" viewBox=\\\"0 0 24 24\\\" fill=\\\"none\\\" stroke=\\\"currentColor\\\" stroke-width=\\\"2\\\" stroke-linecap=\\\"round\\\" stroke-linejoin=\\\"round\\\">\\n            <circle cx=\\\"11\\\" cy=\\\"11\\\" r=\\\"8\\\"></circle>\\n            <line x1=\\\"21\\\" y1=\\\"21\\\" x2=\\\"16.65\\\" y2=\\\"16.65\\\"></line>\\n        </svg>\\n        <input id=\\\"search\\\" type=\\\"text\\\" placeholder=\\\"멘토 또는 회사를 검색하세요\\\" disabled />\\n    </div>\\n</div>\",\n\"css\": \"[data-ui-unit=\\\"E2\\\"] {\\n  display: flex;\\n  flex-direction: column;\\n  width: 100%;\\n}\\n\\n.e2-label {\\n  color: var(--ink, #283548);\\n  font-family: \\\"Noto Sans KR\\\", sans-serif;\\n  font-weight: 500;\\n  font-size: 14px;\\n  line-height: 1.57;\\n  margin-bottom: 8px;\\n}\\n\\n.e2-search-surface {\\n  display: flex;\\n  align-items: center;\\n  background-color: var(--surface, #fff);\\n  border-radius: 12px;\\n  min-height: 46px;\\n  padding: 0 16px;\\n}\\n\\n.e2-icon {\\n  color: var(--muted, #566273);\\n  flex-shrink: 0;\\n}\\n\\n#search {\\n  flex: 1;\\n  min-width: 0;\\n  background: transparent;\\n  border: none;\\n  padding: 0;\\n  margin-left: 12px;\\n  color: var(--ink, #283548);\\n  font-family: \\\"Noto Sans KR\\\", sans-serif;\\n  font-weight: 500;\\n  font-size: 14px;\\n  line-height: 1.57;\\n}\\n\\n#search::placeholder {\\n  color: var(--muted, #566273);\\n  opacity: 1;\\n}\\n\\n#search:disabled {\\n  background-color: transparent;\\n  color: var(--ink, #283548);\\n  -webkit-text-fill-color: var(--ink, #283548);\\n  cursor: default;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 22752842500,
+  "load_duration": 3088000,
+  "prompt_eval_count": 1414,
+  "prompt_eval_cached_count": 1268,
+  "prompt_eval_duration": 1724122000,
+  "eval_count": 636,
+  "eval_duration": 21017645000
+}

@@ -1,0 +1,23 @@
+{
+  "binding": "5a5165b616ac832df0632c7abe8933da4d3200c2c285d56371de6425191d0d41",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "completed": {
+    "E1": {
+      "html": "<div class=\"e1-header\" data-ui-unit=\"E1\">\n  <h1 class=\"e1-title\">멘토 찾기</h1>\n  <div class=\"e1-tools\">\n    <button disabled aria-label=\"알림\" type=\"button\">\n      <img src=\"assets/reference/bell.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n    <button disabled aria-label=\"관심 멘토\" type=\"button\">\n      <img src=\"assets/reference/heart.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n    <button disabled aria-label=\"프로필\" type=\"button\">\n      <img src=\"assets/reference/user-round.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n  </div>\n</div>",
+      "css": "[data-ui-unit=\"E1\"] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  min-height: 54px;\n  padding-top: 8px;\n  padding-bottom: 8px;\n  width: 100%;\n}\n\n[data-ui-unit=\"E1\"] .e1-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: var(--ink);\n  margin: 0;\n  line-height: 1.2;\n}\n\n[data-ui-unit=\"E1\"] .e1-tools {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n  flex-shrink: 0;\n}\n\n[data-ui-unit=\"E1\"] button {\n  background: none;\n  border: none;\n  padding: 0;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n[data-ui-unit=\"E1\"] img {\n  display: block;\n  width: 24px;\n  height: 24px;\n  color: var(--muted);\n  filter: saturate(0) opacity(0.6);\n}\n\n@media (max-width: 320px) {\n  [data-ui-unit=\"E1\"] .e1-title {\n    font-size: 16px;\n  }\n}\n\n@media (min-width: 431px) {\n  [data-ui-unit=\"E1\"] {\n    padding-left: 0;\n    padding-right: 0;\n  }\n}"
+    }
+  }
+}

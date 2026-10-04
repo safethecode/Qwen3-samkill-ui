@@ -1,0 +1,33 @@
+{
+  "binding": "5a5165b616ac832df0632c7abe8933da4d3200c2c285d56371de6425191d0d41",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 39560,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T05:30:25.8177919Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"html\": \"<div data-ui-unit=\\\"E2\\\" class=\\\"e2-wrapper\\\">\\n    <label class=\\\"e2-label\\\" for=\\\"search\\\">멘토 검색</label>\\n    <div class=\\\"e2-search-surface\\\">\\n        <svg class=\\\"e2-icon\\\" viewBox=\\\"0 0 24 24\\\" width=\\\"20\\\" height=\\\"20\\\">\\n            <path fill=\\\"currentColor\\\" d=\\\"M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z\\\"/>\\n        </svg>\\n        <input type=\\\"text\\\" id=\\\"search\\\" class=\\\"e2-input\\\" placeholder=\\\"멘토 또는 회사를 검색하세요\\\" disabled>\\n    </div>\\n</div>\",\n\"css\": \"[data-ui-unit=\\\"E2\\\"] {\\n    width: 100%;\\n    display: flex;\\n    flex-direction: column;\\n}\\n\\n.e2-label {\\n    font-size: 14px;\\n    font-weight: 500;\\n    color: #283548;\\n    margin-bottom: 8px;\\n    line-height: 1.57;\\n}\\n\\n.e2-search-surface {\\n    display: flex;\\n    align-items: center;\\n    background-color: #ffffff;\\n    border-radius: 12px;\\n    min-height: 46px;\\n    padding: 0 16px;\\n    gap: 12px;\\n}\\n\\n.e2-icon {\\n    flex-shrink: 0;\\n    color: #566273;\\n    display: block;\\n}\\n\\n.e2-input {\\n    flex: 1;\\n    min-width: 0;\\n    border: none;\\n    background: transparent;\\n    padding: 0;\\n    margin: 0;\\n    color: #283548;\\n    font-family: inherit;\\n    font-size: inherit;\\n    font-weight: inherit;\\n    line-height: inherit;\\n}\\n\\n.e2-input::placeholder {\\n    color: #566273;\\n    opacity: 1;\\n}\\n\\n@media (prefers-reduced-motion: reduce) {\\n    [data-ui-unit=\\\"E2\\\"] * {\\n        transition: none !important;\\n        animation: none !important;\\n    }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 39551721500,
+  "load_duration": 4637600,
+  "prompt_eval_count": 1396,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 15232178000,
+  "eval_count": 708,
+  "eval_duration": 24237542000
+}

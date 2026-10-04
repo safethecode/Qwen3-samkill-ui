@@ -1,0 +1,5 @@
+{
+  "binding": "5a5165b616ac832df0632c7abe8933da4d3200c2c285d56371de6425191d0d41",
+  "elapsedMs": 39564,
+  "error": "CSS scope must begin with [data-ui-unit=\"E2\"] and cannot escape through sibling selectors"
+}
