@@ -1,0 +1,46 @@
+{
+  "icons": [],
+  "issues": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bell.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/user-round.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/search.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/bookmark-check.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/badge-check.svg"
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Image icon requires an asset manifest and rendered control review",
+      "src": "assets/reference/heart.svg"
+    }
+  ],
+  "scope": "Official inline geometry and basic control semantics; optical alignment, actual edge clicks and state transitions require separate evidence."
+}
