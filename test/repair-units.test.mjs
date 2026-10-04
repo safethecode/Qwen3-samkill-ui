@@ -8,13 +8,22 @@ test('ordinary typography repairs never cut a declaration at the source window b
   const css = '.spacer {padding:0;}\n'.repeat(297) + '\nbutton {font-family:inherit;cursor:pointer;}\n#guest {font-size:1rem;}';
   const files = { 'styles.css': css };
   const first = selectRepairUnit(files, ['styles.css'], 'button font-family typography');
-  assert.equal(first.boundary, 'complete-css-rule');
-  assert.equal(first.selector, 'button');
-  assert.equal(first.content, 'button {font-family:inherit;cursor:pointer;}');
+  assert.equal(first.boundary, 'complete-css-statements');
+  assert.ok(first.content.includes('button {font-family:inherit;cursor:pointer;}'));
   for (let attempt = 0; attempt < first.unitCount; attempt++) {
     const unit = selectRepairUnit(files, ['styles.css'], 'button font-family typography', attempt);
     assert.equal(css.slice(unit.offset, unit.offset + unit.content.length), unit.content);
     assert.doesNotThrow(() => postcss.parse(unit.content));
+  }
+});
+
+test('ordinary CSS units retain related inherited typography and repair retry context', () => {
+  const css = 'body{font:400 16px sans-serif}button,input{font:inherit}.row{display:flex;white-space:nowrap}';
+  for (const detail of ['readable-390 input fontWeight400', 'text-200-clipping-390 row']) {
+    const unit = selectRepairUnit({ 'styles.css': css }, ['styles.css'], detail);
+    assert.equal(unit.content, css);
+    assert.doesNotThrow(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: 'font:400', newString: 'font:500' }]));
+    assert.doesNotThrow(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: 'white-space:nowrap', newString: 'white-space:normal' }]));
   }
 });
 

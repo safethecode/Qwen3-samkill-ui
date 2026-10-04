@@ -10,6 +10,25 @@ function sourceUnits(path, source, detail) {
   };
   const width = Number(detail.match(/(?:text-(?:200|spacing)-(?:clipping-)?|contract-stack-)(\d+)/)?.[1]);
   if (path === 'styles.css') {
+    if (!(width && /automatic grid|contract-stack/i.test(detail))) {
+      try {
+        const nodes = postcss.parse(source).nodes;
+        if (nodes.length && nodes.every(node => node.source.end.offset - node.source.start.offset <= 6000)) {
+          const units = [];
+          let start = nodes[0].source.start.offset;
+          let end = start;
+          for (const node of nodes) {
+            if (node.source.end.offset - start > 6000) {
+              units.push({ offset: start, content: source.slice(start, end), boundary: 'complete-css-statements' });
+              start = node.source.start.offset;
+            }
+            end = node.source.end.offset;
+          }
+          units.push({ offset: start, content: source.slice(start, end), boundary: 'complete-css-statements' });
+          return units;
+        }
+      } catch {}
+    }
     const rules = [];
     try {
       postcss.parse(source).walkRules(rule => {
