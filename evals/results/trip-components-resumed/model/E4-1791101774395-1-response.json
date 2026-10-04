@@ -1,0 +1,33 @@
+{
+  "binding": "ff9960e4ed2e6c331365220f0bd4f1de7ed1ff45430fd2cde0640a70e67cf6ed",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 19093,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T08:16:14.3945263Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \"footer[data-ui-unit=\\\"E4\\\"] {\\n  width: 100%;\\n  margin-top: 24px;\\n}\\n\\nfooter[data-ui-unit=\\\"E4\\\"] button {\\n  display: block;\\n  width: 100%;\\n  min-height: 56px;\\n  padding: 0;\\n  background-color: #bdbdbd;\\n  color: #ffffff;\\n  border: none;\\n  border-radius: 12px;\\n  font-family: \\\"Noto Sans KR\\\", sans-serif;\\n  font-size: 16px;\\n  font-weight: 700;\\n  line-height: 1.5;\\n  cursor: default;\\n  transition: opacity 0.2s ease;\\n}\\n\\nfooter[data-ui-unit=\\\"E4\\\"] button:disabled {\\n  opacity: 1;\\n  background-color: #bdbdbd;\\n  color: #ffffff;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 19074785300,
+  "load_duration": 3099000,
+  "prompt_eval_count": 1123,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 12532331000,
+  "eval_count": 223,
+  "eval_duration": 6446220000
+}

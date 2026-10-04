@@ -1,0 +1,33 @@
+{
+  "binding": "ff9960e4ed2e6c331365220f0bd4f1de7ed1ff45430fd2cde0640a70e67cf6ed",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 42809,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T08:14:48.2739326Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".trip-header {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  height: 62px;\\n  min-height: 62px;\\n  position: relative;\\n}\\n\\n.trip-header > button {\\n  position: absolute;\\n  left: 0;\\n  width: 44px;\\n  height: 44px;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  background: transparent;\\n  border: none;\\n  padding: 0;\\n  cursor: default;\\n}\\n\\n.trip-header > button[disabled] {\\n  opacity: 1;\\n}\\n\\n.trip-header > button img {\\n  width: 24px;\\n  height: 24px;\\n  display: block;\\n  pointer-events: none;\\n}\\n\\n.trip-header > h1 {\\n  font-size: 18px;\\n  line-height: 26px;\\n  font-weight: 700;\\n  text-align: center;\\n  margin: 0;\\n  padding: 0 44px;\\n  white-space: normal;\\n  overflow-wrap: break-word;\\n  word-break: keep-all;\\n  color: var(--ink, #111);\\n}\\n\\n.trip-header > span {\\n  position: absolute;\\n  right: 0;\\n  width: 44px;\\n  height: 44px;\\n  pointer-events: none;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 42786063200,
+  "load_duration": 16790099100,
+  "prompt_eval_count": 1200,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 14209170000,
+  "eval_count": 353,
+  "eval_duration": 11762531000
+}

@@ -1,0 +1,143 @@
+{
+  "results": [
+    {
+      "src": "assets/icons/ChevronLeft.svg",
+      "width": 24,
+      "height": 24,
+      "visible": {
+        "left": 539,
+        "top": 19,
+        "right": 563,
+        "bottom": 43
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-1.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 657,
+        "top": 185,
+        "right": 657,
+        "bottom": 281
+      },
+      "findings": [
+        {
+          "status": "FAIL",
+          "problem": "Image has no visible area after rectangular clipping"
+        }
+      ]
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 221,
+        "right": 904,
+        "bottom": 245
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-2.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 657,
+        "top": 361,
+        "right": 657,
+        "bottom": 457
+      },
+      "findings": [
+        {
+          "status": "FAIL",
+          "problem": "Image has no visible area after rectangular clipping"
+        }
+      ]
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 397.5,
+        "right": 904,
+        "bottom": 421.5
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-3.png",
+      "width": 96,
+      "height": 96,
+      "visible": {
+        "left": 657,
+        "top": 478,
+        "right": 657,
+        "bottom": 574
+      },
+      "findings": [
+        {
+          "status": "FAIL",
+          "problem": "Image has no visible area after rectangular clipping"
+        }
+      ]
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 24,
+      "visible": {
+        "left": 886,
+        "top": 514,
+        "right": 904,
+        "bottom": 538
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-fragment.png",
+      "width": 96,
+      "height": 18.40625,
+      "visible": {
+        "left": 687.5,
+        "top": 691.796875,
+        "right": 783.5,
+        "bottom": 671
+      },
+      "findings": [
+        {
+          "status": "FAIL",
+          "problem": "Image has no visible area after rectangular clipping"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "status": "FAIL",
+      "problem": "Image has no visible area after rectangular clipping",
+      "src": "assets/reference/photo-1.png"
+    },
+    {
+      "status": "FAIL",
+      "problem": "Image has no visible area after rectangular clipping",
+      "src": "assets/reference/photo-2.png"
+    },
+    {
+      "status": "FAIL",
+      "problem": "Image has no visible area after rectangular clipping",
+      "src": "assets/reference/photo-3.png"
+    },
+    {
+      "status": "FAIL",
+      "problem": "Image has no visible area after rectangular clipping",
+      "src": "assets/reference/photo-fragment.png"
+    }
+  ],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}
