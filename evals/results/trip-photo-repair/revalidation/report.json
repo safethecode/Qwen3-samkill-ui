@@ -1,0 +1,283 @@
+{
+  "case": "round-01",
+  "scope": "static translation",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ],
+  "measurements": {
+    "layout-contract-1440": 0,
+    "readable-1440": 0,
+    "font-rendering-1440": 0,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "text-200-1440": 0,
+    "text-200-clipping-1440": 0,
+    "text-spacing-1440": 0,
+    "text-spacing-clipping-1440": 0,
+    "layout-contract-390": 0,
+    "readable-390": 0,
+    "font-rendering-390": 0,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "text-200-390": 0,
+    "text-200-clipping-390": 0,
+    "text-spacing-390": 0,
+    "text-spacing-clipping-390": 0,
+    "layout-contract-320": 0,
+    "readable-320": 0,
+    "font-rendering-320": 0,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0,
+    "text-200-320": 0,
+    "text-200-clipping-320": 0,
+    "text-spacing-320": 0,
+    "text-spacing-clipping-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "여행 일정 편집": 1,
+      "Day 1": 2,
+      "Day 2": 2,
+      "Day 3": 2,
+      "(06.25)": 1,
+      "Jingūmae, Shibuya": 2,
+      "Activity": 1,
+      "(06.26)": 1,
+      "와라타코 하라주쿠 오모테산도점": 1,
+      "Restaurant": 2,
+      "Dōgenzaka, Shibuya": 1,
+      "(06.27)": 1,
+      "수정 완료": 1,
+      "정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.": 1
+    },
+    "390": {
+      "여행 일정 편집": 1,
+      "Day 1": 2,
+      "Day 2": 2,
+      "Day 3": 2,
+      "(06.25)": 1,
+      "Jingūmae, Shibuya": 2,
+      "Activity": 1,
+      "(06.26)": 1,
+      "와라타코 하라주쿠 오모테산도점": 1,
+      "Restaurant": 2,
+      "Dōgenzaka, Shibuya": 1,
+      "(06.27)": 1,
+      "수정 완료": 1,
+      "정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.": 1
+    },
+    "1440": {
+      "여행 일정 편집": 1,
+      "Day 1": 2,
+      "Day 2": 2,
+      "Day 3": 2,
+      "(06.25)": 1,
+      "Jingūmae, Shibuya": 2,
+      "Activity": 1,
+      "(06.26)": 1,
+      "와라타코 하라주쿠 오모테산도점": 1,
+      "Restaurant": 2,
+      "Dōgenzaka, Shibuya": 1,
+      "(06.27)": 1,
+      "수정 완료": 1,
+      "정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "layout-contract-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-contract-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-contract-320",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 40,
+  "total": 40
+}

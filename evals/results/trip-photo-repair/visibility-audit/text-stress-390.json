@@ -1,0 +1,205 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "",
+        "text": "여행 일정 편집",
+        "width": 307,
+        "scrollWidth": 307,
+        "height": 26,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "tabs-slot",
+        "text": "Day 1Day 2Day 3",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 32,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "day-tabs",
+        "text": "Day 1Day 2Day 3",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 32,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 1",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 35,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 2",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 35,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 3",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 35,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 1 (06.25)",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "place1-name",
+        "class": "place-title",
+        "text": "Jingūmae, Shibuya",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 38,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "place-type",
+        "text": "Activity",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 19,
+        "scrollHeight": 29,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 2 (06.26)",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "place2-name",
+        "class": "place-title",
+        "text": "와라타코 하라주쿠 오모테산도점",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 57,
+        "scrollHeight": 67,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "place-region",
+        "text": "Jingūmae, Shibuya",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 38,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "place-type",
+        "text": "Restaurant",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 19,
+        "scrollHeight": 29,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "place3-name",
+        "class": "place-title",
+        "text": "Dōgenzaka, Shibuya",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 38,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "P",
+        "id": "",
+        "class": "place-type",
+        "text": "Restaurant",
+        "width": 161,
+        "scrollWidth": 161,
+        "height": 19,
+        "scrollHeight": 29,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 3 (06.27)",
+        "width": 342,
+        "scrollWidth": 342,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

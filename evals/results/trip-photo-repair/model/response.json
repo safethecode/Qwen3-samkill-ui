@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 54402,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T08:18:18.3033395Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-photo { width: 96px; height: 96px; object-fit: cover; flex-shrink: 0; clip-path: inset(0 0 0 100% round 0 6px 6px 0); }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-photo { width: 96px; height: 96px; object-fit: cover; flex-shrink: 0; border-radius: 5px 0 0 5px; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid #e8e8e8; border-radius: 6px 6px 0 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid #e8e8e8; border-radius: 6px 6px 0 0; overflow: hidden; display: flex; align-items: flex-start; justify-content: flex-start; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card img { width: 96px; height: auto; display: block; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card img { width: 96px; height: 17px; object-fit: cover; display: block; }\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 54388449200,
+  "load_duration": 2090500,
+  "prompt_eval_count": 3517,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 40174581000,
+  "eval_count": 418,
+  "eval_duration": 14097055000
+}

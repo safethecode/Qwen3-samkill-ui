@@ -1,0 +1,12 @@
+import { cp, mkdir, readFile } from 'node:fs/promises';
+import { repairComponent } from '../../scripts/repair-component.mjs';
+import { evaluateService } from '../../scripts/service-evaluate.mjs';
+import { serviceCases } from '../evals/service-cases.mjs';
+const root='runs/trip-photo-repair';
+await mkdir(root,{recursive:true});
+await cp('runs/trip-components-live/source',`${root}/source`,{recursive:true,force:false,errorOnExist:true});
+const checkpoint=JSON.parse(await readFile('runs/trip-components-resumed-generation/component-checkpoint.json','utf8'));
+const failure='Actual390/320 screenshots show all three place photos invisible. The .place-photo clip-path inset(0 0 0 100%) removes all pixels. Remove this clip-path and use border-radius:5px 0 0 5px for corners while retaining96x96px photos and object-fit:cover. The partial Day3 crop is also invisible because .partial-card centers its image inside96px height behind an18px slot. Align partial-card items/start and justify/start; ensure its image sits at top-left, 96px wide and17px tall with object-fit:cover, fitting the visible slot after1px border without clipping the supplied crop. Keep the slot18px and upper/right card boundary; never reveal or invent hidden data. Fix only these observed media defects through up to3 exact CSS patches. All text and other layout must stay unchanged.';
+await repairComponent(`${root}/source`,`${root}/repair`,'E3',checkpoint.completed.E3,failure);
+const report=await evaluateService(`${root}/source`,`${root}/revalidation`,serviceCases.find(item=>item.id==='round-01'),{textStress:true});
+console.log({passed:report.passed,total:report.total,failures:report.checks.filter(item=>item.status==='FAIL')});

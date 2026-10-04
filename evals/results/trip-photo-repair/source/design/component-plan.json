@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "status": "inspected",
+    "source": "assets/reference/source.jpg",
+    "provenance": "Authenticated UI Bowl representative preview retrieved and visually inspected 2026-10-04; metadata in live-retrieval.json. Original upstream round01 P1/P2 and photo crops also inspected.",
+    "limitations": "Original CSS, font, disabled conditions and hidden Day3 content unknown. Static translation; source media licensing beyond supplied reference remains unverified. Chosen minimum14px/500 typography differs from small raster text."
+  },
+  "shared": "Travel itinerary reference: white narrow mobile frame, centered title, compact day pills, day headings aligned with OUTSIDE-card checkboxes. Card owns edge-to-edge square photo, text, quiet grip. White card with subtle border is a content boundary, not a decorative separator. No shadows, hero, invented data, summaries or dashboards. Minimum14px/500. Noto Sans KR actual supplied font. At320px and enlarged text grow row height, wrap words; never hide text or shrink fonts. Static controls disabled with opacity1. Day3 is explicitly an observed partial fragment, not reconstructed hidden data. Shared assembly owns outer spacing. All dimensions are chosen adaptations based on upstream observations.",
+  "sharedCss": "*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:500 14px/1.5 \"Noto Sans KR\",sans-serif}button,input{font:inherit}button:disabled,input:disabled{opacity:1}h1,h2,p{margin:0}img{display:block}.frame{max-width:430px;margin:auto;padding:0 24px 24px;--ink:#111;--muted:#666;--border:#e8e8e8}.tabs-slot{margin-top:26px}.days-slot{margin-top:26px}.footer-slot{margin-top:24px}.disclosure{margin-top:16px;color:#666}button:focus-visible,input:focus-visible{outline:2px solid #111;outline-offset:3px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}",
+  "elements": [
+    {
+      "id": "E1",
+      "html": "<header data-ui-unit=\"E1\" class=\"trip-header\"><button type=\"button\" disabled aria-label=\"뒤로가기 정적 예시\"><img src=\"assets/icons/ChevronLeft.svg\" alt=\"\" width=\"24\" height=\"24\"></button><h1>여행 일정 편집</h1><span aria-hidden=\"true\"></span></header>",
+      "prompt": "Header62px minimum. Equal44px side slots and flexible centered title18px/26px/700. Back image24px. Transparent disabled button. Center title on screen, not leftover space. Wrap when text enlarged. No outer padding beyond parent24px.",
+      "assets": [
+        "assets/icons/ChevronLeft.svg"
+      ],
+      "sample": "<main class=\"frame\">{{E1}}</main>"
+    },
+    {
+      "id": "E2",
+      "html": "<div data-ui-unit=\"E2\" class=\"day-tabs\" role=\"group\" aria-label=\"날짜 선택 예시\"><button type=\"button\" disabled aria-pressed=\"true\">Day 1</button><button type=\"button\" disabled aria-pressed=\"false\">Day 2</button><button type=\"button\" disabled aria-pressed=\"false\">Day 3</button></div>",
+      "prompt": "Three small content-width pills64x32px minimum, gap8px, radius16px. Selected black/white; others white/black with1px pale border.14px/700. Do not stretch across frame. Allow wrapping on enlargement.",
+      "assets": [],
+      "sample": "<main class=\"frame\">{{E2}}</main>"
+    },
+    {
+      "id": "E3",
+      "html": "<div data-ui-unit=\"E3\" class=\"itinerary\"><section class=\"day-group\"><h2>Day 1 <span>(06.25)</span></h2><div class=\"place-row\" id=\"place1\"><input id=\"place1-check\" type=\"checkbox\" disabled aria-labelledby=\"place1-name\"><div class=\"place-card\" id=\"place1-card\"><img class=\"place-photo\" id=\"place1-photo\" src=\"assets/reference/photo-1.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place1-name\" for=\"place1-check\">Jingūmae, Shibuya</label><p class=\"place-type\">Activity</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div></section><section class=\"day-group\"><h2>Day 2 <span>(06.26)</span></h2><div class=\"place-row\" id=\"place2\"><input id=\"place2-check\" type=\"checkbox\" disabled aria-labelledby=\"place2-name\"><div class=\"place-card\" id=\"place2-card\"><img class=\"place-photo\" id=\"place2-photo\" src=\"assets/reference/photo-2.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place2-name\" for=\"place2-check\">와라타코 하라주쿠 오모테산도점</label><p class=\"place-region\">Jingūmae, Shibuya</p><p class=\"place-type\">Restaurant</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div><div class=\"place-row\" id=\"place3\"><input id=\"place3-check\" type=\"checkbox\" disabled aria-labelledby=\"place3-name\"><div class=\"place-card\" id=\"place3-card\"><img class=\"place-photo\" id=\"place3-photo\" src=\"assets/reference/photo-3.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place3-name\" for=\"place3-check\">Dōgenzaka, Shibuya</label><p class=\"place-type\">Restaurant</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div></section><section class=\"day-group\"><h2>Day 3 <span>(06.27)</span></h2><div class=\"partial-slot\" aria-label=\"원본에서 일부만 보이는 장소\"><div class=\"partial-card\"><img src=\"assets/reference/photo-fragment.png\" alt=\"관찰된 사진 상단 조각\"></div></div></section></div>",
+      "prompt": "Day headings16px/22px/700; date500 muted. Heading to row16px; same-day row gap18px; between day groups40px. Place rows grid22px checkbox +9px gap + flexible card; checkbox outside, vertically centered. Card flex photo96px square edge-to-edge, gap16px, flexible copy min-width0,18px grip with6px right inset. Border1px #e8e8e8 radius6px. Card min-height96px and automatic growth; photo stays96px square across all rows, clips only its own left corners. Text14px/19px, title/region700,type500 muted; no ellipsis or nowrap. At320px/enlargement break long words and grow height; do not squeeze photo. All checkbox labels visible. The partial-slot has margin-left31px,height18px,overflow:hidden ONLY for the explicitly unknown Day3 fragment. Inside partial-card min-height96px with same border and upper corners; its top and right boundary stay visible. Fragment image width96px. No new hidden text.",
+      "assets": [
+        "assets/icons/GripVertical.svg",
+        "assets/reference/photo-1.png",
+        "assets/reference/photo-2.png",
+        "assets/reference/photo-3.png",
+        "assets/reference/photo-fragment.png"
+      ],
+      "sample": "<main class=\"frame\">{{E3}}</main>"
+    },
+    {
+      "id": "E4",
+      "html": "<footer data-ui-unit=\"E4\" class=\"trip-footer\"><button type=\"button\" disabled>수정 완료</button></footer>",
+      "prompt": "Full-width quiet disabled completion button min-height56px radius12px, gray #bdbdbd background, white16px/700. No divider or icon. Separate footer; no fixed overlay. At enlargement button grows.",
+      "assets": [],
+      "sample": "<main class=\"frame\">{{E4}}</main>"
+    }
+  ],
+  "assembly": "<main class=\"frame\">{{E1}}<div class=\"tabs-slot\">{{E2}}</div><div class=\"days-slot\">{{E3}}</div><div class=\"footer-slot\">{{E4}}</div><p class=\"disclosure\">정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.</p></main>"
+}
