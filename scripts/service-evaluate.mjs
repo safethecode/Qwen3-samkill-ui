@@ -142,6 +142,9 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           measurements[name] = report.overflowPx;
           await check(name, async () => assert.equal(report.overflowPx, 0, `Horizontal overflow under ${report.mode}. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: ${JSON.stringify([...report.gridPressure, ...report.flexPressure].slice(0, 2))}. Observed geometry: ${JSON.stringify(report)}`));
           const clippingName = `${report.mode}-clipping-${width}`;
+          const overlapName = `${report.mode}-line-overlap-${width}`;
+          measurements[overlapName] = report.overlappingLines.length;
+          await check(overlapName, async () => assert.equal(report.overlappingLines.length, 0, `Wrapped text line boxes overlap under ${report.mode}; inspect and fix line-height without hiding text: ${JSON.stringify(report.overlappingLines)}`));
           measurements[clippingName] = report.clippedByAncestor.length;
           await check(clippingName, async () => assert.equal(report.clippedByAncestor.length, 0, `Text or controls are cut off by an ancestor with hidden/clip overflow under ${report.mode}. Fix sizing and wrapping without removing content: ${JSON.stringify(report.clippedByAncestor)}`));
         }

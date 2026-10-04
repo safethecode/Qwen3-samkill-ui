@@ -29,6 +29,25 @@ export async function inspectTextStress(page, capture = async () => {}) {
           if (!['flex', 'inline-flex'].includes(layout.display) || !layout.flexDirection.startsWith('row') || parent.scrollWidth <= parent.clientWidth + 1 || style.minWidth !== 'auto' || Number(style.flexShrink) === 0) return [];
           return [{ tag: element.tagName, id: element.id, class: String(element.className), width: element.getBoundingClientRect().width, minWidth: style.minWidth, flexShrink: style.flexShrink, flexBasis: style.flexBasis, parent: { tag: parent.tagName, id: parent.id, class: String(parent.className), width: parent.clientWidth, scrollWidth: parent.scrollWidth, display: layout.display, gap: layout.gap }, hypothesis: 'An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.' }];
         }).slice(0, 10);
+        const overlappingLines = elements.flatMap(element => {
+          const style = getComputedStyle(element);
+          if (!style.writingMode.startsWith('horizontal')) return [];
+          const fontSize = parseFloat(style.fontSize);
+          const lineHeight = parseFloat(style.lineHeight);
+          if (!Number.isFinite(lineHeight) || lineHeight >= fontSize) return [];
+          for (const node of element.childNodes) {
+            if (node.nodeType !== 3 || !node.textContent.trim()) continue;
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            const lines = [...range.getClientRects()].filter(rect => rect.width > 0 && rect.height > 0).sort((a, b) => a.top - b.top);
+            for (let i = 1; i < lines.length; i++) {
+              const before = lines[i - 1];
+              const after = lines[i];
+              if (after.top > before.top + 1 && before.bottom - after.top > 2 && Math.min(before.right, after.right) > Math.max(before.left, after.left)) return [{ ...describe(element), fontSize, lineHeight, overlapPx: before.bottom - after.top, method: 'Intersecting wrapped text range boxes with line-height below font-size; requires visual confirmation.' }];
+            }
+          }
+          return [];
+        });
         const clippedByAncestor = [];
         for (const element of elements) {
           const rects = [];
@@ -59,6 +78,7 @@ export async function inspectTextStress(page, capture = async () => {}) {
           flexPressure,
           gridPressure,
           clippedByAncestor,
+          overlappingLines,
           outsideViewport: elements.filter(element => element.getBoundingClientRect().right > innerWidth + 1).slice(0, 30).map(describe),
           clippingCandidates: elements.filter(element => element.textContent.trim() && (element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)).slice(0, 50).map(describe)
         };

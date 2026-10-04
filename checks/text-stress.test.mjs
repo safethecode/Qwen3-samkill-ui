@@ -55,3 +55,16 @@ test('text stress exposes narrow layout overflow without compounding inherited s
     assert.ok((await inspectTextStress(page)).every(r => r.overflowPx === 0 && r.clippedByAncestor.length === 0));
   } finally { await browser.close(); }
 });
+
+test('wrapped text with a fixed line height exposes overlapping line boxes under enlargement', async () => {
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+  try {
+    const page = await browser.newPage({ viewport: { width: 320, height: 900 } });
+    await page.setContent('<style>h1{width:180px;font:700 18px/22px Arial;overflow-wrap:anywhere}</style><h1>Travel itinerary title</h1>');
+    const before = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.ok(before.overlappingLines.some(item => item.tag === 'H1'));
+    await page.addStyleTag({content:'h1{line-height:1.5}'});
+    const after = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.equal(after.overlappingLines.length, 0);
+  } finally { await browser.close(); }
+});
