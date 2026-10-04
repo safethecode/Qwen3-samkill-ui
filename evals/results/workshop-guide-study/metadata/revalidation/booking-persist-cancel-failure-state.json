@@ -1,0 +1,71 @@
+{
+  "headings": [
+    "틈 공방",
+    "이번 주, 손으로 만드는 시간",
+    "도자기 첫 잔",
+    "가죽 카드 지갑",
+    "나무 트레이"
+  ],
+  "controls": [
+    {
+      "tag": "INPUT",
+      "id": "search",
+      "type": "text",
+      "text": "",
+      "ariaLabel": null,
+      "labels": [
+        "수업 검색"
+      ],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": null,
+      "text": "상세",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": null,
+      "text": "상세",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": null,
+      "text": "상세",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    }
+  ],
+  "panels": [
+    {
+      "tag": "SECTION",
+      "id": "catalogue-list",
+      "visible": true
+    },
+    {
+      "tag": "SECTION",
+      "id": "booking-section",
+      "visible": false
+    },
+    {
+      "tag": "FORM",
+      "id": "booking-form",
+      "visible": false
+    },
+    {
+      "tag": "SECTION",
+      "id": "confirmation",
+      "visible": false
+    }
+  ]
+}

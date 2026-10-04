@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "app.js",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 19752,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 71895,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 4925,
+  "prompt_eval_duration": 56445169000,
+  "load_duration": 6305300,
+  "eval_count": 402,
+  "eval_duration": 15170866000,
+  "total_duration": 71874582400,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"    const meta = document.createElement(\\\"div\\\");\\n    meta.className = \\\"card-meta\\\";\\n    const duration = document.createElement(\\\"span\\\");\\n    duration.textContent = cls.duration;\\n    const capacity = document.createElement(\\\"span\\\");\\n    capacity.textContent = `정원 ${cls.capacity}명`;\\n\\n    const price = document.createElement(\\\"div\\\");\",\n      \"newString\": \"    const meta = document.createElement(\\\"div\\\");\\n    meta.className = \\\"card-meta\\\";\\n    const duration = document.createElement(\\\"span\\\");\\n    const durationIcon = document.createElement(\\\"img\\\");\\n    durationIcon.src = \\\"assets/icons/Clock.svg\\\";\\n    durationIcon.alt = \\\"\\\";\\n    durationIcon.style.width = \\\"20px\\\";\\n    durationIcon.style.height = \\\"20px\\\";\\n    durationIcon.style.verticalAlign = \\\"middle\\\";\\n    durationIcon.style.marginRight = \\\"4px\\\";\\n    duration.textContent = cls.duration;\\n    duration.prepend(durationIcon);\\n    const capacity = document.createElement(\\\"span\\\");\\n    const capacityIcon = document.createElement(\\\"img\\\");\\n    capacityIcon.src = \\\"assets/icons/Users.svg\\\";\\n    capacityIcon.alt = \\\"\\\";\\n    capacityIcon.style.width = \\\"20px\\\";\\n    capacityIcon.style.height = \\\"20px\\\";\\n    capacityIcon.style.verticalAlign = \\\"middle\\\";\\n    capacityIcon.style.marginRight = \\\"4px\\\";\\n    capacity.textContent = `정원 ${cls.capacity}명`;\\n    capacity.prepend(capacityIcon);\\n    meta.append(duration, capacity);\\n\\n    const price = document.createElement(\\\"div\\\");\"\n    }\n  ]\n}"
+}

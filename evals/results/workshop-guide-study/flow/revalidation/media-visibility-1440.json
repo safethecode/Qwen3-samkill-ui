@@ -1,0 +1,5 @@
+{
+  "results": [],
+  "issues": [],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}

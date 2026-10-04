@@ -1,0 +1,16 @@
+{
+  "mode": "patches",
+  "unit": null,
+  "inputCharacters": 25820,
+  "maxOutputTokens": 8192,
+  "elapsedMs": 128535,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 7975,
+  "prompt_eval_duration": 95226765000,
+  "load_duration": 16777807900,
+  "eval_count": 408,
+  "eval_duration": 16464493999,
+  "total_duration": 128518517500,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"index.html\",\n      \"oldString\": \"<div class=\\\"class-summary\\\" id=\\\"selected-class-info\\\"></div>\\n<form id=\\\"booking-form\\\">\",\n      \"newString\": \"<div class=\\\"class-summary\\\" id=\\\"selected-class-info\\\"></div>\\n<button type=\\\"button\\\" id=\\\"reveal-booking\\\" class=\\\"btn-primary\\\">예약하기</button>\\n<form id=\\\"booking-form\\\" style=\\\"display: none;\\\">\"\n    },\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"  info.append(title, cat, desc, price);\\n  section.style.display = \\\"block\\\";\\n}\",\n      \"newString\": \"  info.append(title, cat, desc, price);\\n  section.style.display = \\\"block\\\";\\n  document.getElementById(\\\"reveal-booking\\\").style.display = \\\"block\\\";\\n  document.getElementById(\\\"booking-form\\\").style.display = \\\"none\\\";\\n  document.getElementById(\\\"confirmation\\\").style.display = \\\"none\\\";\\n}\"\n    },\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"document.getElementById(\\\"cancel-booking\\\").addEventListener(\\\"click\\\", () => {\\n  state.confirmation = null;\\n  saveState();\\n  renderConfirmation();\\n});\\n\\ninitRender();\",\n      \"newString\": \"document.getElementById(\\\"reveal-booking\\\").addEventListener(\\\"click\\\", () => {\\n  const form = document.getElementById(\\\"booking-form\\\");\\n  form.style.display = \\\"block\\\";\\n  document.getElementById(\\\"guest\\\").focus();\\n});\\n\\ndocument.getElementById(\\\"cancel-booking\\\").addEventListener(\\\"click\\\", () => {\\n  state.confirmation = null;\\n  saveState();\\n  renderConfirmation();\\n});\\n\\ninitRender();\"\n    }\n  ]\n}"
+}
