@@ -19,3 +19,11 @@ Run `node scripts/generate-components.mjs TARGET EVIDENCE`, with evidence outsid
 Outputs include `index.html`, `styles.css`, a static `app.js` and `sample-ID.html` per element. The report explicitly records shared CSS, font loading, selector scoping and assembly as host assistance. Rejected code and its validation error are supplied together on the bounded retry. No automatic typography normalization is applied to model CSS in this route. Browser checks and direct source/render comparison are still required. Scoped CSS is not proof of geometry, responsive behavior, complete visible labels or correct asset states.
 
 Reuse the upstream reference-decompose E/O records and corrected prompts. Keep observed values distinct from chosen CSS values and product adaptations. Compare the actual element and whole-page renders at the same available width, then verify all relevant original guide/catalog requirements. Do not replace the reference-quality requirement with a component pass count.
+
+## Repair one existing element
+
+Run `node scripts/repair-component.mjs TARGET EVIDENCE ID COMPONENT_JSON FAILURE_TEXT` with a fresh evidence directory outside the source. COMPONENT_JSON contains the exact current `{html, css}` fragment; FAILURE_TEXT describes the observed defect and relevant reference comparison. Use the `after` fragment from the latest accepted repair when repairing an element again. Never reuse stale generation fragments after changing that element.
+
+The runner checks that the fragment occurs exactly once in both assembly and sample and that its CSS matches the current stylesheet. It supplies shared and element contracts to the local model and accepts at most three bounded patches. Fixed plan HTML stays immutable. Undeclared assets, escaping CSS, truncated output and source/harness changes are rejected before writes. The same accepted HTML is applied to sample and assembly, and unrelated elements and behavior remain untouched. Raw responses and before/after bindings are saved.
+
+This is a reusable repair primitive, not an automatic visual defect selector or approval loop. Run browser checks and direct reference comparison after every repair. Preserve failed candidates as evidence. The caller must serialize inference and decide which element and defect require repair; a successful application reports APPLIED_NOT_APPROVED.
