@@ -1,0 +1,33 @@
+{
+  "binding": "34b218a152fc1216db77fe44890e8ddcda1cd269dce4bb904c75eb537553ed7b",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 52759,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:22:24.034861Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"css\": \"/* Booking Section Structure */\\n#booking-layout {\\n  border-top: 1px solid #ededf0;\\n  padding: 20px 0;\\n}\\n\\n/* Host Region */\\n.booking-host {\\n  margin-bottom: 20px;\\n}\\n\\n.booking-host-title {\\n  font-size: 16px;\\n  font-weight: 700;\\n  color: #202024;\\n  margin: 0 0 4px 0;\\n  line-height: 1.3;\\n}\\n\\n.booking-host-subtitle {\\n  font-size: 14px;\\n  color: #60606a;\\n  margin: 0;\\n  line-height: 1.5;\\n}\\n\\n/* Action Row (Style controls only, layout owned by parent) */\\n#booking-actions {\\n  display: grid;\\n  grid-template-columns: 48px minmax(0, 1fr);\\n  align-items: center;\\n  gap: 12px;\\n}\\n\\n/* Favorite Icon Button */\\n.booking-icon-btn {\\n  background: transparent;\\n  border: none;\\n  padding: 0;\\n  cursor: pointer;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 48px;\\n  height: 48px;\\n  margin: 0;\\n  color: #60606a;\\n  transition: color 0.2s ease, background-color 0.2s ease;\\n  border-radius: 50%;\\n}\\n\\n.booking-icon-btn:hover {\\n  background-color: #f7f7f9;\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n}\\n\\n.booking-icon-btn[aria-pressed=\\\"true\\\"] {\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn img {\\n  display: block;\\n  width: 24px;\\n  height: 24px;\\n  object-fit: contain;\\n}\\n\\n/* Primary Book Button */\\n#book {\\n  background-color: #5146d7;\\n  color: #ffffff;\\n  font-size: 16px;\\n  font-weight: 700;\\n  height: 52px;\\n  border-radius: 6px;\\n  border: none;\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, transform 0.1s ease;\\n  white-space: nowrap;\\n  overflow: hidden;\\n  text-overflow: ellipsis;\\n}\\n\\n#book:hover {\\n  background-color: #4338c4;\\n}\\n\\n#book:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n  background-color: #5146d7;\\n}\\n\\n#book:active {\\n  transform: scale(0.98);\\n}\\n\\n/* Note */\\n.booking-note {\\n  font-size: 14px;\\n  color: #60606a;\\n  margin: 12px 0 0 0;\\n  line-height: 1.6;\\n  padding-left: 0;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 52744540700,
+  "load_duration": 3071800,
+  "prompt_eval_count": 2131,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 24328789000,
+  "eval_count": 793,
+  "eval_duration": 28344789000
+}

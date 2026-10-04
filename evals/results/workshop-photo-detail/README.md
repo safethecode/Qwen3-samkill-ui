@@ -20,6 +20,14 @@ First bounded repair was rejected for an unchanged HTML patch. [Response](reject
 
 ## Working candidate
 
+Latest candidate: [fixed-scaffold interactive source](fixed-interactive/source), [mobile](fixed-interactive/render/390.png), [desktop](fixed-interactive/render/1440.png), [200% text at320px](fixed-interactive/render/320-text-200.png). [Render, workflow and stress evidence](fixed-interactive/render/report.json).
+
+After two independent unrestricted component runs reproduced the wrong row, revision2 supplied immutable semantic markup and made the shared assembly own the action grid. All three local CSS components then completed on their first attempt and the row audit passed at all four widths. [Exact changed plan](fixed-scaffold/source/design/component-plan.json), [raw generation](fixed-scaffold/generation). This is a materially more assisted method, not evidence that the model independently improved its design judgment.
+
+The first fixed-scaffold output still hid the enlarged button label with nowrap/ellipsis. [Stress failure](fixed-scaffold/stress/report.json). One bounded local [wrapping repair](wrap-repair/repair.json) removed the truncation and allowed content-driven height. The integrated candidate has zero reported clipping candidates, viewport overflow or out-of-viewport elements in both computed200% text and text-spacing runs at296/320/390/1440px. The320px enlarged render was directly inspected. Native-device zoom and enlarged dialog states remain unverified. Run capture-stress.mjs with the same two path arguments as capture.mjs to replay this expanded diagnostic.
+
+The earlier interactive candidate below is retained for comparison.
+
 An [independent generation from the same original plan](independent-repeat/generation) reproduced the stacked favorite/action defect at all four widths. [Render](independent-repeat/render/390.png), [audit](independent-repeat/render/report.json). The price audit also failed to resolve its selector because this generation chose a different class; that failure is not proof of a misplaced price. Both remain recorded. This repeat confirms that the repaired screenshot does not establish reliable generation.
 
 [Complete interactive source](interactive/source), [mobile](interactive/render/390.png), [desktop](interactive/render/1440.png), [booking form](interactive/render/form-390.png), [persisted confirmation](interactive/render/confirmation-390.png), [source-bound report](interactive/render/report.json).
@@ -32,6 +40,6 @@ Replay from the repository root: set CHROME_PATH if using installed Chrome, then
 
 Directly inspected initial, failed, corrected mobile/desktop and form screenshots. Concrete improvement: actual subject photography replaces anonymous geometry; title/price metadata read separately; the primary action has a deliberate own region; mobile favorite no longer creates an empty extra row.
 
-Still not approved: the original warm terrarium photo and compact host/avatar treatment differ, the candidate has additional explanatory copy and a brand header, and desktop is a chosen adaptation without a desktop reference. The comparison uses390 CSS px shown at296 display px; the native source CSS width is unknown. All75rules/eight guides are not certified. Text enlargement, storage-denial and full catalog navigation are outside this focused run. Repeated independent generation and other original rounds/services remain required.
+Still not approved: the original warm terrarium photo and compact host/avatar treatment differ, the candidate has additional explanatory copy and a brand header, and desktop is a chosen adaptation without a desktop reference. The comparison uses390 CSS px shown at296 display px; the native source CSS width is unknown. All75rules/eight guides are not certified. Storage-denial and full catalog navigation are outside this focused run. The original candidate lacked stress coverage; the latest fixed-scaffold candidate includes the bounded stress diagnostics described above. Repeated independent generation and other original rounds/services remain required.
 
 Common regression suite after sameRow gate:98unit/integration tests and42browser tests passed. Those counts describe harness regression checks, not the visual quality of this candidate.

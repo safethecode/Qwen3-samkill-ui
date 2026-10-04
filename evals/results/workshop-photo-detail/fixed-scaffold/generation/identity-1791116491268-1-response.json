@@ -1,0 +1,33 @@
+{
+  "binding": "34b218a152fc1216db77fe44890e8ddcda1cd269dce4bb904c75eb537553ed7b",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 43519,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:21:31.2678461Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"css\": \"/* Identity Section Spacing & Layout */\\n.product-identity {\\n  padding-top: 24px;\\n  padding-bottom: 24px;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-identity {\\n    padding-top: 0;\\n  }\\n}\\n\\n/* Eyebrow */\\n.product-identity .eyebrow {\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #60606a;\\n  margin-bottom: 8px;\\n}\\n\\n/* Title */\\n.product-identity .title {\\n  font-size: 22px;\\n  font-weight: 700;\\n  line-height: 1.45;\\n  color: #202024;\\n  margin: 0;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-identity .title {\\n    font-size: 28px;\\n  }\\n}\\n\\n/* Price Row */\\n.product-identity .price-row {\\n  margin-top: 12px;\\n  margin-bottom: 24px;\\n}\\n\\n.product-identity .price {\\n  display: block;\\n  font-size: 24px;\\n  font-weight: 800;\\n  color: #202024;\\n}\\n\\n/* Metadata */\\n.product-identity .metadata {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 16px;\\n  margin-bottom: 24px;\\n}\\n\\n.product-identity .meta-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 8px;\\n}\\n\\n.product-identity .meta-item img {\\n  width: 20px;\\n  height: 20px;\\n  display: block;\\n  flex-shrink: 0;\\n}\\n\\n.product-identity .meta-item span {\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #555560;\\n  white-space: nowrap;\\n}\\n\\n/* Description */\\n.product-identity .description {\\n  margin-top: 20px;\\n  font-size: 15px;\\n  line-height: 1.75;\\n  color: #202024;\\n  margin-bottom: 0;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 43516400200,
+  "load_duration": 3636600,
+  "prompt_eval_count": 2160,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 24506432000,
+  "eval_count": 568,
+  "eval_duration": 18997105000
+}
