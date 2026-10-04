@@ -1,0 +1,33 @@
+{
+  "binding": "4e8a710fcb6708e76dbd430d6e6f3c19baa1ec2868f1ca1675f42b7424a4553b",
+  "settings": {
+    "model": "qwen3-coder:30b",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 101629,
+  "model": "qwen3-coder:30b",
+  "created_at": "2026-10-04T22:36:35.7488688Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \"#booking-layout{padding:20px 0;border-top:1px solid #ededf0}#booking-layout .booking-host{margin-bottom:20px}#booking-layout .booking-host-title{font-size:16px;font-weight:700;line-height:1.4}#booking-layout .booking-host-subtitle{font-size:14px;color:#60606a;line-height:1.4;margin-top:4px}#booking-layout .booking-action-row{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px}#booking-layout .booking-icon-btn{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:none;background:transparent;cursor:pointer;padding:0;transition:background-color 0.2s}#booking-layout .booking-icon-btn:focus-visible{outline:3px solid #5146d7;outline-offset:4px}#booking-layout .booking-icon-btn:hover,#booking-layout .booking-icon-btn:active{background-color:#f5f5f5}#booking-layout .booking-primary-btn{height:52px;background:#5146d7;color:white;font-size:16px;font-weight:700;border-radius:6px;border:none;cursor:pointer;transition:background-color 0.2s;padding:0}#booking-layout .booking-primary-btn:focus-visible{outline:3px solid #5146d7;outline-offset:4px}#booking-layout .booking-primary-btn:hover,#booking-layout .booking-primary-btn:active{background-color:#443aa8}#booking-layout .booking-note{font-size:14px;line-height:1.6;color:#60606a;margin-top:12px}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 101625975800,
+  "load_duration": 4149900,
+  "prompt_eval_count": 9883,
+  "prompt_eval_cached_count": 8976,
+  "prompt_eval_duration": 11809968000,
+  "eval_count": 398,
+  "eval_duration": 89763043000
+}

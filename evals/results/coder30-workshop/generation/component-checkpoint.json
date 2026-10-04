@@ -1,0 +1,31 @@
+{
+  "binding": "4e8a710fcb6708e76dbd430d6e6f3c19baa1ec2868f1ca1675f42b7424a4553b",
+  "settings": {
+    "model": "qwen3-coder:30b",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "completed": {
+    "media": {
+      "html": "<figure class=\"product-media\" data-ui-unit=\"media\"><img src=\"assets/photos/pottery.jpg\" alt=\"물레 위 흙을 손으로 빚는 도자기 작업\"></figure>",
+      "css": "[data-ui-unit=\"media\"].product-media{margin:0}@media(min-width:701px){[data-ui-unit=\"media\"].product-media{border-radius:8px}}"
+    },
+    "identity": {
+      "html": "<section data-ui-unit=\"identity\" class=\"product-identity\">\n  <div class=\"eyebrow\">도자기 · 입문</div>\n  <h1 class=\"title\">내 손으로 빚는 첫 번째 도자기 잔</h1>\n  <div class=\"price-row\">\n    <span class=\"price\">55,000원</span>\n  </div>\n  <div class=\"metadata\">\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Clock.svg\" alt=\"\"\n           class=\"icon-clock\">\n      <span>90분</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Users.svg\" alt=\"\"\n           class=\"icon-users\">\n      <span>최대6명</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/MapPin.svg\" alt=\"\"\n           class=\"icon-map-pin\">\n      <span>서울·연남동</span>\n    </div>\n  </div>\n  <p class=\"description\">\n    흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.\n  </p>\n</section>",
+      "css": "[data-ui-unit=\"identity\"].product-identity{padding-top:24px;padding-bottom:24px}[data-ui-unit=\"identity\"] h1.title{font-size:22px;font-weight:700;line-height:1.45;margin:12px 0 0}@media(min-width:701px){[data-ui-unit=\"identity\"] h1.title{font-size:28px}}[data-ui-unit=\"identity\"] .price-row{margin:12px 0 0}[data-ui-unit=\"identity\"] .price{font-size:24px;font-weight:800}[data-ui-unit=\"identity\"] .metadata{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px}[data-ui-unit=\"identity\"] .meta-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#555560}[data-ui-unit=\"identity\"] .meta-item .icon-clock,[data-ui-unit=\"identity\"] .meta-item .icon-users,[data-ui-unit=\"identity\"] .meta-item .icon-map-pin{width:20px;height:20px}[data-ui-unit=\"identity\"] description{margin-top:20px;font-size:15px;line-height:1.75}"
+    },
+    "booking": {
+      "html": "<section data-ui-unit=\"booking\" id=\"booking-layout\">\n  <div class=\"booking-host\">\n    <h3 class=\"booking-host-title\">틈 도자기 스튜디오</h3>\n    <p class=\"booking-host-subtitle\">재료와 도구 포함 · 완성품 소성 후 수령</p>\n  </div>\n  <div class=\"booking-action-row\" id=\"booking-actions\">\n    <button id=\"favorite\" class=\"booking-icon-btn\" type=\"button\" aria-label=\"수업 찜하기\" aria-pressed=\"false\">\n      <img src=\"assets/icons/Heart.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n    <button id=\"book\" class=\"booking-primary-btn\" type=\"button\">일정 선택하고 예약하기</button>\n  </div>\n  <p class=\"booking-note\">일정을 선택한 뒤 예약 내용을 확인할 수 있어요.</p>\n</section>",
+      "css": "[data-ui-unit=\"booking\"]#booking-layout{padding:20px 0;border-top:1px solid #ededf0}[data-ui-unit=\"booking\"]#booking-layout .booking-host{margin-bottom:20px}[data-ui-unit=\"booking\"]#booking-layout .booking-host-title{font-size:16px;font-weight:700;line-height:1.4}[data-ui-unit=\"booking\"]#booking-layout .booking-host-subtitle{font-size:14px;color:#60606a;line-height:1.4;margin-top:4px}[data-ui-unit=\"booking\"]#booking-layout .booking-action-row{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px}[data-ui-unit=\"booking\"]#booking-layout .booking-icon-btn{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:none;background:transparent;cursor:pointer;padding:0;transition:background-color 0.2s}[data-ui-unit=\"booking\"]#booking-layout .booking-icon-btn:focus-visible{outline:3px solid #5146d7;outline-offset:4px}[data-ui-unit=\"booking\"]#booking-layout .booking-icon-btn:hover,[data-ui-unit=\"booking\"]#booking-layout .booking-icon-btn:active{background-color:#f5f5f5}[data-ui-unit=\"booking\"]#booking-layout .booking-primary-btn{height:52px;background:#5146d7;color:white;font-size:16px;font-weight:700;border-radius:6px;border:none;cursor:pointer;transition:background-color 0.2s;padding:0}[data-ui-unit=\"booking\"]#booking-layout .booking-primary-btn:focus-visible{outline:3px solid #5146d7;outline-offset:4px}[data-ui-unit=\"booking\"]#booking-layout .booking-primary-btn:hover,[data-ui-unit=\"booking\"]#booking-layout .booking-primary-btn:active{background-color:#443aa8}[data-ui-unit=\"booking\"]#booking-layout .booking-note{font-size:14px;line-height:1.6;color:#60606a;margin-top:12px}"
+    }
+  }
+}
