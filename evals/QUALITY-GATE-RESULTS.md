@@ -4,7 +4,7 @@
 
 **INCOMPLETE. No candidate has demonstrated unattended samkill-ui parity.** The passing tests below verify the harness, not generated design quality. Fonts, icon assets, rendered states and the full original rule catalog were insufficiently covered by the earlier gate.
 
-The current harness passes 117 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
+The current harness passes 119 Node/browser regression tests. Both the service and default resume routes now inspect rendered fonts and icons at 1440/390/320 pixels. Unknown findings require individual, rule-specific resolutions; acknowledging one evidence file cannot clear unrelated findings. Extra local CSS, JavaScript and font/media files participate in source freshness, and unbound dependencies cannot be served by the evaluator. Completion also requires the 75-rule catalog and eight-guide review. Review drafts are not an automatic reviewer or proof of convergence.
 
 An independent inspection of the actual generated workshop sample found **19 failed, 30 unknown, 9 scoped passes and 17 inapplicable catalog rules**. Its eight guide assessments are **5 failed, 2 unknown and 1 inapplicable**. The saved browser evaluation is **18/27** under the recorded pre-final harness. These counts must not be compared directly with later expanded check sets. [Full scoped audit](results/rule-coverage/workshop/audit.json), [browser report](results/rule-coverage/workshop/evidence/report.json), [generated source](results/rule-coverage/workshop/source).
 
@@ -27,7 +27,7 @@ These are historical measurements from the harness hashes in the linked record, 
 
 ## Grid reflow investigation — 2026-10-04
 
-Learning's retained source remains38/39. A host-only mobile grid counterfactual reaches39/39 by changing the flexible track to `minmax(0, 1fr)`. Computed grid constraints now lead bounded-repair feedback, alongside flex constraints. All117 harness tests passed. Actual local-model repair is being measured separately; no local success or visual parity is inferred from the host probe. [Bound diagnostic and limitations](results/grid-reflow/visual-review.md).
+Learning started at **38/39**. A host-only counterfactual confirmed the intrinsic grid constraint. The actual broad-excerpt repair failed four times; complete CSS rule units then reached **39/39 in three attempts**. After preserving original indentation, another local run changed only the mobile track to `minmax(0, 1fr)` and reached **39/39 on its first attempt**. Both published outputs were independently revalidated. Horizontal navigation, font intent and overall design/catalog approval remain unresolved. [Bound experiments and limitations](results/grid-reflow/visual-review.md).
 
 ## Intrinsic flex repair — 2026-10-04
 

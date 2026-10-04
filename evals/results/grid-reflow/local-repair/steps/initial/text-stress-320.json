@@ -1,0 +1,560 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 386,
+    "overflowPx": 65,
+    "flexPressure": [],
+    "gridPressure": [
+      {
+        "tag": "NAV",
+        "id": "course-nav",
+        "class": "",
+        "width": 370,
+        "minWidth": "auto",
+        "parent": {
+          "tag": "MAIN",
+          "id": "",
+          "class": "app-layout",
+          "width": 320,
+          "scrollWidth": 386,
+          "columns": "370px"
+        },
+        "hypothesis": "An automatic grid track or item minimum may force this row wider than its container. Inspect the track definition and item min-width; a zero-minimum flexible track such as minmax(0,1fr) may permit reflow. Preserve content and font size; do not hide overflow."
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "lesson-view",
+        "width": 370,
+        "minWidth": "auto",
+        "parent": {
+          "tag": "MAIN",
+          "id": "",
+          "class": "app-layout",
+          "width": 320,
+          "scrollWidth": 386,
+          "columns": "370px"
+        },
+        "hypothesis": "An automatic grid track or item minimum may force this row wider than its container. Inspect the track definition and item min-width; a zero-minimum flexible track such as minmax(0,1fr) may permit reflow. Preserve content and font size; do not hide overflow."
+      }
+    ],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "NAV",
+        "id": "course-nav",
+        "class": "",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 370,
+        "scrollWidth": 1259,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "auto"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-weeks",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 1259,
+        "scrollWidth": 1259,
+        "height": 172,
+        "scrollHeight": 172,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "2주: 시각적 대비와 색상대비와 색상폼 오류 안내",
+        "width": 297,
+        "scrollWidth": 297,
+        "height": 172,
+        "scrollHeight": 172,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "2주: 시각적 대비와 색상",
+        "width": 297,
+        "scrollWidth": 297,
+        "height": 42,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "대비와 색상폼 오류 안내",
+        "width": 297,
+        "scrollWidth": 297,
+        "height": 126,
+        "scrollHeight": 126,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "대비와 색상",
+        "width": 297,
+        "scrollWidth": 297,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "폼 오류 안내",
+        "width": 297,
+        "scrollWidth": 297,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "3주: 초점 관리와 상호작용초점 관리반응형 확대",
+        "width": 324,
+        "scrollWidth": 324,
+        "height": 172,
+        "scrollHeight": 172,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "3주: 초점 관리와 상호작용",
+        "width": 324,
+        "scrollWidth": 324,
+        "height": 42,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "초점 관리반응형 확대",
+        "width": 324,
+        "scrollWidth": 324,
+        "height": 126,
+        "scrollHeight": 126,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "초점 관리",
+        "width": 324,
+        "scrollWidth": 324,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "반응형 확대",
+        "width": 324,
+        "scrollWidth": 324,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "4주: 읽기 순서와 최종 점검읽기 순서최종 점검",
+        "width": 334,
+        "scrollWidth": 334,
+        "height": 172,
+        "scrollHeight": 172,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "4주: 읽기 순서와 최종 점검",
+        "width": 334,
+        "scrollWidth": 334,
+        "height": 42,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "읽기 순서최종 점검",
+        "width": 334,
+        "scrollWidth": 334,
+        "height": 126,
+        "scrollHeight": 126,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "읽기 순서",
+        "width": 334,
+        "scrollWidth": 334,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "최종 점검",
+        "width": 334,
+        "scrollWidth": 334,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "lesson-view",
+        "text": "강의를 선택하세요\n    왼쪽 메뉴에서 학습할 강의를 선택하면 상세 내용이 표시됩니다.\n    학습 완료\n    0/8 학습 완료\n    \n      학습 메모\n      \n   ",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 860,
+        "scrollHeight": 860,
+        "overflow": "visible"
+      },
+      {
+        "tag": "SECTION",
+        "id": "lesson-title",
+        "class": "",
+        "text": "강의를 선택하세요",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 53,
+        "scrollHeight": 58,
+        "overflow": "visible"
+      },
+      {
+        "tag": "SECTION",
+        "id": "lesson-content",
+        "class": "",
+        "text": "왼쪽 메뉴에서 학습할 강의를 선택하면 상세 내용이 표시됩니다.",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 154,
+        "scrollHeight": 154,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "complete",
+        "class": "",
+        "text": "학습 완료",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 61,
+        "scrollHeight": 61,
+        "overflow": "visible"
+      },
+      {
+        "tag": "SECTION",
+        "id": "progress",
+        "class": "",
+        "text": "0/8 학습 완료",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 50,
+        "scrollHeight": 50,
+        "overflow": "visible"
+      },
+      {
+        "tag": "FORM",
+        "id": "note-form",
+        "class": "",
+        "text": "학습 메모\n      \n      메모 저장",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 446,
+        "scrollHeight": 446,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "",
+        "text": "학습 메모",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 48,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "TEXTAREA",
+        "id": "note",
+        "class": "",
+        "text": "",
+        "width": 368,
+        "scrollWidth": 368,
+        "height": 320,
+        "scrollHeight": 320,
+        "overflow": "auto"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "MAIN",
+        "id": "",
+        "class": "app-layout",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 320,
+        "scrollWidth": 386,
+        "height": 1096,
+        "scrollHeight": 1096,
+        "overflow": "visible"
+      },
+      {
+        "tag": "NAV",
+        "id": "course-nav",
+        "class": "",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 370,
+        "scrollWidth": 1259,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "auto"
+      },
+      {
+        "tag": "SECTION",
+        "id": "lesson-title",
+        "class": "",
+        "text": "강의를 선택하세요",
+        "width": 370,
+        "scrollWidth": 370,
+        "height": 53,
+        "scrollHeight": 58,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-weeks",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 751,
+        "scrollWidth": 751,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "2주: 시각적 대비와 색상대비와 색상폼 오류 안내",
+        "width": 169,
+        "scrollWidth": 169,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "2주: 시각적 대비와 색상",
+        "width": 169,
+        "scrollWidth": 169,
+        "height": 21,
+        "scrollHeight": 21,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "대비와 색상폼 오류 안내",
+        "width": 169,
+        "scrollWidth": 169,
+        "height": 81,
+        "scrollHeight": 81,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "대비와 색상",
+        "width": 169,
+        "scrollWidth": 169,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "폼 오류 안내",
+        "width": 169,
+        "scrollWidth": 169,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "3주: 초점 관리와 상호작용초점 관리반응형 확대",
+        "width": 183,
+        "scrollWidth": 183,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "3주: 초점 관리와 상호작용",
+        "width": 183,
+        "scrollWidth": 183,
+        "height": 21,
+        "scrollHeight": 21,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "초점 관리반응형 확대",
+        "width": 183,
+        "scrollWidth": 183,
+        "height": 81,
+        "scrollHeight": 81,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "초점 관리",
+        "width": 183,
+        "scrollWidth": 183,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "반응형 확대",
+        "width": 183,
+        "scrollWidth": 183,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-week",
+        "text": "4주: 읽기 순서와 최종 점검읽기 순서최종 점검",
+        "width": 191,
+        "scrollWidth": 191,
+        "height": 180,
+        "scrollHeight": 180,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "class": "week-title",
+        "text": "4주: 읽기 순서와 최종 점검",
+        "width": 191,
+        "scrollWidth": 191,
+        "height": 21,
+        "scrollHeight": 21,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "nav-lessons",
+        "text": "읽기 순서최종 점검",
+        "width": 191,
+        "scrollWidth": 191,
+        "height": 81,
+        "scrollHeight": 81,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "읽기 순서",
+        "width": 191,
+        "scrollWidth": 191,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "nav-lesson-btn",
+        "text": "최종 점검",
+        "width": 191,
+        "scrollWidth": 191,
+        "height": 39,
+        "scrollHeight": 39,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "NAV",
+        "id": "course-nav",
+        "class": "",
+        "text": "1주: HTML과 접근성의미 있는 HTML키보드 탐색2주: 시각적 대비와 색상대비와 색상폼 오류 안내3주: 초점 관리와 상호작용초점 관리반응형 확대4주: 읽기 순서와 최종 점검읽기",
+        "width": 288,
+        "scrollWidth": 751,
+        "height": 188,
+        "scrollHeight": 188,
+        "overflow": "auto"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

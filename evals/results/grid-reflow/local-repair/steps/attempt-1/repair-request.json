@@ -1,0 +1,10 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 6272,
+    "count": 52
+  },
+  "inputCharacters": 5802,
+  "maxOutputTokens": 2048
+}

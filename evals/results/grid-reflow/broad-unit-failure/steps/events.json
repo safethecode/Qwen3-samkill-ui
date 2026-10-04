@@ -1,0 +1,40 @@
+[
+  {
+    "attempt": 1,
+    "failure": "text-200-320",
+    "accepted": false,
+    "error": "Patch exceeds its selected source unit"
+  },
+  {
+    "attempt": 2,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": false,
+    "passed": 35,
+    "total": 39,
+    "regressions": [
+      "text-200-clipping-390",
+      "text-spacing-clipping-390",
+      "text-200-clipping-320",
+      "text-spacing-clipping-320"
+    ]
+  },
+  {
+    "attempt": 3,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": true,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  },
+  {
+    "attempt": 4,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": true,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  }
+]

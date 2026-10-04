@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 5000,
+    "count": 2
+  },
+  "inputCharacters": 8684,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 24815,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 2452,
+  "prompt_eval_duration": 5934669000,
+  "load_duration": 3097800,
+  "eval_count": 564,
+  "eval_duration": 18715656000,
+  "total_duration": 24799543600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"@media (max-width: 390px) {\\n  .app-header {\\n    flex-direction: column;\\n    align-items: stretch;\\n    padding: var(--space-md);\\n    gap: var(--space-sm);\\n  }\\n\\n  #search-form {\\n    width: 100%;\\n  }\\n\\n  #search {\\n    width: 100%;\\n  }\\n\\n  .app-layout {\\n    grid-template-columns: 1fr;\\n    padding: var(--space-md);\\n    gap: var(--space-lg);\\n  }\\n\\n  #course-nav {\\n    flex-direction: row;\\n    overflow-x: auto;\\n    padding-bottom: var(--space-sm);\\n    -webkit-overflow-scrolling: touch;\\n  }\\n\\n  .nav-weeks {\\n    display: flex;\\n    gap: var(--space-md);\\n    min-width: max-content;\\n  }\\n\\n  .nav-week {\\n    display: inline-flex;\\n    flex-direction: column;\\n    gap: var(--space-xs);\\n    min-width: 120px;\\n  }\",\n      \"newString\": \"@media (max-width: 390px) {\\n  .app-header {\\n    flex-direction: column;\\n    align-items: stretch;\\n    padding: var(--space-md);\\n    gap: var(--space-sm);\\n  }\\n\\n  #search-form {\\n    width: 100%;\\n  }\\n\\n  #search {\\n    width: 100%;\\n  }\\n\\n  .app-layout {\\n    grid-template-columns: 1fr;\\n    padding: var(--space-md);\\n    gap: var(--space-lg);\\n  }\\n\\n  #course-nav {\\n    flex-direction: column;\\n    overflow-x: visible;\\n    padding-bottom: var(--space-sm);\\n    -webkit-overflow-scrolling: auto;\\n  }\\n\\n  .nav-weeks {\\n    display: flex;\\n    flex-wrap: wrap;\\n    gap: var(--space-md);\\n    min-width: 0;\\n  }\\n\\n  .nav-week {\\n    display: inline-flex;\\n    flex-direction: column;\\n    gap: var(--space-xs);\\n    min-width: 0;\\n    width: 100%;\\n  }\"\n    }\n  ]\n}"
+}

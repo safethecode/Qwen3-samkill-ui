@@ -1,0 +1,837 @@
+{
+  "typography": [],
+  "fonts": {
+    "fonts": [
+      {
+        "nodeId": 6,
+        "fonts": [
+          {
+            "familyName": "Noto Serif KR",
+            "postScriptName": "Noto-Serif-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 6
+          }
+        ]
+      },
+      {
+        "nodeId": 9,
+        "fonts": [
+          {
+            "familyName": "Noto Serif KR",
+            "postScriptName": "Noto-Serif-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 6
+          }
+        ]
+      },
+      {
+        "nodeId": 11,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 12,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 14,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 2
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 6
+          }
+        ]
+      },
+      {
+        "nodeId": 21,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 8
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 25,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 8
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 27,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 7
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 9
+          }
+        ]
+      },
+      {
+        "nodeId": 28,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 6
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 30,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 22,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 9
+          }
+        ]
+      },
+      {
+        "nodeId": 32,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 9
+          }
+        ]
+      },
+      {
+        "nodeId": 34,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 3
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 35,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 37,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 2
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 23,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 39,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 41,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 2
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 9
+          }
+        ]
+      },
+      {
+        "nodeId": 42,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 44,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 5
+          }
+        ]
+      },
+      {
+        "nodeId": 24,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 6
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 46,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 6
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 48,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 2
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 8
+          }
+        ]
+      },
+      {
+        "nodeId": 49,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 51,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 17,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 57
+          },
+          {
+            "familyName": "Noto Serif KR",
+            "postScriptName": "Noto-Serif-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 67
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 53,
+        "fonts": [
+          {
+            "familyName": "Noto Serif KR",
+            "postScriptName": "Noto-Serif-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      {
+        "nodeId": 55,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 51
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 63
+          }
+        ]
+      },
+      {
+        "nodeId": 57,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 59,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 5
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 61,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 2
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 4
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 62,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Medium",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      },
+      {
+        "nodeId": 66,
+        "fonts": [
+          {
+            "familyName": "Segoe UI Semibold",
+            "postScriptName": "SegoeUI-Semibold",
+            "isCustomFont": false,
+            "glyphCount": 1
+          },
+          {
+            "familyName": "Noto Sans KR",
+            "postScriptName": "Noto-Sans-KR-Bold",
+            "isCustomFont": false,
+            "glyphCount": 4
+          }
+        ]
+      }
+    ],
+    "roles": [],
+    "webFonts": [],
+    "surfaces": [
+      {
+        "tag": "H1",
+        "id": "",
+        "pseudo": null,
+        "text": "갈피 학습실",
+        "declaredFamily": "\"Noto Serif KR\", Georgia, serif",
+        "ratio": 7.370513347297348,
+        "threshold": 3,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "pseudo": null,
+        "text": "강의 검색",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 16.31832264981189,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "pseudo": null,
+        "text": "강의 제목 검색",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "pseudo": "::placeholder",
+        "text": "강의 제목 검색",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "pseudo": null,
+        "text": "1주: HTML과 접근성",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "의미 있는 HTML",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 9.387940982559671,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "키보드 탐색",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "pseudo": null,
+        "text": "2주: 시각적 대비와 색상",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "대비와 색상",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "폼 오류 안내",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "pseudo": null,
+        "text": "3주: 초점 관리와 상호작용",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "초점 관리",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "반응형 확대",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "H3",
+        "id": "",
+        "pseudo": null,
+        "text": "4주: 읽기 순서와 최종 점검",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "읽기 순서",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "최종 점검",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "SECTION",
+        "id": "lesson-title",
+        "pseudo": null,
+        "text": "의미 있는 HTML",
+        "declaredFamily": "\"Noto Serif KR\", Georgia, serif",
+        "ratio": 14.864992735446304,
+        "threshold": 3,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "SECTION",
+        "id": "lesson-content",
+        "pseudo": null,
+        "text": "HTML의 시맨틱 태그를 사용하여 문서의 구조와 의미를 명확히 합니다. heading, list, landm",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "complete",
+        "pseudo": null,
+        "text": "학습 완료",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 2.162081153549919,
+        "threshold": 4.5,
+        "uncertain": true,
+        "disabled": true
+      },
+      {
+        "tag": "SECTION",
+        "id": "progress",
+        "pseudo": null,
+        "text": "1/8 학습 완료",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.855387599942102,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "pseudo": null,
+        "text": "학습 메모",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 14.864992735446304,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "id": "note",
+        "pseudo": null,
+        "text": "첫 수업 메모",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 21,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "pseudo": null,
+        "text": "메모 저장",
+        "declaredFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif",
+        "ratio": 6.714086350373033,
+        "threshold": 4.5,
+        "uncertain": false,
+        "disabled": false
+      }
+    ],
+    "issues": [
+      {
+        "status": "UNVERIFIED",
+        "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity"
+      }
+    ],
+    "scope": "Actual Chromium platform fonts and solid-background text contrast. Complex surfaces require separate rendered evidence; font-family declarations alone do not establish fidelity."
+  },
+  "icons": {
+    "icons": [],
+    "issues": [],
+    "scope": "Official inline geometry and basic control semantics; optical alignment, actual edge clicks and state transitions require separate evidence."
+  }
+}

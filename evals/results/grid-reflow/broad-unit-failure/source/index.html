@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>갈피 학습실</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>갈피 학습실</h1>
+  <form id="search-form" role="search">
+    <label for="search" class="sr-only">강의 검색</label>
+    <input id="search" type="search" placeholder="강의 제목 검색">
+  </form>
+</header>
+<main class="app-layout">
+  <nav id="course-nav" aria-label="학습 과정">
+    <div class="nav-weeks"></div>
+    <div id="empty-state" class="hidden">검색 결과가 없습니다.</div>
+  </nav>
+  <section class="lesson-view">
+    <section id="lesson-title"></section>
+    <section id="lesson-content"></section>
+    <button id="complete" type="button">학습 완료</button>
+    <section id="progress"></section>
+    <form id="note-form">
+      <label for="note">학습 메모</label>
+      <textarea id="note" rows="6" placeholder="현재 강의에 대한 메모를 작성하세요."></textarea>
+      <button type="submit">메모 저장</button>
+    </form>
+  </section>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
