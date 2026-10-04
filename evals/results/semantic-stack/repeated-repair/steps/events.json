@@ -1,0 +1,11 @@
+[
+  {
+    "attempt": 1,
+    "failure": "contract-stack-390",
+    "accepted": true,
+    "pending": false,
+    "passed": 41,
+    "total": 41,
+    "regressions": []
+  }
+]

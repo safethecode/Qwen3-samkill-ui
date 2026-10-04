@@ -1,0 +1,374 @@
+{
+  "items": [
+    {
+      "name": "의미 있는 HTML",
+      "left": 16,
+      "right": 182.84375,
+      "top": 160,
+      "bottom": 198.5,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "키보드 탐색",
+      "left": 16,
+      "right": 182.84375,
+      "top": 202.5,
+      "bottom": 241,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "대비와 색상",
+      "left": 16,
+      "right": 182.84375,
+      "top": 282,
+      "bottom": 320.5,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "폼 오류 안내",
+      "left": 16,
+      "right": 182.84375,
+      "top": 324.5,
+      "bottom": 363,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "초점 관리",
+      "left": 16,
+      "right": 182.84375,
+      "top": 404,
+      "bottom": 442.5,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "반응형 확대",
+      "left": 16,
+      "right": 182.84375,
+      "top": 446.5,
+      "bottom": 485,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "읽기 순서",
+      "left": 16,
+      "right": 182.84375,
+      "top": 526,
+      "bottom": 564.5,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "최종 점검",
+      "left": 16,
+      "right": 182.84375,
+      "top": 568.5,
+      "bottom": 607,
+      "viewport": 320,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-lessons",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "auto",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-week",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "100px",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "nav-weeks",
+          "display": "flex",
+          "direction": "column",
+          "minWidth": "max-content",
+          "overflowX": "visible"
+        },
+        {
+          "tag": "NAV",
+          "id": "course-nav",
+          "class": "",
+          "display": "flex",
+          "direction": "row",
+          "minWidth": "auto",
+          "overflowX": "auto"
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "scope": "Explicit ordered-button stacking only; not a compactness, week-control, typography or overall design approval."
+}

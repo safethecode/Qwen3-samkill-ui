@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 2565,
+    "count": 52
+  },
+  "inputCharacters": 5767,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 39822,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 1411,
+  "prompt_eval_duration": 15142161000,
+  "load_duration": 16001389200,
+  "eval_count": 164,
+  "eval_duration": 8648343000,
+  "total_duration": 39802998200,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".nav-lessons {\\n  display: flex;\\n  flex-direction: column;\\n  gap: var(--space-xs);\\n}\",\n      \"newString\": \".nav-lessons {\\n  display: flex;\\n  flex-direction: column;\\n  gap: var(--space-xs);\\n}\\n@media (max-width: 390px) {\\n  .nav-weeks {\\n    flex-direction: column;\\n    overflow-x: visible;\\n  }\\n  .nav-week {\\n    min-width: auto;\\n    width: 100%;\\n  }\\n}\"\n    }\n  ]\n}"
+}
