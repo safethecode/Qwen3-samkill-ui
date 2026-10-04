@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 11570,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 52896,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3674,
+  "prompt_eval_duration": 42105191000,
+  "load_duration": 2650000,
+  "eval_count": 304,
+  "eval_duration": 10697113000,
+  "total_duration": 52876245200,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".nav-lesson-btn {\\n  display: block;\\n  width: 100%;\\n  text-align: left;\\n  padding: var(--space-sm) var(--space-md);\\n  font-size: 15px;\\n  font-weight: 500;\\n  color: var(--color-text-primary);\\n  background: transparent;\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, color 0.2s ease;\\n}\",\n      \"newString\": \".nav-lesson-btn {\\n  display: block;\\n  width: 100%;\\n  text-align: left;\\n  padding: var(--space-sm) var(--space-md);\\n  font-size: 15px;\\n  font-weight: 500;\\n  color: var(--color-text-primary);\\n  background: transparent;\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, color 0.2s ease;\\n  white-space: normal;\\n  word-break: break-word;\\n}\"\n    }\n  ]\n}"
+}

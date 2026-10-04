@@ -29,7 +29,7 @@ These are historical measurements from the harness hashes in the linked record, 
 
 A measured root-cause probe identified the search input's intrinsic minimum width as the cause of Round 02 enlarged-text overflow. The host counterfactual is recorded separately from the actual local-model run. With computed flex constraints supplied first in its feedback, Qwen produced the correct `min-width: 0` patch on its **first attempt: 35/37 to 37/37**, confirmed by published-source revalidation. It did not hide overflow or remove content. [Source-bound experiment and direct inspection](results/flex-reflow/visual-review.md).
 
-This is a specific repair improvement. Descriptions still truncate, metadata/footer composition remains poor and intended font/catalog approval is missing. **No design parity is claimed.** A second repair from the unchanged original also passed37/37 on its first attempt and was independently revalidated. A Learning service trial remains pending; all116 harness tests passed.
+This is a specific repair improvement. Descriptions still truncate, metadata/footer composition remains poor and intended font/catalog approval is missing. **No design parity is claimed.** A second repair from the unchanged original also passed37/37 on its first attempt and was independently revalidated. Learning improved33/39 to38/39 by fixing placeholder contrast; its enlarged-text layout remains broken after three further attempts. All116 harness tests passed.
 
 ## Enlarged-text repair integration — 2026-10-04
 

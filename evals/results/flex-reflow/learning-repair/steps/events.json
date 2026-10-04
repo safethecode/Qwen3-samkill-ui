@@ -1,0 +1,38 @@
+[
+  {
+    "attempt": 1,
+    "failure": "font-rendering-1440",
+    "accepted": true,
+    "pending": false,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  },
+  {
+    "attempt": 2,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": true,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  },
+  {
+    "attempt": 3,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": true,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  },
+  {
+    "attempt": 4,
+    "failure": "text-200-320",
+    "accepted": false,
+    "pending": true,
+    "passed": 38,
+    "total": 39,
+    "regressions": []
+  }
+]

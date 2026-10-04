@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 11770,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 53758,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3694,
+  "prompt_eval_duration": 42276336000,
+  "load_duration": 3661500,
+  "eval_count": 327,
+  "eval_duration": 11395522000,
+  "total_duration": 53743327600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".nav-lesson-btn {\\n  display: block;\\n  width: 100%;\\n  text-align: left;\\n  padding: var(--space-sm) var(--space-md);\\n  font-size: 15px;\\n  font-weight: 500;\\n  color: var(--color-text-primary);\\n  background: transparent;\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, color 0.2s ease;\\n  white-space: normal;\\n  word-break: break-word;\\n}\",\n      \"newString\": \".nav-lesson-btn {\\n  display: block;\\n  width: 100%;\\n  text-align: left;\\n  padding: var(--space-sm) var(--space-md);\\n  font-size: 15px;\\n  font-weight: 500;\\n  color: var(--color-text-primary);\\n  background: transparent;\\n  border: none;\\n  border-radius: var(--radius-sm);\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, color 0.2s ease;\\n  white-space: normal;\\n  word-break: break-word;\\n  overflow-wrap: break-word;\\n}\"\n    }\n  ]\n}"
+}

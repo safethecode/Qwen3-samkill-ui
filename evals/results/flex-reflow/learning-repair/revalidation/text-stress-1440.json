@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "SECTION",
+        "id": "lesson-title",
+        "class": "",
+        "text": "강의를 선택하세요",
+        "width": 720,
+        "scrollWidth": 720,
+        "height": 77,
+        "scrollHeight": 84,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]
