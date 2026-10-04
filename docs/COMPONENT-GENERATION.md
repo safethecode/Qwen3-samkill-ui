@@ -22,6 +22,8 @@ Reuse the upstream reference-decompose E/O records and corrected prompts. Keep o
 
 ## Repair one existing element
 
+The component validator rejects all `+` and `~` selector combinators, including descendant siblings within a valid component root. Use a parent gap or `:not(:first-child)` for repeated-group spacing. Generation prompts state this restriction explicitly, and retry errors identify the rejected selector. This restriction has not been loosened for a particular reference.
+
 Run `node scripts/repair-component.mjs TARGET EVIDENCE ID COMPONENT_JSON FAILURE_TEXT` with a fresh evidence directory outside the source. COMPONENT_JSON contains the exact current `{html, css}` fragment; FAILURE_TEXT describes the observed defect and relevant reference comparison. Use the `after` fragment from the latest accepted repair when repairing an element again. Never reuse stale generation fragments after changing that element.
 
 The runner checks that the fragment occurs exactly once in both assembly and sample and that its CSS matches the current stylesheet. It supplies shared and element contracts to the local model and accepts at most three bounded patches. Fixed plan HTML stays immutable. Undeclared assets, escaping CSS, truncated output and source/harness changes are rejected before writes. The same accepted HTML is applied to sample and assembly, and unrelated elements and behavior remain untouched. Raw responses and before/after bindings are saved.

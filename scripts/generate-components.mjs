@@ -46,6 +46,7 @@ export async function generateComponents(target, evidence, options = {}) {
           request.messages[1].content += `\nIMMUTABLE COMPONENT HTML\n${element.html}\nFINAL TASK: write only CSS for this HTML. ${element.prompt}`;
           request.format = { type: 'object', properties: { css: { type: 'string' } }, required: ['css'], additionalProperties: false };
         } else request.messages[1].content += `\nFINAL ELEMENT BOUNDARY\n${element.prompt}`;
+        request.messages[0].content += ' Never use + or ~ selector combinators, including between descendants inside the component. For spacing between repeated groups, use a parent gap or :not(:first-child) instead. The validator rejects all sibling combinators, not only selectors that escape the root.';
         const response = await (options.fetcher || fetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(300000) });
         if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
         const result = await response.json();

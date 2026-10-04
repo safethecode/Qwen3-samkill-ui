@@ -38,6 +38,7 @@ test('host selector scoping preserves component roots and children without docum
   assert.equal(scopeComponentCss(plan.elements[0], title.html, 'h1{color:black}'), '[data-ui-unit="E1"]{color:black}');
   assert.throws(() => scopeComponentCss(plan.elements[1], search.html, 'body{margin:0}'), /document scope/);
   assert.throws(() => scopeComponentCss(plan.elements[1], search.html, '[data-ui-unit="E2"] + main{color:red}'), /sibling/);
+  assert.throws(() => scopeComponentCss(plan.elements[1], search.html, '.day-group + .day-group{margin-top:40px}'), /\.day-group \+ \.day-group.*parent gap/);
 });
 
 test('component generation resumes fixed element outputs and rejects changed decomposition', async () => {
@@ -58,7 +59,7 @@ test('component generation resumes fixed element outputs and rejects changed dec
     const id = /ONE ELEMENT (E\d)/.exec(input)[1];
     calls.push(id);
     if (id === 'E1') assert.ok(!input.includes('ONE ELEMENT E2'));
-    if (id === 'E2') { assert.match(input, /IMMUTABLE COMPONENT HTML/); assert.equal(request.format.properties.html, undefined); }
+    if (id === 'E2') { assert.match(input, /IMMUTABLE COMPONENT HTML/); assert.equal(request.format.properties.html, undefined); assert.match(request.messages[0].content, /Never use \+ or ~/); }
     if (id === 'E2' && fail) throw new Error('Injected failure');
     return { ok: true, json: async () => ({ done_reason: 'stop', message: { content: JSON.stringify(id === 'E1' ? title : { css: search.css }) } }) };
   };

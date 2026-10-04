@@ -13,7 +13,8 @@ export function scopeComponentCss(element, html, source) {
   const css = postcss.parse(source);
   css.walkRules(rule => {
     rule.selectors = rule.selectors.map(selector => {
-      if (/^(?:html\b|body\b|:root\b)/i.test(selector) || /[+~]/.test(selector)) throw new Error('Component CSS cannot target document scope or sibling escapes');
+      if (/^(?:html\b|body\b|:root\b)/i.test(selector)) throw new Error(`Component CSS cannot target document scope: ${selector}`);
+      if (/[+~]/.test(selector)) throw new Error(`Component sibling combinators are not supported: ${selector}. Use parent gap or :not(:first-child) for repeated-group spacing, without + or ~.`);
       if (selector.startsWith(prefix)) return selector;
       if (root?.tagName && new RegExp(`^${root.tagName}(?=[\\s.#:[>]|$)`).test(selector)) return `${prefix}${selector.slice(root.tagName.length)}`;
       const first = /^[.#][\w-]+/.exec(selector)?.[0];
