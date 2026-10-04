@@ -10,6 +10,7 @@ import { inspectTypography } from './typography-check.mjs';
 import { inspectCardText } from './visibility.mjs';
 import { inspectFontRendering } from './font-rendering.mjs';
 import { inspectIcons } from './icon-check.mjs';
+import { inspectMediaVisibility } from './media-visibility.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
@@ -47,7 +48,14 @@ const presentation = async (page, name) => {
     reviewRequired.push(...reviewFindings(fonts.issues, evidence, 'fonts'));
     assert(!fonts.issues.some(issue => issue.status === 'FAIL'), JSON.stringify(fonts.issues.filter(issue => issue.status === 'FAIL')));
   });
-  await check(`icons-${name}`, async () => {
+    await check(`media-visibility-${name}`, async () => {
+      const media = await inspectMediaVisibility(page);
+      const mediaEvidence = `media-visibility-${name}.json`;
+      await writeFile(resolve(output, mediaEvidence), JSON.stringify(media, null, 2));
+      reviewRequired.push(...reviewFindings(media.issues, mediaEvidence, 'layout'));
+      assert(!media.issues.some(issue => issue.status === 'FAIL'), JSON.stringify(media.issues));
+    });
+    await check(`icons-${name}`, async () => {
     assert(!iconAssetError, iconAssetError);
     const icons = await inspectIcons(page, { verifiedImages: iconAssets });
     const evidence = `icons-${name}.json`;

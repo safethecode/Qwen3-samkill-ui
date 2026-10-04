@@ -5,6 +5,7 @@ import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { inspectTypography } from './typography-check.mjs';
 import { inspectIcons } from './icon-check.mjs';
+import { inspectMediaVisibility } from './media-visibility.mjs';
 import { inspectFontRendering } from './font-rendering.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
@@ -109,6 +110,10 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
         });
         await check(`runtime-${width}`, async () => assert.deepEqual(errors, []));
         await check(`assets-${width}`, async () => {
+          const media = await inspectMediaVisibility(page);
+          await writeFile(resolve(evidence, `media-visibility-${width}.json`), JSON.stringify(media, null, 2));
+          reviewRequired.push(...reviewFindings(media.issues, `media-visibility-${width}.json`, 'layout'));
+          assert.deepEqual(media.issues.filter(issue => issue.status === 'FAIL'), [], 'Images must retain visible area');
           const broken = await page.locator('img').evaluateAll(images => images.filter(image => image.getBoundingClientRect().width && image.getBoundingClientRect().height && (!image.complete || !image.naturalWidth)).map(image => image.getAttribute('src')));
           measurements[`assets-${width}`] = broken.length;
           assert.deepEqual(broken, [], 'Visible images failed to load');
