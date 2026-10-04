@@ -14,6 +14,7 @@ import { verifiedIconAssets } from './icon-assets.mjs';
 import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
 import { hasVisibleLabel } from './label-check.mjs';
+import { readLayoutContract, inspectLayoutContract } from './layout-contract.mjs';
 
 const root = await realpath(resolve(process.argv[2] || 'runs/resume'));
 const output = resolve(process.argv[3] || 'runs/evidence');
@@ -23,6 +24,7 @@ const { chromium } = await import(process.env.PLAYWRIGHT_MODULE ? pathToFileURL(
 await mkdir(output, { recursive: true });
 const results = [];
 const reviewRequired = [];
+const layoutContract = await readLayoutContract(root);
 const typographyContract = await readFile(resolve(root, 'design/typography.json'), 'utf8').then(JSON.parse).catch(error => { if (error.code === 'ENOENT') return { roles: [] }; throw error; });
 let iconAssets = {};
 let iconAssetError;
@@ -33,6 +35,11 @@ const check = async (name, fn) => {
 };
 const assert = (ok, message) => { if (!ok) throw new Error(message); };
 const presentation = async (page, name) => {
+  const layout = await inspectLayoutContract(page, layoutContract, { state: name.split('-')[0] });
+  const layoutEvidence = `layout-contract-${name}.json`;
+  await writeFile(resolve(output, layoutEvidence), JSON.stringify(layout, null, 2));
+  reviewRequired.push(...reviewFindings(layout.issues, layoutEvidence, 'layout'));
+  if (layoutContract) await check(`layout-contract-${name}`, async () => assert(!layout.issues.some(issue => issue.status === 'FAIL'), JSON.stringify(layout.issues.filter(issue => issue.status === 'FAIL'))));
   await check(`font-rendering-${name}`, async () => {
     const fonts = await inspectFontRendering(page, { roles: typographyContract.roles });
     const evidence = `font-rendering-${name}.json`;

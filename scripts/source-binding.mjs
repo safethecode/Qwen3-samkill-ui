@@ -13,7 +13,7 @@ export async function sourceBinding(target) {
       for (const child of (await readdir(path)).sort()) await visit(`${name}/${child}`);
     } else if (stat.isFile()) files[name] = createHash('sha256').update(await readFile(path)).digest('hex');
   };
-  for (const name of ['index.html', 'styles.css', 'app.js', 'DESIGN.md', 'REFERENCE.md', 'assets', 'design/typography.json', 'design/component-plan.json']) await visit(name);
+  for (const name of ['index.html', 'styles.css', 'app.js', 'DESIGN.md', 'REFERENCE.md', 'assets', 'design/typography.json', 'design/component-plan.json', 'design/layout-contract.json']) await visit(name);
   const discover = async directory => {
     for (const entry of await readdir(resolve(target, directory), { withFileTypes: true })) {
       const name = directory ? `${directory}/${entry.name}` : entry.name;

@@ -13,6 +13,7 @@ import { inspectFieldLabels } from './label-check.mjs';
 import { inspectWorkflowState } from './workflow-state.mjs';
 import { inspectTextStress } from './text-stress.mjs';
 import { inspectStackedButtons } from './stacked-content.mjs';
+import { readLayoutContract, inspectLayoutContract } from './layout-contract.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -37,6 +38,7 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
   const reviewRequired = [];
   let iconAssets = {};
   const typographyContract = await readFile(resolve(target, 'design/typography.json'), 'utf8').then(JSON.parse).catch(error => { if (error.code === 'ENOENT') return { roles: [] }; throw error; });
+  const layoutContract = await readLayoutContract(target);
   let iconAssetError;
   try { iconAssets = await verifiedIconAssets(target); } catch (error) { iconAssetError = error.message; }
   const check = async (name, fn) => {
@@ -60,6 +62,13 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
       if (options.captureStates) await options.captureStates(page, width, evidence, url);
       if (!options.reference) {
+        const layout = await inspectLayoutContract(page, layoutContract);
+        await writeFile(resolve(evidence, `layout-contract-${width}.json`), JSON.stringify(layout, null, 2));
+        reviewRequired.push(...reviewFindings(layout.issues, `layout-contract-${width}.json`, 'layout'));
+        if (layoutContract) await check(`layout-contract-${width}`, async () => {
+          measurements[`layout-contract-${width}`] = layout.issues.filter(issue => issue.status === 'FAIL').length;
+          assert.deepEqual(layout.issues.filter(issue => issue.status === 'FAIL'), [], 'Reference layout ownership or grouping requires correction');
+        });
         if (width <= 390 && fixture.mobileStack) {
           const stack = await inspectStackedButtons(page, fixture.mobileStack);
           const name = `contract-stack-${width}`;
