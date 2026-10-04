@@ -1,0 +1,13 @@
+import { cp, mkdir, readFile } from 'node:fs/promises';
+import { repairComponent } from '../../scripts/repair-component.mjs';
+import { evaluateService } from '../../scripts/service-evaluate.mjs';
+import { serviceCases } from '../evals/service-cases.mjs';
+const root = 'runs/mentor-metadata-common';
+const target = `${root}/source`;
+await mkdir(root, { recursive: true });
+await cp('runs/mentor-header-common/source', target, { recursive: true, force: false, errorOnExist: true });
+const checkpoint = JSON.parse(await readFile('evals/results/decomposed-mentor-v3/generation/component-checkpoint.json', 'utf8'));
+const failure = 'Reference certification metadata groups the official badge icon and 인증 label in one pale compact surface, with following expertise as plain purple text. Candidate wrongly highlights the entire role and inserts a separator; at320px excess padding makes it wrap. Repair E4b only with at most3 patches: group existing badge image and 인증 into a small inline-flex wrapper (gap4px, padding1px6px, background #f3effc, radius6px); remove divider element; make role plain purple with zero padding and transparent background. Keep official image source and14px text. Preserve name, avatar, favorite and all body elements. Metadata may wrap at enlarged text and must not be clipped or shrink below14px. Keep role words unchanged. Avoid adding any new content. This is observed grouping with chosen CSS values, not recovered original CSS.';
+await repairComponent(target, `${root}/repair`, 'E4b', checkpoint.completed.E4b, failure);
+const report = await evaluateService(target, `${root}/revalidation`, serviceCases.find(item => item.id === 'round-02'), { textStress: true });
+console.log({ passed: report.passed, total: report.total });

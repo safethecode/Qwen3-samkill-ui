@@ -1,0 +1,325 @@
+{
+  "results": [
+    {
+      "id": "favorite-owner-a",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 248,
+          "y": 241,
+          "width": 24,
+          "height": 24
+        },
+        "container": {
+          "x": 32,
+          "y": 225,
+          "width": 256,
+          "height": 52
+        }
+      }
+    },
+    {
+      "id": "body-owner-a",
+      "kind": "absent",
+      "status": "PASS",
+      "observed": {
+        "count": 0
+      }
+    },
+    {
+      "id": "body-spacing-a",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 297,
+          "width": 256,
+          "height": 109.96875
+        },
+        "reference": {
+          "x": 32,
+          "y": 225,
+          "width": 256,
+          "height": 52
+        }
+      }
+    },
+    {
+      "id": "footer-overlap-a",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 382.984375,
+          "width": 112.859375,
+          "height": 22
+        },
+        "reference": {
+          "x": 250.234375,
+          "y": 381,
+          "width": 37.765625,
+          "height": 25.96875
+        }
+      }
+    },
+    {
+      "id": "row-density-a",
+      "kind": "rowLimit",
+      "status": "PASS",
+      "observed": {
+        "boxes": [
+          {
+            "x": 248,
+            "y": 241,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "x": 32,
+            "y": 382.984375,
+            "width": 112.859375,
+            "height": 22
+          },
+          {
+            "x": 250.234375,
+            "y": 381,
+            "width": 37.765625,
+            "height": 25.96875
+          }
+        ],
+        "maximumInlineGroups": 2
+      }
+    },
+    {
+      "id": "favorite-owner-b",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 264,
+          "y": 450.96875,
+          "width": 24,
+          "height": 24
+        },
+        "container": {
+          "x": 32,
+          "y": 450.96875,
+          "width": 256,
+          "height": 48
+        }
+      }
+    },
+    {
+      "id": "body-owner-b",
+      "kind": "absent",
+      "status": "PASS",
+      "observed": {
+        "count": 0
+      }
+    },
+    {
+      "id": "body-spacing-b",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 518.96875,
+          "width": 256,
+          "height": 109.96875
+        },
+        "reference": {
+          "x": 32,
+          "y": 450.96875,
+          "width": 256,
+          "height": 48
+        }
+      }
+    },
+    {
+      "id": "footer-overlap-b",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 604.953125,
+          "width": 112.859375,
+          "height": 22
+        },
+        "reference": {
+          "x": 250.234375,
+          "y": 602.96875,
+          "width": 37.765625,
+          "height": 25.96875
+        }
+      }
+    },
+    {
+      "id": "row-density-b",
+      "kind": "rowLimit",
+      "status": "PASS",
+      "observed": {
+        "boxes": [
+          {
+            "x": 264,
+            "y": 450.96875,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "x": 32,
+            "y": 604.953125,
+            "width": 112.859375,
+            "height": 22
+          },
+          {
+            "x": 250.234375,
+            "y": 602.96875,
+            "width": 37.765625,
+            "height": 25.96875
+          }
+        ],
+        "maximumInlineGroups": 2
+      }
+    },
+    {
+      "id": "sample-E1",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 16,
+          "y": 0,
+          "width": 288,
+          "height": 54
+        },
+        "sample": {
+          "x": 16,
+          "y": 0,
+          "width": 288,
+          "height": 54
+        }
+      }
+    },
+    {
+      "id": "sample-E2",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 16,
+          "y": 70,
+          "width": 288,
+          "height": 75
+        },
+        "sample": {
+          "x": 16,
+          "y": 0,
+          "width": 288,
+          "height": 75
+        }
+      }
+    },
+    {
+      "id": "sample-E3",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 16,
+          "y": 153,
+          "width": 288,
+          "height": 36
+        },
+        "sample": {
+          "x": 16,
+          "y": 0,
+          "width": 288,
+          "height": 36
+        }
+      }
+    },
+    {
+      "id": "sample-E4a",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 225,
+          "width": 256,
+          "height": 52
+        },
+        "sample": {
+          "x": 32,
+          "y": 16,
+          "width": 256,
+          "height": 52
+        }
+      }
+    },
+    {
+      "id": "sample-E5a",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 297,
+          "width": 256,
+          "height": 109.96875
+        },
+        "sample": {
+          "x": 32,
+          "y": 16,
+          "width": 256,
+          "height": 109.96875
+        }
+      }
+    },
+    {
+      "id": "sample-E4b",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 450.96875,
+          "width": 256,
+          "height": 48
+        },
+        "sample": {
+          "x": 32,
+          "y": 16,
+          "width": 256,
+          "height": 48
+        }
+      }
+    },
+    {
+      "id": "sample-E5b",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 32,
+          "y": 518.96875,
+          "width": 256,
+          "height": 109.96875
+        },
+        "sample": {
+          "x": 32,
+          "y": 16,
+          "width": 256,
+          "height": 109.96875
+        }
+      }
+    }
+  ],
+  "issues": [],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}
