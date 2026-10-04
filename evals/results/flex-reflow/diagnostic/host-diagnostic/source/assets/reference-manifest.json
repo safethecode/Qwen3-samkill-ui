@@ -1,0 +1,43 @@
+{
+  "referenceEntry": "round-02/screen.html",
+  "source": "User-supplied upstream checkout",
+  "provenance": "Copied existing reference assets; source licensing and intended roles remain part of the catalog review.",
+  "files": [
+    {
+      "path": "assets/reference/avatar-1.png",
+      "sha256": "d228d0f6eb125355d7700a129698ae1b14094738df164f720e2b2fdce9ecc786"
+    },
+    {
+      "path": "assets/reference/avatar-2.png",
+      "sha256": "2365ad110e070d796e93fae6a12cb09cd823e1ffa3c4484635d3e2700a1f59ee"
+    },
+    {
+      "path": "assets/reference/badge-check.svg",
+      "sha256": "c4fbf2f1acf094cfbfd744e4f2b3c92072c406ce35240b441a944cc4e84fded0"
+    },
+    {
+      "path": "assets/reference/bell.svg",
+      "sha256": "e769d07778a974e22327ca663bac379281768fc948e7ad7ec988207283307ebd"
+    },
+    {
+      "path": "assets/reference/bookmark-check.svg",
+      "sha256": "4e695fdb27c44f532c36a3fcf6d64340959eae47ec1c606d5b4eb7674d8e955f"
+    },
+    {
+      "path": "assets/reference/heart.svg",
+      "sha256": "16b5db71af67c7989163d3f0c695583af35b751972ced933fdd599bab62689ef"
+    },
+    {
+      "path": "assets/reference/search.svg",
+      "sha256": "f1d736cf57b12b7784ac894db511028c451e0ce5bc40420e77ba995829cd3900"
+    },
+    {
+      "path": "assets/reference/source.png",
+      "sha256": "1d2a52371386de1538cf631871229044a16a4d15d15f19d6bf10652b10b28eaa"
+    },
+    {
+      "path": "assets/reference/user-round.svg",
+      "sha256": "64535953c7d421e4c3a5e788940fe45cf9113f2209849c6d676241d8c728a24d"
+    }
+  ]
+}
