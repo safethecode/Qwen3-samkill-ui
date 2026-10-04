@@ -1,0 +1,324 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 677,
+    "overflowPx": 356,
+    "flexPressure": [
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "width": 20,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "width": 395,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "0%",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-disclosure",
+        "width": 222.296875,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      }
+    ],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "text": "",
+        "width": 395,
+        "scrollWidth": 395,
+        "height": 42,
+        "scrollHeight": 42,
+        "overflow": "clip"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-disclosure",
+        "text": "예시 데이터입니다.",
+        "width": 222,
+        "scrollWidth": 222,
+        "height": 42,
+        "scrollHeight": 42,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "MAIN",
+        "id": "mentor-discovery-page",
+        "class": "",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 320,
+        "scrollWidth": 677,
+        "height": 1768,
+        "scrollHeight": 1768,
+        "overflow": "visible"
+      },
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "page-header",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 304,
+        "scrollWidth": 669,
+        "height": 116,
+        "scrollHeight": 116,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H1",
+        "id": "page-title",
+        "class": "",
+        "text": "멘토 찾기",
+        "width": 304,
+        "scrollWidth": 304,
+        "height": 52,
+        "scrollHeight": 55,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "search-container",
+        "class": "",
+        "text": "멘토 검색\n                \n                예시 데이터입니다.",
+        "width": 304,
+        "scrollWidth": 669,
+        "height": 48,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 111,
+        "height": 1,
+        "scrollHeight": 42,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "김서연",
+        "width": 99,
+        "scrollWidth": 99,
+        "height": 43,
+        "scrollHeight": 47,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "박민준",
+        "width": 99,
+        "scrollWidth": 99,
+        "height": 43,
+        "scrollHeight": 47,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 385,
+    "overflowPx": 64,
+    "flexPressure": [
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "width": 20,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 377,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "width": 195,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "0%",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 377,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-disclosure",
+        "width": 130.1875,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 304,
+          "scrollWidth": 377,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      }
+    ],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-disclosure",
+        "text": "예시 데이터입니다.",
+        "width": 130,
+        "scrollWidth": 130,
+        "height": 21,
+        "scrollHeight": 21,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "chip",
+        "text": "마케팅",
+        "width": 93,
+        "scrollWidth": 93,
+        "height": 49,
+        "scrollHeight": 49,
+        "overflow": "visible"
+      }
+    ],
+    "clippingCandidates": [
+      {
+        "tag": "MAIN",
+        "id": "mentor-discovery-page",
+        "class": "",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 320,
+        "scrollWidth": 385,
+        "height": 1210,
+        "scrollHeight": 1210,
+        "overflow": "visible"
+      },
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "page-header",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 304,
+        "scrollWidth": 377,
+        "height": 94,
+        "scrollHeight": 94,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "search-container",
+        "class": "",
+        "text": "멘토 검색\n                \n                예시 데이터입니다.",
+        "width": 304,
+        "scrollWidth": 377,
+        "height": 48,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 66,
+        "height": 1,
+        "scrollHeight": 21,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "NAV",
+        "id": "category-filters",
+        "class": "chip-group",
+        "text": "전체\n            디자인\n            개발\n            마케팅",
+        "width": 304,
+        "scrollWidth": 363,
+        "height": 67,
+        "scrollHeight": 67,
+        "overflow": "auto"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

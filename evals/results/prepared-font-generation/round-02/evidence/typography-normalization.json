@@ -1,0 +1,10 @@
+{
+  "producer": "host-contract-typography",
+  "status": "APPLIED_NOT_APPROVED",
+  "minimumFontSizePx": 14,
+  "minimumFontWeight": 500,
+  "beforeSha256": "0b4577070cf849aaa8465bf65fe60485a5e5782782a6d381bfc2c80495d21d88",
+  "afterSha256": "83b5ea2ed31b0085b44611402b112f9d2b4a686b612f4c1abfe5f95c71a2206a",
+  "changed": true,
+  "limitation": "Normalizes supported CSS declarations only. Browser checks, responsive review, actual font-role verification and the full catalog remain required."
+}

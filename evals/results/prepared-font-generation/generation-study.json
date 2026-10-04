@@ -1,0 +1,487 @@
+{
+  "model": "qwen3.6:35b-a3b-coding",
+  "generationThinking": false,
+  "inferenceOptions": {
+    "num_gpu": 16,
+    "num_ctx": 16384,
+    "num_batch": 128
+  },
+  "samplingOptions": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1.05
+  },
+  "harnessHashes": {
+    "evals/service-cases.mjs": "32e9f476eae3539437bccad4892bfc839bb4ab12dc3e3842fb6c2a7c49d35e4e",
+    "package-lock.json": "97f0b672e3c84a57a0c8a3a291170929b80ef3025a88318aa99b7b4ad9cbdee6",
+    "scripts/asset-references.mjs": "669299f3a8b72b22648f4909d50a91d94c00af8eb444834c74d3cc075b892d5e",
+    "scripts/benchmark.mjs": "a97bfa6c6021884cfdb45ac631f853d115fc4245ae218dd6edcb3f68bab7f861",
+    "scripts/catalog-gate.mjs": "06f6817721e160682b34f96605f58a7780c9d907423676c2d9cbb8b6856e6495",
+    "scripts/catalog-plan.mjs": "f1cf03229d42e1f56887d3ecced5df8c1ff9da70bdffb7ff1b747e0c3178a2d8",
+    "scripts/catalog.mjs": "bdd1e96da8c9d42ab7e89b4de5f3bde67ba338d9ac25f2eef7607c2e997e8bc6",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/dom-references.mjs": "f98202274d55fa641fdb94349fabbd7557ddee2c1a379a90a595eed22e41baf0",
+    "scripts/evaluate.mjs": "68665c6f0a67c6f8f9d2ecb1d993f945b635e4988d3ca9576729d27aca099222",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/font-rendering.mjs": "875072cfa780146fb6304ef6176ccc081416b781ded20c6b8af76838d9cb39d4",
+    "scripts/generate-service.mjs": "0a6f1f3d83c8eb1ff95008e8e1a202e2f23cc30023a4ad096964511a226cf4d5",
+    "scripts/generate.mjs": "2d49ebc56706e83e65f3cae674b8e194ee486b9a8cd7484b5ae326212487d081",
+    "scripts/harness-binding.mjs": "6b71529cbc7778c4a5a071b2de25cd4662f04f0383cab95941eebe0f1b8df1ff",
+    "scripts/icon-assets.mjs": "de29824f013bc2bb71fe5b10063986cffa26a79fae41925e17cd56d54cc79a62",
+    "scripts/icon-check.mjs": "dc7c96dcf3e2e7198d04ac9380d73017f12363e9bea792070a864e24a5ab4b80",
+    "scripts/icons.mjs": "105ad7cf37f100e0e922bbe086bbd5eb40e8e0389860fa75edbceefeaf58a679",
+    "scripts/inference-options.mjs": "5554438d5a454be997f1b24cadf666a0a4c6fb6990fc095c04cefc03bcd664f3",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/label-check.mjs": "a7b4a99003e80ac49df855adbcc80d8604ef2364b6441b5ccef24781a3b2e081",
+    "scripts/local-font.mjs": "b3aa5c07856bf905ad1d34d7f55d58ae38a4fe6cf995e524ad2e3cb834c41a9b",
+    "scripts/owned-rollback.mjs": "e7ae6ea4ba450f14a621dfe5e4c958e7ff619e33dd7f16332e6a776e937e879e",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/quality-loop.mjs": "4d8168ba213788ab413be20d3574c5cf5eaa8516031b57267a4d95ff30ec001b",
+    "scripts/quality-policy.mjs": "29fe2de8114a08a610ec2c7061f8a69a7e712ecf796d5c5a163cc37602fb9b35",
+    "scripts/quality.mjs": "810669c1cd79d72e4d4739f94756aff56958da4217689e04c2a44f6571a86724",
+    "scripts/reference-assets.mjs": "647cf0c06f2715817b181eefb907a0815ef62cc39a8b77ce23938c221da5831e",
+    "scripts/reference-capture.mjs": "e9f80432bc4865a4775a1deefd5b7b4c9165c143aa6a68f2adbd189dfc423157",
+    "scripts/refine.mjs": "3f233369b6ac5c353ed4e971672a2066aaba8e564397f79f7256373e3df9b52c",
+    "scripts/repair-units.mjs": "e7201bc1da5cb8c934585c1b755491d5b60354c6c8c6b62c2c5b2e3292938229",
+    "scripts/repair.mjs": "9e7f66ec9477b72df91307153af626b0c436ccfdcb03547fe1df6c369d0cf864",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/review-findings.mjs": "2050e8b80eeb933d813f64cbeef0d873aab8c9fb9e5d2474309660fed4af26c6",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/service-benchmark.mjs": "d72bc81fe06a87994d3d3f7f703f68839867f98b2f82c6483ce77ce4cb3e81d3",
+    "scripts/service-evaluate.mjs": "0c6c4ce61bc9ec02a2d4ea515bf60be943f1a6badccb6d4f828cf76f304d5e58",
+    "scripts/service-gallery.mjs": "78621a605a0b9869a12fb4e34f243a5c5ad3407db0d1f8a298e823f59cabcf74",
+    "scripts/service-interface.mjs": "4526ebefde7e6f38b7ebf294e3cb36866a753518eed39f3dd943f065eacdb550",
+    "scripts/service-progress.mjs": "4f1d99b8a23ea26ed984d07983d9a542d555acf6c7907c07da66df6b9815bb34",
+    "scripts/service-repair.mjs": "08ddc619c826136dd1c25f986eec6608e86980cadc6f3297f75e9b874b4ff4e4",
+    "scripts/service-resume.mjs": "1956218819ba5d2cc0263cc11c71d911a19c5f871e2194bebf8a7f45ded498d2",
+    "scripts/service-revalidate.mjs": "bba83ba00a9e8bf53ee1133e3c7f2da44f8bf4b50bd34ae66908edb69bc231c7",
+    "scripts/service-stages.mjs": "3a9fb2ffb89e201511e14680655003b4746dc9d0f477454d48f30f168b278bc5",
+    "scripts/setup.mjs": "8a9e96c393a64bf7bfb28462945b537b277725bc0b0d951b3dfed4c370a4e363",
+    "scripts/skill-context.mjs": "b7781749eee1ff33bdf2c246323f7d553635f594f968fbe66a346302a6a1f55a",
+    "scripts/source-binding.mjs": "3cf0cbbf48ef6ad7abbbdd907bf742691bf173c88d140273bf6dc97d008582bd",
+    "scripts/stacked-content.mjs": "33d78907983e41a23e9dbabd3fc162bea16564f9ed563f0989964cdb8bffae34",
+    "scripts/text-stress.mjs": "e5f658da56f73984597f3ad7ea02f0af23cf6301a677615ec7f06ce05cad4d8b",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "51d6b7cc8fcf6ee615569ce31134c53b99aceeac533f94880a1111e6c12d65df",
+    "scripts/visibility.mjs": "fa748f7755f974823270b34f3e9a94e8d9913a4a8e22a631d561a0ac76f4f9d5",
+    "scripts/vision-review.mjs": "44d988922e8468b8086f62d6900747f0a1d27315f0ae07658848ceb4df239ae8",
+    "scripts/workflow-state.mjs": "d2cbbdcc14238eedd7c91b805cca0eade24cc38f4c0b9c23001c065494e15a56",
+    "skills/qwen-samkill-ui/SKILL.md": "559793ed8a25e694f93b87ed89ec99eaac184b02b75b5590efdfb9e78d5da0b0",
+    "skills/qwen-samkill-ui/references/service-contracts.md": "9eef6278c163695455a6b37acf3c5513ca6e1850251e37c2bff024f8a9b521e3",
+    "skills/qwen-samkill-ui/references/upstream/design-md/guide.md": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76",
+    "skills/qwen-samkill-ui/references/upstream/design-md/references/document-contract.md": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/guide.md": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/references/flow-contract.md": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/guide.md": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/references/element-contract.md": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/guide.md": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/change-review.md": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/design-gate.md": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/deslop-triage.md": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/failure-catalog.json": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/feedback-regression.md": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/review-criteria.md": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/state-stress.md": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/guide.md": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/anti-slop-code.md": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/application-format.md": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/dashboard.md": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-guardrails.md": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-tokens.md": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/icon-controls.md": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/mobile.md": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/product-reasoning.md": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/reference-synthesis.md": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/typography.md": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/ui-composition.md": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d",
+    "skills/qwen-samkill-ui/references/upstream/samkill-ui/guide.md": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/guide.md": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/component-anatomy.md": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/observation-format.md": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/research-plan.md": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/search-examples.md": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/guide.md": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/copy-contract.md": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/korean-writing.md": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+  },
+  "started": "2026-10-04T05:11:30.335Z",
+  "missingUpstreamRounds": [
+    5,
+    6,
+    7
+  ],
+  "results": [
+    {
+      "case": "round-02",
+      "scope": "static translation",
+      "visual": "UNVERIFIED",
+      "reviewRequired": [
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-1440.json",
+          "category": "icons",
+          "id": "d7945607b0d6c68b5337a301cf56d3799dc57ba6ae38933118ae9fa0e4ac6087",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-1440.json",
+          "category": "icons",
+          "id": "d7945607b0d6c68b5337a301cf56d3799dc57ba6ae38933118ae9fa0e4ac6087",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+          "evidence": "text-stress-1440.json",
+          "category": "layout",
+          "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+          "rules": [
+            "PROJECT-GUIDE-reference-to-ui"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-390.json",
+          "category": "icons",
+          "id": "07e1ba405cf53319aa2bb05de2bed77559d439d429ca85249e1b96dc99661f08",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-390.json",
+          "category": "icons",
+          "id": "07e1ba405cf53319aa2bb05de2bed77559d439d429ca85249e1b96dc99661f08",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+          "evidence": "text-stress-390.json",
+          "category": "layout",
+          "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+          "rules": [
+            "PROJECT-GUIDE-reference-to-ui"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-320.json",
+          "category": "icons",
+          "id": "5088fedb1466fd19792d41a6228ec06f7989477b6b600c4f1303e261f62a6205",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Image icon requires an asset manifest and rendered control review",
+          "src": "assets/reference/heart.svg",
+          "evidence": "icons-320.json",
+          "category": "icons",
+          "id": "5088fedb1466fd19792d41a6228ec06f7989477b6b600c4f1303e261f62a6205",
+          "rules": [
+            "RUI-12"
+          ]
+        },
+        {
+          "status": "UNVERIFIED",
+          "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+          "evidence": "text-stress-320.json",
+          "category": "layout",
+          "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+          "rules": [
+            "PROJECT-GUIDE-reference-to-ui"
+          ]
+        }
+      ],
+      "measurements": {
+        "readable-1440": 0,
+        "font-rendering-1440": 5,
+        "assets-1440": 0,
+        "icons-1440": 0,
+        "labels-1440": 0,
+        "text-200-1440": 0,
+        "text-200-clipping-1440": 0,
+        "text-spacing-1440": 0,
+        "text-spacing-clipping-1440": 0,
+        "readable-390": 0,
+        "font-rendering-390": 5,
+        "assets-390": 0,
+        "icons-390": 0,
+        "labels-390": 0,
+        "text-200-390": 286,
+        "text-200-clipping-390": 0,
+        "text-spacing-390": 0,
+        "text-spacing-clipping-390": 0,
+        "readable-320": 0,
+        "font-rendering-320": 5,
+        "assets-320": 0,
+        "icons-320": 0,
+        "labels-320": 0,
+        "text-200-320": 356,
+        "text-200-clipping-320": 0,
+        "text-spacing-320": 64,
+        "text-spacing-clipping-320": 0
+      },
+      "contentInventory": {
+        "320": {
+          "멘토 찾기": 1,
+          "멘토 검색": 1,
+          "예시 데이터입니다.": 1,
+          "전체": 1,
+          "디자인": 1,
+          "개발": 1,
+          "마케팅": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "UX/UI 전문가": 1,
+          "플랫폼 스타트업": 1,
+          "초기 프로덕트의 UX 전략과 인터페이스 디자인을 담당했습니다. 사용자 리서치부터 프로토타이핑까지 전 과정을 경험했습니다.": 1,
+          "예시: 50,000원/시간": 2,
+          "상담 신청": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "AWS 인증": 1,
+          "SaaS 기업": 1,
+          "대규모 트래픽을 처리하는 웹 애플리케이션의 성능 최적화와 아키텍처 설계를 주도했습니다. React와 Node.js 생태계 전문가입니다.": 1
+        },
+        "390": {
+          "멘토 찾기": 1,
+          "멘토 검색": 1,
+          "예시 데이터입니다.": 1,
+          "전체": 1,
+          "디자인": 1,
+          "개발": 1,
+          "마케팅": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "UX/UI 전문가": 1,
+          "플랫폼 스타트업": 1,
+          "초기 프로덕트의 UX 전략과 인터페이스 디자인을 담당했습니다. 사용자 리서치부터 프로토타이핑까지 전 과정을 경험했습니다.": 1,
+          "예시: 50,000원/시간": 2,
+          "상담 신청": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "AWS 인증": 1,
+          "SaaS 기업": 1,
+          "대규모 트래픽을 처리하는 웹 애플리케이션의 성능 최적화와 아키텍처 설계를 주도했습니다. React와 Node.js 생태계 전문가입니다.": 1
+        },
+        "1440": {
+          "멘토 찾기": 1,
+          "멘토 검색": 1,
+          "예시 데이터입니다.": 1,
+          "전체": 1,
+          "디자인": 1,
+          "개발": 1,
+          "마케팅": 1,
+          "김서연": 1,
+          "프로덕트 디자이너": 1,
+          "UX/UI 전문가": 1,
+          "플랫폼 스타트업": 1,
+          "초기 프로덕트의 UX 전략과 인터페이스 디자인을 담당했습니다. 사용자 리서치부터 프로토타이핑까지 전 과정을 경험했습니다.": 1,
+          "예시: 50,000원/시간": 2,
+          "상담 신청": 2,
+          "박민준": 1,
+          "프론트엔드 개발자": 1,
+          "AWS 인증": 1,
+          "SaaS 기업": 1,
+          "대규모 트래픽을 처리하는 웹 애플리케이션의 성능 최적화와 아키텍처 설계를 주도했습니다. React와 Node.js 생태계 전문가입니다.": 1
+        }
+      },
+      "checks": [
+        {
+          "name": "content-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-1440",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '예시 데이터입니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프로덕트 디자이너',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6779011537825332,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '플랫폼 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프론트엔드 개발자',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+  "
+        },
+        {
+          "name": "runtime-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "text-200-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "text-200-clipping-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "text-spacing-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "text-spacing-clipping-1440",
+          "status": "PASS"
+        },
+        {
+          "name": "content-390",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-390",
+          "status": "PASS"
+        },
+        {
+          "name": "readable-390",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-390",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '예시 데이터입니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프로덕트 디자이너',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6779011537825332,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '플랫폼 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프론트엔드 개발자',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+  "
+        },
+        {
+          "name": "runtime-390",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-390",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-390",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-390",
+          "status": "PASS"
+        },
+        {
+          "name": "text-200-390",
+          "status": "FAIL",
+          "detail": "Horizontal overflow under text-200. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: [{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":374,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":395,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":374,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"}]. Observed geometry: {\"mode\":\"text-200\",\"viewport\":390,\"scrollWidth\":677,\"overflowPx\":286,\"flexPressure\":[{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":374,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":395,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":"
+        },
+        {
+          "name": "text-200-clipping-390",
+          "status": "PASS"
+        },
+        {
+          "name": "text-spacing-390",
+          "status": "PASS"
+        },
+        {
+          "name": "text-spacing-clipping-390",
+          "status": "PASS"
+        },
+        {
+          "name": "content-320",
+          "status": "PASS"
+        },
+        {
+          "name": "overflow-320",
+          "status": "FAIL",
+          "detail": "Horizontal page overflow"
+        },
+        {
+          "name": "readable-320",
+          "status": "PASS"
+        },
+        {
+          "name": "font-rendering-320",
+          "status": "FAIL",
+          "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '예시 데이터입니다.',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프로덕트 디자이너',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 3.6779011537825332,\n+     status: 'FAIL',\n+     tag: 'SPAN',\n+     text: '플랫폼 스타트업',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+   {\n+     declaredFamily: '\"Noto Sans KR\", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',\n+     disabled: false,\n+     id: '',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: null,\n+     ratio: 4.2924099118391155,\n+     status: 'FAIL',\n+     tag: 'P',\n+     text: '프론트엔드 개발자',\n+     threshold: 4.5,\n+     uncertain: false\n+   },\n+  "
+        },
+        {
+          "name": "runtime-320",
+          "status": "PASS"
+        },
+        {
+          "name": "assets-320",
+          "status": "PASS"
+        },
+        {
+          "name": "icons-320",
+          "status": "PASS"
+        },
+        {
+          "name": "labels-320",
+          "status": "PASS"
+        },
+        {
+          "name": "text-200-320",
+          "status": "FAIL",
+          "detail": "Horizontal overflow under text-200. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: [{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":395,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"}]. Observed geometry: {\"mode\":\"text-200\",\"viewport\":320,\"scrollWidth\":677,\"overflowPx\":356,\"flexPressure\":[{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":669,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":395,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":"
+        },
+        {
+          "name": "text-200-clipping-320",
+          "status": "PASS"
+        },
+        {
+          "name": "text-spacing-320",
+          "status": "FAIL",
+          "detail": "Horizontal overflow under text-spacing. Preserve text and controls; do not hide overflow or shrink enlarged text. Investigate measured layout constraints: [{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":377,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":195,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"0%\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":377,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"}]. Observed geometry: {\"mode\":\"text-spacing\",\"viewport\":320,\"scrollWidth\":385,\"overflowPx\":64,\"flexPressure\":[{\"tag\":\"IMG\",\"id\":\"\",\"class\":\"\",\"width\":20,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flexBasis\":\"auto\",\"parent\":{\"tag\":\"DIV\",\"id\":\"search-container\",\"class\":\"\",\"width\":304,\"scrollWidth\":377,\"display\":\"flex\",\"gap\":\"normal\"},\"hypothesis\":\"An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.\"},{\"tag\":\"INPUT\",\"id\":\"search\",\"class\":\"\",\"width\":195,\"minWidth\":\"auto\",\"flexShrink\":\"1\",\"flex"
+        },
+        {
+          "name": "text-spacing-clipping-320",
+          "status": "PASS"
+        },
+        {
+          "name": "bound-dependencies",
+          "status": "PASS"
+        }
+      ],
+      "passed": 30,
+      "total": 37,
+      "contractHash": "961b459a44c49c4b9891ec209bdcaa641abe08c361d32f58bc628e9cf1b4ec2d",
+      "sourceHashes": {
+        "index.html": "376a21cd88c0a9ebf07419ad5c0028cc3d3b755288709113ba3440684bd7e11c",
+        "app.js": "34c2b1ed7709532f232a249b7be3bdab6d8dd8365fb3b84a9abc3dcf0b491bc4",
+        "styles.css": "83b5ea2ed31b0085b44611402b112f9d2b4a686b612f4c1abfe5f95c71a2206a"
+      },
+      "hostNormalization": "Static lifecycle bootstrap, contract typography normalization and parser-based comment removal",
+      "phase": "EVALUATED",
+      "elapsedMs": 544766
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflowPx": 0,
+    "flexPressure": [
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "width": 20,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 398,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "INPUT",
+        "id": "search",
+        "class": "",
+        "width": 395,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "0%",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 398,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "example-disclosure",
+        "width": 222.296875,
+        "minWidth": "auto",
+        "flexShrink": "1",
+        "flexBasis": "auto",
+        "parent": {
+          "tag": "DIV",
+          "id": "search-container",
+          "class": "",
+          "width": 398,
+          "scrollWidth": 669,
+          "display": "flex",
+          "gap": "normal"
+        },
+        "hypothesis": "An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size."
+      }
+    ],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "MAIN",
+        "id": "mentor-discovery-page",
+        "class": "",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 430,
+        "scrollWidth": 685,
+        "height": 1402,
+        "scrollHeight": 1402,
+        "overflow": "visible"
+      },
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "page-header",
+        "text": "멘토 찾기\n            \n                \n                멘토 검색\n                \n                예시 데이터입니다",
+        "width": 398,
+        "scrollWidth": 669,
+        "height": 126,
+        "scrollHeight": 126,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H1",
+        "id": "page-title",
+        "class": "",
+        "text": "멘토 찾기",
+        "width": 398,
+        "scrollWidth": 398,
+        "height": 62,
+        "scrollHeight": 66,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "search-container",
+        "class": "",
+        "text": "멘토 검색\n                \n                예시 데이터입니다.",
+        "width": 398,
+        "scrollWidth": 669,
+        "height": 48,
+        "scrollHeight": 48,
+        "overflow": "visible"
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 111,
+        "height": 1,
+        "scrollHeight": 42,
+        "overflow": "hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "card-header",
+        "text": "김서연프로덕트 디자이너",
+        "width": 366,
+        "scrollWidth": 366,
+        "height": 86,
+        "scrollHeight": 90,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "김서연",
+        "width": 88,
+        "scrollWidth": 88,
+        "height": 86,
+        "scrollHeight": 90,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "card-header",
+        "text": "박민준프론트엔드 개발자",
+        "width": 366,
+        "scrollWidth": 366,
+        "height": 86,
+        "scrollHeight": 90,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "mentor-name",
+        "text": "박민준",
+        "width": 88,
+        "scrollWidth": 88,
+        "height": 86,
+        "scrollHeight": 90,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "LABEL",
+        "id": "",
+        "class": "visually-hidden",
+        "text": "멘토 검색",
+        "width": 1,
+        "scrollWidth": 66,
+        "height": 1,
+        "scrollHeight": 21,
+        "overflow": "hidden"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

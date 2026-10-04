@@ -1,0 +1,13 @@
+{
+  "producer": "host-verified-font-loader",
+  "status": "APPLIED_NOT_APPROVED",
+  "localFont": {
+    "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "weight": "100 900",
+    "source": "https://raw.githubusercontent.com/google/fonts/b38c5c93af322c45f633e17ac440ec1e6c94d489/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
+    "asset": "assets/fonts/NotoSansKR.ttf",
+    "family": "Noto Sans KR",
+    "license": "assets/fonts/OFL.txt"
+  },
+  "limitation": "Loads the predeclared hash-verified file. Role use, actual rendered fonts and all design requirements still require browser verification."
+}

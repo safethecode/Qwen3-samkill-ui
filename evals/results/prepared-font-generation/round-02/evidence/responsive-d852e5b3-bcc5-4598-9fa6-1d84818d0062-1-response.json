@@ -1,0 +1,16 @@
+{
+  "binding": "f5615ca5434a31958748abd6009c5ca7ab0e4d3e0d358eabb95ae80df987e8de",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 135868,
+  "done_reason": "stop",
+  "load_duration": 4239700,
+  "prompt_eval_count": 9933,
+  "prompt_eval_duration": 108015232000,
+  "eval_count": 538,
+  "eval_duration": 27649242000,
+  "total_duration": 135864057500,
+  "content": "{\n  \"code\": \"/* Form states and keyboard focus */\\n#search:focus-visible {\\n  outline: none;\\n}\\n\\n#search-container:focus-within {\\n  box-shadow: 0 0 0 2px var(--color-primary-purple);\\n}\\n\\n.chip:focus-visible {\\n  outline: 2px solid var(--color-primary-purple);\\n  outline-offset: 2px;\\n}\\n\\n.action-btn:focus-visible,\\n.fav-btn:focus-visible {\\n  outline: 2px solid var(--color-text-heading);\\n  outline-offset: 2px;\\n}\\n\\n/* Hidden and disabled states */\\n[hidden] {\\n  display: none !important;\\n}\\n\\n.mentor-card[aria-disabled=\\\"true\\\"] {\\n  opacity: 0.7;\\n  pointer-events: none;\\n}\\n\\n/* Reduced motion */\\n@media (prefers-reduced-motion: reduce) {\\n  .chip,\\n  .action-btn,\\n  .fav-btn {\\n    transition: none;\\n  }\\n}\\n\\n/* Mobile 390px */\\n@media (max-width: 390px) {\\n  #mentor-discovery-page {\\n    padding: var(--spacing-md) var(--spacing-sm);\\n  }\\n\\n  .card-footer {\\n    flex-wrap: wrap;\\n    gap: var(--spacing-sm);\\n  }\\n\\n  .action-btn {\\n    flex: 1;\\n    text-align: center;\\n  }\\n}\\n\\n/* Mobile 320px */\\n@media (max-width: 320px) {\\n  #page-title {\\n    font-size: 20px;\\n  }\\n\\n  .mentor-card {\\n    padding: var(--spacing-sm);\\n  }\\n\\n  .card-header {\\n    flex-direction: column;\\n    align-items: flex-start;\\n    gap: var(--spacing-sm);\\n  }\\n\\n  .avatar {\\n    width: 48px;\\n    height: 48px;\\n  }\\n\\n  .metadata {\\n    flex-direction: column;\\n    gap: var(--spacing-xs);\\n  }\\n\\n  .card-footer {\\n    flex-direction: column;\\n    align-items: stretch;\\n  }\\n\\n  .fav-btn {\\n    align-self: flex-end;\\n    margin-top: var(--spacing-sm);\\n  }\\n}\"\n}"
+}

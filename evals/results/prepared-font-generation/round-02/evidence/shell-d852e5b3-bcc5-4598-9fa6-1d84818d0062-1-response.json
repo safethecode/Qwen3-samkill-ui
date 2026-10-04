@@ -1,0 +1,16 @@
+{
+  "binding": "f5615ca5434a31958748abd6009c5ca7ab0e4d3e0d358eabb95ae80df987e8de",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 104998,
+  "done_reason": "stop",
+  "load_duration": 15997944500,
+  "prompt_eval_count": 7033,
+  "prompt_eval_duration": 72699648000,
+  "eval_count": 378,
+  "eval_duration": 16229673000,
+  "total_duration": 104981304300,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>멘토 찾기</title>\\n    <link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n    <main id=\\\"mentor-discovery-page\\\">\\n        <header class=\\\"page-header\\\">\\n            <h1 id=\\\"page-title\\\">멘토 찾기</h1>\\n            <div id=\\\"search-container\\\">\\n                <img src=\\\"assets/icons/Search.svg\\\" alt=\\\"\\\" width=\\\"20\\\" height=\\\"20\\\" aria-hidden=\\\"true\\\">\\n                <input type=\\\"search\\\" id=\\\"search\\\" placeholder=\\\"멘토 이름, 기술 검색\\\" disabled aria-label=\\\"멘토 검색\\\">\\n                <span class=\\\"example-disclosure\\\">예시 데이터입니다.</span>\\n            </div>\\n        </header>\\n\\n        <nav id=\\\"category-filters\\\" class=\\\"chip-group\\\" aria-label=\\\"카테고리 필터\\\">\\n            <button type=\\\"button\\\" class=\\\"chip active\\\" disabled>전체</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>디자인</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>개발</button>\\n            <button type=\\\"button\\\" class=\\\"chip\\\" disabled>마케팅</button>\\n        </nav>\\n\\n        <section id=\\\"mentor-list\\\" aria-label=\\\"멘토 목록\\\">\\n            <!-- Rendered by app.js -->\\n        </section>\\n    </main>\\n    <script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}
