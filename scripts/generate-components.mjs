@@ -10,6 +10,7 @@ import { validateAssetReferences } from './asset-references.mjs';
 import { removeComments } from './comments.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { samplingOptions } from './sampling.mjs';
+import { componentSkillContext } from './skill-context.mjs';
 
 export async function generateComponents(target, evidence, options = {}) {
   if (resolve(evidence) === resolve(target) || resolve(evidence).startsWith(resolve(target) + sep)) throw new Error('Component evidence must be outside the source target');
@@ -19,16 +20,18 @@ export async function generateComponents(target, evidence, options = {}) {
   const loader = await localFontCss(target, typography);
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8');
+  const guideContexts = Object.fromEntries(await Promise.all(plan.elements.map(async element => [element.id, await componentSkillContext(element)])));
+  const guideSources = Object.fromEntries(Object.entries(guideContexts).map(([id, context]) => [id, context.sources]));
   const inputs = await sourceBinding(target);
   const harness = await harnessBinding();
   const settings = { model: process.env.QWEN_GENERATE_MODEL || 'qwen3-coder:30b', think: false, options: { num_ctx: 16384, ...samplingOptions(), ...inferenceOptions(), num_predict: 2048 } };
-  const binding = createHash('sha256').update(JSON.stringify({ plan, typography, contract, reference, inputs, harness, settings })).digest('hex');
+  const binding = createHash('sha256').update(JSON.stringify({ plan, typography, contract, reference, guideSources, inputs, harness, settings })).digest('hex');
   await mkdir(evidence, { recursive: true });
   const checkpoint = resolve(evidence, 'component-checkpoint.json');
   const saved = await readFile(checkpoint, 'utf8').then(JSON.parse, error => { if (error.code === 'ENOENT') return null; throw error; });
   if (saved && (!options.resume || saved.binding !== binding)) throw new Error('Component checkpoint does not match current inputs or resume was not requested');
   const completed = saved?.completed || {};
-  await writeFile(resolve(evidence, 'inputs.json'), JSON.stringify({ binding, settings, inputs, harnessHashes: harness }, null, 2));
+  await writeFile(resolve(evidence, 'inputs.json'), JSON.stringify({ binding, settings, inputs, guideSources, harnessHashes: harness }, null, 2));
   for (const element of plan.elements) {
     if (completed[element.id]) { validateComponent(element, completed[element.id]); continue; }
     let previousError = '';
@@ -47,6 +50,7 @@ export async function generateComponents(target, evidence, options = {}) {
           request.format = { type: 'object', properties: { css: { type: 'string' } }, required: ['css'], additionalProperties: false };
         } else request.messages[1].content += `\nFINAL ELEMENT BOUNDARY\n${element.prompt}`;
         request.messages[0].content += ' Never use + or ~ selector combinators, including between descendants inside the component. For spacing between repeated groups, use a parent gap or :not(:first-child) instead. The validator rejects all sibling combinators, not only selectors that escape the root.';
+        request.messages[1].content = `APPLICABLE SOURCE GUIDES\n${guideContexts[element.id].text}\n\n${request.messages[1].content}`;
         const response = await (options.fetcher || fetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(300000) });
         if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
         const result = await response.json();

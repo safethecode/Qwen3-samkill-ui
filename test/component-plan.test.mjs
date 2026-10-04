@@ -56,6 +56,8 @@ test('component generation resumes fixed element outputs and rejects changed dec
   const fetcher = async (_url, options) => {
     const request = JSON.parse(options.body);
     const input = request.messages[1].content;
+    assert.match(input, /GENERATION GUIDE reference-to-ui\/references\/typography.md/);
+    assert.match(input, /GENERATION GUIDE reference-to-ui\/references\/mobile.md/);
     const id = /ONE ELEMENT (E\d)/.exec(input)[1];
     calls.push(id);
     if (id === 'E1') assert.ok(!input.includes('ONE ELEMENT E2'));

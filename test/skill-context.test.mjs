@@ -1,8 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { skillInventory, stageSkillContext } from '../scripts/skill-context.mjs';
+import { skillInventory, stageSkillContext, componentSkillContext } from '../scripts/skill-context.mjs';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+
+test('component styling receives complete applicable guides with source hashes', async () => {
+  const context = await componentSkillContext({ assets: ['assets/icons/Heart.svg'] });
+  for (const path of ['../decomposed-layout.md', 'reference-to-ui/references/typography.md', 'reference-to-ui/references/mobile.md', 'reference-to-ui/references/design-guardrails.md', 'reference-to-ui/references/icon-controls.md']) {
+    const source = await readFile(new URL(`../skills/qwen-samkill-ui/references/upstream/${path}`, import.meta.url), 'utf8');
+    assert.ok(context.text.includes(source));
+    assert.ok(context.sources.some(item => item.path === path && item.sha256 === createHash('sha256').update(source).digest('hex')));
+  }
+  const withoutIcons = await componentSkillContext({ assets: [] });
+  assert.ok(!withoutIcons.sources.some(item => item.path.endsWith('icon-controls.md')));
+});
 
 test('direct model stages receive the linked local decomposition guide as source-bound text', async () => {
   const text = await readFile(new URL('../skills/qwen-samkill-ui/references/decomposed-layout.md', import.meta.url), 'utf8');

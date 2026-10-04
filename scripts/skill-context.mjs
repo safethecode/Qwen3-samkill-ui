@@ -13,6 +13,13 @@ const routes = {
 };
 const digest = value => createHash('sha256').update(value).digest('hex');
 
+export async function componentSkillContext(element) {
+  const paths = [...sharedGenerationGuides, ...routes.layout, 'reference-to-ui/references/mobile.md'];
+  if (element.assets.some(asset => /\.svg$/i.test(asset))) paths.push('reference-to-ui/references/icon-controls.md');
+  const sources = await Promise.all(paths.map(async path => ({ path, text: await readFile(new URL(path, upstream), 'utf8') })));
+  return { text: sources.map(source => `GENERATION GUIDE ${source.path}\n${source.text}`).join('\n\n'), sources: sources.map(({ path, text }) => ({ path, sha256: digest(text) })) };
+}
+
 export async function stageSkillContext(stage) {
   if (!routes[stage]) throw new Error(`Unknown skill stage: ${stage}`);
   const sources = await Promise.all([...sharedGenerationGuides, ...routes[stage]].map(async path => ({ path, text: await readFile(new URL(path, upstream), 'utf8') })));
