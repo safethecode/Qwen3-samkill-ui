@@ -3,6 +3,15 @@ import assert from 'node:assert/strict';
 import { selectRepairUnit, validateUnitPatches } from '../scripts/repair-units.mjs';
 import { parse } from 'acorn';
 
+test('reflow repair selects a complete active narrow grid rule with its media context', () => {
+  const css = '.app-layout {display:grid;grid-template-columns:280px 1fr;}\n@media (max-width:1440px){.app-layout {grid-template-columns:240px 1fr;}}\n@media (max-width:390px){.app-layout {grid-template-columns:1fr;padding:16px;}}';
+  const unit = selectRepairUnit({ 'styles.css': css, 'index.html': '<main class="app-layout"></main>' }, ['styles.css'], 'text-200-320 automatic grid track parent {"class":"app-layout"}', 0);
+  assert.equal(unit.content, '.app-layout {grid-template-columns:1fr;padding:16px;}');
+  assert.match(unit.context, /max-width:390px/);
+  assert.equal(css.slice(unit.offset, unit.offset + unit.content.length), unit.content);
+  assert.throws(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: 'grid-template-columns:280px 1fr;', newString: 'grid-template-columns:1fr;' }]));
+});
+
 test('repair units bound source, rotate stalled work and preserve exact source substrings', () => {
   const files = { 'styles.css': '.header {padding:90px;}\n' + '.card {color:red;}\n'.repeat(800), 'index.html': '<h1 class="header">Hello</h1>' };
   const first = selectRepairUnit(files, ['styles.css'], 'header padding too large', 0);

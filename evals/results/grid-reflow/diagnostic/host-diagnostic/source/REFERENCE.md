@@ -1,0 +1,1 @@
+Original held-out brief. Lesson prose and course navigation create hierarchy, progress is subordinate and real. Compare long-form reading rhythm against round08 cooking steps; no resume tiles.
