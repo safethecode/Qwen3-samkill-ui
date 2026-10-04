@@ -12,6 +12,14 @@ test('reflow repair selects a complete active narrow grid rule with its media co
   assert.throws(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: 'grid-template-columns:280px 1fr;', newString: 'grid-template-columns:1fr;' }]));
 });
 
+test('grid rule units preserve original indentation for exact whole-rule patches', () => {
+  const rule = '  .app-layout {\n    grid-template-columns: 1fr;\n  }';
+  const css = `@media(max-width:390px){\n${rule}\n}`;
+  const unit = selectRepairUnit({ 'styles.css': css }, ['styles.css'], 'text-200-320 automatic grid app-layout');
+  assert.equal(unit.content, rule);
+  assert.doesNotThrow(() => validateUnitPatches(unit, [{ path: 'styles.css', oldString: rule, newString: rule.replace('1fr', 'minmax(0,1fr)') }]));
+});
+
 test('repair units bound source, rotate stalled work and preserve exact source substrings', () => {
   const files = { 'styles.css': '.header {padding:90px;}\n' + '.card {color:red;}\n'.repeat(800), 'index.html': '<h1 class="header">Hello</h1>' };
   const first = selectRepairUnit(files, ['styles.css'], 'header padding too large', 0);

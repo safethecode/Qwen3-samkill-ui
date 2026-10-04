@@ -13,7 +13,9 @@ function sourceUnits(path, source, detail) {
     const rules = [];
     try {
       postcss.parse(source).walkRules(rule => {
-        const offset = rule.source.start.offset;
+        const start = rule.source.start.offset;
+        const lineStart = source.lastIndexOf('\n', start - 1) + 1;
+        const offset = /^[\t ]*$/.test(source.slice(lineStart, start)) ? lineStart : start;
         const content = source.slice(offset, rule.source.end.offset);
         if (content.length > 6000) return;
         const scope = [];
