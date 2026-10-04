@@ -1,0 +1,11 @@
+import {cp,mkdir,readFile} from 'node:fs/promises';
+import {repairComponent} from '../../scripts/repair-component.mjs';
+import {evaluateService} from '../../scripts/service-evaluate.mjs';
+import {serviceCases} from '../evals/service-cases.mjs';
+const root='runs/trip-responsive-scoped';
+await mkdir(root,{recursive:true});
+await cp('runs/trip-responsive-lineheight/source',`${root}/source`,{recursive:true,force:false,errorOnExist:true});
+const before=JSON.parse(await readFile('runs/trip-responsive-lineheight/repair/repair.json','utf8')).after;
+await repairComponent(`${root}/source`,`${root}/repair`,'E3',before,'The last repair passes browser checks but violates the explicit scope: it changed BASE .place-title and .place-region/.place-type line-height from19px to1.5, altering widths ABOVE360px. Restore only those two base declarations to19px. Keep unitless1.5 ONLY inside max-width360px and ensure the media override appears AFTER the base declarations (CSS cascade must work). Also the earlier chosen narrow-width photo vertical centering was omitted: within max-width360px give .place-photo align-self:center. Preserve72px photo,8px copy padding,14px font and all HTML. Use up to3 targeted patches; do not change other desktop styles. This is a scope correction, not permission to weaken text200 checks.');
+const report=await evaluateService(`${root}/source`,`${root}/revalidation`,serviceCases.find(item=>item.id==='round-01'),{textStress:true});
+console.log({passed:report.passed,total:report.total,failures:report.checks.filter(item=>item.status==='FAIL')});

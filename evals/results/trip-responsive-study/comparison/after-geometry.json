@@ -1,0 +1,205 @@
+{
+  "label": "after",
+  "records": [
+    {
+      "width": 1440,
+      "id": "place1",
+      "row": {
+        "x": 560,
+        "y": 184,
+        "width": 351,
+        "height": 98
+      },
+      "photo": {
+        "x": 561,
+        "y": 185,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 657,
+        "y": 185,
+        "width": 229,
+        "height": 96
+      }
+    },
+    {
+      "width": 1440,
+      "id": "place2",
+      "row": {
+        "x": 560,
+        "y": 360,
+        "width": 351,
+        "height": 99
+      },
+      "photo": {
+        "x": 561,
+        "y": 361,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 657,
+        "y": 361,
+        "width": 229,
+        "height": 97
+      }
+    },
+    {
+      "width": 1440,
+      "id": "place3",
+      "row": {
+        "x": 560,
+        "y": 477,
+        "width": 351,
+        "height": 98
+      },
+      "photo": {
+        "x": 561,
+        "y": 478,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 657,
+        "y": 478,
+        "width": 229,
+        "height": 96
+      }
+    },
+    {
+      "width": 390,
+      "id": "place1",
+      "row": {
+        "x": 55,
+        "y": 184,
+        "width": 311,
+        "height": 98
+      },
+      "photo": {
+        "x": 56,
+        "y": 185,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 152,
+        "y": 185,
+        "width": 189,
+        "height": 96
+      }
+    },
+    {
+      "width": 390,
+      "id": "place2",
+      "row": {
+        "x": 55,
+        "y": 360,
+        "width": 311,
+        "height": 118
+      },
+      "photo": {
+        "x": 56,
+        "y": 361,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 152,
+        "y": 361,
+        "width": 189,
+        "height": 116
+      }
+    },
+    {
+      "width": 390,
+      "id": "place3",
+      "row": {
+        "x": 55,
+        "y": 496,
+        "width": 311,
+        "height": 98
+      },
+      "photo": {
+        "x": 56,
+        "y": 497,
+        "width": 96,
+        "height": 96
+      },
+      "copy": {
+        "x": 152,
+        "y": 497,
+        "width": 189,
+        "height": 96
+      }
+    },
+    {
+      "width": 320,
+      "id": "place1",
+      "row": {
+        "x": 55,
+        "y": 184,
+        "width": 241,
+        "height": 96
+      },
+      "photo": {
+        "x": 56,
+        "y": 196,
+        "width": 72,
+        "height": 72
+      },
+      "copy": {
+        "x": 128,
+        "y": 185,
+        "width": 143,
+        "height": 94
+      }
+    },
+    {
+      "width": 320,
+      "id": "place2",
+      "row": {
+        "x": 55,
+        "y": 358,
+        "width": 241,
+        "height": 131
+      },
+      "photo": {
+        "x": 56,
+        "y": 387.5,
+        "width": 72,
+        "height": 72
+      },
+      "copy": {
+        "x": 128,
+        "y": 359,
+        "width": 143,
+        "height": 129
+      }
+    },
+    {
+      "width": 320,
+      "id": "place3",
+      "row": {
+        "x": 55,
+        "y": 507,
+        "width": 241,
+        "height": 96
+      },
+      "photo": {
+        "x": 56,
+        "y": 519,
+        "width": 72,
+        "height": 72
+      },
+      "copy": {
+        "x": 128,
+        "y": 508,
+        "width": 143,
+        "height": 94
+      }
+    }
+  ],
+  "passed": 40,
+  "total": 40
+}

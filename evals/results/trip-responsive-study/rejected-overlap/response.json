@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 66405,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T09:22:03.6936147Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 1.5; font-weight: 700; color: #111; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { font-size: 14px; line-height: 1.5; font-weight: 500; color: #666; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 19px; font-weight: 700; color: #111; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { font-size: 14px; line-height: 19px; font-weight: 500; color: #666; margin: 0; display: block; word-break: break-word; overflow-wrap: break-word; white-space: normal; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n[data-ui-unit=\\\"E3\\\"] .place-title { line-height: 1.5; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { align-self: center; }\\n}\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { width: 72px; height: 72px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n[data-ui-unit=\\\"E3\\\"] .place-title { line-height: 1.5; }\\n[data-ui-unit=\\\"E3\\\"] .place-region, [data-ui-unit=\\\"E3\\\"] .place-type { line-height: 1.5; }\\n}\",\n      \"newString\": \"@media (max-width: 360px) {\\n[data-ui-unit=\\\"E3\\\"] .place-photo { width: 72px; height: 72px; }\\n[data-ui-unit=\\\"E3\\\"] .place-copy { padding: 8px; }\\n}\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 66390057200,
+  "load_duration": 2036600,
+  "prompt_eval_count": 3724,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 42072966000,
+  "eval_count": 666,
+  "eval_duration": 24303583000
+}
