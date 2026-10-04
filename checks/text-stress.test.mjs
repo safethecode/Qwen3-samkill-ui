@@ -3,6 +3,21 @@ import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { inspectTextStress } from '../scripts/text-stress.mjs';
 
+test('reflow diagnostics identify the intrinsic minimum of a flexible input instead of its outer container', async () => {
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 900 } });
+    await page.setContent('<style>body{margin:16px;font:500 14px sans-serif}.search{display:flex;gap:8px}input{flex:1;font:inherit}button{font:inherit;flex-shrink:0}</style><div class="search"><input id="query"><button>Clear</button></div>');
+    const report = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.ok(report.overflowPx > 0);
+    assert.ok(report.flexPressure.some(item => item.id === 'query' && item.minWidth === 'auto' && item.parent.class === 'search'));
+    await page.addStyleTag({ content: '#query{min-width:0}' });
+    const fixed = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.equal(fixed.overflowPx, 0);
+    assert.deepEqual(fixed.flexPressure, []);
+  } finally { await browser.close(); }
+});
+
 test('text stress exposes narrow layout overflow without compounding inherited sizes or changing source styles', async () => {
   const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
   try {

@@ -13,6 +13,14 @@ export async function inspectTextStress(page, capture = async () => {}) {
         const visible = element => element.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }) && element.getBoundingClientRect().width > 0;
         const describe = element => ({ tag: element.tagName, id: element.id, class: String(element.className), text: element.textContent.trim().slice(0, 100), width: element.clientWidth, scrollWidth: element.scrollWidth, height: element.clientHeight, scrollHeight: element.scrollHeight, overflow: getComputedStyle(element).overflow });
         const elements = [...document.querySelectorAll('body *')].filter(visible);
+        const flexPressure = elements.flatMap(element => {
+          const parent = element.parentElement;
+          if (!parent) return [];
+          const style = getComputedStyle(element);
+          const layout = getComputedStyle(parent);
+          if (!['flex', 'inline-flex'].includes(layout.display) || !layout.flexDirection.startsWith('row') || parent.scrollWidth <= parent.clientWidth + 1 || style.minWidth !== 'auto' || Number(style.flexShrink) === 0) return [];
+          return [{ tag: element.tagName, id: element.id, class: String(element.className), width: element.getBoundingClientRect().width, minWidth: style.minWidth, flexShrink: style.flexShrink, flexBasis: style.flexBasis, parent: { tag: parent.tagName, id: parent.id, class: String(parent.className), width: parent.clientWidth, scrollWidth: parent.scrollWidth, display: layout.display, gap: layout.gap }, hypothesis: 'An automatic intrinsic minimum may prevent this flex item from shrinking. Inspect its min-width and sibling space; allow shrink/wrap without hiding content or changing font size.' }];
+        }).slice(0, 10);
         const clippedByAncestor = [];
         for (const element of elements) {
           const rects = [];
@@ -40,6 +48,7 @@ export async function inspectTextStress(page, capture = async () => {}) {
           viewport: innerWidth,
           scrollWidth: document.documentElement.scrollWidth,
           overflowPx: Math.max(0, document.documentElement.scrollWidth - innerWidth - 1),
+          flexPressure,
           clippedByAncestor,
           outsideViewport: elements.filter(element => element.getBoundingClientRect().right > innerWidth + 1).slice(0, 30).map(describe),
           clippingCandidates: elements.filter(element => element.textContent.trim() && (element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)).slice(0, 50).map(describe)
