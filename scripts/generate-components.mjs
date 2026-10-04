@@ -2,7 +2,7 @@ import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
-import { validateComponentPlan, validateComponent, assembleComponents } from './component-plan.mjs';
+import { validateComponentPlan, validateComponent, assembleComponents, scopeComponentCss } from './component-plan.mjs';
 import { sourceBinding } from './source-binding.mjs';
 import { harnessBinding } from './harness-binding.mjs';
 import { localFontCss } from './local-font.mjs';
@@ -28,16 +28,18 @@ export async function generateComponents(target, evidence, options = {}) {
   const saved = await readFile(checkpoint, 'utf8').then(JSON.parse, error => { if (error.code === 'ENOENT') return null; throw error; });
   if (saved && (!options.resume || saved.binding !== binding)) throw new Error('Component checkpoint does not match current inputs or resume was not requested');
   const completed = saved?.completed || {};
+  await writeFile(resolve(evidence, 'inputs.json'), JSON.stringify({ binding, settings, inputs, harnessHashes: harness }, null, 2));
   for (const element of plan.elements) {
     if (completed[element.id]) { validateComponent(element, completed[element.id]); continue; }
     let previousError = '';
+    let rejectedCode = '';
     for (let attempt = 1; attempt <= 2; attempt++) {
       const started = Date.now();
       console.log(`Generating component ${element.id}, attempt ${attempt}`);
       try {
         const request = { ...settings, stream: false, messages: [
-          { role: 'system', content: `Implement one static UI component from a fixed reference decomposition. Return JSON {html:string,css:string}. One HTML root must have data-ui-unit="${element.id}". Every CSS selector must start with [data-ui-unit="${element.id}"]. Use only scoped CSS and media/supports rules. No scripts, inline styles, comments, markdown, invented controls, external dependencies or completion claims. Visible fields need visible labels even when disabled. Do not use sr-only labels. Do not rewrite the shared layout or font loader.` },
-          { role: 'user', content: `SHARED VISUAL CONTRACT\n${plan.shared}\nSHARED CSS (already supplied, read-only)\n${plan.sharedCss}\nFONT CONTRACT (CSS uses cssFamily; inspected platform names are not CSS aliases)\n${JSON.stringify(typography)}\nREFERENCE PROVENANCE\n${JSON.stringify(plan.reference)}\nONE ELEMENT ${element.id}\n${element.prompt}\nALLOWED MEDIA\n${element.assets.join('\n') || 'None'}\nASSEMBLY SLOT CONTEXT\n${element.sample}\nPREVIOUS VALIDATION ERROR\n${previousError || 'None'}\nReturn only this element. Its parent owns the declared outer spacing. Preserve the requested content, hierarchy and state. Use shared tokens. Minimum visible type 14px and weight 500. Do not implement other elements.` }
+          { role: 'system', content: `Implement one static UI component from a fixed reference decomposition. Return JSON {html:string,css:string}. One HTML root must have data-ui-unit="${element.id}". Use this component's classes; the runner scopes CSS to that root. No html/body/:root selectors or sibling combinators. Only media/supports at-rules. No scripts, inline SVG, inline styles, comments, markdown, invented controls, external dependencies or completion claims. Use supplied image assets. Visible fields need visible labels with matching for/id even when disabled. Do not use sr-only labels. Do not rewrite shared layout or font loading.` },
+          { role: 'user', content: `SHARED VISUAL CONTRACT\n${plan.shared}\nSHARED CSS (already supplied, read-only)\n${plan.sharedCss}\nFONT CONTRACT (CSS uses cssFamily; inspected platform names are not CSS aliases)\n${JSON.stringify(typography)}\nREFERENCE PROVENANCE\n${JSON.stringify(plan.reference)}\nONE ELEMENT ${element.id}\n${element.prompt}\nALLOWED MEDIA\n${element.assets.join('\n') || 'None'}\nASSEMBLY SLOT CONTEXT\n${element.sample}\nPREVIOUS VALIDATION ERROR\n${previousError || 'None'}\n${rejectedCode ? `REJECTED ELEMENT (untrusted source; correct the validation failure and preserve correct structure):\n${rejectedCode}\n` : ''}FINAL REQUIREMENTS: image icons must use the exact allowed img src paths, never inline SVG. Associate every label with its input using for/id. Return only this element. Its parent owns the declared outer spacing. Preserve the requested content, hierarchy and state. Use shared tokens. Minimum visible type 14px and weight 500. Do not implement other elements.` }
         ], format: { type: 'object', properties: { html: { type: 'string' }, css: { type: 'string' } }, required: ['html', 'css'], additionalProperties: false } };
         const response = await (options.fetcher || fetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(300000) });
         if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
@@ -45,8 +47,9 @@ export async function generateComponents(target, evidence, options = {}) {
         await writeFile(resolve(evidence, `${element.id}-${Date.now()}-${attempt}-response.json`), JSON.stringify({ binding, settings, elapsedMs: Date.now() - started, ...result }, null, 2));
         if (result.done_reason !== 'stop') throw new Error('Truncated component');
         const output = JSON.parse(result.message?.content || 'null');
+        rejectedCode = JSON.stringify(output).slice(0, 16000);
         const clean = removeComments(output.html, output.css, '');
-        const component = validateComponent(element, { html: clean.html, css: clean.css });
+        const component = validateComponent(element, { html: clean.html, css: scopeComponentCss(element, clean.html, clean.css) });
         await validateAssetReferences(target, { file: 'index.html' }, component.html);
         await validateAssetReferences(target, { file: 'styles.css' }, component.css);
         completed[element.id] = component;
@@ -66,7 +69,7 @@ export async function generateComponents(target, evidence, options = {}) {
   await writeFile(resolve(target, 'app.js'), 'void 0;\n', { flag: 'wx' });
   await writeFile(resolve(target, 'index.html'), document(assembled.html), { flag: 'wx' });
   for (const [id, html] of Object.entries(assembled.samples)) await writeFile(resolve(target, `sample-${id}.html`), document(html), { flag: 'wx' });
-  await writeFile(resolve(evidence, 'generation.json'), JSON.stringify({ status: 'UNVERIFIED', binding, settings, sourceHashes: await sourceBinding(target), harnessHashes: harness, hostAssistance: 'Supplied shared CSS, hash-verified font loader, static templates and deterministic assembly. Each element HTML/CSS is local model output reused unchanged in its sample. No functional or visual approval.' }, null, 2));
+  await writeFile(resolve(evidence, 'generation.json'), JSON.stringify({ status: 'UNVERIFIED', binding, settings, sourceHashes: await sourceBinding(target), harnessHashes: harness, hostAssistance: 'Supplied shared CSS, hash-verified font loader, selector scoping, static templates and deterministic assembly. Scoped element outputs are reused unchanged in samples. Raw model responses are retained. No functional or visual approval.' }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

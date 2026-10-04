@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateComponentPlan, validateComponent, assembleComponents } from '../scripts/component-plan.mjs';
+import { validateComponentPlan, validateComponent, assembleComponents, scopeComponentCss } from '../scripts/component-plan.mjs';
 import { generateComponents } from '../scripts/generate-components.mjs';
 import { mkdtemp, mkdir, writeFile, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -28,6 +28,16 @@ test('component boundaries reject global style, hidden labels, scripts and undec
   assert.throws(() => validateComponent(plan.elements[0], { ...title, html: '<h1 data-ui-unit="E1"><img src="assets/reference/source.png"></h1>' }), /asset/);
   assert.throws(() => validateComponent(plan.elements[1], { ...search, html: '<div data-ui-unit="E2"><input id="search"></div>' }), /label/);
   assert.throws(() => validateComponent(plan.elements[1], { ...search, html: '<div data-ui-unit="E2"><label for="search" hidden>Search</label><input id="search"></div>' }), /label/);
+  assert.throws(() => validateComponent(plan.elements[0], { ...title, html: '<h1 data-ui-unit="E1"><svg></svg></h1>' }), /official asset/);
+});
+
+test('host selector scoping preserves component roots and children without document escapes', () => {
+  const css = scopeComponentCss(plan.elements[1], '<div data-ui-unit="E2" class="root"><input class="field"></div>', '.root{display:flex}.field::placeholder{color:black}');
+  assert.match(css, /\[data-ui-unit="E2"\]\.root/);
+  assert.match(css, /\[data-ui-unit="E2"\] \.field::placeholder/);
+  assert.equal(scopeComponentCss(plan.elements[0], title.html, 'h1{color:black}'), '[data-ui-unit="E1"]{color:black}');
+  assert.throws(() => scopeComponentCss(plan.elements[1], search.html, 'body{margin:0}'), /document scope/);
+  assert.throws(() => scopeComponentCss(plan.elements[1], search.html, '[data-ui-unit="E2"] + main{color:red}'), /sibling/);
 });
 
 test('component generation resumes fixed element outputs and rejects changed decomposition', async () => {
