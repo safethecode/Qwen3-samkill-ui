@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 5000,
+    "count": 2
+  },
+  "inputCharacters": 9205,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 40938,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3149,
+  "prompt_eval_duration": 33473358999,
+  "load_duration": 4645400,
+  "eval_count": 233,
+  "eval_duration": 7332144000,
+  "total_duration": 40925302600,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \"@media (max-width: 390px) {\\n  .mentor-card {\\n    padding: 14px;\\n  }\\n\\n  .name {\\n    font-size: 15px;\\n  }\\n\\n  .certification,\\n  .employer {\\n    font-size: 14px;\\n  }\\n}\",\n      \"newString\": \"@media (max-width: 390px) {\\n  .container {\\n    width: 100%;\\n    max-width: 100%;\\n    overflow-x: hidden;\\n  }\\n\\n  .mentor-card {\\n    padding: 14px;\\n  }\\n\\n  .name {\\n    font-size: 15px;\\n  }\\n\\n  .certification,\\n  .employer {\\n    font-size: 14px;\\n  }\\n}\"\n    }\n  ]\n}"
+}

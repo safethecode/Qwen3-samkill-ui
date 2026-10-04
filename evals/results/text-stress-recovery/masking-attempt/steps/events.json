@@ -1,0 +1,20 @@
+[
+  {
+    "attempt": 1,
+    "failure": "text-200-390",
+    "accepted": false,
+    "pending": true,
+    "passed": 29,
+    "total": 31,
+    "regressions": []
+  },
+  {
+    "attempt": 2,
+    "failure": "text-200-390",
+    "accepted": true,
+    "pending": false,
+    "passed": 31,
+    "total": 31,
+    "regressions": []
+  }
+]

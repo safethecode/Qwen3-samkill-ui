@@ -1,0 +1,16 @@
+{
+  "binding": "537a24486a4c5f4090d7bdd15e3822fcd41b52db1b5a1213b772072b590f590a",
+  "stage": "forms",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 101946,
+  "done_reason": "stop",
+  "load_duration": 3586900,
+  "prompt_eval_count": 7614,
+  "prompt_eval_duration": 79461360000,
+  "eval_count": 476,
+  "eval_duration": 22268481000,
+  "total_duration": 101928031500,
+  "content": "{\n\"code\": \"document.addEventListener('DOMContentLoaded', () => {\\n  const state = loadState();\\n  const navContainer = document.querySelector('#course-nav .nav-weeks');\\n  const titleEl = document.getElementById('lesson-title');\\n  const contentEl = document.getElementById('lesson-content');\\n  const completeBtn = document.getElementById('complete');\\n  const noteArea = document.getElementById('note');\\n  const noteForm = document.getElementById('note-form');\\n  let currentLessonId = null;\\n\\n  function render() {\\n    const allLessons = flattenLessons();\\n    renderNavigation(navContainer, allLessons, document.getElementById('search').value);\\n    renderProgress(document.getElementById('progress'), getProgress(state));\\n    if (currentLessonId) {\\n      const lesson = allLessons.find(l => l.id === currentLessonId);\\n      if (lesson) {\\n        titleEl.textContent = lesson.title;\\n        contentEl.textContent = lesson.content;\\n        completeBtn.disabled = state.completed.includes(currentLessonId);\\n        noteArea.value = state.notes[currentLessonId] || '';\\n        return;\\n      } else {\\n        currentLessonId = null;\\n      }\\n    }\\n    renderEmptyView(titleEl, contentEl);\\n    completeBtn.disabled = false;\\n    noteArea.value = '';\\n  }\\n\\n  navContainer.addEventListener('click', (e) => {\\n    if (e.target.matches('.nav-lesson-btn')) {\\n      currentLessonId = e.target.dataset.lessonId;\\n      render();\\n    }\\n  });\\n\\n  document.getElementById('search').addEventListener('input', () => render());\\n\\n  completeBtn.addEventListener('click', () => {\\n    if (!currentLessonId) return;\\n    state.completed.push(currentLessonId);\\n    saveState(state);\\n    render();\\n  });\\n\\n  noteForm.addEventListener('submit', (e) => {\\n    e.preventDefault();\\n    if (!currentLessonId) return;\\n    state.notes[currentLessonId] = noteArea.value;\\n    saveState(state);\\n  });\\n\\n  render();\\n});\"\n}"
+}

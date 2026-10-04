@@ -1,0 +1,68 @@
+{
+  "package": "lucide",
+  "version": "1.51.0",
+  "source": "https://github.com/lucide-icons/lucide",
+  "licenseSha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "icons": [
+    {
+      "name": "Search",
+      "file": "Search.svg",
+      "sha256": "91afdeccb52714821640ad95dd03d1b66d3c678a1b08f5a53d706f9c28448b5d",
+      "geometrySha256": "7ef625bc9cd6f86bafe04b5b707937af56db855eeb74894d275f2b56b5d3c42e"
+    },
+    {
+      "name": "ChevronLeft",
+      "file": "ChevronLeft.svg",
+      "sha256": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+      "geometrySha256": "94794b73e9d642ed29676ec1f3e4f2b43824f1ed14be22a9c7e2cf68eb369ffc"
+    },
+    {
+      "name": "ChevronRight",
+      "file": "ChevronRight.svg",
+      "sha256": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+      "geometrySha256": "b387ceba6a952091d1f508996535301fdd96182f419295e1de03a83ff3ab1ed5"
+    },
+    {
+      "name": "Plus",
+      "file": "Plus.svg",
+      "sha256": "3d4f93d0e5a8eb932e4d1f0d71122d01917e7624439adc35dddcd5352d7a228f",
+      "geometrySha256": "3ed1784e53a9252aa47f2392c529dc2078803a22e84522f68ec8165c23f05bb0"
+    },
+    {
+      "name": "X",
+      "file": "X.svg",
+      "sha256": "f27abfc353abc2497a1d9752e21e2e2e32eeeb4271401f2a067c4d1fcced7a23",
+      "geometrySha256": "7bf13b1e2e2ab7bb7226b828a7b6ded9a6482211bdeafc7a1e61ea450232d212"
+    },
+    {
+      "name": "Check",
+      "file": "Check.svg",
+      "sha256": "3a5b45878e79ab641ff6ac8dd83f9c8d711c297856aba532af3fc3db2dfd9c96",
+      "geometrySha256": "ab4347e7adf6b32287f8d623f659ef18e4686d9ef0a5d9f56b379024daf16f3e"
+    },
+    {
+      "name": "Calendar",
+      "file": "Calendar.svg",
+      "sha256": "f59b9b169b62e8ee1ce8f10600e352ddb76e3953083af28052ac13f09c3f06d0",
+      "geometrySha256": "a2fed7c03abb4aa76183dfb2af03357299cab2fbf8a008e80d01397cc1b3f727"
+    },
+    {
+      "name": "Clock",
+      "file": "Clock.svg",
+      "sha256": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+      "geometrySha256": "dd21f95bc00fa4d93395ffd11d86153487f49750df91981dd67cf0cbdec18c4d"
+    },
+    {
+      "name": "Heart",
+      "file": "Heart.svg",
+      "sha256": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+      "geometrySha256": "e57139f3f414a5f31b91bd77c6ce038d23e1a2ad40987c6b0348fcfa3a122912"
+    },
+    {
+      "name": "GripVertical",
+      "file": "GripVertical.svg",
+      "sha256": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+      "geometrySha256": "4d6361e64fa67dc57c314af06da71a7b66c13aece034abe85ce6b6ff685d8792"
+    }
+  ]
+}

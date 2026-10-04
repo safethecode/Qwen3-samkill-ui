@@ -1,0 +1,150 @@
+{
+  "headings": [
+    "갈피 학습실",
+    "1주: HTML과 접근성",
+    "2주: 시각적 대비와 색상",
+    "3주: 초점 관리와 상호작용",
+    "4주: 읽기 순서와 최종 점검"
+  ],
+  "controls": [
+    {
+      "tag": "INPUT",
+      "id": "search",
+      "type": "search",
+      "text": "",
+      "ariaLabel": null,
+      "labels": [
+        "강의 검색"
+      ],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "의미 있는 HTML",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "키보드 탐색",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "대비와 색상",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "폼 오류 안내",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "초점 관리",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "반응형 확대",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "읽기 순서",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "button",
+      "text": "최종 점검",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "complete",
+      "type": "button",
+      "text": "학습 완료",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "note",
+      "type": null,
+      "text": "",
+      "ariaLabel": null,
+      "labels": [
+        "학습 메모"
+      ],
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "type": "submit",
+      "text": "메모 저장",
+      "ariaLabel": null,
+      "labels": [],
+      "disabled": false
+    }
+  ],
+  "panels": [
+    {
+      "tag": "FORM",
+      "id": "search-form",
+      "visible": true
+    },
+    {
+      "tag": "SECTION",
+      "id": "lesson-title",
+      "visible": true
+    },
+    {
+      "tag": "SECTION",
+      "id": "lesson-content",
+      "visible": true
+    },
+    {
+      "tag": "SECTION",
+      "id": "progress",
+      "visible": true
+    },
+    {
+      "tag": "FORM",
+      "id": "note-form",
+      "visible": true
+    }
+  ]
+}

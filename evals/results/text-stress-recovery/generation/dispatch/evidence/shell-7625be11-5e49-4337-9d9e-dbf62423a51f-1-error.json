@@ -1,0 +1,6 @@
+{
+  "stage": "shell",
+  "binding": "9c81dcd67ca54cccfa2f585abcc3a3dd7d6e1e78f1429d1d483ce3e5d5e02665",
+  "elapsedMs": 117163,
+  "error": "Contract interface #ticket-form must be <form>, received <section>"
+}

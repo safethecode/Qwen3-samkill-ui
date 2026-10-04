@@ -1,0 +1,1 @@
+Original held-out brief. Wide information-dense table and detail panel, precise column alignment, clear urgency/action distinction; mobile preserves labels and row identity. Compare interaction density against round03 and multi-state consistency against round04, not their colors.

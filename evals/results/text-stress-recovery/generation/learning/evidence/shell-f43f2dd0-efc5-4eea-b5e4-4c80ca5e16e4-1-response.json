@@ -1,0 +1,16 @@
+{
+  "binding": "537a24486a4c5f4090d7bdd15e3822fcd41b52db1b5a1213b772072b590f590a",
+  "stage": "shell",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 75044,
+  "done_reason": "stop",
+  "load_duration": 3079400,
+  "prompt_eval_count": 5926,
+  "prompt_eval_duration": 60087688000,
+  "eval_count": 368,
+  "eval_duration": 14783971000,
+  "total_duration": 75017961400,
+  "content": "{\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\">\\n<title>갈피 학습실</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n<header class=\\\"app-header\\\">\\n  <h1>갈피 학습실</h1>\\n  <form id=\\\"search-form\\\" role=\\\"search\\\">\\n    <label for=\\\"search\\\" class=\\\"sr-only\\\">강의 검색</label>\\n    <input id=\\\"search\\\" type=\\\"search\\\" placeholder=\\\"강의 제목 검색\\\">\\n  </form>\\n</header>\\n<main class=\\\"app-layout\\\">\\n  <nav id=\\\"course-nav\\\" aria-label=\\\"학습 과정\\\">\\n    <div class=\\\"nav-weeks\\\"></div>\\n    <div id=\\\"empty-state\\\" class=\\\"hidden\\\">검색 결과가 없습니다.</div>\\n  </nav>\\n  <section class=\\\"lesson-view\\\">\\n    <section id=\\\"lesson-title\\\"></section>\\n    <section id=\\\"lesson-content\\\"></section>\\n    <button id=\\\"complete\\\" type=\\\"button\\\">학습 완료</button>\\n    <section id=\\\"progress\\\"></section>\\n    <form id=\\\"note-form\\\">\\n      <label for=\\\"note\\\">학습 메모</label>\\n      <textarea id=\\\"note\\\" rows=\\\"6\\\" placeholder=\\\"현재 강의에 대한 메모를 작성하세요.\\\"></textarea>\\n      <button type=\\\"submit\\\">메모 저장</button>\\n    </form>\\n  </section>\\n</main>\\n<script src=\\\"app.js\\\" defer></script>\\n</body>\\n</html>\"\n}"
+}

@@ -1,0 +1,16 @@
+{
+  "binding": "537a24486a4c5f4090d7bdd15e3822fcd41b52db1b5a1213b772072b590f590a",
+  "stage": "behavior",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 75739,
+  "done_reason": "stop",
+  "load_duration": 3892700,
+  "prompt_eval_count": 6059,
+  "prompt_eval_duration": 63245392000,
+  "eval_count": 323,
+  "eval_duration": 12275176000,
+  "total_duration": 75721300000,
+  "content": "{\n  \"code\": \"document.addEventListener('DOMContentLoaded', () => {\\n  const state = loadState();\\n  const navContainer = document.querySelector('#course-nav .nav-weeks');\\n  const titleEl = document.getElementById('lesson-title');\\n  const contentEl = document.getElementById('lesson-content');\\n  const searchInput = document.getElementById('search');\\n\\n  let currentLessonId = null;\\n\\n  function render() {\\n    const allLessons = flattenLessons();\\n    renderNavigation(navContainer, allLessons, searchInput.value);\\n    renderProgress(document.getElementById('progress'), getProgress(state));\\n    if (currentLessonId) {\\n      const lesson = allLessons.find(l => l.id === currentLessonId);\\n      if (lesson) {\\n        titleEl.textContent = lesson.title;\\n        contentEl.textContent = lesson.content;\\n      } else {\\n        currentLessonId = null;\\n        renderEmptyView(titleEl, contentEl);\\n      }\\n    } else {\\n      renderEmptyView(titleEl, contentEl);\\n    }\\n  }\\n\\n  navContainer.addEventListener('click', (e) => {\\n    if (e.target.matches('.nav-lesson-btn')) {\\n      currentLessonId = e.target.dataset.lessonId;\\n      render();\\n    }\\n  });\\n\\n  searchInput.addEventListener('input', () => {\\n    render();\\n  });\\n\\n  render();\\n});\"\n}"
+}

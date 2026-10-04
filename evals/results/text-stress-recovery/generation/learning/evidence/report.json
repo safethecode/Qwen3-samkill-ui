@@ -1,0 +1,559 @@
+{
+  "case": "learning",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-1440.json",
+      "category": "fonts",
+      "id": "420fc7dd6969751b904c15c983f30992dde6aa36da3ccea83ae4f7b3146e3284",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-390.json",
+      "category": "fonts",
+      "id": "e914afe0df40bd62ddef696c56828f10efa3f5d6e962ed73fedb439dd156d3ed",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "font-rendering-320.json",
+      "category": "fonts",
+      "id": "a5f80d40f475b328bf73ac07eb9443d34ba072864e9918a65c50cc6023ff4991",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "search-empty-recovery-presentation.json",
+      "category": "fonts",
+      "id": "4612b45f17f859ebdf8e16cf2ecff2afbc5f11afe04d09f908f8d58b0cbeee30",
+      "rules": [
+        "ORC-G06"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Intended typography roles were not supplied; font inventory alone does not establish reference fidelity",
+      "evidence": "lesson-progress-and-independent-notes-presentation.json",
+      "category": "fonts",
+      "id": "c1776c5c75c5b22bcf9fdf6a4b8bf2224f742c55de872b9c5d4e3ee3efa8f16e",
+      "rules": [
+        "ORC-G06"
+      ]
+    }
+  ],
+  "measurements": {
+    "readable-1440": 0,
+    "font-rendering-1440": 1,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "readable-390": 0,
+    "font-rendering-390": 1,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "readable-320": 0,
+    "font-rendering-320": 1,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "갈피 학습실": 1,
+      "강의 검색": 1,
+      "1주: HTML과 접근성": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "2주: 시각적 대비와 색상": 1,
+      "대비와 색상": 1,
+      "폼 오류 안내": 1,
+      "3주: 초점 관리와 상호작용": 1,
+      "초점 관리": 1,
+      "반응형 확대": 1,
+      "4주: 읽기 순서와 최종 점검": 1,
+      "읽기 순서": 1,
+      "최종 점검": 1,
+      "강의를 선택하세요": 1,
+      "왼쪽 메뉴에서 학습할 강의를 선택하면 상세 내용이 표시됩니다.": 1,
+      "학습 완료": 1,
+      "0/8 학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    },
+    "390": {
+      "갈피 학습실": 1,
+      "강의 검색": 1,
+      "1주: HTML과 접근성": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "2주: 시각적 대비와 색상": 1,
+      "대비와 색상": 1,
+      "폼 오류 안내": 1,
+      "3주: 초점 관리와 상호작용": 1,
+      "초점 관리": 1,
+      "반응형 확대": 1,
+      "4주: 읽기 순서와 최종 점검": 1,
+      "읽기 순서": 1,
+      "최종 점검": 1,
+      "강의를 선택하세요": 1,
+      "왼쪽 메뉴에서 학습할 강의를 선택하면 상세 내용이 표시됩니다.": 1,
+      "학습 완료": 1,
+      "0/8 학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    },
+    "1440": {
+      "갈피 학습실": 1,
+      "강의 검색": 1,
+      "1주: HTML과 접근성": 1,
+      "의미 있는 HTML": 1,
+      "키보드 탐색": 1,
+      "2주: 시각적 대비와 색상": 1,
+      "대비와 색상": 1,
+      "폼 오류 안내": 1,
+      "3주: 초점 관리와 상호작용": 1,
+      "초점 관리": 1,
+      "반응형 확대": 1,
+      "4주: 읽기 순서와 최종 점검": 1,
+      "읽기 순서": 1,
+      "최종 점검": 1,
+      "강의를 선택하세요": 1,
+      "왼쪽 메뉴에서 학습할 강의를 선택하면 상세 내용이 표시됩니다.": 1,
+      "학습 완료": 1,
+      "0/8 학습 완료": 1,
+      "학습 메모": 1,
+      "메모 저장": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "content-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif',\n+     disabled: false,\n+     id: 'search',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: '::placeholder',\n+     ratio: 4.197166857267752,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '강의 제목 검색',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "content-390",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif',\n+     disabled: false,\n+     id: 'search',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: '::placeholder',\n+     ratio: 4.197166857267752,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '강의 제목 검색',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "content-320",
+      "status": "PASS"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "PASS"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     declaredFamily: 'Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif',\n+     disabled: false,\n+     id: 'search',\n+     problem: 'Text contrast is below the applicable threshold',\n+     pseudo: '::placeholder',\n+     ratio: 4.197166857267752,\n+     status: 'FAIL',\n+     tag: 'INPUT',\n+     text: '강의 제목 검색',\n+     threshold: 4.5,\n+     uncertain: false\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: 'Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif',\n+       disabled: false,\n+       id: 'search',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: '::placeholder',\n+       ratio: 4.197166857267752,\n+       status: 'FAIL',\n+       tag: 'INPUT',\n+       text: '강의 제목 검색',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n    typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "갈피 학습실",
+          "1주: HTML과 접근성",
+          "2주: 시각적 대비와 색상",
+          "3주: 초점 관리와 상호작용",
+          "4주: 읽기 순서와 최종 점검"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "강의 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "의미 있는 HTML",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "키보드 탐색",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "대비와 색상",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "폼 오류 안내",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "초점 관리",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "반응형 확대",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "읽기 순서",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "최종 점검",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "complete",
+            "type": "button",
+            "text": "학습 완료",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "note",
+            "type": null,
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "학습 메모"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "submit",
+            "text": "메모 저장",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "FORM",
+            "id": "search-form",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "lesson-title",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "lesson-content",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "progress",
+            "visible": true
+          },
+          {
+            "tag": "FORM",
+            "id": "note-form",
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "lesson-progress-and-independent-notes",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       declaredFamily: 'Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans KR\", sans-serif',\n+       disabled: false,\n+       id: 'search',\n+       problem: 'Text contrast is below the applicable threshold',\n+       pseudo: '::placeholder',\n+       ratio: 4.197166857267752,\n+       status: 'FAIL',\n+       tag: 'INPUT',\n+       text: '강의 제목 검색',\n+       threshold: 4.5,\n+       uncertain: false\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n    typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "갈피 학습실",
+          "1주: HTML과 접근성",
+          "2주: 시각적 대비와 색상",
+          "3주: 초점 관리와 상호작용",
+          "4주: 읽기 순서와 최종 점검"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "강의 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "의미 있는 HTML",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "키보드 탐색",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "대비와 색상",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "폼 오류 안내",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "초점 관리",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "반응형 확대",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "읽기 순서",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "button",
+            "text": "최종 점검",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "complete",
+            "type": "button",
+            "text": "학습 완료",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": true
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "note",
+            "type": null,
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "학습 메모"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": "submit",
+            "text": "메모 저장",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "FORM",
+            "id": "search-form",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "lesson-title",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "lesson-content",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "progress",
+            "visible": true
+          },
+          {
+            "tag": "FORM",
+            "id": "note-form",
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 22,
+  "total": 27
+}

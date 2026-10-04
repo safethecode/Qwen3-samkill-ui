@@ -1,0 +1,16 @@
+{
+  "binding": "537a24486a4c5f4090d7bdd15e3822fcd41b52db1b5a1213b772072b590f590a",
+  "stage": "responsive",
+  "model": "qwen3.6:35b-a3b-coding",
+  "thinking": false,
+  "maxOutputTokens": 1536,
+  "elapsedMs": 157490,
+  "done_reason": "stop",
+  "load_duration": 4831700,
+  "prompt_eval_count": 9780,
+  "prompt_eval_duration": 104555062000,
+  "eval_count": 942,
+  "eval_duration": 52745178000,
+  "total_duration": 157488175100,
+  "content": "{\n\"code\": \"#note-form {\\n  display: flex;\\n  flex-direction: column;\\n  gap: var(--space-sm);\\n}\\n\\n#note {\\n  font-family: inherit;\\n  font-size: inherit;\\n  line-height: inherit;\\n  padding: var(--space-md);\\n  border: 1px solid var(--color-border);\\n  border-radius: var(--radius-sm);\\n  background-color: var(--color-surface);\\n  resize: vertical;\\n}\\n\\n#note:focus {\\n  outline: none;\\n  border-color: var(--color-accent);\\n  box-shadow: 0 0 0 3px var(--color-focus-ring);\\n}\\n\\n#note-form button[type=\\\"submit\\\"] {\\n  align-self: flex-start;\\n  padding: var(--space-sm) var(--space-lg);\\n  font-size: 14px;\\n  font-weight: 600;\\n  color: var(--color-accent);\\n  background-color: transparent;\\n  border: 1px solid var(--color-border);\\n  border-radius: var(--radius-sm);\\n  cursor: pointer;\\n}\\n\\n#note-form button[type=\\\"submit\\\"]:hover {\\n  background-color: rgba(0, 95, 107, 0.05);\\n  border-color: var(--color-accent);\\n}\\n\\n#note-form button[type=\\\"submit\\\"]:focus {\\n  outline: none;\\n  box-shadow: 0 0 0 3px var(--color-focus-ring);\\n}\\n\\n.hidden {\\n  display: none !important;\\n}\\n\\n.nav-lesson-btn[aria-current=\\\"true\\\"] {\\n  background-color: rgba(224, 122, 95, 0.1);\\n  color: var(--color-current);\\n  font-weight: 700;\\n  border-left: 3px solid var(--color-current);\\n}\\n\\n@media (prefers-reduced-motion: reduce) {\\n  * {\\n    transition-duration: 0s !important;\\n  }\\n}\\n\\n@media (max-width: 1440px) {\\n  .app-layout {\\n    grid-template-columns: 240px 1fr;\\n  }\\n}\\n\\n@media (max-width: 390px) {\\n  .app-header {\\n    flex-direction: column;\\n    align-items: stretch;\\n    padding: var(--space-md);\\n    gap: var(--space-sm);\\n  }\\n\\n  #search-form {\\n    width: 100%;\\n  }\\n\\n  #search {\\n    width: 100%;\\n  }\\n\\n  .app-layout {\\n    grid-template-columns: 1fr;\\n    padding: var(--space-md);\\n    gap: var(--space-lg);\\n  }\\n\\n  #course-nav {\\n    flex-direction: row;\\n    overflow-x: auto;\\n    padding-bottom: var(--space-sm);\\n    -webkit-overflow-scrolling: touch;\\n  }\\n\\n  .nav-weeks {\\n    display: flex;\\n    gap: var(--space-md);\\n    min-width: max-content;\\n  }\\n\\n  .nav-week {\\n    display: inline-flex;\\n    flex-direction: column;\\n    gap: var(--space-xs);\\n    min-width: 120px;\\n  }\\n\\n  .week-title {\\n    padding-left: 0;\\n    font-size: 12px;\\n  }\\n\\n  #lesson-title {\\n    font-size: 24px;\\n  }\\n\\n  #lesson-content {\\n    font-size: 16px;\\n  }\\n\\n  #complete {\\n    width: 100%;\\n    text-align: center;\\n  }\\n}\\n\\n@media (max-width: 320px) {\\n  .app-header h1 {\\n    font-size: 20px;\\n  }\\n\\n  #lesson-title {\\n    font-size: 22px;\\n  }\\n\\n  .nav-week {\\n    min-width: 100px;\\n  }\\n}\\n\"\n}"
+}
