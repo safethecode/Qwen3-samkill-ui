@@ -1,0 +1,8 @@
+{
+  "model": "qwen3.6:35b-a3b-coding",
+  "think": true,
+  "numPredict": 8192,
+  "requestTimeoutMs": 600000,
+  "experimentalGeneratorSha256": "db09aad959cc0f5f99f608031f1bfcbf881a086d107bb28823529bca1a95c148",
+  "comparison": "Exact source input copy from thinking-off workshop guide experiment; latest fresh UI Bowl inspection is stored separately. Same three components. Static host scaffold, no visual approval. Output budget differs as well as thinking."
+}

@@ -1,0 +1,108 @@
+@font-face{font-family:"Noto Sans KR";src:url("assets/fonts/NotoSansKR.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap;}
+*{box-sizing:border-box}body{margin:0;color:#202024;background:#fff;font-family:"Noto Sans KR",sans-serif;font-weight:500}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}img{display:block;max-width:100%}p,h1,h2,h3{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #5146d7;outline-offset:4px}.site-header{height:64px;border-bottom:1px solid #ededf0;display:flex;align-items:center;max-width:1120px;margin:auto;padding:0 24px;font-size:20px;font-weight:800}.product{max-width:1120px;margin:40px auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding:0 24px}.details{min-width:0}.disclosure{max-width:1120px;margin:32px auto;padding:0 24px 32px;font-size:14px;color:#60606a;line-height:1.7}@media(max-width:700px){.site-header{height:52px;padding:0 20px;font-size:18px}.product{display:block;margin:0;padding:0}.details{padding:0 20px}.disclosure{padding:0 20px 24px;margin-top:24px}} #booking-layout #booking-actions{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px;padding-top:0}
+[data-ui-unit="media"].product-media {
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+[data-ui-unit="media"].product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 44% center;
+  display: block;
+}
+[data-ui-unit="identity"].product-identity { padding-top: 24px; padding-bottom: 24px; }
+@media (min-width: 701px) {
+  [data-ui-unit="identity"].product-identity {
+    padding-top: 0;
+  }
+}
+[data-ui-unit="identity"] .eyebrow { font-size: 14px; color: #60606a; margin-bottom: 8px; }
+[data-ui-unit="identity"] .title { font-size: 22px; font-weight: 700; line-height: 1.45; margin-bottom: 0; }
+@media (min-width: 701px) {
+  [data-ui-unit="identity"] .title {
+    font-size: 28px;
+  }
+}
+[data-ui-unit="identity"] .price-row { margin-top: 12px; }
+[data-ui-unit="identity"] .price { font-size: 24px; font-weight: 800; display: block; }
+[data-ui-unit="identity"] .metadata { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 16px; }
+[data-ui-unit="identity"] .meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: #555560; }
+[data-ui-unit="identity"] .meta-item img { width: 20px; height: 20px; }
+[data-ui-unit="identity"] .description { margin-top: 20px; font-size: 15px; line-height: 1.75; }
+[data-ui-unit="booking"]#booking-layout {
+  border-top: 1px solid #ededf0;
+  padding: 20px 0;
+}
+
+[data-ui-unit="booking"] .booking-host-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #202024;
+  margin: 0;
+}
+
+[data-ui-unit="booking"] .booking-host-subtitle {
+  font-size: 14px;
+  color: #60606a;
+  margin-top: 4px;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 52px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-radius: 6px;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-icon-btn:hover {
+  background-color: #f4f4f5;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-icon-btn:active {
+  background-color: #e4e4e7;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-icon-btn img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-primary-btn {
+  height: 52px;
+  background-color: #5146d7;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-primary-btn:hover {
+  background-color: #4338c4;
+}
+
+[data-ui-unit="booking"] #booking-actions .booking-primary-btn:active {
+  background-color: #3b2fb5;
+  opacity: 0.9;
+}
+
+[data-ui-unit="booking"] .booking-note {
+  font-size: 14px;
+  color: #60606a;
+  line-height: 1.6;
+  margin-top: 12px;
+}

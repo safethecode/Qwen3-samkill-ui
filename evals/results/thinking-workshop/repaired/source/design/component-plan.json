@@ -1,0 +1,77 @@
+{
+  "reference": {
+    "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+    "screenId": "clvf09i14002xlc08apd72z2y",
+    "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+    "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8",
+    "retrievedAtUtc": "2026-10-04T12:00:48.7307118Z",
+    "tool": "search_ui_patterns",
+    "arguments": {
+      "app_name": "프립",
+      "query": "상세정보",
+      "limit": 3
+    },
+    "status": "inspected",
+    "width": 296,
+    "region": "Full native mobile product-detail preview",
+    "unknowns": [
+      "Original font identity and CSS",
+      "Desktop reference",
+      "Hidden states"
+    ],
+    "observations": [
+      "Large square photographic media first",
+      "Left aligned title and price below photograph",
+      "Compact host block",
+      "Primary purple action in separate action region"
+    ],
+    "adaptation": "Independent pottery service. Licensed substitute photo, local Noto Sans KR and Lucide assets. Desktop split layout is host decision, not observed reference.",
+    "latestInspection": {
+      "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+      "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8",
+      "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+      "tool": "search_ui_patterns",
+      "retrievedAtUtc": "2026-10-04T13:06:07.7633191Z",
+      "screenId": "clvf09i14002xlc08apd72z2y",
+      "arguments": {
+        "limit": 3,
+        "query": "상세정보",
+        "app_name": "프립"
+      }
+    }
+  },
+  "shared": "Preserve photo-led product hierarchy. No abstract illustration, oversized marketing hero, invented reviews, insurance benefits or generic repeated cards. Distinct title, price, compact metadata and action regions. No price/button/favorite all in one row. White flat surfaces, no outer card shadows. Purple primary action #5146d7. Exact content and IDs matter for subsequent behavior. Do not imply the stock photographer operates this demo workshop. Structure and action-row layout are now host-owned immutable assembly scaffolding after two independent generations placed the favorite on its own row. Only style supplied markup. This is an assisted CSS-generation study, not independent design reconstruction.",
+  "sharedCss": "*{box-sizing:border-box}body{margin:0;color:#202024;background:#fff;font-family:\"Noto Sans KR\",sans-serif;font-weight:500}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}img{display:block;max-width:100%}p,h1,h2,h3{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #5146d7;outline-offset:4px}.site-header{height:64px;border-bottom:1px solid #ededf0;display:flex;align-items:center;max-width:1120px;margin:auto;padding:0 24px;font-size:20px;font-weight:800}.product{max-width:1120px;margin:40px auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding:0 24px}.details{min-width:0}.disclosure{max-width:1120px;margin:32px auto;padding:0 24px 32px;font-size:14px;color:#60606a;line-height:1.7}@media(max-width:700px){.site-header{height:52px;padding:0 20px;font-size:18px}.product{display:block;margin:0;padding:0}.details{padding:0 20px}.disclosure{padding:0 20px 24px;margin-top:24px}} #booking-layout #booking-actions{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px;padding-top:0}",
+  "assembly": "<header class=\"site-header\">틈 공방</header><main class=\"product\">{{media}}<div class=\"details\">{{identity}}{{booking}}</div></main><footer class=\"disclosure\">공예 클래스 예약 데모 · 실제 수업이나 결제가 아닙니다.<br>사진: Yan Krukau / Pexels</footer>",
+  "elements": [
+    {
+      "id": "media",
+      "assets": [
+        "assets/photos/pottery.jpg"
+      ],
+      "sample": "<main class=\"product\">{{media}}<div class=\"details\"></div></main>",
+      "prompt": "One figure with class product-media, margin:0. One real img src assets/photos/pottery.jpg alt=\"물레 위 흙을 손으로 빚는 도자기 작업\". Square aspect ratio 1/1, width100%, object-fit:cover, object-position:44% center. Mobile edge-to-edge, no border radius. Desktop min-width701px radius8px. No text, badges, invented carousel or overlays. The image is the entire component.",
+      "html": "<figure class=\"product-media\" data-ui-unit=\"media\"><img src=\"assets/photos/pottery.jpg\" alt=\"물레 위 흙을 손으로 빚는 도자기 작업\"></figure>"
+    },
+    {
+      "id": "identity",
+      "assets": [
+        "assets/icons/Clock.svg",
+        "assets/icons/Users.svg",
+        "assets/icons/MapPin.svg"
+      ],
+      "sample": "<main class=\"product\"><div></div><div class=\"details\">{{identity}}</div></main>",
+      "prompt": "Implement product identity section. Top padding24px mobile,0 desktop; bottom24px. Small eyebrow 도자기 · 입문; h1 \"내 손으로 빚는 첫 번째 도자기 잔\" at22px700 line-height1.45 (desktop28px). Space12px then price55000 displayed 55,000원 at24px800 on its own line. Never combine price with actions. Below24px compact metadata rows: official Clock image20px then90분; Users20px then최대6명; MapPin20px then서울·연남동. Metadata text14px weight500 muted#555560, items wrap with16px gap; no pills or colored bands. Then paragraph margin-top20px line-height1.75 font15px: \"흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.\" No buttons, stars or reviews.",
+      "html": "<section data-ui-unit=\"identity\" class=\"product-identity\">\n  <div class=\"eyebrow\">도자기 · 입문</div>\n  <h1 class=\"title\">내 손으로 빚는 첫 번째 도자기 잔</h1>\n  <div class=\"price-row\">\n    <span class=\"price\">55,000원</span>\n  </div>\n  <div class=\"metadata\">\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Clock.svg\" alt=\"\"\n           class=\"icon-clock\">\n      <span>90분</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Users.svg\" alt=\"\"\n           class=\"icon-users\">\n      <span>최대6명</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/MapPin.svg\" alt=\"\"\n           class=\"icon-map-pin\">\n      <span>서울·연남동</span>\n    </div>\n  </div>\n  <p class=\"description\">\n    흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.\n  </p>\n</section>"
+    },
+    {
+      "id": "booking",
+      "assets": [
+        "assets/icons/Heart.svg"
+      ],
+      "sample": "<main class=\"product\"><div></div><div class=\"details\">{{booking}}</div></main>",
+      "prompt": "Section with a compact host row separated by thin top border#ededf0, padding20px 0. Host is text only: bold16px 틈 도자기 스튜디오; second line14px#60606a \"재료와 도구 포함 · 완성품 소성 후 수령\". Below20px action row displaygrid 48px minmax(0,1fr) gap12px: icon button id=favorite aria-label=\"수업 찜하기\" aria-pressed=false with official Heart.svg24px. Then button id=book type=button text=\"일정 선택하고 예약하기\" height52px background#5146d7 white bold16px radius6px. No price in action row. Below12px note14px \"일정을 선택한 뒤 예약 내용을 확인할 수 있어요.\" line-height1.6. Buttons need visible focus, hover and pressed states; never oversized section padding. No fixed positioning, forms or hidden states in this static component. The immutable parent #booking-layout #booking-actions already owns the action grid and its spacing at every viewport. Do not set display, grid columns, alignment, margin or padding on that action row. Style the host and individual controls only.",
+      "html": "<section data-ui-unit=\"booking\" id=\"booking-layout\">\n  <div class=\"booking-host\">\n    <h3 class=\"booking-host-title\">틈 도자기 스튜디오</h3>\n    <p class=\"booking-host-subtitle\">재료와 도구 포함 · 완성품 소성 후 수령</p>\n  </div>\n  <div class=\"booking-action-row\" id=\"booking-actions\">\n    <button id=\"favorite\" class=\"booking-icon-btn\" type=\"button\" aria-label=\"수업 찜하기\" aria-pressed=\"false\">\n      <img src=\"assets/icons/Heart.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n    <button id=\"book\" class=\"booking-primary-btn\" type=\"button\">일정 선택하고 예약하기</button>\n  </div>\n  <p class=\"booking-note\">일정을 선택한 뒤 예약 내용을 확인할 수 있어요.</p>\n</section>"
+    }
+  ]
+}

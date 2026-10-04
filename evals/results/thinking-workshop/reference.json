@@ -1,0 +1,13 @@
+{
+  "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+  "screenId": "clvf09i14002xlc08apd72z2y",
+  "tool": "search_ui_patterns",
+  "retrievedAtUtc": "2026-10-04T21:30:54.0937663Z",
+  "arguments": {
+    "app_name": "프립",
+    "limit": 3,
+    "query": "상세정보"
+  },
+  "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+  "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8"
+}
