@@ -12,6 +12,7 @@ import { sourceBinding } from './source-binding.mjs';
 import { inspectFieldLabels } from './label-check.mjs';
 import { inspectWorkflowState } from './workflow-state.mjs';
 import { inspectTextStress } from './text-stress.mjs';
+import { inspectStackedButtons } from './stacked-content.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -59,6 +60,13 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
       await page.screenshot({ path: resolve(evidence, `${width}-full.png`), fullPage: true });
       if (options.captureStates) await options.captureStates(page, width, evidence, url);
       if (!options.reference) {
+        if (width <= 390 && fixture.mobileStack) {
+          const stack = await inspectStackedButtons(page, fixture.mobileStack);
+          const name = `contract-stack-${width}`;
+          measurements[name] = stack.issues.length;
+          await writeFile(resolve(evidence, `${name}.json`), JSON.stringify(stack, null, 2));
+          await check(name, async () => assert.deepEqual(stack.issues, [], `The design contract requires these mobile lesson buttons stacked vertically in order. Preserve all lessons and interactions; change the mobile navigation layout, not desktop layout or content. Observed issues: ${JSON.stringify(stack.issues.slice(0, 2))}`));
+        }
         contentInventory[width] = await page.evaluate(() => {
           const inventory = {};
           for (const element of document.querySelectorAll('body *')) {

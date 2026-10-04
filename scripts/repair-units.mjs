@@ -8,8 +8,8 @@ function sourceUnits(path, source, detail) {
     for (let offset = start; offset < end; offset += 5000) result.push({ offset, content: source.slice(offset, Math.min(offset + 6000, end)), boundary: 'fragment' });
     return result;
   };
-  const width = Number(detail.match(/text-(?:200|spacing)-(?:clipping-)?(\d+)/)?.[1]);
-  if (path === 'styles.css' && width && /automatic grid/i.test(detail)) {
+  const width = Number(detail.match(/(?:text-(?:200|spacing)-(?:clipping-)?|contract-stack-)(\d+)/)?.[1]);
+  if (path === 'styles.css' && width && /automatic grid|contract-stack/i.test(detail)) {
     const rules = [];
     try {
       postcss.parse(source).walkRules(rule => {

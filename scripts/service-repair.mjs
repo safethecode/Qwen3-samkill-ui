@@ -43,7 +43,7 @@ try {
     await mkdir(step);
     let owned = null;
     try {
-      const files = /^(overflow|readable|font-rendering|text-200|text-spacing)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
+      const files = /^(overflow|readable|font-rendering|text-200|text-spacing|contract-stack)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
       const applied = await repair(target, step, { name: 'visual-review', files, detail: serviceFailureContext(failure) }, previousError, { bounded: true, unitAttempt: unitAttempt++ });
       owned = names.map(name => applied.files[name]);
       const raw = await snapshot();
