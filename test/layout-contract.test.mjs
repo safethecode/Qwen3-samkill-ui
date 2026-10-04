@@ -4,6 +4,21 @@ import { chromium } from 'playwright';
 import { inspectLayoutContract } from '../scripts/layout-contract.mjs';
 import { createServer } from 'node:http';
 
+test('sameRow rejects stacked actions and invisible subjects', async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined, headless: true });
+  try {
+    const page = await browser.newPage();
+    const contract = { rules: [{ id: 'actions', kind: 'sameRow', subject: '#favorite', reference: '#book', tolerance: 2 }] };
+    await page.setContent('<div style="display:flex;align-items:center;gap:12px"><button id="favorite" style="height:48px">Save</button><button id="book" style="height:52px">Book</button></div>');
+    assert.equal((await inspectLayoutContract(page, contract)).results[0].status, 'PASS');
+    await page.locator('div').evaluate(element => element.style.display = 'block');
+    await page.locator('#book').evaluate(element => element.style.display = 'block');
+    assert.equal((await inspectLayoutContract(page, contract)).results[0].status, 'FAIL');
+    await page.locator('#book').evaluate(element => element.style.visibility = 'hidden');
+    assert.match((await inspectLayoutContract(page, contract)).results[0].detail, /hidden/);
+  } finally { await browser.close(); }
+});
+
 test('sample width gate checks assembled width and inset against the actual sample', async () => {
   let sampleWidth = 210;
   const server = createServer((request, response) => {

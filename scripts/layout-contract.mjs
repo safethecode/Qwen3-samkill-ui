@@ -45,6 +45,14 @@ export async function inspectLayoutContract(page, contract, options = {}) {
           observed.container = await box(rule.container);
           const owns = await page.locator(rule.container).evaluate((container, selector) => container.contains(document.querySelector(selector)), rule.subject);
           if (!owns || !inside(observed.subject, observed.container)) throw new Error('Action/content is outside its declared owner');
+        } else if (rule.kind === 'sameRow') {
+          observed.reference = await box(rule.reference);
+          const tolerance = rule.tolerance ?? 2;
+          if (!Number.isFinite(tolerance) || tolerance < 0 || tolerance > 8) throw new Error('Row alignment tolerance must be between 0 and 8 pixels');
+          const a = observed.subject, b = observed.reference;
+          observed.centerDelta = Math.abs(a.y + a.height / 2 - b.y - b.height / 2);
+          const separated = a.x + a.width <= b.x + .5 || b.x + b.width <= a.x + .5;
+          if (!separated || observed.centerDelta > tolerance) throw new Error('Declared sibling regions do not share a nonoverlapping centered row');
         } else if (rule.kind === 'below' || rule.kind === 'disjoint') {
           observed.reference = await box(rule.reference);
           if (rule.kind === 'below') {
