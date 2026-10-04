@@ -119,6 +119,9 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           const name = `${report.mode}-${width}`;
           measurements[name] = report.overflowPx;
           await check(name, async () => assert.equal(report.overflowPx, 0, `Horizontal overflow under ${report.mode}. Repair container sizing and wrapping; preserve all text and controls. Do not hide overflow or shrink enlarged text. Observed geometry: ${JSON.stringify(report)}`));
+          const clippingName = `${report.mode}-clipping-${width}`;
+          measurements[clippingName] = report.clippedByAncestor.length;
+          await check(clippingName, async () => assert.equal(report.clippedByAncestor.length, 0, `Text or controls are cut off by an ancestor with hidden/clip overflow under ${report.mode}. Fix sizing and wrapping without removing content: ${JSON.stringify(report.clippedByAncestor)}`));
         }
       }
       await page.close();

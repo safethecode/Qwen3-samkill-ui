@@ -16,7 +16,12 @@ test('text stress exposes narrow layout overflow without compounding inherited s
     assert.equal(await page.locator('.label').getAttribute('style'), before);
     assert.equal(await page.locator('.label').evaluate(e => getComputedStyle(e).fontSize), '16px');
     assert.equal(await page.locator('[style*="font-size"]').count(), 0);
+    const masking = await page.addStyleTag({ content: '.row{overflow:hidden;max-width:100%}' });
+    const masked = (await inspectTextStress(page)).find(r => r.mode === 'text-200');
+    assert.equal(masked.overflowPx, 0);
+    assert.ok(masked.clippedByAncestor.length > 0);
+    await masking.evaluate(e => e.remove());
     await page.addStyleTag({ content: '.row{flex-wrap:wrap}.label{white-space:normal;overflow-wrap:anywhere}button{max-width:100%}' });
-    assert.ok((await inspectTextStress(page)).every(r => r.overflowPx === 0));
+    assert.ok((await inspectTextStress(page)).every(r => r.overflowPx === 0 && r.clippedByAncestor.length === 0));
   } finally { await browser.close(); }
 });
