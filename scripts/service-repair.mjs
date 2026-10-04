@@ -33,6 +33,7 @@ try {
   const events = [];
   let previousName = '';
   let unitAttempt = 0;
+  let previousError = '';
   for (let attempt = 1; attempt <= rounds && current.passed < current.total; attempt++) {
     await assertOwned(snapshot, workingSource);
     const failure = workingReport.checks.find(c => c.status === 'FAIL');
@@ -43,7 +44,7 @@ try {
     let owned = null;
     try {
       const files = /^(overflow|readable|font-rendering|text-200|text-spacing)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
-      const applied = await repair(target, step, { name: 'visual-review', files, detail: serviceFailureContext(failure) }, '', { bounded: true, unitAttempt: unitAttempt++ });
+      const applied = await repair(target, step, { name: 'visual-review', files, detail: serviceFailureContext(failure) }, previousError, { bounded: true, unitAttempt: unitAttempt++ });
       owned = names.map(name => applied.files[name]);
       const raw = await snapshot();
       if (raw.some((source, index) => source !== owned[index])) { const error = new Error('Source changed before normalization'); error.code = 'STALE_SOURCE'; throw error; }
@@ -53,6 +54,11 @@ try {
       const candidate = await evaluateService(target, resolve(step, 'evaluation'), fixture, { textStress: true });
       await assertOwned(snapshot, owned);
       const { decision, regressions } = serviceProgress(current, candidate);
+      const worsened = Object.entries(current.measurements || {}).filter(([name, value]) => candidate.measurements?.[name] > value).map(([name, value]) => `${name}: ${value} -> ${candidate.measurements[name]}`);
+      const diagnostics = candidate.checks.filter(check => regressions.includes(check.name)).map(check => `${check.name}: ${check.detail || ''}`).join('\n');
+      previousError = decision === 'accept' ? '' : decision === 'stage' ? `Previous candidate made no measured improvement and remains provisional. The same failure is unresolved. Repair its actual overflowing elements or wrapping instead of unrelated container declarations.` : `Previous candidate was rejected and rolled back. Regressions: ${regressions.join(', ') || 'protected content or measurements'}. Worsened measurements: ${worsened.join('; ')}. Do not conceal overflow or remove content.\n${diagnostics}`;
+      previousError = previousError.slice(0, 1000);
+      await writeFile(resolve(step, 'next-repair-feedback.txt'), previousError);
       events.push({ attempt, failure: failure.name, accepted: decision === 'accept', pending: decision === 'stage', passed: candidate.passed, total: candidate.total, regressions });
       if (decision === 'accept') { current = candidate; workingReport = candidate; acceptedSource = owned; workingSource = owned; unitAttempt = 0; }
       else if (decision === 'stage') { workingReport = candidate; workingSource = owned; await writeFile(resolve(step, 'pending-source.json'), JSON.stringify(owned)); }
@@ -60,6 +66,7 @@ try {
     } catch (error) {
       if (error.code === 'STALE_SOURCE' || /Source changed during generation/.test(error.message)) throw error;
       await rollbackOwned(snapshot, restore, owned, before);
+      previousError = error.message.replaceAll(target, '<target>').slice(0, 1000);
       events.push({ attempt, failure: failure.name, accepted: false, error: error.message.replaceAll(target, '<target>') });
     }
     await writeFile(resolve(evidence, 'events.json'), JSON.stringify(events, null, 2));

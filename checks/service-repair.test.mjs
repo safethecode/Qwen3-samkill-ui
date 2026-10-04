@@ -13,22 +13,27 @@ test('service repair continues past basic passes to repair enlarged-text overflo
   const css = 'body{font:500 16px sans-serif}button{font:inherit}.row{display:flex;white-space:nowrap}';
   for (const [name, content] of Object.entries({ 'index.html': '<html><head><link rel="stylesheet" href="styles.css"></head><body><h1>일정 편집</h1><h2>Day 1</h2><div class="row"><span>Long search label</span><button disabled>완료</button></div></body></html>', 'app.js': '', 'styles.css': css, 'DESIGN.md': 'Preserve content and wrap at 200% text.', 'REFERENCE.md': 'Keep the itinerary.' })) await writeFile(resolve(target, name), content);
   let requestCount = 0;
+  const requests = [];
   const server = createServer(async (req, res) => {
     let body = ''; for await (const part of req) body += part;
     const request = JSON.parse(body);
+    requests.push(body);
     assert.match(body, /text-200/);
     assert.deepEqual(request.format.properties.patches.items.properties.path.enum, ['styles.css']);
     requestCount++;
     res.setHeader('content-type', 'application/json');
-    res.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'styles.css', oldString: '.row{display:flex;white-space:nowrap}', newString: '.row{display:flex;flex-wrap:wrap;white-space:normal;overflow-wrap:anywhere}' }] }) } }));
+    res.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'styles.css', oldString: '.row{display:flex;white-space:nowrap}', newString: requestCount === 1 ? '.row{display:flex;white-space:nowrap;overflow:hidden}' : '.row{display:flex;flex-wrap:wrap;white-space:normal;overflow-wrap:anywhere}' }] }) } }));
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   try {
-    await promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '1'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true });
-    assert.equal(requestCount, 1);
+    await promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '2'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true });
+    assert.equal(requestCount, 2);
+    assert.match(requests[1], /Previous candidate was rejected/);
+    assert.match(requests[1], /text-200-clipping/);
     const evidence = (await readdir(root)).find(name => name.startsWith('repair-'));
     const result = JSON.parse(await readFile(resolve(root, evidence, 'result.json'), 'utf8'));
-    assert.equal(result.events[0].accepted, true);
+    assert.equal(result.events[0].accepted, false);
+    assert.equal(result.events[1].accepted, true);
     assert.match(result.events[0].failure, /^text-200-/);
     assert.equal(result.visual, 'UNVERIFIED');
     assert.ok(result.report.reviewRequired.some(finding => finding.category === 'layout'));
