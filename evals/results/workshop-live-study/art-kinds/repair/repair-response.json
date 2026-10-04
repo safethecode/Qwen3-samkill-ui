@@ -1,0 +1,20 @@
+{
+  "mode": "unit",
+  "unit": {
+    "path": "styles.css",
+    "offset": 0,
+    "count": 2
+  },
+  "inputCharacters": 13064,
+  "maxOutputTokens": 2048,
+  "elapsedMs": 64743,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 3929,
+  "prompt_eval_duration": 44514254000,
+  "load_duration": 1538200,
+  "eval_count": 563,
+  "eval_duration": 20132526000,
+  "total_duration": 64725980900,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"styles.css\",\n      \"oldString\": \".class-card .class-art[data-kind=\\\"가죽\\\"]::before {\\n  width: 50%;\\n  height: 60%;\\n  top: 20%;\\n  left: 25%;\\n  border-radius: 10px;\\n}\\n\\n.class-card .class-art[data-kind=\\\"가죽\\\"]::after {\\n  width: 40%;\\n  height: 20%;\\n  top: 30%;\\n  left: 30%;\\n  border-radius: 5px;\\n}\\n\\n.class-card .class-art[data-kind=\\\"나무\\\"]::before {\\n  width: 70%;\\n  height: 40%;\\n  bottom: 20%;\\n  left: 15%;\\n  border-radius: 50% / 20%;\\n}\\n\\n.class-card .class-art[data-kind=\\\"나무\\\"]::after {\\n  width: 20%;\\n  height: 60%;\\n  bottom: 20%;\\n  left: 40%;\\n  border-radius: 50%;\\n}\",\n      \"newString\": \".class-card .class-art[data-kind=\\\"가죽공예\\\"]::before {\\n  width: 50%;\\n  height: 60%;\\n  top: 20%;\\n  left: 25%;\\n  border-radius: 10px;\\n}\\n\\n.class-card .class-art[data-kind=\\\"가죽공예\\\"]::after {\\n  width: 40%;\\n  height: 20%;\\n  top: 30%;\\n  left: 30%;\\n  border-radius: 5px;\\n}\\n\\n.class-card .class-art[data-kind=\\\"목공예\\\"]::before {\\n  width: 70%;\\n  height: 40%;\\n  bottom: 20%;\\n  left: 15%;\\n  border-radius: 50% / 20%;\\n}\\n\\n.class-card .class-art[data-kind=\\\"목공예\\\"]::after {\\n  width: 20%;\\n  height: 60%;\\n  bottom: 20%;\\n  left: 40%;\\n  border-radius: 50%;\\n}\"\n    }\n  ]\n}"
+}

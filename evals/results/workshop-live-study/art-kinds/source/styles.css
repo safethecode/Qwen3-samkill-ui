@@ -1,0 +1,561 @@
+@font-face{font-family:"Noto Sans KR";src:url("assets/fonts/NotoSansKR.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap;}
+:root {
+  --color-bg: #fdfbf7;
+  --color-surface: #ffffff;
+  --color-text: #2d2a26;
+  --color-text-muted: #5c5853;
+  --color-accent: #c0563e;
+  --color-accent-hover: #a34731;
+  --color-border: #e8e4df;
+  
+  --font-body: 'Noto Sans KR', sans-serif;
+  
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 64px;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  --max-width: 1120px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  cursor: pointer;
+}
+
+.masthead {
+  padding: var(--space-lg) var(--space-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.site-intro {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-lg) auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.pottery-illustration {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #f0ebe5;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.pottery-illustration::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #e6dcd2;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pottery-illustration::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 60%;
+  height: 15%;
+  background-color: #d4c8bc;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.search-section {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-lg) auto;
+  padding: 0 var(--space-md);
+}
+
+#search {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(192, 86, 62, 0.1);
+}
+
+.catalogue {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl) auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.class-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.class-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.class-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.class-card .class-art {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.class-card .class-art[data-kind="도자기"] {
+  background-color: #f4e8d9;
+}
+
+.class-card .class-art[data-kind="가죽공예"] {
+  background-color: #e6d5c3;
+}
+
+.class-card .class-art[data-kind="목공예"] {
+  background-color: #d9cbb8;
+}
+
+.class-card .class-art::before,
+.class-card .class-art::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(45, 42, 38, 0.15);
+}
+
+.class-card .class-art[data-kind="도자기"]::before {
+  width: 60%;
+  height: 40%;
+  bottom: 20%;
+  left: 20%;
+  border-radius: 50% 50% 10% 10%;
+}
+
+.class-card .class-art[data-kind="도자기"]::after {
+  width: 30%;
+  height: 10%;
+  bottom: 20%;
+  left: 35%;
+  border-radius: 50%;
+}
+
+.class-card .class-art[data-kind="가죽공예"]::before {
+  width: 50%;
+  height: 60%;
+  top: 20%;
+  left: 25%;
+  border-radius: 10px;
+}
+
+.class-card .class-art[data-kind="가죽공예"]::after {
+  width: 40%;
+  height: 20%;
+  top: 30%;
+  left: 30%;
+  border-radius: 5px;
+}
+
+.class-card .class-art[data-kind="목공예"]::before {
+  width: 70%;
+  height: 40%;
+  bottom: 20%;
+  left: 15%;
+  border-radius: 50% / 20%;
+}
+
+.class-card .class-art[data-kind="목공예"]::after {
+  width: 20%;
+  height: 60%;
+  bottom: 20%;
+  left: 40%;
+  border-radius: 50%;
+}
+
+.class-card .class-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.class-card .class-logistics {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.class-card .class-logistics img {
+  flex-shrink: 0;
+}
+
+.class-card .class-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.class-card button {
+  margin-top: auto;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.class-card button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.details-panel {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-lg) auto;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+#close-details {
+  align-self: flex-end;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+#close-details:hover {
+  color: var(--color-text);
+}
+
+#details-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+#details-content h3 {
+  font-size: 1.5rem;
+}
+
+#open-booking-btn {
+  padding: var(--space-sm) var(--space-lg);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#open-booking-btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.booking-summary {
+  padding: var(--space-sm);
+  background-color: #f7f5f2;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+}
+
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--color-border);
+}
+
+#booking-form {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-lg) auto;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+#booking-form h2 {
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.booking-summary p {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+#booking-form .form-group {
+  margin-bottom: var(--space-md);
+}
+
+#booking-form label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+#guest,
+#date {
+  width: 100%;
+  padding: var(--space-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+}
+
+#guest:focus,
+#date:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(192, 86, 62, 0.1);
+}
+
+#slot {
+  width: 100%;
+  padding: var(--space-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+}
+
+#slot:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(192, 86, 62, 0.1);
+}
+
+
+#confirmation {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-lg) auto;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+}
+
+#confirmation h2 {
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+#confirmation-content p {
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}
+
+
+button[type="submit"],
+#open-booking-btn,
+.class-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+#open-booking-btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+button[type="submit"]:focus-visible,
+#open-booking-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+#cancel-booking-btn {
+  margin-top: var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+#cancel-booking-btn:hover {
+  color: var(--color-accent);
+}
+
+#cancel-booking-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+
+[hidden] {
+  display: none !important;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0s !important;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .pottery-illustration {
+    order: -1;
+  }
+
+  .catalogue {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .site-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  #booking-form,
+  .details-panel,
+  #confirmation {
+    padding: var(--space-md);
+  }
+}
+
+
+@media (max-width: 320px) {
+  .masthead,
+  .hero,
+  .search-section,
+  .catalogue,
+  #booking-form,
+  .details-panel,
+  #confirmation,
+  .footer {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .class-card h3 {
+    font-size: 1.125rem;
+  }
+}

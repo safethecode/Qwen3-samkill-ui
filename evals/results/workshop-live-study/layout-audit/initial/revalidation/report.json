@@ -1,0 +1,564 @@
+{
+  "case": "workshop",
+  "scope": "held-out original service",
+  "visual": "UNVERIFIED",
+  "reviewRequired": [
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-1440.json",
+      "category": "layout",
+      "id": "fcfb184f3e0c82acdf6262762e69da5db0402a99d47956ac9376f990df3ea162",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-390.json",
+      "category": "layout",
+      "id": "be9368aa6c2a25c9a04f2f66ab1e6c8572499ba283f29b34f27866fefc2c9c3e",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    },
+    {
+      "status": "UNVERIFIED",
+      "problem": "Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval",
+      "evidence": "text-stress-320.json",
+      "category": "layout",
+      "id": "fc900c4f5bcb6e8a7eeac0b96cd1ce8f96290c26a117224ce5c168e3e46c2872",
+      "rules": [
+        "PROJECT-GUIDE-reference-to-ui"
+      ]
+    }
+  ],
+  "measurements": {
+    "layout-contract-1440": 9,
+    "readable-1440": 2,
+    "font-rendering-1440": 4,
+    "assets-1440": 0,
+    "icons-1440": 0,
+    "labels-1440": 0,
+    "text-200-1440": 0,
+    "text-200-clipping-1440": 0,
+    "text-spacing-1440": 0,
+    "text-spacing-clipping-1440": 0,
+    "layout-contract-390": 9,
+    "readable-390": 2,
+    "font-rendering-390": 4,
+    "assets-390": 0,
+    "icons-390": 0,
+    "labels-390": 0,
+    "text-200-390": 0,
+    "text-200-clipping-390": 0,
+    "text-spacing-390": 0,
+    "text-spacing-clipping-390": 0,
+    "layout-contract-320": 9,
+    "readable-320": 2,
+    "font-rendering-320": 4,
+    "assets-320": 0,
+    "icons-320": 0,
+    "labels-320": 0,
+    "text-200-320": 0,
+    "text-200-clipping-320": 0,
+    "text-spacing-320": 0,
+    "text-spacing-clipping-320": 0
+  },
+  "contentInventory": {
+    "320": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기 · 90분 · 8명 · 65,000원": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽공예 · 120분 · 6명 · 55,000원": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "나무 트레이": 1,
+      "목공예 · 150분 · 5명 · 70,000원": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    },
+    "390": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기 · 90분 · 8명 · 65,000원": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽공예 · 120분 · 6명 · 55,000원": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "나무 트레이": 1,
+      "목공예 · 150분 · 5명 · 70,000원": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    },
+    "1440": {
+      "틈 공방": 1,
+      "이번 주, 손으로 만드는 시간": 2,
+      "성인들을 위한 소그룹 공예 클래스": 1,
+      "수업 검색": 1,
+      "도자기 첫 잔": 1,
+      "도자기 · 90분 · 8명 · 65,000원": 1,
+      "원반을 돌려 기본 그릇의 형태를 익힙니다.": 1,
+      "상세": 3,
+      "가죽 카드 지갑": 1,
+      "가죽공예 · 120분 · 6명 · 55,000원": 1,
+      "실뜨기와 바느질로 튼튼한 지갑을 만들어요.": 1,
+      "나무 트레이": 1,
+      "목공예 · 150분 · 5명 · 70,000원": 1,
+      "사포부터 도장까지, 나만의 나무 쟁반을 제작합니다.": 1,
+      "© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "layout-contract-1440",
+      "status": "FAIL",
+      "detail": "Reference layout ownership or grouping requires correction\n+ actual - expected\n\n+ [\n+   {\n+     problem: 'c1-art-owned: Expected one layout subject: .class-card[data-id=\"c1\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-price-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-action-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-art-owned: Expected one layout subject: .class-card[data-id=\"c2\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-price-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-action-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-art-owned: Expected one layout subject: .class-card[data-id=\"c3\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-price-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-action-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-1440",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-1440",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-1440",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-contract-390",
+      "status": "FAIL",
+      "detail": "Reference layout ownership or grouping requires correction\n+ actual - expected\n\n+ [\n+   {\n+     problem: 'c1-art-owned: Expected one layout subject: .class-card[data-id=\"c1\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-price-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-action-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-art-owned: Expected one layout subject: .class-card[data-id=\"c2\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-price-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-action-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-art-owned: Expected one layout subject: .class-card[data-id=\"c3\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-price-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-action-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-390",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-390",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-390",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-390",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-390",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-390",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-390",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-390",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-contract-320",
+      "status": "FAIL",
+      "detail": "Reference layout ownership or grouping requires correction\n+ actual - expected\n\n+ [\n+   {\n+     problem: 'c1-art-owned: Expected one layout subject: .class-card[data-id=\"c1\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-price-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c1-action-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-art-owned: Expected one layout subject: .class-card[data-id=\"c2\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-price-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c2-action-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-art-owned: Expected one layout subject: .class-card[data-id=\"c3\"] .class-art',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-price-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   },\n+   {\n+     problem: 'c3-action-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "content-320",
+      "status": "FAIL",
+      "detail": "Missing visible anchor: 예약"
+    },
+    {
+      "name": "overflow-320",
+      "status": "PASS"
+    },
+    {
+      "name": "readable-320",
+      "status": "FAIL",
+      "detail": "Typography violates the local skill: visible text, controls and placeholders require at least 14px and weight 500\n+ actual - expected\n\n+ [\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: null,\n+     text: ''\n+   },\n+   {\n+     class: '',\n+     element: 'INPUT',\n+     fontSize: '16px',\n+     fontWeight: '400',\n+     id: 'search',\n+     pseudo: '::placeholder',\n+     text: ''\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "font-rendering-320",
+      "status": "FAIL",
+      "detail": "Actual fonts or solid-background text contrast require correction\n+ actual - expected\n\n+ [\n+   {\n+     actual: 'Arial',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Arial',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     problem: 'Typography role requires a supplied font file but rendered a system font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   },\n+   {\n+     actual: 'Malgun Gothic',\n+     expected: [\n+       'Noto Sans KR Thin'\n+     ],\n+     problem: 'Typography role rendered an undeclared fallback font',\n+     selector: 'body *',\n+     status: 'FAIL'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "runtime-320",
+      "status": "PASS"
+    },
+    {
+      "name": "assets-320",
+      "status": "PASS"
+    },
+    {
+      "name": "icons-320",
+      "status": "PASS"
+    },
+    {
+      "name": "labels-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-320",
+      "status": "PASS"
+    },
+    {
+      "name": "text-spacing-clipping-320",
+      "status": "PASS"
+    },
+    {
+      "name": "search-empty-recovery",
+      "status": "FAIL",
+      "detail": "Workflow end state fails typography, font contrast or icon checks\n+ actual - expected\n\n  {\n+   fonts: [\n+     {\n+       actual: 'Arial',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Arial',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       problem: 'Typography role requires a supplied font file but rendered a system font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     },\n+     {\n+       actual: 'Malgun Gothic',\n+       expected: [\n+         'Noto Sans KR Thin'\n+       ],\n+       problem: 'Typography role rendered an undeclared fallback font',\n+       selector: 'body *',\n+       status: 'FAIL'\n+     }\n+   ],\n-   fonts: [],\n    icons: [],\n+   typography: [\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: null,\n+       text: ''\n+     },\n+     {\n+       class: '',\n+       element: 'INPUT',\n+       fontSize: '16px',\n+       fontWeight: '400',\n+       id: 'search',\n+       pseudo: '::placeholder',\n+       text: ''\n+     }\n+   ]\n-   typography: []\n  }\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": false
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "booking-validation",
+      "status": "FAIL",
+      "detail": "The 예약하기 action must open the booking form\n\nfalse !== true\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이",
+          "도자기 첫 잔"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "close-details",
+            "type": null,
+            "text": "닫기",
+            "ariaLabel": "상세 정보 닫기",
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "open-booking-btn",
+            "type": null,
+            "text": "예약하기",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": true
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "booking-persist-cancel",
+      "status": "FAIL",
+      "detail": "The 예약하기 action must open the booking form\n\nfalse !== true\n",
+      "observed": {
+        "headings": [
+          "틈 공방",
+          "이번 주, 손으로 만드는 시간",
+          "도자기 첫 잔",
+          "가죽 카드 지갑",
+          "나무 트레이",
+          "도자기 첫 잔"
+        ],
+        "controls": [
+          {
+            "tag": "INPUT",
+            "id": "search",
+            "type": "search",
+            "text": "",
+            "ariaLabel": null,
+            "labels": [
+              "수업 검색"
+            ],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "type": null,
+            "text": "상세",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "close-details",
+            "type": null,
+            "text": "닫기",
+            "ariaLabel": "상세 정보 닫기",
+            "labels": [],
+            "disabled": false
+          },
+          {
+            "tag": "BUTTON",
+            "id": "open-booking-btn",
+            "type": null,
+            "text": "예약하기",
+            "ariaLabel": null,
+            "labels": [],
+            "disabled": false
+          }
+        ],
+        "panels": [
+          {
+            "tag": "SECTION",
+            "id": "class-list",
+            "visible": true
+          },
+          {
+            "tag": "SECTION",
+            "id": "details-panel",
+            "visible": true
+          },
+          {
+            "tag": "FORM",
+            "id": "booking-form",
+            "visible": false
+          },
+          {
+            "tag": "SECTION",
+            "id": "confirmation",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "bound-dependencies",
+      "status": "PASS"
+    }
+  ],
+  "passed": 28,
+  "total": 43
+}

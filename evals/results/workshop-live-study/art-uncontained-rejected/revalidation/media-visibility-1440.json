@@ -1,0 +1,78 @@
+{
+  "results": [
+    {
+      "src": "assets/icons/Clock.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 185,
+        "top": 920.390625,
+        "right": 205,
+        "bottom": 940.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/Users.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 253.96875,
+        "top": 920.390625,
+        "right": 273.96875,
+        "bottom": 940.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/Clock.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 566.328125,
+        "top": 920.390625,
+        "right": 586.328125,
+        "bottom": 940.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/Users.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 644.421875,
+        "top": 920.390625,
+        "right": 664.421875,
+        "bottom": 940.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/Clock.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 947.65625,
+        "top": 944.390625,
+        "right": 967.65625,
+        "bottom": 964.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/Users.svg",
+      "width": 20,
+      "height": 20,
+      "visible": {
+        "left": 1025.75,
+        "top": 944.390625,
+        "right": 1045.75,
+        "bottom": 964.390625
+      },
+      "findings": []
+    }
+  ],
+  "issues": [],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}

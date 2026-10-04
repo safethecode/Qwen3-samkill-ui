@@ -1,0 +1,65 @@
+{
+  "scope": "Post-generation diagnostic: visible owned art bounds and separate logistics/price/action. Does not prove painted illustration contents or design parity.",
+  "rules": [
+    {
+      "id": "c1-art-owned",
+      "kind": "contained",
+      "subject": ".class-card[data-id=\"c1\"] .class-art",
+      "container": ".class-card[data-id=\"c1\"]"
+    },
+    {
+      "id": "c1-price-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c1\"] .class-price",
+      "reference": ".class-card[data-id=\"c1\"] .class-logistics",
+      "minGap": 8
+    },
+    {
+      "id": "c1-action-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c1\"] button",
+      "reference": ".class-card[data-id=\"c1\"] .class-price",
+      "minGap": 8
+    },
+    {
+      "id": "c2-art-owned",
+      "kind": "contained",
+      "subject": ".class-card[data-id=\"c2\"] .class-art",
+      "container": ".class-card[data-id=\"c2\"]"
+    },
+    {
+      "id": "c2-price-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c2\"] .class-price",
+      "reference": ".class-card[data-id=\"c2\"] .class-logistics",
+      "minGap": 8
+    },
+    {
+      "id": "c2-action-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c2\"] button",
+      "reference": ".class-card[data-id=\"c2\"] .class-price",
+      "minGap": 8
+    },
+    {
+      "id": "c3-art-owned",
+      "kind": "contained",
+      "subject": ".class-card[data-id=\"c3\"] .class-art",
+      "container": ".class-card[data-id=\"c3\"]"
+    },
+    {
+      "id": "c3-price-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c3\"] .class-price",
+      "reference": ".class-card[data-id=\"c3\"] .class-logistics",
+      "minGap": 8
+    },
+    {
+      "id": "c3-action-separate",
+      "kind": "below",
+      "subject": ".class-card[data-id=\"c3\"] button",
+      "reference": ".class-card[data-id=\"c3\"] .class-price",
+      "minGap": 8
+    }
+  ]
+}

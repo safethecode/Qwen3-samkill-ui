@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>틈 공방 - 이번 주, 손으로 만드는 시간</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead">
+<h1 class="site-title">틈 공방</h1>
+<p class="site-intro">이번 주, 손으로 만드는 시간</p>
+</header>
+
+<main>
+<section class="hero">
+<div class="pottery-illustration" aria-hidden="true"></div>
+<div class="hero-content">
+<h2>이번 주, 손으로 만드는 시간</h2>
+<p>성인들을 위한 소그룹 공예 클래스</p>
+</div>
+</section>
+
+<section class="search-section">
+<label for="search" class="visually-hidden">수업 검색</label>
+<input type="search" id="search" placeholder="수업명으로 검색...">
+</section>
+
+<section class="catalogue" id="class-list">
+
+</section>
+
+<section class="details-panel" id="details-panel" hidden>
+<button id="close-details" aria-label="상세 정보 닫기">닫기</button>
+<div id="details-content"></div>
+<button id="open-booking-btn">예약하기</button>
+</section>
+
+<form id="booking-form" hidden>
+<h2>예약 신청</h2>
+<div class="booking-summary" id="booking-summary"></div>
+<div class="form-group">
+<label for="guest">예약자 이름</label>
+<input type="text" id="guest" required>
+</div>
+<div class="form-group">
+<label for="date">방문일</label>
+<input type="date" id="date" required>
+</div>
+<div class="form-group">
+<label for="slot">예약 시간</label>
+<select id="slot" required>
+<option value="10:00">10:00</option>
+<option value="14:00">14:00</option>
+<option value="18:00">18:00</option>
+</select>
+</div>
+<button type="submit">예약 확정</button>
+</form>
+
+<section id="confirmation" hidden>
+<h2>예약 확인</h2>
+<div id="confirmation-content"></div>
+<button id="cancel-booking-btn">예약 취소</button>
+</section>
+</main>
+
+<footer class="footer">
+<p>© 2024 틈 공방. 브라우저에만 저장되는 데모입니다.</p>
+</footer>
+
+<script defer src="app.js"></script>
+</body>
+</html>

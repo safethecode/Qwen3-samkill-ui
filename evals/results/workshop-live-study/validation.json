@@ -1,0 +1,9 @@
+{
+  "status": "INCOMPLETE",
+  "unitTests": 96,
+  "browserTests": 41,
+  "total": 137,
+  "failures": 0,
+  "command": "node --test test/*.test.mjs checks/*.test.mjs",
+  "limitation": "Harness regression tests, not UI visual approval."
+}

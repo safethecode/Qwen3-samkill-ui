@@ -1,0 +1,127 @@
+{
+  "results": [
+    {
+      "id": "c1-art-owned",
+      "kind": "contained",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c1\"] .class-art",
+      "observed": {}
+    },
+    {
+      "id": "c1-price-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c1\"] .class-price",
+      "observed": {}
+    },
+    {
+      "id": "c1-action-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c1\"] .class-price",
+      "observed": {
+        "subject": {
+          "x": 185,
+          "y": 890.390625,
+          "width": 307.328125,
+          "height": 56
+        }
+      }
+    },
+    {
+      "id": "c2-art-owned",
+      "kind": "contained",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c2\"] .class-art",
+      "observed": {}
+    },
+    {
+      "id": "c2-price-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c2\"] .class-price",
+      "observed": {}
+    },
+    {
+      "id": "c2-action-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c2\"] .class-price",
+      "observed": {
+        "subject": {
+          "x": 566.328125,
+          "y": 890.390625,
+          "width": 307.328125,
+          "height": 56
+        }
+      }
+    },
+    {
+      "id": "c3-art-owned",
+      "kind": "contained",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c3\"] .class-art",
+      "observed": {}
+    },
+    {
+      "id": "c3-price-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c3\"] .class-price",
+      "observed": {}
+    },
+    {
+      "id": "c3-action-separate",
+      "kind": "below",
+      "status": "FAIL",
+      "detail": "Expected one layout subject: .class-card[data-id=\"c3\"] .class-price",
+      "observed": {
+        "subject": {
+          "x": 947.65625,
+          "y": 890.390625,
+          "width": 307.34375,
+          "height": 56
+        }
+      }
+    }
+  ],
+  "issues": [
+    {
+      "status": "FAIL",
+      "problem": "c1-art-owned: Expected one layout subject: .class-card[data-id=\"c1\"] .class-art"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c1-price-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c1-action-separate: Expected one layout subject: .class-card[data-id=\"c1\"] .class-price"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c2-art-owned: Expected one layout subject: .class-card[data-id=\"c2\"] .class-art"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c2-price-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c2-action-separate: Expected one layout subject: .class-card[data-id=\"c2\"] .class-price"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c3-art-owned: Expected one layout subject: .class-card[data-id=\"c3\"] .class-art"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c3-price-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price"
+    },
+    {
+      "status": "FAIL",
+      "problem": "c3-action-separate: Expected one layout subject: .class-card[data-id=\"c3\"] .class-price"
+    }
+  ],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}

@@ -1,0 +1,177 @@
+{
+  "results": [
+    {
+      "id": "c1-art-owned",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 719.890625,
+          "width": 292,
+          "height": 194.65625
+        },
+        "container": {
+          "x": 24,
+          "y": 694.890625,
+          "width": 342,
+          "height": 533.65625
+        }
+      }
+    },
+    {
+      "id": "c1-price-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1098.546875,
+          "width": 292,
+          "height": 33
+        },
+        "reference": {
+          "x": 49,
+          "y": 1058.546875,
+          "width": 292,
+          "height": 24
+        }
+      }
+    },
+    {
+      "id": "c1-action-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1147.546875,
+          "width": 292,
+          "height": 56
+        },
+        "reference": {
+          "x": 49,
+          "y": 1098.546875,
+          "width": 292,
+          "height": 33
+        }
+      }
+    },
+    {
+      "id": "c2-art-owned",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1277.546875,
+          "width": 292,
+          "height": 194.65625
+        },
+        "container": {
+          "x": 24,
+          "y": 1252.546875,
+          "width": 342,
+          "height": 533.65625
+        }
+      }
+    },
+    {
+      "id": "c2-price-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1656.203125,
+          "width": 292,
+          "height": 33
+        },
+        "reference": {
+          "x": 49,
+          "y": 1616.203125,
+          "width": 292,
+          "height": 24
+        }
+      }
+    },
+    {
+      "id": "c2-action-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1705.203125,
+          "width": 292,
+          "height": 56
+        },
+        "reference": {
+          "x": 49,
+          "y": 1656.203125,
+          "width": 292,
+          "height": 33
+        }
+      }
+    },
+    {
+      "id": "c3-art-owned",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 1835.203125,
+          "width": 292,
+          "height": 194.65625
+        },
+        "container": {
+          "x": 24,
+          "y": 1810.203125,
+          "width": 342,
+          "height": 557.65625
+        }
+      }
+    },
+    {
+      "id": "c3-price-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 2237.859375,
+          "width": 292,
+          "height": 33
+        },
+        "reference": {
+          "x": 49,
+          "y": 2197.859375,
+          "width": 292,
+          "height": 24
+        }
+      }
+    },
+    {
+      "id": "c3-action-separate",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 49,
+          "y": 2286.859375,
+          "width": 292,
+          "height": 56
+        },
+        "reference": {
+          "x": 49,
+          "y": 2237.859375,
+          "width": 292,
+          "height": 33
+        }
+      }
+    }
+  ],
+  "issues": [],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}
