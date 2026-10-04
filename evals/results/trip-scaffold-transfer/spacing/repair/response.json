@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 54235,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:50:42.9773716Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-row { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 9px; align-items: center; margin-bottom: 18px; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-row { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 9px; align-items: center; margin-bottom: 18px; }\\n[data-ui-unit=\\\"E3\\\"] .place-row:last-child { margin-bottom: 0; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card img { width: 96px; height: auto; object-fit: cover; flex-shrink: 0; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .partial-card img { width: 96px; height: 17px; object-fit: cover; flex-shrink: 0; }\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 54221651800,
+  "load_duration": 3106000,
+  "prompt_eval_count": 3946,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 44547791000,
+  "eval_count": 273,
+  "eval_duration": 9658517000
+}

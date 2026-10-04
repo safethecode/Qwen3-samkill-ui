@@ -1,0 +1,32 @@
+{
+  "status": "LIVE_REFERENCE_RETRIEVED_AND_VISUALLY_INSPECTED",
+  "records": [
+    {
+      "previewFile": "mentor.jpg",
+      "returnedGroups": 3,
+      "screenId": "cmtkpsv0q0003l204gljxvb06",
+      "query": "검색",
+      "app": "디맨드",
+      "ui_url": "https://uibowl.io/name/%EB%94%94%EB%A7%A8%EB%93%9C?patterns=%EA%B2%80%EC%83%89&patternName=%EB%A9%98%ED%86%A0",
+      "source": "Native image content returned by authenticated UI Bowl MCP search; representative preview only, not full-resolution retrieval",
+      "case": "mentor",
+      "retrievedAtUtc": "2026-10-04T07:40:17.7925660Z",
+      "previewSha256": "5a6823fa6c1f5c10012cbfa7c8e8af7dce43ce50d785e7336568ff744a538427",
+      "tool": "search_ui_patterns"
+    },
+    {
+      "previewFile": "trip.jpg",
+      "returnedGroups": 1,
+      "screenId": "cmqp0djhm006ql70495lch8fe",
+      "query": "편집",
+      "app": "셀레트립",
+      "ui_url": "https://uibowl.io/name/%EC%85%80%EB%A0%88%ED%8A%B8%EB%A6%BD?patterns=%ED%8E%B8%EC%A7%91%C2%B7%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0&patternName=%EC%97%AC%ED%96%89%20%EC%9D%BC%EC%A0%95%20%ED%8E%B8%EC%A7%91",
+      "source": "Native image content returned by authenticated UI Bowl MCP search; representative preview only, not full-resolution retrieval",
+      "case": "trip",
+      "retrievedAtUtc": "2026-10-04T07:40:18.1535672Z",
+      "previewSha256": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d",
+      "tool": "search_ui_patterns"
+    }
+  ],
+  "authentication": "Existing OpenCode OAuth authorization refreshed successfully. Tokens and signed copy URLs omitted."
+}

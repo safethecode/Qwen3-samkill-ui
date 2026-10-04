@@ -1,0 +1,35 @@
+{
+  "source": "source.png",
+  "size": [
+    295,
+    640
+  ],
+  "unit": "image-px",
+  "purpose": "Analysis extraction of photo regions only, not rendered UI",
+  "boxes": {
+    "photo-1": [
+      41,
+      182,
+      114,
+      254
+    ],
+    "photo-2": [
+      41,
+      315,
+      114,
+      387
+    ],
+    "photo-3": [
+      41,
+      402,
+      114,
+      474
+    ],
+    "photo-fragment": [
+      41,
+      535,
+      114,
+      549
+    ]
+  }
+}

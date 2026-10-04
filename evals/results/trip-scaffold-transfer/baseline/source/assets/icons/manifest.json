@@ -1,0 +1,20 @@
+{
+  "package": "lucide",
+  "version": "1.51.0",
+  "source": "https://github.com/lucide-icons/lucide",
+  "licenseSha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "icons": [
+    {
+      "name": "ChevronLeft",
+      "file": "ChevronLeft.svg",
+      "sha256": "526ea8730c4ac9176a3df836141daf948df6edd8f2f35976a616f353fcc23081",
+      "geometrySha256": "94794b73e9d642ed29676ec1f3e4f2b43824f1ed14be22a9c7e2cf68eb369ffc"
+    },
+    {
+      "name": "GripVertical",
+      "file": "GripVertical.svg",
+      "sha256": "96afdce000710bbc914def403996e48c352828826889d45ea5494d42091b042e",
+      "geometrySha256": "4d6361e64fa67dc57c314af06da71a7b66c13aece034abe85ce6b6ff685d8792"
+    }
+  ]
+}

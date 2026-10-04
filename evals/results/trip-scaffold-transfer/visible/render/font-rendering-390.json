@@ -1,0 +1,957 @@
+{
+  "fonts": [
+    {
+      "nodeId": 6,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ]
+    },
+    {
+      "nodeId": 7,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "nodeId": 14,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "nodeId": 18,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 15
+        }
+      ]
+    },
+    {
+      "nodeId": 19,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 5
+        }
+      ]
+    },
+    {
+      "nodeId": 21,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 5
+        }
+      ]
+    },
+    {
+      "nodeId": 23,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 5
+        }
+      ]
+    },
+    {
+      "nodeId": 26,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 29,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 32,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        }
+      ]
+    },
+    {
+      "nodeId": 37,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 8
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 17
+        }
+      ]
+    },
+    {
+      "nodeId": 39,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 17
+        }
+      ]
+    },
+    {
+      "nodeId": 41,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "nodeId": 27,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 43,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 47,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        }
+      ]
+    },
+    {
+      "nodeId": 52,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 27
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 16
+        }
+      ]
+    },
+    {
+      "nodeId": 54,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 16
+        }
+      ]
+    },
+    {
+      "nodeId": 56,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 17
+        }
+      ]
+    },
+    {
+      "nodeId": 58,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 10
+        }
+      ]
+    },
+    {
+      "nodeId": 63,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 10
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ]
+    },
+    {
+      "nodeId": 65,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ]
+    },
+    {
+      "nodeId": 67,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 10
+        }
+      ]
+    },
+    {
+      "nodeId": 28,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 69,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        },
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "nodeId": 72,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 7
+        }
+      ]
+    },
+    {
+      "nodeId": 77,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Bold",
+          "isCustomFont": true,
+          "glyphCount": 5
+        }
+      ]
+    },
+    {
+      "nodeId": 11,
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Medium",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "selector": "body *",
+      "families": [
+        "Noto Sans KR Thin"
+      ],
+      "requireCustomFont": true,
+      "actual": [
+        {
+          "nodeId": 6,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "nodeId": 7,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "nodeId": 14,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "nodeId": 18,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 15
+            }
+          ]
+        },
+        {
+          "nodeId": 19,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 5
+            }
+          ]
+        },
+        {
+          "nodeId": 21,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 5
+            }
+          ]
+        },
+        {
+          "nodeId": 23,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 5
+            }
+          ]
+        },
+        {
+          "nodeId": 26,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 29,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 32,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "nodeId": 37,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "nodeId": 39,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "nodeId": 41,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "nodeId": 27,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 43,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 47,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "nodeId": 52,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 27
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 16
+            }
+          ]
+        },
+        {
+          "nodeId": 54,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 16
+            }
+          ]
+        },
+        {
+          "nodeId": 56,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "nodeId": 58,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "nodeId": 63,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 18
+            }
+          ]
+        },
+        {
+          "nodeId": 65,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 18
+            }
+          ]
+        },
+        {
+          "nodeId": 67,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "nodeId": 28,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 69,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            },
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "nodeId": 72,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "nodeId": 77,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Bold",
+              "isCustomFont": true,
+              "glyphCount": 5
+            }
+          ]
+        },
+        {
+          "nodeId": 11,
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Medium",
+              "isCustomFont": true,
+              "glyphCount": 34
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "webFonts": [
+    {
+      "family": "Noto Sans KR",
+      "status": "loaded",
+      "weight": "100 900",
+      "style": "normal"
+    }
+  ],
+  "surfaces": [
+    {
+      "tag": "H1",
+      "id": "",
+      "pseudo": null,
+      "text": "여행 일정 편집",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 1",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 2",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 3",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 1 (06.25)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "pseudo": null,
+      "text": "(06.25)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "place1-check",
+      "pseudo": null,
+      "text": "on",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 7.572720494909749,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "LABEL",
+      "id": "place1-name",
+      "pseudo": null,
+      "text": "Jingūmae, Shibuya",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "Activity",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 2 (06.26)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "pseudo": null,
+      "text": "(06.26)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "place2-check",
+      "pseudo": null,
+      "text": "on",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 7.572720494909749,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "LABEL",
+      "id": "place2-name",
+      "pseudo": null,
+      "text": "와라타코 하라주쿠 오모테산도점",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "Jingūmae, Shibuya",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "Restaurant",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "place3-check",
+      "pseudo": null,
+      "text": "on",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 7.572720494909749,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "LABEL",
+      "id": "place3-name",
+      "pseudo": null,
+      "text": "Dōgenzaka, Shibuya",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "Restaurant",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "pseudo": null,
+      "text": "Day 3 (06.27)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 18.883060964594996,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "pseudo": null,
+      "text": "(06.27)",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "pseudo": null,
+      "text": "수정 완료",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 1.878753074791962,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": true
+    },
+    {
+      "tag": "P",
+      "id": "",
+      "pseudo": null,
+      "text": "정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.",
+      "declaredFamily": "\"Noto Sans KR\", sans-serif",
+      "ratio": 5.74183648145415,
+      "threshold": 4.5,
+      "uncertain": false,
+      "disabled": false
+    }
+  ],
+  "issues": [],
+  "scope": "Actual Chromium platform fonts and solid-background text contrast. Complex surfaces require separate rendered evidence; font-family declarations alone do not establish fidelity."
+}

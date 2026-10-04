@@ -1,0 +1,13 @@
+import {writeFile} from 'node:fs/promises';
+import {evaluateService} from '../../../scripts/service-evaluate.mjs';
+import {serviceCases} from '../../../evals/service-cases.mjs';
+import {harnessBinding} from '../../../scripts/harness-binding.mjs';
+import {inspectLayoutContract} from '../../../scripts/layout-contract.mjs';
+const target=process.argv[2]||'runs/trip-scaffold-transfer/source';
+const evidence=process.argv[3]||'runs/trip-scaffold-transfer/revalidation';
+const records=[];
+const audits=[];
+const captureStates=async(page,width)=>{for(const id of ['place1','place2','place3'])records.push({width,id,row:await page.locator(`#${id}-card`).boundingBox(),photo:await page.locator(`#${id}-photo`).boundingBox(),copy:await page.locator(`#${id} .place-copy`).boundingBox()});audits.push({width,...await inspectLayoutContract(page,{rules:[{id:'partial-fragment-owner',kind:'contained',subject:'.partial-slot',container:'[data-ui-unit="E3"]'},{id:'footer-action-owner',kind:'contained',subject:'[data-ui-unit="E4"] button',container:'[data-ui-unit="E4"]'}]})});};
+const report=await evaluateService(target,evidence,serviceCases.find(item=>item.id==='round-01'),{textStress:true,captureStates});
+await writeFile(`${evidence}/geometry.json`,JSON.stringify({records,audits,scope:'Additional containment rules are a post-generation diagnostic audit, not predeclared compliance.',harnessHashes:await harnessBinding()},null,2));
+console.log({passed:report.passed,total:report.total,failures:report.checks.filter(item=>item.status==='FAIL')});

@@ -1,0 +1,33 @@
+{
+  "binding": "beda3a442f7fc8c236e5eadb002904f4e99173d0817a65e32a10e55e3d4b6950",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 28114,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:42:33.5876653Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".day-tabs {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 8px;\\n}\\n\\n.day-tabs button {\\n  flex: 0 0 auto;\\n  min-width: 64px;\\n  height: 32px;\\n  padding: 0 12px;\\n  border-radius: 16px;\\n  border: 1px solid #e8e8e8;\\n  background-color: #fff;\\n  color: #111;\\n  font-weight: 700;\\n  font-size: 14px;\\n  line-height: 32px;\\n  cursor: default;\\n  text-align: center;\\n}\\n\\n.day-tabs button[aria-pressed=\\\"true\\\"] {\\n  background-color: #111;\\n  color: #fff;\\n  border-color: #111;\\n}\\n\\n.day-tabs button[disabled] {\\n  opacity: 1;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 28094337500,
+  "load_duration": 7036000,
+  "prompt_eval_count": 1548,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 18179217000,
+  "eval_count": 230,
+  "eval_duration": 9895252000
+}

@@ -1,0 +1,215 @@
+{
+  "results": [
+    {
+      "id": "sample-E1",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 0,
+          "width": 382,
+          "height": 62
+        },
+        "sample": {
+          "x": 529,
+          "y": 0,
+          "width": 382,
+          "height": 62
+        }
+      }
+    },
+    {
+      "id": "sample-E2",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 88,
+          "width": 382,
+          "height": 32
+        },
+        "sample": {
+          "x": 529,
+          "y": 0,
+          "width": 382,
+          "height": 32
+        }
+      }
+    },
+    {
+      "id": "sample-E3",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 146,
+          "width": 382,
+          "height": 524
+        },
+        "sample": {
+          "x": 529,
+          "y": 0,
+          "width": 382,
+          "height": 524
+        }
+      }
+    },
+    {
+      "id": "sample-E4",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 694,
+          "width": 382,
+          "height": 56
+        },
+        "sample": {
+          "x": 529,
+          "y": 0,
+          "width": 382,
+          "height": 56
+        }
+      }
+    },
+    {
+      "id": "outside-place1",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 222,
+          "width": 22,
+          "height": 22
+        },
+        "reference": {
+          "x": 560,
+          "y": 184,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "photo-place1",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 561,
+          "y": 185,
+          "width": 96,
+          "height": 96
+        },
+        "container": {
+          "x": 560,
+          "y": 184,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "outside-place2",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 398,
+          "width": 22,
+          "height": 22
+        },
+        "reference": {
+          "x": 560,
+          "y": 360,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "photo-place2",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 561,
+          "y": 361,
+          "width": 96,
+          "height": 96
+        },
+        "container": {
+          "x": 560,
+          "y": 360,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "outside-place3",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 514,
+          "width": 22,
+          "height": 22
+        },
+        "reference": {
+          "x": 560,
+          "y": 476,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "photo-place3",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 561,
+          "y": 477,
+          "width": 96,
+          "height": 96
+        },
+        "container": {
+          "x": 560,
+          "y": 476,
+          "width": 351,
+          "height": 98
+        }
+      }
+    },
+    {
+      "id": "footer-after-days",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 529,
+          "y": 694,
+          "width": 382,
+          "height": 56
+        },
+        "reference": {
+          "x": 529,
+          "y": 146,
+          "width": 382,
+          "height": 524
+        }
+      }
+    }
+  ],
+  "issues": [],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}

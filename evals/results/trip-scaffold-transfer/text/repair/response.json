@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 60427,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:46:37.5033724Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-card { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 6px; min-height: 96px; overflow: hidden; background: #fff; width: 100%; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-card { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 6px; min-height: 96px; background: #fff; width: 100%; }\"\n    },\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 19px; font-weight: 700; color: var(--ink); margin: 0; }\\n[data-ui-unit=\\\"E3\\\"] .place-type, [data-ui-unit=\\\"E3\\\"] .place-region { font-size: 14px; line-height: 19px; font-weight: 500; color: var(--muted); margin: 0; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .place-title { font-size: 14px; line-height: 1.36; font-weight: 700; color: var(--ink); margin: 0; }\\n[data-ui-unit=\\\"E3\\\"] .place-type, [data-ui-unit=\\\"E3\\\"] .place-region { font-size: 14px; line-height: 1.36; font-weight: 500; color: var(--muted); margin: 0; }\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 60413501100,
+  "load_duration": 1537200,
+  "prompt_eval_count": 3942,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 44701531000,
+  "eval_count": 411,
+  "eval_duration": 15691595000
+}

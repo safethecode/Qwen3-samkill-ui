@@ -1,0 +1,33 @@
+{
+  "binding": "1c01e2728ac093460ca465bdf65197d4d7ea30d5f7f475766e96672f73c21037",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 25190,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:38:16.5671849Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"css\": \"/* Day Tabs (E2) */\\n.day-tabs {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 8px;\\n  margin-top: 26px;\\n}\\n\\n.day-tabs button {\\n  min-width: 64px;\\n  height: 32px;\\n  padding: 0 12px;\\n  border-radius: 16px;\\n  border: 1px solid #e8e8e8;\\n  background-color: #ffffff;\\n  color: #111111;\\n  font-weight: 700;\\n  font-size: 14px;\\n  line-height: 1;\\n  cursor: default;\\n  transition: none;\\n}\\n\\n/* Selected State (aria-pressed=\\\"true\\\") */\\n.day-tabs button[aria-pressed=\\\"true\\\"] {\\n  background-color: #111111;\\n  color: #ffffff;\\n  border-color: #111111;\\n}\\n\\n/* Disabled State */\\n.day-tabs button:disabled {\\n  opacity: 1; /* Explicitly preserve as per contract */\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 25185882200,
+  "load_duration": 6825000,
+  "prompt_eval_count": 1497,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 16675135999,
+  "eval_count": 272,
+  "eval_duration": 8496652000
+}

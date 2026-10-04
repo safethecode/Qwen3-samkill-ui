@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 50018,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:48:16.3572997Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"patches\":[{\"field\":\"css\",\"oldString\":\"[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; overflow: hidden; }\",\"newString\":\"[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: flex-start; overflow: hidden; }\"}]}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 49992912900,
+  "load_duration": 3330500,
+  "prompt_eval_count": 3924,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 44218446000,
+  "eval_count": 172,
+  "eval_duration": 5559012000
+}

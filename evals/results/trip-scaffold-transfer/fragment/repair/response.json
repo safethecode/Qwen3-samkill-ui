@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 54379,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:45:32.816036Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"patches\": [\n    {\n      \"field\": \"css\",\n      \"oldString\": \"[data-ui-unit=\\\"E3\\\"] partial-slot { display: block; margin-left: 31px; height: 18px; overflow: hidden; position: relative; }\\n[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: -78px; left: 0; width: 100%; display: flex; align-items: center; overflow: hidden; }\",\n      \"newString\": \"[data-ui-unit=\\\"E3\\\"] .partial-slot { display: block; margin-left: 31px; height: 18px; overflow: hidden; position: relative; }\\n[data-ui-unit=\\\"E3\\\"] .partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; overflow: hidden; }\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 54352136700,
+  "load_duration": 1627700,
+  "prompt_eval_count": 3932,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 44504890000,
+  "eval_count": 276,
+  "eval_duration": 9737019000
+}

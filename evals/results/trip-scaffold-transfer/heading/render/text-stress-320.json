@@ -1,0 +1,117 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "tabs-slot",
+        "text": "Day 1Day 2Day 3",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 72,
+        "scrollHeight": 77,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "day-tabs",
+        "text": "Day 1Day 2Day 3",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 72,
+        "scrollHeight": 77,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 1",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 2",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 3",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 1 (06.25)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 2 (06.26)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 3 (06.27)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

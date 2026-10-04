@@ -1,0 +1,18 @@
+{
+  "elapsedMs": 49860,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:54:31.9794929Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"patches\":[{\"field\":\"css\",\"oldString\":\"[data-ui-unit=\\\"E3\\\"] .place-type, [data-ui-unit=\\\"E3\\\"] .place-region { font-size: 14px; line-height: 1.36; font-weight: 500; color: var(--muted); margin: 0; }\",\"newString\":\"[data-ui-unit=\\\"E3\\\"] .place-type, [data-ui-unit=\\\"E3\\\"] .place-region { font-size: 14px; line-height: 1.36; font-weight: 500; color: var(--muted); margin: 0; }\\n[data-ui-unit=\\\"E3\\\"] .place-region { font-weight: 700; color: var(--ink); }\"}]}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 49834593400,
+  "load_duration": 1828500,
+  "prompt_eval_count": 3943,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 44406418000,
+  "eval_count": 168,
+  "eval_duration": 5217856000
+}

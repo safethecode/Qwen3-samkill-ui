@@ -1,0 +1,33 @@
+{
+  "binding": "beda3a442f7fc8c236e5eadb002904f4e99173d0817a65e32a10e55e3d4b6950",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 55219,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:43:28.812242Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\"css\": \".itinerary { display: flex; flex-direction: column; gap: 40px; color: var(--ink); }\\n.day-group h2 { font-size: 16px; line-height: 22px; font-weight: 700; margin-bottom: 16px; }\\n.day-group h2 span { font-weight: 500; color: var(--muted); }\\n.place-row { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 9px; align-items: center; margin-bottom: 18px; }\\n.place-card { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 6px; min-height: 96px; overflow: hidden; background: #fff; width: 100%; }\\n.place-photo { width: 96px; height: 96px; flex: 0 0 96px; object-fit: cover; }\\n.place-copy { flex: 1; min-width: 0; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px; overflow-wrap: anywhere; }\\n.place-title { font-size: 14px; line-height: 19px; font-weight: 700; color: var(--ink); margin: 0; }\\n.place-type, .place-region { font-size: 14px; line-height: 19px; font-weight: 500; color: var(--muted); margin: 0; }\\n.place-grip { width: 18px; height: 18px; flex: 0 0 18px; margin-right: 6px; align-self: center; opacity: 0.4; }\\ninput[type=\\\"checkbox\\\"] { width: 22px; height: 22px; margin: 0; flex: 0 0 auto; align-self: center; }\\npartial-slot { display: block; margin-left: 31px; height: 18px; overflow: hidden; position: relative; }\\n.partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: -78px; left: 0; width: 100%; display: flex; align-items: center; overflow: hidden; }\\n.partial-card img { width: 96px; height: auto; object-fit: cover; flex-shrink: 0; }\\n@media (max-width: 360px) {\\n.place-photo { width: 72px; height: 72px; flex: 0 0 72px; }\\n.place-copy { padding: 8px; }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 55204641300,
+  "load_duration": 4562900,
+  "prompt_eval_count": 2849,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 32343341000,
+  "eval_count": 641,
+  "eval_duration": 22842927000
+}

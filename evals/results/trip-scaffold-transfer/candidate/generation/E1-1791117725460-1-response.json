@@ -1,0 +1,33 @@
+{
+  "binding": "beda3a442f7fc8c236e5eadb002904f4e99173d0817a65e32a10e55e3d4b6950",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 38765,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:42:05.4534283Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \":is(#place1,#place2,#place3){display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;align-items:center}#itinerary-layout :is(#place1-card,#place2-card,#place3-card){display:flex;align-items:center;min-width:0;min-height:96px;height:auto;gap:0}#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:96px;height:96px;flex:0 0 96px;object-fit:cover}.place-copy{min-width:0;flex:1;padding:8px 12px;overflow-wrap:anywhere}.place-grip{width:18px;height:18px;flex:0 0 18px;margin-right:6px}@media(max-width:360px){#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:72px;height:72px;flex-basis:72px}.place-copy{padding:8px}}.trip-header{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;height:62px;padding:0;gap:0;width:100%}.trip-header>button{background:transparent;border:none;padding:0;margin:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer}.trip-header>button img{width:24px;height:24px;display:block}.trip-header>h1{font-size:18px;line-height:26px;font-weight:700;margin:0;text-align:center;white-space:normal;overflow-wrap:break-word;padding:0 8px;min-width:0;min-height:26px;align-self:center}.trip-header>span{width:44px;height:44px;display:block}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 38747257800,
+  "load_duration": 1530600,
+  "prompt_eval_count": 1557,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 17268777000,
+  "eval_count": 433,
+  "eval_duration": 21298289000
+}

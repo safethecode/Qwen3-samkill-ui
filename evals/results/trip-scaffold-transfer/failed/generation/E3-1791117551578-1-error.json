@@ -1,0 +1,5 @@
+{
+  "binding": "1c01e2728ac093460ca465bdf65197d4d7ea30d5f7f475766e96672f73c21037",
+  "elapsedMs": 55006,
+  "error": "Component CSS cannot target document scope or sibling escapes"
+}

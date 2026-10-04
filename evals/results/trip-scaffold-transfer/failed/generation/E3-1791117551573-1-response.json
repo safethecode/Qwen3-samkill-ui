@@ -1,0 +1,33 @@
+{
+  "binding": "1c01e2728ac093460ca465bdf65197d4d7ea30d5f7f475766e96672f73c21037",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 55001,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:39:11.5729047Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".itinerary {\\n  color: #111;\\n}\\n\\n.day-group h2 {\\n  font-size: 16px;\\n  line-height: 22px;\\n  font-weight: 700;\\n  margin-bottom: 16px;\\n}\\n\\n.day-group > section {\\n  margin-top: 18px;\\n}\\n\\n.day-group + .day-group {\\n  margin-top: 40px;\\n}\\n\\n.place-row {\\n  display: grid;\\n  grid-template-columns: 22px minmax(0, 1fr);\\n  gap: 9px;\\n  align-items: center;\\n}\\n\\n.place-card {\\n  display: flex;\\n  align-items: stretch;\\n  min-width: 0;\\n  min-height: 96px;\\n  height: auto;\\n  border: 1px solid #e8e8e8;\\n  border-radius: 6px;\\n  overflow: hidden;\\n}\\n\\n.place-photo {\\n  width: 96px;\\n  height: 96px;\\n  flex: 0 0 96px;\\n  object-fit: cover;\\n}\\n\\n.place-copy {\\n  min-width: 0;\\n  flex: 1;\\n  padding: 8px 12px;\\n  overflow-wrap: anywhere;\\n}\\n\\n.place-title {\\n  display: block;\\n  font-size: 14px;\\n  line-height: 19px;\\n  font-weight: 700;\\n  margin-bottom: 4px;\\n}\\n\\n.place-type,\\n.place-region {\\n  display: block;\\n  font-size: 14px;\\n  line-height: 19px;\\n  font-weight: 500;\\n  color: #666;\\n  margin-bottom: 2px;\\n}\\n\\n.place-grip {\\n  width: 18px;\\n  height: 18px;\\n  flex: 0 0 18px;\\n  margin-right: 6px;\\n  align-self: center;\\n}\\n\\n.partial-slot {\\n  margin-left: 31px;\\n  height: 18px;\\n  overflow: hidden;\\n}\\n\\n.partial-card {\\n  min-height: 96px;\\n  border: 1px solid #e8e8e8;\\n  border-radius: 6px 0 0 0;\\n  display: flex;\\n  align-items: center;\\n}\\n\\n.partial-card img {\\n  width: 96px;\\n  height: auto;\\n  object-fit: cover;\\n}\\n\\n@media (max-width: 360px) {\\n  .place-photo {\\n    width: 72px;\\n    height: 72px;\\n    flex-basis: 72px;\\n  }\\n\\n  .place-copy {\\n    padding: 8px;\\n  }\\n\\n  .partial-card img {\\n    width: 72px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 54984824600,
+  "load_duration": 3075000,
+  "prompt_eval_count": 2798,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 30904904000,
+  "eval_count": 708,
+  "eval_duration": 24066084000
+}

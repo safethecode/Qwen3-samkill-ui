@@ -1,0 +1,78 @@
+@font-face{font-family:"Noto Sans KR";src:url("assets/fonts/NotoSansKR.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap;}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:500 14px/1.5 "Noto Sans KR",sans-serif}button,input{font:inherit}button:disabled,input:disabled{opacity:1}h1,h2,p{margin:0}img{display:block}.frame{max-width:430px;margin:auto;padding:0 24px 24px;--ink:#111;--muted:#666;--border:#e8e8e8}.tabs-slot{margin-top:26px}.days-slot{margin-top:26px}.footer-slot{margin-top:24px}.disclosure{margin-top:16px;color:#666}button:focus-visible,input:focus-visible{outline:2px solid #111;outline-offset:3px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}} #itinerary-layout :is(#place1,#place2,#place3){display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;align-items:center}#itinerary-layout :is(#place1-card,#place2-card,#place3-card){display:flex;align-items:center;min-width:0;min-height:96px;height:auto;gap:0}#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:96px;height:96px;flex:0 0 96px;object-fit:cover}#itinerary-layout .place-copy{min-width:0;flex:1;padding:8px 12px;overflow-wrap:anywhere}#itinerary-layout .place-grip{width:18px;height:18px;flex:0 0 18px;margin-right:6px}@media(max-width:360px){#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:72px;height:72px;flex-basis:72px}#itinerary-layout .place-copy{padding:8px}}
+[data-ui-unit="E1"] :is(#place1,#place2,#place3){display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;align-items:center}[data-ui-unit="E1"] #itinerary-layout :is(#place1-card,#place2-card,#place3-card){display:flex;align-items:center;min-width:0;min-height:96px;height:auto;gap:0}[data-ui-unit="E1"] #itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:96px;height:96px;flex:0 0 96px;object-fit:cover}[data-ui-unit="E1"] .place-copy{min-width:0;flex:1;padding:8px 12px;overflow-wrap:anywhere}[data-ui-unit="E1"] .place-grip{width:18px;height:18px;flex:0 0 18px;margin-right:6px}@media(max-width:360px){[data-ui-unit="E1"] #itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:72px;height:72px;flex-basis:72px}[data-ui-unit="E1"] .place-copy{padding:8px}}[data-ui-unit="E1"].trip-header{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;height:62px;padding:0;gap:0;width:100%}[data-ui-unit="E1"].trip-header>button{background:transparent;border:none;padding:0;margin:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer}[data-ui-unit="E1"].trip-header>button img{width:24px;height:24px;display:block}[data-ui-unit="E1"].trip-header>h1{font-size:18px;line-height:26px;font-weight:700;margin:0;text-align:center;white-space:normal;overflow-wrap:break-word;padding:0 8px;min-width:0;min-height:26px;align-self:center}[data-ui-unit="E1"].trip-header>span{width:44px;height:44px;display:block}
+[data-ui-unit="E2"].day-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+[data-ui-unit="E2"].day-tabs button {
+  flex: 0 0 auto;
+  min-width: 64px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 32px;
+  cursor: default;
+  text-align: center;
+}
+
+[data-ui-unit="E2"].day-tabs button[aria-pressed="true"] {
+  background-color: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+[data-ui-unit="E2"].day-tabs button[disabled] {
+  opacity: 1;
+}
+[data-ui-unit="E3"].itinerary { display: flex; flex-direction: column; gap: 40px; color: var(--ink); }
+[data-ui-unit="E3"] .day-group h2 { font-size: 16px; line-height: 22px; font-weight: 700; margin-bottom: 16px; }
+[data-ui-unit="E3"] .day-group h2 span { font-weight: 500; color: var(--muted); }
+[data-ui-unit="E3"] .place-row { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 9px; align-items: center; margin-bottom: 18px; }
+[data-ui-unit="E3"] .place-card { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 6px; min-height: 96px; overflow: hidden; background: #fff; width: 100%; }
+[data-ui-unit="E3"] .place-photo { width: 96px; height: 96px; flex: 0 0 96px; object-fit: cover; }
+[data-ui-unit="E3"] .place-copy { flex: 1; min-width: 0; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px; overflow-wrap: anywhere; }
+[data-ui-unit="E3"] .place-title { font-size: 14px; line-height: 19px; font-weight: 700; color: var(--ink); margin: 0; }
+[data-ui-unit="E3"] .place-type, [data-ui-unit="E3"] .place-region { font-size: 14px; line-height: 19px; font-weight: 500; color: var(--muted); margin: 0; }
+[data-ui-unit="E3"] .place-grip { width: 18px; height: 18px; flex: 0 0 18px; margin-right: 6px; align-self: center; opacity: 0.4; }
+[data-ui-unit="E3"] input[type="checkbox"] { width: 22px; height: 22px; margin: 0; flex: 0 0 auto; align-self: center; }
+[data-ui-unit="E3"] partial-slot { display: block; margin-left: 31px; height: 18px; overflow: hidden; position: relative; }
+[data-ui-unit="E3"] .partial-card { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: #fff; position: absolute; top: -78px; left: 0; width: 100%; display: flex; align-items: center; overflow: hidden; }
+[data-ui-unit="E3"] .partial-card img { width: 96px; height: auto; object-fit: cover; flex-shrink: 0; }
+@media (max-width: 360px) {
+[data-ui-unit="E3"] .place-photo { width: 72px; height: 72px; flex: 0 0 72px; }
+[data-ui-unit="E3"] .place-copy { padding: 8px; }
+}
+[data-ui-unit="E4"].trip-footer {
+  margin-top: 24px;
+}
+
+[data-ui-unit="E4"].trip-footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 24px;
+  margin: 0 -24px;
+  background-color: #bdbdbd;
+  color: #ffffff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 12px;
+  border: none;
+  cursor: default;
+}
+
+[data-ui-unit="E4"].trip-footer button:disabled {
+  opacity: 1;
+}

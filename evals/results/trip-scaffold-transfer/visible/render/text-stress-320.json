@@ -1,0 +1,177 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "text": "",
+        "width": 96,
+        "scrollWidth": 96,
+        "height": 18,
+        "scrollHeight": 18,
+        "overflow": "clip",
+        "clippedBy": {
+          "tag": "DIV",
+          "id": "",
+          "class": "partial-slot",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      }
+    ],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "trip-header",
+        "text": "여행 일정 편집",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 62,
+        "scrollHeight": 70,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "",
+        "text": "여행 일정 편집",
+        "width": 184,
+        "scrollWidth": 184,
+        "height": 52,
+        "scrollHeight": 65,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "tabs-slot",
+        "text": "Day 1Day 2Day 3",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 72,
+        "scrollHeight": 77,
+        "overflow": "visible"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "day-tabs",
+        "text": "Day 1Day 2Day 3",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 72,
+        "scrollHeight": 77,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 1",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 2",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "",
+        "text": "Day 3",
+        "width": 101,
+        "scrollWidth": 101,
+        "height": 30,
+        "scrollHeight": 36,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 1 (06.25)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 2 (06.26)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H2",
+        "id": "",
+        "class": "",
+        "text": "Day 3 (06.27)",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 22,
+        "scrollHeight": 34,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [
+      {
+        "tag": "IMG",
+        "id": "",
+        "class": "",
+        "text": "",
+        "width": 96,
+        "scrollWidth": 96,
+        "height": 18,
+        "scrollHeight": 18,
+        "overflow": "clip",
+        "clippedBy": {
+          "tag": "DIV",
+          "id": "",
+          "class": "partial-slot",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      }
+    ],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]
