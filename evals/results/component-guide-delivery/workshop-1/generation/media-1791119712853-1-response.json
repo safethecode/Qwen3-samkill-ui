@@ -1,0 +1,33 @@
+{
+  "binding": "8bf8e75ea436281dad886b40bb850474a332c6ebacf190439c93e84df3bcf871",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 74595,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T13:15:12.8525727Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".product-media {\\n  margin: 0;\\n  width: 100%;\\n  aspect-ratio: 1 / 1;\\n  overflow: hidden;\\n}\\n\\n.product-media img {\\n  width: 100%;\\n  height: 100%;\\n  object-fit: cover;\\n  object-position: 44% center;\\n  display: block;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-media {\\n    border-radius: 8px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 74591777900,
+  "load_duration": 2661600,
+  "prompt_eval_count": 6770,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 69904375000,
+  "eval_count": 136,
+  "eval_duration": 4640115000
+}

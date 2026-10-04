@@ -1,0 +1,28 @@
+{
+  "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+  "screenId": "clvf09i14002xlc08apd72z2y",
+  "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+  "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8",
+  "retrievedAtUtc": "2026-10-04T12:00:48.7307118Z",
+  "tool": "search_ui_patterns",
+  "arguments": {
+    "app_name": "프립",
+    "query": "상세정보",
+    "limit": 3
+  },
+  "status": "inspected",
+  "width": 296,
+  "region": "Full native mobile product-detail preview",
+  "unknowns": [
+    "Original font identity and CSS",
+    "Desktop reference",
+    "Hidden states"
+  ],
+  "observations": [
+    "Large square photographic media first",
+    "Left aligned title and price below photograph",
+    "Compact host block",
+    "Primary purple action in separate action region"
+  ],
+  "adaptation": "Independent pottery service. Licensed substitute photo, local Noto Sans KR and Lucide assets. Desktop split layout is host decision, not observed reference."
+}

@@ -1,0 +1,13 @@
+{
+  "screenId": "cmqp0djhm006ql70495lch8fe",
+  "previewSha256": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d",
+  "ui_url": "https://uibowl.io/name/%EC%85%80%EB%A0%88%ED%8A%B8%EB%A6%BD?patterns=%ED%8E%B8%EC%A7%91%C2%B7%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0&patternName=%EC%97%AC%ED%96%89%20%EC%9D%BC%EC%A0%95%20%ED%8E%B8%EC%A7%91",
+  "arguments": {
+    "app_name": "셀레트립",
+    "query": "편집",
+    "limit": 3
+  },
+  "tool": "search_ui_patterns",
+  "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+  "retrievedAtUtc": "2026-10-04T12:36:04.0707927Z"
+}

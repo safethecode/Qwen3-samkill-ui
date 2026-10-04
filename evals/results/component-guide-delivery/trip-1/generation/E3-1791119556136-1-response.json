@@ -1,0 +1,33 @@
+{
+  "binding": "01c13f06b96c528fe90aee97e42e05a9a2576e3c8ce7190a0fea1ad45ca444ab",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 142254,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T13:12:36.1359313Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".itinerary {\\n  color: var(--ink);\\n}\\n\\n/* Typography & Spacing */\\n.itinerary h2 {\\n  font-size: 16px;\\n  line-height: 22px;\\n  font-weight: 700;\\n  margin-bottom: 16px;\\n  color: var(--ink);\\n}\\n\\n.itinerary h2 span {\\n  font-weight: 500;\\n  color: var(--muted);\\n}\\n\\n.itinerary .day-group:not(:last-child) {\\n  margin-bottom: 40px;\\n}\\n\\n.itinerary .place-row:not(:last-child) {\\n  margin-bottom: 18px;\\n}\\n\\n/* Card Surface & Structure */\\n.place-card {\\n  background-color: #fff;\\n  border: 1px solid var(--border);\\n  border-radius: 6px;\\n  min-height: 96px;\\n  display: flex;\\n  align-items: center;\\n  overflow: hidden; /* Clips only the photo's own left corners */\\n}\\n\\n/* Photo Styling */\\n.place-photo {\\n  width: 96px;\\n  height: 96px;\\n  object-fit: cover;\\n  flex-shrink: 0;\\n}\\n\\n/* Copy Area */\\n.place-copy {\\n  min-width: 0;\\n  flex: 1;\\n  padding: 8px 12px;\\n  overflow-wrap: anywhere;\\n}\\n\\n.place-title {\\n  display: block;\\n  font-size: 14px;\\n  line-height: 19px;\\n  font-weight: 700;\\n  margin-bottom: 4px;\\n  color: var(--ink);\\n  white-space: normal;\\n}\\n\\n.place-region {\\n  display: block;\\n  font-size: 14px;\\n  line-height: 19px;\\n  font-weight: 500;\\n  color: var(--muted);\\n  margin-bottom: 4px;\\n  white-space: normal;\\n}\\n\\n.place-type {\\n  display: block;\\n  font-size: 14px;\\n  line-height: 19px;\\n  font-weight: 500;\\n  color: var(--muted);\\n  white-space: normal;\\n}\\n\\n/* Grip Icon */\\n.place-grip {\\n  width: 18px;\\n  height: 18px;\\n  flex-shrink: 0;\\n  margin-right: 6px;\\n  object-fit: contain;\\n}\\n\\n/* Partial Fragment Slot */\\n.partial-slot {\\n  margin-left: 31px;\\n  height: 18px;\\n  overflow: hidden;\\n}\\n\\n.partial-card {\\n  min-height: 96px;\\n  border: 1px solid var(--border);\\n  border-top-left-radius: 6px;\\n  border-bottom-left-radius: 6px;\\n  display: flex;\\n  align-items: center;\\n  background-color: #fff;\\n}\\n\\n.partial-card img {\\n  width: 96px;\\n  height: auto;\\n  object-fit: cover;\\n}\\n\\n/* Responsive Narrow Widths */\\n@media (max-width: 360px) {\\n  .place-photo {\\n    width: 72px;\\n    height: 72px;\\n  }\\n\\n  .place-copy {\\n    padding: 8px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 142240712700,
+  "load_duration": 3076700,
+  "prompt_eval_count": 9381,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 98293231000,
+  "eval_count": 807,
+  "eval_duration": 43894321000
+}
