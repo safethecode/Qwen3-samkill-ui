@@ -22,6 +22,8 @@ Reuse the upstream reference-decompose E/O records and corrected prompts. Keep o
 
 ## Repair one existing element
 
+Component generation receives the actual local decomposition, upstream typography, design-guardrail and mobile guide text. Components with declared SVG assets also receive the icon-control guide. Per-element guide paths and SHA-256 hashes are recorded in generation inputs and bound to checkpoints. These focused styling guides do not replace the full 75-rule/eight-guide completion review or interaction verification. Their presence in a request is not evidence that the output obeys them.
+
 The component validator rejects all `+` and `~` selector combinators, including descendant siblings within a valid component root. Use a parent gap or `:not(:first-child)` for repeated-group spacing. Generation prompts state this restriction explicitly, and retry errors identify the rejected selector. This restriction has not been loosened for a particular reference.
 
 Run `node scripts/repair-component.mjs TARGET EVIDENCE ID COMPONENT_JSON FAILURE_TEXT` with a fresh evidence directory outside the source. COMPONENT_JSON contains the exact current `{html, css}` fragment; FAILURE_TEXT describes the observed defect and relevant reference comparison. Use the `after` fragment from the latest accepted repair when repairing an element again. Never reuse stale generation fragments after changing that element.
