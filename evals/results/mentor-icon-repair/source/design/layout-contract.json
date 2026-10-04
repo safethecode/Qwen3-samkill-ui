@@ -1,0 +1,115 @@
+{
+  "provenance": "Post-generation diagnostic encoding the existing element ownership and assembly requirements; not a predeclared generation contract.",
+  "rules": [
+    {
+      "id": "favorite-owner-a",
+      "kind": "contained",
+      "subject": "[data-ui-unit=\"E4a\"] button",
+      "container": "[data-ui-unit=\"E4a\"]"
+    },
+    {
+      "id": "body-owner-a",
+      "kind": "absent",
+      "subject": "[data-ui-unit=\"E4a\"] p"
+    },
+    {
+      "id": "body-spacing-a",
+      "kind": "below",
+      "subject": "[data-ui-unit=\"E5a\"]",
+      "reference": "[data-ui-unit=\"E4a\"]",
+      "minGap": 20
+    },
+    {
+      "id": "footer-overlap-a",
+      "kind": "disjoint",
+      "subject": "[data-ui-unit=\"E5a\"] footer span",
+      "reference": "[data-ui-unit=\"E5a\"] footer button"
+    },
+    {
+      "id": "row-density-a",
+      "kind": "rowLimit",
+      "groups": [
+        "[data-ui-unit=\"E4a\"] button",
+        "[data-ui-unit=\"E5a\"] footer span",
+        "[data-ui-unit=\"E5a\"] footer button"
+      ],
+      "maximum": 2
+    },
+    {
+      "id": "favorite-owner-b",
+      "kind": "contained",
+      "subject": "[data-ui-unit=\"E4b\"] button",
+      "container": "[data-ui-unit=\"E4b\"]"
+    },
+    {
+      "id": "body-owner-b",
+      "kind": "absent",
+      "subject": "[data-ui-unit=\"E4b\"] p"
+    },
+    {
+      "id": "body-spacing-b",
+      "kind": "below",
+      "subject": "[data-ui-unit=\"E5b\"]",
+      "reference": "[data-ui-unit=\"E4b\"]",
+      "minGap": 20
+    },
+    {
+      "id": "footer-overlap-b",
+      "kind": "disjoint",
+      "subject": "[data-ui-unit=\"E5b\"] footer span",
+      "reference": "[data-ui-unit=\"E5b\"] footer button"
+    },
+    {
+      "id": "row-density-b",
+      "kind": "rowLimit",
+      "groups": [
+        "[data-ui-unit=\"E4b\"] button",
+        "[data-ui-unit=\"E5b\"] footer span",
+        "[data-ui-unit=\"E5b\"] footer button"
+      ],
+      "maximum": 2
+    },
+    {
+      "id": "sample-E1",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E1\"]",
+      "sample": "sample-E1.html"
+    },
+    {
+      "id": "sample-E2",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E2\"]",
+      "sample": "sample-E2.html"
+    },
+    {
+      "id": "sample-E3",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E3\"]",
+      "sample": "sample-E3.html"
+    },
+    {
+      "id": "sample-E4a",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E4a\"]",
+      "sample": "sample-E4a.html"
+    },
+    {
+      "id": "sample-E5a",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E5a\"]",
+      "sample": "sample-E5a.html"
+    },
+    {
+      "id": "sample-E4b",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E4b\"]",
+      "sample": "sample-E4b.html"
+    },
+    {
+      "id": "sample-E5b",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E5b\"]",
+      "sample": "sample-E5b.html"
+    }
+  ]
+}
