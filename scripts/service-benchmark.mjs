@@ -62,7 +62,7 @@ for (const fixture of selected.length ? selected.map(id => serviceCases.find(c =
     study.results.push({ case: fixture.id, scope: fixture.scope, phase: 'GENERATED', ...generated });
     await writeFile(resolve(output, 'study.json'), JSON.stringify(study, null, 2));
     }
-    const report = await evaluateBoundSource(generated.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(generated.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, evidence, fixture));
+    const report = await evaluateBoundSource(generated.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(generated.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, evidence, fixture, { textStress: true }));
     study.results = study.results.filter(result => result.case !== fixture.id);
     study.results.push({ ...report, ...generated, phase: 'EVALUATED', elapsedMs: Date.now() - started });
   } catch (error) {

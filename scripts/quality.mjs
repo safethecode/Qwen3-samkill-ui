@@ -74,7 +74,7 @@ try {
     let functional = previous?.functional;
     if (!audit) {
       if (fixture) {
-        const report = await evaluateService(target, directory, fixture);
+        const report = await evaluateService(target, directory, fixture, { textStress: true });
         functional = { ...report, results: report.checks };
         for (const [width, name] of [[1440, 'desktop'], [390, 'mobile']]) await copyFile(resolve(directory, `${width}.png`), resolve(directory, `${name}.png`));
       } else {

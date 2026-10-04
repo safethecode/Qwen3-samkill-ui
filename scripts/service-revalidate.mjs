@@ -18,7 +18,7 @@ for (const result of study.results) {
   for (const [name, expected] of Object.entries(result.sourceHashes)) {
     if (digest(await readFile(resolve(target, name))) !== expected) throw new Error(`Source changed since generation: ${fixture.id}/${name}; record repairs separately`);
   }
-  const current = await evaluateBoundSource(result.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(result.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, resolve(root, fixture.id, 'reevaluated'), fixture));
+  const current = await evaluateBoundSource(result.sourceHashes, async () => Object.fromEntries(await Promise.all(Object.keys(result.sourceHashes).map(async name => [name, digest(await readFile(resolve(target, name)))]))), () => evaluateService(target, resolve(root, fixture.id, 'reevaluated'), fixture, { textStress: true }));
   results.push({ ...result, ...current });
 }
 if (JSON.stringify(await harnessBinding()) !== JSON.stringify(revalidationHarnessHashes)) throw new Error('Evaluation harness changed during the study; do not publish mixed-version results');

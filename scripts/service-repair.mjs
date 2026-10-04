@@ -26,7 +26,7 @@ let workingSource = null;
 try {
   await mkdir(evidence, { recursive: true });
   acceptedSource = await snapshot();
-  let current = await evaluateService(target, resolve(evidence, 'initial'), fixture);
+  let current = await evaluateService(target, resolve(evidence, 'initial'), fixture, { textStress: true });
   await assertOwned(snapshot, acceptedSource);
   workingSource = acceptedSource;
   let workingReport = current;
@@ -42,7 +42,7 @@ try {
     await mkdir(step);
     let owned = null;
     try {
-      const files = /^(overflow|readable|font-rendering)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
+      const files = /^(overflow|readable|font-rendering|text-200|text-spacing)-/.test(failure.name) ? ['styles.css'] : /^labels-/.test(failure.name) ? ['index.html', 'app.js'] : ['app.js', 'index.html', 'styles.css'];
       const applied = await repair(target, step, { name: 'visual-review', files, detail: serviceFailureContext(failure) }, '', { bounded: true, unitAttempt: unitAttempt++ });
       owned = names.map(name => applied.files[name]);
       const raw = await snapshot();
@@ -50,7 +50,7 @@ try {
       const clean = removeComments(...raw);
       await restore([clean.html, clean.css, clean.js]);
       owned = [clean.html, clean.css, clean.js];
-      const candidate = await evaluateService(target, resolve(step, 'evaluation'), fixture);
+      const candidate = await evaluateService(target, resolve(step, 'evaluation'), fixture, { textStress: true });
       await assertOwned(snapshot, owned);
       const { decision, regressions } = serviceProgress(current, candidate);
       events.push({ attempt, failure: failure.name, accepted: decision === 'accept', pending: decision === 'stage', passed: candidate.passed, total: candidate.total, regressions });

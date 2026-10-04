@@ -6,11 +6,40 @@ import { promisify } from 'node:util';
 import { mkdtemp, mkdir, readFile, writeFile, readdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
+test('service repair continues past basic passes to repair enlarged-text overflow', async () => {
+  const root = await mkdtemp(resolve('runs/service-stress-repair-'));
+  const target = resolve(root, 'source');
+  await mkdir(target);
+  const css = 'body{font:500 16px sans-serif}button{font:inherit}.row{display:flex;white-space:nowrap}';
+  for (const [name, content] of Object.entries({ 'index.html': '<html><head><link rel="stylesheet" href="styles.css"></head><body><h1>일정 편집</h1><h2>Day 1</h2><div class="row"><span>Long search label</span><button disabled>완료</button></div></body></html>', 'app.js': '', 'styles.css': css, 'DESIGN.md': 'Preserve content and wrap at 200% text.', 'REFERENCE.md': 'Keep the itinerary.' })) await writeFile(resolve(target, name), content);
+  let requestCount = 0;
+  const server = createServer(async (req, res) => {
+    let body = ''; for await (const part of req) body += part;
+    const request = JSON.parse(body);
+    assert.match(body, /text-200/);
+    assert.deepEqual(request.format.properties.patches.items.properties.path.enum, ['styles.css']);
+    requestCount++;
+    res.setHeader('content-type', 'application/json');
+    res.end(JSON.stringify({ done_reason: 'stop', message: { content: JSON.stringify({ patches: [{ path: 'styles.css', oldString: '.row{display:flex;white-space:nowrap}', newString: '.row{display:flex;flex-wrap:wrap;white-space:normal;overflow-wrap:anywhere}' }] }) } }));
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    await promisify(execFile)(process.execPath, ['scripts/service-repair.mjs', target, 'round-01', '1'], { env: { ...process.env, OLLAMA_URL: `http://127.0.0.1:${server.address().port}` }, windowsHide: true });
+    assert.equal(requestCount, 1);
+    const evidence = (await readdir(root)).find(name => name.startsWith('repair-'));
+    const result = JSON.parse(await readFile(resolve(root, evidence, 'result.json'), 'utf8'));
+    assert.equal(result.events[0].accepted, true);
+    assert.match(result.events[0].failure, /^text-200-/);
+    assert.equal(result.visual, 'UNVERIFIED');
+    assert.ok(result.report.reviewRequired.some(finding => finding.category === 'layout'));
+  } finally { await new Promise(resolve => server.close(resolve)); }
+});
+
 test('service repair preserves measured partial progress across separate runs without claiming completion', async () => {
   const root = await mkdtemp(resolve('runs/service-staged-repair-'));
   const target = resolve(root, 'source');
   await mkdir(target);
-  const original = '<html><head><style>body{font:500 16px sans-serif}button,input{font:inherit}</style></head><body><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"><input id="b"></body></html>';
+  const original = '<html><head><style>body{font:500 16px sans-serif}button,input{font:inherit;max-width:100%;box-sizing:border-box}</style></head><body><h1>일정 편집</h1><h2>Day 1</h2><button disabled>완료</button><input id="a"><input id="b"></body></html>';
   for (const [name, content] of Object.entries({ 'index.html': original, 'app.js': '', 'styles.css': '', 'DESIGN.md': 'Use visible input labels.', 'REFERENCE.md': 'Keep the itinerary heading and completion action.' })) await writeFile(resolve(target, name), content);
   let request = 0;
   const server = createServer(async (req, res) => {
