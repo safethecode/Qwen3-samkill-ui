@@ -56,6 +56,7 @@ export async function inspectFontRendering(page, options = {}) {
       roles.push({ ...role, actual });
       if (!actual.length) issues.push({ status: 'UNVERIFIED', problem: `Typography role has no rendered text evidence: ${role.selector}` });
       for (const item of actual) for (const font of item.fonts.filter(font => font.glyphCount > 0)) {
+        if (role.requireCustomFont === true && !font.isCustomFont) issues.push({ status: 'FAIL', selector: role.selector, actual: font.familyName, problem: 'Typography role requires a supplied font file but rendered a system font' });
         if (!role.families.some(family => family.toLowerCase() === font.familyName.toLowerCase())) issues.push({ status: 'FAIL', selector: role.selector, actual: font.familyName, expected: role.families, problem: 'Typography role rendered an undeclared fallback font' });
       }
     }

@@ -11,6 +11,7 @@ import { validateDomReferences } from './dom-references.mjs';
 import { verifiedIconAssets } from './icon-assets.mjs';
 import { removeComments } from './comments.mjs';
 import { validateAssetReferences } from './asset-references.mjs';
+import { localFontCss } from './local-font.mjs';
 import { normalizeTypography } from './typography.mjs';
 
 export async function generateService(target, evidence, options = {}) {
@@ -20,6 +21,7 @@ export async function generateService(target, evidence, options = {}) {
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8');
   const typographyIntent = await readFile(resolve(target, 'design/typography.json'), 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+  const fontLoader = typographyIntent ? await localFontCss(target, JSON.parse(typographyIntent)) : '';
   if (typographyIntent) {
     const parsed = JSON.parse(typographyIntent);
     if (typographyIntent.length > 12000 || !Array.isArray(parsed.roles) || !parsed.roles.length || parsed.roles.some(role => !role || typeof role.selector !== 'string' || !role.selector.trim() || !Array.isArray(role.families) || !role.families.length || role.families.some(family => typeof family !== 'string' || !family.trim()))) throw new Error('Predeclared typography requires nonempty selectors and rendered font families within 12000 characters');
@@ -57,7 +59,7 @@ export async function generateService(target, evidence, options = {}) {
       await writeFile(checkpointPath, JSON.stringify({ binding, settings, completed }, null, 2));
       continue;
     }
-    const assetContext = `\nPREDECLARED TYPOGRAPHY INTENT\n${typographyIntent || 'No role contract supplied. Do not infer or claim verified font fidelity.'}\nWhen supplied, implement these role selectors and font choices. Keep font intent unchanged; do not substitute a family merely to pass checks. A family name does not prove that its font file is available or loaded. Use supplied local assets or explicitly intended system fonts. Actual rendering still requires browser verification.\nVERIFIED LOCAL ICON ASSETS\n${Object.keys(assets).join('\n') || 'None supplied. Do not invent asset paths.'}\nUse these only for required actions, preserving semantic labels and their official shape. Example for an available Search asset: <img src="assets/icons/Search.svg" alt="" width="20" height="20">. File names are case-sensitive. Do not replace reference icons with emoji or hand-drawn SVG.\nEXISTING REFERENCE ASSETS\n${referenceAssets || 'No original media supplied. Do not invent image URLs or claim media fidelity.'}`;
+    const assetContext = `\nPREDECLARED TYPOGRAPHY INTENT\n${typographyIntent || 'No role contract supplied. Do not infer or claim verified font fidelity.'}\nWhen supplied, implement these role selectors and font choices. Keep font intent unchanged; do not substitute a family merely to pass checks. A family name does not prove that its font file is available or loaded. Use supplied local assets or explicitly intended system fonts. Actual rendering still requires browser verification.${fontLoader ? `\nHOST FONT LOADING: the runner will prepend the verified @font-face rule. Use cssFamily (${JSON.parse(typographyIntent).cssFamily}) in CSS; role families are platform inspection identities, not CSS aliases. Do not redefine @font-face or use local().` : ''}\nVERIFIED LOCAL ICON ASSETS\n${Object.keys(assets).join('\n') || 'None supplied. Do not invent asset paths.'}\nUse these only for required actions, preserving semantic labels and their official shape. Example for an available Search asset: <img src="assets/icons/Search.svg" alt="" width="20" height="20">. File names are case-sensitive. Do not replace reference icons with emoji or hand-drawn SVG.\nEXISTING REFERENCE ASSETS\n${referenceAssets || 'No original media supplied. Do not invent image URLs or claim media fidelity.'}`;
     const outputContract = stage.file === 'index.html'
       ? `HTML only for index.html. Include each required element exactly once now, not in a later stage.\n${Object.entries(options.interface || {}).map(([id, tag]) => `Exactly one <${tag === '*' ? 'section' : tag} id="${id}"> on that element itself.`).join('\n')}`
       : stage.file === 'app.js'
@@ -101,6 +103,11 @@ export async function generateService(target, evidence, options = {}) {
   }
   const assembled = assembleStages(completed);
   const clean = removeComments(assembled['index.html'], assembled['styles.css'], assembled['app.js']);
+  if (fontLoader) {
+    await localFontCss(target, JSON.parse(typographyIntent));
+    clean.css = `${fontLoader}${clean.css}`;
+    await writeFile(resolve(evidence, 'font-loading-assistance.json'), JSON.stringify({ producer: 'host-verified-font-loader', status: 'APPLIED_NOT_APPROVED', localFont: JSON.parse(typographyIntent).localFont, limitation: 'Loads the predeclared hash-verified file. Role use, actual rendered fonts and all design requirements still require browser verification.' }, null, 2));
+  }
   if (options.normalizeContractTypography === true) {
     const before = clean.css;
     clean.css = normalizeTypography(before);
