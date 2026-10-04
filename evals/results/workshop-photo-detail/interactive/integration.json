@@ -1,0 +1,29 @@
+{
+  "status": "UNVERIFIED",
+  "sourceHashes": {
+    "index.html": "5de8bf53f29e45f06cbd936d9448563eb2e31b92a1286f147a41ac5aec55d71f",
+    "styles.css": "59d37577c5742d4dd5300583d8ea6f37220841360943eca74bf2efc016369402",
+    "app.js": "caaa1fce29f62e4d83b2725f413a07ab4f2a90d27771ee1c8fa6496c10fb065c",
+    "DESIGN.md": "a87c6106de74e59e0d7a1cfc0400a3c6cbe65c76b14086fe577ca6523a014065",
+    "REFERENCE.md": "13df333c5dd9575e4d6b567e4d22351eaaec305269598405cdac74fa23e6d852",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/ArrowLeft.svg": "4ce3ba67c4491a9a014c043f352fd56d865e586b1d019bf9d9e7c789797a3672",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/MapPin.svg": "006d6b63bfa711de039a1e1128ee4b7749241aa11bf8293d8ff63bc2229a83dc",
+    "assets/icons/Users.svg": "01824f8e3f0fd8152511dbcdcce74dd7818ffa7ad1f34bea0e1a2b052a51b9ec",
+    "assets/icons/manifest.json": "270c915a7c31e369be7fb959c6592f36b62114aecdb67469eaf16e0fd1b2836e",
+    "assets/photos/pottery.jpg": "c3d060b5b9e7c8a2f0ae940a3cc7765acdf9613e61aed97d276f01170ba947f0",
+    "assets/photos/provenance.json": "89cdf7b27f1137efa4f7763c663360391caa42202a1e19188bf305a902f16fdd",
+    "design/typography.json": "534c3deed77d20d1d9839d0eceda9925e0cdb26b2f632ba652d29bb5e1909cee",
+    "design/component-plan.json": "e92479564a40bdeddbfa16b1e7c7d957741f0b0b76d2ebbec6a7689a38171264",
+    "sample-booking.html": "575b53db5895cf91b29980166597fe3f48791c00b3b469d821ee1374f04420ab",
+    "sample-identity.html": "cc92b5421c9ea8ab7499d4c734ef035292656f67864d2ec27d209af5822bcf04",
+    "sample-media.html": "4c9f43ab4d60870e236af3f59979fe0d8530d51ee59a9ade665b2ca582407c1d"
+  },
+  "hostAssistance": "Host integrated native dialog, form styling and demo booking/favorite/persistence behavior with the unchanged three local-model components. Separate from autonomous generation. Single detail surface, not the former catalogue benchmark."
+}

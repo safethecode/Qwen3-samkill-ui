@@ -1,0 +1,33 @@
+{
+  "binding": "5e0eabd38297decb2cf92de702520ac087d193c381f635a6c3a62065d8acce90",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 54867,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T12:08:34.7363776Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"html\": \"<section data-ui-unit=\\\"booking\\\">\\n  <div class=\\\"booking-host\\\">\\n    <h3 class=\\\"booking-host-title\\\">틈 도자기 스튜디오</h3>\\n    <p class=\\\"booking-host-subtitle\\\">재료와 도구 포함 · 완성품 소성 후 수령</p>\\n  </div>\\n  <div class=\\\"booking-action-row\\\">\\n    <button id=\\\"favorite\\\" class=\\\"booking-icon-btn\\\" type=\\\"button\\\" aria-label=\\\"수업 찜하기\\\" aria-pressed=\\\"false\\\">\\n      <img src=\\\"assets/icons/Heart.svg\\\" alt=\\\"\\\" width=\\\"24\\\" height=\\\"24\\\">\\n    </button>\\n    <button id=\\\"book\\\" class=\\\"booking-primary-btn\\\" type=\\\"button\\\">일정 선택하고 예약하기</button>\\n  </div>\\n  <p class=\\\"booking-note\\\">일정을 선택한 뒤 예약 내용을 확인할 수 있어요.</p>\\n</section>\",\n  \"css\": \"[data-ui-unit=\\\"booking\\\"] {\\n  display: block;\\n  width: 100%;\\n}\\n\\n.booking-host {\\n  border-top: 1px solid #ededf0;\\n  padding: 20px 0;\\n  display: flex;\\n  flex-direction: column;\\n  gap: 4px;\\n}\\n\\n.booking-host-title {\\n  font-size: 16px;\\n  font-weight: 700;\\n  color: #202024;\\n  margin: 0;\\n  line-height: 1.3;\\n}\\n\\n.booking-host-subtitle {\\n  font-size: 14px;\\n  color: #60606a;\\n  margin: 0;\\n  line-height: 1.4;\\n}\\n\\n.booking-action-row {\\n  display: grid;\\n  grid-template-columns: minmax(0, 1fr);\\n  gap: 12px;\\n  padding-top: 20px;\\n}\\n\\n@media (min-width: 600px) {\\n  .booking-action-row {\\n    grid-template-columns: auto minmax(0, 1fr);\\n    align-items: center;\\n  }\\n}\\n\\n.booking-icon-btn {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 48px;\\n  height: 48px;\\n  border: none;\\n  background: transparent;\\n  padding: 0;\\n  cursor: pointer;\\n  transition: background-color 0.15s ease;\\n}\\n\\n.booking-icon-btn img {\\n  width: 24px;\\n  height: 24px;\\n  display: block;\\n  pointer-events: none;\\n}\\n\\n.booking-icon-btn:hover {\\n  background-color: #f4f4f6;\\n}\\n\\n.booking-icon-btn:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n}\\n\\n.booking-icon-btn[aria-pressed=\\\"true\\\"] img {\\n  filter: invert(27%) sepia(98%) saturate(1000%) hue-rotate(270deg) brightness(1.1) contrast(1.1);\\n}\\n\\n.booking-primary-btn {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  height: 52px;\\n  background-color: #5146d7;\\n  color: #ffffff;\\n  font-size: 16px;\\n  font-weight: 700;\\n  border-radius: 6px;\\n  border: none;\\n  cursor: pointer;\\n  transition: background-color 0.15s ease, transform 0.1s ease;\\n}\\n\\n.booking-primary-btn:hover {\\n  background-color: #4338c2;\\n}\\n\\n.booking-primary-btn:active {\\n  transform: scale(0.98);\\n  background-color: #3b31a6;\\n}\\n\\n.booking-primary-btn:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n}\\n\\n.booking-note {\\n  font-size: 14px;\\n  color: #60606a;\\n  line-height: 1.6;\\n  margin-top: 12px;\\n  margin-bottom: 0;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 54852329400,
+  "load_duration": 3092900,
+  "prompt_eval_count": 1793,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 19829442000,
+  "eval_count": 1006,
+  "eval_duration": 34919117000
+}
