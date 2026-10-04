@@ -1,0 +1,213 @@
+{
+  "results": [
+    {
+      "id": "sample-E1",
+      "kind": "sampleWidth",
+      "status": "FAIL",
+      "detail": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E1.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E1.html\", waiting until \"load\"\u001b[22m\n",
+      "observed": {
+        "subject": {
+          "x": 24,
+          "y": 0,
+          "width": 272,
+          "height": 62
+        }
+      }
+    },
+    {
+      "id": "sample-E2",
+      "kind": "sampleWidth",
+      "status": "FAIL",
+      "detail": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E2.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E2.html\", waiting until \"load\"\u001b[22m\n",
+      "observed": {
+        "subject": {
+          "x": 24,
+          "y": 88,
+          "width": 233.5,
+          "height": 32
+        }
+      }
+    },
+    {
+      "id": "sample-E3",
+      "kind": "sampleWidth",
+      "status": "FAIL",
+      "detail": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E3.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E3.html\", waiting until \"load\"\u001b[22m\n",
+      "observed": {
+        "subject": {
+          "x": 24,
+          "y": 146,
+          "width": 272,
+          "height": 545.953125
+        }
+      }
+    },
+    {
+      "id": "sample-E4",
+      "kind": "sampleWidth",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 24,
+          "y": 715.953125,
+          "width": 272,
+          "height": 56
+        },
+        "sample": {
+          "x": 24,
+          "y": 0,
+          "width": 272,
+          "height": 56
+        }
+      }
+    },
+    {
+      "id": "outside-place1",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 28,
+          "y": 225.890625,
+          "width": 15,
+          "height": 13
+        },
+        "reference": {
+          "x": 55,
+          "y": 184.390625,
+          "width": 241,
+          "height": 96
+        }
+      }
+    },
+    {
+      "id": "photo-place1",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 56,
+          "y": 196.390625,
+          "width": 72,
+          "height": 72
+        },
+        "container": {
+          "x": 55,
+          "y": 184.390625,
+          "width": 241,
+          "height": 96
+        }
+      }
+    },
+    {
+      "id": "outside-place2",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 28,
+          "y": 413.671875,
+          "width": 15,
+          "height": 13
+        },
+        "reference": {
+          "x": 55,
+          "y": 358.78125,
+          "width": 241,
+          "height": 122.78125
+        }
+      }
+    },
+    {
+      "id": "photo-place2",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 56,
+          "y": 384.171875,
+          "width": 72,
+          "height": 72
+        },
+        "container": {
+          "x": 55,
+          "y": 358.78125,
+          "width": 241,
+          "height": 122.78125
+        }
+      }
+    },
+    {
+      "id": "outside-place3",
+      "kind": "disjoint",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 28,
+          "y": 541.0625,
+          "width": 15,
+          "height": 13
+        },
+        "reference": {
+          "x": 55,
+          "y": 499.5625,
+          "width": 241,
+          "height": 96
+        }
+      }
+    },
+    {
+      "id": "photo-place3",
+      "kind": "contained",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 56,
+          "y": 511.5625,
+          "width": 72,
+          "height": 72
+        },
+        "container": {
+          "x": 55,
+          "y": 499.5625,
+          "width": 241,
+          "height": 96
+        }
+      }
+    },
+    {
+      "id": "footer-after-days",
+      "kind": "below",
+      "status": "PASS",
+      "observed": {
+        "subject": {
+          "x": 24,
+          "y": 715.953125,
+          "width": 272,
+          "height": 56
+        },
+        "reference": {
+          "x": 24,
+          "y": 146,
+          "width": 272,
+          "height": 545.953125
+        }
+      }
+    }
+  ],
+  "issues": [
+    {
+      "status": "FAIL",
+      "problem": "sample-E1: page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E1.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E1.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "status": "FAIL",
+      "problem": "sample-E2: page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E2.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E2.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "status": "FAIL",
+      "problem": "sample-E3: page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:62009/sample-E3.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62009/sample-E3.html\", waiting until \"load\"\u001b[22m\n"
+    }
+  ],
+  "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+}

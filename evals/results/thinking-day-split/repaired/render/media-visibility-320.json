@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "src": "assets/icons/ChevronLeft.svg",
+      "width": 24,
+      "height": 24,
+      "visible": {
+        "left": 34,
+        "top": 19,
+        "right": 58,
+        "bottom": 43
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-1.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 196.390625,
+        "right": 128,
+        "bottom": 268.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 18,
+      "visible": {
+        "left": 271,
+        "top": 223.390625,
+        "right": 289,
+        "bottom": 241.390625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-2.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 384.171875,
+        "right": 128,
+        "bottom": 456.171875
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 18,
+      "visible": {
+        "left": 271,
+        "top": 411.171875,
+        "right": 289,
+        "bottom": 429.171875
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-3.png",
+      "width": 72,
+      "height": 72,
+      "visible": {
+        "left": 56,
+        "top": 511.5625,
+        "right": 128,
+        "bottom": 583.5625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/icons/GripVertical.svg",
+      "width": 18,
+      "height": 18,
+      "visible": {
+        "left": 271,
+        "top": 538.5625,
+        "right": 289,
+        "bottom": 556.5625
+      },
+      "findings": []
+    },
+    {
+      "src": "assets/reference/photo-fragment.png",
+      "width": 72,
+      "height": 17,
+      "visible": {
+        "left": 56,
+        "top": 674.953125,
+        "right": 128,
+        "bottom": 691.953125
+      },
+      "findings": []
+    }
+  ],
+  "issues": [],
+  "scope": "Loaded image boxes and rectangular overflow/inset clipping only. Occlusion, SVG paint, arbitrary clipping shapes and perceptual reference fidelity are not certified."
+}

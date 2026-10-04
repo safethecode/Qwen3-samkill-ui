@@ -1,0 +1,69 @@
+[
+  {
+    "mode": "text-200",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "overlappingLines": [
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "",
+        "text": "여행 일정 편집",
+        "width": 184,
+        "scrollWidth": 184,
+        "height": 52,
+        "scrollHeight": 65,
+        "overflow": "visible",
+        "fontSize": 36,
+        "lineHeight": 26,
+        "overlapPx": 26,
+        "method": "Intersecting wrapped text range boxes with line-height below font-size; requires visual confirmation."
+      }
+    ],
+    "outsideViewport": [],
+    "clippingCandidates": [
+      {
+        "tag": "HEADER",
+        "id": "",
+        "class": "trip-header",
+        "text": "여행 일정 편집",
+        "width": 272,
+        "scrollWidth": 272,
+        "height": 62,
+        "scrollHeight": 70,
+        "overflow": "visible"
+      },
+      {
+        "tag": "H1",
+        "id": "",
+        "class": "",
+        "text": "여행 일정 편집",
+        "width": 184,
+        "scrollWidth": 184,
+        "height": 52,
+        "scrollHeight": 65,
+        "overflow": "visible"
+      }
+    ],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  },
+  {
+    "mode": "text-spacing",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflowPx": 0,
+    "flexPressure": [],
+    "gridPressure": [],
+    "clippedByAncestor": [],
+    "overlappingLines": [],
+    "outsideViewport": [],
+    "clippingCandidates": [],
+    "visual": "UNVERIFIED",
+    "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "rules": [
+    {
+      "id": "sample-E1",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E1\"]",
+      "sample": "sample-E1.html"
+    },
+    {
+      "id": "sample-E2",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E2\"]",
+      "sample": "sample-E2.html"
+    },
+    {
+      "id": "sample-E3",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E3\"]",
+      "sample": "sample-E3.html"
+    },
+    {
+      "id": "sample-E4",
+      "kind": "sampleWidth",
+      "subject": "[data-ui-unit=\"E4\"]",
+      "sample": "sample-E4.html"
+    },
+    {
+      "id": "outside-place1",
+      "kind": "disjoint",
+      "subject": "#place1-check",
+      "reference": "#place1-card"
+    },
+    {
+      "id": "photo-place1",
+      "kind": "contained",
+      "subject": "#place1-photo",
+      "container": "#place1-card"
+    },
+    {
+      "id": "outside-place2",
+      "kind": "disjoint",
+      "subject": "#place2-check",
+      "reference": "#place2-card"
+    },
+    {
+      "id": "photo-place2",
+      "kind": "contained",
+      "subject": "#place2-photo",
+      "container": "#place2-card"
+    },
+    {
+      "id": "outside-place3",
+      "kind": "disjoint",
+      "subject": "#place3-check",
+      "reference": "#place3-card"
+    },
+    {
+      "id": "photo-place3",
+      "kind": "contained",
+      "subject": "#place3-photo",
+      "container": "#place3-card"
+    },
+    {
+      "id": "footer-after-days",
+      "kind": "below",
+      "subject": "[data-ui-unit=\"E4\"]",
+      "reference": "[data-ui-unit=\"E3\"]",
+      "minGap": 24
+    }
+  ]
+}

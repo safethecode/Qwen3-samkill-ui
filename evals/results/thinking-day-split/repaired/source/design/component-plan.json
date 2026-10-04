@@ -1,0 +1,73 @@
+{
+  "reference": {
+    "status": "inspected",
+    "source": "assets/reference/source.jpg",
+    "provenance": "Fresh authenticated UI Bowl preview retrieved and directly inspected this round; transfer-live.json records exact provenance. Previously supplied photo crops retained unchanged for research comparison, not newly sourced production media.",
+    "limitations": "Original CSS, font, disabled conditions and hidden Day3 content unknown. Static translation; source media licensing beyond supplied reference remains unverified. Chosen minimum14px/500 typography differs from small raster text.",
+    "responsiveRound": "Fresh authenticated UI Bowl preview inspected; assets/reference/responsive-live.json records lookup and image hash.",
+    "latestInspection": {
+      "ui_url": "https://uibowl.io/name/%EC%85%80%EB%A0%88%ED%8A%B8%EB%A6%BD?patterns=%ED%8E%B8%EC%A7%91%C2%B7%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0&patternName=%EC%97%AC%ED%96%89%20%EC%9D%BC%EC%A0%95%20%ED%8E%B8%EC%A7%91",
+      "arguments": {
+        "app_name": "셀레트립",
+        "query": "편집",
+        "limit": 3
+      },
+      "tool": "search_ui_patterns",
+      "previewSha256": "bdc2390530236c3cb0af8a4116e6ed35b35d25f568b5da8745e6076ffcb7472d",
+      "screenId": "cmqp0djhm006ql70495lch8fe",
+      "retrievedAtUtc": "2026-10-04T20:25:07.0142173Z",
+      "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved"
+    }
+  },
+  "shared": "Travel itinerary reference: white narrow mobile frame, centered title, compact day pills, day headings aligned with OUTSIDE-card checkboxes. Card owns edge-to-edge square photo, text, quiet grip. White card with subtle border is a content boundary, not a decorative separator. No shadows, hero, invented data, summaries or dashboards. Minimum14px/500. Noto Sans KR actual supplied font. At320px and enlarged text grow row height, wrap words; never hide text or shrink fonts. Static controls disabled with opacity1. Day3 is explicitly an observed partial fragment, not reconstructed hidden data. Shared assembly owns outer spacing. All dimensions are chosen adaptations based on upstream observations. This cross-service experiment transfers ownership of recurrent structural relationships to shared CSS. Immutable markup, host-owned row/photo geometry, local component CSS. No functional product or parity claim.",
+  "sharedCss": "*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:500 14px/1.5 \"Noto Sans KR\",sans-serif}button,input{font:inherit}button:disabled,input:disabled{opacity:1}h1,h2,p{margin:0}img{display:block}.frame{max-width:430px;margin:auto;padding:0 24px 24px;--ink:#111;--muted:#666;--border:#e8e8e8}.tabs-slot{margin-top:26px}.days-slot{margin-top:26px}.footer-slot{margin-top:24px}.disclosure{margin-top:16px;color:#666}button:focus-visible,input:focus-visible{outline:2px solid #111;outline-offset:3px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}} #itinerary-layout :is(#place1,#place2,#place3){display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;align-items:center}#itinerary-layout :is(#place1-card,#place2-card,#place3-card){display:flex;align-items:center;min-width:0;min-height:96px;height:auto;gap:0}#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:96px;height:96px;flex:0 0 96px;object-fit:cover}#itinerary-layout .place-copy{min-width:0;flex:1;padding:8px 12px;overflow-wrap:anywhere}#itinerary-layout .place-grip{width:18px;height:18px;flex:0 0 18px;margin-right:6px}@media(max-width:360px){#itinerary-layout :is(#place1-photo,#place2-photo,#place3-photo){width:72px;height:72px;flex-basis:72px}#itinerary-layout .place-copy{padding:8px}}\n\n[data-ui-unit=\"E2\"].day-tabs {\n  display: inline-flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n\n[data-ui-unit=\"E2\"].day-tabs button {\n  font: 700 14px/1 \"Noto Sans KR\", sans-serif;\n  padding: 8px 16px;\n  min-width: 64px;\n  min-height: 32px;\n  height: auto;\n  border-radius: 16px;\n  border: 1px solid #e8e8e8;\n  background-color: #fff;\n  color: #111;\n  cursor: default;\n  white-space: nowrap;\n  margin: 0;\n}\n\n[data-ui-unit=\"E2\"].day-tabs button[aria-pressed=\"true\"] {\n  background-color: #111;\n  color: #fff;\n  border-color: #111;\n}\n\n[data-ui-unit=\"E2\"].day-tabs button:disabled {\n  opacity: 1;\n}\n#itinerary-layout{display:grid;gap:40px}",
+  "elements": [
+    {
+      "id": "E1",
+      "html": "<header data-ui-unit=\"E1\" class=\"trip-header\"><button type=\"button\" disabled aria-label=\"뒤로가기 정적 예시\"><img src=\"assets/icons/ChevronLeft.svg\" alt=\"\" width=\"24\" height=\"24\"></button><h1>여행 일정 편집</h1><span aria-hidden=\"true\"></span></header>",
+      "prompt": "Header62px minimum. Equal44px side slots and flexible centered title18px/26px/700. Back image24px. Transparent disabled button. Center title on screen, not leftover space. Wrap when text enlarged. No outer padding beyond parent24px.",
+      "assets": [
+        "assets/icons/ChevronLeft.svg"
+      ],
+      "sample": "<main class=\"frame\">{{E1}}</main>"
+    },
+    {
+      "id": "E3A",
+      "html": "<section class=\"day-group\" data-ui-unit=\"E3A\"><h2>Day 1 <span>(06.25)</span></h2><div class=\"place-row\" id=\"place1\"><input id=\"place1-check\" type=\"checkbox\" disabled=\"\" aria-labelledby=\"place1-name\"><div class=\"place-card\" id=\"place1-card\"><img class=\"place-photo\" id=\"place1-photo\" src=\"assets/reference/photo-1.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place1-name\" for=\"place1-check\">Jingūmae, Shibuya</label><p class=\"place-type\">Activity</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div></section>",
+      "prompt": "Style ONLY Day 1: heading16px/700 with unitless1.4 line-height; date500 muted. Heading-to-row16px. Card subtle1px border and6px radius; shared CSS owns row/photo/copy/grip geometry. Title700; type500 muted; all body text14px with unitless1.4 line-height. No fixed content height, overflow clipping, ellipsis or nowrap. Parent owns inter-day spacing. Preserve square photo and outside checkbox.",
+      "assets": [
+        "assets/icons/GripVertical.svg",
+        "assets/reference/photo-1.png"
+      ],
+      "sample": "<main class=\"frame\"><div id=\"itinerary-layout\" class=\"itinerary\" data-ui-unit=\"E3\">{{E3A}}</div></main>"
+    },
+    {
+      "id": "E3B",
+      "html": "<section class=\"day-group\" data-ui-unit=\"E3B\"><h2>Day 2 <span>(06.26)</span></h2><div class=\"place-row\" id=\"place2\"><input id=\"place2-check\" type=\"checkbox\" disabled=\"\" aria-labelledby=\"place2-name\"><div class=\"place-card\" id=\"place2-card\"><img class=\"place-photo\" id=\"place2-photo\" src=\"assets/reference/photo-2.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place2-name\" for=\"place2-check\">와라타코 하라주쿠 오모테산도점</label><p class=\"place-region\">Jingūmae, Shibuya</p><p class=\"place-type\">Restaurant</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div><div class=\"place-row\" id=\"place3\"><input id=\"place3-check\" type=\"checkbox\" disabled=\"\" aria-labelledby=\"place3-name\"><div class=\"place-card\" id=\"place3-card\"><img class=\"place-photo\" id=\"place3-photo\" src=\"assets/reference/photo-3.png\" alt=\"참조의 장소 사진\"><div class=\"place-copy\"><label class=\"place-title\" id=\"place3-name\" for=\"place3-check\">Dōgenzaka, Shibuya</label><p class=\"place-type\">Restaurant</p></div><img class=\"place-grip\" src=\"assets/icons/GripVertical.svg\" alt=\"정적 순서 표시\"></div></div></section>",
+      "prompt": "Style ONLY Day 2: heading16px/700 unitless1.4; date500 muted. Heading-to-first-row16px; second row18px below first. Use .place-row:not(:first-of-type) or direct child grid gap without sibling combinators. Cards subtle1px border radius6px. Shared CSS owns row/photo/copy/grip geometry. Title and region700, type500 muted; body14px unitless1.4. Natural height for enlarged Korean labels. Do not clip cards/text or override shared widths. Parent owns spacing between days.",
+      "assets": [
+        "assets/icons/GripVertical.svg",
+        "assets/reference/photo-2.png",
+        "assets/reference/photo-3.png"
+      ],
+      "sample": "<main class=\"frame\"><div id=\"itinerary-layout\" class=\"itinerary\" data-ui-unit=\"E3\">{{E3B}}</div></main>"
+    },
+    {
+      "id": "E3C",
+      "html": "<section class=\"day-group\" data-ui-unit=\"E3C\"><h2>Day 3 <span>(06.27)</span></h2><div class=\"partial-slot\" aria-label=\"원본에서 일부만 보이는 장소\"><div class=\"partial-card\"><img src=\"assets/reference/photo-fragment.png\" alt=\"관찰된 사진 상단 조각\"></div></div></section>",
+      "prompt": "Style ONLY observed Day 3 fragment: heading16px/700 unitless1.4; date500 muted; gap16px below heading. partial-slot has margin-left31px,18px height; only this explicitly partial visual is cropped. partial-card top-aligned,1px border radius6px, image96px wide and17px high; at max-width360px image72px wide. No invented hidden place text. Parent owns day spacing. Keep the complete supplied17px fragment visible within18px window.",
+      "assets": [
+        "assets/reference/photo-fragment.png"
+      ],
+      "sample": "<main class=\"frame\"><div id=\"itinerary-layout\" class=\"itinerary\" data-ui-unit=\"E3\">{{E3C}}</div></main>"
+    },
+    {
+      "id": "E4",
+      "html": "<footer data-ui-unit=\"E4\" class=\"trip-footer\"><button type=\"button\" disabled>수정 완료</button></footer>",
+      "prompt": "Full-width quiet disabled completion button min-height56px radius12px, gray #bdbdbd background, white16px/700. No divider or icon. Separate footer; no fixed overlay. At enlargement button grows.",
+      "assets": [],
+      "sample": "<main class=\"frame\">{{E4}}</main>"
+    }
+  ],
+  "assembly": "<main class=\"frame\">{{E1}}<div class=\"tabs-slot\"><div data-ui-unit=\"E2\" class=\"day-tabs\" role=\"group\" aria-label=\"날짜 선택 예시\"><button type=\"button\" disabled aria-pressed=\"true\">Day 1</button><button type=\"button\" disabled aria-pressed=\"false\">Day 2</button><button type=\"button\" disabled aria-pressed=\"false\">Day 3</button></div></div><div class=\"days-slot\"><div id=\"itinerary-layout\" class=\"itinerary\" data-ui-unit=\"E3\">{{E3A}}{{E3B}}{{E3C}}</div></div><div class=\"footer-slot\">{{E4}}</div><p class=\"disclosure\">정적 참조 번역 예시 · 실제 일정 변경은 제공하지 않습니다.</p></main>"
+}
