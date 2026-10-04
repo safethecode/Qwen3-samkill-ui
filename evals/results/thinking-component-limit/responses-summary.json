@@ -1,0 +1,109 @@
+{
+  "scope": "Metadata extracted from preserved local raw responses; raw thinking and content are not reproduced in this summary.",
+  "responses": [
+    {
+      "file": "E1-1791122403138-1-response.json",
+      "rawSha256": "3ab1a596bcaee87344ef3e95e43a70a9aea040b2baaaa61524adca22fc23b3cd",
+      "binding": "2d072adc041663559acce4ac2b7268268dd437b66132f2df2fcfa25232cd291e",
+      "settings": {
+        "model": "qwen3.6:35b-a3b-coding",
+        "think": true,
+        "options": {
+          "num_ctx": 16384,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "repeat_penalty": 1.05,
+          "num_gpu": 16,
+          "num_batch": 128,
+          "num_predict": 8192
+        }
+      },
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 303377,
+      "doneReason": "stop",
+      "promptTokens": 8087,
+      "outputTokens": 3246,
+      "thinkingCharacters": 9861,
+      "contentCharacters": 731
+    },
+    {
+      "file": "E2-1791142078471-1-response.json",
+      "rawSha256": "f6ccaf98ec98d039dbdb1672b3dcede8c763b17f12d9dae1395bfc37f4a58eb7",
+      "binding": "2d072adc041663559acce4ac2b7268268dd437b66132f2df2fcfa25232cd291e",
+      "settings": {
+        "model": "qwen3.6:35b-a3b-coding",
+        "think": true,
+        "options": {
+          "num_ctx": 16384,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "repeat_penalty": 1.05,
+          "num_gpu": 16,
+          "num_batch": 128,
+          "num_predict": 8192
+        }
+      },
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 338992,
+      "doneReason": "stop",
+      "promptTokens": 6702,
+      "outputTokens": 4520,
+      "thinkingCharacters": 13147,
+      "contentCharacters": 560
+    },
+    {
+      "file": "E3-1791142673635-1-response.json",
+      "rawSha256": "c6766b9f0221517b310c54b946595e7c199c38c4c65162b2c5fc5f3f2875876d",
+      "binding": "2d072adc041663559acce4ac2b7268268dd437b66132f2df2fcfa25232cd291e",
+      "settings": {
+        "model": "qwen3.6:35b-a3b-coding",
+        "think": true,
+        "options": {
+          "num_ctx": 16384,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "repeat_penalty": 1.05,
+          "num_gpu": 16,
+          "num_batch": 128,
+          "num_predict": 8192
+        }
+      },
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 595158,
+      "doneReason": "length",
+      "promptTokens": 9379,
+      "outputTokens": 7005,
+      "thinkingCharacters": 22657,
+      "contentCharacters": 0
+    },
+    {
+      "file": "E3-1791143269391-2-response.json",
+      "rawSha256": "d1d82b1923d6adda2b026c2987600ebd5de853f21a0fd81d31b02d71bed4dc49",
+      "binding": "2d072adc041663559acce4ac2b7268268dd437b66132f2df2fcfa25232cd291e",
+      "settings": {
+        "model": "qwen3.6:35b-a3b-coding",
+        "think": true,
+        "options": {
+          "num_ctx": 16384,
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "repeat_penalty": 1.05,
+          "num_gpu": 16,
+          "num_batch": 128,
+          "num_predict": 8192
+        }
+      },
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 595754,
+      "doneReason": "length",
+      "promptTokens": 9381,
+      "outputTokens": 7001,
+      "thinkingCharacters": 22436,
+      "contentCharacters": 0
+    }
+  ]
+}
