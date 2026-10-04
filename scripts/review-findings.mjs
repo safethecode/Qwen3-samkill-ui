@@ -3,7 +3,7 @@ import { relative, resolve, sep } from 'node:path';
 
 export function reviewFindings(issues, evidence, category) {
   return issues.filter(issue => issue.status === 'UNVERIFIED').map(issue => {
-    const rules = category === 'icons' ? [/below 24px/.test(issue.problem) ? 'PROJECT-GUIDE-reference-to-ui' : 'RUI-12'] : [/Contrast/.test(issue.problem) ? 'ORC-G11' : 'ORC-G06'];
+    const rules = category === 'layout' ? ['PROJECT-GUIDE-reference-to-ui'] : category === 'icons' ? [/below 24px/.test(issue.problem) ? 'PROJECT-GUIDE-reference-to-ui' : 'RUI-12'] : [/Contrast/.test(issue.problem) ? 'ORC-G11' : 'ORC-G06'];
     const id = createHash('sha256').update(JSON.stringify({ evidence, category, issue })).digest('hex');
     return { ...issue, evidence, category, id, rules };
   });

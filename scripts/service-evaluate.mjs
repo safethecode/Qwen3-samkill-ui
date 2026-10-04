@@ -11,6 +11,7 @@ import { reviewFindings } from './review-findings.mjs';
 import { sourceBinding } from './source-binding.mjs';
 import { inspectFieldLabels } from './label-check.mjs';
 import { inspectWorkflowState } from './workflow-state.mjs';
+import { inspectTextStress } from './text-stress.mjs';
 
 export async function evaluateService(target, evidence, fixture, options = {}) {
   await mkdir(evidence, { recursive: true });
@@ -108,6 +109,17 @@ export async function evaluateService(target, evidence, fixture, options = {}) {
           measurements[`labels-${width}`] = unlabeled.length;
           assert.deepEqual(unlabeled, [], 'Visible fields require visible labels; aria-label and placeholders alone are insufficient');
         });
+      }
+      if (options.textStress && !options.reference) {
+        const reports = await inspectTextStress(page, mode => page.screenshot({ path: resolve(evidence, `${mode}-${width}.png`), fullPage: true }));
+        const stressEvidence = `text-stress-${width}.json`;
+        await writeFile(resolve(evidence, stressEvidence), JSON.stringify(reports, null, 2));
+        reviewRequired.push(...reviewFindings([{ status: 'UNVERIFIED', problem: 'Enlarged text and spacing require visual clipping, overlap and content-access review; zero horizontal overflow is not layout approval' }], stressEvidence, 'layout'));
+        for (const report of reports) {
+          const name = `${report.mode}-${width}`;
+          measurements[name] = report.overflowPx;
+          await check(name, async () => assert.equal(report.overflowPx, 0, `Horizontal overflow under ${report.mode}. Repair container sizing and wrapping; preserve all text and controls. Do not hide overflow or shrink enlarged text. Observed geometry: ${JSON.stringify(report)}`));
+        }
       }
       await page.close();
     }
