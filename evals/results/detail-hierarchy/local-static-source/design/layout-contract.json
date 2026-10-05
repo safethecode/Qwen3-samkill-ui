@@ -1,0 +1,125 @@
+{
+  "reference": "Fresh inspected Frip detail, with user-directed booking-state adaptation",
+  "rules": [
+    {
+      "id": "detail-return",
+      "kind": "returnNavigation",
+      "subject": "#back",
+      "destination": "classes.html",
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "no-invented-brand-header",
+      "kind": "absent",
+      "subject": ".site-header",
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "no-divider-bars",
+      "kind": "absent",
+      "subject": "hr,[role=\"separator\"]",
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "section-surface-0",
+      "kind": "surface",
+      "subject": ".product-identity",
+      "container": "body",
+      "minPadding": 20,
+      "forbidHorizontalBorders": true,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "section-surface-1",
+      "kind": "surface",
+      "subject": ".booking-host",
+      "container": "body",
+      "minPadding": 20,
+      "forbidHorizontalBorders": true,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "section-surface-2",
+      "kind": "surface",
+      "subject": ".booking-surface",
+      "container": "body",
+      "minPadding": 20,
+      "forbidHorizontalBorders": true,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "favorite-surface",
+      "kind": "surface",
+      "subject": "#favorite",
+      "container": ".booking-surface",
+      "minPadding": 0,
+      "forbidHorizontalBorders": true,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "host-section-gap",
+      "kind": "below",
+      "subject": ".booking-host",
+      "reference": ".product-identity",
+      "minGap": 12,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "action-section-gap",
+      "kind": "below",
+      "subject": ".booking-surface",
+      "reference": ".booking-host",
+      "minGap": 12,
+      "states": [
+        "initial"
+      ]
+    },
+    {
+      "id": "form-product-secondary",
+      "kind": "typeHierarchy",
+      "subject": "#booking-title",
+      "reference": ".booking-class",
+      "minSizeDifference": 6,
+      "states": [
+        "form"
+      ]
+    },
+    {
+      "id": "success-product-secondary",
+      "kind": "typeHierarchy",
+      "subject": "#booking-title",
+      "reference": "#confirmation-details",
+      "minSizeDifference": 6,
+      "states": [
+        "success"
+      ]
+    },
+    {
+      "id": "success-summary-surface",
+      "kind": "surface",
+      "subject": "#confirmation .booking-summary",
+      "container": "#booking-dialog",
+      "minPadding": 20,
+      "forbidHorizontalBorders": true,
+      "states": [
+        "success"
+      ]
+    }
+  ]
+}

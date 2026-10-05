@@ -1,0 +1,125 @@
+{
+  "status": "UNVERIFIED_REFERENCE_PARITY",
+  "generation": [
+    {
+      "file": "booking-1791165854453-1-response.json",
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 131222,
+      "promptTokens": 9798,
+      "outputTokens": 540,
+      "doneReason": "stop"
+    },
+    {
+      "file": "identity-1791165723223-1-response.json",
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 124175,
+      "promptTokens": 9741,
+      "outputTokens": 436,
+      "doneReason": "stop"
+    },
+    {
+      "file": "media-1791165599043-1-response.json",
+      "model": "qwen3.6:35b-a3b-coding",
+      "elapsedMs": 108276,
+      "promptTokens": 7974,
+      "outputTokens": 130,
+      "doneReason": "stop"
+    }
+  ],
+  "totalGenerationMs": 363673,
+  "hostAssistance": "Fixed semantic HTML, shared surface layout/navigation and corrected dialog behavior. Model generated the three component styles; two subsequent model repairs addressed observed CSS failures.",
+  "checks": [
+    {
+      "width": 296,
+      "workflow": "PASS",
+      "fontIssues": 0,
+      "typographyIssues": 0,
+      "layoutIssues": 0,
+      "stress": [
+        {
+          "mode": "text-200",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        },
+        {
+          "mode": "text-spacing",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "workflow": "PASS",
+      "fontIssues": 0,
+      "typographyIssues": 0,
+      "layoutIssues": 0,
+      "stress": [
+        {
+          "mode": "text-200",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        },
+        {
+          "mode": "text-spacing",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "workflow": "PASS",
+      "fontIssues": 0,
+      "typographyIssues": 0,
+      "layoutIssues": 0,
+      "stress": [
+        {
+          "mode": "text-200",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        },
+        {
+          "mode": "text-spacing",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "workflow": "PASS",
+      "fontIssues": 0,
+      "typographyIssues": 0,
+      "layoutIssues": 0,
+      "stress": [
+        {
+          "mode": "text-200",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        },
+        {
+          "mode": "text-spacing",
+          "overflowPx": 0,
+          "clipped": 0,
+          "overlappingLines": 0,
+          "controlOverflow": 0
+        }
+      ]
+    }
+  ]
+}

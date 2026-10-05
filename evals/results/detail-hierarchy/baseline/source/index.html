@@ -1,0 +1,39 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reference component prototype</title><link rel="stylesheet" href="styles.css"></head><body><header class="site-header">틈 공방</header><main class="product"><figure class="product-media" data-ui-unit="media"><img src="assets/photos/pottery.jpg" alt="물레 위 흙을 손으로 빚는 도자기 작업"></figure><div class="details"><section data-ui-unit="identity" class="product-identity">
+  <div class="eyebrow">도자기 · 입문</div>
+  <h1 class="title">내 손으로 빚는 첫 번째 도자기 잔</h1>
+  <div class="price-row">
+    <span class="price">55,000원</span>
+  </div>
+  <div class="metadata">
+    <div class="meta-item">
+      <img src="assets/icons/Clock.svg" alt=""
+           class="icon-clock">
+      <span>90분</span>
+    </div>
+    <div class="meta-item">
+      <img src="assets/icons/Users.svg" alt=""
+           class="icon-users">
+      <span>최대6명</span>
+    </div>
+    <div class="meta-item">
+      <img src="assets/icons/MapPin.svg" alt=""
+           class="icon-map-pin">
+      <span>서울·연남동</span>
+    </div>
+  </div>
+  <p class="description">
+    흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.
+  </p>
+</section><section data-ui-unit="booking" id="booking-layout">
+  <div class="booking-host">
+    <h3 class="booking-host-title">틈 도자기 스튜디오</h3>
+    <p class="booking-host-subtitle">재료와 도구 포함 · 완성품 소성 후 수령</p>
+  </div>
+  <div class="booking-action-row" id="booking-actions">
+    <button id="favorite" class="booking-icon-btn" type="button" aria-label="수업 찜하기" aria-pressed="false">
+      <img src="assets/icons/Heart.svg" alt="" width="24" height="24">
+    </button>
+    <button id="book" class="booking-primary-btn" type="button">일정 선택하고 예약하기</button>
+  </div>
+  <p class="booking-note">일정을 선택한 뒤 예약 내용을 확인할 수 있어요.</p>
+</section></div></main><footer class="disclosure">공예 클래스 예약 데모 · 실제 수업이나 결제가 아닙니다.<br>사진: Yan Krukau / Pexels</footer><dialog id="booking-dialog" aria-labelledby="booking-title"><div class="dialog-heading"><h2 id="booking-title">수업 예약</h2><button id="close-booking" type="button" aria-label="예약 창 닫기">닫기</button></div><p class="booking-class">내 손으로 빚는 첫 번째 도자기 잔</p><p class="booking-price">55,000원 · 90분 · 1명</p><form id="booking-form"><label for="guest">예약자 이름</label><input id="guest" name="guest" autocomplete="name" required maxlength="40"><label for="date">방문일</label><input id="date" name="date" type="date" required><label for="slot">예약 시간</label><select id="slot" name="slot" required><option value="">시간을 선택하세요</option value="10:00">오전 10:00</option><option value="14:00">오후 2:00</option><option value="18:00">오후 6:00</option></select><p id="storage-error" role="alert"></p><button class="confirm-booking" type="submit">예약 확정</button><p class="booking-demo">브라우저에만 저장되는 체험용 예약입니다.</p></form><section id="confirmation" hidden><h3>예약이 완료되었어요</h3><p id="confirmation-details"></p><button id="cancel-booking" type="button">예약 취소</button></section></dialog><script src="app.js" defer></script></body></html>

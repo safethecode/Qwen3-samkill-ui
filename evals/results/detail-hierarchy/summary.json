@@ -1,0 +1,165 @@
+{
+  "status": "UNVERIFIED_REFERENCE_PARITY",
+  "reference": "reference.json",
+  "baseline": [
+    {
+      "width": 296,
+      "failedRelations": 9,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "FAIL",
+          "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#back')\u001b[22m\n"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    '',\n-   '10:00',\n    '14:00',\n    '18:00'\n  ]\n"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '수업 예약'\n- '예약이 완료되었어요'\n"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "failedRelations": 9,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "FAIL",
+          "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#back')\u001b[22m\n"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    '',\n-   '10:00',\n    '14:00',\n    '18:00'\n  ]\n"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '수업 예약'\n- '예약이 완료되었어요'\n"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "failedRelations": 9,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "FAIL",
+          "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#back')\u001b[22m\n"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    '',\n-   '10:00',\n    '14:00',\n    '18:00'\n  ]\n"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '수업 예약'\n- '예약이 완료되었어요'\n"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "failedRelations": 9,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "FAIL",
+          "detail": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#back')\u001b[22m\n"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    '',\n-   '10:00',\n    '14:00',\n    '18:00'\n  ]\n"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "FAIL",
+          "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '수업 예약'\n- '예약이 완료되었어요'\n"
+        }
+      ]
+    }
+  ],
+  "hostCorrection": [
+    {
+      "width": 296,
+      "failedRelations": 0,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "failedRelations": 0,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "failedRelations": 0,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "failedRelations": 0,
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "attribution": "Host corrected missing navigation, surfaces and modal state hierarchy. Local component regeneration is recorded separately. These checks do not approve commercial/reference-level quality."
+}

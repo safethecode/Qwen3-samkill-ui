@@ -1,0 +1,26 @@
+{
+  "capturedAtUtc": "2026-10-05T02:01:37.0543777Z",
+  "backend": "Ollama",
+  "endpoint": "loopback /api/chat",
+  "loadedModels": [
+    {
+      "name": "qwen3.6:35b-a3b-coding",
+      "model": "qwen3.6:35b-a3b-coding",
+      "size": 22432626767,
+      "digest": "017eda0b7c34529c494d9e0fba88519bed43aa7ed3b18a4f70c648d53e50db3c",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35moe",
+        "families": [
+          "qwen35moe"
+        ],
+        "parameter_size": "35.5B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-10-05T11:04:59.0404982+09:00",
+      "size_vram": 8320314244,
+      "context_length": 16384
+    }
+  ]
+}

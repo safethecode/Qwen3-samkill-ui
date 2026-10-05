@@ -1,6 +1,10 @@
 # Quality gate verification
 
-## Current status — 2026-10-04
+## Current status — 2026-10-05
+
+A fresh Frip detail decomposition correction adds real return navigation, section surfaces, favorite affordance and booking-state hierarchy. The first correction was host-authored. A subsequent actual Ollama qwen3.6:35b-a3b-coding run generated three component styles in363673ms; two local bounded repairs corrected enlarged button overflow and a missing desktop title rule. Four viewport workflows and seven storage fault checks pass, and150 harness regressions pass. Fixed markup, shared layout and dialog integration remain host-assisted; this does not establish unattended reference parity. [Source-bound before/after, runtime and raw model evidence](results/detail-hierarchy/README.md).
+
+### Earlier results
 
 A fresh live UI Bowl comparison round improved the narrow itinerary row from a measured 156px to 131px while preserving all copy and minimum type size. The first attempt failed enlarged-text clipping; the next passed checks but changed wider layout and was rejected in review; an overlapping patch was rejected before writes. The final scoped retry passes 40/40, with identical before/after screenshot hashes at 390px and 1440px. This is a limited responsive improvement, not reference parity. [Full staged evidence and measured comparison](results/trip-responsive-study/README.md).
 

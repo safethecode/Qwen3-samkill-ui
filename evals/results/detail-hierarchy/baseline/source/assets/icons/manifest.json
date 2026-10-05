@@ -1,0 +1,44 @@
+{
+  "package": "lucide",
+  "version": "1.51.0",
+  "source": "https://github.com/lucide-icons/lucide",
+  "licenseSha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "icons": [
+    {
+      "name": "Heart",
+      "file": "Heart.svg",
+      "sha256": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+      "geometrySha256": "e57139f3f414a5f31b91bd77c6ce038d23e1a2ad40987c6b0348fcfa3a122912"
+    },
+    {
+      "name": "Clock",
+      "file": "Clock.svg",
+      "sha256": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+      "geometrySha256": "dd21f95bc00fa4d93395ffd11d86153487f49750df91981dd67cf0cbdec18c4d"
+    },
+    {
+      "name": "Users",
+      "file": "Users.svg",
+      "sha256": "01824f8e3f0fd8152511dbcdcce74dd7818ffa7ad1f34bea0e1a2b052a51b9ec",
+      "geometrySha256": "d4b9ca064a90a332656039b9dab4968183dedb4bac326d31bd9a91f8851cc9c7"
+    },
+    {
+      "name": "MapPin",
+      "file": "MapPin.svg",
+      "sha256": "006d6b63bfa711de039a1e1128ee4b7749241aa11bf8293d8ff63bc2229a83dc",
+      "geometrySha256": "2f1e6776538a10948d2015a8598883ec034a3a8536b091fc2e4e122edf5b756f"
+    },
+    {
+      "name": "ArrowLeft",
+      "file": "ArrowLeft.svg",
+      "sha256": "4ce3ba67c4491a9a014c043f352fd56d865e586b1d019bf9d9e7c789797a3672",
+      "geometrySha256": "3d4b4db320f90ace8a58bbe1a5beae179c58647d5d31e0d0242a5145592b605d"
+    },
+    {
+      "name": "ChevronRight",
+      "file": "ChevronRight.svg",
+      "sha256": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+      "geometrySha256": "b387ceba6a952091d1f508996535301fdd96182f419295e1de03a83ff3ab1ed5"
+    }
+  ]
+}

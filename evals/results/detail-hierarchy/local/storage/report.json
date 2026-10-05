@@ -1,0 +1,60 @@
+{
+  "status": "CHECKS_PASS_NOT_VISUAL_APPROVAL",
+  "sourceHashes": {
+    "index.html": "d15d270836c87ff31ceedba8c5d0bb0d3f3bb6193a9f740a27742276116a98ca",
+    "styles.css": "d86cb6c748c49572c8df9504423c0f851f89a16f72bad67426250d70971f5f00",
+    "app.js": "c9fa861188862dce66abeb086de2881a98c4fc0eaf04c69544430f19db0ee83f",
+    "DESIGN.md": "60250987d154ad4768da56f3ae02621f1fc396225c92b82ca37c4996bdae8d1b",
+    "REFERENCE.md": "5b3671212efb1a28c2462ae70827d0b8bf6225aa058395d6f4b7fa89bcadbc10",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/ArrowLeft.svg": "4ce3ba67c4491a9a014c043f352fd56d865e586b1d019bf9d9e7c789797a3672",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/MapPin.svg": "006d6b63bfa711de039a1e1128ee4b7749241aa11bf8293d8ff63bc2229a83dc",
+    "assets/icons/Users.svg": "01824f8e3f0fd8152511dbcdcce74dd7818ffa7ad1f34bea0e1a2b052a51b9ec",
+    "assets/icons/manifest.json": "270c915a7c31e369be7fb959c6592f36b62114aecdb67469eaf16e0fd1b2836e",
+    "assets/photos/pottery.jpg": "c3d060b5b9e7c8a2f0ae940a3cc7765acdf9613e61aed97d276f01170ba947f0",
+    "assets/photos/provenance.json": "89cdf7b27f1137efa4f7763c663360391caa42202a1e19188bf305a902f16fdd",
+    "design/typography.json": "534c3deed77d20d1d9839d0eceda9925e0cdb26b2f632ba652d29bb5e1909cee",
+    "design/component-plan.json": "fcf21ddfd2a85db29aa177997348d038948467375dabec30b26f6ba4d855f642",
+    "design/layout-contract.json": "1db73e32ab63f2cab5a18a91b1b17552e6949dd9212a0418d720172a86591009",
+    "classes.html": "d75fe6f4554dc14311e44890b8556b9ab333d2183487fac50882bead9576ffcc",
+    "sample-booking.html": "a1e37edb26107a99831abf44fa8bbdcdb9498903d5debb5719cdd4f829b2c989",
+    "sample-identity.html": "2b92c4b6a996ad1d2c72058f516d264f2188f705b897620258a319668a26a870",
+    "sample-media.html": "de07e7884f180fa58b46646c6da6ab43a91fb0835c3ff0adb486b163bd765ce3"
+  },
+  "results": [
+    {
+      "name": "malformed",
+      "status": "PASS"
+    },
+    {
+      "name": "empty-guest",
+      "status": "PASS"
+    },
+    {
+      "name": "nonstring-guest",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid-calendar",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid-slot",
+      "status": "PASS"
+    },
+    {
+      "name": "write-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "cancel-storage-failure",
+      "status": "PASS"
+    }
+  ]
+}

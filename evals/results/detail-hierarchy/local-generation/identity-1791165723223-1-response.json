@@ -1,0 +1,33 @@
+{
+  "binding": "34ce17b9b68ba9fff12fd1b8ec9c3581b7f61b250cd6701c8b18aa6dec9f3d57",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 124175,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-05T02:02:03.2231961Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".product-identity .eyebrow {\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #60606a;\\n  margin-bottom: 8px;\\n}\\n\\n.product-identity .title {\\n  font-size: 22px;\\n  font-weight: 700;\\n  line-height: 1.45;\\n  color: #202024;\\n  word-break: keep-all;\\n  overflow-wrap: break-word;\\n}\\n\\n.product-identity .price-row {\\n  margin-top: 12px;\\n}\\n\\n.product-identity .price {\\n  font-size: 24px;\\n  font-weight: 800;\\n  color: #202024;\\n}\\n\\n.product-identity .metadata {\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 16px;\\n  margin-top: 24px;\\n}\\n\\n.product-identity .meta-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 8px;\\n}\\n\\n.product-identity .meta-item img {\\n  width: 20px;\\n  height: 20px;\\n  display: block;\\n  object-fit: contain;\\n  color: #60606a;\\n}\\n\\n.product-identity .meta-item span {\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #60606a;\\n  white-space: nowrap;\\n}\\n\\n.product-identity .description {\\n  font-size: 15px;\\n  font-weight: 500;\\n  line-height: 1.75;\\n  color: #202024;\\n  margin-top: 20px;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 124173369000,
+  "load_duration": 4708300,
+  "prompt_eval_count": 9741,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 101861874000,
+  "eval_count": 436,
+  "eval_duration": 22255263000
+}
