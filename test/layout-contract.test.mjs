@@ -4,6 +4,18 @@ import { chromium } from 'playwright';
 import { inspectLayoutContract } from '../scripts/layout-contract.mjs';
 import { createServer } from 'node:http';
 
+test('mobile-only preview rejects expansion on a desktop viewport', async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined, headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+    await page.setContent('<main style="height:400px">Mobile screen</main>');
+    const contract = { rules: [{ id: 'mobile-scope', kind: 'maxWidth', subject: 'main', maximum: 390 }] };
+    assert.equal((await inspectLayoutContract(page, contract)).results[0].status, 'FAIL');
+    await page.locator('main').evaluate(e => { e.style.maxWidth = '390px'; e.style.margin = 'auto'; });
+    assert.equal((await inspectLayoutContract(page, contract)).results[0].status, 'PASS');
+  } finally { await browser.close(); }
+});
+
 test('declared surfaces, navigation and state hierarchy reject the flattened detail regression', async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined, headless: true });
   try {

@@ -43,7 +43,10 @@ export async function inspectLayoutContract(page, contract, options = {}) {
         if (observed.maximumInlineGroups > rule.maximum) throw new Error(`Too many semantic groups share a row: ${observed.maximumInlineGroups} > ${rule.maximum}`);
       } else {
         observed.subject = await box(rule.subject);
-        if (rule.kind === 'returnNavigation') {
+        if (rule.kind === 'maxWidth') {
+          if (!Number.isFinite(rule.maximum) || rule.maximum <= 0) throw new Error('Maximum rendered width must be positive');
+          if (observed.subject.width > rule.maximum + .5) throw new Error(`Screen exceeds declared mobile width: ${observed.subject.width} > ${rule.maximum}`);
+        } else if (rule.kind === 'returnNavigation') {
           if (typeof rule.destination !== 'string' || !/^[\w./-]+\.html$/.test(rule.destination) || rule.destination.startsWith('/') || rule.destination.includes('..')) throw new Error('Return navigation requires a declared local destination');
           observed.navigation = await page.locator(rule.subject).evaluate(element => ({ tag: element.tagName, href: element.getAttribute('href'), label: element.getAttribute('aria-label') || element.textContent.trim() }));
           if (observed.navigation.tag !== 'A' || observed.navigation.href !== rule.destination || !observed.navigation.label) throw new Error('Missing accessible return navigation with a real fallback destination');
