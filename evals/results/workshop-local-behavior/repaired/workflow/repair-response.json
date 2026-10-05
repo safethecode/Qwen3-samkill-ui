@@ -1,0 +1,16 @@
+{
+  "mode": "patches",
+  "unit": null,
+  "inputCharacters": 17296,
+  "maxOutputTokens": 8192,
+  "elapsedMs": 107739,
+  "model": "qwen3.6:35b-a3b-coding",
+  "done_reason": "stop",
+  "prompt_eval_count": 5700,
+  "prompt_eval_duration": 66221133000,
+  "load_duration": 17003085600,
+  "eval_count": 621,
+  "eval_duration": 24469125000,
+  "total_duration": 107731342100,
+  "content": "{\n  \"patches\": [\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"function showConfirmation() {\\n  $('#booking-form').hidden = true;\\n  $('#confirmation').hidden = false;\\n  $('#confirmation-details').textContent = `이름: ${state.guest} / 날짜: ${state.date} / 시간: ${state.slot} / 가격: 55,000원 / 인원: 1명`;\\n  $('#book').textContent = '예약 내용 확인하기';\\n  $('#cancel-booking').focus();\\n}\",\n      \"newString\": \"function showConfirmation() {\\n  $('#booking-form').hidden = true;\\n  $('#confirmation').hidden = false;\\n  $('#confirmation-details').textContent = `내 손으로 빚는 첫 번째 도자기 잔\\\\n이름: ${state.guest}\\\\n날짜: ${state.date}\\\\n시간: ${state.slot}\\\\n가격: 55,000원\\\\n인원: 1명`;\\n  $('#book').textContent = '예약 내용 확인하기';\\n  $('#cancel-booking').focus();\\n}\"\n    },\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"$('#book').addEventListener('click', () => {\\n  if (state.isBooked) return;\\n  $('#booking-dialog').showModal();\\n});\",\n      \"newString\": \"$('#book').addEventListener('click', () => {\\n  $('#booking-dialog').showModal();\\n});\"\n    },\n    {\n      \"path\": \"app.js\",\n      \"oldString\": \"function updateFavoriteUI() {\\n  const btn = $('#favorite');\\n  btn.setAttribute('aria-pressed', state.isFav);\\n  btn.setAttribute('aria-label', state.isFav ? '수업 찜 취소' : '수업 찜하기');\\n  const img = $('img', btn);\\n  if (state.isFav) {\\n    img.src = 'assets/icons/HeartFilled.svg';\\n  } else {\\n    img.src = 'assets/icons/Heart.svg';\\n  }\\n}\",\n      \"newString\": \"function updateFavoriteUI() {\\n  const btn = $('#favorite');\\n  btn.setAttribute('aria-pressed', state.isFav);\\n  btn.setAttribute('aria-label', state.isFav ? '수업 찜 취소' : '수업 찜하기');\\n  const img = $('img', btn);\\n  if (state.isFav) {\\n    img.style.filter = 'invert(30%) sepia(70%) saturate(2200%) hue-rotate(226deg)';\\n  } else {\\n    img.style.filter = '';\\n  }\\n}\"\n    }\n  ]\n}"
+}
