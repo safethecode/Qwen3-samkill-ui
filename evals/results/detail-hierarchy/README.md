@@ -1,5 +1,7 @@
 # Detail navigation, surfaces and booking hierarchy
 
+**Latest correction: mobile-only scope.** The earlier wide-screen two-column layout was an unauthorized host decision. The [current screen](mobile/source/index.html) remains a centered mobile canvas, at most390px, at all tested browser widths. Photo, identity, host and actions retain their vertical order. Desktop title/radius rules and contradictory component instructions were removed. [New captures](mobile/render/) and [wide-viewport scope checks](mobile/hierarchy/report.json) preserve source/harness bindings. This is a correction to host-supplied scope, not a new Qwen run; earlier local generation evidence below remains unchanged.
+
 Status: **reference parity remains unverified**. This study corrects specific user-reported defects; it does not establish consistent commercial quality.
 
 The [fresh Frip reference](reference.jpg) and [provenance](reference.json) show photo-led return navigation, white semantic regions separated by a gray canvas, and bounded secondary actions. Original CSS, exact font and hidden booking states were not retrieved. The modal changes are user-directed adaptations, not copied reference observations.

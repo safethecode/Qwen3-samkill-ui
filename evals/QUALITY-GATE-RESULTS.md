@@ -2,6 +2,8 @@
 
 ## Current status — 2026-10-05
 
+The user rejected the unrequested desktop adaptation. The latest detail screen is mobile-only at every window width; a maximum-width gate and viewport-independent vertical ordering catch that regression. AGENTS.md now requires the skill-first workflow, and the operating rules consolidate prior reference, decomposition, local-model attribution and validation failures.151 regression tests pass; the final instruction-binding change also passes12 focused tests. [Current mobile evidence](results/detail-hierarchy/mobile/hierarchy/report.json). Earlier desktop captures below are historical, not the current approved scope.
+
 A fresh Frip detail decomposition correction adds real return navigation, section surfaces, favorite affordance and booking-state hierarchy. The first correction was host-authored. A subsequent actual Ollama qwen3.6:35b-a3b-coding run generated three component styles in363673ms; two local bounded repairs corrected enlarged button overflow and a missing desktop title rule. Four viewport workflows and seven storage fault checks pass, and150 harness regressions pass. Fixed markup, shared layout and dialog integration remain host-assisted; this does not establish unattended reference parity. [Source-bound before/after, runtime and raw model evidence](results/detail-hierarchy/README.md).
 
 ### Earlier results

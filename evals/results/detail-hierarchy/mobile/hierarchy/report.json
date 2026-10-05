@@ -1,0 +1,3294 @@
+{
+  "status": "UNVERIFIED_VISUAL_PARITY",
+  "sourceHashes": {
+    "index.html": "d15d270836c87ff31ceedba8c5d0bb0d3f3bb6193a9f740a27742276116a98ca",
+    "styles.css": "97fb2bedc3e1be9731395c19cf4e1ddc5962e072d0cf6b4c403c58e1b7d311a2",
+    "app.js": "c9fa861188862dce66abeb086de2881a98c4fc0eaf04c69544430f19db0ee83f",
+    "DESIGN.md": "a9eaca9640d676097d382833f52d63a6dba0e7498710f229cdb1ef2ed6d9b1e9",
+    "REFERENCE.md": "5b3671212efb1a28c2462ae70827d0b8bf6225aa058395d6f4b7fa89bcadbc10",
+    "assets/fonts/METADATA.pb": "9b8b27c0dd1adbb0057d1fbe9534207ab3606114ace6755453d14668912471a1",
+    "assets/fonts/NotoSansKR.ttf": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+    "assets/fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "assets/icons/ArrowLeft.svg": "4ce3ba67c4491a9a014c043f352fd56d865e586b1d019bf9d9e7c789797a3672",
+    "assets/icons/ChevronRight.svg": "1db358b44dd0b76c26b8f0e81b3c36134a56bf2287acf197355c1c5419cbd75e",
+    "assets/icons/Clock.svg": "358bae4968a53af728317f105d9ba274e6a86b5fb186e2cad86515c01b6942cd",
+    "assets/icons/Heart.svg": "26421e91f4de871a545ed11defec7f59d7e6caea37f8da7cd14d3e046c1f4468",
+    "assets/icons/LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "assets/icons/MapPin.svg": "006d6b63bfa711de039a1e1128ee4b7749241aa11bf8293d8ff63bc2229a83dc",
+    "assets/icons/Users.svg": "01824f8e3f0fd8152511dbcdcce74dd7818ffa7ad1f34bea0e1a2b052a51b9ec",
+    "assets/icons/manifest.json": "270c915a7c31e369be7fb959c6592f36b62114aecdb67469eaf16e0fd1b2836e",
+    "assets/photos/pottery.jpg": "c3d060b5b9e7c8a2f0ae940a3cc7765acdf9613e61aed97d276f01170ba947f0",
+    "assets/photos/provenance.json": "89cdf7b27f1137efa4f7763c663360391caa42202a1e19188bf305a902f16fdd",
+    "design/typography.json": "534c3deed77d20d1d9839d0eceda9925e0cdb26b2f632ba652d29bb5e1909cee",
+    "design/component-plan.json": "cb4c143476b31a07fa834ed8c43537e82fa6d22d409dd1e878a4e15b621fdbb8",
+    "design/layout-contract.json": "3d365409cb631e609814f53fb8df2fa23be46d7db3b90771d5fc911a5043e81e",
+    "classes.html": "d75fe6f4554dc14311e44890b8556b9ab333d2183487fac50882bead9576ffcc",
+    "sample-booking.html": "a1e37edb26107a99831abf44fa8bbdcdb9498903d5debb5719cdd4f829b2c989",
+    "sample-identity.html": "2b92c4b6a996ad1d2c72058f516d264f2188f705b897620258a319668a26a870",
+    "sample-media.html": "de07e7884f180fa58b46646c6da6ab43a91fb0835c3ff0adb486b163bd765ce3"
+  },
+  "harnessHashes": {
+    "AGENTS.md": "7fdb8dcac1150b1a167757afc97d05307997beadc85d3790040e69b2882bb8d9",
+    "evals/service-cases.mjs": "32e9f476eae3539437bccad4892bfc839bb4ab12dc3e3842fb6c2a7c49d35e4e",
+    "package-lock.json": "97f0b672e3c84a57a0c8a3a291170929b80ef3025a88318aa99b7b4ad9cbdee6",
+    "scripts/asset-references.mjs": "669299f3a8b72b22648f4909d50a91d94c00af8eb444834c74d3cc075b892d5e",
+    "scripts/benchmark.mjs": "a97bfa6c6021884cfdb45ac631f853d115fc4245ae218dd6edcb3f68bab7f861",
+    "scripts/catalog-gate.mjs": "06f6817721e160682b34f96605f58a7780c9d907423676c2d9cbb8b6856e6495",
+    "scripts/catalog-plan.mjs": "f1cf03229d42e1f56887d3ecced5df8c1ff9da70bdffb7ff1b747e0c3178a2d8",
+    "scripts/catalog.mjs": "bdd1e96da8c9d42ab7e89b4de5f3bde67ba338d9ac25f2eef7607c2e997e8bc6",
+    "scripts/comments.mjs": "1f376069d9f134fe6b974d9611ec1e8ecbe7a3efcd1ed021a0c31434d713a118",
+    "scripts/component-plan.mjs": "43ba0f700481d86bcb96f5e3b1131a80558af20e5053023e6967476ec1faa6de",
+    "scripts/controls.mjs": "e63842a8286a6d1a317f95072df778a08ae6379a0053d7e353d6408e227e0740",
+    "scripts/design-checks.mjs": "b32ac2d270a0a6494c6d3e195348e481e02146d355df3de0147bd6349cf53f5c",
+    "scripts/dom-references.mjs": "f98202274d55fa641fdb94349fabbd7557ddee2c1a379a90a595eed22e41baf0",
+    "scripts/evaluate.mjs": "cc8381180b7225fbbdcff66cd620eae97433f26f654a91505c87f9daf82f00ef",
+    "scripts/feedback.mjs": "f681d661b20130f1246804eb465d0e45313fb8b96dd9a10e57c6a89392016c33",
+    "scripts/font-rendering.mjs": "875072cfa780146fb6304ef6176ccc081416b781ded20c6b8af76838d9cb39d4",
+    "scripts/generate-components.mjs": "98892a0a36c69a88b0a5fbd27adb4fb319c644f4e65fe83f101fca8f4e4cd9d2",
+    "scripts/generate-service.mjs": "e6bd1284a1d466535721c7d6373604f4db3413660a383436d6913dbe503254b9",
+    "scripts/generate.mjs": "04c2126929a1cf378898e9b57163ce79198c47c84228f3ef9d3ca130dee2eda0",
+    "scripts/harness-binding.mjs": "7c4489059ab34d19721d7f9bfe07e8aa6c05e13deed09e7176e86b3f45c48501",
+    "scripts/icon-assets.mjs": "988a013be916847143e2242b34f07101a9c433826d3b80f4562db10c333a4791",
+    "scripts/icon-check.mjs": "dc7c96dcf3e2e7198d04ac9380d73017f12363e9bea792070a864e24a5ab4b80",
+    "scripts/icons.mjs": "105ad7cf37f100e0e922bbe086bbd5eb40e8e0389860fa75edbceefeaf58a679",
+    "scripts/inference-http.mjs": "bb410beb0fdbf74888567dbdc489198bf66490231cae92ff2dae3877ebefa52c",
+    "scripts/inference-options.mjs": "5554438d5a454be997f1b24cadf666a0a4c6fb6990fc095c04cefc03bcd664f3",
+    "scripts/iterate.mjs": "0396f6eaf1bca6114fba1d56684c1eabcc2c845820e80249ffd5ca37f588ec4f",
+    "scripts/label-check.mjs": "ef1ad24758761e19d108de19a720f1e0510ebd203a78edd9a0b01e08218e3f6d",
+    "scripts/layout-contract.mjs": "5f426308185ee0564e617a30e398410a4fd0845dd7e33fd4cf8135525bdf29dd",
+    "scripts/local-font.mjs": "b3aa5c07856bf905ad1d34d7f55d58ae38a4fe6cf995e524ad2e3cb834c41a9b",
+    "scripts/media-visibility.mjs": "b30e3221e77ab64b58346ffd3f202a33d3d06df92663e99ec65f4a87a923480e",
+    "scripts/owned-rollback.mjs": "e7ae6ea4ba450f14a621dfe5e4c958e7ff619e33dd7f16332e6a776e937e879e",
+    "scripts/patches.mjs": "69e4e775435a4475772ab927912c1af87fc0e9600ca5c1966ff713b3f8bed948",
+    "scripts/process.mjs": "581bbc80176812e90a13b43e1957a5b2c94f92ddd64956b58e9ba9b09049d817",
+    "scripts/progress.mjs": "b4521023cf4fa5ca61350365db23b9222234d13aa5a971a2bcce920a3062d754",
+    "scripts/quality-loop.mjs": "4d8168ba213788ab413be20d3574c5cf5eaa8516031b57267a4d95ff30ec001b",
+    "scripts/quality-policy.mjs": "29fe2de8114a08a610ec2c7061f8a69a7e712ecf796d5c5a163cc37602fb9b35",
+    "scripts/quality.mjs": "810669c1cd79d72e4d4739f94756aff56958da4217689e04c2a44f6571a86724",
+    "scripts/reference-assets.mjs": "647cf0c06f2715817b181eefb907a0815ef62cc39a8b77ce23938c221da5831e",
+    "scripts/reference-capture.mjs": "e9f80432bc4865a4775a1deefd5b7b4c9165c143aa6a68f2adbd189dfc423157",
+    "scripts/refine.mjs": "3f233369b6ac5c353ed4e971672a2066aaba8e564397f79f7256373e3df9b52c",
+    "scripts/repair-component.mjs": "3ea05fb6b0deedd20dabf7a7cbff3d13abd9bda6699aa2fd37b47f10930eafea",
+    "scripts/repair-units.mjs": "659bc56e101e358adcfd4cf96b69cbc2fcf506d228c56db6da58cb30a70b58a6",
+    "scripts/repair.mjs": "566a74a4355b98fabe994c9ffa3323c28390c11d611b99a01415cc87a25841b8",
+    "scripts/replacements.mjs": "ef0d1207a43697ef603d9889319f81edd1b88686376a01dfdc564ef4190cb46f",
+    "scripts/review-findings.mjs": "2050e8b80eeb933d813f64cbeef0d873aab8c9fb9e5d2474309660fed4af26c6",
+    "scripts/run-state.mjs": "a5555d9729d6a5ef53408f490112154e35249d726463de2acf28efed316f205c",
+    "scripts/sampling.mjs": "7cefe8e0f243ca5b8d9ef60d93aaa35ed1e61913d9fcb25112740abb2f8f69c8",
+    "scripts/service-benchmark.mjs": "d72bc81fe06a87994d3d3f7f703f68839867f98b2f82c6483ce77ce4cb3e81d3",
+    "scripts/service-evaluate.mjs": "7f4e21694ea7ece7ba26724aad72c45840fcb8cbcd8bcdd6336b286bfe601350",
+    "scripts/service-gallery.mjs": "78621a605a0b9869a12fb4e34f243a5c5ad3407db0d1f8a298e823f59cabcf74",
+    "scripts/service-interface.mjs": "b0cc323f9bf6e1f0b47ae24495ae14c29c57645ca49491450980a7ca99bd5569",
+    "scripts/service-progress.mjs": "4f1d99b8a23ea26ed984d07983d9a542d555acf6c7907c07da66df6b9815bb34",
+    "scripts/service-repair.mjs": "08ddc619c826136dd1c25f986eec6608e86980cadc6f3297f75e9b874b4ff4e4",
+    "scripts/service-resume.mjs": "1956218819ba5d2cc0263cc11c71d911a19c5f871e2194bebf8a7f45ded498d2",
+    "scripts/service-revalidate.mjs": "bba83ba00a9e8bf53ee1133e3c7f2da44f8bf4b50bd34ae66908edb69bc231c7",
+    "scripts/service-stages.mjs": "3a9fb2ffb89e201511e14680655003b4746dc9d0f477454d48f30f168b278bc5",
+    "scripts/setup.mjs": "8a9e96c393a64bf7bfb28462945b537b277725bc0b0d951b3dfed4c370a4e363",
+    "scripts/skill-context.mjs": "2a3559cc6c616a3e95a6f603fa91acf55f7eff9c3d999ca3e9dc0067d49840b3",
+    "scripts/source-binding.mjs": "2f7062615198054611124c97531c983ecff7e440962309d035c40935a6617da7",
+    "scripts/stacked-content.mjs": "33d78907983e41a23e9dbabd3fc162bea16564f9ed563f0989964cdb8bffae34",
+    "scripts/text-stress.mjs": "dd55269f9c2f49f65914ac0b188d4b4de2a35abe9b793ea7966cc804d3c54d37",
+    "scripts/transaction.mjs": "fa9bf159634f106d8d68410dcdeb2e9135893ee00e096ae2b48736968bc801de",
+    "scripts/typography-check.mjs": "b89a5f727df9fc45b197f829e524a1c384c960a9ea1d0ea92a1085aabc11c0d4",
+    "scripts/typography.mjs": "51d6b7cc8fcf6ee615569ce31134c53b99aceeac533f94880a1111e6c12d65df",
+    "scripts/visibility.mjs": "fa748f7755f974823270b34f3e9a94e8d9913a4a8e22a631d561a0ac76f4f9d5",
+    "scripts/vision-review.mjs": "44d988922e8468b8086f62d6900747f0a1d27315f0ae07658848ceb4df239ae8",
+    "scripts/workflow-state.mjs": "d2cbbdcc14238eedd7c91b805cca0eade24cc38f4c0b9c23001c065494e15a56",
+    "skills/qwen-samkill-ui/SKILL.md": "9a7833a37ae15852951ee532e2b099a381aa43f6c25e3a3048bac59e23dad7cc",
+    "skills/qwen-samkill-ui/references/decomposed-layout.md": "4a0329718cd48382851346f821a4eb931d1139babcf6e5cdb40856cec91e36fb",
+    "skills/qwen-samkill-ui/references/operating-rules.md": "c0b10e9e8f3936c9c13539c81b19732024e2f68125a89d1e0aefc9147db2cab9",
+    "skills/qwen-samkill-ui/references/service-contracts.md": "1a14ea097d5d7deeecb554b04c90441ca986fa50b1abf11a3aeb94f1469cc491",
+    "skills/qwen-samkill-ui/references/upstream/design-md/guide.md": "06e3ed239bfd26723e5a2ca8b2dd049e50775e952243db803051860ae00dee76",
+    "skills/qwen-samkill-ui/references/upstream/design-md/references/document-contract.md": "c62be24d1d705e62db90f2cdeb252715f13dec72165024719680a2ab948a8d23",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/guide.md": "fc50aab6974a5db145bb80d6ad1ee791555a412063fa8eb01f3ef84776f65336",
+    "skills/qwen-samkill-ui/references/upstream/onboarding-flow/references/flow-contract.md": "ab0822248dec22aa6a86be27fad7c7f0c80ac89fe57b0422164a2bbe57e9c7e8",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/guide.md": "de50f6e71e3f8d239d0114f54ddfbd6c06a4d96722517807ba4c55ce45287ed2",
+    "skills/qwen-samkill-ui/references/upstream/reference-decompose/references/element-contract.md": "6db323f638ffdb7706cf61c5fcb7ff92ca0204212f821976cfee98bb785a510c",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/guide.md": "1b01f8c49601e2619604964a6587aa15aa20cf26ec575e73b6e6d1cbdd0bc898",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/change-review.md": "835a677ff3307b05eda95c4d9aae578fe21f6040fed786d86867d4a2de1537eb",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/design-gate.md": "585e441560e7a281310be450bdfd49bc910c9a158e1d1b555650e3b11fabe741",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/deslop-triage.md": "19b4b368b6381214ebcf43c2e8c13482482a9b80ef8e7b87656066bc67080d69",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/failure-catalog.json": "82e459f06fb4113a1c2caa89ac2c28e95c29c186a0190bb8bf0c2a5caf74329f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/feedback-regression.md": "dbb395f3bb69064bdd27d5530161176f02c91f72eb52059312d8ef0d98070e9b",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/review-criteria.md": "274704113e7f9cc499db6200bfe7052d8f3d6463cd6a35cc9ad55fa921f67b6f",
+    "skills/qwen-samkill-ui/references/upstream/reference-review/references/state-stress.md": "5dbdc14b7e7d86a18f98a38f420ac5cf710575168f7b2668bed9db60908170b5",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/guide.md": "bf7c6586804d944858d5e4bab3692455b1e5922f73678be68a8cf5f85e85ab2d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/anti-slop-code.md": "3dee460457dba58eeb7e5e9b0bd70ab91987aad85ef1ea389bf92e10d1b2a130",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/application-format.md": "0766ac025e38b30fbe6288b3f46deddffb8616eb8488041d86aec21add7a875a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/dashboard.md": "a2e8952a72052e87d3cece16c2a8514d7fa033f36642e76d8d9de66fad2c91b0",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-guardrails.md": "dcdc36114b7332cef376c4b87d77524df064877d76f5607502f4ad65ae9beec9",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/design-tokens.md": "46403d3dae981ce630c9b4dbc1b3876c2095faae48d3e7fa206aa2cd3f666f5a",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/icon-controls.md": "c20876adeda380825867f3fd7ffa1381125623756c865d2bc1ace07a9d39692e",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/mobile.md": "8d3b261b27f5523b713a68fa445b37603d72eb0dc12887bd55fa16db4f9d6e03",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/product-reasoning.md": "947cbbbe96401e2072c723c6b8ebf13c33621ea663f6bc8a66ef149638218ac3",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/reference-synthesis.md": "f61501b8959c7281912fe61bd5bb565add6a1e430db1124958606137cdcca55d",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/typography.md": "d1003eda3338b973d1399e492bf1adea0e8eced6c054fb65cf0de480b88431d7",
+    "skills/qwen-samkill-ui/references/upstream/reference-to-ui/references/ui-composition.md": "8294a96f3e12501e25de75c395da5362359ba9697dfd76a9a1e7947650e43a8d",
+    "skills/qwen-samkill-ui/references/upstream/samkill-ui/guide.md": "4d890c36c6cebde2f5cf866c4356bee4e83975e8491339c7089a9da7572a876f",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/guide.md": "e69173ad106db14f3cdd9a319d9dfa5353db7065476e8a9c8503768b2220f209",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/component-anatomy.md": "b7388c780937fd607d649cd96ab433bff3f0355fd1b30ba7f6c4e9f61d983106",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/observation-format.md": "73d42bbbec0316530391f72983b76572eec0cda0d2844553cf1a5e1114ec1fe1",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/research-plan.md": "85f3d74be7cc8b16ac9bb9ab99ed5ae66886f8da63874fe27b787a934c2de0cf",
+    "skills/qwen-samkill-ui/references/upstream/uibowl-research/references/search-examples.md": "6890636ac9f3dbc68904e39ef842d4e2d27874f025a1b86838f2700776ddfd81",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/guide.md": "2352e5db7e12be3f00eb32da92425b16611278519760f6bb6c24e6263ebb719b",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/copy-contract.md": "4f31283c5563ee7c9b883009a8843a01c490f03d586f9d18a15085285860f45f",
+    "skills/qwen-samkill-ui/references/upstream/ux-copy/references/korean-writing.md": "7672b1baddd7fc11ec7fc518f89f41558cb2606526030e8edcdbcb588ff47b2f"
+  },
+  "contractSha256": "3d365409cb631e609814f53fb8df2fa23be46d7db3b90771d5fc911a5043e81e",
+  "captureSha256": "2363342223d3e402658343e061a006ca63aa6a290b4d3f30d6c7ca5360da4f05",
+  "results": [
+    {
+      "width": 296,
+      "states": {
+        "initial": {
+          "results": [
+            {
+              "id": "detail-return",
+              "kind": "returnNavigation",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 44,
+                  "height": 44
+                },
+                "navigation": {
+                  "tag": "A",
+                  "href": "classes.html",
+                  "label": "수업 목록으로 돌아가기"
+                }
+              }
+            },
+            {
+              "id": "no-invented-brand-header",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "no-divider-bars",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "section-surface-0",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 296,
+                  "width": 296,
+                  "height": 365.53125
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-1",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 673.53125,
+                  "width": 296,
+                  "height": 129.96875
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-2",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 815.5,
+                  "width": 296,
+                  "height": 156.78125
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "favorite-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 20,
+                  "y": 841.5,
+                  "width": 48,
+                  "height": 48
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(242, 242, 245)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "host-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 673.53125,
+                  "width": 296,
+                  "height": 129.96875
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 296,
+                  "width": 296,
+                  "height": 365.53125
+                }
+              }
+            },
+            {
+              "id": "action-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 815.5,
+                  "width": 296,
+                  "height": 156.78125
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 673.53125,
+                  "width": 296,
+                  "height": 129.96875
+                }
+              }
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "kind": "maxWidth",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 296,
+                  "height": 972.28125
+                }
+              }
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 296,
+                  "width": 296,
+                  "height": 676.28125
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 296,
+                  "height": 296
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "form": {
+          "results": [
+            {
+              "id": "form-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 194.3125,
+                  "width": 224,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 56,
+                  "y": 299.5,
+                  "width": 184,
+                  "height": 52.78125
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 16,
+                  "weight": 700
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "success": {
+          "results": [
+            {
+              "id": "success-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 252.15625,
+                  "width": 224,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 56,
+                  "y": 416.34375,
+                  "width": 184,
+                  "height": 199.5
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 15,
+                  "weight": 500
+                }
+              }
+            },
+            {
+              "id": "success-summary-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 365.953125,
+                  "width": 224,
+                  "height": 269.890625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(244, 244, 246)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    20,
+                    20,
+                    20,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        }
+      },
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ],
+      "successStress": [
+        {
+          "mode": "text-200",
+          "viewport": 296,
+          "scrollWidth": 296,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [
+            {
+              "tag": "DIALOG",
+              "id": "booking-dialog",
+              "class": "",
+              "text": "예약이 완료되었어요닫기선택한 수업내 손으로 빚는 첫 번째 도자기 잔55,000원 · 90분 · 1명예약자 이름방문일예약 시간시간을 선택하세요오전 10:00오후 2:00오후 6:00",
+              "width": 264,
+              "scrollWidth": 264,
+              "height": 868,
+              "scrollHeight": 1320,
+              "overflow": "auto"
+            }
+          ],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        },
+        {
+          "mode": "text-spacing",
+          "viewport": 296,
+          "scrollWidth": 296,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "states": {
+        "initial": {
+          "results": [
+            {
+              "id": "detail-return",
+              "kind": "returnNavigation",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 44,
+                  "height": 44
+                },
+                "navigation": {
+                  "tag": "A",
+                  "href": "classes.html",
+                  "label": "수업 목록으로 돌아가기"
+                }
+              }
+            },
+            {
+              "id": "no-invented-brand-header",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "no-divider-bars",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "section-surface-0",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 320,
+                  "width": 320,
+                  "height": 329.53125
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-1",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 661.53125,
+                  "width": 320,
+                  "height": 129.96875
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-2",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 803.5,
+                  "width": 320,
+                  "height": 134.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "favorite-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 20,
+                  "y": 829.5,
+                  "width": 48,
+                  "height": 48
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(242, 242, 245)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "host-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 661.53125,
+                  "width": 320,
+                  "height": 129.96875
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 320,
+                  "width": 320,
+                  "height": 329.53125
+                }
+              }
+            },
+            {
+              "id": "action-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 803.5,
+                  "width": 320,
+                  "height": 134.390625
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 661.53125,
+                  "width": 320,
+                  "height": 129.96875
+                }
+              }
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "kind": "maxWidth",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 320,
+                  "height": 937.890625
+                }
+              }
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 320,
+                  "width": 320,
+                  "height": 617.890625
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 320,
+                  "height": 320
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "form": {
+          "results": [
+            {
+              "id": "form-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 159.71875,
+                  "width": 186.234375,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 56,
+                  "y": 274.109375,
+                  "width": 208,
+                  "height": 52.78125
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 16,
+                  "weight": 700
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "success": {
+          "results": [
+            {
+              "id": "success-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 231.75,
+                  "width": 186.234375,
+                  "height": 69.59375
+                },
+                "reference": {
+                  "x": 56,
+                  "y": 405.234375,
+                  "width": 208,
+                  "height": 171
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 15,
+                  "weight": 500
+                }
+              }
+            },
+            {
+              "id": "success-summary-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 36,
+                  "y": 354.84375,
+                  "width": 248,
+                  "height": 241.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(244, 244, 246)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    20,
+                    20,
+                    20,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        }
+      },
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ],
+      "successStress": [
+        {
+          "mode": "text-200",
+          "viewport": 320,
+          "scrollWidth": 320,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [
+            {
+              "tag": "DIALOG",
+              "id": "booking-dialog",
+              "class": "",
+              "text": "예약이 완료되었어요닫기선택한 수업내 손으로 빚는 첫 번째 도자기 잔55,000원 · 90분 · 1명예약자 이름방문일예약 시간시간을 선택하세요오전 10:00오후 2:00오후 6:00",
+              "width": 288,
+              "scrollWidth": 288,
+              "height": 868,
+              "scrollHeight": 1212,
+              "overflow": "auto"
+            }
+          ],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        },
+        {
+          "mode": "text-spacing",
+          "viewport": 320,
+          "scrollWidth": 320,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "states": {
+        "initial": {
+          "results": [
+            {
+              "id": "detail-return",
+              "kind": "returnNavigation",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 44,
+                  "height": 44
+                },
+                "navigation": {
+                  "tag": "A",
+                  "href": "classes.html",
+                  "label": "수업 목록으로 돌아가기"
+                }
+              }
+            },
+            {
+              "id": "no-invented-brand-header",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "no-divider-bars",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "section-surface-0",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 390,
+                  "width": 390,
+                  "height": 271.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-1",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-2",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 815.359375,
+                  "width": 390,
+                  "height": 134.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "favorite-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 20,
+                  "y": 841.359375,
+                  "width": 48,
+                  "height": 48
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(242, 242, 245)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "host-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 390,
+                  "width": 390,
+                  "height": 271.390625
+                }
+              }
+            },
+            {
+              "id": "action-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 815.359375,
+                  "width": 390,
+                  "height": 134.390625
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                }
+              }
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "kind": "maxWidth",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 949.75
+                }
+              }
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 0,
+                  "y": 390,
+                  "width": 390,
+                  "height": 559.75
+                },
+                "reference": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 390
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "form": {
+          "results": [
+            {
+              "id": "form-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 44,
+                  "y": 172.90625,
+                  "width": 240.234375,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 64,
+                  "y": 287.296875,
+                  "width": 262,
+                  "height": 26.390625
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 16,
+                  "weight": 700
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "success": {
+          "results": [
+            {
+              "id": "success-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 44,
+                  "y": 244.546875,
+                  "width": 240.234375,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 64,
+                  "y": 392.4375,
+                  "width": 262,
+                  "height": 171
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 15,
+                  "weight": 500
+                }
+              }
+            },
+            {
+              "id": "success-summary-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 44,
+                  "y": 342.046875,
+                  "width": 302,
+                  "height": 241.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(244, 244, 246)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    20,
+                    20,
+                    20,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        }
+      },
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ],
+      "successStress": [
+        {
+          "mode": "text-200",
+          "viewport": 390,
+          "scrollWidth": 390,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [
+            {
+              "tag": "DIALOG",
+              "id": "booking-dialog",
+              "class": "",
+              "text": "예약이 완료되었어요닫기선택한 수업내 손으로 빚는 첫 번째 도자기 잔55,000원 · 90분 · 1명예약자 이름방문일예약 시간시간을 선택하세요오전 10:00오후 2:00오후 6:00",
+              "width": 358,
+              "scrollWidth": 358,
+              "height": 868,
+              "scrollHeight": 987,
+              "overflow": "auto"
+            }
+          ],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        },
+        {
+          "mode": "text-spacing",
+          "viewport": 390,
+          "scrollWidth": 390,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "states": {
+        "initial": {
+          "results": [
+            {
+              "id": "detail-return",
+              "kind": "returnNavigation",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 541,
+                  "y": 16,
+                  "width": 44,
+                  "height": 44
+                },
+                "navigation": {
+                  "tag": "A",
+                  "href": "classes.html",
+                  "label": "수업 목록으로 돌아가기"
+                }
+              }
+            },
+            {
+              "id": "no-invented-brand-header",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "no-divider-bars",
+              "kind": "absent",
+              "status": "PASS",
+              "observed": {
+                "count": 0
+              }
+            },
+            {
+              "id": "section-surface-0",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 390,
+                  "width": 390,
+                  "height": 271.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-1",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "section-surface-2",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 815.359375,
+                  "width": 390,
+                  "height": 134.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(255, 255, 255)",
+                  "containerColor": "rgb(243, 243, 245)",
+                  "padding": [
+                    24,
+                    20,
+                    24,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "favorite-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 545,
+                  "y": 841.359375,
+                  "width": 48,
+                  "height": 48
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(242, 242, 245)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            },
+            {
+              "id": "host-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                },
+                "reference": {
+                  "x": 525,
+                  "y": 390,
+                  "width": 390,
+                  "height": 271.390625
+                }
+              }
+            },
+            {
+              "id": "action-section-gap",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 815.359375,
+                  "width": 390,
+                  "height": 134.390625
+                },
+                "reference": {
+                  "x": 525,
+                  "y": 673.390625,
+                  "width": 390,
+                  "height": 129.96875
+                }
+              }
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "kind": "maxWidth",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 0,
+                  "width": 390,
+                  "height": 949.75
+                }
+              }
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "kind": "below",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 525,
+                  "y": 390,
+                  "width": 390,
+                  "height": 559.75
+                },
+                "reference": {
+                  "x": 525,
+                  "y": 0,
+                  "width": 390,
+                  "height": 390
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "form": {
+          "results": [
+            {
+              "id": "form-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 569,
+                  "y": 172.90625,
+                  "width": 240.234375,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 589,
+                  "y": 287.296875,
+                  "width": 262,
+                  "height": 26.390625
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 16,
+                  "weight": 700
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-product-secondary",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "success-summary-surface",
+                  "states": [
+                    "success"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-product-secondary",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "success-summary-surface",
+              "states": [
+                "success"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        },
+        "success": {
+          "results": [
+            {
+              "id": "success-product-secondary",
+              "kind": "typeHierarchy",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 569,
+                  "y": 244.546875,
+                  "width": 240.234375,
+                  "height": 34.796875
+                },
+                "reference": {
+                  "x": 589,
+                  "y": 392.4375,
+                  "width": 262,
+                  "height": 171
+                },
+                "primary": {
+                  "size": 24,
+                  "weight": 700
+                },
+                "secondary": {
+                  "size": 15,
+                  "weight": 500
+                }
+              }
+            },
+            {
+              "id": "success-summary-surface",
+              "kind": "surface",
+              "status": "PASS",
+              "observed": {
+                "subject": {
+                  "x": 569,
+                  "y": 342.046875,
+                  "width": 302,
+                  "height": 241.390625
+                },
+                "surface": {
+                  "owned": true,
+                  "color": "rgb(244, 244, 246)",
+                  "containerColor": "rgb(255, 255, 255)",
+                  "padding": [
+                    20,
+                    20,
+                    20,
+                    20
+                  ],
+                  "horizontalBorders": 0,
+                  "separators": 0
+                }
+              }
+            }
+          ],
+          "issues": [
+            {
+              "status": "UNVERIFIED",
+              "problem": "Declared state relations still require their own state captures",
+              "rules": [
+                {
+                  "id": "detail-return",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-invented-brand-header",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "no-divider-bars",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-0",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-1",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "section-surface-2",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "favorite-surface",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "host-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "action-section-gap",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "form-product-secondary",
+                  "states": [
+                    "form"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-width-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                },
+                {
+                  "id": "mobile-vertical-order-all-viewports",
+                  "states": [
+                    "initial"
+                  ],
+                  "status": "UNVERIFIED"
+                }
+              ]
+            }
+          ],
+          "pendingStates": [
+            {
+              "id": "detail-return",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-invented-brand-header",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "no-divider-bars",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-0",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-1",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "section-surface-2",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "favorite-surface",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "host-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "action-section-gap",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "form-product-secondary",
+              "states": [
+                "form"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-width-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            },
+            {
+              "id": "mobile-vertical-order-all-viewports",
+              "states": [
+                "initial"
+              ],
+              "status": "UNVERIFIED"
+            }
+          ],
+          "scope": "Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships."
+        }
+      },
+      "checks": [
+        {
+          "name": "direct-entry return and list-detail-return navigation",
+          "status": "PASS"
+        },
+        {
+          "name": "all three time options retained before and after input",
+          "status": "PASS"
+        },
+        {
+          "name": "completion title is primary and stale product summary is hidden",
+          "status": "PASS"
+        }
+      ],
+      "successStress": [
+        {
+          "mode": "text-200",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [
+            {
+              "tag": "DIALOG",
+              "id": "booking-dialog",
+              "class": "",
+              "text": "예약이 완료되었어요닫기선택한 수업내 손으로 빚는 첫 번째 도자기 잔55,000원 · 90분 · 1명예약자 이름방문일예약 시간시간을 선택하세요오전 10:00오후 2:00오후 6:00",
+              "width": 358,
+              "scrollWidth": 358,
+              "height": 868,
+              "scrollHeight": 987,
+              "overflow": "auto"
+            }
+          ],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        },
+        {
+          "mode": "text-spacing",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "overflowPx": 0,
+          "flexPressure": [],
+          "gridPressure": [],
+          "clippedByAncestor": [],
+          "overlappingLines": [],
+          "controlTextOverflow": [],
+          "outsideViewport": [],
+          "clippingCandidates": [],
+          "visual": "UNVERIFIED",
+          "method": "Chromium computed-font 200% enlargement or separate text-spacing override; not real-device zoom. Clipping candidates need visual review."
+        }
+      ]
+    }
+  ]
+}

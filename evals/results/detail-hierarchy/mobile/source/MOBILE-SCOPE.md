@@ -1,0 +1,1 @@
+The prior desktop layout was an unauthorized host design decision. It is removed from shared CSS, component prompts and the current layout contract. Previous local evidence is preserved unchanged in ../local. No fresh model generation is claimed for this scope correction.

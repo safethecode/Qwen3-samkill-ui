@@ -1,0 +1,82 @@
+{
+  "reference": {
+    "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+    "screenId": "clvf09i14002xlc08apd72z2y",
+    "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+    "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8",
+    "retrievedAtUtc": "2026-10-05T01:43:55.6811608Z",
+    "tool": "search_ui_patterns",
+    "arguments": {
+      "query": "상세정보",
+      "app_name": "프립",
+      "limit": 3
+    },
+    "status": "inspected",
+    "width": 296,
+    "region": "Full native mobile product-detail preview",
+    "unknowns": [
+      "Original font identity and CSS",
+      "Desktop reference",
+      "Hidden states"
+    ],
+    "observations": [
+      "Large square photographic media first",
+      "Left aligned title and price below photograph",
+      "Compact host block",
+      "Primary purple action in separate action region"
+    ],
+    "adaptation": "Independent pottery service. Licensed substitute photo, local Noto Sans KR and Lucide assets. Desktop split layout is host decision, not observed reference.",
+    "latestInspection": {
+      "scope": "Native representative JPEG preview; original CSS and full-resolution image not retrieved",
+      "previewSha256": "0fa0d1f2cb50cfc86b9b18be417f88fdf5faf72e18c58c6ceb9b90219857fde8",
+      "ui_url": "https://uibowl.io/name/%ED%94%84%EB%A6%BD?patterns=%EC%83%81%EC%84%B8%EC%A0%95%EB%B3%B4%20%28PDP%29",
+      "tool": "search_ui_patterns",
+      "retrievedAtUtc": "2026-10-04T13:06:07.7633191Z",
+      "screenId": "clvf09i14002xlc08apd72z2y",
+      "arguments": {
+        "limit": 3,
+        "query": "상세정보",
+        "app_name": "프립"
+      }
+    }
+  },
+  "shared": "Detail screen. No brand header. Actual back link on photo returns to classes.html. White product, host and action surfaces separated by gray canvas; no decorative divider bars. Preserve declared layout relations. No demo notices in visible UI. Host supplied semantic HTML/shared layout; model supplies component CSS. This static stage does not implement booking dialog behavior. MOBILE-ONLY: same vertical mobile layout at every browser width. No desktop adaptation, columns, larger desktop type or alternate navigation.",
+  "sharedCss": "*{box-sizing:border-box}body{margin:0;color:#202024;background:#f3f3f5;font-family:\"Noto Sans KR\",sans-serif;font-weight:500;max-width:390px;margin:0 auto}button,input,select{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}p,h1,h2,h3{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #5146d7;outline-offset:4px}.product{display:block;margin:0;padding:0;width:100%}.details{min-width:0}.media-navigation{position:relative;min-width:0}.detail-navigation{position:absolute;z-index:1;left:16px;top:16px}#back{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgb(255 255 255 / .94);box-shadow:0 2px 12px rgb(0 0 0 / .08)}.product-identity{background:white;padding:28px}#booking-layout{padding-top:12px}.booking-host,.booking-surface{background:#fff;padding:24px 28px}.booking-surface{margin-top:12px}#booking-actions{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px}.section-label{font-size:14px;font-weight:500;line-height:1.6;color:#60606a;margin-bottom:8px}@media(max-width:700px){.product{display:block;margin:0;padding:0;width:100%}.details{padding:0}.product-identity{padding:24px 20px}.booking-host,.booking-surface{padding:24px 20px}}\n.product-identity,.booking-host,.booking-surface{padding:24px 20px}dialog{width:358px;max-width:calc(100% - 32px)}.class-list{max-width:390px;margin:24px auto}\n",
+  "assembly": "<main class=\"product\"><div class=\"media-navigation\"><nav class=\"detail-navigation\" aria-label=\"상세 페이지 탐색\"><a id=\"back\" href=\"classes.html\" aria-label=\"수업 목록으로 돌아가기\"><img src=\"assets/icons/ArrowLeft.svg\" width=\"24\" height=\"24\" alt=\"\"></a></nav>{{media}}</div><div class=\"details\">{{identity}}{{booking}}</div></main>",
+  "elements": [
+    {
+      "id": "media",
+      "html": "<figure class=\"product-media\" data-ui-unit=\"media\"><img src=\"assets/photos/pottery.jpg\" alt=\"물레 위 흙을 손으로 빚는 도자기 작업\"></figure>",
+      "prompt": "Observed square photo-led mobile detail. Keep the supplied photo square with width100%, aspect-ratio1/1, object-fit cover and object-position44% center. Figure margin0. No mobile radius; No desktop variant. Parent owns overlay back navigation; do not style it.",
+      "assets": [
+        "assets/photos/pottery.jpg"
+      ],
+      "sample": "<main class=\"product\"><div class=\"media-navigation\"><nav class=\"detail-navigation\" aria-label=\"상세 페이지 탐색\"><a id=\"back\" href=\"classes.html\" aria-label=\"수업 목록으로 돌아가기\"><img src=\"assets/icons/ArrowLeft.svg\" width=\"24\" height=\"24\" alt=\"\"></a></nav>{{media}}</div><div class=\"details\"></div></main>"
+    },
+    {
+      "id": "identity",
+      "html": "<section data-ui-unit=\"identity\" class=\"product-identity\">\n  <div class=\"eyebrow\">도자기 · 입문</div>\n  <h1 class=\"title\">내 손으로 빚는 첫 번째 도자기 잔</h1>\n  <div class=\"price-row\">\n    <span class=\"price\">55,000원</span>\n  </div>\n  <div class=\"metadata\">\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Clock.svg\" alt=\"\" class=\"icon-clock\">\n      <span>90분</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/Users.svg\" alt=\"\" class=\"icon-users\">\n      <span>최대6명</span>\n    </div>\n    <div class=\"meta-item\">\n      <img src=\"assets/icons/MapPin.svg\" alt=\"\" class=\"icon-map-pin\">\n      <span>서울·연남동</span>\n    </div>\n  </div>\n  <p class=\"description\">\n    흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 수업에서 나만의 찻잔을 천천히 완성해 보세요.\n  </p>\n</section>",
+      "prompt": "Style product facts inside the white identity surface already owned by assembly; do not override its padding/background. Eyebrow14px500, margin-bottom8; title22px700 line-height1.45 (at all viewport widths) keep-all with emergency wrap; price24px800 margin-top12px. Metadata wrap flex gap16px, each icon20px with8pxgap, text14px500. Description15px500 line-height1.75 margin-top20px. Metadata margin-top24px. Price remains separate above actions. Do not set fixed heights.",
+      "assets": [
+        "assets/icons/Clock.svg",
+        "assets/icons/Users.svg",
+        "assets/icons/MapPin.svg"
+      ],
+      "sample": "<main class=\"product\"><div class=\"media-navigation\"><nav class=\"detail-navigation\" aria-label=\"상세 페이지 탐색\"><a id=\"back\" href=\"classes.html\" aria-label=\"수업 목록으로 돌아가기\"><img src=\"assets/icons/ArrowLeft.svg\" width=\"24\" height=\"24\" alt=\"\"></a></nav></div><div class=\"details\">{{identity}}</div></main>"
+    },
+    {
+      "id": "booking",
+      "html": "<section data-ui-unit=\"booking\" id=\"booking-layout\">\n  <section class=\"booking-host\" aria-labelledby=\"host-title\"><p class=\"section-label\">함께할 호스트</p>\n    <h2 id=\"host-title\" class=\"booking-host-title\">틈 도자기 스튜디오</h2>\n    <p class=\"booking-host-subtitle\">재료와 도구 포함 · 완성품 소성 후 수령</p>\n  </section><div class=\"booking-surface\">\n  <div class=\"booking-action-row\" id=\"booking-actions\">\n    <button id=\"favorite\" class=\"booking-icon-btn\" type=\"button\" aria-label=\"수업 찜하기\" aria-pressed=\"false\">\n      <img src=\"assets/icons/Heart.svg\" alt=\"\" width=\"24\" height=\"24\">\n    </button>\n    <button id=\"book\" class=\"booking-primary-btn\" type=\"button\">일정 선택하고 예약하기</button>\n  </div>\n  <p class=\"booking-note\">일정을 선택한 뒤 예약 내용을 확인할 수 있어요.</p>\n</div></section>",
+      "prompt": "Parent owns separate white host and action sections on gray canvas, each padding24px20mobile/28desktop, 12pxgap. Preserve these rather than merging. No hr or border separators. Host h2 is18px700, subtitle14px500 line-height1.6 margin-top4px. Favorite48px square rounded8px gray#f2f2f5 with officialHeart24px centered; pressed pale purple. Booking CTA min-height52px with padding12px16px, auto height,16px700 line-height1.5, purple#5146d7 white text radius6px; keep-all emergencywrap. Shared48px/minmax grid owns action row. Note14px500 line-height1.6 margin-top12px. Preserve keyboard focus ring. Never put price in action row.",
+      "assets": [
+        "assets/icons/Heart.svg"
+      ],
+      "sample": "<main class=\"product\"><div class=\"media-navigation\"><nav class=\"detail-navigation\" aria-label=\"상세 페이지 탐색\"><a id=\"back\" href=\"classes.html\" aria-label=\"수업 목록으로 돌아가기\"><img src=\"assets/icons/ArrowLeft.svg\" width=\"24\" height=\"24\" alt=\"\"></a></nav></div><div class=\"details\">{{booking}}</div></main>"
+    }
+  ],
+  "viewport": {
+    "mode": "mobile-only",
+    "maxWidth": 390,
+    "rationale": "User requested a mobile screen; wide windows only center the same screen."
+  }
+}
