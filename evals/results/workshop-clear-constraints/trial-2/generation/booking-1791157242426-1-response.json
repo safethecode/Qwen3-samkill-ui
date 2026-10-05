@@ -1,0 +1,33 @@
+{
+  "binding": "78928932ecbb4c12fe5493ebf134241ce2799a44ee2192060cef1a1e9cce8ce7",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 128744,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T23:40:42.4261471Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \"#booking-layout {\\n  padding-top: 20px;\\n  border-top: 1px solid #ededf0;\\n}\\n\\n.booking-host-title {\\n  margin: 0;\\n  font-size: 16px;\\n  font-weight: 700;\\n  line-height: 1.5;\\n  color: #202024;\\n}\\n\\n.booking-host-subtitle {\\n  margin: 4px 0 0;\\n  font-size: 14px;\\n  color: #60606a;\\n  line-height: 1.5;\\n}\\n\\n.booking-icon-btn {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 48px;\\n  height: 48px;\\n  padding: 0;\\n  margin: 0;\\n  border: none;\\n  background-color: transparent;\\n  cursor: pointer;\\n  outline: none;\\n  -webkit-tap-highlight-color: transparent;\\n}\\n\\n.booking-icon-btn img {\\n  width: 24px;\\n  height: 24px;\\n  display: block;\\n  object-fit: contain;\\n  color: #60606a;\\n  transition: color 0.2s ease, transform 0.1s ease;\\n}\\n\\n.booking-icon-btn:hover img {\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn:active img {\\n  transform: scale(0.92);\\n}\\n\\n.booking-icon-btn[aria-pressed=\\\"true\\\"] img {\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n  border-radius: 4px;\\n}\\n\\n#booking-actions > button:last-child {\\n  min-height: 52px;\\n  padding: 12px 16px;\\n  background-color: #5146d7;\\n  color: #ffffff;\\n  font-size: 16px;\\n  font-weight: 700;\\n  line-height: 1.5;\\n  white-space: normal;\\n  border-radius: 6px;\\n  border: none;\\n  text-align: center;\\n  width: 100%;\\n  cursor: pointer;\\n  transition: background-color 0.2s ease, transform 0.1s ease;\\n}\\n\\n#booking-actions > button:last-child:hover {\\n  background-color: #4339b8;\\n}\\n\\n#booking-actions > button:last-child:active {\\n  transform: scale(0.98);\\n}\\n\\n#booking-actions > button:last-child:focus-visible {\\n  outline: 3px solid #5146d7;\\n  outline-offset: 2px;\\n}\\n\\n.booking-note {\\n  margin: 12px 0 0;\\n  font-size: 14px;\\n  color: #60606a;\\n  line-height: 1.6;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 128742527900,
+  "load_duration": 3729000,
+  "prompt_eval_count": 8967,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 92906039000,
+  "eval_count": 726,
+  "eval_duration": 35785485000
+}

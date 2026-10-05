@@ -1,0 +1,33 @@
+{
+  "binding": "78928932ecbb4c12fe5493ebf134241ce2799a44ee2192060cef1a1e9cce8ce7",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 115480,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T23:38:33.6672088Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \".product-identity {\\n  padding-top: 24px;\\n  padding-bottom: 24px;\\n}\\n\\n.product-identity .eyebrow {\\n  font-size: 14px;\\n  color: #60606a;\\n  margin-bottom: 8px;\\n}\\n\\n.product-identity .title {\\n  font-size: 22px;\\n  font-weight: 700;\\n  line-height: 1.45;\\n  word-break: keep-all;\\n  overflow-wrap: anywhere;\\n}\\n\\n.product-identity .price-row {\\n  margin-top: 12px;\\n}\\n\\n.product-identity .price {\\n  display: block;\\n  font-size: 24px;\\n  font-weight: 800;\\n  word-break: keep-all;\\n}\\n\\n.product-identity .metadata {\\n  margin-top: 24px;\\n  display: flex;\\n  flex-wrap: wrap;\\n  gap: 16px;\\n}\\n\\n.product-identity .meta-item {\\n  display: flex;\\n  align-items: center;\\n  gap: 8px;\\n  font-size: 14px;\\n  font-weight: 500;\\n  color: #555560;\\n  word-break: keep-all;\\n}\\n\\n.product-identity .meta-item img {\\n  width: 20px;\\n  height: 20px;\\n  display: block;\\n}\\n\\n.product-identity .description {\\n  margin-top: 20px;\\n  font-size: 15px;\\n  line-height: 1.75;\\n  word-break: keep-all;\\n  overflow-wrap: anywhere;\\n}\\n\\n@media (min-width: 701px) {\\n  .product-identity {\\n    padding-top: 0;\\n  }\\n\\n  .product-identity .title {\\n    font-size: 28px;\\n  }\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 115468970800,
+  "load_duration": 5460000,
+  "prompt_eval_count": 8948,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 92782592000,
+  "eval_count": 463,
+  "eval_duration": 22633405000
+}

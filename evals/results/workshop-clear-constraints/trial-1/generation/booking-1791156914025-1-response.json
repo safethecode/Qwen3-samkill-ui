@@ -1,0 +1,33 @@
+{
+  "binding": "78928932ecbb4c12fe5493ebf134241ce2799a44ee2192060cef1a1e9cce8ce7",
+  "settings": {
+    "model": "qwen3.6:35b-a3b-coding",
+    "think": false,
+    "options": {
+      "num_ctx": 16384,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repeat_penalty": 1.05,
+      "num_gpu": 16,
+      "num_batch": 128,
+      "num_predict": 2048
+    }
+  },
+  "elapsedMs": 127677,
+  "model": "qwen3.6:35b-a3b-coding",
+  "created_at": "2026-10-04T23:35:14.0249199Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"css\": \"#booking-layout {\\n  border-top: 1px solid #ededf0;\\n  padding: 20px 0;\\n}\\n\\n.booking-host-title {\\n  margin: 0 0 4px 0;\\n  font-size: 16px;\\n  font-weight: 700;\\n  color: #202024;\\n  line-height: 1.4;\\n}\\n\\n.booking-host-subtitle {\\n  margin: 0;\\n  font-size: 14px;\\n  color: #60606a;\\n  line-height: 1.4;\\n}\\n\\n#booking-actions {\\n  margin-top: 20px;\\n}\\n\\n.booking-icon-btn {\\n  display: inline-flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 48px;\\n  height: 48px;\\n  padding: 0;\\n  border: none;\\n  background: transparent;\\n  cursor: pointer;\\n  color: #202024;\\n  transition: color 0.15s ease, background-color 0.15s ease;\\n  border-radius: 6px;\\n}\\n\\n.booking-icon-btn img {\\n  width: 24px;\\n  height: 24px;\\n  object-fit: contain;\\n  pointer-events: none;\\n}\\n\\n.booking-icon-btn:hover {\\n  background-color: #f7f7f8;\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn[aria-pressed=\\\"true\\\"] {\\n  color: #5146d7;\\n}\\n\\n.booking-icon-btn[aria-pressed=\\\"true\\\"]:hover {\\n  background-color: #f0efff;\\n}\\n\\n.booking-primary-btn {\\n  display: inline-flex;\\n  align-items: center;\\n  justify-content: center;\\n  min-height: 52px;\\n  height: auto;\\n  padding: 12px 16px;\\n  border: none;\\n  border-radius: 6px;\\n  background-color: #5146d7;\\n  color: #ffffff;\\n  font-size: 16px;\\n  font-weight: 700;\\n  line-height: 1.5;\\n  white-space: normal;\\n  text-align: center;\\n  cursor: pointer;\\n  transition: background-color 0.15s ease, transform 0.1s ease;\\n}\\n\\n.booking-primary-btn:hover {\\n  background-color: #4338c2;\\n}\\n\\n.booking-primary-btn:active {\\n  background-color: #3b31a6;\\n  transform: scale(0.98);\\n}\\n\\n#booking-layout .booking-note {\\n  margin-top: 12px;\\n  font-size: 14px;\\n  color: #60606a;\\n  line-height: 1.6;\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 127675263900,
+  "load_duration": 3623700,
+  "prompt_eval_count": 8967,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 92944731000,
+  "eval_count": 690,
+  "eval_duration": 34674575000
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "trial-1",
+    "elapsedMs": 348802,
+    "views": [
+      {
+        "width": 296,
+        "typographyIssues": [
+          {
+            "element": "DIV",
+            "id": "",
+            "class": "eyebrow",
+            "pseudo": null,
+            "text": "도자기 · 입문",
+            "fontSize": "12px",
+            "fontWeight": "600"
+          },
+          {
+            "element": "P",
+            "id": "",
+            "class": "description",
+            "pseudo": null,
+            "text": "흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 ",
+            "fontSize": "15px",
+            "fontWeight": "400"
+          }
+        ],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "typographyIssues": [
+          {
+            "element": "DIV",
+            "id": "",
+            "class": "eyebrow",
+            "pseudo": null,
+            "text": "도자기 · 입문",
+            "fontSize": "12px",
+            "fontWeight": "600"
+          },
+          {
+            "element": "P",
+            "id": "",
+            "class": "description",
+            "pseudo": null,
+            "text": "흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 ",
+            "fontSize": "15px",
+            "fontWeight": "400"
+          }
+        ],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "typographyIssues": [
+          {
+            "element": "DIV",
+            "id": "",
+            "class": "eyebrow",
+            "pseudo": null,
+            "text": "도자기 · 입문",
+            "fontSize": "12px",
+            "fontWeight": "600"
+          },
+          {
+            "element": "P",
+            "id": "",
+            "class": "description",
+            "pseudo": null,
+            "text": "흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 ",
+            "fontSize": "15px",
+            "fontWeight": "400"
+          }
+        ],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "typographyIssues": [
+          {
+            "element": "DIV",
+            "id": "",
+            "class": "eyebrow",
+            "pseudo": null,
+            "text": "도자기 · 입문",
+            "fontSize": "12px",
+            "fontWeight": "600"
+          },
+          {
+            "element": "P",
+            "id": "",
+            "class": "description",
+            "pseudo": null,
+            "text": "흙을 만지는 감각부터 유약을 고르는 순간까지. 소규모 ",
+            "fontSize": "15px",
+            "fontWeight": "400"
+          }
+        ],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trial-2",
+    "elapsedMs": 322815,
+    "views": [
+      {
+        "width": 296,
+        "typographyIssues": [],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "typographyIssues": [],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "typographyIssues": [],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "typographyIssues": [],
+        "fontIssues": [],
+        "layoutFailures": [],
+        "stress": [
+          {
+            "mode": "text-200",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          },
+          {
+            "mode": "text-spacing",
+            "overflowPx": 0,
+            "clipped": 0,
+            "lineOverlap": 0,
+            "controlTextOverflow": 0
+          }
+        ]
+      }
+    ]
+  }
+]

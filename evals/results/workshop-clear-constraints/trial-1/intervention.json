@@ -1,0 +1,12 @@
+{
+  "scope": "Host-corrected input constraints and updated decomposition guide; fresh local generation without post-generation repair.",
+  "changes": [
+    "Replace contradictory text-button fixed height with min-height and auto growth",
+    "Clarify actual image square sizing and mobile radius on image and figure",
+    "Prefer Korean word boundaries without shrinking or hiding copy"
+  ],
+  "model": "qwen3.6:35b-a3b-coding",
+  "think": false,
+  "repeat": "trial-1",
+  "limitation": "Two stochastic repetitions of one static service; no causal isolation or representative parity claim."
+}
