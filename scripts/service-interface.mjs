@@ -1,6 +1,9 @@
 import { parse } from 'parse5';
 
 export function validateShellLabels(html) {
+  const syntaxErrors = [];
+  const document = parse(html, { onParseError: error => { if (['end-tag-with-attributes', 'end-tag-with-trailing-solidus', 'duplicate-attribute'].includes(error.code)) syntaxErrors.push(error.code); } });
+  if (syntaxErrors.length) throw new Error(`Malformed HTML: ${[...new Set(syntaxErrors)].join(', ')}`);
   const fields = [];
   const labels = [];
   const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value;
@@ -13,7 +16,7 @@ export function validateShellLabels(html) {
     if (['input', 'select', 'textarea'].includes(node.tagName) && !['hidden', 'submit', 'button', 'reset', 'image'].includes((attr(node, 'type') || '').toLowerCase())) fields.push(node);
     for (const child of node.childNodes || []) visit(child);
   };
-  visit(parse(html));
+  visit(document);
   const errors = [];
   for (const field of fields) {
     const id = attr(field, 'id');

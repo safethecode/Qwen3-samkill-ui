@@ -2,6 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateInterface, validateShellLabels } from '../scripts/service-interface.mjs';
 
+test('malformed option closing tags cannot silently discard a booking time', () => {
+  const broken = '<label for="slot">Time</label><select id="slot"><option value="">Choose</option value="10:00">10:00</option></select>';
+  assert.throws(() => validateShellLabels(broken), /end-tag-with-attributes/);
+  assert.doesNotThrow(() => validateShellLabels(broken.replace('</option value="10:00">', '</option><option value="10:00">')));
+});
+
 test('stage boundary rejects renamed fields, wrong element types and duplicate IDs', () => {
   const required = { search: 'input', 'ticket-form': 'form' };
   assert.throws(() => validateInterface('<form id="search"><input id="query"></form>', required), /search/);
