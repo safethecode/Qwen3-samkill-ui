@@ -12,6 +12,7 @@ import { removeComments } from './comments.mjs';
 import { inferenceOptions } from './inference-options.mjs';
 import { samplingOptions } from './sampling.mjs';
 import { componentSkillContext } from './skill-context.mjs';
+import { readLayoutContract } from './layout-contract.mjs';
 
 export async function generateComponents(target, evidence, options = {}) {
   if (resolve(evidence) === resolve(target) || resolve(evidence).startsWith(resolve(target) + sep)) throw new Error('Component evidence must be outside the source target');
@@ -21,6 +22,7 @@ export async function generateComponents(target, evidence, options = {}) {
   const loader = await localFontCss(target, typography);
   const contract = await readFile(resolve(target, 'DESIGN.md'), 'utf8');
   const reference = await readFile(resolve(target, 'REFERENCE.md'), 'utf8');
+  const layoutContract = await readLayoutContract(target);
   const guideContexts = Object.fromEntries(await Promise.all(plan.elements.map(async element => [element.id, await componentSkillContext(element)])));
   const guideSources = Object.fromEntries(Object.entries(guideContexts).map(([id, context]) => [id, context.sources]));
   const inputs = await sourceBinding(target);
@@ -52,7 +54,7 @@ export async function generateComponents(target, evidence, options = {}) {
           request.format = { type: 'object', properties: { css: { type: 'string' } }, required: ['css'], additionalProperties: false };
         } else request.messages[1].content += `\nFINAL ELEMENT BOUNDARY\n${element.prompt}`;
         request.messages[0].content += ' Never use + or ~ selector combinators, including between descendants inside the component. For spacing between repeated groups, use a parent gap or :not(:first-child) instead. The validator rejects all sibling combinators, not only selectors that escape the root.';
-        request.messages[1].content = `APPLICABLE SOURCE GUIDES\n${guideContexts[element.id].text}\n\n${request.messages[1].content}`;
+        request.messages[1].content = `APPLICABLE SOURCE GUIDES\n${guideContexts[element.id].text}\n\nDECLARED CROSS-COMPONENT RELATIONS\n${layoutContract ? JSON.stringify(layoutContract) : 'UNVERIFIED: no layout contract supplied. Do not invent missing screen purpose or claim complete decomposition.'}\nPreserve relations owned by the shared assembly; implement only this element. State-specific rules describe their named state, not all states simultaneously.\n\n${request.messages[1].content}`;
         const response = await (options.fetcher || inferenceFetch)(`${process.env.OLLAMA_URL || 'http://127.0.0.1:11434'}/api/chat`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(requestTimeoutMs) });
         if (!response.ok) throw new Error(`Ollama HTTP ${response.status}`);
         const result = await response.json();

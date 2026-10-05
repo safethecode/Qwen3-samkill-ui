@@ -51,6 +51,7 @@ test('component generation resumes fixed element outputs and rejects changed dec
   await writeFile(join(target, 'REFERENCE.md'), 'Reference.');
   await writeFile(join(target, 'design/typography.json'), JSON.stringify({ roles: [{ selector: 'body *', families: ['Arial'] }] }));
   await writeFile(join(target, 'design/component-plan.json'), JSON.stringify(generationPlan));
+  await writeFile(join(target, 'design/layout-contract.json'), JSON.stringify({ rules: [{ id: 'screen-purpose', kind: 'below', subject: '#summary', reference: '#title' }] }));
   let fail = true;
   const calls = [];
   const fetcher = async (_url, options) => {
@@ -58,6 +59,8 @@ test('component generation resumes fixed element outputs and rejects changed dec
     const input = request.messages[1].content;
     assert.match(input, /GENERATION GUIDE reference-to-ui\/references\/typography.md/);
     assert.match(input, /GENERATION GUIDE reference-to-ui\/references\/mobile.md/);
+    assert.match(input, /DECLARED CROSS-COMPONENT RELATIONS/);
+    assert.match(input, /screen-purpose/);
     const id = /ONE ELEMENT (E\d)/.exec(input)[1];
     calls.push(id);
     if (id === 'E1') assert.ok(!input.includes('ONE ELEMENT E2'));

@@ -57,4 +57,6 @@ These guides are reference documents, not additional installed skill names. Foll
 
 ## Completion record
 
+Before component generation, apply the decomposition guide to screen purpose, return navigation, canvas/section surfaces and state-specific hierarchy. Preserve those relations in the shared assembly and `design/layout-contract.json`; include observed evidence, chosen implementation values and unknowns. A detail view must have a tested return route. A success dialog must distinguish its primary outcome from supporting product data. Do not substitute invented headers or separator bars for observed grouping. See [decomposed layout](references/decomposed-layout.md) for required handoff and scoped checks.
+
 UI-STATUS.md must distinguish implemented features, executed checks with results, visual evidence and remaining failures. Do not rewrite FAIL as PASS because a retry was attempted. If a tool or browser is unavailable, state the exact blocked check and leave it UNVERIFIED.
