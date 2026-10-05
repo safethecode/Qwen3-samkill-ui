@@ -6,6 +6,7 @@ export const readLayoutContract = target => readFile(resolve(target, 'design/lay
 export async function inspectLayoutContract(page, contract, options = {}) {
   const results = [];
   const issues = [];
+  const pendingStates = [];
   const scope = 'Declared DOM ownership, rendered geometry, row grouping and sample width. These measurements do not certify visual equivalence or undeclared relationships.';
   if (!contract) return { results, issues: [{ status: 'UNVERIFIED', problem: 'Reference layout ownership and grouping contract is missing' }], scope };
   if (!Array.isArray(contract.rules) || !contract.rules.length || contract.rules.length > 64 || new Set(contract.rules.map(rule => rule.id)).size !== contract.rules.length) return { results, issues: [{ status: 'FAIL', problem: 'Layout contract requires 1–64 uniquely identified rules' }], scope };
@@ -24,7 +25,8 @@ export async function inspectLayoutContract(page, contract, options = {}) {
   for (const rule of contract.rules) {
     if (rule.widths && (!Array.isArray(rule.widths) || rule.widths.some(value => !Number.isInteger(value) || value < 1))) { issues.push({ status: 'FAIL', problem: `Invalid widths for ${rule.id}` }); continue; }
     if (rule.states && (!Array.isArray(rule.states) || rule.states.some(value => typeof value !== 'string'))) { issues.push({ status: 'FAIL', problem: `Invalid states for ${rule.id}` }); continue; }
-    if (rule.widths && !rule.widths.includes(width) || rule.states && !rule.states.includes(state)) continue;
+    if (rule.widths && !rule.widths.includes(width)) continue;
+    if (rule.states && !rule.states.includes(state)) { pendingStates.push({ id: rule.id, states: rule.states, status: 'UNVERIFIED' }); continue; }
     let observed = {};
     try {
       if (!rule.id || typeof rule.id !== 'string') throw new Error('Layout rule needs an ID');
@@ -41,7 +43,29 @@ export async function inspectLayoutContract(page, contract, options = {}) {
         if (observed.maximumInlineGroups > rule.maximum) throw new Error(`Too many semantic groups share a row: ${observed.maximumInlineGroups} > ${rule.maximum}`);
       } else {
         observed.subject = await box(rule.subject);
-        if (rule.kind === 'contained') {
+        if (rule.kind === 'returnNavigation') {
+          if (typeof rule.destination !== 'string' || !/^[\w./-]+\.html$/.test(rule.destination) || rule.destination.startsWith('/') || rule.destination.includes('..')) throw new Error('Return navigation requires a declared local destination');
+          observed.navigation = await page.locator(rule.subject).evaluate(element => ({ tag: element.tagName, href: element.getAttribute('href'), label: element.getAttribute('aria-label') || element.textContent.trim() }));
+          if (observed.navigation.tag !== 'A' || observed.navigation.href !== rule.destination || !observed.navigation.label) throw new Error('Missing accessible return navigation with a real fallback destination');
+        } else if (rule.kind === 'surface') {
+          if (!Number.isFinite(rule.minPadding) || rule.minPadding < 0) throw new Error('Surface requires nonnegative minPadding');
+          await box(rule.container);
+          observed.surface = await page.locator(rule.subject).evaluate((element, selector) => {
+            const container = document.querySelector(selector);
+            const style = getComputedStyle(element), parent = getComputedStyle(container);
+            return { owned: container.contains(element), color: style.backgroundColor, containerColor: parent.backgroundColor, padding: ['Top', 'Right', 'Bottom', 'Left'].map(side => parseFloat(style[`padding${side}`])), horizontalBorders: parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth), separators: element.querySelectorAll('hr,[role="separator"]').length };
+          }, rule.container);
+          const surface = observed.surface;
+          if (!surface.owned || surface.color === surface.containerColor || surface.color === 'transparent' || /rgba\([^)]*,\s*0\)$/.test(surface.color) || surface.padding.some(value => value < rule.minPadding)) throw new Error('Declared group needs its own visible surface and internal spacing');
+          if (rule.forbidHorizontalBorders && (surface.horizontalBorders || surface.separators)) throw new Error('Declared surface grouping cannot use horizontal borders or separator bars');
+        } else if (rule.kind === 'typeHierarchy') {
+          if (!Number.isFinite(rule.minSizeDifference) || rule.minSizeDifference <= 0) throw new Error('Hierarchy requires a positive minimum size difference');
+          observed.reference = await box(rule.reference);
+          const typography = selector => page.locator(selector).evaluate(element => { const style = getComputedStyle(element); return { size: parseFloat(style.fontSize), weight: parseFloat(style.fontWeight) }; });
+          observed.primary = await typography(rule.subject);
+          observed.secondary = await typography(rule.reference);
+          if (observed.primary.size - observed.secondary.size < rule.minSizeDifference || observed.primary.weight < observed.secondary.weight) throw new Error('Primary state heading is not distinguished from subordinate content');
+        } else if (rule.kind === 'contained') {
           observed.container = await box(rule.container);
           const owns = await page.locator(rule.container).evaluate((container, selector) => container.contains(document.querySelector(selector)), rule.subject);
           if (!owns || !inside(observed.subject, observed.container)) throw new Error('Action/content is outside its declared owner');
@@ -83,5 +107,6 @@ export async function inspectLayoutContract(page, contract, options = {}) {
     }
   }
   if (!results.length && !issues.length) issues.push({ status: 'UNVERIFIED', problem: 'No declared layout relation was checked for this viewport/state' });
-  return { results, issues, scope };
+  if (pendingStates.length) issues.push({ status: 'UNVERIFIED', problem: 'Declared state relations still require their own state captures', rules: pendingStates });
+  return { results, issues, pendingStates, scope };
 }

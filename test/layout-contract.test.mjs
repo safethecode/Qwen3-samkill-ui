@@ -4,6 +4,27 @@ import { chromium } from 'playwright';
 import { inspectLayoutContract } from '../scripts/layout-contract.mjs';
 import { createServer } from 'node:http';
 
+test('declared surfaces, navigation and state hierarchy reject the flattened detail regression', async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined, headless: true });
+  try {
+    const page = await browser.newPage();
+    const contract = { rules: [
+      { id: 'return', kind: 'returnNavigation', subject: '#back', destination: 'classes.html' },
+      { id: 'group', kind: 'surface', subject: '#group', container: 'body', minPadding: 16, forbidHorizontalBorders: true },
+      { id: 'hierarchy', kind: 'typeHierarchy', subject: '#success', reference: '#product', minSizeDifference: 4 }
+    ] };
+    await page.setContent('<style>body{background:#eee}#group{background:white;padding:20px}#success{font-size:24px;font-weight:700}#product{font-size:16px;font-weight:500}</style><a id="back" href="classes.html" aria-label="Back">Back</a><section id="group"><h2 id="success">Saved</h2><p id="product">Product</p></section>');
+    assert.ok((await inspectLayoutContract(page, contract)).results.every(item => item.status === 'PASS'));
+    await page.locator('#back').evaluate(e => e.setAttribute('href', '#'));
+    await page.locator('#group').evaluate(e => { e.style.background = 'transparent'; e.style.borderTop = '1px solid gray'; });
+    await page.locator('#product').evaluate(e => { e.style.fontSize = '24px'; e.style.fontWeight = '700'; });
+    const failed = await inspectLayoutContract(page, contract);
+    assert.deepEqual(failed.results.filter(item => item.status === 'FAIL').map(item => item.id), ['return', 'group', 'hierarchy']);
+    await page.locator('#group').evaluate(e => { e.style.background = 'white'; e.style.borderTop = '1px solid gray'; });
+    assert.equal((await inspectLayoutContract(page, contract)).results.find(item => item.id === 'group').status, 'FAIL');
+  } finally { await browser.close(); }
+});
+
 test('sameRow rejects stacked actions and invisible subjects', async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined, headless: true });
   try {
