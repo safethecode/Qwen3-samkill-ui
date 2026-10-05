@@ -57,6 +57,10 @@ These guides are reference documents, not additional installed skill names. Foll
 
 ## Completion record
 
+Read [operating rules](references/operating-rules.md) before planning or running local UI work. They consolidate this repository's scope, decomposition, local execution, source attribution and verification requirements. Read the relevant upstream guide at each phase; do not substitute this summary for its applicable details.
+
+Treat the requested platform as a scope constraint. A mobile screen stays a mobile screen in a wide browser: cap its preview width and preserve its vertical ordering. Do not invent desktop columns, desktop typography, navigation, headers or new sections merely because the viewport is wide. A desktop/tablet adaptation requires an explicit user request or supplied reference for that platform. Record mobile-only scope in DESIGN.md, the component plan and layout contract before generation; apply it to host scaffolding as well as model output. Verify maxWidth and vertical relationships at wide viewport sizes. Unknown desktop design means out of scope, not permission to improvise.
+
 Before component generation, apply the decomposition guide to screen purpose, return navigation, canvas/section surfaces and state-specific hierarchy. Preserve those relations in the shared assembly and `design/layout-contract.json`; include observed evidence, chosen implementation values and unknowns. A detail view must have a tested return route. A success dialog must distinguish its primary outcome from supporting product data. Do not substitute invented headers or separator bars for observed grouping. See [decomposed layout](references/decomposed-layout.md) for required handoff and scoped checks.
 
 UI-STATUS.md must distinguish implemented features, executed checks with results, visual evidence and remaining failures. Do not rewrite FAIL as PASS because a retry was attempted. If a tool or browser is unavailable, state the exact blocked check and leave it UNVERIFIED.
